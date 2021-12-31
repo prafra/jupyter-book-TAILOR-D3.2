@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: markdown
+#- file: notebooks
+- file: T3.1
+  title: Explainable AI Systems
+#	sections:
+#	- file: Def1
+#	- file: Def2
+- file: T3.2
+  title: Safety and Roboustness
+- file: T3.3
+  title: Fairness, Equity, and Justice by Design
