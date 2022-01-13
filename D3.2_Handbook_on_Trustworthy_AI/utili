@@ -1,0 +1,11 @@
+jupyter-book-TAILOR-D3.2
+
+TAILOR D3.2 - Handbook on Trustworthy AI
+
+dentro jupiter-book-TAILOR-D3.2
+
+git add D3.2_Handbook_on_Trustworthy_AI/T3.1.md
+git commit -m 'test'
+git push
+
+jupyter-book build D3.2_Handbook_on_Trustworthy_AI

@@ -2,16 +2,28 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: TAILOR
 chapters:
-- file: markdown
-#- file: notebooks
+- file: Jupyter
+  sections:
+  - file: introJupyter
+  - file: markdownJupyter
+  - file: notebooksJupyter
+#chapters:
 - file: T3.1
   title: Explainable AI Systems
-#	sections:
-#	- file: Def1
+  sections:
+  - file: XAI_dimensions
 #	- file: Def2
+    sections:
+    - file: model_specific
+#chapters:
 - file: T3.2
   title: Safety and Roboustness
 - file: T3.3
   title: Fairness, Equity, and Justice by Design
+- file: T3.4
+- file: T3.5
+- file: T3.6
+
+#- file: prova
