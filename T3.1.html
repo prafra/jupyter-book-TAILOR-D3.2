@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explainable AI &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dimensions of Explanations" href="T3.1/XAI_dimensions.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooksJupyter.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="TAILOR.html">
+   Welcome to TAILOR
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Jupyter.html">
+   Jupyter demos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="introJupyter.html">
+     Welcome to your Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdownJupyter.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooksJupyter.html">
+     Content with notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Explainable AI Systems
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.1/XAI_dimensions.html">
+     Dimensions of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.1/model_specific.html">
+       Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="T3.2.html">
+   Safety and Roboustness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="T3.3.html">
+   Fairness, Equity, and Justice by Design
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="T3.4.html">
+   Accountability and Reproducibility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="T3.5.html">
+   Respect for Privacy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="T3.6.html">
+   Suistainability
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/T3.1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="explainable-ai">
+<h1>Explainable AI <a class="footnote-reference brackets" href="#note" id="id1">4</a><a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h1>
+<!--- This is a comment -->
+<p><strong>Explainable AI</strong> (often shortened to <strong>XAI</strong>) is one of the ethical dimensions that is studied in the <a href="https://tailor-network.eu/">TAILOR project</a>.
+The origin of XAI dates back to the entering into force of the General Data Protection Regulation (GDPR).
+The GDPR <a class="footnote-reference brackets" href="#gdpr" id="id2">1</a>, in its Recital 71, also mentions the right to explanation, as a suitable safeguard to ensure a fair and transparent processing in respect of data subjects. While privacy and data protection are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.</p>
+<p>So far, the usage of black boxes in AI and ML processes implied the possibility of inadvertently making wrong decisions due to a systematic bias in training data collection. Several practical examples have been provided, highlighting the “bias in, bias out” concept. One of the most famous examples of this concept regards a classification task: the algorithm goal was to distinguish between photos of Wolves and Eskimo Dogs (huskies) <a class="footnote-reference brackets" href="#ribeiro" id="id3">2</a>. Here, the training phase of the process was done with 20 images, hand selected such that all pictures of wolves had snow in the background, while pictures of huskies did not. This choice was intentional because it was part of a social experiment. In any case, on a collection of additional 60 images, the classifier predicts “Wolf” if there is snow (or light background at the bottom), and “Husky” otherwise, regardless of animal color, position, pose, etc (see an example in Fig. <a class="reference internal" href="#husky"><span class="std std-numref">1</span></a>).</p>
+<div class="figure align-center" id="husky">
+<a class="reference internal image-reference" href="_images/husky.png"><img alt="_images/husky.png" src="_images/husky.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Raw data and explaination of a bad model’s prediction in the “Husky vs Wolf” task <a class="footnote-reference brackets" href="#ribeiro" id="id4">2</a>.</span><a class="headerlink" href="#husky" title="Permalink to this image">¶</a></p>
+</div>
+<p>However, one of the most worrisome cases was discovered and published by ProPublica, an independent, nonprofit newsroom that produces investigative journalism with moral force. In <a class="footnote-reference brackets" href="#propublica" id="id5">3</a>, the authors showed how software can actually be racist. In a nutshell, the authors analyzed a tool called COMPAS (which stands for Correctional Offender Management Profiling for Alternative Sanctions). COMPAS tries to predict, among other indexes, the recidivism of defendants, who are ranked low, medium or high risk. It was used in many US states (such as New York and Wisconsin), to suggest to judges an appropriate probation or treatment plan for individuals being sentenced. Indeed, the tool was quite accurate (around 70 percent overall with 16,000 probationers), but ProPublica journalists found that black defendants were far more likely than white defendants to be incorrectly judged to be at a higher risk of recidivism, while white defendants were more likely than black defendants to be incorrectly flagged as low risk.</p>
+<p>From the above examples, it appears evident that explanation technologies can help companies for creating safer, more trustable products, and better managing any possible liability they may have.</p>
+<p>The definitions contained in this book will help in understanding better the <a class="reference internal" href="T3.1/XAI_dimensions.html"><span class="doc">Dimensions of Explanations </span></a> of explainations (e.g., we can discriminate between <a class="reference internal" href="T3.1/model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers </span></a>), the requirements to provide good explainations, the problems related to the Explainability topic, and the possible solutions we can adopt.</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="gdpr"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
+</dd>
+<dt class="label" id="ribeiro"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. “why should i trust you?”: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
+</dd>
+<dt class="label" id="propublica"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dd><p>J. Angwin, J. Larson, S. Mattu, and L. Kirchner. Machine bias: there’s software used across the country to predict future criminals. and it’s biased against blacks. 2016. URL: <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a> (visited on 2020-09-22).</p>
+</dd>
+</dl>
+</p>
+<!---
+```{bibliography}
+:filter: cited and ({"T3.1"} >= docnames)
+:filter: {"T3.1"} & docnames
+```
+-->
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="note"><span class="brackets"><a class="fn-backref" href="#id1">4</a></span></dt>
+<dd><p>This entry was readapted from <em>Pratesi, Trasarti, Giannotti. Ethics in Smart Information Systems. Policy Press (currently under review)</em> by Francesca Pratesi.</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="notebooksJupyter.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Content with notebooks</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="T3.1/XAI_dimensions.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dimensions of Explanations </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members (names of contributors will be added)<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

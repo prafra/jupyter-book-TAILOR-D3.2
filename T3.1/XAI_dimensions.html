@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dimensions of Explanations &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Model-Specific vs Model-Agnostic Explainers" href="model_specific.html" />
+    <link rel="prev" title="Explainable AI" href="../T3.1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR.html">
+   Welcome to TAILOR
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Jupyter.html">
+   Jupyter demos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introJupyter.html">
+     Welcome to your Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdownJupyter.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooksJupyter.html">
+     Content with notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../T3.1.html">
+   Explainable AI Systems
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
+     Dimensions of Explanations
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="model_specific.html">
+       Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../T3.2.html">
+   Safety and Roboustness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../T3.3.html">
+   Fairness, Equity, and Justice by Design
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../T3.4.html">
+   Accountability and Reproducibility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../T3.5.html">
+   Respect for Privacy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../T3.6.html">
+   Suistainability
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/T3.1/XAI_dimensions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.1/XAI_dimensions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="dimensions-of-explanations">
+<h1>Dimensions of Explanations <a class="footnote-reference brackets" href="#note" id="id1">7</a><a class="headerlink" href="#dimensions-of-explanations" title="Permalink to this headline">¶</a></h1>
+<p>The goal of <a class="reference internal" href="../T3.1.html"><span class="doc">Explainable AI </span></a> is to <em>interpret</em> AI reasoning. According to Merriam-webster, to <em>interpret</em> means to give or provide the meaning or to explain and present in understandable terms some concepts.
+Therefore, in AI, <em>interpretability</em> is defined as the ability to <em>explain</em> or to provide the meaning in understandable terms to a human <a class="footnote-reference brackets" href="#arrietaxaitassonomy" id="id2">1</a>,<a class="footnote-reference brackets" href="#doshi-rigorous" id="id3">2</a>. These definitions assume that the concepts composing an explanation and expressed in the understandable  terms are self-contained and do not need further explanations. An explanation is an “interface” between a human and an AI, and it is at the same time both human understandable and an accurate proxy of the AI.</p>
+<p>We can identify a set of dimensions to analyze the interpretability of AI systems that, in turn, reflect on existing different types of explanations <a class="footnote-reference brackets" href="#guidotti-survey" id="id4">3</a>.
+Some of these dimensions are related to <em>functional requirements</em> of explainable artificial intelligence, i.e., requirements that identify the algorithmic adequacy of a particular approach for a specific application, while others to the <em>operational requirements</em>, i.e., requirements that take into consideration how users interact with an explainable system and what is the expectation.
+Some dimensions instead derive from the need of <em>usability criteria</em> from a user perspective, while other derive from the need of guarantees against any vulnerability issues.</p>
+<p>Recently, all these requirements have been analyzed <a class="footnote-reference brackets" href="#flach-fat" id="id5">4</a> to provide a framework allowing the systematic comparison of explainability methods. In particular, in <a class="footnote-reference brackets" href="#flach-fat" id="id6">4</a> authors propose <em>Explainability Fact Sheets</em> which enable researchers and practitioners to assess capabilities and limitations of a particular explainable method.
+As an example, given an explanation method <em>m</em>, we can consider the following functional requirements.
+<em>(i)</em> Even though <em>m</em> is designed to explain regressors, can we use it to explain probabilistic classifiers?
+<em>(ii)</em> Can we employ <em>m</em> on categorical features even though it only works on numerical features? On the other hand, as an operational requirement, can we consider which is the <em>function of the explanation</em>? Provide transparency, assess the fairness, etc.</p>
+<p>Besides the detailed requirements illustrated in <a class="footnote-reference brackets" href="#flach-fat" id="id7">4</a>, in the literature it is recognized a categorization of explanation methods among fundamental pillars <a class="footnote-reference brackets" href="#adadi" id="id8">5</a>,<a class="footnote-reference brackets" href="#guidotti-survey" id="id9">3</a>: <em>(i)</em> black box explanation vs explanation by design <em>(link TBA)</em>, <em>(ii)</em> global vs local explanations <em>(link TBA)</em>, <em>(iii)</em> <a class="reference internal" href="model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers </span></a>. <!---In the following we present details of these distinctions and other important features characterizing XAI methods.--></p>
+<p>Fig. <a class="reference internal" href="#xai-tax"><span class="std std-numref">2</span></a> illustrates a summarized ontology of the taxonomy used to classify XAI methods.</p>
+<div class="figure align-center" id="xai-tax">
+<a class="reference internal image-reference" href="../_images/xai_taxonomy.png"><img alt="../_images/xai_taxonomy.png" src="../_images/xai_taxonomy.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A summarized ontology of the taxonomy of XAI methods <a class="footnote-reference brackets" href="#guidotti2021" id="id10">6</a>.</span><a class="headerlink" href="#xai-tax" title="Permalink to this image">¶</a></p>
+</div>
+<p><dl class="footnote brackets">
+<dt class="label" id="arrietaxaitassonomy"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>A. B. Arrieta, N. Díaz-Rodríguez, J. Del Ser, A. Bennetot, S. Tabik, A. Barbado, S. García, S. Gil-López, D. Molina, and R. Benjamins. Explainable artificial intelligence (xai): concepts, taxonomies, opportunities and challenges toward responsible ai. In <em>Information Fusion</em>. 2020.</p>
+</dd>
+<dt class="label" id="doshi-rigorous"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>F. Doshi-Velez and B. Kim. Towards a rigorous science of interpretable machine learning. 2017. arXiv preprint arXiv:1702.08608.</p>
+</dd>
+<dt class="label" id="guidotti-survey"><span class="brackets">3</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p>R. Guidotti, A. Monreale, S. Ruggieri, F. Turini, F. Giannotti, and D. Pedreschi. A survey of methods for explaining black box models. <em>ACM computing surveys (CSUR)</em>, 2018.</p>
+</dd>
+<dt class="label" id="flach-fat"><span class="brackets">4</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>,<a href="#id7">3</a>)</span></dt>
+<dd><p>K. Sokol and P. A. Flach. Explainability fact sheets: a framework for systematic assessment of explainable approaches. In <em>ACM Conference on Fairness, Accountability, and Transparency</em>. 2020.</p>
+</dd>
+<dt class="label" id="adadi"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dd><p>A. Adadi and M. Berrada. Peeking inside the black-box: a survey on explainable artificial intelligence (xai). 2018. IEEE Access, 6:52138–52160.</p>
+</dd>
+<dt class="label" id="guidotti2021"><span class="brackets"><a class="fn-backref" href="#id10">6</a></span></dt>
+<dd><p>Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. <em>Principles of Explainable Artificial Intelligence</em>. Springer International Publishing, 2021.</p>
+</dd>
+</dl>
+</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="note"><span class="brackets"><a class="fn-backref" href="#id1">7</a></span></dt>
+<dd><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./T3.1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../T3.1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Explainable AI </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="model_specific.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Model-Specific vs Model-Agnostic Explainers </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members (names of contributors will be added)<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
