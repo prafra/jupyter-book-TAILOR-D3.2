@@ -13,10 +13,10 @@ chapters:
 - file: T3.1
   title: Explainable AI Systems
   sections:
-  - file: XAI_dimensions
+  - file: T3.1/XAI_dimensions
 #	- file: Def2
     sections:
-    - file: model_specific
+    - file: T3.1/model_specific
 #chapters:
 - file: T3.2
   title: Safety and Roboustness

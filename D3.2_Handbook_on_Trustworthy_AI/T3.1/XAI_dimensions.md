@@ -1,6 +1,6 @@
 # Dimensions of Explanations [^note]
 
-The goal of {doc}`T3.1` is to *interpret* AI reasoning. According to Merriam-webster, to *interpret* means to give or provide the meaning or to explain and present in understandable terms some concepts.
+The goal of {doc}`../T3.1` is to *interpret* AI reasoning. According to Merriam-webster, to *interpret* means to give or provide the meaning or to explain and present in understandable terms some concepts.
 Therefore, in AI, *interpretability* is defined as the ability to *explain* or to provide the meaning in understandable terms to a human {footcite}`arrietaXAItassonomy`,{footcite}`doshi_rigorous`. These definitions assume that the concepts composing an explanation and expressed in the understandable  terms are self-contained and do not need further explanations. An explanation is an “interface” between a human and an AI, and it is at the same time both human understandable and an accurate proxy of the AI.
 
 We can identify a set of dimensions to analyze the interpretability of AI systems that, in turn, reflect on existing different types of explanations {footcite}`guidotti_survey`. 
