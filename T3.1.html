@@ -175,8 +175,65 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="T3.6.html">
-   Suistainability
+   Sustainability
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Index.html">
+   Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Accountability.html">
+     Accountability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Assurance.html">
+     Assurance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Attacks%20on%20Anonymization%20Schemes.html">
+     Attacks on Anonymization Schemes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Attacks%20on%20Partition-based%20Algorithms.html">
+     Attacks on Partition-based Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Attacks%20on%20Pseudonymised%20Data.html">
+     Attacks on Pseudonymised Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Auditing.html">
+     Auditing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Autonomy%20Levels.html">
+     Autonomy Levels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -269,43 +326,42 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="explainable-ai">
-<h1>Explainable AI <a class="footnote-reference brackets" href="#note" id="id1">4</a><a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h1>
+<h1>Explainable AI<a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h1>
 <!--- This is a comment -->
 <p><strong>Explainable AI</strong> (often shortened to <strong>XAI</strong>) is one of the ethical dimensions that is studied in the <a href="https://tailor-network.eu/">TAILOR project</a>.
 The origin of XAI dates back to the entering into force of the General Data Protection Regulation (GDPR).
-The GDPR <a class="footnote-reference brackets" href="#gdpr" id="id2">1</a>, in its Recital 71, also mentions the right to explanation, as a suitable safeguard to ensure a fair and transparent processing in respect of data subjects. While privacy and data protection are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.</p>
-<p>So far, the usage of black boxes in AI and ML processes implied the possibility of inadvertently making wrong decisions due to a systematic bias in training data collection. Several practical examples have been provided, highlighting the “bias in, bias out” concept. One of the most famous examples of this concept regards a classification task: the algorithm goal was to distinguish between photos of Wolves and Eskimo Dogs (huskies) <a class="footnote-reference brackets" href="#ribeiro" id="id3">2</a>. Here, the training phase of the process was done with 20 images, hand selected such that all pictures of wolves had snow in the background, while pictures of huskies did not. This choice was intentional because it was part of a social experiment. In any case, on a collection of additional 60 images, the classifier predicts “Wolf” if there is snow (or light background at the bottom), and “Husky” otherwise, regardless of animal color, position, pose, etc (see an example in Fig. <a class="reference internal" href="#husky"><span class="std std-numref">1</span></a>).</p>
+The GDPR <span id="id1">[<a class="reference internal" href="#id14">1</a>]</span>, in its Recital 71, also mentions the right to explanation, as a suitable safeguard to ensure a fair and transparent processing in respect of data subjects. While privacy and data protection are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.</p>
+<p>So far, the usage of black boxes in AI and ML processes implied the possibility of inadvertently making wrong decisions due to a systematic bias in training data collection. Several practical examples have been provided, highlighting the “bias in, bias out” concept. One of the most famous examples of this concept regards a classification task: the algorithm goal was to distinguish between photos of Wolves and Eskimo Dogs (huskies) <span id="id2">[<a class="reference internal" href="#id15">2</a>]</span>. Here, the training phase of the process was done with 20 images, hand selected such that all pictures of wolves had snow in the background, while pictures of huskies did not. This choice was intentional because it was part of a social experiment. In any case, on a collection of additional 60 images, the classifier predicts “Wolf” if there is snow (or light background at the bottom), and “Husky” otherwise, regardless of animal color, position, pose, etc (see an example in Fig. <a class="reference internal" href="#husky"><span class="std std-numref">1</span></a>).</p>
 <div class="figure align-center" id="husky">
-<a class="reference internal image-reference" href="_images/husky.png"><img alt="_images/husky.png" src="_images/husky.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Raw data and explaination of a bad model’s prediction in the “Husky vs Wolf” task <a class="footnote-reference brackets" href="#ribeiro" id="id4">2</a>.</span><a class="headerlink" href="#husky" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="_images/T3.1_husky.png"><img alt="_images/T3.1_husky.png" src="_images/T3.1_husky.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Raw data and explaination of a bad model’s prediction in the “Husky vs Wolf” task <span id="id3">[<a class="reference internal" href="#id15">2</a>]</span>.</span><a class="headerlink" href="#husky" title="Permalink to this image">¶</a></p>
 </div>
-<p>However, one of the most worrisome cases was discovered and published by ProPublica, an independent, nonprofit newsroom that produces investigative journalism with moral force. In <a class="footnote-reference brackets" href="#propublica" id="id5">3</a>, the authors showed how software can actually be racist. In a nutshell, the authors analyzed a tool called COMPAS (which stands for Correctional Offender Management Profiling for Alternative Sanctions). COMPAS tries to predict, among other indexes, the recidivism of defendants, who are ranked low, medium or high risk. It was used in many US states (such as New York and Wisconsin), to suggest to judges an appropriate probation or treatment plan for individuals being sentenced. Indeed, the tool was quite accurate (around 70 percent overall with 16,000 probationers), but ProPublica journalists found that black defendants were far more likely than white defendants to be incorrectly judged to be at a higher risk of recidivism, while white defendants were more likely than black defendants to be incorrectly flagged as low risk.</p>
+<p>However, one of the most worrisome cases was discovered and published by ProPublica, an independent, nonprofit newsroom that produces investigative journalism with moral force. In <span id="id4">[<a class="reference internal" href="#id16">3</a>]</span>, the authors showed how software can actually be racist. In a nutshell, the authors analyzed a tool called COMPAS (which stands for Correctional Offender Management Profiling for Alternative Sanctions). COMPAS tries to predict, among other indexes, the recidivism of defendants, who are ranked low, medium or high risk. It was used in many US states (such as New York and Wisconsin), to suggest to judges an appropriate probation or treatment plan for individuals being sentenced. Indeed, the tool was quite accurate (around 70 percent overall with 16,000 probationers), but ProPublica journalists found that black defendants were far more likely than white defendants to be incorrectly judged to be at a higher risk of recidivism, while white defendants were more likely than black defendants to be incorrectly flagged as low risk.</p>
 <p>From the above examples, it appears evident that explanation technologies can help companies for creating safer, more trustable products, and better managing any possible liability they may have.</p>
-<p>The definitions contained in this book will help in understanding better the <a class="reference internal" href="T3.1/XAI_dimensions.html"><span class="doc">Dimensions of Explanations </span></a> of explainations (e.g., we can discriminate between <a class="reference internal" href="T3.1/model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers </span></a>), the requirements to provide good explainations, the problems related to the Explainability topic, and the possible solutions we can adopt.</p>
-<p><dl class="footnote brackets">
-<dt class="label" id="gdpr"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<p>The definitions contained in this book will help in understanding better the <a class="reference internal" href="T3.1/XAI_dimensions.html"><span class="doc">Dimensions of Explanations</span></a> of explainations (e.g., we can discriminate between <a class="reference internal" href="T3.1/model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>), the requirements to provide good explainations, the problems related to the Explainability topic, and the possible solutions we can adopt.</p>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
 </dd>
-<dt class="label" id="ribeiro"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. “why should i trust you?”: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
+<dt class="label" id="id15"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should i trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
 </dd>
-<dt class="label" id="propublica"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
 <dd><p>J. Angwin, J. Larson, S. Mattu, and L. Kirchner. Machine bias: there’s software used across the country to predict future criminals. and it’s biased against blacks. 2016. URL: <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a> (visited on 2020-09-22).</p>
 </dd>
 </dl>
 </p>
+<hr class="docutils" />
+<p>This entry was readapted from <em>Pratesi, Trasarti, Giannotti. Ethics in Smart Information Systems. Policy Press (currently under review)</em> by Francesca Pratesi.</p>
 <!---
-```{bibliography}
-:filter: cited and ({"T3.1"} >= docnames)
-:filter: {"T3.1"} & docnames
+{footcite}`propublica`
+```{footbibliography}
 ```
+for the biblography
+
+[^note]
+[^note]: This is a note
 -->
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="note"><span class="brackets"><a class="fn-backref" href="#id1">4</a></span></dt>
-<dd><p>This entry was readapted from <em>Pratesi, Trasarti, Giannotti. Ethics in Smart Information Systems. Policy Press (currently under review)</em> by Francesca Pratesi.</p>
-</dd>
-</dl>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -345,7 +401,7 @@ The GDPR <a class="footnote-reference brackets" href="#gdpr" id="id2">1</a>, in 
     <a class='right-next' id="next-link" href="T3.1/XAI_dimensions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Dimensions of Explanations </p>
+        <p class="prev-next-title">Dimensions of Explanations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

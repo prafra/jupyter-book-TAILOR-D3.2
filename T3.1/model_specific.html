@@ -175,8 +175,65 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../T3.6.html">
-   Suistainability
+   Sustainability
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Index.html">
+   Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Accountability.html">
+     Accountability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Assurance.html">
+     Assurance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Attacks%20on%20Anonymization%20Schemes.html">
+     Attacks on Anonymization Schemes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Attacks%20on%20Partition-based%20Algorithms.html">
+     Attacks on Partition-based Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Attacks%20on%20Pseudonymised%20Data.html">
+     Attacks on Pseudonymised Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Auditing.html">
+     Auditing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Autonomy%20Levels.html">
+     Autonomy Levels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -269,12 +326,12 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="model-specific-vs-model-agnostic-explainers">
-<h1>Model-Specific vs Model-Agnostic Explainers <a class="footnote-reference brackets" href="#note" id="id1">3</a><a class="headerlink" href="#model-specific-vs-model-agnostic-explainers" title="Permalink to this headline">¶</a></h1>
-<p>This is one of the first <a class="reference internal" href="XAI_dimensions.html"><span class="doc">Dimensions of Explanations </span></a> we should consider.
+<h1>Model-Specific vs Model-Agnostic Explainers<a class="headerlink" href="#model-specific-vs-model-agnostic-explainers" title="Permalink to this headline">¶</a></h1>
+<p>This is one of the first <a class="reference internal" href="XAI_dimensions.html"><span class="doc">Dimensions of Explanations</span></a> we should consider.
 We distinguish between <strong>model-specific</strong> or <strong>model-agnostic</strong> explanation method depending on whether the technique adopted to retrieve the explanation acts on a particular model adopted by an AI system, or can be used on any type of AI.</p>
-<p>The most used approach to explain AI black boxes is known as reverse engineering. The name comes from the fact that the explanation is retrieved by observing what happens to the output, i.e., the AI decision, when changing the input in a controlled way. An explanation method is model-specific, or not generalizable <a class="footnote-reference brackets" href="#martens" id="id2">1</a>,
+<p>The most used approach to explain AI black boxes is known as reverse engineering. The name comes from the fact that the explanation is retrieved by observing what happens to the output, i.e., the AI decision, when changing the input in a controlled way. An explanation method is model-specific, or not generalizable <span id="id1">[<a class="reference internal" href="#id10">1</a>]</span>,
 whether it considers inputs, outputs as well as the inner-workings of a machine learning model.
-The drawback of this approach is that t can be used to interpret only particular types of black box models. For example, if an explanation approach is designed to interpret a Random Forest <a class="footnote-reference brackets" href="#kumar" id="id3">2</a> and internally use a concept of distance between trees, then such an approach cannot be used to explain the predictions of a neural network.</p>
+The drawback of this approach is that t can be used to interpret only particular types of black box models. For example, if an explanation approach is designed to interpret a Random Forest <span id="id2">[<a class="reference internal" href="#id11">2</a>]</span> and internally use a concept of distance between trees, then such an approach cannot be used to explain the predictions of a neural network.</p>
 <p>On the other hand, an explanation method is model-agnostic, or generalizable, when it can be used independently from the black box model being explained. In other words, the AI’s internal characteristics are not exploited to build the interpretable model approximating the black box behavior.</p>
 <p>In Fig. <a class="reference internal" href="#specific-agnostic"><span class="std std-numref">3</span></a>, there is a summarization of these two kind of approaches.</p>
 <div class="figure align-center" id="specific-agnostic">
@@ -285,21 +342,17 @@ The drawback of this approach is that t can be used to interpret only particular
  author={Spinner, Thilo and Schlegel, Udo and Sch ̈afer, Hanna and El-Assady, Mennatallah},
 https://explainer.ai/
 -->
-<p><dl class="footnote brackets">
-<dt class="label" id="martens"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>David Martens, Bart Baesens, Tony Van Gestel, and Jan Vanthienen. Comprehensible credit scoring models using rule extraction from support vector machines. <em>European journal of operational research</em>, 183((3)):1466––1476, 2007.</p>
 </dd>
-<dt class="label" id="kumar"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Pang-Ning Tan, Michael Steinbach, and Vipin Kumar. <em>Introduction to data mining</em>. Pearson Addison-Wesley, 2006.</p>
 </dd>
 </dl>
 </p>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="note"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
-<dd><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
-</dd>
-</dl>
+<hr class="docutils" />
+<p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -331,7 +384,7 @@ https://explainer.ai/
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Dimensions of Explanations </p>
+            <p class="prev-next-title">Dimensions of Explanations</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../T3.2.html" title="next page">

@@ -175,8 +175,65 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../T3.6.html">
-   Suistainability
+   Sustainability
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Index.html">
+   Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Accountability.html">
+     Accountability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Assurance.html">
+     Assurance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Attacks%20on%20Anonymization%20Schemes.html">
+     Attacks on Anonymization Schemes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Attacks%20on%20Partition-based%20Algorithms.html">
+     Attacks on Partition-based Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Attacks%20on%20Pseudonymised%20Data.html">
+     Attacks on Pseudonymised Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Auditing.html">
+     Auditing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Autonomy%20Levels.html">
+     Autonomy Levels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -269,49 +326,45 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="dimensions-of-explanations">
-<h1>Dimensions of Explanations <a class="footnote-reference brackets" href="#note" id="id1">7</a><a class="headerlink" href="#dimensions-of-explanations" title="Permalink to this headline">¶</a></h1>
-<p>The goal of <a class="reference internal" href="../T3.1.html"><span class="doc">Explainable AI </span></a> is to <em>interpret</em> AI reasoning. According to Merriam-webster, to <em>interpret</em> means to give or provide the meaning or to explain and present in understandable terms some concepts.
-Therefore, in AI, <em>interpretability</em> is defined as the ability to <em>explain</em> or to provide the meaning in understandable terms to a human <a class="footnote-reference brackets" href="#arrietaxaitassonomy" id="id2">1</a>,<a class="footnote-reference brackets" href="#doshi-rigorous" id="id3">2</a>. These definitions assume that the concepts composing an explanation and expressed in the understandable  terms are self-contained and do not need further explanations. An explanation is an “interface” between a human and an AI, and it is at the same time both human understandable and an accurate proxy of the AI.</p>
-<p>We can identify a set of dimensions to analyze the interpretability of AI systems that, in turn, reflect on existing different types of explanations <a class="footnote-reference brackets" href="#guidotti-survey" id="id4">3</a>.
+<h1>Dimensions of Explanations<a class="headerlink" href="#dimensions-of-explanations" title="Permalink to this headline">¶</a></h1>
+<p>The goal of <a class="reference internal" href="../T3.1.html"><span class="doc">Explainable AI</span></a> is to <em>interpret</em> AI reasoning. According to Merriam-webster, to <em>interpret</em> means to give or provide the meaning or to explain and present in understandable terms some concepts.
+Therefore, in AI, <em>interpretability</em> is defined as the ability to <em>explain</em> or to provide the meaning in understandable terms to a human <span id="id1">[<a class="reference internal" href="#id11">1</a>]</span>,<span id="id2">[<a class="reference internal" href="#id12">2</a>]</span>. These definitions assume that the concepts composing an explanation and expressed in the understandable  terms are self-contained and do not need further explanations. An explanation is an “interface” between a human and an AI, and it is at the same time both human understandable and an accurate proxy of the AI.</p>
+<p>We can identify a set of dimensions to analyze the interpretability of AI systems that, in turn, reflect on existing different types of explanations <span id="id3">[<a class="reference internal" href="#id13">3</a>]</span>.
 Some of these dimensions are related to <em>functional requirements</em> of explainable artificial intelligence, i.e., requirements that identify the algorithmic adequacy of a particular approach for a specific application, while others to the <em>operational requirements</em>, i.e., requirements that take into consideration how users interact with an explainable system and what is the expectation.
 Some dimensions instead derive from the need of <em>usability criteria</em> from a user perspective, while other derive from the need of guarantees against any vulnerability issues.</p>
-<p>Recently, all these requirements have been analyzed <a class="footnote-reference brackets" href="#flach-fat" id="id5">4</a> to provide a framework allowing the systematic comparison of explainability methods. In particular, in <a class="footnote-reference brackets" href="#flach-fat" id="id6">4</a> authors propose <em>Explainability Fact Sheets</em> which enable researchers and practitioners to assess capabilities and limitations of a particular explainable method.
+<p>Recently, all these requirements have been analyzed <span id="id4">[<a class="reference internal" href="#id14">4</a>]</span> to provide a framework allowing the systematic comparison of explainability methods. In particular, in <span id="id5">[<a class="reference internal" href="#id14">4</a>]</span> authors propose <em>Explainability Fact Sheets</em> which enable researchers and practitioners to assess capabilities and limitations of a particular explainable method.
 As an example, given an explanation method <em>m</em>, we can consider the following functional requirements.
 <em>(i)</em> Even though <em>m</em> is designed to explain regressors, can we use it to explain probabilistic classifiers?
 <em>(ii)</em> Can we employ <em>m</em> on categorical features even though it only works on numerical features? On the other hand, as an operational requirement, can we consider which is the <em>function of the explanation</em>? Provide transparency, assess the fairness, etc.</p>
-<p>Besides the detailed requirements illustrated in <a class="footnote-reference brackets" href="#flach-fat" id="id7">4</a>, in the literature it is recognized a categorization of explanation methods among fundamental pillars <a class="footnote-reference brackets" href="#adadi" id="id8">5</a>,<a class="footnote-reference brackets" href="#guidotti-survey" id="id9">3</a>: <em>(i)</em> black box explanation vs explanation by design <em>(link TBA)</em>, <em>(ii)</em> global vs local explanations <em>(link TBA)</em>, <em>(iii)</em> <a class="reference internal" href="model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers </span></a>. <!---In the following we present details of these distinctions and other important features characterizing XAI methods.--></p>
+<p>Besides the detailed requirements illustrated in <span id="id6">[<a class="reference internal" href="#id14">4</a>]</span>, in the literature it is recognized a categorization of explanation methods among fundamental pillars <span id="id7">[<a class="reference internal" href="#id15">5</a>]</span>,<span id="id8">[<a class="reference internal" href="#id13">3</a>]</span>: <em>(i)</em> black box explanation vs explanation by design <em>(link TBA)</em>, <em>(ii)</em> global vs local explanations <em>(link TBA)</em>, <em>(iii)</em> <a class="reference internal" href="model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>. <!---In the following we present details of these distinctions and other important features characterizing XAI methods.--></p>
 <p>Fig. <a class="reference internal" href="#xai-tax"><span class="std std-numref">2</span></a> illustrates a summarized ontology of the taxonomy used to classify XAI methods.</p>
 <div class="figure align-center" id="xai-tax">
 <a class="reference internal image-reference" href="../_images/xai_taxonomy.png"><img alt="../_images/xai_taxonomy.png" src="../_images/xai_taxonomy.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A summarized ontology of the taxonomy of XAI methods <a class="footnote-reference brackets" href="#guidotti2021" id="id10">6</a>.</span><a class="headerlink" href="#xai-tax" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A summarized ontology of the taxonomy of XAI methods <span id="id9">[<a class="reference internal" href="#id16">6</a>]</span>.</span><a class="headerlink" href="#xai-tax" title="Permalink to this image">¶</a></p>
 </div>
-<p><dl class="footnote brackets">
-<dt class="label" id="arrietaxaitassonomy"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<p id="id10"><dl class="citation">
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>A. B. Arrieta, N. Díaz-Rodríguez, J. Del Ser, A. Bennetot, S. Tabik, A. Barbado, S. García, S. Gil-López, D. Molina, and R. Benjamins. Explainable artificial intelligence (xai): concepts, taxonomies, opportunities and challenges toward responsible ai. In <em>Information Fusion</em>. 2020.</p>
 </dd>
-<dt class="label" id="doshi-rigorous"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>F. Doshi-Velez and B. Kim. Towards a rigorous science of interpretable machine learning. 2017. arXiv preprint arXiv:1702.08608.</p>
 </dd>
-<dt class="label" id="guidotti-survey"><span class="brackets">3</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id9">2</a>)</span></dt>
+<dt class="label" id="id13"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
 <dd><p>R. Guidotti, A. Monreale, S. Ruggieri, F. Turini, F. Giannotti, and D. Pedreschi. A survey of methods for explaining black box models. <em>ACM computing surveys (CSUR)</em>, 2018.</p>
 </dd>
-<dt class="label" id="flach-fat"><span class="brackets">4</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>,<a href="#id7">3</a>)</span></dt>
+<dt class="label" id="id14"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
 <dd><p>K. Sokol and P. A. Flach. Explainability fact sheets: a framework for systematic assessment of explainable approaches. In <em>ACM Conference on Fairness, Accountability, and Transparency</em>. 2020.</p>
 </dd>
-<dt class="label" id="adadi"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id7">5</a></span></dt>
 <dd><p>A. Adadi and M. Berrada. Peeking inside the black-box: a survey on explainable artificial intelligence (xai). 2018. IEEE Access, 6:52138–52160.</p>
 </dd>
-<dt class="label" id="guidotti2021"><span class="brackets"><a class="fn-backref" href="#id10">6</a></span></dt>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id9">6</a></span></dt>
 <dd><p>Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. <em>Principles of Explainable Artificial Intelligence</em>. Springer International Publishing, 2021.</p>
 </dd>
 </dl>
 </p>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="note"><span class="brackets"><a class="fn-backref" href="#id1">7</a></span></dt>
-<dd><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
-</dd>
-</dl>
+<hr class="docutils" />
+<p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -345,13 +398,13 @@ As an example, given an explanation method <em>m</em>, we can consider the follo
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Explainable AI </p>
+            <p class="prev-next-title">Explainable AI</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="model_specific.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Model-Specific vs Model-Agnostic Explainers </p>
+        <p class="prev-next-title">Model-Specific vs Model-Agnostic Explainers</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
