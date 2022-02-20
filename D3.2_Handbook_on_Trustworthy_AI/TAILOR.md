@@ -1,8 +1,8 @@
 # Welcome to TAILOR
 
-D3.2 Handbook on Trustworthy AI
+**TAILOR: Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization**
 
-TAILOR: Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization
+*D3.2 Handbook on Trustworthy AI*
 
 TAILOR is an EU-funded ICT-48 Network (GA 952215) with the purpose of building the capacity of providing the scientific foundations for Trustworthy AI in Europe by developing a network of research excellence centres leveraging and combining learning, optimization and reasoning.
 
@@ -15,4 +15,10 @@ TAILOR is an EU-funded ICT-48 Network (GA 952215) with the purpose of building t
 TAILOR, like all the research projects, is based on Work Pakages (WPs).
 WP3 (Trustworthy AI) aims at advancing knowledge on the six dimensions and putting each of them in relationships with foundation themes.\\
 This book (to be consolidated in the second phase of the project) represents the first period deliverable, providing an encyclopedia of the major terms related to trustworthiness.
-Here, you can find definitions related to {doc}`T3.1`, {doc}`T3.2`, {doc}`T3.3`, {doc}`T3.4`, {doc}`T3.5`, and {doc}`T3.6`.
+Here, you can find definitions related to:
+- {doc}`T3.1`. 
+- {doc}`T3.2`. 
+- {doc}`T3.3`. 
+- {doc}`T3.4`. 
+- {doc}`T3.5`.
+- {doc}`T3.6`.

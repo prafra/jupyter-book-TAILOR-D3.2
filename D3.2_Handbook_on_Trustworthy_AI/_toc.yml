@@ -24,6 +24,111 @@ chapters:
   title: Fairness, Equity, and Justice by Design
 - file: T3.4
 - file: T3.5
+  sections:
+  - file: T3.5/anonymization
+  - file: T3.5/privacy_model
 - file: T3.6
-
-#- file: prova
+- file: AnalyticaIndex
+  sections:
+  - file: index/Accountability
+  - file: index/Alignment
+  - file: index/Ante-hoc Explanation.
+  - file: index/Assurance
+  - file: index/Attacks on Anonymization Schemes
+  - file: index/Attacks on Partition-based Algorithms
+  - file: index/Attacks on Pseudonymised Data
+  - file: index/Auditing
+  - file: index/Autonomy Levels
+  - file: index/Bias
+  - file: index/Certification Standards
+  - file: index/Cloud Computing
+  - file: index/Computational Differential Privacy
+  - file: index/Corrigibility
+  - file: index/Counterfactual Explanations
+  - file: index/Data Anonymization
+  - file: index/Data Centers Management
+  - file: index/Data Minimisation
+  - file: index/Data sanitization
+  - file: index/deFinetti Attack
+  - file: index/Differential Privacy models
+  - file: index/Differential Privacy - epsilon, delta-differential privacy
+  - file: index/Differential Privacy - Epsilon-differential privacy
+  - file: index/Differential Privacy - Other Variants or Generalizations
+  - file: index/Dimensions of Explanations
+  - file: index/Discrimination
+  - file: index/Distributional Shift
+  - file: index/Electricity Price Forecast
+  - file: index/Enforcement
+  - file: index/epsilon-indistinguishability
+  - file: index/Equity
+  - file: index/Evaluating Explanations
+  - file: index/Exponential Mechanism
+  - file: index/Fair Machine Learning
+  - file: index/Fairness
+  - file: index/Features Importance
+  - file: index/Generality
+  - file: index/General Privacy-related Attacks
+  - file: index/Global Explanations
+  - file: index/Global Recoding
+  - file: index/Goal Stability
+  - file: index/Green Computing
+  - file: index/Human-in-the-loop
+  - file: index/Impact Assessment of Trustworthy AI
+  - file: index/Interpretability
+  - file: index/Interruptibility
+  - file: index/Justice
+  - file: index/K-Anonymity
+  - file: index/Laplace Mechanism
+  - file: index/Local Explanations
+  - file: index/Local perturbation
+  - file: index/Local Recoding
+  - file: index/Meaningful human control
+  - file: index/Membership Inference Attacks
+  - file: index/Minimality Attack
+  - file: index/Model-Agnostic
+  - file: index/Model-Specific
+  - file: index/Mondrian
+  - file: index/Monitoring
+  - file: index/Moral responsibility
+  - file: index/Multidimensional Recoding
+  - file: index/Negative Side Effects
+  - file: index/Nice properties of Privacy Models
+  - file: index/Partition-Based Algorithms
+  - file: index/Perturbation Mechanisms
+  - file: index/Post-hoc Explanations
+  - file: index/Privacy algorithm
+  - file: index/Privacy Mechanism
+  - file: index/Privacy model
+  - file: index/Privacy-Preserving Data Publishing
+  - file: index/Problem of many hands
+  - file: index/Pseudonymised Data
+  - file: index/Randomized response
+  - file: index/Reconstruction Attacks
+  - file: index/Re-identification Attack
+  - file: index/Reliability
+  - file: index/Repeatability
+  - file: index/Replicability
+  - file: index/Reproducibility
+  - file: index/Resource Prediction
+  - file: index/Resource Scheduling
+  - file: index/Reward Hacking
+  - file: index/Robustness
+  - file: index/Rules List and Rules Set
+  - file: index/Safety Criticality
+  - file: index/Safety Standards
+  - file: index/Saliency Maps
+  - file: index/Scalable Oversight Problem
+  - file: index/Security under post-processing
+  - file: index/Segregation
+  - file: index/Self-composition
+  - file: index/Side Effects
+  - file: index/Single Tree Approximation
+  - file: index/Specification
+  - file: index/Stochastic Forecast
+  - file: index/Testing
+  - file: index/Traceability
+  - file: index/Training Corruption
+  - file: index/Transparency
+  - file: index/Uncertainty
+  - file: index/Validation
+  - file: index/Verification
