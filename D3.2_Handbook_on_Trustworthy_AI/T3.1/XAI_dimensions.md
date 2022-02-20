@@ -1,6 +1,6 @@
 # Dimensions of Explanations
 
-## Definition
+## In brief
 Dimensions of Explanations are useful to analyze the interpretability of AI systems and to classify the explanation method. 
 
 ## More in detail
