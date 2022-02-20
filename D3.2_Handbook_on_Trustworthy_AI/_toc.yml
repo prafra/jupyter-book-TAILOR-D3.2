@@ -51,8 +51,8 @@ chapters:
   - file: index/Data sanitization
   - file: index/deFinetti Attack
   - file: index/Differential Privacy models
-  - file: index/Differential Privacy - epsilon, delta-differential privacy
-  - file: index/Differential Privacy - Epsilon-differential privacy
+  - file: index/epsilon_delta-differential_privacy
+  - file: index/Epsilon-differential_privacy
   - file: index/Differential Privacy - Other Variants or Generalizations
   - file: index/Dimensions of Explanations
   - file: index/Discrimination
