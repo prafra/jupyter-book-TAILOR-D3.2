@@ -1,8 +1,12 @@
 # Dimensions of Explanations
 
+## Definition
+Dimensions of Explanations are useful to analyze the interpretability of AI systems and to classify the explanation method. 
+
+## More in detail
 
 The goal of {doc}`../T3.1` is to *interpret* AI reasoning. According to Merriam-webster, to *interpret* means to give or provide the meaning or to explain and present in understandable terms some concepts.
-Therefore, in AI, *interpretability* is defined as the ability to *explain* or to provide the meaning in understandable terms to a human {cite}`arrietaXAItassonomy`,{cite}`doshi_rigorous`. These definitions assume that the concepts composing an explanation and expressed in the understandable  terms are self-contained and do not need further explanations. An explanation is an “interface” between a human and an AI, and it is at the same time both human understandable and an accurate proxy of the AI.
+Therefore, in AI, *interpretability* is defined as the ability to *explain* or to provide the meaning in understandable terms to a human {cite}`arrietaXAItassonomy`,{cite}`doshi_rigorous`. These definitions assume that the concepts composing an explanation and expressed in the understandable terms are self-contained and do not need further explanations. An explanation is an “interface” between a human and an AI, and it is at the same time both human understandable and an accurate proxy of the AI.
 
 We can identify a set of dimensions to analyze the interpretability of AI systems that, in turn, reflect on existing different types of explanations {cite}`guidotti_survey`. 
 Some of these dimensions are related to *functional requirements* of explainable artificial intelligence, i.e., requirements that identify the algorithmic adequacy of a particular approach for a specific application, while others to the *operational requirements*, i.e., requirements that take into consideration how users interact with an explainable system and what is the expectation. 
