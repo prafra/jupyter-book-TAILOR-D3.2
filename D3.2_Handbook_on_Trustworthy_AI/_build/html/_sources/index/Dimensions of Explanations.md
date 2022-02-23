@@ -1,4 +1,4 @@
-# Dimensions of Explanations
+# Dimensions of Explanations (Explainable AI Systems)
 
 Dimensions of Explanations are useful to analyze the interpretability of AI systems and to classify the explanation method. 
 

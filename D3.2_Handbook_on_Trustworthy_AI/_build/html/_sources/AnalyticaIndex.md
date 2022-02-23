@@ -24,8 +24,8 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`index/deFinetti Attack`
 - {doc}`index/Differential Privacy models`
 
-- [($\epsilon$,$\delta$)-Differential Privacy](index/epsilon_delta-differential_privacy.md)
-- [$\epsilon$-Differential Privacy](index/EpsilonDP.md)
+- [Differential Privacy - ($\epsilon$,$\delta$)-Differential Privacy](index/epsilon_delta-differential_privacy.md)
+- [Differential Privacy - $\epsilon$-Differential Privacy](index/Epsilon-differential_privacy.md)
 
 - {doc}`index/Differential Privacy - Other Variants or Generalizations`
 - {doc}`index/Dimensions of Explanations`
@@ -33,7 +33,9 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`index/Distributional Shift`
 - {doc}`index/Electricity Price Forecast`
 - {doc}`index/Enforcement`
-- {doc}`index/epsilon-indistinguishability`
+
+- [$\epsilon$-Indistinguishability](index/epsilon-indistinguishability.md)
+
 - {doc}`index/Equity`
 - {doc}`index/Evaluating Explanations`
 - {doc}`index/Exponential Mechanism`
