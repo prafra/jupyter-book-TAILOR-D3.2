@@ -124,34 +124,10 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../T3.1.html">
-   Explainable AI Systems
+   Explainable AI
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="XAI_dimensions.html">
-     Dimensions of Explanations
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Model-Specific vs Model-Agnostic Explainers
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../T3.2.html">
@@ -172,8 +148,8 @@
   <a class="reference internal" href="../T3.5.html">
    Respect for Privacy
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -199,8 +175,8 @@
   <a class="reference internal" href="../AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -870,10 +846,10 @@
 whether it considers inputs, outputs as well as the inner-workings of a machine learning model.
 The drawback of this approach is that it can be used to interpret only particular types of black box models. For example, if an explanation approach is designed to interpret a Random Forest <span id="id2">[<a class="reference internal" href="#id11">2</a>]</span> and internally use a concept of distance between trees, then such an approach cannot be used to explain the predictions of a neural network.</p>
 <p>On the other hand, an explanation method is model-agnostic, or generalizable, when it can be used independently from the black box model being explained. In other words, the AI’s internal characteristics are not exploited to build the interpretable model approximating the black box behavior.</p>
-<p>In Fig. <a class="reference internal" href="#specific-agnostic"><span class="std std-numref">3</span></a>, there is a summarization of these two kind of approaches.</p>
+<p>In Fig. <a class="reference internal" href="#specific-agnostic"><span class="std std-numref">2</span></a>, there is a summarization of these two kind of approaches.</p>
 <div class="figure align-center" id="specific-agnostic">
 <a class="reference internal image-reference" href="../_images/TAILOR-modelspecific&amp;agnostic.png"><img alt="../_images/TAILOR-modelspecific&amp;agnostic.png" src="../_images/TAILOR-modelspecific&amp;agnostic.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">On the left, an explainer which exploites the internal structure and behaviour of the model. On the right, an explainer which uses the model as a black-box to understand its reasoning.</span><a class="headerlink" href="#specific-agnostic" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">On the left, an explainer which exploites the internal structure and behaviour of the model. On the right, an explainer which uses the model as a black-box to understand its reasoning.</span><a class="headerlink" href="#specific-agnostic" title="Permalink to this image">¶</a></p>
 </div>
 <!--- @misc{explainer,
  author={Spinner, Thilo and Schlegel, Udo and Sch ̈afer, Hanna and El-Assady, Mennatallah},
