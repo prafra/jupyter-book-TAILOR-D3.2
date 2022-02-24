@@ -24,11 +24,8 @@ I will take care to create a file in your folder and to add the entry to the Tab
 
 5) Put the content of the entry in the appropriate file (instruction for the writing, the compiling, and the publication are below)
 
-#####################################################################################################################################################################
-#                                                                                                                                                                   #
-#               A guide to undestand the syntax of the Jupyter Book markdown language can be found here: https://jupyterbook.org/intro.html                         #
-#                                                                                                                                                                   #
-#####################################################################################################################################################################
+                                                                                                                                                                  
+#              A guide to undestand the syntax of the Jupyter Book markdown language can be found here: https://jupyterbook.org/intro.html                       
 
 For contributing in the git repository, only the first time:
 - checkout the jupiter-book-TAILOR-D3.2 (all the git commands are the usual ones)
