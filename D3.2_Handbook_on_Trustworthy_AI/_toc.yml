@@ -23,6 +23,22 @@ chapters:
 - file: T3.3
   title: Fairness, Equity, and Justice by Design
 - file: T3.4
+  sections:
+  - file: T3.4/L2.Accountability
+    sections:
+    - file: T3.4/L3.Meaningful_human_control
+    - file: T3.4/L3.The_frame_problem
+    - file: T3.4/L3.Accountability_gaps
+    - file: T3.4/L3.The_problem_of_many_hands
+    - file: T3.4/L3.Impact_assessment_tools
+  - file: T3.4/L2.Reproducibility
+    sections:
+    - file: T3.4/L3.Guidelines_reproducibility
+    - file: T3.4/L3.software_frameworks_supporting_reproducibility
+  - file: T3.4/L2.Traceability
+    sections:
+    - file: T3.4/L3.Provenance_tracking
+    - file: T3.4/L3.Continuous_performance_monitoring
 - file: T3.5
   sections:
   - file: T3.5/anonymization
@@ -32,7 +48,7 @@ chapters:
   sections:
   - file: index/Accountability
   - file: index/Alignment
-  - file: index/Ante-hoc Explanation.
+  - file: index/Ante-hoc Explanation
   - file: index/Assurance
   - file: index/Attacks on Anonymization Schemes
   - file: index/Attacks on Partition-based Algorithms
