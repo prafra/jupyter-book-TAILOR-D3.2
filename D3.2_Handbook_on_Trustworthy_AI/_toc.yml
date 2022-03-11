@@ -4,6 +4,7 @@
 format: jb-book
 root: TAILOR
 chapters:
+- file: authors
 - file: Jupyter
   sections:
   - file: introJupyter

@@ -33,6 +33,7 @@ On the left, an explainer which exploites the internal structure and behaviour o
 https://explainer.ai/
 -->
 
+## Bibliography
 
 ```{bibliography}
 :style: unsrt
