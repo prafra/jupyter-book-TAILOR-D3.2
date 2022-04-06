@@ -45,6 +45,7 @@ chapters:
   - file: T3.5/L1.anonymization
   - file: T3.5/L1.privacy_model
     sections:
+    - file: T3.5/L2.privmod_properties
     - file: T3.5/L2.differential_privacy
       sections:
       - file: T3.5/L3.epsilon_DP
@@ -54,11 +55,12 @@ chapters:
     - file: T3.5/L2.k_anonymity
   - file: T3.5/L1.privacy_mechanisms
     sections:
-    - file: T3.5/L2.perturbation_mecanism
+    - file: T3.5/L2.perturbation_mechanisms
       sections:
       - file: T3.5/L3.local_perturbation
       - file: T3.5/L3.laplace
-      - file: T3.5/L3.esponential
+      - file: T3.5/L3.exponential
+      - file: T3.5/L3.randomness_alignments
   - file: T3.5/L1.attacks
     sections:
     - file: T3.5/L2.reidentification
