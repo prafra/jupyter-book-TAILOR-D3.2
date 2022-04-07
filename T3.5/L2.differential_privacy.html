@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,7 +54,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="\(\epsilon\)-Differential Privacy" href="L3.epsilon_DP.html" />
-    <link rel="prev" title="Privacy Models" href="L1.privacy_model.html" />
+    <link rel="prev" title="Properties of Privacy Models" href="L2.privmod_properties.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -281,6 +283,11 @@
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="L2.privmod_properties.html">
+       Properties of Privacy Models
+      </a>
+     </li>
      <li class="toctree-l3 current active has-children">
       <a class="current reference internal" href="#">
        Differential Privacy
@@ -340,15 +347,47 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="L2.perturbation_mechanisms.html">
+       Perturbation Mechanism
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.local_perturbation.html">
+         Local Perturbation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.laplace.html">
+         Laplace Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.exponential.html">
+         Exponential Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.randomness_alignments.html">
+         Randomness Alignments
+        </a>
+       </li>
+      </ul>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="L1.attacks.html">
      Attacks on anonymization schemes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -381,8 +420,8 @@
   <a class="reference internal" href="../AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -996,13 +1035,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
+  <a class="reference internal nav-link" href="#the-family-of-differential-privacy-models">
+   The Family of Differential Privacy Models
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
+  <a class="reference internal nav-link" href="#achieving-differential-privacy">
+   Achieving Differential Privacy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-expanding-universe">
+   An expanding universe
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1023,17 +1067,86 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="differential-privacy">
 <h1>Differential Privacy<a class="headerlink" href="#differential-privacy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-family-of-differential-privacy-models">
+<h2>The Family of Differential Privacy Models<a class="headerlink" href="#the-family-of-differential-privacy-models" title="Permalink to this headline">¶</a></h2>
+<p>Differential privacy is a prominent family of privacy-preserving data
+publishing models (see <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>). It comprehends
+privacy as the ability to set a limit on the impact of any single
+individual on the outputs of the function that produces the
+information to publish (computation, e.g., of a set of statistics, of
+a machine learning model, of generated synthetic data). In other
+words, a differentially private function promises to each individual
+that its outputs will be more or less the same whether the
+individual’s data is input by the function or not. Differential
+privacy models all share this common intuitive goal but they differ in
+the way they formalize it - for example, on the quantification of the
+impact of an individual or on the tolerance to possible failures of
+the guarantees (though improbable). They usually exhibit properties
+that have been identified as key requirements to privacy models (see
+<a class="reference internal" href="L2.privmod_properties.html"><span class="doc">Properties of Privacy Models</span></a> for details).</p>
 </div>
-<div class="section" id="more-in-detail">
-<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="L2.perturbation_mecanism.html"><span class="doc">Perturbation Mechanism</span></a></p>
+<div class="section" id="achieving-differential-privacy">
+<h2>Achieving Differential Privacy<a class="headerlink" href="#achieving-differential-privacy" title="Permalink to this headline">¶</a></h2>
+<p>Designing a function that satisfies differential privacy often boils
+down to carefully combining basic perturbation mechanisms (such as,
+e.g., the Laplace mechanism) and to demonstrating formally either that
+data is only accessed through a differentially private function
+(leveraging the safety under post-processing and the
+self-composability properties), or that the output distribution of the
+function complies with the targeted differential privacy model
+(through, e.g., randomness alignments). We refer the interested reader
+to <a class="reference internal" href="L2.perturbation_mechanisms.html"><span class="doc">Perturbation Mechanism</span></a> for more information.</p>
+</div>
+<div class="section" id="an-expanding-universe">
+<h2>An expanding universe<a class="headerlink" href="#an-expanding-universe" title="Permalink to this headline">¶</a></h2>
+<p>The seminal differential privacy models were proposed in the
+mid-2000’s and include <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy (see
+<a class="reference internal" href="L3.epsilon_DP.html"><span class="doc">\epsilon-Differential Privacy</span></a>), <span class="math notranslate nohighlight">\(\epsilon\)</span>-indistinguishability (see
+<a class="reference internal" href="L3.epsilon_indDP.html"><span class="doc">\epsilon-Differential Privacy</span></a>), or <span class="math notranslate nohighlight">\((\epsilon, \delta)\)</span>-differential
+privacy (see <a class="reference internal" href="L3.epsilon_delta_DP.html"><span class="doc">(\epsilon,\delta)-Differential Privacy</span></a>). The number of differential
+privacy models has grown fastly over the years (more than 200
+extensions or variants have been reported in a 2020 survey
+paper). Differential privacy is often considered in the academia as a
+<em>de facto</em> standard for privacy-preserving data publishing and has
+earned the original authors the prestigious Gödel Prize
+in 2017. Famous organizations (e.g., the US Census Bureau) and
+companies (e.g., Google, Apple, LinkedIn, Microsoft) have launched
+ambitious real-life applications of differential privacy.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id1"></span><hr class="docutils" />
-<p>This entry was readapted from <em><reference></em> by <authors>.</p>
+<p>The seminal differential privacy models were introduced in
+<span id="id1">[<a class="reference internal" href="#id63">1</a>]</span> (<span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy), in
+<span id="id2">[<a class="reference internal" href="#id62">2</a>]</span> (<span class="math notranslate nohighlight">\(\epsilon\)</span>-indistinguishability),
+and in <span id="id3">[<a class="reference internal" href="#id65">3</a>]</span> (<span class="math notranslate nohighlight">\((\epsilon, \delta)\)</span>-differential
+privacy). Differential privacy is thoroughly introduced in
+<span id="id4">[<a class="reference internal" href="#id61">4</a>]</span> and numerous variants and extensions are
+surveyed in <span id="id5">[<a class="reference internal" href="#id64">5</a>]</span>. The book
+<span id="id6">[<a class="reference internal" href="#id59">6</a>]</span> surveys differential privacy
+techniques related to database queries.</p>
+<p id="id7"><dl class="citation">
+<dt class="label" id="id63"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Cynthia Dwork. Differential privacy. In <em>ICALP</em>. 2006.</p>
+</dd>
+<dt class="label" id="id62"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In <em>TCC</em>. 2006.</p>
+</dd>
+<dt class="label" id="id65"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In <em>EUROCRYPT</em>. 2006.</p>
+</dd>
+<dt class="label" id="id61"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Cynthia Dwork and Aaron Roth. The algorithmic foundations of differential privacy. <em>Found. Trends Theor. Comput. Sci.</em>, 9:211–407, 2014.</p>
+</dd>
+<dt class="label" id="id64"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Damien Desfontaines and Balázs Pejó. Sok: differential privacies. <em>Proceedings on Privacy Enhancing Technologies</em>, 2020:288 – 313, 2020.</p>
+</dd>
+<dt class="label" id="id59"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Joseph P. Near and Xi He. Differential privacy for databases. <em>Foundations and Trends in Databases</em>, 11:109–225, 2021.</p>
+</dd>
+</dl>
+</p>
+<hr class="docutils" />
+<p>This entry was written by Tristan Allard.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -1064,11 +1177,11 @@
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="L1.privacy_model.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="L2.privmod_properties.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Privacy Models</p>
+            <p class="prev-next-title">Properties of Privacy Models</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="L3.epsilon_DP.html" title="next page">
