@@ -37,17 +37,19 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -97,6 +99,11 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="authors.html">
+   Complete List of Contributors
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Jupyter.html">
    Jupyter demos
@@ -163,14 +170,9 @@
    Fairness, Equity, and Justice by Design
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="T3.4.html">
    Accountability and Reproducibility
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="T3.5.html">
-   Respect for Privacy
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -178,15 +180,229 @@
    </i>
   </label>
   <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.4/L2.Accountability.html">
+     Accountability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.Meaningful_human_control.html">
+       Meaningful Human Control
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.The_frame_problem.html">
+       The Frame problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.Accountability_gaps.html">
+       Accountability Gaps
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.4/L2.Reproducibility.html">
+     Reproducibility
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.Guidelines_reproducibility.html">
+       Guidelines
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.software_frameworks_supporting_reproducibility.html">
+       Software frameworks supporting reproducibility
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.4/L2.Traceability.html">
+     Traceability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.Provenance_tracking.html">
+       Provenance Tracking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.Continuous_performance_monitoring.html">
+       Continuous Performance Monitoring
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="T3.5.html">
+   Respect for Privacy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="T3.5/anonymization.html">
-     Data Anonymization
+    <a class="reference internal" href="T3.5/L1.anonymization.html">
+     Data Anonymization and Pseudonymization
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.5/privacy_model.html">
-     Privacy Model
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.5/L1.privacy_model.html">
+     Privacy Models
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.privmod_properties.html">
+       Properties of Privacy Models
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="T3.5/L2.differential_privacy.html">
+       Differential Privacy
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+      <label for="toctree-checkbox-10">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.epsilon_DP.html">
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         -Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.epsilon_delta_DP.html">
+         (
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         ,
+         <span class="math notranslate nohighlight">
+          \(\delta\)
+         </span>
+         )-Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.computational_DP.html">
+         Computational Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.other_DP.html">
+         Other Variants or Generalizations
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.k_anonymity.html">
+       k-anonymity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.5/L1.privacy_mechanisms.html">
+     Privacy Mechanisms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="T3.5/L2.perturbation_mechanisms.html">
+       Perturbation Mechanism
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.local_perturbation.html">
+         Local Perturbation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.laplace.html">
+         Laplace Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.exponential.html">
+         Exponential Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.randomness_alignments.html">
+         Randomness Alignments
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.5/L1.attacks.html">
+     Attacks on anonymization schemes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.reidentification.html">
+       Re-identification Attack
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.membership.html">
+       Membership Attack
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.reconstruction.html">
+       Reconstruction Attack
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -199,8 +415,8 @@
   <a class="reference internal" href="AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -213,6 +429,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="index/Alignment.html">
      Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Ante-hoc%20Explanation.html">
+     Ante-hoc Explanation
     </a>
    </li>
    <li class="toctree-l2">
@@ -803,6 +1024,54 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-the-black-box-problem">
+   Open the Black-Box Problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension">
+   Software Frameworks Supporting Dimension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-keywords">
+   Main Keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -815,6 +1084,54 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-the-black-box-problem">
+   Open the Black-Box Problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension">
+   Software Frameworks Supporting Dimension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-keywords">
+   Main Keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -824,31 +1141,106 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="explainable-ai">
 <h1>Explainable AI<a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h1>
 <!--- This is a comment -->
-<p><strong>Explainable AI</strong> (often shortened to <strong>XAI</strong>) is one of the ethical dimensions that is studied in the <a href="https://tailor-network.eu/">TAILOR project</a>.
+<div class="section" id="in-brief">
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<p><strong>Explainable AI</strong> (often shortened to <strong>XAI</strong>) is one of the ethical dimensions that is studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a>.
 The origin of XAI dates back to the entering into force of the General Data Protection Regulation (GDPR).
-The GDPR <span id="id1">[<a class="reference internal" href="#id14">1</a>]</span>, in its Recital 71, also mentions the right to explanation, as a suitable safeguard to ensure a fair and transparent processing in respect of data subjects. While privacy and data protection are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.</p>
-<p>So far, the usage of black boxes in AI and ML processes implied the possibility of inadvertently making wrong decisions due to a systematic bias in training data collection. Several practical examples have been provided, highlighting the “bias in, bias out” concept. One of the most famous examples of this concept regards a classification task: the algorithm goal was to distinguish between photos of Wolves and Eskimo Dogs (huskies) <span id="id2">[<a class="reference internal" href="#id15">2</a>]</span>. Here, the training phase of the process was done with 20 images, hand selected such that all pictures of wolves had snow in the background, while pictures of huskies did not. This choice was intentional because it was part of a social experiment. In any case, on a collection of additional 60 images, the classifier predicts “Wolf” if there is snow (or light background at the bottom), and “Husky” otherwise, regardless of animal color, position, pose, etc (see an example in Fig. <a class="reference internal" href="#husky"><span class="std std-numref">1</span></a>).</p>
+The GDPR <span id="id1">[<a class="reference internal" href="#id26" title="European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.">1</a>]</span>, in its Recital 71, also mentions the right to explanation, as a suitable safeguard to ensure a fair and transparent processing in respect of data subjects. It is defined as the right “to obtain an explanation of the decision reached after [profiling]”.
+According to NIST report <span id="id2">[]</span>, an explanation is the evidence, support, or reasoning related to a system’s output or process, where the output of a system differs by task and the process refers to the procedures, design, and system workflow which underlie the system.</p>
+</div>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>While other aspect of ethics and trustworthiness, such as <a class="reference internal" href="T3.5.html"><span class="doc">Respect for Privacy</span></a>, are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.
+In this part we will cover the main elements that define the explanation of AI systems. We will try to briefly survey the main guidelines related to explainability.
+Then, we summarize a taxonomy that can be used to classify explanations.
+We will define the possible  <a class="reference internal" href="T3.1/XAI_dimensions.html"><span class="doc">Dimensions of Explanations</span></a> of explanations (e.g., we can discriminate between <a class="reference internal" href="T3.1/model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>).
+We will describe the requirements to provide good explanations, some of the problems related to the Explainability topic.
+Finally, we will provide some examples of possible solutions we can adopt to provide explanations describing the reasoning behind a ML/AI model.</p>
+</div>
+<div class="section" id="motivation-and-background">
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
+<p>So far, the usage of black boxes in AI and ML processes implied the possibility of inadvertently making wrong decisions due to a systematic bias in training data collection. Several practical examples have been provided, highlighting the “bias in, bias out” concept. One of the most famous examples of this concept regards a classification task: the algorithm goal was to distinguish between photos of Wolves and Eskimo Dogs (huskies) <span id="id3">[<a class="reference internal" href="#id27" title="M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should i trust you?&quot;: explaining the predictions of any classifier. In SIGKDD. 2016.">2</a>]</span>. Here, the training phase of the process was done with 20 images, hand selected such that all pictures of wolves had snow in the background, while pictures of huskies did not. This choice was intentional because it was part of a social experiment. In any case, on a collection of additional 60 images, the classifier predicts “Wolf” if there is snow (or light background at the bottom), and “Husky” otherwise, regardless of animal color, position, pose, etc (see an example in Fig. <a class="reference internal" href="#husky"><span class="std std-numref">1</span></a>).</p>
 <div class="figure align-center" id="husky">
 <a class="reference internal image-reference" href="_images/T3.1_husky.png"><img alt="_images/T3.1_husky.png" src="_images/T3.1_husky.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Raw data and explaination of a bad model’s prediction in the “Husky vs Wolf” task <span id="id3">[<a class="reference internal" href="#id15">2</a>]</span>.</span><a class="headerlink" href="#husky" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Raw data and explanation of a bad model’s prediction in the “Husky vs Wolf” task <span id="id4">[<a class="reference internal" href="#id27" title="M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should i trust you?&quot;: explaining the predictions of any classifier. In SIGKDD. 2016.">2</a>]</span>.</span><a class="headerlink" href="#husky" title="Permalink to this image">¶</a></p>
 </div>
-<p>However, one of the most worrisome cases was discovered and published by ProPublica, an independent, nonprofit newsroom that produces investigative journalism with moral force. In <span id="id4">[<a class="reference internal" href="#id16">3</a>]</span>, the authors showed how software can actually be racist. In a nutshell, the authors analyzed a tool called COMPAS (which stands for Correctional Offender Management Profiling for Alternative Sanctions). COMPAS tries to predict, among other indexes, the recidivism of defendants, who are ranked low, medium or high risk. It was used in many US states (such as New York and Wisconsin), to suggest to judges an appropriate probation or treatment plan for individuals being sentenced. Indeed, the tool was quite accurate (around 70 percent overall with 16,000 probationers), but ProPublica journalists found that black defendants were far more likely than white defendants to be incorrectly judged to be at a higher risk of recidivism, while white defendants were more likely than black defendants to be incorrectly flagged as low risk.</p>
+<p>However, one of the most worrisome cases was discovered and published by ProPublica, an independent, nonprofit newsroom that produces investigative journalism with moral force. In <span id="id5">[<a class="reference internal" href="#id28" title="J. Angwin, J. Larson, S. Mattu, and L. Kirchner. Machine bias: there’s software used across the country to predict future criminals. and it’s biased against blacks. 2016. URL: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing (visited on 2020-09-22).">3</a>]</span>, the authors showed how software can actually be racist. In a nutshell, the authors analyzed a tool called COMPAS (which stands for Correctional Offender Management Profiling for Alternative Sanctions). COMPAS tries to predict, among other indexes, the recidivism of defendants, who are ranked low, medium or high risk. It was used in many US states (such as New York and Wisconsin), to suggest to judges an appropriate probation or treatment plan for individuals being sentenced. Indeed, the tool was quite accurate (around 70 percent overall with 16,000 probationers), but ProPublica journalists found that black defendants were far more likely than white defendants to be incorrectly judged to be at a higher risk of recidivism, while white defendants were more likely than black defendants to be incorrectly flagged as low risk.</p>
 <p>From the above examples, it appears evident that explanation technologies can help companies for creating safer, more trustable products, and better managing any possible liability they may have.</p>
-<p>The definitions contained in this book will help in understanding better the <a class="reference internal" href="T3.1/XAI_dimensions.html"><span class="doc">Dimensions of Explanations</span></a> of explainations (e.g., we can discriminate between <a class="reference internal" href="T3.1/model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>), the requirements to provide good explainations, the problems related to the Explainability topic, and the possible solutions we can adopt.</p>
-<p id="id5"><dl class="citation">
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+</div>
+<div class="section" id="open-the-black-box-problem">
+<h2>Open the Black-Box Problem<a class="headerlink" href="#open-the-black-box-problem" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Open the Black Box Problems</em> for understanding how a black box works can be summarized in the taxonomy proposed in <span id="id6">[<a class="reference internal" href="T3.1/XAI_dimensions.html#id13" title="R. Guidotti, A. Monreale, S. Ruggieri, F. Turini, F. Giannotti, and D. Pedreschi. A survey of methods for explaining black box models. ACM computing surveys (CSUR), 2018.">1</a>]</span> and reported in Fig. <a class="reference internal" href="#t3-1taxonomy"><span class="std std-numref">2</span></a>. The Open the Black Box Problems can be separated from one side as the problem of explaining how the decision system returned certain outcomes (<em>Black Box Explanation</em>) and on the other side as the problem of directly designing a transparent classifier that solves the same classification problem (<em>Transparent Box Design</em>). Moreover, the Black Box Explanation problem can be further divided among <em>Model Explanation</em> when the explanation involves the whole logic of the obscure classifier, <em>Outcome Explanation</em> when the target is to understand the reasons for the decisions on a given object, and <em>Model Inspection</em> when the target to understand how internally the black box behaves changing the input.</p>
+<div class="figure align-center" id="t3-1taxonomy">
+<a class="reference internal image-reference" href="_images/T3.1_taxonomy.jpg"><img alt="_images/T3.1_taxonomy.jpg" src="_images/T3.1_taxonomy.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A possible taxonomy about solutions to the Open the Black-Box problem <span id="id7">[<a class="reference internal" href="T3.1/XAI_dimensions.html#id13" title="R. Guidotti, A. Monreale, S. Ruggieri, F. Turini, F. Giannotti, and D. Pedreschi. A survey of methods for explaining black box models. ACM computing surveys (CSUR), 2018.">1</a>]</span>.</span><a class="headerlink" href="#t3-1taxonomy" title="Permalink to this image">¶</a></p>
+</div>
+<p>On a different dimension, a lot of effort has been put in defining what are the possible  <a class="reference internal" href="T3.1/XAI_dimensions.html"><span class="doc">Dimensions of Explanations</span></a> of explanations (e.g., we can discriminate between <a class="reference internal" href="T3.1/model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>), the requirements to provide good explanations (see <span class="xref std std-ref">guidelines</span>), how to <span class="xref myst">evaluate explanations</span> and to understand the <a class="reference internal" href="T3.1/feature_importance.html"><span class="doc">Feature Importance</span></a>. Then, it is important to note that a variety of different kinds of explanation can be provided, such as <a class="reference internal" href="T3.1/saliency_maps.html"><span class="doc">Saliency Maps</span></a>, <a class="reference internal" href="T3.1/counterfactuals.html"><span class="doc std std-doc">Factual and Counterfactual</span></a>, exemplars and counter-exemplars, <a class="reference internal" href="T3.1/rules.html"><span class="doc std std-doc">Rules List and Rules Sets</span></a>.</p>
+</div>
+<div class="section" id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
+<p>Given the relatively novelty of the topic, a lot of guidelines have been development in the recent years.</p>
+<p>However, the most authoritative guideline is the <a href="https://wayback.archive-it.org/12090/20201227221227/https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai" target=_blank>High-Level Expert Group on Artificial Intelligence - Ethics Guidelines for Trustworthy AI</a>. Here, the explainability topic is included in the broader <a class="reference internal" href="T3.1/transparency.html"><span class="doc">Transparency</span></a>. According to this guideline, explainability concerns the ability to explain both the technical processes of an AI system and the related human decisions (e.g. application areas of a system). Following the GDPR interpretation, in <span id="id8">[]</span> it is stated that whenever an AI system has a significant impact on people’s lives, it should be possible to demand a suitable explanation of the AI system’s decision-making process. Such explanation should be timely and adapted to the expertise of the stakeholder concerned (e.g. layperson, regulator or researcher). In addition, explanations of the degree to which an AI system influences and shapes the organizational decision-making process, design choices of the system, and the rationale for deploying it, should be available (hence ensuring business model transparency).</p>
+<p>Another distinguished authority that has been worked on ethical guidance is <strong>the Alan Turing Institute</strong>, the UK’s national institute for data science and artificial intelligence, where David Leslie <span id="id9">[]</span> summarized the risks due to the lack of transparency or the absence of a valid explanation, and he advocate the use of <a class="reference internal" href="T3.1/counterfactuals.html"><span class="doc">Counterfactuals</span></a> for contrasting unfair decisions. Together with the Information Commissioner’s Office (ICO), which is responsible for overseeing data protection in the UK, it has been developed more recent and complete guidance <span id="id10">[]</span>. Here, six steps are recommended to develop a system:</p>
+<ol class="simple">
+<li><p>Select priority explanations by considering the domain, use case and impact on the individual.</p></li>
+<li><p>Collect and pre-process data in an explanation-aware manner, stressing the fact that the way in which data is collected and pre-process may affect the quality of the explanation.</p></li>
+<li><p>Build systems to ensure to being able to extract relevant information for a range of explanation types.</p></li>
+<li><p>Translate the rationale of your system’s results into useable and easily understandable reasons, e.g., transforming the model’s logic from quantitative rationale into intuitive reasons or using everyday language that can be understood by non-technical stakeholders.</p></li>
+<li><p>Prepare implementers to deploy the AI system, through appropriate training.</p></li>
+<li><p>Consider how to build and present the explanation, particularly keeping in mind the context and contextual factors (domain, impact, data, urgency, audience) to deliver appropriate information to the individual.</p></li>
+</ol>
+<p>Nevertheless, the attention on this theme is not relegated to the European border. Indeed, as an example of US effort in dealing with Explainability and Ethics, <strong>NIST, the National Institute of Standards and Technology of Maryland</strong>, developed some guidelines and a white paper <span id="id11">[]</span> was published after a first draft<a class="footnote-reference brackets" href="#nist-draft" id="id12">1</a> was published in 2020, a variety of comments<a class="footnote-reference brackets" href="#nist-comments" id="id13">2</a> were collected, and a workshop<a class="footnote-reference brackets" href="#nist-workshop" id="id14">3</a> involving different stakeholders was held. The white paper <span id="id15">[]</span> analyzes the multidisciplinary nature of explainable AI and acknowledge the existence of different users who requires different kinds of explanations, stating that one-size-
+fits-all explanations do not exist. The fundamental properties of explanations contained in the report are:</p>
+<ul class="simple">
+<li><p><em>meaningfulness</em>, i.e., explanations must be understandable to the intended consumer(s). This means that there is the need to consider the intended audience, and some characteristics they can have, such as prior knowledge or the overall psychological differences between people. Moreover, explanation’s purpose is relevant too. Indeed, different scenarios and needs impacts on what is important and useful
+in a given context. This implies understanding the audience’s needs, level of expertise, and relevancy to the question or query .</p></li>
+<li><p><em>accuracy</em>, i.e., explanations correctly reflects a system’s process for generating its output. Explanation accuracy is a distinct concept from decision accuracy. Explanation accuracy needs to account for the level of detail in the explanation. This second principle might be in contrast with the previous one: detailed explanation may accurately reflect the system’s processing, but sacrifice how useful and accessible it is to certain audiences, while  a brief, simple explanation may be highly understandable but would not fully characterize the system.</p></li>
+<li><p><em>knowledge limits</em>, i.e., characterizing the fact that a system only operates under conditions for which it was designed and when it reaches sufficient confidence in its output. This practice safeguards answers so that a judgment is not provided when it may be inappropriate to do so. This principle can increase trust in a system by preventing misleading, dangerous, or unjust outputs.</p></li>
+</ul>
+</div>
+<div class="section" id="software-frameworks-supporting-dimension">
+<h2>Software Frameworks Supporting Dimension<a class="headerlink" href="#software-frameworks-supporting-dimension" title="Permalink to this headline">¶</a></h2>
+<p>Within the European Research Council (ERC) <a href="https://xai-project.eu/" target=_blank>XAI project</a> and the European Union’s Horizon 2020 <a href="http://project.sobigdata.eu/" target=_blank> SoBigData++ project</a>, we are developing an infrastructure for sharing experimental datasets and explanation algorithms with the research community, creating a common ground for researchers working on explanation of black boxes from different domains.
+All resources, provided they are not prohibited by specific legal/ethical constraints, will be collected and described in a <a href="https://sobigdata.d4science.org/catalogue-sobigdata" target=_blank>findable catalogue</a>.
+A dedicated virtual research environment will be activated, so that a variety of relevant resources, such as data, methods, experimental workflows, platforms and literature, will be managed through the SoBigData++ e-infrastructure services and made available to the research community through a variety of regulated access policies.
+We will provide a link to the libraries and framework as soon as they will fully published.</p>
+</div>
+<div class="section" id="main-keywords">
+<h2>Main Keywords<a class="footnote-reference brackets" href="#todo" id="id16">4</a><a class="headerlink" href="#main-keywords" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Ante-hoc Explanation vs Post-hoc Explanations</p></li>
+<li><p>Counterfactual Explanations</p></li>
+<li><p>Evaluating Explanations (measures, human expert studies)</p></li>
+<li><p>Features Importance</p></li>
+<li><p>Global vs Local Explanations</p></li>
+<li><p>Interpretability</p></li>
+<li><p>Transparency</p></li>
+<li><p><a class="reference internal" href="T3.1/model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>: We distinguish between model-specific or model-agnostic explanation method depending on whether the technique adopted to retrieve the explanation acts on a particular model adopted by an AI system, or can be used on any type of AI.</p></li>
+<li><p>Rules List and Rules Set</p></li>
+<li><p>Saliency Maps</p></li>
+<li><p>Single Tree Approximation</p></li>
+</ul>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<!-- :style: unsrtalpha -->
+<p id="id17"><dl class="citation">
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
 </dd>
-<dt class="label" id="id15"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
+<dt class="label" id="id27"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should i trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
 </dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
 <dd><p>J. Angwin, J. Larson, S. Mattu, and L. Kirchner. Machine bias: there’s software used across the country to predict future criminals. and it’s biased against blacks. 2016. URL: <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a> (visited on 2020-09-22).</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">4</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p>R. Guidotti, A. Monreale, S. Ruggieri, F. Turini, F. Giannotti, and D. Pedreschi. A survey of methods for explaining black box models. <em>ACM computing surveys (CSUR)</em>, 2018.</p>
 </dd>
 </dl>
 </p>
 <hr class="docutils" />
-<p>This entry was readapted from <em>Pratesi, Trasarti, Giannotti. Ethics in Smart Information Systems. Policy Press (currently under review)</em> by Francesca Pratesi.</p>
+<p>This entry was readapted from <em>Pratesi, Trasarti, Giannotti. Ethics in Smart Information Systems. Policy Press (currently under review)</em> and from <em>Guidotti, Monreale, Ruggieri, Turini, Giannotti, Pedreschi. A survey of methods for explaining black box models. ACM Computing Surveys, Volume 51 Issue 5 (2019)</em> by Francesca Pratesi.</p>
 <!---
 {footcite}`propublica`
 ```{footbibliography}
@@ -858,6 +1250,22 @@ for the biblography
 [^note]
 [^note]: This is a note
 -->
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="nist-draft"><span class="brackets"><a class="fn-backref" href="#id12">1</a></span></dt>
+<dd><p><a class="reference external" href="https://doi.org/10.6028/NIST.IR.8312-draft">https://doi.org/10.6028/NIST.IR.8312-draft</a></p>
+</dd>
+<dt class="label" id="nist-comments"><span class="brackets"><a class="fn-backref" href="#id13">2</a></span></dt>
+<dd><p><a class="reference external" href="https://www.nist.gov/artificial-intelligence/comments-received-four-principles-explainable-artificial-intelligence-nistir">https://www.nist.gov/artificial-intelligence/comments-received-four-principles-explainable-artificial-intelligence-nistir</a></p>
+</dd>
+<dt class="label" id="nist-workshop"><span class="brackets"><a class="fn-backref" href="#id14">3</a></span></dt>
+<dd><p><a class="reference external" href="https://www.nist.gov/system/files/documents/2021/09/24/XAI_Workshop_Summary_Final_20210922.pdf">https://www.nist.gov/system/files/documents/2021/09/24/XAI_Workshop_Summary_Final_20210922.pdf</a></p>
+</dd>
+<dt class="label" id="todo"><span class="brackets"><a class="fn-backref" href="#id16">4</a></span></dt>
+<dd><p>Note from Francesca: all the short definitions must be reported also here</p>
+</dd>
+</dl>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -908,7 +1316,7 @@ for the biblography
     <footer class="footer">
   <p>
     
-      By TAILOR WP3 members (names of contributors will be added)<br/>
+      By TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

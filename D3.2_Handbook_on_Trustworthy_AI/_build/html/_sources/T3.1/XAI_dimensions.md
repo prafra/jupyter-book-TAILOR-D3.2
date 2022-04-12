@@ -30,7 +30,7 @@ align: center
 A summarized ontology of the taxonomy of XAI methods {cite}`Guidotti2021`.
 ```
 
-
+## Bibliography
 
 ```{bibliography}
 :style: unsrt
