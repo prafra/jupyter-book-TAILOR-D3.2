@@ -1125,14 +1125,14 @@ reconstruction attacks - see <a class="reference internal" href="L2.membership.h
 <p>In a nutshell, the <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model requires that
 the presence/absence of any <em>possible</em> individual does not shift any
 output probability by more than a factor of <span class="math notranslate nohighlight">\(e^\epsilon\)</span>. More
-precisely, a <em>random function</em> <span class="math notranslate nohighlight">\(\mathtt{f}\)</span> satisfies
-<span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy if and only if for all possible pairs
-of datasets (<span class="math notranslate nohighlight">\(\mathcal{D}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{D}'\)</span>) such that <span class="math notranslate nohighlight">\(\mathcal{D}'\)</span>
-is <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> with <em>one record more or one record less</em>, and for
-any possible output <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> of <span class="math notranslate nohighlight">\(\mathtt{f}\)</span>, then it holds that:
-<span class="math notranslate nohighlight">\(\mathtt{Pr} [ \mathtt{f} ( \mathcal{D} ) = \mathcal{S} ] \leq
-e^\mathbf{\epsilon} \times \mathtt{Pr} [ \mathtt{f} ( \mathcal{D}' ) =
-\mathcal{S} ]\)</span> where <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> is the privacy parameter.</p>
+precisely, a <em>random function</em> <span class="math notranslate nohighlight">\(\mathtt{f}\)</span> with range <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>
+satisfies <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy if and only if for all
+possible pairs of datasets (<span class="math notranslate nohighlight">\(\mathcal{D}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{D}'\)</span>) such that
+<span class="math notranslate nohighlight">\(\mathcal{D}'\)</span> is <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> with <em>one record more or one record
+less</em>, and for all <span class="math notranslate nohighlight">\(\mathcal{S} \subseteq \mathcal{O}\)</span>, then it holds
+that: <span class="math notranslate nohighlight">\(\mathtt{Pr} [ \mathtt{f} ( \mathcal{D} ) \in \mathcal{S} ] \leq
+e^\mathbf{\epsilon} \times \mathtt{Pr} [ \mathtt{f} ( \mathcal{D}' )
+\in \mathcal{S} ]\)</span> where <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> is the privacy parameter.</p>
 <p>Let us comment the above definition. First, the function <span class="math notranslate nohighlight">\(\mathtt{f}\)</span>
 can be any arbitrary function, including the usual statistical
 functions (e.g., counts, sums) but not restricted to them. Second, the
@@ -1142,38 +1142,40 @@ derived from the actual private dataset. Third, the impact of an
 individual is defined based on the presence (or absence) of his/her
 record in (or from) any possible dataset. Pairs of datasets that
 differ on the presence/absence of a single record are called
-<em>neighboring datasets</em>. Differential privacy variants might define
-differently this notion. For example, the
-<em><span class="math notranslate nohighlight">\(\epsilon\)</span>-indistinguishability privacy model</em> considers that
-neighboring datasets are datasets that differ on the value of a single
-row. Fourth, the value of <span class="math notranslate nohighlight">\(\epsilon\)</span> sets the tolerance of the model
-to the possible impacts of individuals on the output of <span class="math notranslate nohighlight">\(\mathtt{f}\)</span>:
-the lower the <span class="math notranslate nohighlight">\(\epsilon\)</span> the more stringent the requirement. Common
-values range from <span class="math notranslate nohighlight">\(\epsilon=0.01\)</span> to <span class="math notranslate nohighlight">\(\epsilon=10\)</span>.</p>
+<em>neighboring datasets</em>. Note that variants might exist (e.g., by
+considering that neighboring datasets are datasets that differ on the
+value of a single row). Fourth, the value of <span class="math notranslate nohighlight">\(\epsilon\)</span> sets the
+tolerance of the model to the possible impacts of individuals on the
+output of <span class="math notranslate nohighlight">\(\mathtt{f}\)</span>: the lower the <span class="math notranslate nohighlight">\(\epsilon\)</span> the more stringent
+the requirement. Common values range from <span class="math notranslate nohighlight">\(\epsilon=0.01\)</span> to
+<span class="math notranslate nohighlight">\(\epsilon=10\)</span>.</p>
+<p>Please see <a class="reference internal" href="L2.perturbation_mechanisms.html"><span class="doc">Perturbation Mechanism</span></a> for a synthesis of
+<strong>how</strong> common functions can be adapted in order to satisfy
+<span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy.</p>
 </div>
 <div class="section" id="self-composability-and-safety-under-post-processing">
 <h2>Self-Composability and Safety Under Post-Processing<a class="headerlink" href="#self-composability-and-safety-under-post-processing" title="Permalink to this headline">¶</a></h2>
 <p>The <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model is self-composable as
-follows. The parallel composition of <span class="math notranslate nohighlight">\(n\)</span> functions, each satisfying
-<span class="math notranslate nohighlight">\(\epsilon_i\)</span>-differential privacy, satisfies <span class="math notranslate nohighlight">\(\max_i (\epsilon_i)
-\)</span>-differential privacy. The sequential composition of <span class="math notranslate nohighlight">\(n\)</span> functions,
-each satisfying <span class="math notranslate nohighlight">\(\epsilon_i\)</span>-differential privacy, satisfies <span class="math notranslate nohighlight">\(\sum_i
-(\epsilon_i)\)</span>-differential privacy. The <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential
-privacy model is as well convex and safe under post-processing. We
-refer to <a class="reference internal" href="L2.privmod_properties.html"><span class="doc">Properties of Privacy Models</span></a> for the definitions of these
-properties.</p>
+follows. The <em>parallel composition</em> of two functions, respectively
+satisfying <span class="math notranslate nohighlight">\(\epsilon_1\)</span>-differential privacy and
+<span class="math notranslate nohighlight">\(\epsilon_2\)</span>-differential privacy, satisfies <span class="math notranslate nohighlight">\(\max (\epsilon_1,
+\epsilon_2)\)</span>-differential privacy. Their <em>sequential composition</em>
+satisfies <span class="math notranslate nohighlight">\((\epsilon_1 + \epsilon_2)\)</span>-differential privacy. The
+<span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model is as well convex and safe under
+post-processing. We refer to <a class="reference internal" href="L2.privmod_properties.html"><span class="doc">Properties of Privacy Models</span></a> for the
+definitions of these properties.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p>The <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model was introduced in
-<span id="id1">[<a class="reference internal" href="#id55" title="Cynthia Dwork. Differential privacy. In ICALP. 2006.">1</a>]</span> and the
+<span id="id1">[<a class="reference internal" href="#id56" title="Cynthia Dwork. Differential privacy. In ICALP. 2006.">1</a>]</span> and the
 <span class="math notranslate nohighlight">\(\epsilon\)</span>-indistinguishability model in
-<span id="id2">[<a class="reference internal" href="#id54" title="Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In TCC. 2006.">2</a>]</span>.</p>
+<span id="id2">[<a class="reference internal" href="#id55" title="Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In TCC. 2006.">2</a>]</span>.</p>
 <p id="id3"><dl class="citation">
-<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Cynthia Dwork. Differential privacy. In <em>ICALP</em>. 2006.</p>
 </dd>
-<dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In <em>TCC</em>. 2006.</p>
 </dd>
 </dl>

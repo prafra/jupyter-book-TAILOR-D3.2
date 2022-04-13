@@ -1032,13 +1032,12 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
+  <a class="reference internal nav-link" href="#relaxing-epsilon-differential-privacy">
+   Relaxing
+   <span class="math notranslate nohighlight">
+    \(\epsilon\)
+   </span>
+   -Differential Privacy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1067,13 +1066,12 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
+  <a class="reference internal nav-link" href="#relaxing-epsilon-differential-privacy">
+   Relaxing
+   <span class="math notranslate nohighlight">
+    \(\epsilon\)
+   </span>
+   -Differential Privacy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1092,16 +1090,46 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="epsilon-delta-differential-privacy">
 <h1>(<span class="math notranslate nohighlight">\(\epsilon\)</span>,<span class="math notranslate nohighlight">\(\delta\)</span>)-Differential Privacy<a class="headerlink" href="#epsilon-delta-differential-privacy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="more-in-detail">
-<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="relaxing-epsilon-differential-privacy">
+<h2>Relaxing <span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy<a class="headerlink" href="#relaxing-epsilon-differential-privacy" title="Permalink to this headline">¶</a></h2>
+<p>The (<span class="math notranslate nohighlight">\(\epsilon\)</span>,<span class="math notranslate nohighlight">\(\delta\)</span>)-differential privacy model is a common
+relaxation of <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy. Under the
+<span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model, the probabilities that the
+function <span class="math notranslate nohighlight">\(\mathtt{f}\)</span> outputs the same output when computed over
+neighboring datasets are allowed to diverge up to an <span class="math notranslate nohighlight">\(e^\epsilon\)</span>
+factor. The (<span class="math notranslate nohighlight">\(\epsilon\)</span>,<span class="math notranslate nohighlight">\(\delta\)</span>)-differential privacy model
+additionally tolerates the two probabilities to diverge by a small
+additional quantity, denoted <span class="math notranslate nohighlight">\(\delta\)</span>.  <!-- TODO : discuss why it is
+useful (utility). --></p>
+<p>This leads to revisiting the formal definition of
+<span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy as follows. A <em>random function</em>
+<span class="math notranslate nohighlight">\(\mathtt{f}\)</span> with range <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> satisfies (<span class="math notranslate nohighlight">\(\epsilon\)</span>,
+<span class="math notranslate nohighlight">\(\delta\)</span>)-differential privacy if and only if for all possible pairs
+of datasets (<span class="math notranslate nohighlight">\(\mathcal{D}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{D}'\)</span>) such that <span class="math notranslate nohighlight">\(\mathcal{D}'\)</span>
+is <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> with one record more or one record less, and for
+all <span class="math notranslate nohighlight">\(\mathcal{S} \subseteq \mathcal{O}\)</span>, then it holds that: <span class="math notranslate nohighlight">\(\mathtt{Pr} [ \mathtt{f} ( \mathcal{D} ) \in \mathcal{S} ] \leq
+e^\mathbf{\epsilon} \times \mathtt{Pr} [ \mathtt{f} ( \mathcal{D}' )
+\in \mathcal{S} ] + \delta\)</span> where <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> and <span class="math notranslate nohighlight">\(\delta \geq 0\)</span> are
+the privacy parameters. When <span class="math notranslate nohighlight">\(\delta&gt;0\)</span>,
+(<span class="math notranslate nohighlight">\(\epsilon\)</span>,<span class="math notranslate nohighlight">\(\delta\)</span>)-differential privacy is also called <em>approximate
+differential privacy</em>.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id1"></span><hr class="docutils" />
-<p>This entry was readapted from <em><reference></em> by <authors>.</p>
+<p>The (<span class="math notranslate nohighlight">\(\epsilon\)</span>,<span class="math notranslate nohighlight">\(\delta\)</span>)-differential privacy model is introduced in
+<span id="id1">[<a class="reference internal" href="#id58" title="Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In EUROCRYPT. 2006.">1</a>]</span> and thoroughly studied in
+<span id="id2">[<a class="reference internal" href="#id51" title="Sebastian Meiser. Approximate and probabilistic differential privacy definitions. IACR Cryptol. ePrint Arch., 2018:277, 2018.">2</a>]</span>.</p>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In <em>EUROCRYPT</em>. 2006.</p>
+</dd>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Sebastian Meiser. Approximate and probabilistic differential privacy definitions. <em>IACR Cryptol. ePrint Arch.</em>, 2018:277, 2018.</p>
+</dd>
+</dl>
+</p>
+<hr class="docutils" />
+<p>This entry was written by Tristan Allard.</p>
 </div>
 </div>
 
