@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Structure For T3.4 &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Bibliography &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -152,6 +152,11 @@
        Model-Specific vs Model-Agnostic Explainers
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/rules.html">
+       Rules
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -199,11 +204,6 @@
      <li class="toctree-l3">
       <a class="reference internal" href="L3.Accountability_gaps.html">
        Accountability Gaps
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.The_problem_of_many_hands.html">
-       The problem of many hands
       </a>
      </li>
     </ul>
@@ -279,6 +279,11 @@
      </i>
     </label>
     <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.privmod_properties.html">
+       Properties of Privacy Models
+      </a>
+     </li>
      <li class="toctree-l3 has-children">
       <a class="reference internal" href="../T3.5/L2.differential_privacy.html">
        Differential Privacy
@@ -338,15 +343,47 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
+       Perturbation Mechanism
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.local_perturbation.html">
+         Local Perturbation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.laplace.html">
+         Laplace Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.exponential.html">
+         Exponential Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.randomness_alignments.html">
+         Randomness Alignments
+        </a>
+       </li>
+      </ul>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../T3.5/L1.attacks.html">
      Attacks on anonymization schemes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -379,8 +416,8 @@
   <a class="reference internal" href="../AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -996,36 +1033,19 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="structure-for-t3-4">
-<h1>Structure For T3.4<a class="headerlink" href="#structure-for-t3-4" title="Permalink to this headline">¶</a></h1>
+  <p><strong>Definition</strong>
+Accountability and reprodubicility are two interrelated concepts, cornerstones of Trustworthy AI. Accoutable AI systems can contribute to reproducibility, and Reproducible AI systems can contribute to accountability.</p>
+<p>Accountability and Reproducibility are two cornerstones of Trustworthy AI <span id="id1">[]</span>. Accountability requires mechanisms be put in place to ensure that AI systems and their outcomes, both before and after their development, deployment and use, can be observed and analyzed. This ability to review AI systems involve technical and organisational logging processes <span id="id2">[]</span> to enable investigators to draw the same conclusions from an experiment by following provided guidelines.</p>
+<p>In this context, accountability and reproducibility are interrelated concepts. Developing reprodubicle AI systems can enable accountability over AI systems. On the other hand, the process of record-tracking and logging for accountability can support an increasing level of reproducibility.</p>
+<hr class="docutils" />
+<p><strong>Authors</strong>:</p>
 <ul class="simple">
-<li><p>L1. Accountability and Reproducibility</p>
-<ul>
-<li><p>L2. Accountability (Luciano TU Delft, Francesca CNR)</p>
-<ul>
-<li><p>L3. Meaningful human control (Arkady, Luciano TU Delft)</p></li>
-<li><p>L3. Frame problem</p></li>
-<li><p>L3. Accountability gaps</p></li>
-<li><p>L3. The problem of many hands</p></li>
-<li><p>L3. Impact assessment tools</p></li>
+<li><p>Luciano C Siebert - Faculty of Electrical Engineering Mathematics and Computer Science, Delft University of Technology, Delft, The Netherlands</p></li>
 </ul>
-</li>
-<li><p>L2. Reproducibility (Reproducibility, Replicability, Repeatability)</p>
-<ul>
-<li><p>L3. Guidelines for reproducibility</p></li>
-<li><p>L3. Software frameworks supporting reproducibility</p></li>
-</ul>
-</li>
-<li><p>L2. Traceability</p>
-<ul>
-<li><p>L3. Provenance tracking (PUT, Riccardo CNR, Agnieszka)</p></li>
-<li><p>L3. Continuous performance monitoring (Sara, CNR)</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
+<hr class="docutils" />
+<div class="section" id="bibliography">
+<h1>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="id3"></span></div>
 
     <script type="text/x-thebe-config">
     {

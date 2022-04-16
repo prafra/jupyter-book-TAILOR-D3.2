@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esponential Mechanism &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Rules &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Attacks on anonymization schemes" href="L1.attacks.html" />
-    <link rel="prev" title="Laplace Mechanism" href="L3.laplace.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +94,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -140,7 +138,7 @@
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../T3.1/XAI_dimensions.html">
+    <a class="reference internal" href="XAI_dimensions.html">
      Dimensions of Explanations
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -150,8 +148,13 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../T3.1/model_specific.html">
+      <a class="reference internal" href="model_specific.html">
        Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="rules.html">
+       Rules
       </a>
      </li>
     </ul>
@@ -203,11 +206,6 @@
        Accountability Gaps
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.4/L3.The_problem_of_many_hands.html">
-       The problem of many hands
-      </a>
-     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -256,23 +254,23 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../T3.5.html">
    Respect for Privacy
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="L1.anonymization.html">
+    <a class="reference internal" href="../T3.5/L1.anonymization.html">
      Data Anonymization and Pseudonymization
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="L1.privacy_model.html">
+    <a class="reference internal" href="../T3.5/L1.privacy_model.html">
      Privacy Models
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -281,8 +279,13 @@
      </i>
     </label>
     <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.privmod_properties.html">
+       Properties of Privacy Models
+      </a>
+     </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="L2.differential_privacy.html">
+      <a class="reference internal" href="../T3.5/L2.differential_privacy.html">
        Differential Privacy
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -292,7 +295,7 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="L3.epsilon_DP.html">
+        <a class="reference internal" href="../T3.5/L3.epsilon_DP.html">
          <span class="math notranslate nohighlight">
           \(\epsilon\)
          </span>
@@ -300,7 +303,7 @@
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="L3.epsilon_delta_DP.html">
+        <a class="reference internal" href="../T3.5/L3.epsilon_delta_DP.html">
          (
          <span class="math notranslate nohighlight">
           \(\epsilon\)
@@ -313,57 +316,62 @@
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="L3.computational_DP.html">
+        <a class="reference internal" href="../T3.5/L3.computational_DP.html">
          Computational Differential Privacy
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="L3.other_DP.html">
+        <a class="reference internal" href="../T3.5/L3.other_DP.html">
          Other Variants or Generalizations
         </a>
        </li>
       </ul>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="L2.k_anonymity.html">
+      <a class="reference internal" href="../T3.5/L2.k_anonymity.html">
        k-anonymity
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="L1.privacy_mechanisms.html">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.privacy_mechanisms.html">
      Privacy Mechanisms
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
     <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
-     <li class="toctree-l3 current active has-children">
-      <a class="reference internal" href="L2.perturbation_mecanism.html">
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
        Perturbation Mechanism
       </a>
-      <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
       <label for="toctree-checkbox-12">
        <i class="fas fa-chevron-down">
        </i>
       </label>
-      <ul class="current">
+      <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="L3.local_perturbation.html">
+        <a class="reference internal" href="../T3.5/L3.local_perturbation.html">
          Local Perturbation
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="L3.laplace.html">
+        <a class="reference internal" href="../T3.5/L3.laplace.html">
          Laplace Mechanism
         </a>
        </li>
-       <li class="toctree-l4 current active">
-        <a class="current reference internal" href="#">
-         Esponential Mechanism
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.exponential.html">
+         Exponential Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.randomness_alignments.html">
+         Randomness Alignments
         </a>
        </li>
       </ul>
@@ -371,7 +379,7 @@
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="L1.attacks.html">
+    <a class="reference internal" href="../T3.5/L1.attacks.html">
      Attacks on anonymization schemes
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -381,17 +389,17 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="L2.reidentification.html">
+      <a class="reference internal" href="../T3.5/L2.reidentification.html">
        Re-identification Attack
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="L2.membership.html">
+      <a class="reference internal" href="../T3.5/L2.membership.html">
        Membership Attack
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="L2.reconstruction.html">
+      <a class="reference internal" href="../T3.5/L2.reconstruction.html">
        Reconstruction Attack
       </a>
      </li>
@@ -976,7 +984,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/T3.5/L3.esponential.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/T3.1/rules_backup.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -996,7 +1004,7 @@
                 data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.5/L3.esponential.html&body=Your%20issue%20content%20here."><button
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.1/rules_backup.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
@@ -1024,17 +1032,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
-   In Brief
+   In brief
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
+   More in detail
   </a>
  </li>
 </ul>
@@ -1048,18 +1051,15 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="esponential-mechanism">
-<h1>Esponential Mechanism<a class="headerlink" href="#esponential-mechanism" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="rules">
+<h1>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="more-in-detail">
-<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="id1"></span><hr class="docutils" />
-<p>This entry was readapted from <em><reference></em> by <authors>.</p>
+<p>This entry was readapted from ** by.</p>
 </div>
 </div>
 
@@ -1076,7 +1076,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./T3.5"
+            path: "./T3.1"
         },
         predefinedOutput: true
     }
@@ -1087,21 +1087,7 @@
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="L3.laplace.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Laplace Mechanism</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="L1.attacks.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Attacks on anonymization schemes</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>
