@@ -37,17 +37,19 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -86,7 +88,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -152,11 +154,6 @@
      <li class="toctree-l3">
       <a class="reference internal" href="T3.1/model_specific.html">
        Model-Specific vs Model-Agnostic Explainers
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="T3.1/rules.html">
-       Rules
       </a>
      </li>
     </ul>
@@ -348,7 +345,7 @@
     <ul>
      <li class="toctree-l3 has-children">
       <a class="reference internal" href="T3.5/L2.perturbation_mechanisms.html">
-       Perturbation Mechanism
+       Perturbation Mechanisms
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
       <label for="toctree-checkbox-12">
@@ -970,8 +967,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -979,7 +976,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -987,11 +984,11 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/T3.5.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1003,12 +1000,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.5.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -1016,8 +1013,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1025,46 +1022,41 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
+                <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
+  <a class="reference internal nav-link" href="#data-anonymization-technical-and-legal-definitions-uga-rousset">
+   Data Anonymization (technical and legal definitions) (UGA-Rousset)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstract">
-   Abstract
+  <a class="reference internal nav-link" href="#privacy-model">
+   Privacy model :
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation-and-background">
-   Motivation and Background
+  <a class="reference internal nav-link" href="#privacy-mechanism-privacy-algorithm">
+   Privacy mechanism / Privacy algorithm
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#guidelines">
-   Guidelines
+  <a class="reference internal nav-link" href="#attacks-on-anonymization-schemes">
+   Attacks on anonymization schemes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension-tba">
-   Software Frameworks Supporting Dimension (TBA)
+  <a class="reference internal nav-link" href="#data-minimisation-cnr-pratesi">
+   Data minimisation (CNR, Pratesi)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-keywords-tba">
-   Main Keywords (TBA)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
+  <a class="reference internal nav-link" href="#tentative">
+   Tentative
   </a>
  </li>
 </ul>
@@ -1075,67 +1067,144 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Respect for Privacy</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-anonymization-technical-and-legal-definitions-uga-rousset">
+   Data Anonymization (technical and legal definitions) (UGA-Rousset)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#privacy-model">
+   Privacy model :
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#privacy-mechanism-privacy-algorithm">
+   Privacy mechanism / Privacy algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attacks-on-anonymization-schemes">
+   Attacks on anonymization schemes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-minimisation-cnr-pratesi">
+   Data minimisation (CNR, Pratesi)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tentative">
+   Tentative
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="respect-for-privacy">
 <h1>Respect for Privacy<a class="headerlink" href="#respect-for-privacy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p>Respect for Privacy is an ethical aspect studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a> for ensuring personal data protection that is at the core of the General
-Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="#id7">1</a>]</span>. GDPR, in its <a href="https://gdpr-info.eu/art-5-gdpr/" target=_blank>Article 5</a>, promote <em>privacy by design</em> in the form of a certain number of general principles for ensuring <em>privacy as the default</em> in the whole chain of data processing for a given task. We outline the challenges and solutions for enforcing privacy by design approaches.</p>
+<div class="section" id="data-anonymization-technical-and-legal-definitions-uga-rousset">
+<h2>Data Anonymization (technical and legal definitions) (UGA-Rousset)<a class="headerlink" href="#data-anonymization-technical-and-legal-definitions-uga-rousset" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Synonyms : data sanitization, privacy-preserving data publishing (ex: aggregates)</p></li>
+</ul>
 </div>
-<div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
-<p>When protecting personal data, we are faced to the dilemma of disclosing no sensitive data while learning useful information about a population.
-One approach for solving this tension between privacy and utility is based on <em>data encryption</em> and consists in developping secure computation protocols able to learn models or to compute statistics on encrypted data. A lot of scientific literature <span id="id2">[<a class="reference internal" href="#id85">2</a>]</span> <span id="id3">[<a class="reference internal" href="#id86">3</a>]</span> <span id="id4">[<a class="reference internal" href="#id87">4</a>]</span> <span id="id5">[<a class="reference internal" href="#id88">5</a>]</span> has been exploring this security-based approach depending on the target computational task.
-Another approach consists in conducting data analysis tasks on datasets made anonymous by the application of some <a class="reference internal" href="T3.5/L1.privacy_mechanisms.html"><span class="doc">Privacy Mechanisms</span></a>.
-according to some <a class="reference internal" href="T3.5/L1.privacy_model.html"><span class="doc">Privacy Models</span></a>. Anonymization must no be reduced to <em>pseudonymization</em> (see <a class="reference internal" href="T3.5/L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>), which is defined in GDPR Article 4 as “the processing
-of personal data in such a way that the data cannot be attributed to a specific data subject without the use of additional information.”
-Anonymization, as defined in GDPR (see <a href="https://gdpr-info.eu/recitals/no-26/" target=_blank>Recital 26</a>), refers to a process that removes any possibility of identifying a person even with additional information. In the resulting anonymized data, the connection should be completely lost between data and the individuals. Based on such a definition, anonymization is very difficult to model formally and to verify algorithmically. We will briefly survey the main privacy models and their properties, as well as the main privacy mechanisms which can be applied for enforcing the corresponding privacy properties or for providing strong guarantees of robustness to attacks.</p>
+<div class="section" id="privacy-model">
+<h2>Privacy model :<a class="headerlink" href="#privacy-model" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Nice properties :</p>
+<ul>
+<li><p>Self-composition (Inria, Allard)</p></li>
+<li><p>Security under post-processing (Inria, Allard)</p></li>
+</ul>
+</li>
+<li><p>Differential Privacy models (Inria, Allard)</p>
+<ul>
+<li><p>Epsilon-differential privacy, epsilon-indistinguishability (Inria, Allard)</p></li>
+<li><p>(epsilon, delta)-differential privacy (Inria, Allard)</p></li>
+<li><p>Computational differential privacy (Inria, Allard)</p></li>
+<li><p>Other variants or generalizations</p></li>
+</ul>
+</li>
+<li><p>K-Anonymity (CNR)</p></li>
+</ul>
 </div>
-<div class="section" id="motivation-and-background">
-<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
-<p>Publishing datasets plays an essential role in open data research and in promoting transparency of government agencies. Unfortunately, the process of data publication can be highly risky as it may disclose individuals’ sensitive information. Hence, an essential step before publishing datasets is to remove any uniquely identifiable information from them. This is called <strong>{pseudonymization}</strong> (NdFrancesca: I need to add the link here, and in the following: at the moment, there is no Pseudonymization entry, as the description is included in the re-identification attack) and consists in masking or replacing by pseudonyms values of properties that directly identify persons such as their name, address, postcode, telephone number, photograph or image, or some other unique personal characteristic.</p>
-<p><strong>{Pseudonymization}</strong> is not sufficient however for preserving the privacy of users. Adversaries can re-identify individuals in datasets based on common attributes called quasi-identifiers or may have prior knowledge about the users. Such side information enables them to reveal sensitive information that can cause physical, financial, and reputational harms to people.</p>
-<p>Therefore, it is crucial to assess carefully <em>privacy risks</em> before the publication of datasets. Detection of privacy breaches should come with <a class="reference internal" href="T3.1.html"><span class="doc std std-doc">explanations</span></a> that can then be used to guide the choice of the appropriate {anonymization mechanisms} to mitigate the detected privacy risks. <em>Anonymization</em> should provide provable guarantees for privacy properties induced by some <a class="reference internal" href="T3.5/L1.privacy_model.html"><span class="doc">Privacy Models</span></a>. <a class="reference internal" href="T3.5/L2.differential_privacy.html"><span class="doc">Differential Privacy</span></a> and <a class="reference internal" href="T3.5/L2.k_anonymity.html"><span class="doc">k-anonymity</span></a> are the two main privacy models for which <a class="reference internal" href="T3.5/L1.privacy_mechanisms.html"><span class="doc">Privacy Mechanisms</span></a> have been designed. They enjoy different properties based on the type of perturbations or transfomations applied on the data to anonymize.</p>
-<p>The strength of pseudonymization and anonymization techniques can be assessed by their robustness to <span class="xref myst">privacy attacks</span> that aim at re-identifying individuals in datasets based on common attributes called quasi-identifiers or on prior knowledge.</p>
+<div class="section" id="privacy-mechanism-privacy-algorithm">
+<h2>Privacy mechanism / Privacy algorithm<a class="headerlink" href="#privacy-mechanism-privacy-algorithm" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Partition-based algorithms</p>
+<ul>
+<li><p>Local recoding</p></li>
+<li><p>Global recoding</p></li>
+</ul>
+</li>
+<li><p>Multidimensional recoding</p>
+<ul>
+<li><p>Mondrian</p></li>
+</ul>
+</li>
+<li><p>Perturbation mechanisms :</p>
+<ul>
+<li><p>Local perturbation</p></li>
+<li><p>Randomized response (Inria, Allard)</p>
+<ul>
+<li><p>Can satisfy : DP</p></li>
+</ul>
+</li>
+<li><p>Laplace mechanism (Inria, Allard)</p>
+<ul>
+<li><p>Can satisfy : DP</p></li>
+</ul>
+</li>
+<li><p>Exponential mechanism (Inria, Allard)</p>
+<ul>
+<li><p>Can satisfy : DP</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="section" id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
-<p><em>EDBP</em> has published several guidelines. The EDPB <a href="https://ec.europa.eu/newsroom/article29/items/611236" target=_blank>Guidelines on Data Protection Impact Assessment</a>
-focus on determining whether a processing operation is likely to result in a high risk to the data subject or not. It provides guidance on how to assess data protection risks and how to carry out a data protection risk assessment.</p>
-<p><em>Data minimisation</em> is a strong recommendation to limit the collection of personal information to what is directly relevant and necessary to accomplish a specified purpose, and to retain the data only for as long as is necessary to fulfil that purpose.</p>
-<p>The most authoritative guideline on <a href="https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-42019-article-25-data-protection-design-and" target=_blank>data protection “by design and by default”</a> outlines the data subject’s rights and freedoms and the data protection principles that are illustrated through examples of practical cases. It emphasizes the obligation for controllers to stay up to date on technological advances on handling data protection risks, and to implement and update the measures and safeguards taking into account the evolving technological landscape.</p>
+<div class="section" id="attacks-on-anonymization-schemes">
+<h2>Attacks on anonymization schemes<a class="headerlink" href="#attacks-on-anonymization-schemes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Attacks on pseudonymised data : re-identification</p></li>
+<li><p>Attacks on partition-based algorithms :</p>
+<ul>
+<li><p>deFinetti Attack (Inria, Allard)</p></li>
+<li><p>Minimality Attack (Inria, Allard)</p></li>
+</ul>
+</li>
+<li><p>General attacks :</p>
+<ul>
+<li><p>Membership Inference Attacks (Inria, Allard)</p></li>
+<li><p>Reconstruction Attacks (Inria, Allard)</p></li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="section" id="software-frameworks-supporting-dimension-tba">
-<h2>Software Frameworks Supporting Dimension (TBA)<a class="headerlink" href="#software-frameworks-supporting-dimension-tba" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="data-minimisation-cnr-pratesi">
+<h2>Data minimisation (CNR, Pratesi)<a class="headerlink" href="#data-minimisation-cnr-pratesi" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="main-keywords-tba">
-<h2>Main Keywords (TBA)<a class="headerlink" href="#main-keywords-tba" title="Permalink to this headline">¶</a></h2>
-<p>{Pseudonymization} , {anonymization mechanisms } , {privacy models },
-{Differential privacy} , {k-anonymity} , { privacy attacks}</p>
-</div>
-<div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="id6"><dl class="citation">
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>European Parliament &amp; Council. General Data Protection Regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
-</dd>
-<dt class="label" id="id85"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>C. Castelluccia, A. C.-F. Chan, E. Mykletun, and G. Tsudik. Efficient and Provably Secure Aggregation of Encrypted Data in Wireless Sensor Networks. <em>ACM Transactions on Sensor Networks (TOSN)</em>, 5(3):20:1–20:36, 2009.</p>
-</dd>
-<dt class="label" id="id86"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Q.-C. To, B. Nguyen, and P. Pucheral. Private and Scalable Execution of SQL Aggregates on a Secure Decentralized Architecture. <em>ACM Transactions on Database Systems (TODS)</em>, 41(3):16:1–16:43, 2016.</p>
-</dd>
-<dt class="label" id="id87"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>J. Mirval, L. Bouganim, and I. Sandu Popa. Practical Fully-Decentralized Secure Aggregation for Personal Data Management Systems. In <em>International Conference on Scientific and Statistical Database Management (SSDBM)</em>, 259–264. 2021.</p>
-</dd>
-<dt class="label" id="id88"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
-<dd><p>R. Ciucanu, M. Giraud, P. Lafourcade, and L. Ye. Secure Grouping and Aggregation with MapReduce. In <em>International Joint Conference on e-Business and Telecommunications (ICETE) – Volume 2: International Conference on Security and Cryptography (SECRYPT)</em>, 514–521. 2018.</p>
-</dd>
-</dl>
-</p>
+<div class="section" id="tentative">
+<h2>Tentative<a class="headerlink" href="#tentative" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -1163,8 +1232,8 @@ focus on determining whether a processing operation is likely to result in a hig
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="T3.4/L3.Continuous_performance_monitoring.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1181,19 +1250,17 @@ focus on determining whether a processing operation is likely to result in a hig
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
