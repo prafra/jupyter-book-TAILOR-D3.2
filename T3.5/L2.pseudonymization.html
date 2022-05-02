@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Model &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Pseudonymization &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -37,22 +37,22 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Privacy Models" href="L1.privacy_model.html" />
+    <link rel="prev" title="Data Anonymization and Pseudonymization" href="L1.anonymization.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -86,7 +86,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -96,7 +96,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -140,8 +140,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../T3.1/XAI_dimensions.html">
-     Dimensions of Explanations
+    <a class="reference internal" href="../T3.1/XAI_kinds.html">
+     Kinds of Explanations
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -150,8 +150,60 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/feature_importance.html">
+       Feature Importance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/rules_backup.html">
+       Rules
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/saliency_maps.html">
+       Saliency Maps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/counterfactuals.html">
+       Counterfactuals
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/single_tree.html">
+       Single Tree Approximation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_dimensions.html">
+     Dimensions of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/blackbox_transparent.html">
+       Black Box Explanation vs Explanation by Design
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../T3.1/model_specific.html">
        Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/ante_post.html">
+       Ante-hoc Explanation vs Post-hoc Explanations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/global_local.html">
+       Global vs Local Explanations
       </a>
      </li>
     </ul>
@@ -172,8 +224,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../T3.4.html">
    Accountability and Reproducibility
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -182,8 +234,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../T3.4/L2.Accountability.html">
      Accountability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -209,8 +261,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../T3.4/L2.Reproducibility.html">
      Reproducibility
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -231,8 +283,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../T3.4/L2.Traceability.html">
      Traceability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -251,27 +303,39 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../T3.5.html">
    Respect for Privacy
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="L1.anonymization.html">
      Data Anonymization and Pseudonymization
     </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Pseudonymization
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="L1.privacy_model.html">
      Privacy Models
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -285,8 +349,8 @@ const thebe_selector_output = ".output, .cell_output"
       <a class="reference internal" href="L2.differential_privacy.html">
        Differential Privacy
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -335,8 +399,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="L1.privacy_mechanisms.html">
      Privacy Mechanisms
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -345,8 +409,8 @@ const thebe_selector_output = ".output, .cell_output"
       <a class="reference internal" href="L2.perturbation_mechanisms.html">
        Perturbation Mechanisms
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-      <label for="toctree-checkbox-12">
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -379,8 +443,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="L1.attacks.html">
      Attacks on anonymization schemes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -413,8 +477,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -965,8 +1029,8 @@ const thebe_selector_output = ".output, .cell_output"
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -974,19 +1038,19 @@ const thebe_selector_output = ".output, .cell_output"
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/T3.5/privacy_model.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+        <a class="dropdown-buttons" href="../_sources/T3.5/L2.pseudonymization.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -998,12 +1062,12 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.5/privacy_model.html&body=Your%20issue%20content%20here."><button
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.5/L2.pseudonymization.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
     </div>
 </div>
@@ -1011,8 +1075,8 @@ const thebe_selector_output = ".output, .cell_output"
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1020,40 +1084,148 @@ const thebe_selector_output = ".output, .cell_output"
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenuti
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in detail
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudonymisation-techniques">
+     Pseudonymisation techniques
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Privacy Model</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="privacy-model">
-<h1>Privacy Model<a class="headerlink" href="#privacy-model" title="Permalink to this headline">¶</a></h1>
-<p>There are essentially two families of model, exploiting two <span class="xref std std-doc">anonymity</span><a class="reference internal" href="../T3.5.html"><span class="doc">Respect for Privacy</span></a>anonymity mechanisms: indistinguishability and randomization.</p>
-<p>bla bla</p>
-<p><span id="id1">[<a class="reference internal" href="#id4" title="F. Doshi-Velez and B. Kim. Towards a rigorous science of interpretable machine learning. 2017. arXiv preprint arXiv:1702.08608.">1</a>]</span>.</p>
-<!---In the following we present details of these distinctions and other important features characterizing XAI methods.--> 
-<p id="id2"><dl class="citation">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>F. Doshi-Velez and B. Kim. Towards a rigorous science of interpretable machine learning. 2017. arXiv preprint arXiv:1702.08608.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="pseudonymization">
+<h1>Pseudonymization<a class="headerlink" href="#pseudonymization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-brief">
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<p>Pseudonymisation aims to substitute one or more identifiers that link(s) the identity of an individual to its data with a surrogate value, called <em>pseudonym</em> or <em>token</em>.</p>
+</div>
+<div class="section" id="more-in-detail">
+<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>To preserve a subject’s privacy, one of the most basic methodology is to
+de-couple the identity of said subject from its data. This is process is
+called pseudonymisation. The typical practical approach to achieve
+pseudonymity is to detect which attributes in the data may reveal the
+subject’s identity, called <em>personal identifiers</em>, and substitute them
+with some other value.</p>
+<p>However, re-identification may be needed in certain cases (for example, to contact data subject for further questions), therefore
+personal identifiers are often maintained for re-associating subject and
+identity. This association should be secured and inaccessible to anybody
+having access tho the pseudonymised data, so that protection is
+guaranteed.</p>
+<p>Following the description in the <a href="https://gdpr-info.eu/art-4-gdpr/" target=_blank>Article 4(5)</a> of the
+European General Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="L2.reidentification.html#id6">1</a>]</span>:</p>
+<!--````{panels}
+"the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person".
+````-->
+<blockquote>
+<div><p>“the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person”.</p>
+</div></blockquote>
+<p>This definition indicates that the additional information needed to
+actually link a subject’s identity to it’s data should be the focus of
+pseudonymisation techniques. Indeed, pseudonymization reduces the risk of publishing data due to a direct re-identification (See <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>).</p>
+<p><a href="https://gdpr-info.eu/recitals/no-28/" target=_blank>Recital 28</a> of the GDPR, states that “explicit introduction of pseudonymisation in this Regulation is not intended to preclude any other measures of data protection”. <a href="https://gdpr-info.eu/art-6-gdpr/" target=_blank>Article 6(4)</a> of the GDPR also reports that pseudonymisation could be an “appropriate safeguards” and that data controller should operate “pseudonymising personal data as soon as possible” (<a href="https://gdpr-info.eu/recitals/no-78/" target=_blank>Recital 78 GDPR</a>) and implementing “appropriate technical and organisational measures, such as pseudonymisation” (<a href="https://gdpr-info.eu/art-25-gdpr/" target=_blank>Article 25(1) GDPR</a>) both at the time of the determination of the means for processing and at the time of the processing itself.</p>
+<!--The goal of pseudonymization process is to reduce the risk of a direct
+re-identification of the data subjects based on the published data (See {ref}`L2.reidentification`).-->
+<p>The pseudonym must be distinguishable and irreversible in the absence of additional information. This means that it should not be possible to reconstruct the original value by just considering the pseudonym, i.e., there does not exist any function that computes the original value with the pseudonym as input. The correspondence between original value and pseudonym must be stored in a separate location and must be secured against data breaches. Surrogate values need also to be managed after the generation, either internally or externally. In the latter case, the institution who owns data outsources this service to a qualified (and trusted) third party.</p>
+<div class="section" id="pseudonymisation-techniques">
+<h3>Pseudonymisation techniques<a class="headerlink" href="#pseudonymisation-techniques" title="Permalink to this headline">¶</a></h3>
+<p>There are several techniques that perform pseudonymisation. They can be
+generally summarized in three main categories:</p>
+<ol class="simple">
+<li><p><strong>Cryptographic with secret key</strong>: these techniques use mathematical
+mechanism to alter the original value through the application of a
+secret <em>key</em>. This key is at the core of the mechanism: with it, the
+pseudonymisation can be reversed, so the key has to be secured at
+all times.</p></li>
+<li><p><strong>Hash-based</strong>: these techniques use a function that, given an
+identifier (composed by one or more attributes) with arbitrary
+length returns a value of fixed size (e.g., size 256 bits, which correspond to
+32 characters), being called hash value or message digest. The hash
+function is usually a deterministic function and must be
+irreversible, i.e., for any input of the function it is infeasible
+to compute the inverse function from the output. Functions typically
+used for hashing are <em>SHA-2</em> <span id="id2">[<a class="reference internal" href="#id101">2</a>]</span> and <em>SHA-3</em> <span id="id3">[<a class="reference internal" href="#id102">3</a>]</span>, for example
+the <em>SHA3-512</em> which has output values of length 512 bits.</p></li>
+<li><p><strong>Keyed-hash based</strong>: a combination of the previous techniques where
+the hash function requires a key, called <em>salt</em> <span id="id4">[<a class="reference internal" href="#id103">4</a>]</span>, to compute
+its output. This is generally considered a more robust approach that
+simple hashing. Varying the key, the same data subject’s identifier
+can be translated in several different pseudonyms. In cryptography
+literature, these are referred to as <em>message authentication codes</em>
+<span id="id5">[<a class="reference internal" href="#id104">5</a>]</span>. This family of techniques is more robust against some
+brute-force attacks, especially if the salt is changed sufficiently
+often.</p></li>
+<li><p><strong>Keyed-hash function with deletion</strong>: equal to the previous one,
+but after the generation of the pseudonym, the correspondence table
+is deleted, i.e., we cannot associate again pseudonyms to personal
+identifiers.</p></li>
+<li><p><strong>Tokenization</strong>: the idea of tokenization is to substitute the
+subjects’ identifiers with a token generated with some cryptographic
+methods. However, tokenization is a non-mathematical approach: data
+is replaced but the type or length is not altered. Typically
+knowledge of a token has no usefulness for a third party. Another
+difference is that tokenization is fast and can be done with few
+computational resources.<span id="id6">[<a class="reference internal" href="#id105">6</a>]</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="id7"><dl class="citation">
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>European Parliament &amp; Council. General Data Protection Regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
+</dd>
+<dt class="label" id="id101"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Information Technology Laboratory, National Institute of Standards and Technology. Secure hash standard (SHS). URL: <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf</a> (visited on 2022-05-02).</p>
+</dd>
+<dt class="label" id="id102"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Information Technology Laboratory, National Institute of Standards and Technology. SHA-3 standard: permutation-based hash and extendable-output functions. URL: <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf">https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf</a> (visited on 2022-05-02).</p>
+</dd>
+<dt class="label" id="id103"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Information Technology Laboratory, National Institute of Standards and Technology. The keyed-hash message authentication code (hmac). URL: <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.198-1.pdf">https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.198-1.pdf</a> (visited on 2022-05-02).</p>
+</dd>
+<dt class="label" id="id104"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Alfred J. Menezes, Scott A. Vanstone, and Paul C. van Oorschot. <em>Handbook of Applied Cryptography</em>. CRC Press, 1996. URL: <a class="reference external" href="https://cacr.uwaterloo.ca/hac/">https://cacr.uwaterloo.ca/hac/</a> (visited on 2022-05-02).</p>
+</dd>
+<dt class="label" id="id105"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Data Protection Working Party. Opinion 05/2014 on Anonymisation Techniques. URL: <a class="reference external" href="https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216\_en.pdf">https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216\_en.pdf</a> (visited on 2022-05-02).</p>
 </dd>
 </dl>
 </p>
 <hr class="docutils" />
-<p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
+<p>This entry was readapted from <em>Comandé et al. Elgar Encyclopedia of Law and Data Science. Edward Elgar Publishing (2022) ISBN: 978 1 83910 458 9</em> by Francesca Pratesi, Roberto Pellungrini, and Anna Monreale.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1078,21 +1250,37 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="L1.anonymization.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data Anonymization and Pseudonymization</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="L1.privacy_model.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Privacy Models</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 

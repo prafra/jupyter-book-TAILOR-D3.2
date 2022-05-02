@@ -1,11 +1,8 @@
-Rules
-=====
+# Rules
 
-In brief
---------
+## In brief
 
-More in detail
---------------
+## More in detail
 
 A decision rule is generally formed by a set of conditions and by a
 consequent, e.g., \*if conditions, then consequent\*. **"Given a record,
