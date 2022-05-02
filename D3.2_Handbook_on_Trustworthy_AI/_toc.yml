@@ -14,10 +14,19 @@ chapters:
 - file: T3.1
   title: Explainable AI Systems
   sections:
+  - file: T3.1/XAI_kinds
+    sections:     
+    - file: T3.1/feature_importance
+    - file: T3.1/rules_backup
+    - file: T3.1/saliency_maps
+    - file: T3.1/counterfactuals
+    - file: T3.1/single_tree
   - file: T3.1/XAI_dimensions
-#	- file: Def2
     sections:
+    - file: T3.1/blackbox_transparent
     - file: T3.1/model_specific
+    - file: T3.1/ante_post
+    - file: T3.1/global_local
 #chapters:
 - file: T3.2
   title: Safety and Roboustness
@@ -43,6 +52,8 @@ chapters:
 - file: T3.5
   sections:
   - file: T3.5/L1.anonymization
+    sections:
+    - file: T3.5/L2.pseudonymization
   - file: T3.5/L1.privacy_model
     sections:
     - file: T3.5/L2.privmod_properties
