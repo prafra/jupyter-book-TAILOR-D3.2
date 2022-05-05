@@ -1101,11 +1101,6 @@
    More in Detail
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -1121,22 +1116,37 @@
 <h1>Data Anonymization and Pseudonymization<a class="headerlink" href="#data-anonymization-and-pseudonymization" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-brief">
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<p>A data subject is considered anonymous if it is <em>reasonably</em> hard to attribute his personal data to him/her.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p>Reference examples: The goal of <a class="reference internal" href="../T3.5.html"><span class="doc">Respect for Privacy</span></a> is … <span id="id1">[<a class="reference internal" href="#id12">1</a>]</span></p>
-<!---comment--> 
-</div>
-<div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>K. Sokol and P. A. Flach. Explainability fact sheets: a framework for systematic assessment of explainable approaches. In <em>ACM Conference on Fairness, Accountability, and Transparency</em>. 2020.</p>
-</dd>
-</dl>
-</p>
+<p>A data subject is considered anonymous if it is <em>reasonably</em> hard to attribute his personal data to him/her. What “reasonably” actually means depends both on the context and on the requirements given by data respondents. Both the identity of a subject and other information related to him/her are considered in the context of anonymity, for example sensitive information regarding health, religion, political tendencies and, more in general, any kind of information that can somehow distinguish the subject from others.
+The European General Data Protection Regulation (GDPR <span id="id1">[<a class="reference internal" href="L2.reidentification.html#id6">1</a>]</span>) defines anonymous data as</p>
+<blockquote>
+<div><p>“[…] information which does not relate to an identified or identifiable natural person or to personal data rendered anonymous in such a manner that the data subject is not or no longer identifiable”.</p>
+</div></blockquote>
+<p>Thus, data to have this property has to be deprived of all distinctive elements of a person, i.e., those elements that permit to identify both directly or indirectly that person in the data. Since anonymous data does not enable <a class="reference internal" href="L2.reidentification.html"><span class="doc std std-doc">re-identification</span></a> of data subjects, even with the use of additional information, this type of data is not subject to the privacy regulations since it is not considered personal data.</p>
+<p>Note that this is process is absolutely different from removing the direct identifiers only (e.g., name, surname, social security number). This process is called <em>de-identification</em>, and it can be subjected to privacy leaks, such as <a class="reference internal" href="L2.reidentification.html"><span class="doc std std-doc">re-identification</span></a>. The process of substitute a set of direct identifiers with a surrogate value, or psudonym, is called <a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a>. It suffers from the same weaknesses of de-identification.
+Nevertheless, the GDPR strongly advocate the application of <a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a>:</p>
+<blockquote>
+<div><p>“The application of pseudonymisation to personal data can reduce the risks to the data subjects concerned and help controllers and processors to meet their data-protection obligations” (<a href="https://gdpr-info.eu/recitals/no-28/" target=_blank>Recital 28</a>).</p>
+</div></blockquote>
+<blockquote>
+<div><p>“In order to be able to demonstrate compliance with this Regulation, the controller should adopt internal policies and implement measures […]. Such measures could consist, inter alia, of […] pseudonymising personal data as soon as possible […]” (<a href="https://gdpr-info.eu/recitals/no-78/" target=_blank>Recital 78</a>).</p>
+</div></blockquote>
+<blockquote>
+<div><p>“The further processing of personal data for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes is to be carried out […] provided that appropriate safeguards exist (such as, for instance, pseudonymisation of the data)” (<a href="https://gdpr-info.eu/recitals/no-156/" target=_blank>Recital 156</a>).</p>
+</div></blockquote>
+<!--
+## Bibliography
+
+```{bibliography}
+:style: unsrt
+:filter: docname in docnames
+```
+-->
 <hr class="docutils" />
-<p>This entry was written by.</p>
+<p>This entry was readapted from <em>Comandé et al. Elgar Encyclopedia of Law and Data Science. Edward Elgar Publishing (2022) ISBN: 978 1 83910 458 9</em> by Francesca Pratesi, Roberto Pellungrini, and Anna Monreale.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
