@@ -468,17 +468,71 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../T3.6.html">
    Sustainability
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.6/greenAI.html">
+     Green AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.6/power_aware.html">
+       Power-aware Computing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cloud_computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/edge_computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/data_centre.html">
+     Data Centre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cradle_to_cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1102,12 +1156,12 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#weakness-of-k-anonyimity-model">
+    <a class="reference internal nav-link" href="#weakness-of-k-anonymity-model">
      Weakness of
      <em>
       k
      </em>
-     -anonyimity model
+     -anonymity model
     </a>
    </li>
   </ul>
@@ -1134,13 +1188,13 @@
 <div class="section" id="in-brief">
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 <!--Essentially, *k*-anonimity paradigm is based on comparison among individuals present in data, and it aims to make each individual so similar as to be indistinguishable from others.-->
-<p><em>k</em>-anonimity (and the whole family of anonymity by indistinguishability models) is based on comparison among individuals present in data, and it aims to make each individual so similar as to be indistinguishable from at least <em>k-1</em> others.</p>
+<p><em>k-anonimity</em> (and the whole family of <em>anonymity by indistinguishability</em> models) is based on comparison among individuals present in data, and it aims to make each individual so similar as to be indistinguishable from at least <em>k-1</em> others.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
 <p>One of the most common models for anonymization is <em>k</em>-anonymity, where a subject is considered anonymous if an adversary cannot achieve identification of her within a set of other <em>k-1</em> subjects. This set of <em>k</em> individuals is called the <em>anonymity set</em>. Identification, in this context, means the ability to distinguish the subject from other individuals with whom his/her data are grouped. This definition of anonymity is implicitly quantifiable as it depends from the size of the anonymity set. Clearly, a bigger anonymity set implies a better guarantee regarding indistinguishability. For example, the anonymity of a subject with an anonymity set of size 30 is better than the one that can be achieved with an anonymity set of size 5.</p>
-<p>The k-anonymity framework was originally applied on relational tables <span id="id1">[<a class="reference internal" href="#id102">1</a>]</span>. The basic assumption is that attributes are partitioned in <em>quasi-identifiers</em> and <em>sensitive attributes</em> <span id="id2">[<a class="reference internal" href="#id96">2</a>]</span>. The quasi-identifiers are attributes that can be linked to external information to re-identify the individual to whom the information refers (so-called <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>). Usually, they are publicly known or easy to obtain with a superficial knowledge of the subject: for example, age, zip-code, and gender are classic quasi identifiers. The sensitive attributes, instead, represents the information to be protected. Indeed, a dataset satisfies the property of <em>k</em>-anonymity if each released record has at least <em>k−1</em> other records also visible in the release whose values are indistinct over the quasi-identifiers.</p>
-<p>In <em>k</em>-anonymity techniques, methods such as <em>generalization</em> and <em>suppression</em> are usually applied to reduce the granularity of representation of quasi-identifiers. It is clear that these methods guarantee privacy but also reduce the accuracy of applications on the transformed data. Indeed, one of the main challenge of <em>k</em>-anonymity is to find the minimum level of changes (in terms of generalization or suppression) that allows us to guarantee high privacy and good data precision. In <a class="reference internal" href="#tab-k-anonymity-applied"><span class="std std-numref">Table 2</span></a>, one can find an example of a privacy mitigation through generalization that allows to reach <em>3</em>-anonymity, i.e., <em>k</em>-anonymity with <em>3</em> as the minimum size of each anonymity set, starting from the situation depicted in <a class="reference internal" href="#tab-k-anonymity-original"><span class="std std-numref">Table 1</span></a>.</p>
+<p>The k-anonymity framework was originally applied on relational tables <span id="id1">[<a class="reference internal" href="#id102">1</a>]</span>. The basic assumption is that attributes are partitioned in <em>quasi-identifiers</em> and <em>sensitive attributes</em> <span id="id2">[<a class="reference internal" href="#id96">2</a>]</span>. The quasi-identifiers are attributes that can be linked to external information to re-identify the individual to whom the information refers (so-called <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>). Usually, they are publicly known or easy to obtain with a superficial knowledge of the subject: for example, age, zip-code, and gender are classic quasi identifiers. The sensitive attributes, instead, represent the information to be protected. Indeed, a dataset satisfies the property of <em>k</em>-anonymity if each released record has at least <em>k−1</em> other records also visible in the release whose values are indistinct over the quasi-identifiers.</p>
+<p>In <em>k</em>-anonymity techniques, strategies such as <em>generalization</em> and <em>suppression</em> are usually applied to reduce the granularity of representation of quasi-identifiers. It is clear that these methods guarantee privacy but also reduce the accuracy of applications on the transformed data. Indeed, one of the main challenge of <em>k</em>-anonymity is to find the minimum level of changes (in terms of generalization or suppression) that allows us to guarantee high privacy and good data precision. In <a class="reference internal" href="#tab-k-anonymity-applied"><span class="std std-numref">Table 2</span></a>, one can find an example of a privacy mitigation through generalization that allows to reach <em>3</em>-anonymity, i.e., <em>k</em>-anonymity with <em>3</em> as the minimum size of each anonymity set, starting from the situation depicted in <a class="reference internal" href="#tab-k-anonymity-original"><span class="std std-numref">Table 1</span></a>.</p>
 <table class="colwidths-auto table" id="tab-k-anonymity-original">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">A potential extract from a medical dataset. Gender, date of birth, and ZIP code are the quasi-identifiers, while the Disease is the sensitive attribute. An adversary knowing that Alice was born in 1974 and lives in Boston, MA, who gains access to this dataset, will discover that Alice is the patient number 1000 and that she has Lyme Disease.</span><a class="headerlink" href="#tab-k-anonymity-original" title="Permalink to this table">¶</a></caption>
 <thead>
@@ -1275,9 +1329,9 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="weakness-of-k-anonyimity-model">
-<h3>Weakness of <em>k</em>-anonyimity model<a class="headerlink" href="#weakness-of-k-anonyimity-model" title="Permalink to this headline">¶</a></h3>
-<p>Unfortunately, the k-anonymity framework can be vulnerable in some cases. In particular, it is not safe against <em>homogeneity attack</em> and <em>background knowledge attack</em>. The homogeneity attack exploits a possible lack of variety in the sensitive attributes. Indeed, an adversary can infer the value of the sensitive attributes when a <em>k</em>-anonymous dataset contains a group of <em>k</em> entries with the same value for the sensitive attributes. As an example, suppose that the attacker is searching for Bob in the dataset presented in <a class="reference internal" href="#tab-k-anonymity-applied"><span class="std std-numref">Table 2</span></a>: the adversary knows that Bob was born in July 1946. Even if the attacker is not able to discriminate Bob between patients 1003, 1004, and 1005, the disease associated with all these three patients is a stroke; thus, the adversary cannot re-identify Bob, but he/she can still infer that Bob suffers from heart disease.
+<div class="section" id="weakness-of-k-anonymity-model">
+<h3>Weakness of <em>k</em>-anonymity model<a class="headerlink" href="#weakness-of-k-anonymity-model" title="Permalink to this headline">¶</a></h3>
+<p>Unfortunately, the <em>k</em>-anonymity framework can be vulnerable in some cases. In particular, it is not safe against <em>homogeneity attack</em> and <em>background knowledge attack</em>. The homogeneity attack exploits a possible lack of variety in the sensitive attributes. Indeed, an adversary can infer the value of the sensitive attributes when a <em>k</em>-anonymous dataset contains a group of <em>k</em> entries with the same value for the sensitive attributes. As an example, suppose that the attacker is searching for Bob in the dataset presented in <a class="reference internal" href="#tab-k-anonymity-applied"><span class="std std-numref">Table 2</span></a>: the adversary knows that Bob was born in July 1946. Even if the attacker is not able to discriminate Bob between patients 1003, 1004, and 1005, the disease associated with all these three patients is a stroke; thus, the adversary cannot re-identify Bob, but he/she can still infer that Bob suffers from heart disease.
 In a background knowledge attack, instead, an attacker knows information useful to associate some quasi-identifiers with some sensitive attributes: as an example, remaining in the medical domain, it is common knowledge that certain diseases are more frequent in a specific gender.</p>
 </div>
 </div>

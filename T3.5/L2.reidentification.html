@@ -468,17 +468,71 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../T3.6.html">
    Sustainability
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.6/greenAI.html">
+     Green AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.6/power_aware.html">
+       Power-aware Computing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cloud_computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/edge_computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/data_centre.html">
+     Data Centre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cradle_to_cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1121,7 +1175,7 @@
 <h1>Re-identification Attack<a class="headerlink" href="#re-identification-attack" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-brief">
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p>Re-identification attack aims to link a certain set of data related to an individual in a dataset (which does not contain direct identifiers) to a real identity, relying on additional information.</p>
+<p><em>Re-identification attack</em> (also known as <em>Linking attack</em>) aims to link a certain set of data related to an individual in a dataset (which does not contain direct identifiers) to a real identity, relying on additional information.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
@@ -1330,7 +1384,7 @@ in the Governor’s own ZIP code</em>.</p>
 </table>
 <p>In <a class="reference internal" href="#tab-vote"><span class="std std-numref">Table 3</span></a> and <a class="reference internal" href="#tab-medical"><span class="std std-numref">Table 4</span></a> we can see a simplified version of Sweeney’s attack.
 Looking at the tables singularly, no <em>sensitive information</em> (i.e., the diagnosis) about the Governor William Floyd Weld can be inferred. However, from <a class="reference internal" href="#tab-vote"><span class="std std-numref">Table 3</span></a> we gain access to the date of birth and ZIP code of Governor. Then, we can search for the persons born on July 31, 1945 in <a class="reference internal" href="#tab-medical"><span class="std std-numref">Table 4</span></a>, finding patients number 1, 2, 3 and 4. However, ids 3 and 4 correspond to women, so we should consider only individuals 1 and 2. Finally, we can look at the ZIP code in <a class="reference internal" href="#tab-medical"><span class="std std-numref">Table 4</span></a>: the patient number 1 lives in a different area, so we only have one patient (the number 2) that can be the Governor. In brief, we can see that, matching the information colored in <span style='background:#00bfec'>blue</span> from the two tables, there is no other possibility for Governor Weld but to be a patient suffering from a stroke. This was a clear breach of the privacy of the Governor, as the public statement about his health differed from the actual cause of hospitalization.</p>
-<p>Sweeney conducted similar attacks in a more structured and generalised experiment, finding that 87% of the United States population was uniquely or nearly uniquely identified by the combination of ZIP code, gender, and date of birth <span id="id4">[<a class="reference internal" href="L2.k_anonymity.html#id96">2</a>]</span>. This lead Sweeney to theorize the k-anonymity principle, and call the attributes used for the re-identification process <em>quasi-identifier</em>.</p>
+<p>Sweeney conducted similar attacks in a more structured and generalised experiment, finding that 87% of the United States population was uniquely or nearly uniquely identified by the combination of ZIP code, gender, and date of birth <span id="id4">[<a class="reference internal" href="#id98">2</a>]</span>. This leaded Sweeney to theorize the k-anonymity principle, and call the attributes used for the re-identification process <em>quasi-identifier</em>.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
