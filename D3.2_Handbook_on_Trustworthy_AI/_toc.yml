@@ -79,8 +79,19 @@ chapters:
     - file: T3.5/L2.reconstruction
 
 - file: T3.6
+  sections:
+  - file: T3.6/greenAI
+    sections:
+     - file: T3.6/power_aware
+  - file: T3.6/cloud_computing
+  - file: T3.6/edge_computing
+  - file: T3.6/data_centre
+  - file: T3.6/cradle_to_cradle
+  - file: T3.6/resource_prediction
+  - file: T3.6/resource_allocation
 - file: AnalyticaIndex
   sections:
+  - file: index/2CC2
   - file: index/Accountability
   - file: index/Alignment
   - file: index/Ante-hoc Explanation
@@ -91,13 +102,15 @@ chapters:
   - file: index/Auditing
   - file: index/Autonomy Levels
   - file: index/Bias
+  - file: index/C2C
   - file: index/Certification Standards
   - file: index/Cloud Computing
   - file: index/Computational Differential Privacy
   - file: index/Corrigibility
   - file: index/Counterfactual Explanations
+  - file: index/Cradle
   - file: index/Data Anonymization
-  - file: index/Data Centers Management
+  - file: index/Data Center
   - file: index/Data Minimisation
   - file: index/Data sanitization
   - file: index/deFinetti Attack
@@ -108,7 +121,10 @@ chapters:
   - file: index/Dimensions of Explanations
   - file: index/Discrimination
   - file: index/Distributional Shift
+  - file: index/Edge Computing
   - file: index/Electricity Price Forecast
+  - file: index/Energy Aware
+  - file: index/Energy-efficient
   - file: index/Enforcement
   - file: index/epsilon-indistinguishability
   - file: index/Equity
@@ -117,13 +133,17 @@ chapters:
   - file: index/Fair Machine Learning
   - file: index/Fairness
   - file: index/Features Importance
+  - file: index/Fog Computing
   - file: index/Generality
   - file: index/General Privacy-related Attacks
   - file: index/Global Explanations
   - file: index/Global Recoding
   - file: index/Goal Stability
+  - file: index/Green AI
   - file: index/Green Computing
+  - file: index/Green IT
   - file: index/Human-in-the-loop
+  - file: index/ICT sustainability
   - file: index/Impact Assessment of Trustworthy AI
   - file: index/Interpretability
   - file: index/Interruptibility
@@ -135,6 +155,7 @@ chapters:
   - file: index/Local Recoding
   - file: index/Meaningful human control
   - file: index/Membership Inference Attacks
+  - file: index/Mesh Computing
   - file: index/Minimality Attack
   - file: index/Model-Agnostic
   - file: index/Model-Specific
@@ -147,6 +168,7 @@ chapters:
   - file: index/Partition-Based Algorithms
   - file: index/Perturbation Mechanisms
   - file: index/Post-hoc Explanations
+  - file: index/Power Aware
   - file: index/Privacy algorithm
   - file: index/Privacy Mechanism
   - file: index/Privacy model
@@ -160,6 +182,7 @@ chapters:
   - file: index/Repeatability
   - file: index/Replicability
   - file: index/Reproducibility
+  - file: index/Resource Allocation
   - file: index/Resource Prediction
   - file: index/Resource Scheduling
   - file: index/Reward Hacking
@@ -183,3 +206,5 @@ chapters:
   - file: index/Uncertainty
   - file: index/Validation
   - file: index/Verification
+  - file: index/Workload Forecast
+  - file: index/Workload Prediction
