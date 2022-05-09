@@ -56,7 +56,6 @@ chapters:
     - file: T3.5/L2.pseudonymization
   - file: T3.5/L1.privacy_model
     sections:
-    - file: T3.5/L2.privmod_properties
     - file: T3.5/L2.differential_privacy
       sections:
       - file: T3.5/L3.epsilon_DP
