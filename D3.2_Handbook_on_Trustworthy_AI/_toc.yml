@@ -89,7 +89,7 @@ chapters:
   - file: T3.6/cradle_to_cradle
   - file: T3.6/resource_prediction
   - file: T3.6/resource_allocation
-- file: AnalyticaIndex
+- file: AnalyticaIndex 
   sections:
   - file: index/2CC2
   - file: index/Accountability
@@ -108,6 +108,7 @@ chapters:
   - file: index/Computational Differential Privacy
   - file: index/Corrigibility
   - file: index/Counterfactual Explanations
+  - file: index/cradle 2 cradle
   - file: index/Cradle
   - file: index/Data Anonymization
   - file: index/Data Center
@@ -178,6 +179,7 @@ chapters:
   - file: index/Randomized response
   - file: index/Reconstruction Attacks
   - file: index/Re-identification Attack
+  - file: index/Regenerative
   - file: index/Reliability
   - file: index/Repeatability
   - file: index/Replicability

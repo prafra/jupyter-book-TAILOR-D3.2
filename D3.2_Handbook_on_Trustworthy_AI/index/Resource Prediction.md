@@ -1,5 +1,9 @@
-# Resource Prediction (Sustainability)
+# Resource Prediction
 
-*Resource prediction* (also called *Workload Prediction* or *Workload Forecast*) is the estimation of the resources a customer will require in the future to complete his tasks.  This concept has a wide variety of application and it is particularly studied in the context of data centres management. When these forecasts are generated, historical and current data are utilised to predict how many resource units, which tools and operative systems and the number of requests are required to accomplish a task.
+<!-- (Sustainability) -->
 
-You can find futher information about Resource Prediction [here](../T3.6/resource_pretiction.md)
+**Synonyms:** Workload Forecast, Workload Prediction.
+
+*Resource prediction* is the estimation of the resources a customer will require in the future to complete his tasks.  This concept has a wide variety of application and it is particularly studied in the context of data centres management. When these forecasts are generated, historical and current data are utilised to predict how many resource units, which tools and operative systems and the number of requests are required to accomplish a task.
+
+You can find futher information about Resource Prediction [here](../T3.6/resource_prediction.md)
