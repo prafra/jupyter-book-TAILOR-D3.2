@@ -128,18 +128,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="rules_backup.html">
-       Rules
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="saliency_maps.html">
        Saliency Maps
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="counterfactuals.html">
-       Counterfactuals
       </a>
      </li>
      <li class="toctree-l3">
@@ -1224,20 +1214,20 @@ In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency<
 <p>Figure <a class="reference internal" href="#post-hoc"><span class="std std-numref">8</span></a> depicts this distinction.</p>
 <div class="figure align-center" id="post-hoc">
 <a class="reference internal image-reference" href="../_images/post.png"><img alt="../_images/post.png" src="../_images/post.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="saliency_maps.html#id29">14</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id19">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
 </div>
-<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="feature_importance.html#id17">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id47">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id67">2</a>]</span>.</p>
+<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id32">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id47">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id70">3</a>]</span>.</p>
 <p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly into the AI system <span id="id5">[<a class="reference internal" href="#id85">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id86">6</a>]</span>.
 In the literature, there are various models recognized to be interpretable. Examples are decision tree, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id49">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
 <p id="id8"><dl class="citation">
 <dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
 </dd>
-<dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
-<dd><p>S. M. Lundberg and S.-I. Lee. A unified approach to interpreting model predictions. In <em>Advances in neural information processing systems</em>, 4765–4774. 2017.</p>
-</dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
 <dd><p>Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. <em>Principles of Explainable Artificial Intelligence</em>. Springer International Publishing, 2021.</p>
+</dd>
+<dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>S. M. Lundberg and S.-I. Lee. A unified approach to interpreting model predictions. In <em>Advances in neural information processing systems</em>, 4765–4774. 2017.</p>
 </dd>
 <dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
 <dd><p>M. Craven and J. W. Shavlik. Extracting tree-structured representations of trained networks. In <em>Advances in neural information processing systems</em>, volume 8, 24–30. 1996.</p>
