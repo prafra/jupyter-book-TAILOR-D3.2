@@ -2,7 +2,7 @@
 
 **TAILOR: Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization**
 
-*D3.2 Handbook on Trustworthy AI*
+*D3.3 Handbook on Trustworthy AI (version 1)*
 
 TAILOR is an EU-funded ICT-48 Network (GA 952215) with the purpose of building the capacity of providing the scientific foundations for Trustworthy AI in Europe by developing a network of research excellence centres leveraging and combining learning, optimization and reasoning.
 

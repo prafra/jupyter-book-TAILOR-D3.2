@@ -5,11 +5,6 @@ format: jb-book
 root: TAILOR
 chapters:
 - file: authors
-- file: Jupyter
-  sections:
-  - file: introJupyter
-  - file: markdownJupyter
-  - file: notebooksJupyter
 #chapters:
 - file: T3.1
   title: Explainable AI Systems
@@ -17,15 +12,12 @@ chapters:
   - file: T3.1/XAI_kinds
     sections:     
     - file: T3.1/feature_importance
-    - file: T3.1/rules_backup
     - file: T3.1/saliency_maps
-    - file: T3.1/counterfactuals
     - file: T3.1/single_tree
   - file: T3.1/XAI_dimensions
     sections:
     - file: T3.1/blackbox_transparent
     - file: T3.1/model_specific
-    - file: T3.1/ante_post
     - file: T3.1/global_local
 #chapters:
 - file: T3.2
