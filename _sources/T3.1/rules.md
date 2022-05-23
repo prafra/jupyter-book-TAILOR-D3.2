@@ -11,12 +11,12 @@ consequent if the conditions are verified [@agrawalVLDB]". The most
 common rules are *if-then rules*** that take into consideration rules
 with clauses in conjunction. On the other hand, for *m-of-n* rules given
 a set of *n* conditions, if *m* of them are verified, then the
-consequence of the rule is applied [@murphyML]. When a set of rules is
+consequence of the rule is applied [@murphy1991id2_51]. When a set of rules is
 used, then there are different strategies to select the outcome. For
 *list of rules* the order of the list is considered and the model
 returns the outcome of the first rule that verifies the conditions
 [@yinICDM]. For instance, *falling rule lists* are if-then rules ordered
-with respect to the probability of a specific outcome [@rudin2015]. On
+with respect to the probability of a specific outcome [@rudin75]. On
 the other hand, *decision sets* are unordered lists of rules. Basically
 each rule is an independent classifier that can assign its outcome
 without regard for any other rules [@lakkaraju39]. Voting strategies are

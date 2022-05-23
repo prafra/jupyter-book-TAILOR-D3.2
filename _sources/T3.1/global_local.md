@@ -2,12 +2,15 @@
 
 ## In brief
 
+We distinguish between a **global** or **local** explanation depending on whether the explanation allows understanding the whole logic of a model used by an AI system, or if the explanation refers to a specific case, i.e., only a single decision is interpretable. 
+
 ## More in detail
 
-We distinguish between a global or local explanation depending on whether the explanation allows understanding the whole logic of a model used by an AI system, or if the explanation refers to a specific case, i.e., only a single decision is interpretable. A *global* explanation consists in providing a way for interpreting any possible decision of a *black box model*. 
-Generally, the black box behavior is approximated with a transparent model trained to mimic the obscure model and also to be human-understandable. In other words, the interpretable model approximating the black box provides a global interpretation. Global explanations are quite difficult to achieve and, up to now, can be provided only for AI working on relational data. 
-A *local* explanation consists in retrieving the reasons for the *outcome* returned by a black box model relatively to the decision for a specific instance. 
-In this case, it is not required to explain the whole logic underlying the AI, but only the reason for the prediction on a specific input instance. 
+A **global explanation** consists in providing a way for interpreting any possible decision of a *black box model*. 
+Generally, the black box behavior is approximated with a transparent model trained to mimic the obscure model (see {doc}`blackbox_transparent`) and also to be human-understandable. In other words, the interpretable model approximating the black box provides a global interpretation. Global explanations are quite difficult to achieve and, up to now, can be provided only for AI working on relational data. 
+
+A **local explanation** consists in retrieving the reasons for a specific *outcome* returned by a black box model relatively to the decision for a certain instance. 
+In this case, it is not required to explain the whole logic underlying the AI, but a local explanation only provide the reason for the prediction on a specific input instance. 
 Hence, an interpretable model is used to approximate the black box behavior only in the "neighborhood" of the instance analyzed, i.e., with respect only to similar instances. The idea is that in such a neighborhood, it is easier to approximate the AI with a simple and understandable model. Regarding Figure {numref}`{number}<post-hoc>` (top) (see {doc}`blackbox_transparent`), a *global* explanation method *f* uses many instances *X* over which the explanation is returned.
 
 
