@@ -6,11 +6,11 @@ The *Single Tree Appoximation* is an approach that aims at building a decision t
 
 ## More in detail
 
-Decision trees are the simplest example of [transparent techniques](./blackbox_transparent.md). Moreover, they can be build to provide [post-hoc explanations](./blackbox_transparent.md) of black-boxes.
+Decision trees are the simplest example of [transparent techniques](./blackbox_transparent.md). Moreover, they can be built to provide [post-hoc explanations](./blackbox_transparent.md) of black-boxes.
 One of the first approaches introduced to explain neural networks is <span style="font-variant:small-caps;">trepan</span> {cite}`Craven20`.
 <span style="font-variant:small-caps;">trepan</span> is a [global explanation method](./global_local.md) that is able to model the whole logic of a
-neural network working on tabular with a **single decision tree** {cite}`kumar`. The decision tree
-returned by <span style="font-variant:small-caps;">trepan</span> as explanation is a *global transparent surrogate*. Indeed, every
+neural network working on tabular data with a **single decision tree** {cite}`kumar`. The decision tree
+returned by <span style="font-variant:small-caps;">trepan</span> as an explanation is a *global transparent surrogate*. Indeed, every
 path from the root of the tree to a leaf explains the reasons for the final decision that is
 reported in the leaf itself. An example of a decision tree returned by <span style="font-variant:small-caps;">trepan</span> is illustrated
 in Fig. {numref}`{number} <xai-tree>`.
@@ -26,27 +26,26 @@ Example of global tree-based explanation returned by <span style="font-variant:s
 
 
 This global explanation reveals that the black box first focuses on the
-value of the feature *rest ECG* and, depending on its degree (abnormal, normal,
-hypertrophy) takes different decisions depending on additional factors such as sex or
+value of the feature *rest ECG*; Depending on its degree (abnormal, normal,
+hypertrophy), tha black box takes different decisions depending on additional factors such as sex or
 cholesterol. 
 In particular, <span style="font-variant:small-caps;">trepan</span> queries the neural network to induce the decision
-tree by maximizing the *gain ratio* {cite}`kumar` on the data with respect to the predictions of
-the neural network. 
+tree by maximizing the *gain ratio* {cite}`kumar` on the data with respect to the neural network's predictions.
 
 A weakness of common decision trees like ID3 or C4.5 {cite}`quinlan1993c4_57` is
 that the amount of data to find the splits near to the leaves is much lower than those
-used at the beginning. 
+used initially. 
 Thus, in order to retrieve how a neural network works in detail,
-<span style="font-variant:small-caps;">trepan</span> adopts a synthetic generation of data that respect the path of each node before
+<span style="font-variant:small-caps;">trepan</span> adopts a synthetic generation of data that respects the path of each node before
 performing the splitting such that the same amount of data is used for every split. In
 addition, it allows flexibility by using *"m-of-n" rules* where only *m* conditions out
 of *n* are required to be satisfied to classify a record. Therefore, <span style="font-variant:small-caps;">trepan</span> maximizes
 the fidelity of the single tree explanation with respect to the black box decision. 
 
-It is worth noting that, even though <span style="font-variant:small-caps;">trepan</span> is proposed to explain neural networks, in reality
+It is worth noting that, even though <span style="font-variant:small-caps;">trepan</span> is proposed to explain neural networks, in reality it
 is [model-agnostic](./model_specific.md) because it does not exploit any internal characteristic of neural
 networks to retrieve the explanation tree. Moreover, it does not place any requirements on either the architecture of the network or its training method. Thus, it can be theoretically employed to
-provide explainations to every kinds of classifiers.
+provide explanations to every kind of classifier.
 
 In {cite}`boz16` is presented an extension of <span style="font-variant:small-caps;">trepan</span> that aims to keep the tree explanation
 simple and compact by introducing four splitting approaches in order to find the

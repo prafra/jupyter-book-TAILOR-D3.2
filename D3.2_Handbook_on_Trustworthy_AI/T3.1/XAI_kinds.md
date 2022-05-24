@@ -13,7 +13,9 @@ The explanations returned depend on various factors, such as:
 - the business perspective, i.e., which are the implication of companies in having explainable and interpretable systems and models, in terms of business strategies and secrecy,
 - the fact that, in a decentralized node, an explanation could require information that is nor directly available on site.
 
-In this part we review a subset of the most used types of explanations and we show how some state-of-the-art explanation methods are able to return them. The interest reader can refer to {cite}`adadi1`, {cite}`guidotti_survey` for a complete review of the literature in XAI.
+In this part of the Encyclopedia, we review a subset of the most used types of explanations and show how some state-of-the-art explanation methods can return them. The interested reader can refer to {cite}`adadi1`, {cite}`guidotti_survey` for a complete review of XAI literature.
+
+## Bibliography
 
 ```{bibliography}
 :style: unsrt
