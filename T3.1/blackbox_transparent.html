@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Black Box Explanation vs Explanation by Design &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Black Box Explanation vs Explanation by Design &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -81,7 +81,7 @@
       <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -1188,6 +1188,11 @@
    More in detail
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -1204,8 +1209,7 @@
 <p><em>Synonyms</em>: Post-hoc vs Ante-hoc Explanations.</p>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p>The difference between <strong>Black Box Explanation</strong> (or <strong>Post-hoc Explanations</strong>) and <strong>Explanation by Design</strong> (or <strong>Ante-hoc Explanations</strong>) regards the ability to know the behaviour of the AI model. With a black box model with an explanation method able to interpret the black box decisions. In the second case, the strategy is to substitute the obscure model with a transparent model in which the decision process is accessible by design.
-Figure <a class="reference internal" href="#post-hoc"><span class="std std-numref">8</span></a> depicts this distinction.</p>
+<p>The difference between <strong>Black Box Explanation</strong> (or <strong>Post-hoc Explanations</strong>) and <strong>Explanation by Design</strong> (or <strong>Ante-hoc Explanations</strong>) regards the ability to know and exploit the behaviour of the AI model. With a black box explanation, we pair the black box model with an interpretation the black box decisions or model, while in the second case, the strategy is to rely, by design, on a transparent model.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
@@ -1217,8 +1221,11 @@ In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency<
 <p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id19">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
 </div>
 <p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id32">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id47">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id70">3</a>]</span>.</p>
-<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly into the AI system <span id="id5">[<a class="reference internal" href="#id85">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id86">6</a>]</span>.
-In the literature, there are various models recognized to be interpretable. Examples are decision tree, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id49">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
+<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[<a class="reference internal" href="#id85">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id86">6</a>]</span>.
+In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id49">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id8"><dl class="citation">
 <dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>

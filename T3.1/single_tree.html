@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single Tree Approximation &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Single Tree Approximation &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -81,7 +81,7 @@
       <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -1188,6 +1188,11 @@
    More in detail
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -1203,15 +1208,15 @@
 <h1>Single Tree Approximation<a class="headerlink" href="#single-tree-approximation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p>The <em>Single Tree Appoximation</em> is an approach that aims at building a decision trees to approximate the behavior of a black box, typically a neural network.</p>
+<p>The <em>Single Tree Appoximation</em> is an approach that aims at building a decision tree to approximate the behavior of a black box, typically a neural network.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p>Decision trees are the simplest example of <a class="reference internal" href="blackbox_transparent.html"><span class="doc std std-doc">transparent techniques</span></a>. Moreover, they can be build to provide <a class="reference internal" href="blackbox_transparent.html"><span class="doc std std-doc">post-hoc explanations</span></a> of black-boxes.
+<p>Decision trees are the simplest example of <a class="reference internal" href="blackbox_transparent.html"><span class="doc std std-doc">transparent techniques</span></a>. Moreover, they can be built to provide <a class="reference internal" href="blackbox_transparent.html"><span class="doc std std-doc">post-hoc explanations</span></a> of black-boxes.
 One of the first approaches introduced to explain neural networks is <span style="font-variant:small-caps;">trepan</span> <span id="id1">[<a class="reference internal" href="#id47">2</a>]</span>.
 <span style="font-variant:small-caps;">trepan</span> is a <a class="reference internal" href="global_local.html"><span class="doc std std-doc">global explanation method</span></a> that is able to model the whole logic of a
-neural network working on tabular with a <strong>single decision tree</strong> <span id="id2">[<a class="reference internal" href="#id21">3</a>]</span>. The decision tree
-returned by <span style="font-variant:small-caps;">trepan</span> as explanation is a <em>global transparent surrogate</em>. Indeed, every
+neural network working on tabular data with a <strong>single decision tree</strong> <span id="id2">[<a class="reference internal" href="#id21">3</a>]</span>. The decision tree
+returned by <span style="font-variant:small-caps;">trepan</span> as an explanation is a <em>global transparent surrogate</em>. Indeed, every
 path from the root of the tree to a leaf explains the reasons for the final decision that is
 reported in the leaf itself. An example of a decision tree returned by <span style="font-variant:small-caps;">trepan</span> is illustrated
 in Fig. <a class="reference internal" href="#xai-tree"><span class="std std-numref">6</span></a>.</p>
@@ -1220,25 +1225,24 @@ in Fig. <a class="reference internal" href="#xai-tree"><span class="std std-numr
 <p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Example of global tree-based explanation returned by <span style="font-variant:small-caps;">trepan</span> <span id="id3">[<a class="reference internal" href="#id19">1</a>]</span>.</span><a class="headerlink" href="#xai-tree" title="Permalink to this image">¶</a></p>
 </div>
 <p>This global explanation reveals that the black box first focuses on the
-value of the feature <em>rest ECG</em> and, depending on its degree (abnormal, normal,
-hypertrophy) takes different decisions depending on additional factors such as sex or
+value of the feature <em>rest ECG</em>; Depending on its degree (abnormal, normal,
+hypertrophy), tha black box takes different decisions depending on additional factors such as sex or
 cholesterol.
 In particular, <span style="font-variant:small-caps;">trepan</span> queries the neural network to induce the decision
-tree by maximizing the <em>gain ratio</em> <span id="id4">[<a class="reference internal" href="#id21">3</a>]</span> on the data with respect to the predictions of
-the neural network.</p>
+tree by maximizing the <em>gain ratio</em> <span id="id4">[<a class="reference internal" href="#id21">3</a>]</span> on the data with respect to the neural network’s predictions.</p>
 <p>A weakness of common decision trees like ID3 or C4.5 <span id="id5">[<a class="reference internal" href="#id84">4</a>]</span> is
 that the amount of data to find the splits near to the leaves is much lower than those
-used at the beginning.
+used initially.
 Thus, in order to retrieve how a neural network works in detail,
-<span style="font-variant:small-caps;">trepan</span> adopts a synthetic generation of data that respect the path of each node before
+<span style="font-variant:small-caps;">trepan</span> adopts a synthetic generation of data that respects the path of each node before
 performing the splitting such that the same amount of data is used for every split. In
 addition, it allows flexibility by using <em>“m-of-n” rules</em> where only <em>m</em> conditions out
 of <em>n</em> are required to be satisfied to classify a record. Therefore, <span style="font-variant:small-caps;">trepan</span> maximizes
 the fidelity of the single tree explanation with respect to the black box decision.</p>
-<p>It is worth noting that, even though <span style="font-variant:small-caps;">trepan</span> is proposed to explain neural networks, in reality
+<p>It is worth noting that, even though <span style="font-variant:small-caps;">trepan</span> is proposed to explain neural networks, in reality it
 is <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agnostic</span></a> because it does not exploit any internal characteristic of neural
 networks to retrieve the explanation tree. Moreover, it does not place any requirements on either the architecture of the network or its training method. Thus, it can be theoretically employed to
-provide explainations to every kinds of classifiers.</p>
+provide explanations to every kind of classifier.</p>
 <p>In <span id="id6">[<a class="reference internal" href="#id43">5</a>]</span> is presented an extension of <span style="font-variant:small-caps;">trepan</span> that aims to keep the tree explanation
 simple and compact by introducing four splitting approaches in order to find the
 most relevant features during the tree construction.
@@ -1246,6 +1250,9 @@ In <span id="id7">[<a class="reference internal" href="#id62">6</a>]</span>, gen
 network ensemble by considering additional genetic features obtained as combinations of the original data and the novel data annotated by the black box models. Both
 methods described in <span id="id8">[<a class="reference internal" href="#id43">5</a>]</span>, <span id="id9">[<a class="reference internal" href="#id62">6</a>]</span>, like <span style="font-variant:small-caps;">trepan</span>, return explanations in the form of a global decision
 tree.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id10"><dl class="citation">
 <dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
 <dd><p>Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. <em>Principles of Explainable Artificial Intelligence</em>. Springer International Publishing, 2021.</p>

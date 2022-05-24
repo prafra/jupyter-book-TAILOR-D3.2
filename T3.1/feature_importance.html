@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feature Importance &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Feature Importance &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -81,7 +81,7 @@
       <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -1188,6 +1188,11 @@
    More in detail
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -1203,26 +1208,26 @@
 <h1>Feature Importance<a class="headerlink" href="#feature-importance" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p>The feature importance technique provide a score, representing the “importance”, for all the input features for a given AI model, i.e., a higher importance means that the corresponding feature will have a larger effect on the model.</p>
+<p>The feature importance technique provides a score, representing the “importance”, for all the input features for a given AI model, i.e., a higher importance means that the corresponding feature will have a larger effect on the model.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="global_local.html"><span class="doc std std-doc">Local explanations</span></a>, especially when we are dealing with tabular data, can also be returned in the form of <strong>features
+<p><a class="reference internal" href="global_local.html"><span class="doc std std-doc">Local explanations</span></a>, especially when dealing with tabular data, can also be returned in the form of <strong>features
 importance</strong>. This technique considers both the sign and the magnitude of the contribution of the
 features for a given AI decision. In particular, if the value of a feature is positive, then it contributes
-by increasing the model’s output, while if the sign is negative, then the feature decreases
+by increasing the model’s output; at the same time, if the sign is negative, then the feature decreases
 the output of the model.
-At the same time, if a feature has a higher contribution than another, both in a positive and in a negative way, then it
-means that it has a stronger influence on the prediction of the black box outcome. This meaning is expressed by the magnitude of the provided score.</p>
-<p>The features importance summarizes the outcome of the black box model, allowing to quantify the changes of the black box decision for each test
-record. This means that it is possible to identify the features leading to a specific outcome for a certain instance, and how much they contributed to the decision.
+At the same time, if a feature has a higher contribution than another, both positively and negatively, then it
+means that it has a stronger influence on the prediction of the black box outcome. The magnitude of the provided score expresses this meaning.</p>
+<p>The features importance summarizes the outcome of the black box model, allowing quantifying the changes of the black box decision for each test
+record. This means it is possible to identify the features leading to a specific outcome for a certain instance and how much they contributed to the decision.
 In the following, we provide a couple of examples obtained with two of the most popular methods, namely <span style="font-variant:small-caps;">lime</span> and <span style="font-variant:small-caps;">shap</span>, both <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agnostic</span></a> <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local</span></a> explanation methods.</p>
 <p>The <span style="font-variant:small-caps;">lime</span> explanation method <span id="id1">[<a class="reference internal" href="saliency_maps.html#id32">1</a>]</span> randomly generates synthetic instances around the analyzed record. Then it returns the features importance as the coefficient of a linear regression model adopted as a local surrogate. The synthetic instances are weighted according to their proximity to the instance of interest.
 The <a href="https://en.wikipedia.org/wiki/Lasso_(statistics)" target=_blank>Lasso model</a> is trained to approximate the probability of the decision of the
 black box in the synthetic neighborhood of the instance analyzed. Fig. <a class="reference internal" href="#xai-feature-lime"><span class="std std-numref">3</span></a> shows
-the features importance returned by <span style="font-variant:small-caps;">lime</span> in a scenario where we want to predict if a mushroom is edible or poisonous. Indeed, here the prediction class has only two classes, and we want to understand which features are most relevand to discriminate between the two classes.
+the features importance returned by <span style="font-variant:small-caps;">lime</span> in a scenario where we want to predict if a mushroom is edible or poisonous. Indeed, here the prediction class has only two classes, and we want to understand which features are most relevant to discriminate between the two classes.
 In this example, the feature <em>odor=foul</em> has a positive contribution of 0.26
-in the prediction of a mushrooms as <em>poisonous</em>, <em>stack-surface-above-ring=silky</em> has
+in predicting of a mushroom as <em>poisonous</em>, <em>stack-surface-above-ring=silky</em> has
 a positive contribution of 0.11, <em>spore-print-color=chocolate</em> has a positive contribution of 0.08, <em>stack-surface-below-ring=silky</em> has a positive contribution of 0.06,
 while <em>gill-size=broad</em> has a negative contribution of 0.13.</p>
 <div class="figure align-center" id="xai-feature-lime">
@@ -1242,12 +1247,11 @@ i.e., collaborate to receive the profit.
 Thus, a Shapley value is the <em>average marginal
 contribution</em> of a feature value across all possible coalitions, i.e., combinations <span id="id5">[<a class="reference internal" href="#id75">5</a>]</span>.
 Therefore, <span style="font-variant:small-caps;">shap</span> returns the local unique additive feature importance for each specific
-record. The higher is a Shapely value, and the higher is the contribution of the feature.
+record. The higher a Shapely value, the higher the contribution of the feature.
 Fig. <a class="reference internal" href="#xai-feature-shap"><span class="std std-numref">4</span></a> shows an example of <span style="font-variant:small-caps;">shap</span> explanation, where the features importance
-is expressed in the form of a <em>force plot</em>. The example is based on the use of the Boston Housing Dataset<a class="footnote-reference brackets" href="#boston" id="id6">1</a>, a dataset that collects information of a portion of US census data (such as the age) along with some information about the areas (i.e., pupil-teacher ratio by town or accessibility to radial highways). This explanation shows for each feature the
-level of the contribution in pushing the black box prediction from the base value (the
+is expressed in the form of a <em>force plot</em>. The example is based on the Boston Housing Dataset<a class="footnote-reference brackets" href="#boston" id="id6">1</a>, a dataset that collects information relative to a portion of US census data (such as the age) along with some information about the areas (i.e., pupil-teacher ratio by town or accessibility to radial highways). This explanation each feature’s contribution levelin pushing the black box prediction from the base value (the
 average model output over the dataset, which is 24.41 in this example) to the model
-output. The features pushing the prediction higher are shown in light blue, those pushing
+output. The features pushing the prediction higher are shown in light blue, and those pushing
 the prediction lower are shown in orange.</p>
 <div class="figure align-center" id="xai-feature-shap">
 <a class="reference internal image-reference" href="../_images/featureimportance_xai_tailor2.png"><img alt="../_images/featureimportance_xai_tailor2.png" src="../_images/featureimportance_xai_tailor2.png" style="width: 800px;" /></a>
@@ -1260,6 +1264,9 @@ can also be used to explain the decisions of AI working on textual data and imag
 complementare = #ec4700
 https://www.sessions.edu/color-calculator/
 -->
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id8"><dl class="citation">
 <dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>

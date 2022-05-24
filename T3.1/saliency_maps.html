@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saliency Maps &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Saliency Maps &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -81,7 +81,7 @@
       <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -1188,6 +1188,11 @@
    More in detail
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -1203,24 +1208,24 @@
 <h1>Saliency Maps<a class="headerlink" href="#saliency-maps" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p>Saliency maps are explanations used on image classification tasks. A <em>saliency map</em> is an image where each pixel’s color represents a value modeling the importance of that pixel in the original image (i.e., the one gave in input to the explainer) for the prediction.</p>
+<p>Saliency maps are explanations used on image classification tasks. A <em>saliency map</em> is an image where each pixel’s color represents a value modeling the importance of that pixel in the original image (i.e., the one given in input to the explainer) for the prediction.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
 <p>The most used type of explanation for explaining AI systems working on images consists of <strong>saliency maps</strong>. A saliency map is an image where each pixel’s color represents a value modeling the importance of that pixel for the prediction, i.e., they show the positive (or negative) contribution of each pixel to the black box
-outcome. Saliency maps are a very typical example of <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local explanation methods</span></a> since they are tailored on the image that must be explained.</p>
+outcome. Saliency maps are a very typical example of <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local explanation methods</span></a> since they are tailored to the image that must be explained.</p>
 <p>In the literature, there exist different explanation methods locally explaining deep neural networks for image classification. The two most used model-specific techniques are <em>perturbation-based attribution methods</em> <span id="id1">[<a class="reference internal" href="#id60">3</a>, <a class="reference internal" href="#id112">4</a>]</span> and
 <em>gradient attribution methods</em> such as <span style="font-variant:small-caps;">sal</span> <span id="id2">[<a class="reference internal" href="#id103">5</a>]</span>, <span style="font-variant:small-caps;">elrp</span> <span id="id3">[<a class="reference internal" href="#id46">6</a>]</span>, <span style="font-variant:small-caps;">grad</span> <span id="id4">[<a class="reference internal" href="#id102">7</a>]</span>, and <span style="font-variant:small-caps;">intg</span> <span id="id5">[<a class="reference internal" href="#id105">8</a>]</span>.</p>
-<p>Without entering into the details, these XAI approaches aim at attibuting an importance score to each pixel in order to minimize the probability of the deep neural network (DNN) of labeling the image with a different outcome when only the most important pixels are considered. Indeed, the areas retrieved by these methods are also called <em>attention areas</em>.</p>
+<p>Without entering into the details, these XAI approaches aim at attributing an importance score to each pixel in order to minimize the probability of the deep neural network (DNN) labeling the image with a different outcome when only the most important pixels are considered. Indeed, the areas retrieved by these methods are also called <em>attention areas</em>.</p>
 <p>The aforementioned XAI methods are specifically designed for specific DNN models, i.e., they are <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-specific</span></a>.</p>
-<p>However, relying on appropriate image transformations that take advantage the concept of “superpixels” <span id="id6">[<a class="reference internal" href="#id32">1</a>]</span>, i.e., the results the segmentation of an image into regions by considering proximity or similarity measures, also <span class="xref myst">model-agnostic explanation</span> methods (such as <span style="font-variant:small-caps;">lime</span> <span id="id7">[<a class="reference internal" href="#id32">1</a>]</span>, <span style="font-variant:small-caps;">anchor</span> <span id="id8">[<a class="reference internal" href="#id95">9</a>]</span>, and <span style="font-variant:small-caps;">lore</span> <span id="id9">[<a class="reference internal" href="#id113">10</a>]</span>) can be employed to explain AI working on images for any kind of black box model.</p>
-<p>The attention areas of explanations returned by these methods are stricly dependent to both:</p>
+<p>However, relying on appropriate image transformations that take advantage of the concept of “superpixels” <span id="id6">[<a class="reference internal" href="#id32">1</a>]</span>, i.e., the results of the segmentation of an image into regions by considering proximity or similarity measures, also <span class="xref myst">model-agnostic explanation</span> methods (such as <span style="font-variant:small-caps;">lime</span> <span id="id7">[<a class="reference internal" href="#id32">1</a>]</span>, <span style="font-variant:small-caps;">anchor</span> <span id="id8">[<a class="reference internal" href="#id95">9</a>]</span>, and <span style="font-variant:small-caps;">lore</span> <span id="id9">[<a class="reference internal" href="#id113">10</a>]</span>) can be employed to explain AI working on images for any kind of black box model.</p>
+<p>The attention areas of explanations returned by these methods are strictly dependent on both:</p>
 <ul class="simple">
 <li><p>the technique used for segmenting the image to explain and</p></li>
 <li><p>to a neighborhood consisting of unrealistic synthetic images with “suppressed”
 superpixels <span id="id10">[<a class="reference internal" href="#id66">11</a>]</span>.</p></li>
 </ul>
-<p>A different approach to generate neighborhoods is the one introcuted by the <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local</span></a> <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agostic</span></a> explanation method
+<p>A different approach for generating neighborhoods is introduced by the <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local</span></a> <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agostic</span></a> explanation method
 <span style="font-variant:small-caps;">abele</span> <span id="id11">[<a class="reference internal" href="#id68">12</a>]</span>. This method relies on a generative model, i.e., an adversarial autoencoder <span id="id12">[<a class="reference internal" href="#id83">13</a>]</span>, to produce a realistic synthetic neighborhood that allows retrieving more understandable saliency maps.
 Indeed, saliency maps returned by <span style="font-variant:small-caps;">abele</span> highlight the contiguous attention
 areas that can be varied while maintaining the same classification from the black
@@ -1232,6 +1237,9 @@ the classification of the handwritten digits “9” and “0” for the explana
 <a class="reference internal image-reference" href="../_images/saliency.png"><img alt="../_images/saliency.png" src="../_images/saliency.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Example of saliency maps returned by different explanation methods. The first column contains the image analyzed and the label assigned by the black box model <em>b</em> of the AI system. <span id="id19">[<a class="reference internal" href="single_tree.html#id19">1</a>]</span>.</span><a class="headerlink" href="#xai-saliency" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id20"><dl class="citation">
 <dt class="label" id="id32"><span class="brackets">1</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>,<a href="#id14">3</a>)</span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
