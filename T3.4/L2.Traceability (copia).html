@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Provenance Tracking &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
+    <title>Motivation and Background &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -51,8 +53,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Continuous Performance Monitoring" href="L3.Continuous_performance_monitoring.html" />
-    <link rel="prev" title="Traceability" href="L2.Traceability.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -178,16 +178,16 @@
    Fairness, Equity, and Justice by Design
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../T3.4.html">
    Accountability and Reproducibility
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="L2.Accountability.html">
      Accountability
@@ -237,10 +237,27 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="L2.Traceability.html">
      Traceability
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.Provenance_tracking.html">
+       Provenance Tracking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.Continuous_performance_monitoring.html">
+       Continuous Performance Monitoring
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -248,8 +265,8 @@
   <a class="reference internal" href="../T3.5.html">
    Respect for Privacy
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -258,8 +275,8 @@
     <a class="reference internal" href="../T3.5/L1.anonymization.html">
      Data Anonymization and Pseudonymization
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -275,8 +292,8 @@
     <a class="reference internal" href="../T3.5/L1.privacy_model.html">
      Privacy Models
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -285,8 +302,8 @@
       <a class="reference internal" href="../T3.5/L2.differential_privacy.html">
        Differential Privacy
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -335,8 +352,8 @@
     <a class="reference internal" href="../T3.5/L1.privacy_mechanisms.html">
      Privacy Mechanisms
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -345,8 +362,8 @@
       <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
        Perturbation Mechanisms
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-      <label for="toctree-checkbox-12">
+      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+      <label for="toctree-checkbox-13">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -379,8 +396,8 @@
     <a class="reference internal" href="../T3.5/L1.attacks.html">
      Attacks on anonymization schemes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -408,8 +425,8 @@
   <a class="reference internal" href="../T3.6.html">
    Sustainability
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -418,8 +435,8 @@
     <a class="reference internal" href="../T3.6/greenAI.html">
      Green AI
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -467,8 +484,8 @@
   <a class="reference internal" href="../AnalyticaIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1115,7 +1132,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/T3.4/L3.Provenance_tracking.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/T3.4/L2.Traceability (copia).md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -1135,7 +1152,7 @@
                 data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.4/L3.Provenance_tracking.html&body=Your%20issue%20content%20here."><button
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.4/L2.Traceability (copia).html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
@@ -1161,9 +1178,135 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Motivation and Background
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-two-souls-of-traceability">
+     The two souls of traceability
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#provenance-tracking">
+   Provenance Tracking
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuous-performance-monitoring">
+   Continuous Performance Monitoring
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#newpage-introduction">
+   \newpage
+Introduction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-the-pdf-file">
+     Checking the PDF File
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-information-required-by-the-volume-editor">
+     Additional Information Required by the Volume Editor
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copyright-forms">
+     Copyright Forms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paper-preparation">
+   Paper Preparation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#headings">
+     Headings.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lemmas-propositions-and-theorems">
+     Lemmas, Propositions, and Theorems.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figures">
+     Figures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#remark-1">
+       Remark 1.
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulas">
+     Formulas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#footnotes">
+     Footnotes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#program-code">
+     Program Code
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citations">
+     Citations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#page-numbering-and-running-heads">
+     Page Numbering and Running Heads
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lncs-online">
+   LNCS Online
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibtex-entries">
+   BibTeX Entries
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acknowledgments-acknowledgments-unnumbered-unnumbered">
+     Acknowledgments. {#acknowledgments. .unnumbered .unnumbered}
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-references-section-references">
+   The References Section {#references}
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#appendix-springer-author-discount-appendix-springer-author-discount-unnumbered-unnumbered">
+   Appendix: Springer-Author Discount {#appendix-springer-author-discount .unnumbered .unnumbered}
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checklist-of-items-to-be-sent-to-volume-editors">
+   Checklist of Items to be Sent to Volume Editors
   </a>
  </li>
 </ul>
@@ -1177,128 +1320,458 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="provenance-tracking">
-<h1>Provenance Tracking<a class="headerlink" href="#provenance-tracking" title="Permalink to this headline">¶</a></h1>
-<p>“Traceability in AI shares part of its scope with general-purpose recommendations for provenance … ”<span id="id1">[<a class="reference internal" href="#id111">1</a>]</span>. In fact, provenance is “any information that describes the production process of an end product, which can be anything from a piece of data to a physical object”
-<span id="id2">[<a class="reference internal" href="#id112">2</a>]</span>.</p>
-<p>Keeping track of provenance is vital in various settings. It contributes
-to increasing the trust on produced systems. According to Gil et al.
-<span id="id3">[<a class="reference internal" href="#id113">3</a>]</span>, the provenance of scientific results, i.e., “how results were derived, what parameters influenced the
-derivation, what datasets were used as input to the experiment, etc.”
-facilitates the reproducibility of the whole process.</p>
-<p>Data and workflows deployed in an AI system are two key ingredients in
-traceability and provenance tracking. In particular, the distinction
-between <em>prospective</em> and <em>retrospective</em> provenance is introduced in
-the literature when dealing with workflows. The prospective provenance
-models workflows in an abstract and informative way, as templates
-composed of tasks that can be instantiated, modified, and combined. The
-retrospective provenance models past workflows, highlighting what task
-was executed and how data or other artifacts were derived
-<span id="id4">[<a class="reference internal" href="#id114">4</a>]</span>.
-Herschel et al. <span id="id5">[<a class="reference internal" href="#id112">2</a>]</span> claims that “provenance can be seen as metadata that,
-instead of describing data, describes a production process”. Considering the central role metadata play
-in tracking provenance, this section discusses some popular models to
-track provenance. In particular, Garijo et al.  <span id="id6">[<a class="reference internal" href="#id110">5</a>]</span> have
-provided a holistic, Linked Data compliant, and ready-to-use solution to
-document workflow specifications and their executions, which exploits PROV-O
-<span id="id7">[<a class="reference internal" href="#id108">6</a>]</span>, P-PLAN <span id="id8">[<a class="reference internal" href="#id109">7</a>]</span> and the Open Provenance Model for
-Workflows (OPMW)<a class="footnote-reference brackets" href="#id191" id="id9">1</a>.</p>
-<p>PROV is a metadata model defined as a W3C recommendation. It captures
-the provenance documenting the entities, agents, actions, and the
-involved in a production chain, and the relations among them (e.g.,
-attribution and usage). PROV acknowledges the need to represent
-workflows, also called plans, by including a construct such as
-<em>prov:Plan</em>. However, “it does not elaborate any
-further on how plans can be described or related to other provenance elements
-of the execution.” <span id="id10">[<a class="reference internal" href="#id109">7</a>]</span>.</p>
-<p>P-PLAN vocabulary extends PROV-O introducing constructs for plans
-(<em>p-plan:Plan</em> subclass of <em>prov:Plan</em>), their steps (<em>p-plan:Step</em>) and
-their input and output variables (<em>p-plan:Variable</em>). Still, P-PLAN does
-not model a full-fledged notion of workflow.</p>
-<p>OPMW extends P-PLAN and the “Open Provenance Model (OPM), a legacy
-provenance model developed by the workflow community that was used as a
-reference to create PROV” <span id="id11">[<a class="reference internal" href="#id110">5</a>]</span>. OPMW
-distinguishes between workflow specifications, namely <em>templates</em>, and
-their workflow execution traces.</p>
-<p>OPMW specifies workflow <em>templates</em> as instances of the class
-<em>opmw:WorkflowTemplate</em> (subclass of <em>p-plan:Plan</em>); the template
-processes/actions as <em>opmw:WorkflowTemplateProcess</em> (subclass of
-<em>p-plan:Step</em>); the template artifacts, manipulated or produced by
-processes, as <em>opmw:WorkflowTemplateArtifact</em> (subclass of
-<em>p-plan:Variable</em>). Accordingly, the template for the generic n-th step
-is an instance of <em>opmw:WorkflowTemplateProcess</em>. The n-th template
-steps’ input and output are indicated by the properties
-<em>p-plan:hasInputVar</em> and <em>p-plan:isOutputVarOf</em>, and are instances of
-<em>opmw:WorkflowTemplateArtifact</em>, representing any expected file,
-parameter, and collection of documents considered and manipulated by the
-template step. The classes <em>opmw:WorkflowExecutionAccount</em>,
-<em>opmw:WorkflowExecutionProcess</em> and <em>opmw:WorkflowExecutionTemplate</em>
-represent the execution counterparts of the template instances. The
-properties <em>opmw:correspondsToTemplate</em>,
-<em>opmw:correspondsToTemplateProcess</em>,
-<em>opmw:correspondsToTemplateArtifact</em> bind the execution and the template
-counterparts. Thus, n-th step is the actual execution of the n-th
-template step and it is an instance of <em>opmw:WorkflowExecutionProcess</em>,
-which is a specialization of the class <em>prov:Activity</em>. The actual
-execution’s n-th input and output steps are indicated by the PROV
-properties <em>prov:used</em> and <em>prov:wasGeneratedby</em>, and are instances of
-<em>opmw:workflowExecutionArtifact</em> which is a particular kind of
-<em>prov:Entity</em>. Albertoni et al. <span id="id12">[<a class="reference internal" href="#id107">8</a>]</span> provides examples of
-the use of the above metadata models when documenting scientific
-experiments.</p>
-<p>Although not specific to AI experiments and systems, the models
-mentioned above offer some excellent standing and a backbone for
-describing data, actors, other kinds of entities, and how these might
-relate in experiments. Such a standing needs to be refined and extended
-to capture the gist of specific AI experiments. AI-related controlled
-terminologies might be required, for example, to complements the
-backbones with the hyper-parameters, tasks and metrics for AI
-techniques. Adopting a backbone, which is defined according to linked
-data best practices, offers the ability to combine different models and
-terminologies as needed, easing the tailoring of such backbone with the
-required AI-specific and community-governed refinements.</p>
-<hr class="docutils" />
-<p><strong>Author</strong>:</p>
-<ul class="simple">
-<li><p>Riccardo Albertoni - Istituto di Matematica Applicata e Tecnologie Informatiche “Enrico Magenes”, Consiglio Nazionale delle Ricerche (IMATI-CNR), Via De Marini, 6, 16149 Genova, Italy</p></li>
-</ul>
-<div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="id13"><dl class="citation">
-<dt class="label" id="id111"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Marçal Mora-Cantallops, Salvador Sánchez-Alonso, Elena García-Barriocanal, and Miguel-Angel Sicilia. Traceability for trustworthy AI: a review of models and tools. <em>Big Data and Cognitive Computing</em>, 2021. URL: <a class="reference external" href="https://www.mdpi.com/2504-2289/5/2/20">https://www.mdpi.com/2504-2289/5/2/20</a>, <a class="reference external" href="https://doi.org/10.3390/bdcc5020020">doi:10.3390/bdcc5020020</a>.</p>
-</dd>
-<dt class="label" id="id112"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id5">2</a>)</span></dt>
-<dd><p>Melanie Herschel, Ralf Diestelkämper, and Houssem Ben Lahmar. A survey on provenance: What for? What form? What from? <em>VLDB Journal</em>, 26(6):881–906, 2017. <a class="reference external" href="https://doi.org/10.1007/s00778-017-0486-1">doi:10.1007/s00778-017-0486-1</a>.</p>
-</dd>
-<dt class="label" id="id113"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Yolanda Gil, Ewa Deelman, Mark H. Ellisman, Thomas Fahringer, Geoffrey C. Fox, Dennis Gannon, Carole A. Goble, Miron Livny, Luc Moreau, and Jim Myers. Examining the challenges of scientific workflows. <em>IEEE Computer</em>, 40(12):24–32, 2007. URL: <a class="reference external" href="https://doi.org/10.1109/MC.2007.421">https://doi.org/10.1109/MC.2007.421</a>, <a class="reference external" href="https://doi.org/10.1109/MC.2007.421">doi:10.1109/MC.2007.421</a>.</p>
-</dd>
-<dt class="label" id="id114"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>Chunhyeok Lim, Shiyong Lu, Artem Chebotko, and Farshad Fotouhi. Prospective and retrospective provenance collection in scientific workflow environments. In <em>IEEE SCC</em>, 449–456. IEEE Computer Society, 2010. URL: <a class="reference external" href="http://dblp.uni-trier.de/db/conf/IEEEscc/scc2010.html#LimLCF10">http://dblp.uni-trier.de/db/conf/IEEEscc/scc2010.html#LimLCF10</a>.</p>
-</dd>
-<dt class="label" id="id110"><span class="brackets">5</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id11">2</a>)</span></dt>
-<dd><p>Daniel Garijo, Yolanda Gil, and Óscar Corcho. Abstract, link, publish, exploit: an end to end framework for workflow sharing. <em>Future Generation Comp. Syst.</em>, 75:271–283, 2017. <a class="reference external" href="https://doi.org/10.1016/j.future.2017.01.008">doi:10.1016/j.future.2017.01.008</a>.</p>
-</dd>
-<dt class="label" id="id108"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
-<dd><p>Deborah McGuinness, Timothy Lebo, and Satya Sahoo. PROV-o: the PROV ontology. W3C Recommendation, W3C, April 2013. URL: <a class="reference external" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/">http://www.w3.org/TR/2013/REC-prov-o-20130430/</a>.</p>
-</dd>
-<dt class="label" id="id109"><span class="brackets">7</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id10">2</a>)</span></dt>
-<dd><p>Daniel Garijo and Yolanda Gil. Augmenting PROV with Plans in P-PLAN: scientific processes as linked data. In <em>Proceedings of the 2nd International Workshop on Linked Science</em>, volume 951 of CEUR Workshop Proceedings. 2012. URL: <a class="reference external" href="http://oa.upm.es/19478/">http://oa.upm.es/19478/</a>.</p>
-</dd>
-<dt class="label" id="id107"><span class="brackets"><a class="fn-backref" href="#id12">8</a></span></dt>
-<dd><p>Riccardo Albertoni, Monica De Martino, and Alfonso Quarati. Documenting context-based quality assessment of controlled vocabularies. <em>IEEE Trans. Emerg. Top. Comput.</em>, 9(1):144–160, 2021. URL: <a class="reference external" href="https://doi.org/10.1109/TETC.2018.2865094">https://doi.org/10.1109/TETC.2018.2865094</a>, <a class="reference external" href="https://doi.org/10.1109/TETC.2018.2865094">doi:10.1109/TETC.2018.2865094</a>.</p>
-</dd>
-</dl>
+  <div class="abstract topic">
+<p class="topic-title">Abstract</p>
+<p>The abstract should summarize the contents of the paper and should
+contain at least 70 and at most 150 words. It should be written using
+the <em>abstract</em> environment.
+
+\addvspace
+\baselineskip
+We would like to encourage you to list your keywords within the abstract
+section
 </p>
-<hr class="docutils" />
+</div>
+<p>\titlerunning{Reproducibility}
+\authorrunning{S. Colantonio}
+\institute{<span class="math notranslate nohighlight">\(^1\)</span>Institute of Information Science and Technologies “A. Faedo” of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy}
+\toctitle{Lecture Notes in Computer Science}
+\tocauthor{Authors’ Instructions}
+\maketitle
+\bigskip
+<strong>Definition</strong></p>
+<p>([&#64;ALTAI_2020])<br />
+<br />
+<strong>Abstract</strong></p>
+<p>This entry introduces the motivations behind traceability and
+illustrates its core requirements, which encompass documenting the
+entire development cycle of an AI model and tracking its live
+functioning after the deployment in production.</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="motivation-and-background">
+<h1>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h1>
+<p>Developing an Artificial Intelligence (AI) model or an AI-powered system
+entails a considerable number of choices along the entire development
+process, which may result in diverse behaviours and functioning of the
+same model or system. This phenomenon is particularly relevant when
+learning-based approaches comes into play, due to the dependency of
+Machine Learning (ML) models on the data used for their training as well
+as the complexity and variety of the ML methods that might be used,
+especially when based on Deep Learning (DL). Furthermore, the
+development of such models relies often on large trial-&amp;-error
+experimental processes, which are not commonly well documented (see the
+reproducibility entry).</p>
+<p>This condition makes it evident the need for a comprehensive and clear
+documentation of the actions taken as well as the various processing
+steps performed when developing an AI or ML model, as, without this
+documentation, it might be difficult to reconstruct the reasons behind
+the outcomes and the functioning of an AI model. In consideration of
+this, the High-Level Expert Group on AI (AI HLEG) has included the
+traceability of an AI model as one of the main mean to enable the
+transparency principle for Trustworthy AI ([&#64;HLEG_Trust]). Overall,
+traceability aims to ensure the avoidance of any “grey” area about the
+AI model or system, thus guaranteeing the transparency of and the trust
+in the development, production functioning and usage of an AI system.
+The record-keeping activity entailed by traceability should regard the
+data used, the data pre-processing steps as well as the development
+settings, the development workflows and the actors involved
+([&#64;bucker_2022]). This encompasses the detailed provision of information
+about the provenance and the usage of any data and artefacts involved in
+the development of the AI model or system. In this view, traceability
+incorporates the measures to ensure reproducibility and it can be
+understood as the technological mean for guaranteeing the auditability
+and accountability of AI models and systems [&#64;Future_AI_2021].\</p>
+<div class="section" id="the-two-souls-of-traceability">
+<h2>The two souls of traceability<a class="headerlink" href="#the-two-souls-of-traceability" title="Permalink to this headline">¶</a></h2>
+<p>AI models based on learning are data-inductive and dynamic systems,
+whose development relies on an initial set of data. This set, although
+large, might not necessarily span the whole variability range of
+real-world cases or conditions. This implies that, when used in
+practice, the AI model or system can encounter slightly different or
+novel data that differ from those it has been exposed to during
+training. This phenomenon calls for the monitoring of AI models after
+their deployment in production, in order to log their usage as well as
+to that tracks over time their performance, vitality and conduct. Such
+an AI maintenance system is an important part of traceability, which can
+be then seen as one principle, two souls:</p>
+<ul class="simple">
+<li><p>provenance tracking of data, processes and artefacts involved in the
+development of the AI model</p></li>
+<li><p>continuous performance monitoring of the AI model after deployment
+in production.</p></li>
+</ul>
+<p>These two aspects will be further explained in the following entries.<br />
+<br />
+\</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="provenance-tracking">
+<h1>Provenance Tracking<a class="headerlink" href="#provenance-tracking" title="Permalink to this headline">¶</a></h1>
+<p>\</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="continuous-performance-monitoring">
+<h1>Continuous Performance Monitoring<a class="headerlink" href="#continuous-performance-monitoring" title="Permalink to this headline">¶</a></h1>
+<p>Monitoring the live functioning of a produtionalised ML/AI model or
+system is an emergent topic that is gaining increasing attention as more
+and more methods are being deployed in industrial, commercial and public
+sectors. As any other piece of software, any tool based on AI/ML needs
+to be maintained over time, for fixing bugs and ensuring quality. ML
+models and systems require specific strategies that take into account
+their nature of learning from data.</p>
+<p>Idealistically, the behaviour of ML models trained on sample
+well-curated data is expected to generalise on new, unseen data in the
+post-deployment phase. Nonetheless, this happens rarely in practice, and
+a model’s performance assessed live is often different from the
+performance evaluated offline during development. Furthermore, it is
+well-known that the performance of an AI model or system degrades over
+time.</p>
+<p>Several phenomena have been identified as drivers of this decay. The
+input data fed into the ML model may contain unexpected patterns not
+present in the training datasets. Moreover, the characteristics of data
+may change over time, causing that the relationships at the core of the
+ML methods do not stand valid any more.</p>
+<p>This phenomenon, termed <em>concept</em> or <em>model drift</em> ([&#64;Tsymbal_2004]),
+can lead the model to make wrong predictions. Additionally, if the
+nature (or distribution) of the input data become vastly different with
+respect to those used for training, the performance can even drop below
+acceptance. This phenomenon is known as <em>covariate shift</em>
+([&#64;sugi_2012]). Performance degradation can also result from the impact
+that the same deployed ML model may have on the decision process that it
+supports. The ML model may influence other elements involved in the
+decision or induce an overall change in the phenomenon that is being
+modelled, which was not taken into account during training.</p>
+<p>Overall, after its deployment, an ML method can come across several
+difficulties and changes that the level of efforts and skills needed in
+its maintenance could be an order of magnitude higher than that needed
+in model building.</p>
+<p>Given these concerns, several strategies and best practices have been
+investigated to monitor the behaviour of ML methods after deployment,
+also in relation to any consequence the methods can have. The first work
+published in 2015 described the various challenges that ML methods raise
+after deployment in relation to data dependencies, model complexity,
+reproducibility, testing, and changes in the external world
+([&#64;Sculley_2015]). After that, several methods have been presented in
+the literature, focusing specifically on data ([&#64;Polyzotis_2017]), on
+the role of humans in ML deployment ([&#64;Flaounas_2017]), on testing
+strategies ([&#64;Beck_2016]), or the definition of a general framework to
+track ML methods in their live functioning (e.g., pipelines, datasets,
+execution configurations, code and human actions) ([&#64;Sridhar_2018]).</p>
+<p>Overall, the best practices, promoted also from industrial actors
+([&#64;Accenture_2017; &#64;SaS_2019]), include a continuous monitoring of the
+ML system to assess its quality and “vitality”. Various types of metrics
+are suggested in this respect, focusing mainly on performance
+evaluation. The idea is to detect changes in the behaviour and then act
+via re-training or implementing an active learning approach (when
+reinforcement learning is adopted), so as to rectify any wrong conduct.
+It should be noted that model maintenance can be seen as nurturing the
+model, as it can take advantage of the new knowledge coming from the
+real-setting scenario, thus it can produce an improvement of the
+original version released.</p>
+<p>Monitoring and maintenance can be performed in a <em>proactive</em> or
+<em>reactive</em> fashion. Proactive monitoring works to identify the input
+samples that deviate significantly from the patterns seen in the
+training phase and to analyse them more in detail to understand any
+drift. The reactive approach entails detecting a wrong output and
+identifying its causes, so as to understand how the method can be
+rectified.</p>
+<p>The Continuous Delivery ([&#64;Wolff_2017]) and DevOps ([&#64;Loukides_2012])
+approaches have been also proposed to better manage the risks of
+releasing changes to Machine Learning applications and, then, do them in
+a safe and reliable way.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="newpage-introduction">
+<h1>\newpage
+Introduction<a class="headerlink" href="#newpage-introduction" title="Permalink to this headline">¶</a></h1>
+<p>You are strongly encouraged to use for the preparation of your
+camera-ready manuscript together with the corresponding Springer class
+file <code class="docutils literal notranslate"><span class="pre">llncs.cls</span></code>. Only if you use can hyperlinks be generated in the
+online version of your manuscript.</p>
+<p>The LaTeX source of this instruction file for LaTeX users may be used as
+a template. This is located in the “authors” subdirectory in
+<a class="reference external" href="ftp://ftp.springer.de/pub/tex/latex/llncs/latex2e/instruct/">ftp://ftp.springer.de/pub/tex/latex/llncs/latex2e/instruct/</a> and
+entitled <code class="docutils literal notranslate"><span class="pre">typeinst.tex</span></code>. There is a separate package for Word users.
+Kindly send the final and checked source and PDF files of your paper to
+the Contact Volume Editor. This is usually one of the organizers of the
+conference. You should make sure that the LaTeX and the PDF files are
+identical and correct and that only one version of your paper is sent.
+It is not possible to update files at a later stage. Please note that we
+do not need the printed paper.</p>
+<p>We would like to draw your attention to the fact that it is not possible
+to modify a paper in any way, once it has been published. This applies
+to both the printed book and the online version of the publication.
+Every detail, including the order of the names of the authors, should be
+checked before the paper is sent to the Volume Editors.</p>
+<div class="section" id="checking-the-pdf-file">
+<h2>Checking the PDF File<a class="headerlink" href="#checking-the-pdf-file" title="Permalink to this headline">¶</a></h2>
+<p>Kindly assure that the Contact Volume Editor is given the name and email
+address of the contact author for your paper. The Contact Volume Editor
+uses these details to compile a list for our production department at
+SPS in India. Once the files have been worked upon, SPS sends a copy of
+the final pdf of each paper to its contact author. The contact author is
+asked to check through the final pdf to make sure that no errors have
+crept in during the transfer or preparation of the files. This should
+not be seen as an opportunity to update or copyedit the papers, which is
+not possible due to time constraints. Only errors introduced during the
+preparation of the files will be corrected.</p>
+<p>This round of checking takes place about two weeks after the files have
+been sent to the Editorial by the Contact Volume Editor, i.e., roughly
+seven weeks before the start of the conference for conference
+proceedings, or seven weeks before the volume leaves the printer’s, for
+post-proceedings. If SPS does not receive a reply from a particular
+contact author, within the timeframe given, then it is presumed that the
+author has found no errors in the paper. The tight publication schedule
+of LNCS does not allow SPS to send reminders or search for alternative
+email addresses on the Internet.</p>
+<p>In some cases, it is the Contact Volume Editor that checks all the final
+pdfs. In such cases, the authors are not involved in the checking phase.</p>
+</div>
+<div class="section" id="additional-information-required-by-the-volume-editor">
+<h2>Additional Information Required by the Volume Editor<a class="headerlink" href="#additional-information-required-by-the-volume-editor" title="Permalink to this headline">¶</a></h2>
+<p>If you have more than one surname, please make sure that the Volume
+Editor knows how you are to be listed in the author index.</p>
+</div>
+<div class="section" id="copyright-forms">
+<h2>Copyright Forms<a class="headerlink" href="#copyright-forms" title="Permalink to this headline">¶</a></h2>
+<p>The copyright form may be downloaded from the “For Authors”
+(Information for LNCS Authors) section of the LNCS Website:
+<code class="docutils literal notranslate"><span class="pre">www.springer.com/lncs</span></code>. Please send your signed copyright form to the
+Contact Volume Editor, either as a scanned pdf or by fax or by courier.
+One author may sign on behalf of all of the other authors of a
+particular paper. Digital signatures are acceptable.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="paper-preparation">
+<h1>Paper Preparation<a class="headerlink" href="#paper-preparation" title="Permalink to this headline">¶</a></h1>
+<p>Springer provides you with a complete integrated LaTeX document class
+(<code class="docutils literal notranslate"><span class="pre">llncs.cls</span></code>) for multi-author books such as those in the LNCS series.
+Papers not complying with the LNCS style will be reformatted. This can
+lead to an increase in the overall number of pages. We would therefore
+urge you not to squash your paper.</p>
+<p>Please always cancel any superfluous definitions that are not actually
+used in your text. If you do not, these may conflict with the
+definitions of the macro package, causing changes in the structure of
+the text and leading to numerous mistakes in the proofs.</p>
+<p>If you wonder what LaTeX is and where it can be obtained, see the
+“<em>LaTeX project site</em>” (<a class="reference external" href="http://www.latex-project.org">http://www.latex-project.org</a>) and especially
+the webpage “<em>How to get it</em>” (<a class="reference external" href="http://www.latex-project.org/ftp.html">http://www.latex-project.org/ftp.html</a>)
+respectively.</p>
+<p>When you use LaTeX together with our document class file, <code class="docutils literal notranslate"><span class="pre">llncs.cls</span></code>,
+your text is typeset automatically in Computer Modern Roman (CM) fonts.
+Please do <em>not</em> change the preset fonts. If you have to use fonts other
+than the preset fonts, kindly submit these with your files.</p>
+<p>Please use the commands <code class="docutils literal notranslate"><span class="pre">\label</span></code> and <code class="docutils literal notranslate"><span class="pre">\ref</span></code> for cross-references and the
+commands <code class="docutils literal notranslate"><span class="pre">\bibitem</span></code> and <code class="docutils literal notranslate"><span class="pre">\cite</span></code> for references to the bibliography, to
+enable us to create hyperlinks at these places.</p>
+<p>For preparing your figures electronically and integrating them into your
+source file we recommend using the standard LaTeX <code class="docutils literal notranslate"><span class="pre">graphics</span></code> or
+<code class="docutils literal notranslate"><span class="pre">graphicx</span></code> package. These provide the <code class="docutils literal notranslate"><span class="pre">\includegraphics</span></code> command. In
+general, please refrain from using the <code class="docutils literal notranslate"><span class="pre">\special</span></code> command.</p>
+<p>Remember to submit any further style files and fonts you have used
+together with your source files.</p>
+<div class="section" id="headings">
+<h2>Headings.<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h2>
+<p>Headings should be capitalized (i.e., nouns, verbs, and all other words
+except articles, prepositions, and conjunctions should be set with an
+initial capital) and should, with the exception of the title, be aligned
+to the left. Words joined by a hyphen are subject to a special rule. If
+the first word can stand alone, the second word should be capitalized.</p>
+<p>Here are some examples of headings: “Criteria to Disprove
+Context-Freeness of Collage Language”, “On Correcting the Intrusion of
+Tracing Non-deterministic Programs by Software”, “A User-Friendly and
+Extendable Data Distribution System”, “Multi-flip Networks:
+Parallelizing GenSAT”, “Self-determinations of Man”.</p>
+</div>
+<div class="section" id="lemmas-propositions-and-theorems">
+<h2>Lemmas, Propositions, and Theorems.<a class="headerlink" href="#lemmas-propositions-and-theorems" title="Permalink to this headline">¶</a></h2>
+<p>The numbers accorded to lemmas, propositions, and theorems, etc. should
+appear in consecutive order, starting with Lemma 1, and not, for
+example, with Lemma 11.</p>
+</div>
+<div class="section" id="figures">
+<h2>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h2>
+<p>For LaTeX users, we recommend using the <em>graphics</em> or <em>graphicx</em> package
+and the <code class="docutils literal notranslate"><span class="pre">\includegraphics</span></code> command.</p>
+<p>Please check that the lines in line drawings are not interrupted and are
+of a constant width. Grids and details within the figures must be
+clearly legible and may not be written one on top of the other. Line
+drawings should have a resolution of at least 800 dpi (preferably 1200
+dpi). The lettering in figures should have a height of 2 mm (10-point
+type). Figures should be numbered and should have a caption which should
+always be positioned <em>under</em> the figures, in contrast to the caption
+belonging to a table, which should always appear <em>above</em> the table; this
+is simply achieved as matter of sequence in your source.</p>
+<p>Please center the figures or your tabular material by using the
+<code class="docutils literal notranslate"><span class="pre">\centering</span></code> declaration. Short captions are centered by default between
+the margins and typeset in 9-point type
+(Fig. <a class="reference external" href="#fig:example">[fig:example]</a>{reference-type=”ref”
+reference=”fig:example”} shows an example). The distance between text
+and figure is preset to be about 8 mm, the distance between figure and
+caption about 6 mm.</p>
+<p>To ensure that the reproduction of your illustrations is of a reasonable
+quality, we advise against the use of shading. The contrast should be as
+pronounced as possible.</p>
+<p>If screenshots are necessary, please make sure that you are happy with
+the print quality before you send the files.</p>
+<p>\centering
+<img alt="One kernel at  (dotted kernel) or two kernels at  and (left and right) lead to the same summed estimate at . Thisshows a figure consisting of different types of lines. Elements of thefigure described in the caption should be set in italics, inparentheses, as shown in this samplecaption.[]{label=&quot;fig:example&quot;}" src="T3.4/eijkel2" />{#fig:example height=”6.2cm”}</p>
+<p>Please define figures (and tables) as floating objects. Please avoid
+using optional location parameters like “<code class="docutils literal notranslate"><span class="pre">[h]</span></code>” for “here”.</p>
+<div class="section" id="remark-1">
+<h3>Remark 1.<a class="headerlink" href="#remark-1" title="Permalink to this headline">¶</a></h3>
+<p>In the printed volumes, illustrations are generally black and white
+(halftones), and only in exceptional cases, and if the author is
+prepared to cover the extra cost for color reproduction, are colored
+pictures accepted. Colored pictures are welcome in the electronic
+version free of charge. If you send colored figures that are to be
+printed in black and white, please make sure that they really are
+legible in black and white. Some colors as well as the contrast of
+converted colors show up very poorly when printed in black and white.</p>
+</div>
+</div>
+<div class="section" id="formulas">
+<h2>Formulas<a class="headerlink" href="#formulas" title="Permalink to this headline">¶</a></h2>
+<p>Displayed equations or formulas are centered and set on a separate line
+(with an extra line or halfline space above and below). Displayed
+expressions should be numbered for reference. The numbers should be
+consecutive within each section or within the contribution, with numbers
+enclosed in parentheses and set on the right margin – which is the
+default if you use the <em>equation</em> environment, e.g.,
+$<span class="math notranslate nohighlight">\(\psi (u) = \int_{o}^{T} \left[\frac{1}{2}
+  \left(\Lambda_{o}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \;  .\)</span>$</p>
+<p>Equations should be punctuated in the same way as ordinary text but with
+a small space before the end punctuation mark.</p>
+</div>
+<div class="section" id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<p>The superscript numeral used to refer to a footnote appears in the text
+either directly after the word to be discussed or – in relation to a
+phrase or a sentence – following the punctuation sign (comma,
+semicolon, or period). Footnotes should appear at the bottom of the
+normal text area, with a line of about 2 cm set immediately above
+them.<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+</div>
+<div class="section" id="program-code">
+<h2>Program Code<a class="headerlink" href="#program-code" title="Permalink to this headline">¶</a></h2>
+<p>Program listings or program commands in the text are normally set in
+typewriter font, e.g., CMTT10 or Courier.</p>
+<p>\medskip
+program Inflation (Output)
+{Assuming annual inflation rates of 7%, 8%, and 10%,…
+years};
+const
+MaxYears = 10;
+var
+Year: 0..MaxYears;
+Factor1, Factor2, Factor3: Real;
+begin
+Year := 0;
+Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
+WriteLn(‘Year  7% 8% 10%’); WriteLn;
+repeat
+Year := Year + 1;
+Factor1 := Factor1 * 1.07;
+Factor2 := Factor2 * 1.08;
+Factor3 := Factor3 * 1.10;
+WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
+until Year = MaxYears
+end.</p>
+</div>
+<div class="section" id="citations">
+<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="page-numbering-and-running-heads">
+<h2>Page Numbering and Running Heads<a class="headerlink" href="#page-numbering-and-running-heads" title="Permalink to this headline">¶</a></h2>
+<p>There is no need to include page numbers. If your paper title is too
+long to serve as a running head, it will be shortened. Your suggestion
+as to how to shorten it would be most welcome.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="lncs-online">
+<h1>LNCS Online<a class="headerlink" href="#lncs-online" title="Permalink to this headline">¶</a></h1>
+<p>The online version of the volume will be available in LNCS Online.
+Members of institutes subscribing to the Lecture Notes in Computer
+Science series have access to all the pdfs of all the online
+publications. Non-subscribers can only read as far as the abstracts. If
+they try to go beyond this point, they are automatically asked, whether
+they would like to order the pdf, and are given instructions as to how
+to do so.</p>
+<p>Please note that, if your email address is given in your paper, it will
+also be included in the meta data of the online version.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="bibtex-entries">
+<h1>BibTeX Entries<a class="headerlink" href="#bibtex-entries" title="Permalink to this headline">¶</a></h1>
+<p>The correct BibTeX entries for the Lecture Notes in Computer Science
+volumes can be found at the following Website shortly after the
+publication of the book:
+<a class="reference external" href="http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html">http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html</a></p>
+<div class="section" id="acknowledgments-acknowledgments-unnumbered-unnumbered">
+<h2>Acknowledgments. {#acknowledgments. .unnumbered .unnumbered}<a class="headerlink" href="#acknowledgments-acknowledgments-unnumbered-unnumbered" title="Permalink to this headline">¶</a></h2>
+<p>The heading should be treated as a subsubsection heading and should not
+be assigned a number.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="the-references-section-references">
+<h1>The References Section {#references}<a class="headerlink" href="#the-references-section-references" title="Permalink to this headline">¶</a></h1>
+<p>In order to permit cross referencing within LNCS-Online, and eventually
+between different publishers and their online databases, LNCS will, from
+now on, be standardizing the format of the references. This new feature
+will increase the visibility of publications and facilitate academic
+research considerably. Please base your references on the examples
+below. References that don’t adhere to this style will be reformatted by
+Springer. You should therefore check your references thoroughly when you
+receive the final pdf of your paper. The reference section must be
+complete. You may not omit references. Instructions as to where to find
+a fuller version of the references are not permissible.</p>
+<p>We only accept references written using the latin alphabet. If the title
+of the book you are referring to is in Russian or Chinese, then please
+write (in Russian) or (in Chinese) at the end of the transcript or
+translation of the title.</p>
+<p>4</p>
+<p>Smith, T.F., Waterman, M.S.: Identification of Common Molecular
+Subsequences. J. Mol. Biol. 147, 195–197 (1981)</p>
+<p>May, P., Ehrlich, H.C., Steinke, T.: ZIB Structure Prediction Pipeline:
+Composing a Complex Biological Workflow through Web Services. In: Nagel,
+W.E., Walter, W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128,
+pp. 1148–1158. Springer, Heidelberg (2006)</p>
+<p>Foster, I., Kesselman, C.: The Grid: Blueprint for a New Computing
+Infrastructure. Morgan Kaufmann, San Francisco (1999)</p>
+<p>Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C.: Grid
+Information Services for Distributed Resource Sharing. In: 10th IEEE
+International Symposium on High Performance Distributed Computing, pp.
+181–184. IEEE Press, New York (2001)</p>
+<p>Foster, I., Kesselman, C., Nick, J., Tuecke, S.: The Physiology of the
+Grid: an Open Grid Services Architecture for Distributed Systems
+Integration. Technical report, Global Grid Forum (2002)</p>
+<p>National Center for Biotechnology Information,
+<a class="reference external" href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</a></p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="appendix-springer-author-discount-appendix-springer-author-discount-unnumbered-unnumbered">
+<h1>Appendix: Springer-Author Discount {#appendix-springer-author-discount .unnumbered .unnumbered}<a class="headerlink" href="#appendix-springer-author-discount-appendix-springer-author-discount-unnumbered-unnumbered" title="Permalink to this headline">¶</a></h1>
+<p>LNCS authors are entitled to a 33.3% discount off all Springer
+publications. Before placing an order, the author should send an email,
+giving full details of his or her Springer publication, to
+<span class="xref myst">orders-HD-individuals&#64;springer.com</span>
+to obtain a so-called token. This token is a number, which must be
+entered when placing an order via the Internet, in order to obtain the
+discount.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="checklist-of-items-to-be-sent-to-volume-editors">
+<h1>Checklist of Items to be Sent to Volume Editors<a class="headerlink" href="#checklist-of-items-to-be-sent-to-volume-editors" title="Permalink to this headline">¶</a></h1>
+<p>Here is a checklist of everything the volume editor requires from you:</p>
+<ul class="simple">
+<li><p>The final LaTeX source files</p></li>
+<li><p>A final PDF file</p></li>
+<li><p>A copyright form, signed by one author on behalf of all of the
+authors of the paper.</p></li>
+<li><p>A readme giving the name and email address of the corresponding
+author.</p></li>
+</ul>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="id191"><span class="brackets"><a class="fn-backref" href="#id9">1</a></span></dt>
-<dd><p><a class="reference external" href="http://www.opmw.org/model/OPMW/">http://www.opmw.org/model/OPMW/</a></p>
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The footnote numeral is set flush left and the text follows with
+the usual word spacing.</p>
 </dd>
 </dl>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1325,21 +1798,7 @@ required AI-specific and community-governed refinements.</p>
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="L2.Traceability.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Traceability</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="L3.Continuous_performance_monitoring.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Continuous Performance Monitoring</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>

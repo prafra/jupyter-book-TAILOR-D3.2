@@ -1179,6 +1179,26 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-two-souls-of-traceability">
+   The two souls of traceability
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliography">
    Bibliography
   </a>
@@ -1196,18 +1216,94 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="traceability">
 <h1>Traceability<a class="headerlink" href="#traceability" title="Permalink to this headline">¶</a></h1>
-<p><strong>Definition</strong></p>
-<p><em>Traceability: Ability to track the journey of a data input through all
-stages of sampling, labelling, processing and decision making</em>
-<span id="id1">[<a class="reference internal" href="#id125">1</a>]</span>.</p>
+<div class="section" id="in-brief">
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<p>Traceability can be defined as the need to maintain a complete and clear
+documentation of the data, processes, artefacts and actors involved in the entire
+lifecycle of an AI model, starting from its design and ending with its production
+serving. <span id="id1">[<a class="reference internal" href="#id138">1</a>]</span></p>
+</div>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>This entry introduces the motivations behind traceability and
+illustrates its core requirements, which encompass documenting the
+entire development cycle of an AI model and tracking its live
+functioning after the deployment in production.</p>
+</div>
+<div class="section" id="motivation-and-background">
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
+<p>Developing an Artificial Intelligence (AI) model or an AI-powered system
+entails a considerable number of choices along the entire development
+process, which may result in diverse behaviours and functioning of the
+same model or system. This phenomenon is particularly relevant when
+learning-based approaches comes into play, due to the dependency of
+Machine Learning (ML) models on the data used for their training as well
+as the complexity and variety of the ML methods that might be used,
+especially when based on Deep Learning (DL). Furthermore, the
+development of such models relies often on large trial-&amp;-error
+experimental processes, which are not commonly well documented (see the
+reproducibility entry).</p>
+<p>This condition makes it evident the need for a comprehensive and clear
+documentation of the actions taken as well as the various processing
+steps performed when developing an AI or ML model, as, without this
+documentation, it might be difficult to reconstruct the reasons behind
+the outcomes and the functioning of an AI model. In consideration of
+this, the High-Level Expert Group on AI (AI HLEG) has included the
+traceability of an AI model as one of the main mean to enable the
+transparency principle for Trustworthy AI <span id="id2">[<a class="reference internal" href="#id140">2</a>]</span>. Overall,
+traceability aims to ensure the avoidance of any “grey” area about the
+AI model or system, thus guaranteeing the transparency of and the trust
+in the development, production functioning and usage of an AI system.
+The record-keeping activity entailed by traceability should regard the
+data used, the data pre-processing steps as well as the development
+settings, the development workflows and the actors involved
+<span id="id3">[<a class="reference internal" href="#id139">3</a>]</span>. This encompasses the detailed provision of information
+about the provenance and the usage of any data and artefacts involved in
+the development of the AI model or system. In this view, traceability
+incorporates the measures to ensure reproducibility and it can be
+understood as the technological mean for guaranteeing the auditability
+and accountability of AI models and systems <span id="id4">[<a class="reference internal" href="#id152">4</a>]</span>.</p>
+</div>
+<div class="section" id="the-two-souls-of-traceability">
+<h2>The two souls of traceability<a class="headerlink" href="#the-two-souls-of-traceability" title="Permalink to this headline">¶</a></h2>
+<p>AI models based on learning are data-inductive and dynamic systems,
+whose development relies on an initial set of data. This set, although
+large, might not necessarily span the whole variability range of
+real-world cases or conditions. This implies that, when used in
+practice, the AI model or system can encounter slightly different or
+novel data that differ from those it has been exposed to during
+training. This phenomenon calls for the monitoring of AI models after
+their deployment in production, in order to log their usage as well as
+to that tracks over time their performance, vitality and conduct. Such
+an AI maintenance system is an important part of traceability, which can
+be then seen as one principle, two souls:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="L3.Provenance_tracking.html"><span class="doc std std-doc">provenance tracking of data, processes and artefacts involved in the
+development of the AI model</span></a>,</p></li>
+<li><p><a class="reference internal" href="L3.Continuous_performance_monitoring.html"><span class="doc std std-doc">continuous performance monitoring of the AI model after deployment
+in production</span></a>.</p></li>
+</ul>
+<p>These two aspects will be further explained in the following entries.</p>
+</div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id125"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>European Commission. Directorate General for Communications Networks, Content and Technology. <em>The Assessment List for Trustworthy Artificial Intelligence (ALTAI) for self assessment.</em> Publications Office, LU, 2020. URL: <a class="reference external" href="https://data.europa.eu/doi/10.2759/002360">https://data.europa.eu/doi/10.2759/002360</a>.</p>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id138"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>European Commission, Content Directorate-General for Communications Networks, and Technology. <em>The Assessment List for Trustworthy Artificial Intelligence (ALTAI) for self assessment</em>. Publications Office, 2020. <a class="reference external" href="https://doi.org/doi/10.2759/002360">doi:doi/10.2759/002360</a>.</p>
+</dd>
+<dt class="label" id="id140"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>European Commission, Content Directorate-General for Communications Networks, and Technology. <em>Ethics guidelines for trustworthy AI</em>. Publications Office, 2019. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a>.</p>
+</dd>
+<dt class="label" id="id139"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Michael Bücker, Gero Szepannek, Alicja Gosiewska, and Przemyslaw Biecek. Transparency, auditability, and explainability of machine learning models in credit scoring. <em>Journal of the Operational Research Society</em>, 73(1):70–90, 2022. <a class="reference external" href="https://doi.org/10.1080/01605682.2021.1922098">doi:10.1080/01605682.2021.1922098</a>.</p>
+</dd>
+<dt class="label" id="id152"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Karim Lekadir, Richard Osuala, Catherine Gallin, Noussair Lazrak, Kaisar Kushibar, Gianna Tsakou, Susanna Aussó, Leonor Cerdá Alberich, Kostas Marias, Manolis Tsiknakis, Sara Colantonio, Nickolas Papanikolaou, Zohaib Salahuddin, Henry C Woodruff, Philippe Lambin, and Luis Martí-Bonmatí. Future-ai: guiding principles and consensus recommendations for trustworthy artificial intelligence in medical imaging. 2021. URL: <a class="reference external" href="https://arxiv.org/abs/2109.09658">https://arxiv.org/abs/2109.09658</a>, <a class="reference external" href="https://doi.org/10.48550/ARXIV.2109.09658">doi:10.48550/ARXIV.2109.09658</a>.</p>
 </dd>
 </dl>
 </p>
+<hr class="docutils" />
+<p>This entry was written by Sara Colantonio.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -1260,7 +1356,7 @@ stages of sampling, labelling, processing and decision making</em>
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+          Di TAILOR WP3 members; see  <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>
