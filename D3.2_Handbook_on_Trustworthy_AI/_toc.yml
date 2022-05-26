@@ -24,7 +24,7 @@ chapters:
   title: Safety and Roboustness
 - file: T3.3
   title: Fairness, Equity, and Justice by Design
-- file: T3.4
+- file: T3.4/L1.Accountability_and_Reproducibility
   sections:
   - file: T3.4/L2.Accountability
     sections:
