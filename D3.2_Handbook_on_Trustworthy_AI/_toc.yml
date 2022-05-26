@@ -28,6 +28,7 @@ chapters:
   sections:
   - file: T3.4/L2.Accountability
     sections:
+    - file: T3.4/L3.Wicked_problems
     - file: T3.4/L3.Meaningful_human_control
     - file: T3.4/L3.The_frame_problem
     - file: T3.4/L3.Accountability_gaps
