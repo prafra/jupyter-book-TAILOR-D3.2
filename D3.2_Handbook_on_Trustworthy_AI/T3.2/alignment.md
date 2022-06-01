@@ -1,4 +1,4 @@
-# Aligment
+# Alignment
 
 *Synonyms*: (Mis)directed, (Un)intended behaviour
 

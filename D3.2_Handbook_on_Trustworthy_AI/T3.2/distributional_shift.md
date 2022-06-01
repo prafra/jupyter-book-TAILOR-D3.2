@@ -95,17 +95,11 @@ behaviour may be influenced by the strength of the economy, this being
 not explicitly specified in the data. In this case, the concept of
 interest (consumer behaviour) depends on some hidden context, not known
 a priori, and not given explicitly in the form of predictive features,
-making the learning task more complicated {cite}`tsymbal2004problem`. In this
-sense, concept shift can be categorised into 3 types: (1) sudden, abrupt
-or instantaneous concept shift (e.g., following the previous example,
-the COVID-19 lockdowns significantly changed customer behaviour); (2)
-gradual concept shift (e.g., customers are influenced by wider economic
-issues, unemployment rates or other trends) which can be divided further
-into moderate and slow drifts, depending on the rate of the changes
-{cite}`stanley2003learning`; and (3) cyclic concept drifts, where hidden
-contexts may be expected to recur due to cyclic phenomena, such as
-seasons of the year or may be associated with irregular phenomena, such
-as inflation rates or market mood {cite}`harries1998extracting`.
+making the learning task more complicated {cite}`tsymbal2004problem`. 
+In this sense, concept shift can be categorised into 3 types: 
+1) *sudden, abrupt or instantaneous concept shift* (e.g., following the previous example, the COVID-19 lockdowns significantly changed customer behaviour); 
+2) *gradual concept shift* (e.g., customers are influenced by wider economic issues, unemployment rates or other trends) which can be divided further into moderate and slow drifts, depending on the rate of the changes {cite}`stanley2003learning`; 
+3) *cyclic concept drifts*, where hidden contexts may be expected to recur due to cyclic phenomena, such as seasons of the year or may be associated with irregular phenomena, such as inflation rates or market mood {cite}`harries1998extracting`.
 
 Concept drift may be present on supervised learning problems where
 predictions are made and data is collected over time. These are
