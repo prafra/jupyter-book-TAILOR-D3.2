@@ -73,7 +73,7 @@ structures  ![alt text](InlineSprites/greylife.png "Title") in the designated bl
 Ideally the agent should not disturb the green life cells ![](InlineSprites/greenlife.png).
 ```
 
-Fig.  {numref}`{number} <safelife> gives the visual representation of a state
+Fig.  {numref}`{number} <safelife>` gives the visual representation of a state
 of a SafeLife instance. There we can see that achieving the goals can be
 done carefully so that the green life cells are not disturbed. The real
 challenge is when the system is not informed explicitly (as part of the
