@@ -34,6 +34,15 @@ chapters:
   - file: T3.2/data_poisoning
 - file: T3.3
   title: Fairness, Equity, and Justice by Design
+  sections:
+  - file: T3.3/auditing
+  - file: T3.3/bias
+  - file: T3.3/equity
+  - file: T3.3/fairness
+  - file: T3.3/fair_ML
+  - file: T3.3/discrimination
+  - file: T3.3/justice
+  - file: T3.3/segregation
 - file: T3.4/L1.Accountability_and_Reproducibility
   sections:
   - file: T3.4/L2.Accountability
