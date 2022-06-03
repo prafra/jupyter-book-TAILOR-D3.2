@@ -180,7 +180,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../T3.2/alignment.html">
-     Aligment
+     Alignment
     </a>
    </li>
    <li class="toctree-l2">
@@ -257,17 +257,12 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../T3.4/L3.Meaningful_human_control.html">
-       Meaningful Human Control
+       Meaningful human control
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../T3.4/L3.The_frame_problem.html">
        The Frame problem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.4/L3.Accountability_gaps.html">
-       Accountability Gaps
       </a>
      </li>
     </ul>
@@ -1283,7 +1278,7 @@
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
 <p>One of the most common models for anonymization is <em>k</em>-anonymity, where a subject is considered anonymous if an adversary cannot achieve identification of her within a set of other <em>k-1</em> subjects. This set of <em>k</em> individuals is called the <em>anonymity set</em>. Identification, in this context, means the ability to distinguish the subject from other individuals with whom his/her data are grouped. This definition of anonymity is implicitly quantifiable as it depends from the size of the anonymity set. Clearly, a bigger anonymity set implies a better guarantee regarding indistinguishability. For example, the anonymity of a subject with an anonymity set of size 30 is better than the one that can be achieved with an anonymity set of size 5.</p>
-<p>The k-anonymity framework was originally applied on relational tables <span id="id1">[<a class="reference internal" href="#id2657">1</a>]</span>. The basic assumption is that attributes are partitioned in <em>quasi-identifiers</em> and <em>sensitive attributes</em> <span id="id2">[<a class="reference internal" href="L2.reidentification.html#id2653">2</a>]</span>. The quasi-identifiers are attributes that can be linked to external information to re-identify the individual to whom the information refers (so-called <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>). Usually, they are publicly known or easy to obtain with a superficial knowledge of the subject: for example, age, zip-code, and gender are classic quasi identifiers. The sensitive attributes, instead, represent the information to be protected. Indeed, a dataset satisfies the property of <em>k</em>-anonymity if each released record has at least <em>k−1</em> other records also visible in the release whose values are indistinct over the quasi-identifiers.</p>
+<p>The k-anonymity framework was originally applied on relational tables <span id="id1">[<a class="reference internal" href="#id2688">1</a>]</span>. The basic assumption is that attributes are partitioned in <em>quasi-identifiers</em> and <em>sensitive attributes</em> <span id="id2">[<a class="reference internal" href="L2.reidentification.html#id2684">2</a>]</span>. The quasi-identifiers are attributes that can be linked to external information to re-identify the individual to whom the information refers (so-called <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>). Usually, they are publicly known or easy to obtain with a superficial knowledge of the subject: for example, age, zip-code, and gender are classic quasi identifiers. The sensitive attributes, instead, represent the information to be protected. Indeed, a dataset satisfies the property of <em>k</em>-anonymity if each released record has at least <em>k−1</em> other records also visible in the release whose values are indistinct over the quasi-identifiers.</p>
 <p>In <em>k</em>-anonymity techniques, strategies such as <em>generalization</em> and <em>suppression</em> are usually applied to reduce the granularity of representation of quasi-identifiers. It is clear that these methods guarantee privacy but also reduce the accuracy of applications on the transformed data. Indeed, one of the main challenge of <em>k</em>-anonymity is to find the minimum level of changes (in terms of generalization or suppression) that allows us to guarantee high privacy and good data precision. In <a class="reference internal" href="#tab-k-anonymity-applied"><span class="std std-numref">Table 2</span></a>, one can find an example of a privacy mitigation through generalization that allows to reach <em>3</em>-anonymity, i.e., <em>k</em>-anonymity with <em>3</em> as the minimum size of each anonymity set, starting from the situation depicted in <a class="reference internal" href="#tab-k-anonymity-original"><span class="std std-numref">Table 1</span></a>.</p>
 <table class="colwidths-auto table" id="tab-k-anonymity-original">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">A potential extract from a medical dataset. Gender, date of birth, and ZIP code are the quasi-identifiers, while the Disease is the sensitive attribute. An adversary knowing that Alice was born in 1974 and lives in Boston, MA, who gains access to this dataset, will discover that Alice is the patient number 1000 and that she has Lyme Disease.</span><a class="headerlink" href="#tab-k-anonymity-original" title="Permalink to this table">¶</a></caption>
@@ -1428,10 +1423,10 @@ In a background knowledge attack, instead, an attacker knows information useful 
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id3"><dl class="citation">
-<dt class="label" id="id2657"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id2688"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Latanya Sweeney. Uniqueness of simple demographics in the U.S. population. 2000. LIDAP-WP4.</p>
 </dd>
-<dt class="label" id="id2651"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id2682"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Latanya Sweeney. K-anonymity: a model for protecting privacy. <em>Int. J. Uncertain. Fuzziness Knowl.-Based Syst.</em>, 10(5):557–570, oct 2002. URL: <a class="reference external" href="https://doi.org/10.1142/S0218488502001648">https://doi.org/10.1142/S0218488502001648</a>, <a class="reference external" href="https://doi.org/10.1142/S0218488502001648">doi:10.1142/S0218488502001648</a>.</p>
 </dd>
 </dl>
