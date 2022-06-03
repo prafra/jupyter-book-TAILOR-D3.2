@@ -1,6 +1,6 @@
 # Distributional shift
 
-*Synonyms*: Data shift, concept drift.
+*Synonyms*: Data shift.
 
 ## In brief
 
