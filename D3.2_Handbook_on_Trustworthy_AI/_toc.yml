@@ -21,7 +21,17 @@ chapters:
     - file: T3.1/global_local
 #chapters:
 - file: T3.2
-  title: Safety and Roboustness
+  title: Safety and Robustness
+  sections:
+  - file: T3.2/alignment
+  - file: T3.2/robustness
+  - file: T3.2/reliability
+  - file: T3.2/evaluation
+  - file: T3.2/negative_side_effects
+  - file: T3.2/distributional_shift
+  - file: T3.2/security
+  - file: T3.2/adversarial_attack
+  - file: T3.2/data_poisoning
 - file: T3.3
   title: Fairness, Equity, and Justice by Design
 - file: T3.4/L1.Accountability_and_Reproducibility
@@ -31,13 +41,7 @@ chapters:
     - file: T3.4/L3.Wicked_problems
     - file: T3.4/L3.Meaningful_human_control
     - file: T3.4/L3.The_frame_problem
-    - file: T3.4/L3.Accountability_gaps
-    - file: T3.4/L3.The_problem_of_many_hands
-    - file: T3.4/L3.Impact_assessment_tools
   - file: T3.4/L2.Reproducibility
-    sections:
-    - file: T3.4/L3.Guidelines_reproducibility
-    - file: T3.4/L3.software_frameworks_supporting_reproducibility
   - file: T3.4/L2.Traceability
     sections:
     - file: T3.4/L3.Provenance_tracking
