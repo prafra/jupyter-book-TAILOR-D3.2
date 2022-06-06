@@ -66,17 +66,10 @@ chapters:
       sections:
       - file: T3.5/L3.epsilon_DP
       - file: T3.5/L3.epsilon_delta_DP
-      - file: T3.5/L3.computational_DP
-      - file: T3.5/L3.other_DP
     - file: T3.5/L2.k_anonymity
   - file: T3.5/L1.privacy_mechanisms
     sections:
     - file: T3.5/L2.perturbation_mechanisms
-      sections:
-      - file: T3.5/L3.local_perturbation
-      - file: T3.5/L3.laplace
-      - file: T3.5/L3.exponential
-      - file: T3.5/L3.randomness_alignments
   - file: T3.5/L1.attacks
     sections:
     - file: T3.5/L2.reidentification
