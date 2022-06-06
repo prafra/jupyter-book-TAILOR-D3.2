@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Motivation and Background &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
+    <title>Discrimination &amp; Equity &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,6 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,6 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Fairness notions and metrics" href="fairness.html" />
+    <link rel="prev" title="Bias" href="bias.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -225,56 +225,71 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../T3.3.html">
    Fairness, Equity, and Justice by Design
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="auditing.html">
+     Auditing AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Discrimination &amp; Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fairness.html">
+     Fairness notions and metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fair_ML.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="segregation.html">
+     Segregation
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="L1.Accountability_and_Reproducibility.html">
+  <a class="reference internal" href="../T3.4/L1.Accountability_and_Reproducibility.html">
    Accountability and Reproducibility
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="L2.Accountability.html">
+    <a class="reference internal" href="../T3.4/L2.Accountability.html">
      Accountability
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.Wicked_problems.html">
-       Wicked problems
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.Meaningful_human_control.html">
-       Meaningful human control
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.The_frame_problem.html">
-       The Frame problem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.Accountability_gaps.html">
-       Accountability Gaps
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="L2.Reproducibility.html">
-     Reproducibility
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
     <label for="toctree-checkbox-7">
@@ -283,19 +298,29 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="L3.Guidelines_reproducibility.html">
-       Guidelines
+      <a class="reference internal" href="../T3.4/L3.Wicked_problems.html">
+       Wicked problems
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="L3.software_frameworks_supporting_reproducibility.html">
-       Software frameworks supporting reproducibility
+      <a class="reference internal" href="../T3.4/L3.Meaningful_human_control.html">
+       Meaningful human control
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.The_frame_problem.html">
+       The Frame problem
       </a>
      </li>
     </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.4/L2.Reproducibility.html">
+     Reproducibility
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="L2.Traceability.html">
+    <a class="reference internal" href="../T3.4/L2.Traceability.html">
      Traceability
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -305,12 +330,12 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="L3.Provenance_tracking.html">
+      <a class="reference internal" href="../T3.4/L3.Provenance_tracking.html">
        Provenance Tracking
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="L3.Continuous_performance_monitoring.html">
+      <a class="reference internal" href="../T3.4/L3.Continuous_performance_monitoring.html">
        Continuous Performance Monitoring
       </a>
      </li>
@@ -1189,7 +1214,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/T3.4/L2.Traceability (copia).md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/T3.3/equity.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -1209,7 +1234,7 @@
                 data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.4/L2.Traceability (copia).html&body=Your%20issue%20content%20here."><button
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.3/equity.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
@@ -1235,135 +1260,19 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Motivation and Background
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-two-souls-of-traceability">
-     The two souls of traceability
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#provenance-tracking">
-   Provenance Tracking
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continuous-performance-monitoring">
-   Continuous Performance Monitoring
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#newpage-introduction">
-   \newpage
-Introduction
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checking-the-pdf-file">
-     Checking the PDF File
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-information-required-by-the-volume-editor">
-     Additional Information Required by the Volume Editor
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copyright-forms">
-     Copyright Forms
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#paper-preparation">
-   Paper Preparation
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#headings">
-     Headings.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lemmas-propositions-and-theorems">
-     Lemmas, Propositions, and Theorems.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figures">
-     Figures
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#remark-1">
-       Remark 1.
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulas">
-     Formulas
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#footnotes">
-     Footnotes
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#program-code">
-     Program Code
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#citations">
-     Citations
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#page-numbering-and-running-heads">
-     Page Numbering and Running Heads
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lncs-online">
-   LNCS Online
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibtex-entries">
-   BibTeX Entries
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acknowledgments-acknowledgments-unnumbered-unnumbered">
-     Acknowledgments. {#acknowledgments. .unnumbered .unnumbered}
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-references-section-references">
-   The References Section {#references}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#appendix-springer-author-discount-appendix-springer-author-discount-unnumbered-unnumbered">
-   Appendix: Springer-Author Discount {#appendix-springer-author-discount .unnumbered .unnumbered}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#checklist-of-items-to-be-sent-to-volume-editors">
-   Checklist of Items to be Sent to Volume Editors
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
   </a>
  </li>
 </ul>
@@ -1377,458 +1286,125 @@ Introduction
         
               <div>
                 
-  <div class="abstract topic">
-<p class="topic-title">Abstract</p>
-<p>The abstract should summarize the contents of the paper and should
-contain at least 70 and at most 150 words. It should be written using
-the <em>abstract</em> environment.
-
-\addvspace
-\baselineskip
-We would like to encourage you to list your keywords within the abstract
-section
-</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="discrimination-equity">
+<h1>Discrimination &amp; Equity<a class="headerlink" href="#discrimination-equity" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-brief">
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 </div>
-<p>\titlerunning{Reproducibility}
-\authorrunning{S. Colantonio}
-\institute{<span class="math notranslate nohighlight">\(^1\)</span>Institute of Information Science and Technologies “A. Faedo” of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy}
-\toctitle{Lecture Notes in Computer Science}
-\tocauthor{Authors’ Instructions}
-\maketitle
-\bigskip
-<strong>Definition</strong></p>
-<p>([&#64;ALTAI_2020])<br />
-<br />
-<strong>Abstract</strong></p>
-<p>This entry introduces the motivations behind traceability and
-illustrates its core requirements, which encompass documenting the
-entire development cycle of an AI model and tracking its live
-functioning after the deployment in production.</p>
-<div class="tex2jax_ignore mathjax_ignore section" id="motivation-and-background">
-<h1>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h1>
-<p>Developing an Artificial Intelligence (AI) model or an AI-powered system
-entails a considerable number of choices along the entire development
-process, which may result in diverse behaviours and functioning of the
-same model or system. This phenomenon is particularly relevant when
-learning-based approaches comes into play, due to the dependency of
-Machine Learning (ML) models on the data used for their training as well
-as the complexity and variety of the ML methods that might be used,
-especially when based on Deep Learning (DL). Furthermore, the
-development of such models relies often on large trial-&amp;-error
-experimental processes, which are not commonly well documented (see the
-reproducibility entry).</p>
-<p>This condition makes it evident the need for a comprehensive and clear
-documentation of the actions taken as well as the various processing
-steps performed when developing an AI or ML model, as, without this
-documentation, it might be difficult to reconstruct the reasons behind
-the outcomes and the functioning of an AI model. In consideration of
-this, the High-Level Expert Group on AI (AI HLEG) has included the
-traceability of an AI model as one of the main mean to enable the
-transparency principle for Trustworthy AI ([&#64;HLEG_Trust]). Overall,
-traceability aims to ensure the avoidance of any “grey” area about the
-AI model or system, thus guaranteeing the transparency of and the trust
-in the development, production functioning and usage of an AI system.
-The record-keeping activity entailed by traceability should regard the
-data used, the data pre-processing steps as well as the development
-settings, the development workflows and the actors involved
-([&#64;bucker_2022]). This encompasses the detailed provision of information
-about the provenance and the usage of any data and artefacts involved in
-the development of the AI model or system. In this view, traceability
-incorporates the measures to ensure reproducibility and it can be
-understood as the technological mean for guaranteeing the auditability
-and accountability of AI models and systems [&#64;Future_AI_2021].\</p>
-<div class="section" id="the-two-souls-of-traceability">
-<h2>The two souls of traceability<a class="headerlink" href="#the-two-souls-of-traceability" title="Permalink to this headline">¶</a></h2>
-<p>AI models based on learning are data-inductive and dynamic systems,
-whose development relies on an initial set of data. This set, although
-large, might not necessarily span the whole variability range of
-real-world cases or conditions. This implies that, when used in
-practice, the AI model or system can encounter slightly different or
-novel data that differ from those it has been exposed to during
-training. This phenomenon calls for the monitoring of AI models after
-their deployment in production, in order to log their usage as well as
-to that tracks over time their performance, vitality and conduct. Such
-an AI maintenance system is an important part of traceability, which can
-be then seen as one principle, two souls:</p>
-<ul class="simple">
-<li><p>provenance tracking of data, processes and artefacts involved in the
-development of the AI model</p></li>
-<li><p>continuous performance monitoring of the AI model after deployment
-in production.</p></li>
-</ul>
-<p>These two aspects will be further explained in the following entries.<br />
-<br />
-\</p>
+<div class="section" id="more-in-detail">
+<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>Not all forms of <em>bias</em> (also known as <em>statistical discrimination</em>) are
+problematic. Here we use the normative sense of <em>discrimination</em>, where
+all forms of bias that count as discrimination are considered
+problematic and should be avoided. This discrimination can be direct
+(where a protected feature is intentionally used in the decision making
+procedure). In such a case explainability tools such as feature
+importance methods can help to detect whether a model’s decisions are
+based on the feature, in addition to the fairness metrics in the entry
+on . Often, however, protected features are purposely not included among
+the input variables, and so no direct discrimination will take place.
+Instead, indirect discrimination (where there is direct discrimination
+on features that strongly correlate with a protected feature, in such a
+way that users with a socially salient value of the feature – e.g.
+women – are worse off, cf. <span id="id1">[<a class="reference internal" href="#id2466">1</a>]</span>) is the most common type
+of discrimination in machine learning systems. For ways to detect these
+cases of indirect discrimination, see the <a class="reference internal" href="fairness.html"><span class="doc std std-doc">fairness metrics</span></a>.</p>
+<p>This type of indirect discrimination is often unintentional.
+Philosophical accounts thus disagree about the degree of intentionality
+that is required for bias to count as discrimination: mental state
+accounts <span id="id2">[<a class="reference internal" href="#id2467">2</a>]</span> require systematic animosity or preferences
+towards a certain group. Such animosity need not be present among the
+designers of the system, though it may be part of the reason for the
+societal biases that filter through into the data. Other accounts
+<span id="id3">[<a class="reference internal" href="#id2466">1</a>, <a class="reference internal" href="fairness.html#id2488">2</a>]</span> opt for weaker notions of intentionality,
+where it is sufficient to enable the feature/group membership to play a
+role in the decision making procedure. This clearly allows for the
+(frequent) scenario where an algorithm has disparate impacts on groups
+even when this was not the result of preferences/animosities of the
+developers. Yet even then not all types of bias are considered
+normatively problematic: a statistical bias that negatively impacts
+smokers is not clearly a case of discrimination. So when is a bias a
+case of discrimination?</p>
+<p>An influential point of departure is the idea that biases should not be
+on features outside of people’s control
+<span id="id4">[<a class="reference internal" href="#id2469">4</a>, <a class="reference internal" href="#id2468">5</a>]</span>. This might explain why the
+paradigmatic cases of discrimination is when there is disparate
+treatment based on gender, race, or ethnicity (cf. the entry <a class="reference internal" href="discrimination.html"><span class="doc">Grounds of Discrimination</span></a>), as we
+cannot choose these. However, there are more features beyond our
+control, as illustrated by the ‘other people’s choice principle’
+<span id="id5">[<a class="reference internal" href="#id2469">4</a>]</span>: statistical patterns resulting from other
+people’s choices are not in our control either, and thus may lead to
+discrimination. Consequently, charging higher premiums to a buyer of a
+red car because on average drivers of red cars cause more accidents may
+be seen as problematic. It violates the other people’s choice principle,
+as a buyer has no control over the driving of other car owners. On the
+other hand, charging higher premiums to smokers does not violate this
+principle, since smoking is a direct cause of higher health risks. In
+practice, however, it is difficult to draw a clear border, as e.g.
+socio-economic status impacts people’s choices. Instead, some authors
+<span id="id6">[<a class="reference internal" href="justice.html#id2432">2</a>]</span> suggest to consider notions of <a class="reference internal" href="justice.html"><span class="doc">Justice</span></a> as guiding the distribution of benefits and burdens resulting from the
+use of AI. For example, luck egalitarianism would consider it
+discriminatory to uphold biases which reflect factors of luck. Still,
+while the exact confines of normatively problematic discrimination are
+difficult to define, it is clear that gender, race, etc. are protected
+features and that such discrimination needs to be detected and tackled.</p>
+<p>Following the egalitarian principles of <span id="id7">[<a class="reference internal" href="#id2386">7</a>, <a class="reference internal" href="#id2385">8</a>]</span>, some
+authors address fairness from a multi-agent perspective
+<span id="id8">[<a class="reference internal" href="#id2384">9</a>, <a class="reference internal" href="#id2383">10</a>]</span> in automated decision making. Taking a welfare
+perspective <span id="id9">[<a class="reference internal" href="#id2364">11</a>]</span> propose a family of welfare based measures
+that can be integrated together with other fairness and performance
+constraints. Following the same tracks, <span id="id10">[<a class="reference internal" href="#id2368">12</a>]</span> considered the
+temporal/sequential dimension and addressed fairness in the context of
+Markov decision processes and reinforcement learning. Such
+multi-objective and welfare approaches not only enforce human
+intervention and social criteria to prevent unfair outcomes for some
+users or stakeholders, but could be adapted to ensure equity and fair
+trade-off between privilege and unprivileged groups.</p>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="provenance-tracking">
-<h1>Provenance Tracking<a class="headerlink" href="#provenance-tracking" title="Permalink to this headline">¶</a></h1>
-<p>\</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="continuous-performance-monitoring">
-<h1>Continuous Performance Monitoring<a class="headerlink" href="#continuous-performance-monitoring" title="Permalink to this headline">¶</a></h1>
-<p>Monitoring the live functioning of a produtionalised ML/AI model or
-system is an emergent topic that is gaining increasing attention as more
-and more methods are being deployed in industrial, commercial and public
-sectors. As any other piece of software, any tool based on AI/ML needs
-to be maintained over time, for fixing bugs and ensuring quality. ML
-models and systems require specific strategies that take into account
-their nature of learning from data.</p>
-<p>Idealistically, the behaviour of ML models trained on sample
-well-curated data is expected to generalise on new, unseen data in the
-post-deployment phase. Nonetheless, this happens rarely in practice, and
-a model’s performance assessed live is often different from the
-performance evaluated offline during development. Furthermore, it is
-well-known that the performance of an AI model or system degrades over
-time.</p>
-<p>Several phenomena have been identified as drivers of this decay. The
-input data fed into the ML model may contain unexpected patterns not
-present in the training datasets. Moreover, the characteristics of data
-may change over time, causing that the relationships at the core of the
-ML methods do not stand valid any more.</p>
-<p>This phenomenon, termed <em>concept</em> or <em>model drift</em> ([&#64;Tsymbal_2004]),
-can lead the model to make wrong predictions. Additionally, if the
-nature (or distribution) of the input data become vastly different with
-respect to those used for training, the performance can even drop below
-acceptance. This phenomenon is known as <em>covariate shift</em>
-([&#64;sugi_2012]). Performance degradation can also result from the impact
-that the same deployed ML model may have on the decision process that it
-supports. The ML model may influence other elements involved in the
-decision or induce an overall change in the phenomenon that is being
-modelled, which was not taken into account during training.</p>
-<p>Overall, after its deployment, an ML method can come across several
-difficulties and changes that the level of efforts and skills needed in
-its maintenance could be an order of magnitude higher than that needed
-in model building.</p>
-<p>Given these concerns, several strategies and best practices have been
-investigated to monitor the behaviour of ML methods after deployment,
-also in relation to any consequence the methods can have. The first work
-published in 2015 described the various challenges that ML methods raise
-after deployment in relation to data dependencies, model complexity,
-reproducibility, testing, and changes in the external world
-([&#64;Sculley_2015]). After that, several methods have been presented in
-the literature, focusing specifically on data ([&#64;Polyzotis_2017]), on
-the role of humans in ML deployment ([&#64;Flaounas_2017]), on testing
-strategies ([&#64;Beck_2016]), or the definition of a general framework to
-track ML methods in their live functioning (e.g., pipelines, datasets,
-execution configurations, code and human actions) ([&#64;Sridhar_2018]).</p>
-<p>Overall, the best practices, promoted also from industrial actors
-([&#64;Accenture_2017; &#64;SaS_2019]), include a continuous monitoring of the
-ML system to assess its quality and “vitality”. Various types of metrics
-are suggested in this respect, focusing mainly on performance
-evaluation. The idea is to detect changes in the behaviour and then act
-via re-training or implementing an active learning approach (when
-reinforcement learning is adopted), so as to rectify any wrong conduct.
-It should be noted that model maintenance can be seen as nurturing the
-model, as it can take advantage of the new knowledge coming from the
-real-setting scenario, thus it can produce an improvement of the
-original version released.</p>
-<p>Monitoring and maintenance can be performed in a <em>proactive</em> or
-<em>reactive</em> fashion. Proactive monitoring works to identify the input
-samples that deviate significantly from the patterns seen in the
-training phase and to analyse them more in detail to understand any
-drift. The reactive approach entails detecting a wrong output and
-identifying its causes, so as to understand how the method can be
-rectified.</p>
-<p>The Continuous Delivery ([&#64;Wolff_2017]) and DevOps ([&#64;Loukides_2012])
-approaches have been also proposed to better manage the risks of
-releasing changes to Machine Learning applications and, then, do them in
-a safe and reliable way.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="newpage-introduction">
-<h1>\newpage
-Introduction<a class="headerlink" href="#newpage-introduction" title="Permalink to this headline">¶</a></h1>
-<p>You are strongly encouraged to use for the preparation of your
-camera-ready manuscript together with the corresponding Springer class
-file <code class="docutils literal notranslate"><span class="pre">llncs.cls</span></code>. Only if you use can hyperlinks be generated in the
-online version of your manuscript.</p>
-<p>The LaTeX source of this instruction file for LaTeX users may be used as
-a template. This is located in the “authors” subdirectory in
-<a class="reference external" href="ftp://ftp.springer.de/pub/tex/latex/llncs/latex2e/instruct/">ftp://ftp.springer.de/pub/tex/latex/llncs/latex2e/instruct/</a> and
-entitled <code class="docutils literal notranslate"><span class="pre">typeinst.tex</span></code>. There is a separate package for Word users.
-Kindly send the final and checked source and PDF files of your paper to
-the Contact Volume Editor. This is usually one of the organizers of the
-conference. You should make sure that the LaTeX and the PDF files are
-identical and correct and that only one version of your paper is sent.
-It is not possible to update files at a later stage. Please note that we
-do not need the printed paper.</p>
-<p>We would like to draw your attention to the fact that it is not possible
-to modify a paper in any way, once it has been published. This applies
-to both the printed book and the online version of the publication.
-Every detail, including the order of the names of the authors, should be
-checked before the paper is sent to the Volume Editors.</p>
-<div class="section" id="checking-the-pdf-file">
-<h2>Checking the PDF File<a class="headerlink" href="#checking-the-pdf-file" title="Permalink to this headline">¶</a></h2>
-<p>Kindly assure that the Contact Volume Editor is given the name and email
-address of the contact author for your paper. The Contact Volume Editor
-uses these details to compile a list for our production department at
-SPS in India. Once the files have been worked upon, SPS sends a copy of
-the final pdf of each paper to its contact author. The contact author is
-asked to check through the final pdf to make sure that no errors have
-crept in during the transfer or preparation of the files. This should
-not be seen as an opportunity to update or copyedit the papers, which is
-not possible due to time constraints. Only errors introduced during the
-preparation of the files will be corrected.</p>
-<p>This round of checking takes place about two weeks after the files have
-been sent to the Editorial by the Contact Volume Editor, i.e., roughly
-seven weeks before the start of the conference for conference
-proceedings, or seven weeks before the volume leaves the printer’s, for
-post-proceedings. If SPS does not receive a reply from a particular
-contact author, within the timeframe given, then it is presumed that the
-author has found no errors in the paper. The tight publication schedule
-of LNCS does not allow SPS to send reminders or search for alternative
-email addresses on the Internet.</p>
-<p>In some cases, it is the Contact Volume Editor that checks all the final
-pdfs. In such cases, the authors are not involved in the checking phase.</p>
-</div>
-<div class="section" id="additional-information-required-by-the-volume-editor">
-<h2>Additional Information Required by the Volume Editor<a class="headerlink" href="#additional-information-required-by-the-volume-editor" title="Permalink to this headline">¶</a></h2>
-<p>If you have more than one surname, please make sure that the Volume
-Editor knows how you are to be listed in the author index.</p>
-</div>
-<div class="section" id="copyright-forms">
-<h2>Copyright Forms<a class="headerlink" href="#copyright-forms" title="Permalink to this headline">¶</a></h2>
-<p>The copyright form may be downloaded from the “For Authors”
-(Information for LNCS Authors) section of the LNCS Website:
-<code class="docutils literal notranslate"><span class="pre">www.springer.com/lncs</span></code>. Please send your signed copyright form to the
-Contact Volume Editor, either as a scanned pdf or by fax or by courier.
-One author may sign on behalf of all of the other authors of a
-particular paper. Digital signatures are acceptable.</p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="paper-preparation">
-<h1>Paper Preparation<a class="headerlink" href="#paper-preparation" title="Permalink to this headline">¶</a></h1>
-<p>Springer provides you with a complete integrated LaTeX document class
-(<code class="docutils literal notranslate"><span class="pre">llncs.cls</span></code>) for multi-author books such as those in the LNCS series.
-Papers not complying with the LNCS style will be reformatted. This can
-lead to an increase in the overall number of pages. We would therefore
-urge you not to squash your paper.</p>
-<p>Please always cancel any superfluous definitions that are not actually
-used in your text. If you do not, these may conflict with the
-definitions of the macro package, causing changes in the structure of
-the text and leading to numerous mistakes in the proofs.</p>
-<p>If you wonder what LaTeX is and where it can be obtained, see the
-“<em>LaTeX project site</em>” (<a class="reference external" href="http://www.latex-project.org">http://www.latex-project.org</a>) and especially
-the webpage “<em>How to get it</em>” (<a class="reference external" href="http://www.latex-project.org/ftp.html">http://www.latex-project.org/ftp.html</a>)
-respectively.</p>
-<p>When you use LaTeX together with our document class file, <code class="docutils literal notranslate"><span class="pre">llncs.cls</span></code>,
-your text is typeset automatically in Computer Modern Roman (CM) fonts.
-Please do <em>not</em> change the preset fonts. If you have to use fonts other
-than the preset fonts, kindly submit these with your files.</p>
-<p>Please use the commands <code class="docutils literal notranslate"><span class="pre">\label</span></code> and <code class="docutils literal notranslate"><span class="pre">\ref</span></code> for cross-references and the
-commands <code class="docutils literal notranslate"><span class="pre">\bibitem</span></code> and <code class="docutils literal notranslate"><span class="pre">\cite</span></code> for references to the bibliography, to
-enable us to create hyperlinks at these places.</p>
-<p>For preparing your figures electronically and integrating them into your
-source file we recommend using the standard LaTeX <code class="docutils literal notranslate"><span class="pre">graphics</span></code> or
-<code class="docutils literal notranslate"><span class="pre">graphicx</span></code> package. These provide the <code class="docutils literal notranslate"><span class="pre">\includegraphics</span></code> command. In
-general, please refrain from using the <code class="docutils literal notranslate"><span class="pre">\special</span></code> command.</p>
-<p>Remember to submit any further style files and fonts you have used
-together with your source files.</p>
-<div class="section" id="headings">
-<h2>Headings.<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h2>
-<p>Headings should be capitalized (i.e., nouns, verbs, and all other words
-except articles, prepositions, and conjunctions should be set with an
-initial capital) and should, with the exception of the title, be aligned
-to the left. Words joined by a hyphen are subject to a special rule. If
-the first word can stand alone, the second word should be capitalized.</p>
-<p>Here are some examples of headings: “Criteria to Disprove
-Context-Freeness of Collage Language”, “On Correcting the Intrusion of
-Tracing Non-deterministic Programs by Software”, “A User-Friendly and
-Extendable Data Distribution System”, “Multi-flip Networks:
-Parallelizing GenSAT”, “Self-determinations of Man”.</p>
-</div>
-<div class="section" id="lemmas-propositions-and-theorems">
-<h2>Lemmas, Propositions, and Theorems.<a class="headerlink" href="#lemmas-propositions-and-theorems" title="Permalink to this headline">¶</a></h2>
-<p>The numbers accorded to lemmas, propositions, and theorems, etc. should
-appear in consecutive order, starting with Lemma 1, and not, for
-example, with Lemma 11.</p>
-</div>
-<div class="section" id="figures">
-<h2>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h2>
-<p>For LaTeX users, we recommend using the <em>graphics</em> or <em>graphicx</em> package
-and the <code class="docutils literal notranslate"><span class="pre">\includegraphics</span></code> command.</p>
-<p>Please check that the lines in line drawings are not interrupted and are
-of a constant width. Grids and details within the figures must be
-clearly legible and may not be written one on top of the other. Line
-drawings should have a resolution of at least 800 dpi (preferably 1200
-dpi). The lettering in figures should have a height of 2 mm (10-point
-type). Figures should be numbered and should have a caption which should
-always be positioned <em>under</em> the figures, in contrast to the caption
-belonging to a table, which should always appear <em>above</em> the table; this
-is simply achieved as matter of sequence in your source.</p>
-<p>Please center the figures or your tabular material by using the
-<code class="docutils literal notranslate"><span class="pre">\centering</span></code> declaration. Short captions are centered by default between
-the margins and typeset in 9-point type
-(Fig. <a class="reference external" href="#fig:example">[fig:example]</a>{reference-type=”ref”
-reference=”fig:example”} shows an example). The distance between text
-and figure is preset to be about 8 mm, the distance between figure and
-caption about 6 mm.</p>
-<p>To ensure that the reproduction of your illustrations is of a reasonable
-quality, we advise against the use of shading. The contrast should be as
-pronounced as possible.</p>
-<p>If screenshots are necessary, please make sure that you are happy with
-the print quality before you send the files.</p>
-<p>\centering
-<img alt="One kernel at  (dotted kernel) or two kernels at  and (left and right) lead to the same summed estimate at . Thisshows a figure consisting of different types of lines. Elements of thefigure described in the caption should be set in italics, inparentheses, as shown in this samplecaption.[]{label=&quot;fig:example&quot;}" src="T3.4/eijkel2" />{#fig:example height=”6.2cm”}</p>
-<p>Please define figures (and tables) as floating objects. Please avoid
-using optional location parameters like “<code class="docutils literal notranslate"><span class="pre">[h]</span></code>” for “here”.</p>
-<div class="section" id="remark-1">
-<h3>Remark 1.<a class="headerlink" href="#remark-1" title="Permalink to this headline">¶</a></h3>
-<p>In the printed volumes, illustrations are generally black and white
-(halftones), and only in exceptional cases, and if the author is
-prepared to cover the extra cost for color reproduction, are colored
-pictures accepted. Colored pictures are welcome in the electronic
-version free of charge. If you send colored figures that are to be
-printed in black and white, please make sure that they really are
-legible in black and white. Some colors as well as the contrast of
-converted colors show up very poorly when printed in black and white.</p>
-</div>
-</div>
-<div class="section" id="formulas">
-<h2>Formulas<a class="headerlink" href="#formulas" title="Permalink to this headline">¶</a></h2>
-<p>Displayed equations or formulas are centered and set on a separate line
-(with an extra line or halfline space above and below). Displayed
-expressions should be numbered for reference. The numbers should be
-consecutive within each section or within the contribution, with numbers
-enclosed in parentheses and set on the right margin – which is the
-default if you use the <em>equation</em> environment, e.g.,
-$<span class="math notranslate nohighlight">\(\psi (u) = \int_{o}^{T} \left[\frac{1}{2}
-  \left(\Lambda_{o}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \;  .\)</span>$</p>
-<p>Equations should be punctuated in the same way as ordinary text but with
-a small space before the end punctuation mark.</p>
-</div>
-<div class="section" id="footnotes">
-<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
-<p>The superscript numeral used to refer to a footnote appears in the text
-either directly after the word to be discussed or – in relation to a
-phrase or a sentence – following the punctuation sign (comma,
-semicolon, or period). Footnotes should appear at the bottom of the
-normal text area, with a line of about 2 cm set immediately above
-them.<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
-</div>
-<div class="section" id="program-code">
-<h2>Program Code<a class="headerlink" href="#program-code" title="Permalink to this headline">¶</a></h2>
-<p>Program listings or program commands in the text are normally set in
-typewriter font, e.g., CMTT10 or Courier.</p>
-<p>\medskip
-program Inflation (Output)
-{Assuming annual inflation rates of 7%, 8%, and 10%,…
-years};
-const
-MaxYears = 10;
-var
-Year: 0..MaxYears;
-Factor1, Factor2, Factor3: Real;
-begin
-Year := 0;
-Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
-WriteLn(‘Year  7% 8% 10%’); WriteLn;
-repeat
-Year := Year + 1;
-Factor1 := Factor1 * 1.07;
-Factor2 := Factor2 * 1.08;
-Factor3 := Factor3 * 1.10;
-WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
-until Year = MaxYears
-end.</p>
-</div>
-<div class="section" id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="page-numbering-and-running-heads">
-<h2>Page Numbering and Running Heads<a class="headerlink" href="#page-numbering-and-running-heads" title="Permalink to this headline">¶</a></h2>
-<p>There is no need to include page numbers. If your paper title is too
-long to serve as a running head, it will be shortened. Your suggestion
-as to how to shorten it would be most welcome.</p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="lncs-online">
-<h1>LNCS Online<a class="headerlink" href="#lncs-online" title="Permalink to this headline">¶</a></h1>
-<p>The online version of the volume will be available in LNCS Online.
-Members of institutes subscribing to the Lecture Notes in Computer
-Science series have access to all the pdfs of all the online
-publications. Non-subscribers can only read as far as the abstracts. If
-they try to go beyond this point, they are automatically asked, whether
-they would like to order the pdf, and are given instructions as to how
-to do so.</p>
-<p>Please note that, if your email address is given in your paper, it will
-also be included in the meta data of the online version.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="bibtex-entries">
-<h1>BibTeX Entries<a class="headerlink" href="#bibtex-entries" title="Permalink to this headline">¶</a></h1>
-<p>The correct BibTeX entries for the Lecture Notes in Computer Science
-volumes can be found at the following Website shortly after the
-publication of the book:
-<a class="reference external" href="http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html">http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html</a></p>
-<div class="section" id="acknowledgments-acknowledgments-unnumbered-unnumbered">
-<h2>Acknowledgments. {#acknowledgments. .unnumbered .unnumbered}<a class="headerlink" href="#acknowledgments-acknowledgments-unnumbered-unnumbered" title="Permalink to this headline">¶</a></h2>
-<p>The heading should be treated as a subsubsection heading and should not
-be assigned a number.</p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="the-references-section-references">
-<h1>The References Section {#references}<a class="headerlink" href="#the-references-section-references" title="Permalink to this headline">¶</a></h1>
-<p>In order to permit cross referencing within LNCS-Online, and eventually
-between different publishers and their online databases, LNCS will, from
-now on, be standardizing the format of the references. This new feature
-will increase the visibility of publications and facilitate academic
-research considerably. Please base your references on the examples
-below. References that don’t adhere to this style will be reformatted by
-Springer. You should therefore check your references thoroughly when you
-receive the final pdf of your paper. The reference section must be
-complete. You may not omit references. Instructions as to where to find
-a fuller version of the references are not permissible.</p>
-<p>We only accept references written using the latin alphabet. If the title
-of the book you are referring to is in Russian or Chinese, then please
-write (in Russian) or (in Chinese) at the end of the transcript or
-translation of the title.</p>
-<p>4</p>
-<p>Smith, T.F., Waterman, M.S.: Identification of Common Molecular
-Subsequences. J. Mol. Biol. 147, 195–197 (1981)</p>
-<p>May, P., Ehrlich, H.C., Steinke, T.: ZIB Structure Prediction Pipeline:
-Composing a Complex Biological Workflow through Web Services. In: Nagel,
-W.E., Walter, W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128,
-pp. 1148–1158. Springer, Heidelberg (2006)</p>
-<p>Foster, I., Kesselman, C.: The Grid: Blueprint for a New Computing
-Infrastructure. Morgan Kaufmann, San Francisco (1999)</p>
-<p>Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C.: Grid
-Information Services for Distributed Resource Sharing. In: 10th IEEE
-International Symposium on High Performance Distributed Computing, pp.
-181–184. IEEE Press, New York (2001)</p>
-<p>Foster, I., Kesselman, C., Nick, J., Tuecke, S.: The Physiology of the
-Grid: an Open Grid Services Architecture for Distributed Systems
-Integration. Technical report, Global Grid Forum (2002)</p>
-<p>National Center for Biotechnology Information,
-<a class="reference external" href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</a></p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="appendix-springer-author-discount-appendix-springer-author-discount-unnumbered-unnumbered">
-<h1>Appendix: Springer-Author Discount {#appendix-springer-author-discount .unnumbered .unnumbered}<a class="headerlink" href="#appendix-springer-author-discount-appendix-springer-author-discount-unnumbered-unnumbered" title="Permalink to this headline">¶</a></h1>
-<p>LNCS authors are entitled to a 33.3% discount off all Springer
-publications. Before placing an order, the author should send an email,
-giving full details of his or her Springer publication, to
-<span class="xref myst">orders-HD-individuals&#64;springer.com</span>
-to obtain a so-called token. This token is a number, which must be
-entered when placing an order via the Internet, in order to obtain the
-discount.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="checklist-of-items-to-be-sent-to-volume-editors">
-<h1>Checklist of Items to be Sent to Volume Editors<a class="headerlink" href="#checklist-of-items-to-be-sent-to-volume-editors" title="Permalink to this headline">¶</a></h1>
-<p>Here is a checklist of everything the volume editor requires from you:</p>
-<ul class="simple">
-<li><p>The final LaTeX source files</p></li>
-<li><p>A final PDF file</p></li>
-<li><p>A copyright form, signed by one author on behalf of all of the
-authors of the paper.</p></li>
-<li><p>A readme giving the name and email address of the corresponding
-author.</p></li>
-</ul>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>The footnote numeral is set flush left and the text follows with
-the usual word spacing.</p>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="id11"><dl class="citation">
+<dt class="label" id="id2466"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>Kasper Lippert-Rasmussen. <em>Born free and equal?: A philosophical inquiry into the nature of discrimination</em>. Oxford University Press, 2013.</p>
+</dd>
+<dt class="label" id="id2467"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Thomas M Scanlon. Moral dimensions. In <em>Moral Dimensions</em>. Harvard University Press, 2009.</p>
+</dd>
+<dt class="label" id="id2459"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Michele Loi and Markus Christen. Choosing how to discriminate: navigating ethical trade-offs in fair algorithmic design for the insurance sector. <em>Philosophy &amp; Technology</em>, 34(4):967–992, 2021.</p>
+</dd>
+<dt class="label" id="id2469"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
+<dd><p>Kasper Lippert-Rasmussen. Nothing personal: on statistical discrimination. <em>Journal of Political Philosophy</em>, 15(4):385–403, 2007.</p>
+</dd>
+<dt class="label" id="id2468"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
+<dd><p>Daniel E Palmer. Insurance, risk assessment and fairness: an ethical analysis. In <em>Insurance ethics for a more ethical world</em>. Emerald Group Publishing Limited, 2007.</p>
+</dd>
+<dt class="label" id="id2403"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Reuben Binns, Max Van Kleek, Michael Veale, Ulrik Lyngs, Jun Zhao, and Nigel Shadbolt. 'it's reducing a human being to a percentage': perceptions of justice in algorithmic decisions. In <em>CHI</em>, 377. ACM, 2018.</p>
+</dd>
+<dt class="label" id="id2386"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>John Rawls. <em>A theory of justice</em>. Harvard university press, 2009.</p>
+</dd>
+<dt class="label" id="id2385"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
+<dd><p>Hervé Moulin. <em>Fair division and collective welfare</em>. MIT press, 2004.</p>
+</dd>
+<dt class="label" id="id2384"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
+<dd><p>Steven de Jong, Karl Tuyls, and Katja Verbeeck. Fairness in multi-agent systems. <em>Knowl. Eng. Rev.</em>, 23(2):153–180, 2008.</p>
+</dd>
+<dt class="label" id="id2383"><span class="brackets"><a class="fn-backref" href="#id8">10</a></span></dt>
+<dd><p>Jianye Hao and Ho-fung Leung. <em>Fairness in Cooperative Multiagent Systems</em>, pages 27–70. Springer Berlin Heidelberg, Berlin, Heidelberg, 2016.</p>
+</dd>
+<dt class="label" id="id2364"><span class="brackets"><a class="fn-backref" href="#id9">11</a></span></dt>
+<dd><p>Hoda Heidari, Claudio Ferrari, Krishna P. Gummadi, and Andreas Krause. Fairness behind a veil of ignorance: A welfare analysis for automated decision making. In <em>NeurIPS</em>, 1273–1283. 2018.</p>
+</dd>
+<dt class="label" id="id2368"><span class="brackets"><a class="fn-backref" href="#id10">12</a></span></dt>
+<dd><p>Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, and Aaron Roth. Fairness in reinforcement learning. In <em>ICML</em>, volume 70 of Proceedings of Machine Learning Research, 1617–1626. PMLR, 2017.</p>
 </dd>
 </dl>
+</p>
+<hr class="docutils" />
+<p>This entry was written by Stefan Buijsman and Miguel Couceiro.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1844,7 +1420,7 @@ the usual word spacing.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./T3.4"
+            path: "./T3.3"
         },
         predefinedOutput: true
     }
@@ -1855,7 +1431,21 @@ the usual word spacing.</p>
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="bias.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Bias</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="fairness.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Fairness notions and metrics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
