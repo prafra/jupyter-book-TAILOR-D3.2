@@ -2,7 +2,7 @@
 
 ## In brief
 
-TODO: missing journal in koshiyama2021towards
+
 
 ## More in Detail
 
