@@ -2,7 +2,7 @@
 
 ## In brief
 
-
+**Auditing AI** aims to identify and address possible risks and impacts while ensuring robust and trustworthy accountability.
 
 ## More in Detail
 

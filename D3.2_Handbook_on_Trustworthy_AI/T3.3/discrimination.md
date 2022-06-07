@@ -2,6 +2,8 @@
 
 ## In brief
 
+International and national laws prohibit **discriminating on some explicitly defined grounds**, such as race, sex, religion, etc. They can be considered in isolation, or interacting, giving rise to multiple discrimination and intersectional discrimination.
+
 ## More in Detail
 
 The Universal Declaration of Human Rights prohibit discrimination in
