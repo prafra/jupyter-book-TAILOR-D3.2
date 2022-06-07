@@ -2,6 +2,8 @@
 
 ## In brief
 
+**Social segregation** refers to the separation of groups on the grounds of personal or cultural traits. Separation can be physical (e.g., in schools or neighborhoods) or virtual (e.g., in social networks).
+
 ## More in Detail
 
 *Social segregation* refers to the "*separation of socially defined

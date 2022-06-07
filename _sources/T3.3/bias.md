@@ -2,6 +2,10 @@
 
 ## In brief
 
+**Bias** refers to an inclination towards or against a particular individual, group,
+or sub-groups. AI models may inherit biases from training data or introduce
+new forms of bias.
+
 ## More in Detail
 
 The success of Machine Learning (ML) systems in visual recognition,
@@ -78,7 +82,7 @@ between features in the data.
 
 Furthermore, algorithmic biases are systematic errors in computer
 systems or models that cause certain privileges in outcomes concerning a
-particular group or a person \[wiki\]. These biases can emerge in
+particular group or a person. These biases can emerge in
 various ways. Foremost among these are the design of the algorithm or
 the way it uses the datasets to be coded, collected, selected, and
 processed. Algorithmic errors may lead to biased outcomes even though

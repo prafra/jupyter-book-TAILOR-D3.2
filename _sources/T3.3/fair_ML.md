@@ -2,6 +2,9 @@
 
 ## In brief
 
+**Fair Machine Learning models** take into account the issues of bias and fairness. Approaches can be categorized as pre-processig, which transform the
+input data, as in-processing, which modify the learning algorithm, and post-processing, which alter models’ internals or their decisions.
+
 ## More in Detail
 
 Fairness can be promoted in three different ways in ML as surveyed in

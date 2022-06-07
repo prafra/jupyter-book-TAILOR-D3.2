@@ -2,6 +2,9 @@
 
 ## In brief
 
+The term **fairness** is defined as the quality or state of being fair; or a lack of favoritism towards one side. The notions of fairness, and quantitative measures of
+them (fairness metrics), can be distinguished based on the focus on individuals, groups and sub-groups.
+
 ## More in Detail
 
 The term fairness is defined as the quality or state of being fair; or a
@@ -66,7 +69,7 @@ algorithm. Without loss of generality, assume that $Y$ and $\hat{Y}$ are
 binary random variables where $Y=1$ designates a positive instance,
 while $Y=0$ a negative one. Typically, the predicted outcome $\hat{Y}$
 is derived from a score represented by a random variable $S$ where
-$P([)S = s]$ is the probability that the score value is equal to $s$.
+$P[S = s]$ is the probability that the score value is equal to $s$.
 
 **Statistical parity** {cite}`dwork2012fairness` is one of the most commonly
 accepted notions of fairness. It requires the prediction to be
@@ -76,7 +79,7 @@ unprotected groups should be equal. Statistical parity implies that<br>
 $\displaystyle \frac{TP+FP}{TP+FP+FN+TN}$ [^statistical] <br>
 is equal for both groups. A classifier Ŷ satisfies statistical parity
 if:<br> 
-$\label{eq:sp} P([)\hat{Y} \mid A = 0] = P([)\hat{Y} \mid A = 1].$ <br>
+$\label{eq:sp} P[\hat{Y} \mid A = 0] = P[\hat{Y} \mid A = 1].$ <br>
 
 **Conditional statistical parity** {cite}`corbett2017algorithmic` is a
 variant of statistical parity obtained by controlling on a set of
@@ -85,7 +88,7 @@ among $X$ are correlated with the sensitive feature $A$ and give some
 factual information about the label at the same time leading to a
 *legitimate* discrimination. Conditional statistical parity holds if: <br>
 $\label{eq:csp}
-P([)\hat{Y}=1 \mid R=r,A = 0] = P([)\hat{Y}=1 \mid R=r,A = 1] \quad \forall r \in range(R).$
+P[\hat{Y}=1 \mid R=r,A = 0] = P[\hat{Y}=1 \mid R=r,A = 1] \quad \forall r \in range(R).$
 
 **Equalized odds** {cite}`hardt2016equality` considers both the predicted and
 the actual outcomes. The prediction is conditionally independent from
@@ -95,14 +98,14 @@ both sub-populations to have the same true positive rate
 $TPR = \frac{TP}{TP+FN}$ and false positive rate
 $FPR = \frac{FP}{FP+TN}$: <br>
 $\label{eq:eqOdds}
-P([)\hat{Y} = 1 \mid Y=y,\; A=0] = P([)\hat{Y}=1 \mid Y= y,\; A=1]  \quad \forall{ y \in \{0,1\}}.$
+P[\hat{Y} = 1 \mid Y=y,\; A=0] = P[\hat{Y}=1 \mid Y= y,\; A=1]  \quad \forall{ y \in \{0,1\}}.$
 
 Because equalized odds requirement is rarely satisfied in practice, two
 variants can be obtained by relaxing its equation. The first one is
 called **equal opportunity** {cite}`hardt2016equality` and is obtained by
 requiring only TPR equality among groups: <br>
 $\label{eq:eqOpp}
-P([)\hat{Y}=1 \mid Y=1,A = 0] = P([)\hat{Y}=1\mid Y=1,A = 1].$ <br>
+P[\hat{Y}=1 \mid Y=1,A = 0] = P[\hat{Y}=1\mid Y=1,A = 1].$ <br>
 As $TPR$
 does not take into consideration $FP$, equal opportunity is completely
 insensitive to the number of false positives.
@@ -111,7 +114,7 @@ The second relaxed variant of equalized odds is called **predictive
 equality** {cite}`corbett2017algorithmic` which requires only the FPR to be
 equal in both groups: <br>
 $\label{eq:predEq}
-P([)\hat{Y}=1 \mid Y=0,A = 0] = P([)\hat{Y}=1\mid Y=0,A = 1].$ <br> 
+P[\hat{Y}=1 \mid Y=0,A = 0] = P[\hat{Y}=1\mid Y=0,A = 1].$ <br> 
 Since $FPR$ is independent from $FN$, predictive equality is completely
 insensitive to false negatives.
 
@@ -126,12 +129,12 @@ one is conditioning on the algorithm's predicted outcome not the actual
 outcome. In other words, the emphasis is on the precision of prediction
 rather than its recall: <br>
 $\label{eq:condUseAcc}
-P([)Y=y\mid \hat{Y}=y ,A = 0] = P([)Y=y\mid \hat{Y}=y,A = 1] \quad \forall{ y \in \{0,1\}}.$
+P[Y=y\mid \hat{Y}=y ,A = 0] = P[Y=y\mid \hat{Y}=y,A = 1] \quad \forall{ y \in \{0,1\}}.$
 
 **Predictive parity** {cite}`chouldechova2017fair` is a relaxation of
 conditional use accuracy equality requiring only equal $PPV$ among
 groups: $$\label{eq:predPar}
-P([)Y=1 \mid \hat{Y} =1,A = 0] = P([)Y=1\mid \hat{Y} =1,A = 1]$$ Like
+P[Y=1 \mid \hat{Y} =1,A = 0] = P[Y=1\mid \hat{Y} =1,A = 1]$$ Like
 predictive equality, predictive parity is insensitive to false
 negatives.
 
@@ -144,7 +147,7 @@ $$\label{eq:accuracy}
 is equal for both groups:
 
 $$\label{eq:ovAcc}
-P([)\hat{Y} = Y | A = 0] = P([)\hat{Y} = Y | A = 1]$$
+P[\hat{Y} = Y | A = 0] = P[\hat{Y} = Y | A = 1]$$
 
 **Treatment equality** {cite}`berk2018fairness` is achieved when the ratio of
 FPs and FNs is the same for both protected and unprotected groups: <br>
@@ -174,7 +177,7 @@ E[S \mid Y =0,A = 0] = E[S \mid Y =0,A = 1].$
 probability score $S=s$, individuals in all groups have the same
 probability to actually belong to the positive class: <br>
 $\label{eq:calib}
-P([)Y =1 \mid S =s,A = 0] = P([)Y =1 \mid S =s,A = 1] \quad \forall s \in [0,1].$
+P[Y =1 \mid S =s,A = 0] = P[Y =1 \mid S =s,A = 1] \quad \forall s \in [0,1].$
 
 **Well-calibration** {cite}`kleinberg17` is a stronger variant of
 calibration. It requires that (1) calibration is satisfied, (2) the
@@ -182,7 +185,7 @@ score is interpreted as the probability to truly belong to the positive
 class, and (3) for each score $S=s$, the probability to truly belong to
 the positive class is equal to that particular score: <br>
 $\label{eq:wellCalib}
-P([)Y =1 \mid S =s,A = 0] = P([)Y =1 \mid S =s,A = 1] = s  \quad  \forall \; {s \in [0,1]}.$
+P[Y =1 \mid S =s,A = 0] = P[Y =1 \mid S =s,A = 1] = s  \quad  \forall \; {s \in [0,1]}.$
 
 **Fairness through awareness** {cite}`dwork2012fairness` implies that similar
 individuals should have similar predictions. Let $i$ and $j$ be two
@@ -191,8 +194,8 @@ $v_j$. Let $d(v_i,v_j)$ represent the similarity distance between
 individuals $i$ and $j$. Let $M(v_i)$ represent the probability
 distribution over the outcomes of the prediction. For example, if the
 outcome is binary ($0$ or $1$), $M(v_i)$ might be $[0.2,0.8]$ which
-means that for individual $i$, $P([)\hat{Y}=0]) = 0.2$ and
-$P([)\hat{Y}=1] = 0.8$. Let $d_M$ be a distance metric between
+means that for individual $i$, $P[\hat{Y}=0]) = 0.2$ and
+$P[\hat{Y}=1] = 0.8$. Let $d_M$ be a distance metric between
 probability distributions. Fairness through awareness is achieved iff,
 for any pair of individuals $i$ and $j$: <br>
 $d_M(M(v_i), M(v_j))  \leq d(v_i, v_j)$ <br>
