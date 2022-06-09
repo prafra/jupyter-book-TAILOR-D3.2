@@ -2,7 +2,7 @@
 
 ## In brief
 
-The *Single Tree Appoximation* is an approach that aims at building a decision trees to approximate the behavior of a black box, typically a neural network.
+The **single tree appoximation** is an approach that aims at building a decision tree to approximate the behavior of a black box, typically a neural network.
 
 ## More in detail
 
@@ -54,6 +54,8 @@ In {cite}`johansson2009evolving_36`, genetic programming is used for building a 
 network ensemble by considering additional genetic features obtained as combinations of the original data and the novel data annotated by the black box models. Both
 methods described in {cite}`boz16`, {cite}`johansson2009evolving_36`, like <span style="font-variant:small-caps;">trepan</span>, return explanations in the form of a global decision
 tree.
+
+## Bibliography
 
 ```{bibliography}
 :style: unsrt
