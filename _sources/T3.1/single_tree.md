@@ -2,7 +2,7 @@
 
 ## In brief
 
-The *Single Tree Appoximation* is an approach that aims at building a decision tree to approximate the behavior of a black box, typically a neural network.
+The **single tree appoximation** is an approach that aims at building a decision tree to approximate the behavior of a black box, typically a neural network.
 
 ## More in detail
 

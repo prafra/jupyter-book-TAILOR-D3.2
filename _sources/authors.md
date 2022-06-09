@@ -4,7 +4,7 @@ The Complete list of contributors are (in alphabetical order):
 
 ---
 - Riccardo Albertoni - Istituto di Matematica Applicata e Tecnologie Informatiche "Enrico Magenes", Consiglio Nazionale delle Ricerche (IMATI-CNR), Via De Marini, 6, 16149 Genova, Italy <!-- T3.4 -->
-- Tristan Allard - University of Rennes, CNRS, IRISA, Rennes, France <!-- T3.5 -->
+- Tristan Allard - University of Rennes, CNRS, IRISA, 35000 Rennes, France <!-- T3.5 -->
 - Guilherme Alves, University of Lorraine, CNRS, Inria, LORIA, 54000 Nancy, France <!-- T3.3 -->
 - Alejandra Bringas Colmenarejo, School of Law, University of Southampton, SO17 1BJ, United Kindom   <!-- T3.3 -->
 - Stefan Buijsman - Delft University of Technology, Jaffalaan 5, 2628 BX, Delft, The Netherlands <!-- T3.3 -->
