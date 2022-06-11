@@ -1,10 +1,10 @@
 # Cradle-to-cradle Design
 
-**Synonyms:** 2CC2, C2C, cradle 2 cradle, regenerative design.
+*Synonyms*: 2CC2, C2C, cradle 2 cradle, regenerative design.
 
 ## In Brief
 
-*Cradle-to-cradle Design*  is a biomimetic approach to product and system design that mimics natural processes, in which materials are considered as nutrients flowing in healthy, safe metabolisms. 
+**Cradle-to-cradle Design**  is a biomimetic approach to product and system design that mimics natural processes, in which materials are considered as nutrients flowing in healthy, safe metabolisms. 
 
 
 ## More in Detail

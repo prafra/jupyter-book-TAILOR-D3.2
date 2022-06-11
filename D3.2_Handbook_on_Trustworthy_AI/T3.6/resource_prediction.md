@@ -1,10 +1,10 @@
 # Resource Prediction
 
-**Synonyms:** Workload Prediction, Workload Forecast.
+*Synonyms*: Workload Prediction, Workload Forecast.
 
 ## In Brief
 
-*Resource prediction* is the estimation of the resources a customer will require in the future to complete his tasks.  This concept has a wide variety of application and it is particularly studied in the context of data centres management. When these forecasts are generated, historical and current data are utilised to predict how many resource units, which tools and operative systems and the number of requests are required to accomplish a task.
+**Resource prediction** is the estimation of the resources a customer will require in the future to complete his tasks.  This concept has a wide variety of application and it is particularly studied in the context of data centres management. When these forecasts are generated, historical and current data are utilised to predict how many resource units, which tools and operative systems and the number of requests are required to accomplish a task.
 
 
 ## More in Detail

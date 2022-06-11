@@ -66,15 +66,11 @@ chapters:
       sections:
       - file: T3.5/L3.epsilon_DP
       - file: T3.5/L3.epsilon_delta_DP
+      - file: T3.5/L2.perturbation_mechanisms
     - file: T3.5/L2.k_anonymity
-  - file: T3.5/L1.privacy_mechanisms
-    sections:
-    - file: T3.5/L2.perturbation_mechanisms
   - file: T3.5/L1.attacks
     sections:
     - file: T3.5/L2.reidentification
-    - file: T3.5/L2.membership
-    - file: T3.5/L2.reconstruction
 
 - file: T3.6
   sections:
@@ -89,122 +85,93 @@ chapters:
   - file: T3.6/resource_allocation
 - file: AnalyticaIndex 
   sections:
-  - file: index/2CC2
-  - file: index/Accountability
-  - file: index/Alignment
-  - file: index/Ante-hoc Explanation
-  - file: index/Assurance
-  - file: index/Attacks on Anonymization Schemes
-  - file: index/Attacks on Partition-based Algorithms
-  - file: index/Attacks on Pseudonymised Data
-  - file: index/Auditing
-  - file: index/Autonomy Levels
-  - file: index/Bias
-  - file: index/C2C
-  - file: index/Certification Standards
-  - file: index/Cloud Computing
-  - file: index/Computational Differential Privacy
-  - file: index/Corrigibility
-  - file: index/Counterfactual Explanations
-  - file: index/cradle 2 cradle
-  - file: index/Cradle
-  - file: index/Data Anonymization
-  - file: index/Data Center
-  - file: index/Data Minimisation
-  - file: index/Data sanitization
-  - file: index/deFinetti Attack
-  - file: index/Differential Privacy models
-  - file: index/epsilon_delta-differential_privacy
-  - file: index/Epsilon-differential_privacy
-  - file: index/Differential Privacy - Other Variants or Generalizations
-  - file: index/Dimensions of Explanations
-  - file: index/Discrimination
-  - file: index/Distributional Shift
-  - file: index/Edge Computing
-  - file: index/Electricity Price Forecast
-  - file: index/Energy Aware
-  - file: index/Energy-efficient
-  - file: index/Enforcement
-  - file: index/epsilon-indistinguishability
-  - file: index/Equity
-  - file: index/Evaluating Explanations
-  - file: index/Exponential Mechanism
-  - file: index/Fair Machine Learning
-  - file: index/Fairness
-  - file: index/Features Importance
-  - file: index/Fog Computing
-  - file: index/Generality
-  - file: index/General Privacy-related Attacks
-  - file: index/Global Explanations
-  - file: index/Global Recoding
-  - file: index/Goal Stability
-  - file: index/Green AI
-  - file: index/Green Computing
-  - file: index/Green IT
-  - file: index/Human-in-the-loop
-  - file: index/ICT sustainability
-  - file: index/Impact Assessment of Trustworthy AI
-  - file: index/Interpretability
-  - file: index/Interruptibility
-  - file: index/Justice
-  - file: index/K-Anonymity
-  - file: index/Laplace Mechanism
-  - file: index/Local Explanations
-  - file: index/Local perturbation
-  - file: index/Local Recoding
-  - file: index/Meaningful human control
-  - file: index/Membership Inference Attacks
-  - file: index/Mesh Computing
-  - file: index/Minimality Attack
-  - file: index/Model-Agnostic
-  - file: index/Model-Specific
-  - file: index/Mondrian
-  - file: index/Monitoring
-  - file: index/Moral responsibility
-  - file: index/Multidimensional Recoding
-  - file: index/Negative Side Effects
-  - file: index/Nice properties of Privacy Models
-  - file: index/Partition-Based Algorithms
-  - file: index/Perturbation Mechanisms
-  - file: index/Post-hoc Explanations
-  - file: index/Power Aware
-  - file: index/Privacy algorithm
-  - file: index/Privacy Mechanism
-  - file: index/Privacy model
-  - file: index/Privacy-Preserving Data Publishing
-  - file: index/Problem of many hands
-  - file: index/Pseudonymised Data
-  - file: index/Randomized response
-  - file: index/Reconstruction Attacks
-  - file: index/Re-identification Attack
-  - file: index/Regenerative
-  - file: index/Reliability
-  - file: index/Repeatability
-  - file: index/Replicability
-  - file: index/Reproducibility
-  - file: index/Resource Allocation
-  - file: index/Resource Prediction
-  - file: index/Resource Scheduling
-  - file: index/Reward Hacking
-  - file: index/Robustness
-  - file: index/Rules List and Rules Set
-  - file: index/Safety Criticality
-  - file: index/Safety Standards
-  - file: index/Saliency Maps
-  - file: index/Scalable Oversight Problem
-  - file: index/Security under post-processing
-  - file: index/Segregation
-  - file: index/Self-composition
-  - file: index/Side Effects
-  - file: index/Single Tree Approximation
-  - file: index/Specification
-  - file: index/Stochastic Forecast
-  - file: index/Testing
-  - file: index/Traceability
-  - file: index/Training Corruption
-  - file: index/Transparency
-  - file: index/Uncertainty
-  - file: index/Validation
-  - file: index/Verification
-  - file: index/Workload Forecast
-  - file: index/Workload Prediction
+  - file: index/T3.6/2CC2
+  - file: index/T3.4/Accountability
+  - file: index/T3.2/Alignment
+  - file: index/T3.2/Adversarial attack
+  - file: index/T3.2/Adversarial example
+  - file: index/T3.2/Adversarial input
+  - file: index/T3.1/Ante-hoc Explanation
+  - file: index/T3.2/Assessment
+  - file: index/T3.5/Attacks Anonym
+  - file: index/T3.5/Attacks on Pseudonymised Data
+  - file: index/T3.3/Auditing
+  - file: index/T3.3/Bias
+  - file: index/T3.1/Black-box Explanations
+  - file: index/T3.2/Brittleness
+  - file: index/T3.6/C2C
+  - file: index/T3.6/Cloud Computing
+  - file: index/T3.4/Continuous monitoring
+  - file: index/T3.6/cradle 2 cradle
+  - file: index/T3.6/Cradle
+  - file: index/T3.5/Data Anonymization
+  - file: index/T3.6/Data Center
+  - file: index/T3.2/Data Poisoning
+  - file: index/T3.2/Dependability
+  - file: index/T3.5/Differential Privacy models
+  - file: index/T3.5/epsilon_delta-differential_privacy
+  - file: index/T3.5/Epsilon-differential_privacy
+  - file: index/T3.5/Epsilon-indist
+  - file: index/T3.2/Data Shift
+  - file: index/T3.1/Dimensions of Explanations
+  - file: index/T3.3/Discrimination
+  - file: index/T3.2/Distributional Shift
+  - file: index/T3.2/Direct
+  - file: index/T3.6/Edge Computing
+  - file: index/T3.6/Energy Aware
+  - file: index/T3.6/Energy Efficient
+  - file: index/T3.2/Evaluation
+  - file: index/T3.5/epsilon-indistinguishability
+  - file: index/T3.3/Equity
+  - file: index/T3.1/Explanation by Design
+  - file: index/T3.3/Fair Machine Learning
+  - file: index/T3.3/Fairness
+  - file: index/T3.1/Features Importance
+  - file: index/T3.4/Frame
+  - file: index/T3.6/Fog Computing
+  - file: index/T3.1/Generalizable XAI
+  - file: index/T3.1/Global Explanations
+  - file: index/T3.6/Green AI
+  - file: index/T3.6/Green Computing
+  - file: index/T3.6/Green IT
+  - file: index/T3.6/ICT sustainability
+  - file: index/T3.2/Intended
+  - file: index/T3.3/Justice
+  - file: index/T3.5/K-Anonymity
+  - file: index/T3.5/Linking Attack
+  - file: index/T3.1/Local Explanations
+  - file: index/T3.4/Meaningful human control
+  - file: index/T3.2/Measurement
+  - file: index/T3.6/Mesh Computing
+  - file: index/T3.2/Misdirect
+  - file: index/T3.1/Model-Agnostic
+  - file: index/T3.1/Model-Specific
+  - file: index/T3.2/Negative Side Effects
+  - file: index/T3.1/Not Generalizable XAI
+  - file: index/T3.5/Perturbation
+  - file: index/T3.1/Post-hoc Explanations
+  - file: index/T3.6/Power Aware
+  - file: index/T3.5/Privacy model
+  - file: index/T3.4/Provenance
+  - file: index/T3.5/Pseudonymised Data
+  - file: index/T3.5/Re-identification Attack
+  - file: index/T3.6/Regenerative Design
+  - file: index/T3.2/Reliability
+  - file: index/T3.4/Repeatability
+  - file: index/T3.4/Replicability
+  - file: index/T3.4/Reproducibility
+  - file: index/T3.6/Resource Allocation
+  - file: index/T3.6/Resource Prediction
+  - file: index/T3.6/Resource Scheduling
+  - file: index/T3.2/Robustness
+  - file: index/T3.1/Saliency Maps
+  - file: index/T3.2/Security
+  - file: index/T3.3/Segregation
+  - file: index/T3.1/Single Tree Approximation
+  - file: index/T3.2/Testing
+  - file: index/T3.4/Traceability
+  - file: index/T3.1/Transparency
+  - file: index/T3.2/Unintended
+  - file: index/T3.4/Wicked
+  - file: index/T3.6/Workload Forecast
+  - file: index/T3.6/Workload Prediction
