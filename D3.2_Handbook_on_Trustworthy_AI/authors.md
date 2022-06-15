@@ -34,7 +34,11 @@ The Complete list of contributors are (in alphabetical order):
 - Arkady Zgonnikov - Faculty of Mechanical, Maritime and Materials Engineering, Delft University of Technology, Delft, The Netherlands <!-- T3.4 -->
 - Sami Zhioua, Inria, Ecole Polytechnique, IPP, 91120, Paris, France <!-- T3.3 -->
 
+---
 
+Coordinators:
+- Umberto Straccia - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy
+- Francesca Pratesi - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy
 
 
 
