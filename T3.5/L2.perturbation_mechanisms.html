@@ -526,6 +526,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.2/Adversarial%20attack.html">
      Adversarial Attack
     </a>
@@ -660,6 +665,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Data%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.1/Dimensions%20of%20Explanations.html">
      Dimensions of Explanations
     </a>
@@ -687,6 +697,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.6/Energy%20Aware.html">
      Energy-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Efficient.html">
+     Energy-efficient Computing
     </a>
    </li>
    <li class="toctree-l2">
@@ -727,6 +742,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.6/Fog%20Computing.html">
      Fog Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Generalizable%20XAI.html">
+     Model Agnostic
     </a>
    </li>
    <li class="toctree-l2">
@@ -790,23 +810,33 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Mesh%20Computing.html">
+     Mesh Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.2/Misdirect.html">
      Misdirect Behaviour
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.1/Model-Agnostic.html">
-     Model Agnostic (Explainable AI Systems)
+     Model Agnostic
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.1/Model-Specific.html">
-     Model Specific (Explainable AI Systems)
+     Model Specific
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.2/Negative%20Side%20Effects.html">
      Negative Side Effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Not%20Generalizable%20XAI.html">
+     Model Specific
     </a>
    </li>
    <li class="toctree-l2">
@@ -817,6 +847,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../index/T3.1/Post-hoc%20Explanations.html">
      Post-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Power%20Aware.html">
+     Power-aware Computing
     </a>
    </li>
    <li class="toctree-l2">
@@ -1077,8 +1112,8 @@ major mechanisms able to provide differential privacy guarantees (see
 mechanisms. <em>The Laplace Mechanism</em> <!--{doc}`./L3.laplace`-->
 is dedicated to perturb functions
 that output real values, allowing them to satisfy
-<a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy</span></a>. The <a class="reference internal" href="L3.exponential.html"><span class="doc std std-doc">Exponential
-Mechanism</span></a> is a generalization of the Laplace
+<a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy</span></a>. The <span class="xref myst">Exponential
+Mechanism</span> is a generalization of the Laplace
 mechanism and also allows to satisfy <a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-differential
 privacy</span></a>. The éGaussian Mechanism* <!--[Gaussian mechanism](./L3.gaussian) -->
 is a variant of the Laplace mechanism, applying to functions that output
@@ -1086,8 +1121,8 @@ real values as well, but allowing them to satisfy the <a class="reference intern
 relaxation. These three mechanisms are appropriate for perturbing
 centralized functions that input a full dataset (e.g., a sum
 query). They are often used as basic building blocks, combined or not,
-for perturbing elaborate functions. Finally, <a class="reference internal" href="L3.local_perturbation.html"><span class="doc std std-doc">Randomized Response
-Mechanisms</span></a> input and output one single row
+for perturbing elaborate functions. Finally, <span class="xref myst">Randomized Response
+Mechanisms</span> input and output one single row
 at a time (represented as a vector of bits): they are local mechanisms
 and can be applied prior to the data collection.</p>
 <div class="section" id="history">
@@ -1109,10 +1144,10 @@ https://www.chromium.org/developers/design-documents/rappor/)-->
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p>The early randomized response mechanism was proposed in
 <span id="id1">[<a class="reference internal" href="#id2671">3</a>]</span>, the Laplace mechanism in
-<span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2663">2</a>]</span> and the Exponential mechanism in
+<span id="id2">[<a class="reference internal" href="L2.differential_privacy.html#id2667">2</a>]</span> and the Exponential mechanism in
 <span id="id3">[<a class="reference internal" href="#id2670">4</a>]</span>. The Gaussian mechanism was shown to
 satisfy <span class="math notranslate nohighlight">\((\epsilon, \delta)\)</span>-differential privacy in
-<span id="id4">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2666">1</a>]</span>. Finally,
+<span id="id4">[<a class="reference internal" href="L2.differential_privacy.html#id2670">3</a>]</span>. Finally,
 <span id="id5">[<a class="reference internal" href="#id2672">5</a>]</span> provides an overview and an
 evaluation of various randomized response mechanisms proposed before
 2021.</p>

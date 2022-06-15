@@ -524,6 +524,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="index/T3.2/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="index/T3.2/Adversarial%20attack.html">
      Adversarial Attack
     </a>
@@ -658,6 +663,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="index/T3.2/Data%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="index/T3.1/Dimensions%20of%20Explanations.html">
      Dimensions of Explanations
     </a>
@@ -685,6 +695,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="index/T3.6/Energy%20Aware.html">
      Energy-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/T3.6/Energy%20Efficient.html">
+     Energy-efficient Computing
     </a>
    </li>
    <li class="toctree-l2">
@@ -725,6 +740,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="index/T3.6/Fog%20Computing.html">
      Fog Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/T3.1/Generalizable%20XAI.html">
+     Model Agnostic
     </a>
    </li>
    <li class="toctree-l2">
@@ -788,23 +808,33 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="index/T3.6/Mesh%20Computing.html">
+     Mesh Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="index/T3.2/Misdirect.html">
      Misdirect Behaviour
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="index/T3.1/Model-Agnostic.html">
-     Model Agnostic (Explainable AI Systems)
+     Model Agnostic
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="index/T3.1/Model-Specific.html">
-     Model Specific (Explainable AI Systems)
+     Model Specific
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="index/T3.2/Negative%20Side%20Effects.html">
      Negative Side Effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/T3.1/Not%20Generalizable%20XAI.html">
+     Model Specific
     </a>
    </li>
    <li class="toctree-l2">
@@ -815,6 +845,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="index/T3.1/Post-hoc%20Explanations.html">
      Post-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/T3.6/Power%20Aware.html">
+     Power-aware Computing
     </a>
    </li>
    <li class="toctree-l2">
@@ -1118,8 +1153,8 @@ Finally, we will give some examples of possible solutions we can adopt to provid
 <div class="section" id="guidelines">
 <h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
 <p>Given the relative novelty of the topic, a lot of guidelines have been developed in recent years.</p>
-<p>However, the most authoritative guideline is the <a href="https://wayback.archive-it.org/12090/20201227221227/https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai" target=_blank>High-Level Expert Group on Artificial Intelligence - Ethics Guidelines for Trustworthy AI</a>. Here, the explainability topic is included in the broader <a class="reference internal" href="T3.1/transparency.html"><span class="doc">Transparency</span></a>. According to this guideline, explainability concerns the ability to explain both the technical processes of an AI system and the related human decisions (e.g., application areas of a system). Following the GDPR interpretation, in <span id="id8">[<a class="reference internal" href="T3.4/L2.Accountability.html#id40">1</a>]</span>, it is stated that whenever an AI system has a significant impact on people’s lives, it should be possible to demand a suitable explanation of the AI system’s decision-making process. Such explanation should be timely and adapted to the expertise of the stakeholder concerned (e.g., layperson, regulator, or researcher). In addition, explanations of the degree to which an AI system influences and shapes the organizational decision-making process, design choices of the system, and the rationale for deploying it, should be available (hence ensuring business model transparency).</p>
-<p>Another distinguished authority that has been worked on ethical guidance is <strong>the Alan Turing Institute</strong>, the UK’s national institute for data science and artificial intelligence, where David Leslie <span id="id9">[<a class="reference internal" href="#id31">7</a>]</span> summarized the risks due to the lack of transparency or the absence of a valid explanation, and he advocates the use of <a class="reference internal" href="T3.1/counterfactuals.html"><span class="doc">Counterfactuals</span></a> for contrasting unfair decisions. Together with the Information Commissioner’s Office (ICO), which is responsible for overseeing data protection in the UK, it has been published more recent and complete guidance <span id="id10">[<a class="reference internal" href="T3.4/L2.Accountability.html#id42">2</a>]</span>. Here, six steps are recommended to develop a system:</p>
+<p>However, the most authoritative guideline is the <a href="https://wayback.archive-it.org/12090/20201227221227/https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai" target=_blank>High-Level Expert Group on Artificial Intelligence - Ethics Guidelines for Trustworthy AI</a>. Here, the explainability topic is included in the broader <span class="xref std std-doc">./T3.1/transparency</span>. According to this guideline, explainability concerns the ability to explain both the technical processes of an AI system and the related human decisions (e.g., application areas of a system). Following the GDPR interpretation, in <span id="id8">[<a class="reference internal" href="T3.4/L2.Accountability.html#id40">1</a>]</span>, it is stated that whenever an AI system has a significant impact on people’s lives, it should be possible to demand a suitable explanation of the AI system’s decision-making process. Such explanation should be timely and adapted to the expertise of the stakeholder concerned (e.g., layperson, regulator, or researcher). In addition, explanations of the degree to which an AI system influences and shapes the organizational decision-making process, design choices of the system, and the rationale for deploying it, should be available (hence ensuring business model transparency).</p>
+<p>Another distinguished authority that has been worked on ethical guidance is <strong>the Alan Turing Institute</strong>, the UK’s national institute for data science and artificial intelligence, where David Leslie <span id="id9">[<a class="reference internal" href="#id31">7</a>]</span> summarized the risks due to the lack of transparency or the absence of a valid explanation, and he advocates the use of <span class="xref std std-doc">./T3.1/counterfactuals</span> for contrasting unfair decisions. Together with the Information Commissioner’s Office (ICO), which is responsible for overseeing data protection in the UK, it has been published more recent and complete guidance <span id="id10">[<a class="reference internal" href="T3.4/L2.Accountability.html#id42">2</a>]</span>. Here, six steps are recommended to develop a system:</p>
 <ol class="simple">
 <li><p>Select priority explanations by considering the domain, use case, and impact on the individual.</p></li>
 <li><p>Collect and pre-process data in an explanation-aware manner, stressing the fact that the way in which data is collected and pre-processed may affect the quality of the explanation.</p></li>
