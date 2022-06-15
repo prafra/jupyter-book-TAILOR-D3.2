@@ -1,8 +1,13 @@
 # Complete List of Contributors
 
-The Complete list of contributors are (in alphabetical order):
+Coordinators:
+- Umberto Straccia - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy
+- Francesca Pratesi - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy
 
 ---
+
+The complete list of authors is (in alphabetical order):
+
 - Riccardo Albertoni - Istituto di Matematica Applicata e Tecnologie Informatiche "Enrico Magenes", Consiglio Nazionale delle Ricerche (IMATI-CNR), Via De Marini, 6, 16149 Genova, Italy <!-- T3.4 -->
 - Tristan Allard - University of Rennes, CNRS, IRISA, 35000 Rennes, France <!-- T3.5 -->
 - Guilherme Alves, University of Lorraine, CNRS, Inria, LORIA, 54000 Nancy, France <!-- T3.3 -->
@@ -33,29 +38,6 @@ The Complete list of contributors are (in alphabetical order):
 - Andrea Visentin - School of Computer Science & IT, University College Cork, Cork, Ireland <!-- T3.6 -->
 - Arkady Zgonnikov - Faculty of Mechanical, Maritime and Materials Engineering, Delft University of Technology, Delft, The Netherlands <!-- T3.4 -->
 - Sami Zhioua, Inria, Ecole Polytechnique, IPP, 91120, Paris, France <!-- T3.3 -->
-
----
-
-Coordinators:
-- Umberto Straccia - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy
-- Francesca Pratesi - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 
