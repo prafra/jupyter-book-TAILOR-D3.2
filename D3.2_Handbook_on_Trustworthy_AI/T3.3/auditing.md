@@ -16,7 +16,7 @@ the human elements involved with the system are appropriate and
 monitored, and the technical elements of the system are in perfect
 condition and function correctly {cite}`lovelace2020examining,kazim2021ai`.
 The latter involves both regulators and third-parties verifying
-compliance {cite}`cobbe2021reviewable`. Interestingly, critical external
+compliance {cite}`cobbe2021reviewable_fairness`. Interestingly, critical external
 audits encompasses "disparate methods of journalist, technicians, and
 social scientist who have examined the consequences of already-deployed
 algorithmic systems and who have no formal relationship which the

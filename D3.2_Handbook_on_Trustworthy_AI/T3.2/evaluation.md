@@ -94,7 +94,7 @@ beginning of the discipline, other approaches for AI measurement have
 been used or proposed. These include the Turing test, and endless
 variants {cite}`oppydowe2011,hernandez2020twenty`, the use of human tests,
 from science exams {cite}`mihaylov2018can` to psychometric tests
-{cite}`BringsjordSchimanski2003,IQnotmachines2012computermodels-iq2015`,
+{cite}`BringsjordSchimanski2003,IQnotmachines2012,computermodels-iq2015`,
 the adaptation of psychophysics {cite}`leibo2018psychlab` or item response
 theory {cite}`martinez2019item`, the use of collections of video games
 {cite}`bellemare2013arcade`, the exploration of naive physics
@@ -137,4 +137,4 @@ This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santi
 
 ---
 
-[^PwC]: [paperswithcode.com](paperswithcode.com)
+[^PwC]: paperswithcode.com
