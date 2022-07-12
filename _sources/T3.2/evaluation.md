@@ -4,7 +4,23 @@
 
 ## In brief
 
-**AI measurement** is any activity that estimates attributes as *measures*--- of an AI system or some of its components, abstractly or in particular contexts of operation. These attributes, if well estimated, can be used to explain and predict the *behaviour* of the system. This can stem from an engineering perspective, trying to understand whether a particular AI system meets the specifications or the intention of their designers, known respectively as **verification** and **validation**. Under this perspective, AI measurement is close to computer systems **testing** (hardware and/or software) and other evaluation procedures in engineering. However, in AI there is an extremely complex *adaptive* behaviour, and in many cases, with a lack of a written and operational specification. What the systems has to do depends on some constraints and utility functions that have to be optimised, is specified by example (from which the system has to learn a model) or ultimately depends on feedback from the user or the environment (e.g., in the form of rewards).
+**AI measurement** is any activity that estimates
+attributes as *measures*--- of an AI system or some of its components,
+abstractly or in particular contexts of operation. These attributes, if
+well estimated, can be used to explain and predict the *behaviour* of
+the system. This can stem from an engineering perspective, trying to
+understand whether a particular AI system meets the specifications or
+the intention of their designers, known respectively as
+**verification** and **validation**. Under this perspective, AI
+measurement is close to computer systems
+**testing** (hardware and/or software) and other
+evaluation procedures in engineering. However, in AI there is an
+extremely complex *adaptive* behaviour, and in many cases, with a lack
+of a written and operational specification. What the systems has to do
+depends on some constraints and utility functions that have to be
+optimised, is specified by example (from which the system has to learn a
+model) or ultimately depends on feedback from the user or the
+environment (e.g., in the form of rewards).
 
 ## More in detail
 
@@ -78,7 +94,7 @@ beginning of the discipline, other approaches for AI measurement have
 been used or proposed. These include the Turing test, and endless
 variants {cite}`oppydowe2011,hernandez2020twenty`, the use of human tests,
 from science exams {cite}`mihaylov2018can` to psychometric tests
-{cite}`BringsjordSchimanski2003,IQnotmachines2012computermodels-iq2015`,
+{cite}`BringsjordSchimanski2003,IQnotmachines2012,computermodels-iq2015`,
 the adaptation of psychophysics {cite}`leibo2018psychlab` or item response
 theory {cite}`martinez2019item`, the use of collections of video games
 {cite}`bellemare2013arcade`, the exploration of naive physics
@@ -121,4 +137,4 @@ This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santi
 
 ---
 
-[^PwC]: [paperswithcode.com](paperswithcode.com)
+[^PwC]: paperswithcode.com

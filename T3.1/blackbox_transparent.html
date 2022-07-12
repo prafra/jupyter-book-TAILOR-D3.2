@@ -1101,34 +1101,34 @@ In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency<
 <p>Figure <a class="reference internal" href="#post-hoc"><span class="std std-numref">8</span></a> depicts this distinction.</p>
 <div class="figure align-center" id="post-hoc">
 <a class="reference internal image-reference" href="../_images/post.png"><img alt="../_images/post.png" src="../_images/post.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id19">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id23">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
 </div>
-<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id32">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id47">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id70">3</a>]</span>.</p>
-<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[<a class="reference internal" href="#id85">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id86">6</a>]</span>.
-In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id49">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
+<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id34">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id49">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id72">3</a>]</span>.</p>
+<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[<a class="reference internal" href="#id87">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id88">6</a>]</span>.
+In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id51">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id8"><dl class="citation">
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
 </dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
 <dd><p>Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. <em>Principles of Explainable Artificial Intelligence</em>. Springer International Publishing, 2021.</p>
 </dd>
-<dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dt class="label" id="id72"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
 <dd><p>S. M. Lundberg and S.-I. Lee. A unified approach to interpreting model predictions. In <em>Advances in neural information processing systems</em>, 4765–4774. 2017.</p>
 </dd>
-<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
 <dd><p>M. Craven and J. W. Shavlik. Extracting tree-structured representations of trained networks. In <em>Advances in neural information processing systems</em>, volume 8, 24–30. 1996.</p>
 </dd>
-<dt class="label" id="id85"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id87"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>C. Rudin. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. <em>Nature Machine Intelligence</em>, 1(5):206–215, 2019.</p>
 </dd>
-<dt class="label" id="id86"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dt class="label" id="id88"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p>C. Rudin and J. Radin. Why are we using black box models in ai when we don’t need to? A lesson from an explainable AI competition. <em>Harvard Data Science Review</em>, 2019.</p>
 </dd>
-<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
 <dd><p>A. A. Freitas. Comprehensible classification models: a position paper. <em>ACM SIGKDD explorations newsletter</em>, 15(1):1–10, 2014.</p>
 </dd>
 </dl>
@@ -1185,7 +1185,7 @@ In the literature, there are various models recognized to be interpretable. Exam
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see <a href="./author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+          Di TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>

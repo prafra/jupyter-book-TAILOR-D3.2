@@ -1116,7 +1116,7 @@ from the historical data distribution (i.e., the joint distribution of
 inputs and outputs differs between training and test o deployment
 stages), machine learning techniques that depend precariously on the
 i.i.d. assumption tend to fail. This phenomena is call distributional
-shift and is a very common problem <span id="id2">[<a class="reference internal" href="#id2155">3</a>]</span>. Note that a
+shift and is a very common problem <span id="id2">[<a class="reference internal" href="#id2160">3</a>]</span>. Note that a
 particular case of distributional shift occurs when only the input
 distribution changes (covariate shift) or there is a shift in the target
 variable (prior probability shift).</p>
@@ -1127,24 +1127,24 @@ reasons ranging from the bias introduced by experimental design to the
 irreproducibility of the testing conditions at training time. An example
 is email spam filtering, which may fail to recognise spam that differs
 in form from the spam the automatic filter has been built on
-<span id="id3">[<a class="reference internal" href="#id2164">4</a>]</span>, yet often the model being highly confident in its
+<span id="id3">[<a class="reference internal" href="#id2169">4</a>]</span>, yet often the model being highly confident in its
 erroneous classifications. This issue is especially important in
 high-risk applications of machine learning, such as finance, medicine,
 and autonomous vehicles, where a mistake may incur financial or
 reputational loss, or possible loss of life. It is therefore important
 to assess both a model’s robustness to distribution shift and its
 estimates of predictive uncertainty, which enable it to detect
-distributional shifts <span id="id4">[<a class="reference internal" href="negative_side_effects.html#id169">1</a>, <a class="reference internal" href="#id2158">5</a>]</span>.</p>
+distributional shifts <span id="id4">[<a class="reference internal" href="negative_side_effects.html#id171">1</a>, <a class="reference internal" href="#id2163">5</a>]</span>.</p>
 <p>In general, the greater the degree of shift, the poorer the model’s
 performance is. The performance of learned models tend to drop
 significantly even with a tiny amount of distribution shift between
-training and test <span id="id5">[<a class="reference internal" href="#id2156">6</a>, <a class="reference internal" href="#id2157">7</a>]</span>, which
+training and test <span id="id5">[<a class="reference internal" href="#id2161">6</a>, <a class="reference internal" href="#id2162">7</a>]</span>, which
 makes it challenging to reliably deploy machine learning in real world
 applications. Although one can always increase training coverage by
-adding more sources of data <span id="id6">[<a class="reference internal" href="#id2062">8</a>]</span>, data augmentation
-<span id="id7">[<a class="reference internal" href="#id2159">9</a>, <a class="reference internal" href="#id2160">10</a>]</span>, or injecting structural bias
+adding more sources of data <span id="id6">[<a class="reference internal" href="#id2067">8</a>]</span>, data augmentation
+<span id="id7">[<a class="reference internal" href="#id2164">9</a>, <a class="reference internal" href="#id2165">10</a>]</span>, or injecting structural bias
 into models
-<span id="id8">[<a class="reference internal" href="#id2161">11</a>, <a class="reference internal" href="#id2162">12</a>, <a class="reference internal" href="#id2163">13</a>]</span>
+<span id="id8">[<a class="reference internal" href="#id2166">11</a>, <a class="reference internal" href="#id2167">12</a>, <a class="reference internal" href="#id2168">13</a>]</span>
 for generalisation to any potential input for the learned model, it is
 unrealistic to expect a learned model to predict accurately under any
 form of distribution shift due to the combinatorial nature of real world
@@ -1158,7 +1158,7 @@ to guide future active data collection to covered shifted distributions.
 Therefore, in addition to improving the generalisation performance of
 models in general, methods that explicitly deal with the presence of
 distribution shift are also desirable for machine learning to be used in
-practice <span id="id9">[<a class="reference internal" href="#id2165">14</a>]</span>.</p>
+practice <span id="id9">[<a class="reference internal" href="#id2170">14</a>]</span>.</p>
 <p>In terms of assessment, the robustness of learning models to
 distributional shift is typically assessed via metrics of predictive
 performance on a particular task: given two (or more) evaluation sets,
@@ -1177,17 +1177,17 @@ behaviour may be influenced by the strength of the economy, this being
 not explicitly specified in the data. In this case, the concept of
 interest (consumer behaviour) depends on some hidden context, not known
 a priori, and not given explicitly in the form of predictive features,
-making the learning task more complicated <span id="id10">[<a class="reference internal" href="#id2166">15</a>]</span>.
+making the learning task more complicated <span id="id10">[<a class="reference internal" href="#id2171">15</a>]</span>.
 In this sense, concept shift can be categorised into 3 types:</p>
 <ol class="simple">
 <li><p><em>sudden, abrupt or instantaneous concept shift</em> (e.g., following the previous example, the COVID-19 lockdowns significantly changed customer behaviour);</p></li>
-<li><p><em>gradual concept shift</em> (e.g., customers are influenced by wider economic issues, unemployment rates or other trends) which can be divided further into moderate and slow drifts, depending on the rate of the changes <span id="id11">[<a class="reference internal" href="#id2168">16</a>]</span>;</p></li>
-<li><p><em>cyclic concept drifts</em>, where hidden contexts may be expected to recur due to cyclic phenomena, such as seasons of the year or may be associated with irregular phenomena, such as inflation rates or market mood <span id="id12">[<a class="reference internal" href="#id2167">17</a>]</span>.</p></li>
+<li><p><em>gradual concept shift</em> (e.g., customers are influenced by wider economic issues, unemployment rates or other trends) which can be divided further into moderate and slow drifts, depending on the rate of the changes <span id="id11">[<a class="reference internal" href="#id2173">16</a>]</span>;</p></li>
+<li><p><em>cyclic concept drifts</em>, where hidden contexts may be expected to recur due to cyclic phenomena, such as seasons of the year or may be associated with irregular phenomena, such as inflation rates or market mood <span id="id12">[<a class="reference internal" href="#id2172">17</a>]</span>.</p></li>
 </ol>
 <p>Concept drift may be present on supervised learning problems where
 predictions are made and data is collected over time. These are
 traditionally called online or incremental learning problems
-<span id="id13">[<a class="reference internal" href="#id2169">18</a>]</span>, given the change expected in the data over
+<span id="id13">[<a class="reference internal" href="#id2174">18</a>]</span>, given the change expected in the data over
 time. For its part, the common methods for detecting concept drift in
 machine learning generally include ongoing monitoring of the performance
 (e.g., accuracy) and confidence scores of a learning model. If average
@@ -1197,58 +1197,58 @@ occurring</p>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id14"><dl class="citation">
-<dt class="label" id="id175"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dt class="label" id="id177"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
 <dd><p>Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete problems in ai safety. 2016. <a class="reference external" href="https://arxiv.org/abs/1606.06565">arXiv:1606.06565</a>.</p>
 </dd>
-<dt class="label" id="id115"><span class="brackets"><a class="fn-backref" href="#id2700">2</a></span></dt>
+<dt class="label" id="id117"><span class="brackets"><a class="fn-backref" href="#id2706">2</a></span></dt>
 <dd><p>Leslie David. Understanding artificial intelligence ethics and safety. <em>The Alan Turing Institute, https://doi.org/10.5281/zenodo.3240529</em>, 2019.</p>
 </dd>
-<dt class="label" id="id2155"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dt class="label" id="id2160"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
 <dd><p>Joaquin Quiñonero-Candela, Masashi Sugiyama, Anton Schwaighofer, and Neil D Lawrence. <em>Dataset shift in machine learning</em>. Mit Press, 2008.</p>
 </dd>
-<dt class="label" id="id2164"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dt class="label" id="id2169"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
 <dd><p>Shai Ben-David, John Blitzer, Koby Crammer, and Fernando Pereira. Analysis of representations for domain adaptation. <em>Advances in neural information processing systems</em>, 2006.</p>
 </dd>
-<dt class="label" id="id2158"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
+<dt class="label" id="id2163"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
 <dd><p>Yarin Gal and Zoubin Ghahramani. Dropout as a bayesian approximation: representing model uncertainty in deep learning. In <em>international conference on machine learning</em>, 1050–1059. PMLR, 2016.</p>
 </dd>
-<dt class="label" id="id2156"><span class="brackets"><a class="fn-backref" href="#id5">6</a></span></dt>
+<dt class="label" id="id2161"><span class="brackets"><a class="fn-backref" href="#id5">6</a></span></dt>
 <dd><p>Benjamin Recht, Rebecca Roelofs, Ludwig Schmidt, and Vaishaal Shankar. Do imagenet classifiers generalize to imagenet? In <em>International Conference on Machine Learning</em>, 5389–5400. PMLR, 2019.</p>
 </dd>
-<dt class="label" id="id2157"><span class="brackets"><a class="fn-backref" href="#id5">7</a></span></dt>
+<dt class="label" id="id2162"><span class="brackets"><a class="fn-backref" href="#id5">7</a></span></dt>
 <dd><p>Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan, Ian Goodfellow, and Rob Fergus. Intriguing properties of neural networks. arxiv 2013. <em>arXiv preprint arXiv:1312.6199</em>, 2013.</p>
 </dd>
-<dt class="label" id="id2062"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dt class="label" id="id2067"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
 <dd><p>Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: pre-training of deep bidirectional transformers for language understanding. <em>arXiv preprint arXiv:1810.04805</em>, 2018.</p>
 </dd>
-<dt class="label" id="id2159"><span class="brackets"><a class="fn-backref" href="#id7">9</a></span></dt>
+<dt class="label" id="id2164"><span class="brackets"><a class="fn-backref" href="#id7">9</a></span></dt>
 <dd><p>Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and Adrian Vladu. Towards deep learning models resistant to adversarial attacks. <em>arXiv preprint arXiv:1706.06083</em>, 2017.</p>
 </dd>
-<dt class="label" id="id2160"><span class="brackets"><a class="fn-backref" href="#id7">10</a></span></dt>
+<dt class="label" id="id2165"><span class="brackets"><a class="fn-backref" href="#id7">10</a></span></dt>
 <dd><p>Connor Shorten and Taghi M Khoshgoftaar. A survey on image data augmentation for deep learning. <em>Journal of big data</em>, 6(1):1–48, 2019.</p>
 </dd>
-<dt class="label" id="id2161"><span class="brackets"><a class="fn-backref" href="#id8">11</a></span></dt>
+<dt class="label" id="id2166"><span class="brackets"><a class="fn-backref" href="#id8">11</a></span></dt>
 <dd><p>Kunihiko Fukushima and Sei Miyake. Neocognitron: a self-organizing neural network model for a mechanism of visual pattern recognition. In <em>Competition and cooperation in neural nets</em>, pages 267–285. Springer, 1982.</p>
 </dd>
-<dt class="label" id="id2162"><span class="brackets"><a class="fn-backref" href="#id8">12</a></span></dt>
+<dt class="label" id="id2167"><span class="brackets"><a class="fn-backref" href="#id8">12</a></span></dt>
 <dd><p>Sepp Hochreiter and Jürgen Schmidhuber. Long short-term memory. <em>Neural computation</em>, 9(8):1735–1780, 1997.</p>
 </dd>
-<dt class="label" id="id2163"><span class="brackets"><a class="fn-backref" href="#id8">13</a></span></dt>
+<dt class="label" id="id2168"><span class="brackets"><a class="fn-backref" href="#id8">13</a></span></dt>
 <dd><p>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. <em>Advances in neural information processing systems</em>, 2017.</p>
 </dd>
-<dt class="label" id="id2165"><span class="brackets"><a class="fn-backref" href="#id9">14</a></span></dt>
+<dt class="label" id="id2170"><span class="brackets"><a class="fn-backref" href="#id9">14</a></span></dt>
 <dd><p>Yifan Wu. <em>Learning to Predict and Make Decisions under Distribution Shift</em>. PhD thesis, University of California, 2021.</p>
 </dd>
-<dt class="label" id="id2166"><span class="brackets"><a class="fn-backref" href="#id10">15</a></span></dt>
+<dt class="label" id="id2171"><span class="brackets"><a class="fn-backref" href="#id10">15</a></span></dt>
 <dd><p>Alexey Tsymbal. The problem of concept drift: definitions and related work. <em>Computer Science Department, Trinity College Dublin</em>, 106(2):58, 2004.</p>
 </dd>
-<dt class="label" id="id2168"><span class="brackets"><a class="fn-backref" href="#id11">16</a></span></dt>
+<dt class="label" id="id2173"><span class="brackets"><a class="fn-backref" href="#id11">16</a></span></dt>
 <dd><p>Kenneth O Stanley. Learning concept drift with a committee of decision trees. <em>Informe técnico: UT-AI-TR-03-302, Department of Computer Sciences, University of Texas at Austin, USA</em>, 2003.</p>
 </dd>
-<dt class="label" id="id2167"><span class="brackets"><a class="fn-backref" href="#id12">17</a></span></dt>
+<dt class="label" id="id2172"><span class="brackets"><a class="fn-backref" href="#id12">17</a></span></dt>
 <dd><p>Michael Bonnell Harries, Claude Sammut, and Kim Horn. Extracting hidden context. <em>Machine learning</em>, 32(2):101–126, 1998.</p>
 </dd>
-<dt class="label" id="id2169"><span class="brackets"><a class="fn-backref" href="#id13">18</a></span></dt>
+<dt class="label" id="id2174"><span class="brackets"><a class="fn-backref" href="#id13">18</a></span></dt>
 <dd><p>Gregory Ditzler and Robi Polikar. Incremental learning of concept drift from streaming imbalanced data. <em>IEEE transactions on knowledge and data engineering</em>, 25(10):2283–2301, 2012.</p>
 </dd>
 </dl>
@@ -1259,7 +1259,7 @@ occurring</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="def"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Definition taken from <span id="id2700">[<a class="reference internal" href="security.html#id112">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
+<dd><p>Definition taken from <span id="id2706">[<a class="reference internal" href="security.html#id114">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
 </dd>
 </dl>
 </div>
@@ -1312,7 +1312,7 @@ occurring</p>
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see <a href="./author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+          Di TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>

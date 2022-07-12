@@ -1114,12 +1114,12 @@ input data fed into the ML model may contain unexpected patterns not
 present in the training datasets. Moreover, the characteristics of data
 may change over time, causing that the relationships at the core of the
 ML methods do not stand valid any more.</p>
-<p>This phenomenon, termed <em>concept</em> or <em>model drift</em> <span id="id1">[<a class="reference internal" href="#id2642">1</a>]</span>,
+<p>This phenomenon, termed <em>concept</em> or <em>model drift</em> <span id="id1">[<a class="reference internal" href="#id2648">1</a>]</span>,
 can lead the model to make wrong predictions. Additionally, if the
 nature (or distribution) of the input data become vastly different with
 respect to those used for training, the performance can even drop below
 acceptance. This phenomenon is known as <em>covariate shift</em>
-<span id="id2">[<a class="reference internal" href="#id2643">2</a>]</span>. Performance degradation can also result from the impact
+<span id="id2">[<a class="reference internal" href="#id2649">2</a>]</span>. Performance degradation can also result from the impact
 that the same deployed ML model may have on the decision process that it
 supports. The ML model may influence other elements involved in the
 decision or induce an overall change in the phenomenon that is being
@@ -1134,14 +1134,14 @@ also in relation to any consequence the methods can have. The first work
 published in 2015 described the various challenges that ML methods raise
 after deployment in relation to data dependencies, model complexity,
 reproducibility, testing, and changes in the external world
-<span id="id3">[<a class="reference internal" href="#id2644">3</a>]</span>. After that, several methods have been presented in
-the literature, focusing specifically on data <span id="id4">[<a class="reference internal" href="#id2645">4</a>]</span>, on
-the role of humans in ML deployment <span id="id5">[<a class="reference internal" href="#id2646">5</a>]</span>, on testing
-strategies <span id="id6">[<a class="reference internal" href="#id2647">6</a>]</span>, or the definition of a general framework to
+<span id="id3">[<a class="reference internal" href="#id2650">3</a>]</span>. After that, several methods have been presented in
+the literature, focusing specifically on data <span id="id4">[<a class="reference internal" href="#id2651">4</a>]</span>, on
+the role of humans in ML deployment <span id="id5">[<a class="reference internal" href="#id2652">5</a>]</span>, on testing
+strategies <span id="id6">[<a class="reference internal" href="#id2653">6</a>]</span>, or the definition of a general framework to
 track ML methods in their live functioning (e.g., pipelines, datasets,
-execution configurations, code and human actions) <span id="id7">[<a class="reference internal" href="#id2648">7</a>]</span>.</p>
+execution configurations, code and human actions) <span id="id7">[<a class="reference internal" href="#id2654">7</a>]</span>.</p>
 <p>Overall, the best practices, promoted also from industrial actors
-<span id="id8">[<a class="reference internal" href="#id2650">8</a>, <a class="reference internal" href="#id2649">9</a>]</span>, include a continuous monitoring of the
+<span id="id8">[<a class="reference internal" href="#id2656">8</a>, <a class="reference internal" href="#id2655">9</a>]</span>, include a continuous monitoring of the
 ML system to assess its quality and “vitality”. Various types of metrics
 are suggested in this respect, focusing mainly on performance
 evaluation. The idea is to detect changes in the behaviour and then act
@@ -1158,7 +1158,7 @@ training phase and to analyse them more in detail to understand any
 drifts. The reactive approach entails detecting a wrong output and
 identifying its causes, so as to understand how the method can be
 rectified.</p>
-<p>The Continuous Delivery <span id="id9">[<a class="reference internal" href="#id2651">10</a>]</span> and DevOps <span id="id10">[<a class="reference internal" href="#id2652">11</a>]</span>
+<p>The Continuous Delivery <span id="id9">[<a class="reference internal" href="#id2657">10</a>]</span> and DevOps <span id="id10">[<a class="reference internal" href="#id2658">11</a>]</span>
 approaches have been also proposed to better manage the risks of
 releasing changes to Machine Learning applications and, then, do them in
 a safe and reliable way.</p>
@@ -1166,37 +1166,37 @@ a safe and reliable way.</p>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id11"><dl class="citation">
-<dt class="label" id="id2642"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id2648"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Alexey Tsymbal. The problem of concept drift: definitions and related work. 2004.</p>
 </dd>
-<dt class="label" id="id2643"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id2649"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Masashi Sugiyama and Motoaki Kawanabe. <em>Machine Learning in Non-Stationary Environments</em>. MIT Press, 2012. ISBN 9780262017091.</p>
 </dd>
-<dt class="label" id="id2644"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id2650"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>D. Sculley, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-François Crespo, and Dan Dennison. Hidden technical debt in machine learning systems. In C. Cortes, N. Lawrence, D. Lee, M. Sugiyama, and R. Garnett, editors, <em>Advances in Neural Information Processing Systems</em>, volume 28. Curran Associates, Inc., 2015. URL: <a class="reference external" href="https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf</a>.</p>
 </dd>
-<dt class="label" id="id2645"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id2651"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>Neoklis Polyzotis, Sudip Roy, Steven Euijong Whang, and Martin Zinkevich. Data management challenges in production machine learning. In <em>Proceedings of the 2017 ACM International Conference on Management of Data</em>, SIGMOD '17, 1723–1726. New York, NY, USA, 2017. Association for Computing Machinery. URL: <a class="reference external" href="https://doi.org/10.1145/3035918.3054782">https://doi.org/10.1145/3035918.3054782</a>, <a class="reference external" href="https://doi.org/10.1145/3035918.3054782">doi:10.1145/3035918.3054782</a>.</p>
 </dd>
-<dt class="label" id="id2646"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id2652"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Ilias Flaounas. Beyond the technical challenges for deploying machine learning solutions in a software company. 2017. URL: <a class="reference external" href="https://arxiv.org/abs/1708.02363">https://arxiv.org/abs/1708.02363</a>, <a class="reference external" href="https://doi.org/10.48550/ARXIV.1708.02363">doi:10.48550/ARXIV.1708.02363</a>.</p>
 </dd>
-<dt class="label" id="id2647"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dt class="label" id="id2653"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p>Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, and D. Sculley. What’s your ml test score? a rubric for ml production systems. In <em>NIPS 2016 Workshop (2016)</em>. 2016.</p>
 </dd>
-<dt class="label" id="id2648"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dt class="label" id="id2654"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
 <dd><p>Vinay Sridhar, Sriram Subramanian, Dulcardo Arteaga, Swaminathan Sundararaman, Drew Roselli, and Nisha Talagala. Model governance: reducing the anarchy of production ML. In <em>2018 USENIX Annual Technical Conference (USENIX ATC 18)</em>, 351–358. Boston, MA, jul 2018. USENIX Association. URL: <a class="reference external" href="https://www.usenix.org/conference/atc18/presentation/sridhar">https://www.usenix.org/conference/atc18/presentation/sridhar</a>.</p>
 </dd>
-<dt class="label" id="id2650"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dt class="label" id="id2656"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
 <dd><p>Accenture. Model behavior. nothing artificial. 2017.</p>
 </dd>
-<dt class="label" id="id2649"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
+<dt class="label" id="id2655"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
 <dd><p>SaS. Machine learning model governance. white paper. 2019.</p>
 </dd>
-<dt class="label" id="id2651"><span class="brackets"><a class="fn-backref" href="#id9">10</a></span></dt>
+<dt class="label" id="id2657"><span class="brackets"><a class="fn-backref" href="#id9">10</a></span></dt>
 <dd><p>Wolff. <em>A Practical Guide to Continuous Delivery</em>. Addison-Wesley, 2017. ISBN.</p>
 </dd>
-<dt class="label" id="id2652"><span class="brackets"><a class="fn-backref" href="#id10">11</a></span></dt>
+<dt class="label" id="id2658"><span class="brackets"><a class="fn-backref" href="#id10">11</a></span></dt>
 <dd><p>Loukides. <em>MWhat is DevOps?</em> O'Reilly Media, 2012. ISBN.</p>
 </dd>
 </dl>
@@ -1253,7 +1253,7 @@ a safe and reliable way.</p>
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see <a href="./author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+          Di TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>

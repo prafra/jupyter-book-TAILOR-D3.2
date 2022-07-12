@@ -16,7 +16,7 @@ Without entering into the details, these XAI approaches aim at attributing an im
 
 The aforementioned XAI methods are specifically designed for specific DNN models, i.e., they are [model-specific](./model_specific.md). 
 
-However, relying on appropriate image transformations that take advantage of the concept of "superpixels" {cite}`ribeiro`, i.e., the results of the segmentation of an image into regions by considering proximity or similarity measures, also [model-agnostic explanation](./model_spedific.md) methods (such as <span style="font-variant:small-caps;">lime</span> {cite}`ribeiro`, <span style="font-variant:small-caps;">anchor</span> {cite}`ribeiro2018anchors_59`, and <span style="font-variant:small-caps;">lore</span> {cite}`guidotti_lore`) can be employed to explain AI working on images for any kind of black box model. 
+However, relying on appropriate image transformations that take advantage of the concept of "superpixels" {cite}`ribeiro`, i.e., the results of the segmentation of an image into regions by considering proximity or similarity measures, also [model-agnostic explanation](./model_specific.md) methods (such as <span style="font-variant:small-caps;">lime</span> {cite}`ribeiro`, <span style="font-variant:small-caps;">anchor</span> {cite}`ribeiro2018anchors_59`, and <span style="font-variant:small-caps;">lore</span> {cite}`guidotti_lore`) can be employed to explain AI working on images for any kind of black box model. 
 
 The attention areas of explanations returned by these methods are strictly dependent on both:
 - the technique used for segmenting the image to explain and

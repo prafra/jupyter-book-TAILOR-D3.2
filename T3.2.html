@@ -1125,7 +1125,7 @@ unintended or intended damage, manipulation or catastrophic states.</p>
 <div class="section" id="abstract">
 <h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <!-- bold terms in this section were <span style="color: darkblue"> -->
-<p>In this part we will cover the main elements that define the safety and robustness of AI systems. Some of them are common to system safety in general, to software-hardware computer systems or to critical systems engineering, such as <strong>software bugs</strong>. Some others are magnified in artificial intelligence, such as <strong>denial of service</strong>, a robustness issue that can appear by inducing an AI system to unrecoverable states or by generating inputs that collapse the system due to high computational demands. Some other issues are more specific to AI systems, such as <strong>reward hacking</strong>. These new issues appear more clearly in those systems that are specified in non-programmatic or non-explicit ways (e.g., through a utility function to be optimised, through examples, rewards or other implicit ways), as exemplified by systems that operate with solvers or machine learning models. We will pay more attention to these more AI-specific issues because they are less covered in the traditional literature about safety in computer systems. They are also more challenging because of their cognitive character, the ambiguities of human intent, several ethical issues and the relevance of long-term risks. This character and the fast development of the field has also blurred some distinctions between safety (threats without malicious intent) and <a class="reference internal" href="T3.2/security.html"><span class="doc">Security</span></a> (intentional threats), especially in now popular research areas such as <a class="reference internal" href="T3.2/adversarial_attack.html"><span class="doc">Adversarial Attack</span></a> and <span class="xref std std-doc">data_poisoning</span>, and also within <a class="reference internal" href="T3.5.html"><span class="doc std std-doc">data privacy</span></a> (e.g., <strong>information leakage</strong> by querying machine learning models or other <strong>side channel attacks</strong>). In the end, protecting the environment from the system (safety) also requires protecting the system from the environment (<a class="reference internal" href="T3.2/security.html"><span class="doc">Security</span></a>). Taking into account the changing character of the field, we include a taxonomic organisation of terms in the area of AI safety and robustness and their definition.</p>
+<p>In this part we will cover the main elements that define the safety and robustness of AI systems. Some of them are common to system safety in general, to software-hardware computer systems or to critical systems engineering, such as <strong>software bugs</strong>. Some others are magnified in artificial intelligence, such as <strong>denial of service</strong>, a robustness issue that can appear by inducing an AI system to unrecoverable states or by generating inputs that collapse the system due to high computational demands. Some other issues are more specific to AI systems, such as <strong>reward hacking</strong>. These new issues appear more clearly in those systems that are specified in non-programmatic or non-explicit ways (e.g., through a utility function to be optimised, through examples, rewards or other implicit ways), as exemplified by systems that operate with solvers or machine learning models. We will pay more attention to these more AI-specific issues because they are less covered in the traditional literature about safety in computer systems. They are also more challenging because of their cognitive character, the ambiguities of human intent, several ethical issues and the relevance of long-term risks. This character and the fast development of the field has also blurred some distinctions between safety (threats without malicious intent) and <a class="reference internal" href="T3.2/security.html"><span class="doc">Security</span></a> (intentional threats), especially in now popular research areas such as <a class="reference internal" href="T3.2/adversarial_attack.html"><span class="doc">Adversarial Attack</span></a> and <a class="reference internal" href="T3.2/data_poisoning.html"><span class="doc">Data Poisoning</span></a>, and also within <a class="reference internal" href="T3.5.html"><span class="doc std std-doc">data privacy</span></a> (e.g., <strong>information leakage</strong> by querying machine learning models or other <strong>side channel attacks</strong>). In the end, protecting the environment from the system (safety) also requires protecting the system from the environment (<a class="reference internal" href="T3.2/security.html"><span class="doc">Security</span></a>). Taking into account the changing character of the field, we include a taxonomic organisation of terms in the area of AI safety and robustness and their definition.</p>
 </div>
 <div class="section" id="motivation-and-background">
 <h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
@@ -1139,7 +1139,7 @@ algorithms, are interacting with people and the environment at
 increasingly higher levels of autonomy. There have been regulatory
 efforts to limit the use of AI systems in safety-critical or hostile
 environments, such as health, defense, energy, etc.
-<span id="id1">[<a class="reference internal" href="#id103">1</a>, <a class="reference internal" href="#id104">2</a>]</span>, but the consequences can
+<span id="id1">[<a class="reference internal" href="#id105">1</a>, <a class="reference internal" href="#id106">2</a>]</span>, but the consequences can
 also be devastating in areas that were not considered high risk, just by
 the scaling numbers or domino effects of AI systems. On top of the
 numerous safety challenges posed by present-day AI systems, a
@@ -1228,7 +1228,7 @@ Many of the terms and concepts we will expand on correspond to one or
 more of these categories.</p>
 <div class="figure align-center" id="t3-2taxonomy">
 <a class="reference internal image-reference" href="_images/taxonomy.jpg"><img alt="_images/taxonomy.jpg" src="_images/taxonomy.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Taxonomy of AI Safety. Taken from <span id="id3">[<a class="reference internal" href="#id108">3</a>]</span>-</span><a class="headerlink" href="#t3-2taxonomy" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Taxonomy of AI Safety. Taken from <span id="id3">[<a class="reference internal" href="#id110">3</a>]</span>-</span><a class="headerlink" href="#t3-2taxonomy" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="main-keywords">
@@ -1247,30 +1247,30 @@ more of these categories.</p>
 </div>
 <div class="section" id="recommended-reading">
 <h2>Recommended reading<a class="headerlink" href="#recommended-reading" title="Permalink to this headline">¶</a></h2>
-<p>Some introductory sources for AI Safety and Robustnes are <span id="id4">[<a class="reference internal" href="#id108">3</a>, <a class="reference internal" href="T3.2/negative_side_effects.html#id169">1</a>, <a class="reference internal" href="T3.2/alignment.html#id105">1</a>, <a class="reference internal" href="T3.2/security.html#id112">1</a>, <a class="reference internal" href="#id105">7</a>]</span>.</p>
+<p>Some introductory sources for AI Safety and Robustnes are <span id="id4">[<a class="reference internal" href="#id110">3</a>, <a class="reference internal" href="T3.2/negative_side_effects.html#id171">1</a>, <a class="reference internal" href="T3.2/alignment.html#id107">1</a>, <a class="reference internal" href="T3.2/security.html#id114">1</a>, <a class="reference internal" href="#id107">7</a>]</span>.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id5"><dl class="citation">
-<dt class="label" id="id103"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id105"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Luciano Floridi. The european legislation on ai: a brief analysis of its philosophical approach. <em>Philosophy &amp; Technology</em>, 34(2):215–222, 2021.</p>
 </dd>
-<dt class="label" id="id104"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dt class="label" id="id106"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
 <dd><p>Michael Veale and Frederik Zuiderveen Borgesius. Demystifying the draft eu artificial intelligence act—analysing the good, the bad, and the unclear elements of the proposed approach. <em>Computer Law Review International</em>, 22(4):97–112, 2021.</p>
 </dd>
-<dt class="label" id="id108"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dt class="label" id="id110"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
 <dd><p>Huáscar Espinoza, Han Yu, Xiaowei Huang, Freddy Lecue, José Hernández-Orallo, Seán Ó hÉigeartaigh, and Richard Mallah. Towards an AI safety landscape: an overview. <span><a class="reference external" href="#"></a></span>https://www.ai-safety.org/, 2019.</p>
 </dd>
-<dt class="label" id="id166"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id168"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete problems in ai safety. 2016. <a class="reference external" href="https://arxiv.org/abs/1606.06565">arXiv:1606.06565</a>.</p>
 </dd>
-<dt class="label" id="id107"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
+<dt class="label" id="id109"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
 <dd><p>Iason Gabriel. Artificial intelligence, values, and alignment. <em>Minds and machines</em>, 30(3):411–437, 2020.</p>
 </dd>
-<dt class="label" id="id106"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
+<dt class="label" id="id108"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
 <dd><p>Leslie David. Understanding artificial intelligence ethics and safety. <em>The Alan Turing Institute, https://doi.org/10.5281/zenodo.3240529</em>, 2019.</p>
 </dd>
-<dt class="label" id="id105"><span class="brackets"><a class="fn-backref" href="#id4">7</a></span></dt>
+<dt class="label" id="id107"><span class="brackets"><a class="fn-backref" href="#id4">7</a></span></dt>
 <dd><p>Stuart Russell, Daniel Dewey, and Max Tegmark. Research priorities for robust and beneficial artificial intelligence. <em>Ai Magazine</em>, 36(4):105–114, 2015.</p>
 </dd>
 </dl>
@@ -1349,7 +1349,7 @@ field
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see <a href="./author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+          Di TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>

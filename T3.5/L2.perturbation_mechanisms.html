@@ -1112,8 +1112,8 @@ major mechanisms able to provide differential privacy guarantees (see
 mechanisms. <em>The Laplace Mechanism</em> <!--{doc}`./L3.laplace`-->
 is dedicated to perturb functions
 that output real values, allowing them to satisfy
-<a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy</span></a>. The <span class="xref myst">Exponential
-Mechanism</span> is a generalization of the Laplace
+<a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy</span></a>. The <a class="reference internal" href="L3.exponential.html"><span class="doc std std-doc">Exponential
+Mechanism</span></a> is a generalization of the Laplace
 mechanism and also allows to satisfy <a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-differential
 privacy</span></a>. The éGaussian Mechanism* <!--[Gaussian mechanism](./L3.gaussian) -->
 is a variant of the Laplace mechanism, applying to functions that output
@@ -1121,8 +1121,8 @@ real values as well, but allowing them to satisfy the <a class="reference intern
 relaxation. These three mechanisms are appropriate for perturbing
 centralized functions that input a full dataset (e.g., a sum
 query). They are often used as basic building blocks, combined or not,
-for perturbing elaborate functions. Finally, <span class="xref myst">Randomized Response
-Mechanisms</span> input and output one single row
+for perturbing elaborate functions. Finally, <a class="reference internal" href="L3.local_perturbation.html"><span class="doc std std-doc">Randomized Response
+Mechanisms</span></a> input and output one single row
 at a time (represented as a vector of bits): they are local mechanisms
 and can be applied prior to the data collection.</p>
 <div class="section" id="history">
@@ -1143,28 +1143,28 @@ https://www.chromium.org/developers/design-documents/rappor/)-->
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p>The early randomized response mechanism was proposed in
-<span id="id1">[<a class="reference internal" href="#id2671">3</a>]</span>, the Laplace mechanism in
-<span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2663">2</a>]</span> and the Exponential mechanism in
-<span id="id3">[<a class="reference internal" href="#id2670">4</a>]</span>. The Gaussian mechanism was shown to
+<span id="id1">[<a class="reference internal" href="#id2677">3</a>]</span>, the Laplace mechanism in
+<span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2669">2</a>]</span> and the Exponential mechanism in
+<span id="id3">[<a class="reference internal" href="#id2676">4</a>]</span>. The Gaussian mechanism was shown to
 satisfy <span class="math notranslate nohighlight">\((\epsilon, \delta)\)</span>-differential privacy in
-<span id="id4">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2666">1</a>]</span>. Finally,
-<span id="id5">[<a class="reference internal" href="#id2672">5</a>]</span> provides an overview and an
+<span id="id4">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2672">1</a>]</span>. Finally,
+<span id="id5">[<a class="reference internal" href="#id2678">5</a>]</span> provides an overview and an
 evaluation of various randomized response mechanisms proposed before
 2021.</p>
 <p id="id6"><dl class="citation">
-<dt class="label" id="id2666"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id2672"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In <em>TCC</em>. 2006.</p>
 </dd>
-<dt class="label" id="id2669"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dt class="label" id="id2675"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In <em>EUROCRYPT</em>. 2006.</p>
 </dd>
-<dt class="label" id="id2671"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
+<dt class="label" id="id2677"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
 <dd><p>Stanley L. Warner. Randomized response: a survey technique for eliminating evasive answer bias. <em>Journal of the American Statistical Association</em>, 60 309:63–6, 1965.</p>
 </dd>
-<dt class="label" id="id2670"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dt class="label" id="id2676"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
 <dd><p>Frank McSherry and Kunal Talwar. Mechanism design via differential privacy. <em>48th Annual IEEE Symposium on Foundations of Computer Science (FOCS'07)</em>, pages 94–103, 2007.</p>
 </dd>
-<dt class="label" id="id2672"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id2678"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Graham Cormode, Samuel Maddock, and Carsten Maple. Frequency estimation under local differential privacy. <em>Proc. VLDB Endow.</em>, 14(11):2046–2058, 2021.</p>
 </dd>
 </dl>
@@ -1221,7 +1221,7 @@ evaluation of various randomized response mechanisms proposed before
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see <a href="./author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+          Di TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>
