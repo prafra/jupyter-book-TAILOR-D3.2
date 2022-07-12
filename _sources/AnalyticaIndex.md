@@ -2,92 +2,119 @@
 
 Here, you can find the list of entries in alphabetical order.
 
-- {doc}`index/T3.6/2CC2`
-- {doc}`index/T3.4/Accountability`
-- {doc}`index/T3.2/Alignment`
-- {doc}`index/T3.2/Adversarial attack`
-- {doc}`index/T3.2/Adversarial example`
-- {doc}`index/T3.2/Adversarial input`
-- {doc}`index/T3.1/Ante-hoc Explanation`
-- {doc}`index/T3.2/Assessment`
-- {doc}`index/T3.5/Attacks Anonym`
-- {doc}`index/T3.5/Attacks on Pseudonymised Data`
-- {doc}`index/T3.3/Auditing`
-- {doc}`index/T3.3/Bias`
-- {doc}`index/T3.1/Black-box Explanations`
-- {doc}`index/T3.2/Brittleness`
-- {doc}`index/T3.6/C2C`
-- {doc}`index/T3.6/Cloud Computing`
-- {doc}`index/T3.4/Continuous monitoring`
-- {doc}`index/T3.6/cradle 2 cradle`
-- {doc}`index/T3.6/Cradle`
-- {doc}`index/T3.5/Data Anonymization`
-- {doc}`index/T3.6/Data Center`
-- {doc}`index/T3.2/Data Poisoning`
-- {doc}`index/T3.2/Dependability`
-- {doc}`index/T3.5/Differential Privacy models`
+- {doc}`index/Accountability`
+- {doc}`index/Alignment`
+- {doc}`index/Assurance`
+- {doc}`index/Attacks on Anonymization Schemes`
+- {doc}`index/Attacks on Partition-based Algorithms`
+- {doc}`index/Attacks on Pseudonymised Data`
+- {doc}`index/Auditing`
+- {doc}`index/Autonomy Levels`
+- {doc}`index/Dimensions of Explanations`
+- {doc}`index/Bias`
+- {doc}`index/Certification Standards`
+- {doc}`index/Cloud Computing`
+- {doc}`index/Computational Differential Privacy`
+- {doc}`index/Corrigibility`
+- {doc}`index/Counterfactual Explanations`
+- {doc}`index/Data Anonymization`
+- {doc}`index/Data Centers Management`
+- {doc}`index/Data Minimisation`
+- {doc}`index/Data sanitization`
+- {doc}`index/deFinetti Attack`
+- {doc}`index/Differential Privacy models`
 
-- [Differential Privacy - ($\epsilon$,$\delta$)-Differential Privacy](index/T3.5/epsilon_delta-differential_privacy.md)
-- [Differential Privacy - $\epsilon$-Differential Privacy](index/T3.5/epsilon_delta-differential_privacy.md)
-- [Differential Privacy - $\epsilon$-Indistinguishability](index/T3.5/Epsilon-indist.md)
+- [Differential Privacy - ($\epsilon$,$\delta$)-Differential Privacy](index/epsilon_delta-differential_privacy.md)
+- [Differential Privacy - $\epsilon$-Differential Privacy](index/Epsilon-differential_privacy.md)
 
-- {doc}`index/T3.2/Data Shift`
-- {doc}`index/T3.1/Dimensions of Explanations`
-- {doc}`index/T3.3/Discrimination`
-- {doc}`index/T3.2/Distributional Shift`
-- {doc}`index/T3.2/Direct`
-- {doc}`index/T3.6/Edge Computing`
-- {doc}`index/T3.6/Energy Aware`
-- {doc}`index/T3.6/Energy Efficient`
-- {doc}`index/T3.2/Evaluation`
-- {doc}`index/T3.3/Equity`
-- {doc}`index/T3.1/Explanation by Design`
-- {doc}`index/T3.3/Fair Machine Learning`
-- {doc}`index/T3.3/Fairness`
-- {doc}`index/T3.1/Features Importance`
-- {doc}`index/T3.4/Frame`
-- {doc}`index/T3.6/Fog Computing`
-- {doc}`index/T3.1/Generalizable XAI`
-- {doc}`index/T3.1/Global Explanations`
-- {doc}`index/T3.6/Green AI`
-- {doc}`index/T3.6/Green Computing`
-- {doc}`index/T3.6/Green IT`
-- {doc}`index/T3.6/ICT sustainability`
-- {doc}`index/T3.2/Intended`
-- {doc}`index/T3.3/Justice`
-- {doc}`index/T3.5/K-Anonymity`
-- {doc}`index/T3.5/Linking Attack`
-- {doc}`index/T3.1/Local Explanations`
-- {doc}`index/T3.4/Meaningful human control`
-- {doc}`index/T3.2/Measurement`
-- {doc}`index/T3.2/Misdirect`
-- {doc}`index/T3.1/Model-Agnostic`
-- {doc}`index/T3.1/Model-Specific`
-- {doc}`index/T3.1/Not Generalizable XAI`
-- {doc}`index/T3.2/Negative Side Effects`
-- {doc}`index/T3.5/Perturbation`
-- {doc}`index/T3.1/Post-hoc Explanations`
-- {doc}`index/T3.5/Privacy model`
-- {doc}`index/T3.4/Provenance`
-- {doc}`index/T3.5/Pseudonymised Data`
-- {doc}`index/T3.5/Re-identification Attack`
-- {doc}`index/T3.6/Regenerative Design`
-- {doc}`index/T3.2/Reliability`
-- {doc}`index/T3.4/Repeatability`
-- {doc}`index/T3.4/Replicability`
-- {doc}`index/T3.4/Reproducibility`
-- {doc}`index/T3.6/Resource Allocation`
-- {doc}`index/T3.6/Resource Prediction`
-- {doc}`index/T3.6/Resource Scheduling`
-- {doc}`index/T3.2/Robustness`
-- {doc}`index/T3.1/Saliency Maps`
-- {doc}`index/T3.2/Security`
-- {doc}`index/T3.3/Segregation`
-- {doc}`index/T3.1/Single Tree Approximation`
-- {doc}`index/T3.2/Testing`
-- {doc}`index/T3.4/Traceability`
-- {doc}`index/T3.1/Transparency`
-- {doc}`index/T3.2/Unintended`
-- {doc}`index/T3.4/Wicked`
-- {doc}`index/T3.6/Workload Forecast`
-- {doc}`index/T3.6/Workload Prediction`
+- {doc}`index/Differential Privacy - Other Variants or Generalizations`
+- {doc}`index/Dimensions of Explanations`
+- {doc}`index/Discrimination`
+- {doc}`index/Distributional Shift`
+- {doc}`index/Electricity Price Forecast`
+- {doc}`index/Enforcement`
+
+- [$\epsilon$-Indistinguishability](index/epsilon-indistinguishability.md)
+
+- {doc}`index/Equity`
+- {doc}`index/Evaluating Explanations`
+- {doc}`index/Exponential Mechanism`
+- {doc}`index/Fair Machine Learning`
+- {doc}`index/Fairness`
+- {doc}`index/Features Importance`
+- {doc}`index/Generality`
+- {doc}`index/General Privacy-related Attacks`
+- {doc}`index/Global Explanations`
+- {doc}`index/Global Recoding`
+- {doc}`index/Goal Stability`
+- {doc}`index/Green Computing`
+- {doc}`index/Human-in-the-loop`
+- {doc}`index/Impact Assessment of Trustworthy AI`
+- {doc}`index/Interpretability`
+- {doc}`index/Interruptibility`
+- {doc}`index/Justice`
+- {doc}`index/K-Anonymity`
+- {doc}`index/Laplace Mechanism`
+- {doc}`index/Local Explanations`
+- {doc}`index/Local perturbation`
+- {doc}`index/Local Recoding`
+- {doc}`index/Meaningful human control`
+- {doc}`index/Membership Inference Attacks`
+- {doc}`index/Minimality Attack`
+- {doc}`index/Model-Agnostic`
+- {doc}`index/Model-Specific`
+- {doc}`index/Mondrian`
+- {doc}`index/Monitoring`
+- {doc}`index/Moral responsibility`
+- {doc}`index/Multidimensional Recoding`
+- {doc}`index/Negative Side Effects`
+- {doc}`index/Nice properties of Privacy Models`
+- {doc}`index/Partition-Based Algorithms`
+- {doc}`index/Perturbation Mechanisms`
+- {doc}`index/Post-hoc Explanations`
+- {doc}`index/Privacy algorithm`
+- {doc}`index/Privacy Mechanism`
+- {doc}`index/Privacy model`
+- {doc}`index/Privacy-Preserving Data Publishing`
+- {doc}`index/Problem of many hands`
+- {doc}`index/Pseudonymised Data`
+- {doc}`index/Randomized response`
+- {doc}`index/Reconstruction Attacks`
+- {doc}`index/Re-identification Attack`
+- {doc}`index/Reliability`
+- {doc}`index/Repeatability`
+- {doc}`index/Replicability`
+- {doc}`index/Reproducibility`
+- {doc}`index/Resource Prediction`
+- {doc}`index/Resource Scheduling`
+- {doc}`index/Reward Hacking`
+- {doc}`index/Robustness`
+- {doc}`index/Rules List and Rules Set`
+- {doc}`index/Safety Criticality`
+- {doc}`index/Safety Standards`
+- {doc}`index/Saliency Maps`
+- {doc}`index/Scalable Oversight Problem`
+- {doc}`index/Security under post-processing`
+- {doc}`index/Segregation`
+- {doc}`index/Self-composition`
+- {doc}`index/Side Effects`
+- {doc}`index/Single Tree Approximation`
+- {doc}`index/Specification`
+- {doc}`index/Stochastic Forecast`
+- {doc}`index/Testing`
+- {doc}`index/Traceability`
+- {doc}`index/Training Corruption`
+- {doc}`index/Transparency`
+- {doc}`index/Uncertainty`
+- {doc}`index/Validation`
+- {doc}`index/Verification`
+
+<!--
+- [Model Specific](./T3.1/model_specific.md)
+- [Model Agnostic](./T3.1/model_specific.md)
+
+
+**Note from Francesca:** I tried two different ways to list terms.
+1) *Dimensions of Explanations* -- using this method it will appear in the left menù, but it requires two steps to reach the page with the definition
+2) *Model Specific / Model Agnostic* -- they won't appear in the menu, but they are direct links to the right entry
+-->

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Safety and Robustness &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
+    <title>Safety and Roboustness &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -37,22 +37,24 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Alignment" href="T3.2/alignment.html" />
-    <link rel="prev" title="Global vs Local Explanations" href="T3.1/global_local.html" />
+    <link rel="next" title="Fairness, Equity, and Justice by Design" href="T3.3.html" />
+    <link rel="prev" title="Model-Specific vs Model-Agnostic Explainers" href="T3.1/model_specific.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -81,12 +83,12 @@
       <img src="_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -103,8 +105,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="T3.1.html">
-   Explainable AI Systems
+  <a class="reference internal" href="Jupyter.html">
+   Jupyter demos
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -112,33 +114,33 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="T3.1/XAI_kinds.html">
-     Kinds of Explanations
+   <li class="toctree-l2">
+    <a class="reference internal" href="introJupyter.html">
+     Welcome to your Jupyter Book
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="T3.1/feature_importance.html">
-       Feature Importance
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="T3.1/saliency_maps.html">
-       Saliency Maps
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="T3.1/single_tree.html">
-       Single Tree Approximation
-      </a>
-     </li>
-    </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdownJupyter.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooksJupyter.html">
+     Content with notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="T3.1.html">
+   Explainable AI Systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="T3.1/XAI_dimensions.html">
      Dimensions of Explanations
@@ -150,139 +152,30 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="T3.1/blackbox_transparent.html">
-       Black Box Explanation vs Explanation by Design
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="T3.1/model_specific.html">
        Model-Specific vs Model-Agnostic Explainers
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="T3.1/global_local.html">
-       Global vs Local Explanations
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Safety and Robustness
+   Safety and Roboustness
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/alignment.html">
-     Alignment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/robustness.html">
-     Robustness
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/reliability.html">
-     Reliability
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/evaluation.html">
-     Evaluation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/negative_side_effects.html">
-     Negative side effects
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/distributional_shift.html">
-     Distributional shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/security.html">
-     Security
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/adversarial_attack.html">
-     Adversarial Attack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.2/data_poisoning.html">
-     Data Poisoning
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="T3.3.html">
    Fairness, Equity, and Justice by Design
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/auditing.html">
-     Auditing AI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/bias.html">
-     Bias
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/equity.html">
-     Discrimination &amp; Equity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/fairness.html">
-     Fairness notions and metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/fair_ML.html">
-     Fair Machine Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/discrimination.html">
-     Grounds of Discrimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/justice.html">
-     Justice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.3/segregation.html">
-     Segregation
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="T3.4/L1.Accountability_and_Reproducibility.html">
+  <a class="reference internal" href="T3.4.html">
    Accountability and Reproducibility
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -291,40 +184,57 @@
     <a class="reference internal" href="T3.4/L2.Accountability.html">
      Accountability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="T3.4/L3.Wicked_problems.html">
-       Wicked problems
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="T3.4/L3.Meaningful_human_control.html">
-       Meaningful human control
+       Meaningful Human Control
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="T3.4/L3.The_frame_problem.html">
-       The Frame Problem
+       The Frame problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.Accountability_gaps.html">
+       Accountability Gaps
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="T3.4/L2.Reproducibility.html">
      Reproducibility
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.Guidelines_reproducibility.html">
+       Guidelines
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.4/L3.software_frameworks_supporting_reproducibility.html">
+       Software frameworks supporting reproducibility
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="T3.4/L2.Traceability.html">
      Traceability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -347,45 +257,38 @@
   <a class="reference internal" href="T3.5.html">
    Respect for Privacy
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
+   <li class="toctree-l2">
     <a class="reference internal" href="T3.5/L1.anonymization.html">
-     Data Anonymization (and Pseudonymization)
+     Data Anonymization and Pseudonymization
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="T3.5/L2.pseudonymization.html">
-       Pseudonymization
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="T3.5/L1.privacy_model.html">
      Privacy Models
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.privmod_properties.html">
+       Properties of Privacy Models
+      </a>
+     </li>
      <li class="toctree-l3 has-children">
       <a class="reference internal" href="T3.5/L2.differential_privacy.html">
        Differential Privacy
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-      <label for="toctree-checkbox-12">
+      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+      <label for="toctree-checkbox-10">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -412,8 +315,13 @@
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="T3.5/L2.perturbation_mechanisms.html">
-         Achieving Differential Privacy
+        <a class="reference internal" href="T3.5/L3.computational_DP.html">
+         Computational Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.other_DP.html">
+         Other Variants or Generalizations
         </a>
        </li>
       </ul>
@@ -422,6 +330,50 @@
       <a class="reference internal" href="T3.5/L2.k_anonymity.html">
        k-anonymity
       </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="T3.5/L1.privacy_mechanisms.html">
+     Privacy Mechanisms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="T3.5/L2.perturbation_mechanisms.html">
+       Perturbation Mechanisms
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.local_perturbation.html">
+         Local Perturbation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.laplace.html">
+         Laplace Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.exponential.html">
+         Exponential Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="T3.5/L3.randomness_alignments.html">
+         Randomness Alignments
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -440,13 +392,28 @@
        Re-identification Attack
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.membership.html">
+       Membership Attack
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="T3.5/L2.reconstruction.html">
+       Reconstruction Attack
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="T3.6.html">
    Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="AnalyticaIndex.html">
+   Index
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
   <label for="toctree-checkbox-14">
@@ -454,187 +421,113 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="T3.6/greenAI.html">
-     Green AI
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="T3.6/power_aware.html">
-       Power-aware Computing
-      </a>
-     </li>
-    </ul>
-   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="T3.6/cloud_computing.html">
-     Cloud Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.6/edge_computing.html">
-     Edge Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.6/data_centre.html">
-     Data Centre
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.6/cradle_to_cradle.html">
-     Cradle-to-cradle Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.6/resource_prediction.html">
-     Resource Prediction
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="T3.6/resource_allocation.html">
-     Resource Allocation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="AnalyticaIndex.html">
-   Index
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/2CC2.html">
-     2CC2
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Accountability.html">
+    <a class="reference internal" href="index/Accountability.html">
      Accountability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Alignment.html">
+    <a class="reference internal" href="index/Alignment.html">
      Alignment
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Adversarial%20attack.html">
-     Adversarial Attack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Adversarial%20example.html">
-     Adversarial Example
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Adversarial%20input.html">
-     Adversarial Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Ante-hoc%20Explanation.html">
+    <a class="reference internal" href="index/Ante-hoc%20Explanation.html">
      Ante-hoc Explanation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Assessment.html">
-     Assessment
+    <a class="reference internal" href="index/Assurance.html">
+     Assurance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Attacks%20Anonym.html">
-     Attacks on Anonymization Schema
+    <a class="reference internal" href="index/Attacks%20on%20Anonymization%20Schemes.html">
+     Attacks on Anonymization Schemes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Attacks%20on%20Pseudonymised%20Data.html">
+    <a class="reference internal" href="index/Attacks%20on%20Partition-based%20Algorithms.html">
+     Attacks on Partition-based Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Attacks%20on%20Pseudonymised%20Data.html">
      Attacks on Pseudonymised Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Auditing.html">
+    <a class="reference internal" href="index/Auditing.html">
      Auditing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Bias.html">
+    <a class="reference internal" href="index/Autonomy%20Levels.html">
+     Autonomy Levels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Bias.html">
      Bias
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Black-box%20Explanations.html">
-     Black-box Explanation
+    <a class="reference internal" href="index/Certification%20Standards.html">
+     Certification
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Brittleness.html">
-     Brittleness
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/C2C.html">
-     C2C
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Cloud%20Computing.html">
+    <a class="reference internal" href="index/Cloud%20Computing.html">
      Cloud Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Continuous%20monitoring.html">
-     Continuous Performance Monitoring
+    <a class="reference internal" href="index/Computational%20Differential%20Privacy.html">
+     Computational Differential Privacy
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/cradle%202%20cradle.html">
-     Cradle 2 cradle
+    <a class="reference internal" href="index/Corrigibility.html">
+     Corrigibility
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Cradle.html">
-     Cradle-to-cradle Design
+    <a class="reference internal" href="index/Counterfactual%20Explanations.html">
+     Counterfactual explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Data%20Anonymization.html">
+    <a class="reference internal" href="index/Data%20Anonymization.html">
      Data Anonymization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Data%20Center.html">
-     Data Center
+    <a class="reference internal" href="index/Data%20Centers%20Management.html">
+     Data Centers Management
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Data%20Poisoning.html">
-     Data Poisoning
+    <a class="reference internal" href="index/Data%20Minimisation.html">
+     Data Minimisation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Dependability.html">
-     Dependability
+    <a class="reference internal" href="index/Data%20sanitization.html">
+     Data Sanitization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Differential%20Privacy%20models.html">
+    <a class="reference internal" href="index/deFinetti%20Attack.html">
+     deFinetti Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Differential%20Privacy%20models.html">
      Differential Privacy Models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/epsilon_delta-differential_privacy.html">
+    <a class="reference internal" href="index/epsilon_delta-differential_privacy.html">
      (
      <span class="math notranslate nohighlight">
       \(\epsilon\)
@@ -647,7 +540,7 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Epsilon-differential_privacy.html">
+    <a class="reference internal" href="index/Epsilon-differential_privacy.html">
      <span class="math notranslate nohighlight">
       \(\epsilon\)
      </span>
@@ -655,7 +548,37 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Epsilon-indist.html">
+    <a class="reference internal" href="index/Differential%20Privacy%20-%20Other%20Variants%20or%20Generalizations.html">
+     Differential Privacy - Other Variants or Generalizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations (Explainable AI Systems)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Discrimination.html">
+     Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Distributional%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Electricity%20Price%20Forecast.html">
+     Electricity Price Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Enforcement.html">
+     Enforcement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/epsilon-indistinguishability.html">
      <span class="math notranslate nohighlight">
       \(\epsilon\)
      </span>
@@ -663,313 +586,358 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Data%20Shift.html">
-     Distributional Shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Dimensions%20of%20Explanations.html">
-     Dimensions of Explanations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Discrimination.html">
-     Grounds of Discrimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Distributional%20Shift.html">
-     Distributional Shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Direct.html">
-     Direct Behaviour
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Edge%20Computing.html">
-     Edge Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Energy%20Aware.html">
-     Energy-aware Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Energy%20Efficient.html">
-     Energy-efficient Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Evaluation.html">
-     Evaluation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Equity.html">
+    <a class="reference internal" href="index/Equity.html">
      Equity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Explanation%20by%20Design.html">
-     Explanation by Design
+    <a class="reference internal" href="index/Evaluating%20Explanations.html">
+     Evaluating Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Fair%20Machine%20Learning.html">
+    <a class="reference internal" href="index/Exponential%20Mechanism.html">
+     Exponential Mechanism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Fair%20Machine%20Learning.html">
      Fair Machine Learning
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Fairness.html">
+    <a class="reference internal" href="index/Fairness.html">
      Fairness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Features%20Importance.html">
+    <a class="reference internal" href="index/Features%20Importance.html">
      Feature Importance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Frame.html">
-     The Frame Problem
+    <a class="reference internal" href="index/Generality.html">
+     Generality
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Fog%20Computing.html">
-     Fog Computing
+    <a class="reference internal" href="index/General%20Privacy-related%20Attacks.html">
+     General Privacy-related Attacks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Generalizable%20XAI.html">
-     Model Agnostic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Global%20Explanations.html">
+    <a class="reference internal" href="index/Global%20Explanations.html">
      Global Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Green%20AI.html">
-     Green AI
+    <a class="reference internal" href="index/Global%20Recoding.html">
+     Global Recording
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Green%20Computing.html">
+    <a class="reference internal" href="index/Goal%20Stability.html">
+     Goal Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Green%20Computing.html">
      Green Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Green%20IT.html">
-     Green IT
+    <a class="reference internal" href="index/Human-in-the-loop.html">
+     Human-in-the-loop
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/ICT%20sustainability.html">
-     ICT sustainability
+    <a class="reference internal" href="index/Impact%20Assessment%20of%20Trustworthy%20AI.html">
+     Impact Assessment of Trustworthy AI
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Intended.html">
-     Intended Behaviour
+    <a class="reference internal" href="index/Interpretability.html">
+     Interpretability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Justice.html">
+    <a class="reference internal" href="index/Interruptibility.html">
+     Interruptibility
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Justice.html">
      Justice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/K-Anonymity.html">
+    <a class="reference internal" href="index/K-Anonymity.html">
      K-anonymity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Linking%20Attack.html">
-     Linking Attack
+    <a class="reference internal" href="index/Laplace%20Mechanism.html">
+     Laplace Mecanism
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Local%20Explanations.html">
+    <a class="reference internal" href="index/Local%20Explanations.html">
      Local Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Meaningful%20human%20control.html">
+    <a class="reference internal" href="index/Local%20perturbation.html">
+     Local Perturbation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Local%20Recoding.html">
+     Local Recording
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Meaningful%20human%20control.html">
      Meaningful Human Control
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Measurement.html">
-     Measurement
+    <a class="reference internal" href="index/Membership%20Inference%20Attacks.html">
+     Membership Inference Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Mesh%20Computing.html">
-     Mesh Computing
+    <a class="reference internal" href="index/Minimality%20Attack.html">
+     Minimality Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Misdirect.html">
-     Misdirect Behaviour
+    <a class="reference internal" href="index/Model-Agnostic.html">
+     Model Agnostic (Explainable AI Systems)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Model-Agnostic.html">
-     Model Agnostic
+    <a class="reference internal" href="index/Model-Specific.html">
+     Model Specific (Explainable AI Systems)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Model-Specific.html">
-     Model Specific
+    <a class="reference internal" href="index/Mondrian.html">
+     Mondrian
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Negative%20Side%20Effects.html">
+    <a class="reference internal" href="index/Monitoring.html">
+     Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Moral%20responsibility.html">
+     Moral Responsability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Multidimensional%20Recoding.html">
+     Multidimensional Recording
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Negative%20Side%20Effects.html">
      Negative Side Effects
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Not%20Generalizable%20XAI.html">
-     Model Specific
+    <a class="reference internal" href="index/Nice%20properties%20of%20Privacy%20Models.html">
+     Nice Properties of Privacy Models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Perturbation.html">
-     Achiving Differential Privacy
+    <a class="reference internal" href="index/Partition-Based%20Algorithms.html">
+     Partition-Based Algorithms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Post-hoc%20Explanations.html">
+    <a class="reference internal" href="index/Perturbation%20Mechanisms.html">
+     Perturbation Mechanisms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Post-hoc%20Explanations.html">
      Post-hoc Explanation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Power%20Aware.html">
-     Power-aware Computing
+    <a class="reference internal" href="index/Privacy%20algorithm.html">
+     Privacy Algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Privacy%20model.html">
-     Privacy models
+    <a class="reference internal" href="index/Privacy%20Mechanism.html">
+     Privacy Mechanism
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Provenance.html">
-     Provenance Tracking
+    <a class="reference internal" href="index/Privacy%20model.html">
+     Privacy model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Pseudonymised%20Data.html">
-     Pseudonymization
+    <a class="reference internal" href="index/Privacy-Preserving%20Data%20Publishing.html">
+     Privacy-Preserving Data Publishing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.5/Re-identification%20Attack.html">
+    <a class="reference internal" href="index/Problem%20of%20many%20hands.html">
+     Problem of Many Hands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Randomized%20response.html">
+     Randomized response
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Reconstruction%20Attacks.html">
+     Reconstruction Attacks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Re-identification%20Attack.html">
      Re-identification Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Regenerative%20Design.html">
-     Regenerative Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Reliability.html">
+    <a class="reference internal" href="index/Reliability.html">
      Reliability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Repeatability.html">
+    <a class="reference internal" href="index/Repeatability.html">
      Repeatability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Replicability.html">
+    <a class="reference internal" href="index/Replicability.html">
      Replicability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Reproducibility.html">
+    <a class="reference internal" href="index/Reproducibility.html">
      Reproducibility
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Resource%20Allocation.html">
-     Resource Allocation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Resource%20Prediction.html">
+    <a class="reference internal" href="index/Resource%20Prediction.html">
      Resource Prediction
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Resource%20Scheduling.html">
+    <a class="reference internal" href="index/Resource%20Scheduling.html">
      Resource Scheduling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Robustness.html">
+    <a class="reference internal" href="index/Reward%20Hacking.html">
+     Reward Hacking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Robustness.html">
      Robustness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Saliency%20Maps.html">
+    <a class="reference internal" href="index/Rules%20List%20and%20Rules%20Set.html">
+     Rules List and Rules Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Safety%20Criticality.html">
+     Safety Criticality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Safety%20Standards.html">
+     Safety Standards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Saliency%20Maps.html">
      Saliency Maps
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Security.html">
-     Security
+    <a class="reference internal" href="index/Scalable%20Oversight%20Problem.html">
+     Scalable Oversight Problem
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.3/Segregation.html">
+    <a class="reference internal" href="index/Security%20under%20post-processing.html">
+     Security under Post-processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Segregation.html">
      Segregation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Single%20Tree%20Approximation.html">
+    <a class="reference internal" href="index/Self-composition.html">
+     Self-composition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Side%20Effects.html">
+     Side Effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Single%20Tree%20Approximation.html">
      Single Tree Approxiamation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Testing.html">
+    <a class="reference internal" href="index/Specification.html">
+     Specification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Stochastic%20Forecast.html">
+     Stochastic Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Testing.html">
      Testing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Traceability.html">
+    <a class="reference internal" href="index/Traceability.html">
      Traceability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.1/Transparency.html">
+    <a class="reference internal" href="index/Training%20Corruption.html">
+     Training Corruption
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="index/Transparency.html">
      Transparency
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.2/Unintended.html">
-     Unintended Behaviour
+    <a class="reference internal" href="index/Uncertainty.html">
+     Uncertainty
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.4/Wicked.html">
-     Wicked Problems
+    <a class="reference internal" href="index/Validation.html">
+     Validation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Workload%20Forecast.html">
-     Workload Forecast
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="index/T3.6/Workload%20Prediction.html">
-     Workload Prediction
+    <a class="reference internal" href="index/Verification.html">
+     Verification
     </a>
    </li>
   </ul>
@@ -999,8 +967,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -1008,7 +976,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -1016,11 +984,11 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/T3.2.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1032,12 +1000,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.2.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -1045,8 +1013,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1054,252 +1022,36 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstract">
-   Abstract
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation-and-background">
-   Motivation and Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#guidelines">
-   Guidelines
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-keywords">
-   Main Keywords
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#recommended-reading">
-   Recommended reading
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Safety and Roboustness</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="safety-and-robustness">
-<h1>Safety and Robustness<a class="headerlink" href="#safety-and-robustness" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p><strong>Safety and Robustness</strong>: The safety of an AI system refers to the
-extent the system meets its intended functionality without producing any
-physical or psychological harm, especially to human beings, and by
-extension to other material or immaterial elements that may be valuable
-for humans, including the system itself. Safety must also cover the way
-and conditions in which the system ceases its operation, and the
-consequences of stopping. The term robustness emphasises that safety and
-—conditionally to it— functionality, must be preserved under harsh
-conditions, including unanticipated errors, exceptional situations,
-unintended or intended damage, manipulation or catastrophic states.</p>
-</div>
-<div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
-<!-- bold terms in this section were <span style="color: darkblue"> -->
-<p>In this part we will cover the main elements that define the safety and robustness of AI systems. Some of them are common to system safety in general, to software-hardware computer systems or to critical systems engineering, such as <strong>software bugs</strong>. Some others are magnified in artificial intelligence, such as <strong>denial of service</strong>, a robustness issue that can appear by inducing an AI system to unrecoverable states or by generating inputs that collapse the system due to high computational demands. Some other issues are more specific to AI systems, such as <strong>reward hacking</strong>. These new issues appear more clearly in those systems that are specified in non-programmatic or non-explicit ways (e.g., through a utility function to be optimised, through examples, rewards or other implicit ways), as exemplified by systems that operate with solvers or machine learning models. We will pay more attention to these more AI-specific issues because they are less covered in the traditional literature about safety in computer systems. They are also more challenging because of their cognitive character, the ambiguities of human intent, several ethical issues and the relevance of long-term risks. This character and the fast development of the field has also blurred some distinctions between safety (threats without malicious intent) and <a class="reference internal" href="T3.2/security.html"><span class="doc">Security</span></a> (intentional threats), especially in now popular research areas such as <a class="reference internal" href="T3.2/adversarial_attack.html"><span class="doc">Adversarial Attack</span></a> and <a class="reference internal" href="T3.2/data_poisoning.html"><span class="doc">Data Poisoning</span></a>, and also within <a class="reference internal" href="T3.5.html"><span class="doc std std-doc">data privacy</span></a> (e.g., <strong>information leakage</strong> by querying machine learning models or other <strong>side channel attacks</strong>). In the end, protecting the environment from the system (safety) also requires protecting the system from the environment (<a class="reference internal" href="T3.2/security.html"><span class="doc">Security</span></a>). Taking into account the changing character of the field, we include a taxonomic organisation of terms in the area of AI safety and robustness and their definition.</p>
-</div>
-<div class="section" id="motivation-and-background">
-<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
-<p>Given the increasing capabilities and widespread use of artificial
-intelligence, there is a growing concern about its risks, as humans are
-progressively replaced or sidelined from the decision loop of
-intelligent machines. The technical foundations and assumptions on which
-traditional safety engineering principles are based are inadequate for
-systems in which AI algorithms, and in particular Machine Learning (ML)
-algorithms, are interacting with people and the environment at
-increasingly higher levels of autonomy. There have been regulatory
-efforts to limit the use of AI systems in safety-critical or hostile
-environments, such as health, defense, energy, etc.
-<span id="id1">[<a class="reference internal" href="#id105">1</a>, <a class="reference internal" href="#id106">2</a>]</span>, but the consequences can
-also be devastating in areas that were not considered high risk, just by
-the scaling numbers or domino effects of AI systems. On top of the
-numerous safety challenges posed by present-day AI systems, a
-forward-looking analysis on more capable future AI systems raises more
-systemic concerns, such as highly disruptive scenarios in the workplace,
-the effect on human cognition in the long term and even existential
-risks.</p>
-</div>
-<div class="section" id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
-<p>Actions to ensure safety and robustness of AI systems need to take a
-holistic perspective, encompassing all the elements and stages
-associated with the conception, design, implementation and maintenance
-of these systems. We organise<!--[^1]--> the field of AI safety and robustness
-into seven groups, following similar categorisations<a class="footnote-reference brackets" href="#landscape" id="id2">1</a>:</p>
-<ul class="simple">
-<li><p><strong>AI Safety Foundations</strong>: This category covers a number of foundational
-concepts, characteristics and problems related to AI safety that
-need special consideration from a theoretical perspective. This
-includes concepts such as uncertainty, generality or value
-alignment, as well as characteristics such autonomy levels, safety
-criticality, types of human-machine and environment-machine
-interaction. This group intends to collect any cross-category
-concerns in AI Safety and Robustness.</p></li>
-<li><p><strong>Specification and Modelling</strong>: The main scope of this category is on
-how to describe needs, designs and actual operating AI systems from
-different perspectives (technical concerns) and abstraction levels.
-This includes the specification and modelling of risk management
-properties (e.g., hazards, failures modes, mitigation measures), as
-well as safety-related requirements, training, behaviour or quality
-attributes in AI-based systems.</p></li>
-<li><p><strong>Verification and Validation</strong>: This category concerns design and
-implementation-time approaches to ensure that an AI-based system
-meets its requirements (verification) and behaves as expected
-(validation). The range of techniques covers any
-formal/mathematical, model-based simulation or testing approach that
-provides evidence that an AI-based system satisfies its defined
-(safety) requirements and does not deviate from its intended
-behaviour and causes unintended consequences, even in extreme and
-unanticipated situations (robustness).</p></li>
-<li><p><strong>Runtime Monitoring and Enforcement</strong>: The increasing autonomy and
-learning nature of AI-based systems is particularly challenging for
-their verification and validation (V&amp;V), due to our inability to
-collect an epistemologically sufficient quantity of evidence to
-ensure correctness. Runtime monitoring is useful to cover the gaps
-of design-time V&amp;V by observing the internal states of a given
-system and its interactions with external entities, with the aim of
-determining system behaviour correctness or predicting potential
-risks. Enforcement deals with runtime mechanisms to self-adapt,
-optimise or reconfigure system behaviour with the aim of supporting
-fallback to a safe system state from the (anomalous) current state.</p></li>
-<li><p><strong>Human-Machine Interaction</strong>: As autonomy progressively substitutes
-cognitive human tasks, some kind of human-machine interaction issues
-become more critical, such as the loss of situational awareness or
-overconfidence. Other issues include: collaborative missions that
-need unambiguous communication to manage self-initiative to start or
-transfer tasks; safety-critical situations in which earning and
-maintaining trust is essential at operational phases; or cooperative
-human-machine decision tasks where understanding machine decisions
-are crucial to validate safe autonomous actions.</p></li>
-<li><p><strong>Process Assurance and Certification</strong>: Process Assurance is the
-planned and systematic activities that assure system lifecycle
-processes conform to its requirements (including safety) and quality
-procedures. In our context, it covers the management of the
-different phases of AI-based systems, including training and
-operational phases, the traceability of data and artefacts, and
-people. Certification implies a (legal) recognition that a system or
-process complies with industry standards and regulations to ensure
-it delivers its intended functions safely. Certification is
-challenged by the inscrutability of AI-based systems and the
-inability to ensure functional safety under uncertain and
-exceptional situations prior to its operation.</p></li>
-<li><p><strong>Safety-related Ethics, Security and Privacy</strong>: While these are quite
-large fields, we are interested in their intersection and
-dependencies with safety and robustness. Ethics becomes increasingly
-important as autonomy (with learning and adaptive abilities)
-involves the transfer of safety risks, responsibility, and
-liability, among others. AI-specific security and privacy issues
-must be considered with regard to its impact on safety and
-robustness. For example, malicious adversarial attacks can be
-studied with focus on situations that compromise systems towards a
-dangerous situation.</p></li>
-</ul>
-<p>Fig. <a class="reference internal" href="#t3-2taxonomy"><span class="std std-numref">13</span></a> reflects the seven categories described above.
-Many of the terms and concepts we will expand on correspond to one or
-more of these categories.</p>
-<div class="figure align-center" id="t3-2taxonomy">
-<a class="reference internal image-reference" href="_images/taxonomy.jpg"><img alt="_images/taxonomy.jpg" src="_images/taxonomy.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Taxonomy of AI Safety. Taken from <span id="id3">[<a class="reference internal" href="#id110">3</a>]</span>-</span><a class="headerlink" href="#t3-2taxonomy" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="main-keywords">
-<h2>Main Keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="T3.2/alignment.html"><span class="doc">Alignment</span></a>: The goal of AI <strong>alignment</strong> is to ensure that AI systems are aligned with human intentions and values. This first requires determining the normative question of what values or principles we have and what humans really want, collectively or individually, and second, the technical question of how to imbue AI systems with these values and goals..</p></li>
-<li><p><a class="reference internal" href="T3.2/robustness.html"><span class="doc">Robustness</span></a>: <strong>Robustness</strong> is the degree in which an AI system functions1 reliably and accurately under harsh conditions. These conditions may include adversarial intervention, implementer error, or skewed goal-execution by an automated learner (in reinforcement learning applications). The measure of robustness is therefore the strength of a system’s integrity and the soundness of its operation in response to difficult conditions, adversarial attacks, perturbations, data poisoning, and undesirable reinforcement learning behaviour.</p></li>
-<li><p><a class="reference internal" href="T3.2/reliability.html"><span class="doc">Reliability</span></a>: The objective of reliability is that an AI system behaves exactly as its designers intended and anticipated, over time. A reliable system adheres to the specifications it was programmed to carry out at any time. Reliability is therefore a measure of consistency of operation and can establish confidence in the safety of a system based upon the dependability with which it operationally conforms to its intended functionality.</p></li>
-<li><p><a class="reference internal" href="T3.2/evaluation.html"><span class="doc">Evaluation</span></a>: <strong>AI measurement</strong> is any activity that estimates attributes as <em>measures</em>— of an AI system or some of its components, abstractly or in particular contexts of operation. These attributes, if well estimated, can be used to explain and predict the <em>behaviour</em> of the system. This can stem from an engineering perspective, trying to understand whether a particular AI system meets the specifications or the intention of their designers, known respectively as <strong>verification</strong> and <strong>validation</strong>. Under this perspective, AI measurement is close to computer systems <strong>testing</strong> (hardware and/or software) and other evaluation procedures in engineering. However, in AI there is an extremely complex <em>adaptive</em> behaviour, and in many cases, with a lack of a written and operational specification. What the systems has to do depends on some constraints and utility functions that have to be optimised, is specified by example (from which the system has to learn a model) or ultimately depends on feedback from the user or the environment (e.g., in the form of rewards).</p></li>
-<li><p><a class="reference internal" href="T3.2/negative_side_effects.html"><span class="doc">Negative side effects</span></a>: <strong>Negative side effects</strong> are an important safety issue in AI system that considers all possible unintended harm that is caused as a secondary effect of the AI system’s operation. An agent can disrupt or break other systems around, or damage third parties, including humans, or can exhaust resources, or a combination of all this. This usually happens because many things the system should <em>not</em> do are not included in its specification. In the case of AI systems, this is even more poignant as written specifications are usually replaced by an optimisation or loss function, in which it is even more difficult to express these things the system should not do, as they frequently rely on ‘common sense’.</p></li>
-<li><p><a class="reference internal" href="T3.2/distributional_shift.html"><span class="doc">Distributional shift</span></a>: Once trained, most machine learning systems operate on static models of the world that have been built from historical data which have become fixed in the systems’ parameters. This freezing of the model before it is released ‘into the wild’ makes its accuracy and reliability especially vulnerable to changes in the underlying distribution of data. When the historical data that have crystallised into the trained model’s architecture cease to reflect the population concerned, the model’s mapping function will no longer be able to accurately and reliably transform its inputs into its target output values. These systems can quickly become prone to error in unexpected and harmful ways. In all cases, the system and the operators must remain vigilant to the potentially rapid concept drifts that may occur in the complex, dynamic, and evolving environments in which your AI project will intervene. Remaining aware of these transformations in the data is crucial for safe AI.</p></li>
-<li><p><a class="reference internal" href="T3.2/security.html"><span class="doc">Security</span></a>: The goal of <strong>security</strong> encompasses the protection of several operational dimensions of an AI system when confronted with possible attacks, trying to take control of the system or having access to design, operational or personal information. A secure system is capable of maintaining the integrity of the information that constitutes it. This includes protecting its architecture from the unauthorised modification or damage of any of its component parts. A secure system also keeps confidential and private information protected even under hostile or adversarial conditions.</p></li>
-<li><p><a class="reference internal" href="T3.2/adversarial_attack.html"><span class="doc">Adversarial Attack</span></a>: An <strong>adversarial</strong> input is any perturbation of the input features or observations of a system (sometimes imperceptible to both humans and the own system) that makes the system fail or take the system to a dangerous state. A prototypical case of an adversarial situation happens with machine learning models, when an external agent maliciously modify input data –often in imperceptible ways– to induce them into misclassification or incorrect prediction. For instance, by undetectably altering a few pixels on a picture, an adversarial attacker can mislead a model into generating an incorrect output (like identifying a panda as a gibbon or a ‘stop’ sign as a ‘speed limit’ sign) with an extremely high confidence. While a good amount of attention has been paid to the risks that adversarial attacks pose in deep learning applications like computer vision, these kinds of perturbations are also effective across a vast range of machine learning techniques and uses such as spam filtering and malware detection. A different but related type of adversarial attack is called <a class="reference internal" href="T3.2/data_poisoning.html"><span class="doc">Data Poisoning</span></a>, but this involves a malicious compromise of data sources (used for training or testing) at the point of collection and pre-processing.</p></li>
-<li><p><a class="reference internal" href="T3.2/data_poisoning.html"><span class="doc">Data Poisoning</span></a>: <strong>Data poisoning</strong> occurs when an adversary modifies or manipulates part of the dataset upon which a model will be trained, validated, or tested. By altering a selected subset of training inputs, a poisoning attack can induce a trained AI system into curated misclassification, systemic malfunction, and poor performance. An especially concerning dimension of targeted data poisoning is that an adversary may introduce a ‘backdoor’ into the infected model whereby the trained system functions normally until it processes maliciously selected inputs that trigger error or failure. Data poisoning is possible because data collection and procurement often involves potentially unreliable or questionable sources. When data originates in uncontrollable environments like the internet, social media, or the Internet of Things, many opportunities present themselves to ill-intentioned attackers, who aim to manipulate training examples. Likewise, in third-party data curation processes (such as ‘crowdsourced’ labelling, annotation, and content identification), attackers may simply handcraft malicious inputs.</p></li>
-</ul>
-</div>
-<div class="section" id="recommended-reading">
-<h2>Recommended reading<a class="headerlink" href="#recommended-reading" title="Permalink to this headline">¶</a></h2>
-<p>Some introductory sources for AI Safety and Robustnes are <span id="id4">[<a class="reference internal" href="#id110">3</a>, <a class="reference internal" href="T3.2/negative_side_effects.html#id171">1</a>, <a class="reference internal" href="T3.2/alignment.html#id107">1</a>, <a class="reference internal" href="T3.2/security.html#id114">1</a>, <a class="reference internal" href="#id107">7</a>]</span>.</p>
-</div>
-<div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="id5"><dl class="citation">
-<dt class="label" id="id105"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Luciano Floridi. The european legislation on ai: a brief analysis of its philosophical approach. <em>Philosophy &amp; Technology</em>, 34(2):215–222, 2021.</p>
-</dd>
-<dt class="label" id="id106"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
-<dd><p>Michael Veale and Frederik Zuiderveen Borgesius. Demystifying the draft eu artificial intelligence act—analysing the good, the bad, and the unclear elements of the proposed approach. <em>Computer Law Review International</em>, 22(4):97–112, 2021.</p>
-</dd>
-<dt class="label" id="id110"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>Huáscar Espinoza, Han Yu, Xiaowei Huang, Freddy Lecue, José Hernández-Orallo, Seán Ó hÉigeartaigh, and Richard Mallah. Towards an AI safety landscape: an overview. <span><a class="reference external" href="#"></a></span>https://www.ai-safety.org/, 2019.</p>
-</dd>
-<dt class="label" id="id168"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete problems in ai safety. 2016. <a class="reference external" href="https://arxiv.org/abs/1606.06565">arXiv:1606.06565</a>.</p>
-</dd>
-<dt class="label" id="id109"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
-<dd><p>Iason Gabriel. Artificial intelligence, values, and alignment. <em>Minds and machines</em>, 30(3):411–437, 2020.</p>
-</dd>
-<dt class="label" id="id108"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
-<dd><p>Leslie David. Understanding artificial intelligence ethics and safety. <em>The Alan Turing Institute, https://doi.org/10.5281/zenodo.3240529</em>, 2019.</p>
-</dd>
-<dt class="label" id="id107"><span class="brackets"><a class="fn-backref" href="#id4">7</a></span></dt>
-<dd><p>Stuart Russell, Daniel Dewey, and Max Tegmark. Research priorities for robust and beneficial artificial intelligence. <em>Ai Magazine</em>, 36(4):105–114, 2015.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="safety-and-roboustness">
+<h1>Safety and Roboustness<a class="headerlink" href="#safety-and-roboustness" title="Permalink to this headline">¶</a></h1>
+<p>Test for biblography <a class="footnote-reference brackets" href="#footcite-gdpr" id="id1">1</a>.</p>
+<p id="id2"><dl class="footnote brackets">
+<dt class="label" id="footcite-gdpr"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
 </dd>
 </dl>
 </p>
-<hr class="docutils" />
-<p>This entry was readapted from <em>Huáscar Espinoza, Han Yu, Xiaowei Huang, Freddy Lecue, José Hernández-Orallo, Seán Ó hÉigeartaigh, and Richard Mallah. Towards an AI safety landscape: an overview. Artificial Intelligence Safety 2019, <a class="reference external" href="https://www.ai-safety.org/">https://www.ai-safety.org/</a>.</em> by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.</p>
-<hr class="docutils" />
-<!-- http://ceur-ws.org/Vol-2419/ -->
-<!--[^1]: Most of this section is taken from {cite}`espinoza2019`.-->
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="landscape"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>FLI’s Landscape of AI Safety and Beneficence Research for research
-contextualization and in preparation for brainstorming at the
-Beneficial AI 2017 conference
-(<a class="reference external" href="https://futureoflife.org/landscape/ResearchLandscapeExtended.pdf">https://futureoflife.org/landscape/ResearchLandscapeExtended.pdf</a>),
-the Assuring Autonomy International Programme (AAIP) to develop a
-Body of Knowledge (BoK) intended, in time, to become a reference
-source on assurance and regulation of Robotics and Autonomous
-Systems (RAS),
-(<a class="reference external" href="https://www.york.ac.uk/assuring-autonomy/research/body-of-knowledge/">https://www.york.ac.uk/assuring-autonomy/research/body-of-knowledge/</a>)
-and Ortega et al (DeepMind) structure of the technical AI safety
-field
-(<a class="reference external" href="https://medium.com/&#64;deepmindsafetyresearch/building-safe-artificial-intelligence-52f5f75058f1">https://medium.com/&#64;deepmindsafetyresearch/building-safe-artificial-intelligence-52f5f75058f1</a>).</p>
-</dd>
-</dl>
-</div>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1324,37 +1076,35 @@ field
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="T3.1/global_local.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="T3.1/model_specific.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Global vs Local Explanations</p>
+            <p class="prev-next-title">Model-Specific vs Model-Agnostic Explainers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="T3.2/alignment.html" title="next page">
+    <a class='right-next' id="next-link" href="T3.3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Alignment</p>
+        <p class="prev-next-title">Fairness, Equity, and Justice by Design</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

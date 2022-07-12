@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Differential Privacy &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
+    <title>Differential Privacy &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -37,24 +37,26 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="\(\epsilon\)-Differential Privacy" href="L3.epsilon_DP.html" />
-    <link rel="prev" title="Privacy Models" href="L1.privacy_model.html" />
+    <link rel="prev" title="Properties of Privacy Models" href="L2.privmod_properties.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -83,12 +85,12 @@
       <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -105,8 +107,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../T3.1.html">
-   Explainable AI Systems
+  <a class="reference internal" href="../Jupyter.html">
+   Jupyter demos
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -114,33 +116,33 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../T3.1/XAI_kinds.html">
-     Kinds of Explanations
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introJupyter.html">
+     Welcome to your Jupyter Book
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.1/feature_importance.html">
-       Feature Importance
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.1/saliency_maps.html">
-       Saliency Maps
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.1/single_tree.html">
-       Single Tree Approximation
-      </a>
-     </li>
-    </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdownJupyter.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooksJupyter.html">
+     Content with notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.1.html">
+   Explainable AI Systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../T3.1/XAI_dimensions.html">
      Dimensions of Explanations
@@ -152,139 +154,30 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../T3.1/blackbox_transparent.html">
-       Black Box Explanation vs Explanation by Design
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../T3.1/model_specific.html">
        Model-Specific vs Model-Agnostic Explainers
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.1/global_local.html">
-       Global vs Local Explanations
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../T3.2.html">
-   Safety and Robustness
+   Safety and Roboustness
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/alignment.html">
-     Alignment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/robustness.html">
-     Robustness
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/reliability.html">
-     Reliability
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/evaluation.html">
-     Evaluation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/negative_side_effects.html">
-     Negative side effects
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/distributional_shift.html">
-     Distributional shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/security.html">
-     Security
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/adversarial_attack.html">
-     Adversarial Attack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.2/data_poisoning.html">
-     Data Poisoning
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../T3.3.html">
    Fairness, Equity, and Justice by Design
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/auditing.html">
-     Auditing AI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/bias.html">
-     Bias
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/equity.html">
-     Discrimination &amp; Equity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/fairness.html">
-     Fairness notions and metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/fair_ML.html">
-     Fair Machine Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/discrimination.html">
-     Grounds of Discrimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/justice.html">
-     Justice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.3/segregation.html">
-     Segregation
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../T3.4/L1.Accountability_and_Reproducibility.html">
+  <a class="reference internal" href="../T3.4.html">
    Accountability and Reproducibility
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -293,40 +186,57 @@
     <a class="reference internal" href="../T3.4/L2.Accountability.html">
      Accountability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../T3.4/L3.Wicked_problems.html">
-       Wicked problems
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../T3.4/L3.Meaningful_human_control.html">
-       Meaningful human control
+       Meaningful Human Control
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../T3.4/L3.The_frame_problem.html">
-       The Frame Problem
+       The Frame problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Accountability_gaps.html">
+       Accountability Gaps
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../T3.4/L2.Reproducibility.html">
      Reproducibility
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Guidelines_reproducibility.html">
+       Guidelines
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.software_frameworks_supporting_reproducibility.html">
+       Software frameworks supporting reproducibility
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../T3.4/L2.Traceability.html">
      Traceability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -349,45 +259,38 @@
   <a class="reference internal" href="../T3.5.html">
    Respect for Privacy
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 has-children">
+   <li class="toctree-l2">
     <a class="reference internal" href="L1.anonymization.html">
-     Data Anonymization (and Pseudonymization)
+     Data Anonymization and Pseudonymization
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L2.pseudonymization.html">
-       Pseudonymization
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="L1.privacy_model.html">
      Privacy Models
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="L2.privmod_properties.html">
+       Properties of Privacy Models
+      </a>
+     </li>
      <li class="toctree-l3 current active has-children">
       <a class="current reference internal" href="#">
        Differential Privacy
       </a>
-      <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-      <label for="toctree-checkbox-12">
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+      <label for="toctree-checkbox-10">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -414,8 +317,13 @@
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="L2.perturbation_mechanisms.html">
-         Achieving Differential Privacy
+        <a class="reference internal" href="L3.computational_DP.html">
+         Computational Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.other_DP.html">
+         Other Variants or Generalizations
         </a>
        </li>
       </ul>
@@ -424,6 +332,50 @@
       <a class="reference internal" href="L2.k_anonymity.html">
        k-anonymity
       </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="L1.privacy_mechanisms.html">
+     Privacy Mechanisms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="L2.perturbation_mechanisms.html">
+       Perturbation Mechanisms
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.local_perturbation.html">
+         Local Perturbation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.laplace.html">
+         Laplace Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.exponential.html">
+         Exponential Mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.randomness_alignments.html">
+         Randomness Alignments
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -442,13 +394,28 @@
        Re-identification Attack
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L2.membership.html">
+       Membership Attack
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L2.reconstruction.html">
+       Reconstruction Attack
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../T3.6.html">
    Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../AnalyticaIndex.html">
+   Index
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
   <label for="toctree-checkbox-14">
@@ -456,187 +423,113 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../T3.6/greenAI.html">
-     Green AI
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.6/power_aware.html">
-       Power-aware Computing
-      </a>
-     </li>
-    </ul>
-   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../T3.6/cloud_computing.html">
-     Cloud Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.6/edge_computing.html">
-     Edge Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.6/data_centre.html">
-     Data Centre
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.6/cradle_to_cradle.html">
-     Cradle-to-cradle Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.6/resource_prediction.html">
-     Resource Prediction
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.6/resource_allocation.html">
-     Resource Allocation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../AnalyticaIndex.html">
-   Index
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/2CC2.html">
-     2CC2
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Accountability.html">
+    <a class="reference internal" href="../index/Accountability.html">
      Accountability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Alignment.html">
+    <a class="reference internal" href="../index/Alignment.html">
      Alignment
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Adversarial%20attack.html">
-     Adversarial Attack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Adversarial%20example.html">
-     Adversarial Example
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Adversarial%20input.html">
-     Adversarial Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Ante-hoc%20Explanation.html">
+    <a class="reference internal" href="../index/Ante-hoc%20Explanation.html">
      Ante-hoc Explanation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Assessment.html">
-     Assessment
+    <a class="reference internal" href="../index/Assurance.html">
+     Assurance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Attacks%20Anonym.html">
-     Attacks on Anonymization Schema
+    <a class="reference internal" href="../index/Attacks%20on%20Anonymization%20Schemes.html">
+     Attacks on Anonymization Schemes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Attacks%20on%20Pseudonymised%20Data.html">
+    <a class="reference internal" href="../index/Attacks%20on%20Partition-based%20Algorithms.html">
+     Attacks on Partition-based Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Attacks%20on%20Pseudonymised%20Data.html">
      Attacks on Pseudonymised Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Auditing.html">
+    <a class="reference internal" href="../index/Auditing.html">
      Auditing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Bias.html">
+    <a class="reference internal" href="../index/Autonomy%20Levels.html">
+     Autonomy Levels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Bias.html">
      Bias
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Black-box%20Explanations.html">
-     Black-box Explanation
+    <a class="reference internal" href="../index/Certification%20Standards.html">
+     Certification
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Brittleness.html">
-     Brittleness
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/C2C.html">
-     C2C
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Cloud%20Computing.html">
+    <a class="reference internal" href="../index/Cloud%20Computing.html">
      Cloud Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Continuous%20monitoring.html">
-     Continuous Performance Monitoring
+    <a class="reference internal" href="../index/Computational%20Differential%20Privacy.html">
+     Computational Differential Privacy
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/cradle%202%20cradle.html">
-     Cradle 2 cradle
+    <a class="reference internal" href="../index/Corrigibility.html">
+     Corrigibility
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Cradle.html">
-     Cradle-to-cradle Design
+    <a class="reference internal" href="../index/Counterfactual%20Explanations.html">
+     Counterfactual explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Data%20Anonymization.html">
+    <a class="reference internal" href="../index/Data%20Anonymization.html">
      Data Anonymization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Data%20Center.html">
-     Data Center
+    <a class="reference internal" href="../index/Data%20Centers%20Management.html">
+     Data Centers Management
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Data%20Poisoning.html">
-     Data Poisoning
+    <a class="reference internal" href="../index/Data%20Minimisation.html">
+     Data Minimisation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Dependability.html">
-     Dependability
+    <a class="reference internal" href="../index/Data%20sanitization.html">
+     Data Sanitization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Differential%20Privacy%20models.html">
+    <a class="reference internal" href="../index/deFinetti%20Attack.html">
+     deFinetti Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Differential%20Privacy%20models.html">
      Differential Privacy Models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/epsilon_delta-differential_privacy.html">
+    <a class="reference internal" href="../index/epsilon_delta-differential_privacy.html">
      (
      <span class="math notranslate nohighlight">
       \(\epsilon\)
@@ -649,7 +542,7 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Epsilon-differential_privacy.html">
+    <a class="reference internal" href="../index/Epsilon-differential_privacy.html">
      <span class="math notranslate nohighlight">
       \(\epsilon\)
      </span>
@@ -657,7 +550,37 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Epsilon-indist.html">
+    <a class="reference internal" href="../index/Differential%20Privacy%20-%20Other%20Variants%20or%20Generalizations.html">
+     Differential Privacy - Other Variants or Generalizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations (Explainable AI Systems)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Discrimination.html">
+     Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Distributional%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Electricity%20Price%20Forecast.html">
+     Electricity Price Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Enforcement.html">
+     Enforcement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/epsilon-indistinguishability.html">
      <span class="math notranslate nohighlight">
       \(\epsilon\)
      </span>
@@ -665,313 +588,358 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Data%20Shift.html">
-     Distributional Shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Dimensions%20of%20Explanations.html">
-     Dimensions of Explanations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Discrimination.html">
-     Grounds of Discrimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Distributional%20Shift.html">
-     Distributional Shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Direct.html">
-     Direct Behaviour
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Edge%20Computing.html">
-     Edge Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Energy%20Aware.html">
-     Energy-aware Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Energy%20Efficient.html">
-     Energy-efficient Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Evaluation.html">
-     Evaluation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Equity.html">
+    <a class="reference internal" href="../index/Equity.html">
      Equity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Explanation%20by%20Design.html">
-     Explanation by Design
+    <a class="reference internal" href="../index/Evaluating%20Explanations.html">
+     Evaluating Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Fair%20Machine%20Learning.html">
+    <a class="reference internal" href="../index/Exponential%20Mechanism.html">
+     Exponential Mechanism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Fair%20Machine%20Learning.html">
      Fair Machine Learning
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Fairness.html">
+    <a class="reference internal" href="../index/Fairness.html">
      Fairness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Features%20Importance.html">
+    <a class="reference internal" href="../index/Features%20Importance.html">
      Feature Importance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Frame.html">
-     The Frame Problem
+    <a class="reference internal" href="../index/Generality.html">
+     Generality
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Fog%20Computing.html">
-     Fog Computing
+    <a class="reference internal" href="../index/General%20Privacy-related%20Attacks.html">
+     General Privacy-related Attacks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Generalizable%20XAI.html">
-     Model Agnostic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Global%20Explanations.html">
+    <a class="reference internal" href="../index/Global%20Explanations.html">
      Global Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Green%20AI.html">
-     Green AI
+    <a class="reference internal" href="../index/Global%20Recoding.html">
+     Global Recording
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Green%20Computing.html">
+    <a class="reference internal" href="../index/Goal%20Stability.html">
+     Goal Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Green%20Computing.html">
      Green Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Green%20IT.html">
-     Green IT
+    <a class="reference internal" href="../index/Human-in-the-loop.html">
+     Human-in-the-loop
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/ICT%20sustainability.html">
-     ICT sustainability
+    <a class="reference internal" href="../index/Impact%20Assessment%20of%20Trustworthy%20AI.html">
+     Impact Assessment of Trustworthy AI
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Intended.html">
-     Intended Behaviour
+    <a class="reference internal" href="../index/Interpretability.html">
+     Interpretability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Justice.html">
+    <a class="reference internal" href="../index/Interruptibility.html">
+     Interruptibility
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Justice.html">
      Justice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/K-Anonymity.html">
+    <a class="reference internal" href="../index/K-Anonymity.html">
      K-anonymity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Linking%20Attack.html">
-     Linking Attack
+    <a class="reference internal" href="../index/Laplace%20Mechanism.html">
+     Laplace Mecanism
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Local%20Explanations.html">
+    <a class="reference internal" href="../index/Local%20Explanations.html">
      Local Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Meaningful%20human%20control.html">
+    <a class="reference internal" href="../index/Local%20perturbation.html">
+     Local Perturbation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Local%20Recoding.html">
+     Local Recording
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Meaningful%20human%20control.html">
      Meaningful Human Control
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Measurement.html">
-     Measurement
+    <a class="reference internal" href="../index/Membership%20Inference%20Attacks.html">
+     Membership Inference Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Mesh%20Computing.html">
-     Mesh Computing
+    <a class="reference internal" href="../index/Minimality%20Attack.html">
+     Minimality Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Misdirect.html">
-     Misdirect Behaviour
+    <a class="reference internal" href="../index/Model-Agnostic.html">
+     Model Agnostic (Explainable AI Systems)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Model-Agnostic.html">
-     Model Agnostic
+    <a class="reference internal" href="../index/Model-Specific.html">
+     Model Specific (Explainable AI Systems)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Model-Specific.html">
-     Model Specific
+    <a class="reference internal" href="../index/Mondrian.html">
+     Mondrian
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Negative%20Side%20Effects.html">
+    <a class="reference internal" href="../index/Monitoring.html">
+     Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Moral%20responsibility.html">
+     Moral Responsability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Multidimensional%20Recoding.html">
+     Multidimensional Recording
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Negative%20Side%20Effects.html">
      Negative Side Effects
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Not%20Generalizable%20XAI.html">
-     Model Specific
+    <a class="reference internal" href="../index/Nice%20properties%20of%20Privacy%20Models.html">
+     Nice Properties of Privacy Models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Perturbation.html">
-     Achiving Differential Privacy
+    <a class="reference internal" href="../index/Partition-Based%20Algorithms.html">
+     Partition-Based Algorithms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Post-hoc%20Explanations.html">
+    <a class="reference internal" href="../index/Perturbation%20Mechanisms.html">
+     Perturbation Mechanisms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Post-hoc%20Explanations.html">
      Post-hoc Explanation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Power%20Aware.html">
-     Power-aware Computing
+    <a class="reference internal" href="../index/Privacy%20algorithm.html">
+     Privacy Algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Privacy%20model.html">
-     Privacy models
+    <a class="reference internal" href="../index/Privacy%20Mechanism.html">
+     Privacy Mechanism
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Provenance.html">
-     Provenance Tracking
+    <a class="reference internal" href="../index/Privacy%20model.html">
+     Privacy model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Pseudonymised%20Data.html">
-     Pseudonymization
+    <a class="reference internal" href="../index/Privacy-Preserving%20Data%20Publishing.html">
+     Privacy-Preserving Data Publishing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.5/Re-identification%20Attack.html">
+    <a class="reference internal" href="../index/Problem%20of%20many%20hands.html">
+     Problem of Many Hands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Randomized%20response.html">
+     Randomized response
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Reconstruction%20Attacks.html">
+     Reconstruction Attacks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Re-identification%20Attack.html">
      Re-identification Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Regenerative%20Design.html">
-     Regenerative Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Reliability.html">
+    <a class="reference internal" href="../index/Reliability.html">
      Reliability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Repeatability.html">
+    <a class="reference internal" href="../index/Repeatability.html">
      Repeatability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Replicability.html">
+    <a class="reference internal" href="../index/Replicability.html">
      Replicability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Reproducibility.html">
+    <a class="reference internal" href="../index/Reproducibility.html">
      Reproducibility
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Resource%20Allocation.html">
-     Resource Allocation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Resource%20Prediction.html">
+    <a class="reference internal" href="../index/Resource%20Prediction.html">
      Resource Prediction
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Resource%20Scheduling.html">
+    <a class="reference internal" href="../index/Resource%20Scheduling.html">
      Resource Scheduling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Robustness.html">
+    <a class="reference internal" href="../index/Reward%20Hacking.html">
+     Reward Hacking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Robustness.html">
      Robustness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Saliency%20Maps.html">
+    <a class="reference internal" href="../index/Rules%20List%20and%20Rules%20Set.html">
+     Rules List and Rules Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Safety%20Criticality.html">
+     Safety Criticality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Safety%20Standards.html">
+     Safety Standards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Saliency%20Maps.html">
      Saliency Maps
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Security.html">
-     Security
+    <a class="reference internal" href="../index/Scalable%20Oversight%20Problem.html">
+     Scalable Oversight Problem
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.3/Segregation.html">
+    <a class="reference internal" href="../index/Security%20under%20post-processing.html">
+     Security under Post-processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Segregation.html">
      Segregation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Single%20Tree%20Approximation.html">
+    <a class="reference internal" href="../index/Self-composition.html">
+     Self-composition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Side%20Effects.html">
+     Side Effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Single%20Tree%20Approximation.html">
      Single Tree Approxiamation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Testing.html">
+    <a class="reference internal" href="../index/Specification.html">
+     Specification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Stochastic%20Forecast.html">
+     Stochastic Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Testing.html">
      Testing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Traceability.html">
+    <a class="reference internal" href="../index/Traceability.html">
      Traceability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.1/Transparency.html">
+    <a class="reference internal" href="../index/Training%20Corruption.html">
+     Training Corruption
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency.html">
      Transparency
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.2/Unintended.html">
-     Unintended Behaviour
+    <a class="reference internal" href="../index/Uncertainty.html">
+     Uncertainty
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.4/Wicked.html">
-     Wicked Problems
+    <a class="reference internal" href="../index/Validation.html">
+     Validation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Workload%20Forecast.html">
-     Workload Forecast
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/T3.6/Workload%20Prediction.html">
-     Workload Prediction
+    <a class="reference internal" href="../index/Verification.html">
+     Verification
     </a>
    </li>
   </ul>
@@ -1001,8 +969,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -1010,7 +978,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -1018,11 +986,11 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/T3.5/L2.differential_privacy.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1034,12 +1002,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.5/L2.differential_privacy.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -1047,8 +1015,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1056,39 +1024,27 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
+                <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In brief
+  <a class="reference internal nav-link" href="#the-family-of-differential-privacy-models">
+   The Family of Differential Privacy Models
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in detail
+  <a class="reference internal nav-link" href="#achieving-differential-privacy">
+   Achieving Differential Privacy
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-family-of-differential-privacy-models">
-     The Family of Differential Privacy Models
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#achieving-differential-privacy">
-     Achieving Differential Privacy
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#an-expanding-universe">
-     An expanding universe
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-expanding-universe">
+   An expanding universe
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliography">
@@ -1103,19 +1059,51 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Differential Privacy</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-family-of-differential-privacy-models">
+   The Family of Differential Privacy Models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#achieving-differential-privacy">
+   Achieving Differential Privacy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-expanding-universe">
+   An expanding universe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="differential-privacy">
 <h1>Differential Privacy<a class="headerlink" href="#differential-privacy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-brief">
-<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
-<p><strong>Differential privacy</strong> implies that adding or deleting a single record does not significantly affect the result of any analysis.</p>
-</div>
-<div class="section" id="more-in-detail">
-<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-family-of-differential-privacy-models">
-<h3>The Family of Differential Privacy Models<a class="headerlink" href="#the-family-of-differential-privacy-models" title="Permalink to this headline">¶</a></h3>
+<h2>The Family of Differential Privacy Models<a class="headerlink" href="#the-family-of-differential-privacy-models" title="Permalink to this headline">¶</a></h2>
 <p>Differential privacy is a prominent family of privacy-preserving data
 publishing models (see <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>). It comprehends
 privacy as the ability to set a limit on the impact of any single
@@ -1129,10 +1117,11 @@ privacy models all share this common intuitive goal but they differ in
 the way they formalize it - for example, on the quantification of the
 impact of an individual or on the tolerance to possible failures of
 the guarantees (though improbable). They usually exhibit properties
-that have been identified as key requirements to privacy models. &lt;!–(see <a class="reference internal" href="L2.privmod_properties.html"><span class="doc">Properties of Privacy Models</span></a> for details).</p>
+that have been identified as key requirements to privacy models (see
+<a class="reference internal" href="L2.privmod_properties.html"><span class="doc">Properties of Privacy Models</span></a> for details).</p>
 </div>
 <div class="section" id="achieving-differential-privacy">
-<h3>Achieving Differential Privacy<a class="headerlink" href="#achieving-differential-privacy" title="Permalink to this headline">¶</a></h3>
+<h2>Achieving Differential Privacy<a class="headerlink" href="#achieving-differential-privacy" title="Permalink to this headline">¶</a></h2>
 <p>Designing a function that satisfies differential privacy often boils
 down to carefully combining basic perturbation mechanisms (such as,
 e.g., the Laplace mechanism) and to demonstrating formally either that
@@ -1141,10 +1130,10 @@ data is only accessed through a differentially private function
 self-composability properties), or that the output distribution of the
 function complies with the targeted differential privacy model
 (through, e.g., randomness alignments). We refer the interested reader
-to <a class="reference internal" href="L2.perturbation_mechanisms.html"><span class="doc">Achieving Differential Privacy</span></a> for more information.</p>
+to <a class="reference internal" href="L2.perturbation_mechanisms.html"><span class="doc">Perturbation Mechanisms</span></a> for more information.</p>
 </div>
 <div class="section" id="an-expanding-universe">
-<h3>An expanding universe<a class="headerlink" href="#an-expanding-universe" title="Permalink to this headline">¶</a></h3>
+<h2>An expanding universe<a class="headerlink" href="#an-expanding-universe" title="Permalink to this headline">¶</a></h2>
 <p>The seminal differential privacy models were proposed in the
 mid-2000’s and include <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy (see
 <a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy</span></a>) or <span class="math notranslate nohighlight">\((\epsilon,
@@ -1160,33 +1149,32 @@ in 2017. Famous organizations (e.g., the US Census Bureau) and
 companies (e.g., Google, Apple, LinkedIn, Microsoft) have launched
 ambitious real-life applications of differential privacy.</p>
 </div>
-</div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p>The seminal differential privacy models were introduced in
-<span id="id1">[<a class="reference internal" href="L3.epsilon_DP.html#id2670">1</a>]</span>, <span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2669">2</a>]</span>,
-and <span id="id3">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2672">1</a>]</span>. Differential privacy is thoroughly
-introduced in <span id="id4">[<a class="reference internal" href="#id2672">4</a>]</span> and numerous variants and
-extensions are surveyed in <span id="id5">[<a class="reference internal" href="#id2675">5</a>]</span>. The book
-<span id="id6">[<a class="reference internal" href="#id2670">6</a>]</span> surveys differential privacy
+<span id="id1">[<a class="reference internal" href="L3.epsilon_DP.html#id56" title="Cynthia Dwork. Differential privacy. In ICALP. 2006.">1</a>]</span>, <span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id55" title="Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In TCC. 2006.">2</a>]</span>,
+and <span id="id3">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id58" title="Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In EUROCRYPT. 2006.">1</a>]</span>. Differential privacy is thoroughly
+introduced in <span id="id4">[<a class="reference internal" href="#id58" title="Cynthia Dwork and Aaron Roth. The algorithmic foundations of differential privacy. Found. Trends Theor. Comput. Sci., 9:211-407, 2014.">4</a>]</span> and numerous variants and
+extensions are surveyed in <span id="id5">[<a class="reference internal" href="#id61" title="Damien Desfontaines and Balázs Pejó. Sok: differential privacies. Proceedings on Privacy Enhancing Technologies, 2020:288 - 313, 2020.">5</a>]</span>. The book
+<span id="id6">[<a class="reference internal" href="#id56" title="Joseph P. Near and Xi He. Differential privacy for databases. Foundations and Trends in Databases, 11:109-225, 2021.">6</a>]</span> surveys differential privacy
 techniques related to database queries.</p>
 <p id="id7"><dl class="citation">
-<dt class="label" id="id2674"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id60"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Cynthia Dwork. Differential privacy. In <em>ICALP</em>. 2006.</p>
 </dd>
-<dt class="label" id="id2673"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id59"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In <em>TCC</em>. 2006.</p>
 </dd>
-<dt class="label" id="id2676"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id62"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In <em>EUROCRYPT</em>. 2006.</p>
 </dd>
-<dt class="label" id="id2672"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>Cynthia Dwork and Aaron Roth. The algorithmic foundations of differential privacy. <em>Found. Trends Theor. Comput. Sci.</em>, 9:211–407, 2014.</p>
 </dd>
-<dt class="label" id="id2675"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id61"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Damien Desfontaines and Balázs Pejó. Sok: differential privacies. <em>Proceedings on Privacy Enhancing Technologies</em>, 2020:288 – 313, 2020.</p>
 </dd>
-<dt class="label" id="id2670"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p>Joseph P. Near and Xi He. Differential privacy for databases. <em>Foundations and Trends in Databases</em>, 11:109–225, 2021.</p>
 </dd>
 </dl>
@@ -1220,14 +1208,14 @@ techniques related to database queries.</p>
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="L1.privacy_model.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="L2.privmod_properties.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Privacy Models</p>
+            <p class="prev-next-title">Properties of Privacy Models</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="L3.epsilon_DP.html" title="next page">
@@ -1238,19 +1226,17 @@ techniques related to database queries.</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
