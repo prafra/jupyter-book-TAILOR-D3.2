@@ -1,0 +1,1400 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluation &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Negative side effects" href="negative_side_effects.html" />
+    <link rel="prev" title="Reliability" href="reliability.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR.html">
+   Welcome to TAILOR
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../authors.html">
+   Complete List of Contributors
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.1.html">
+   Explainable AI Systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_kinds.html">
+     Kinds of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/feature_importance.html">
+       Feature Importance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/saliency_maps.html">
+       Saliency Maps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/single_tree.html">
+       Single Tree Approximation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_dimensions.html">
+     Dimensions of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/blackbox_transparent.html">
+       Black Box Explanation vs Explanation by Design
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/model_specific.html">
+       Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/global_local.html">
+       Global vs Local Explanations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../T3.2.html">
+   Safety and Robustness
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="robustness.html">
+     Robustness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="reliability.html">
+     Reliability
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="negative_side_effects.html">
+     Negative side effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="distributional_shift.html">
+     Distributional shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="security.html">
+     Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="adversarial_attack.html">
+     Adversarial Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_poisoning.html">
+     Data Poisoning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.3.html">
+   Fairness, Equity, and Justice by Design
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/auditing.html">
+     Auditing AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/equity.html">
+     Discrimination &amp; Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/fairness.html">
+     Fairness notions and metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/fair_ML.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/segregation.html">
+     Segregation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.4/L1.Accountability_and_Reproducibility.html">
+   Accountability and Reproducibility
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.4/L2.Accountability.html">
+     Accountability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Wicked_problems.html">
+       Wicked problems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Meaningful_human_control.html">
+       Meaningful human control
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.The_frame_problem.html">
+       The Frame Problem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.4/L2.Reproducibility.html">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.4/L2.Traceability.html">
+     Traceability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Provenance_tracking.html">
+       Provenance Tracking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Continuous_performance_monitoring.html">
+       Continuous Performance Monitoring
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.5.html">
+   Respect for Privacy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.anonymization.html">
+     Data Anonymization (and Pseudonymization)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.pseudonymization.html">
+       Pseudonymization
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.privacy_model.html">
+     Privacy Models
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../T3.5/L2.differential_privacy.html">
+       Differential Privacy
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.epsilon_DP.html">
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         -Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.epsilon_delta_DP.html">
+         (
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         ,
+         <span class="math notranslate nohighlight">
+          \(\delta\)
+         </span>
+         )-Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
+         Achieving Differential Privacy
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.k_anonymity.html">
+       k-anonymity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.attacks.html">
+     Attacks on anonymization schemes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.reidentification.html">
+       Re-identification Attack
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.6.html">
+   Sustainability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.6/greenAI.html">
+     Green AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.6/power_aware.html">
+       Power-aware Computing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cloud_computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/edge_computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/data_centre.html">
+     Data Centre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cradle_to_cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../AnalyticaIndex.html">
+   Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/2CC2.html">
+     2CC2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Accountability.html">
+     Accountability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20attack.html">
+     Adversarial Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20example.html">
+     Adversarial Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20input.html">
+     Adversarial Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Ante-hoc%20Explanation.html">
+     Ante-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Assessment.html">
+     Assessment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20Anonym.html">
+     Attacks on Anonymization Schema
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20on%20Pseudonymised%20Data.html">
+     Attacks on Pseudonymised Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Auditing.html">
+     Auditing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Black-box%20Explanations.html">
+     Black-box Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Brittleness.html">
+     Brittleness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/C2C.html">
+     C2C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cloud%20Computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Continuous%20monitoring.html">
+     Continuous Performance Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/cradle%202%20cradle.html">
+     Cradle 2 cradle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Data%20Anonymization.html">
+     Data Anonymization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Data%20Center.html">
+     Data Center
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Data%20Poisoning.html">
+     Data Poisoning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Dependability.html">
+     Dependability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Differential%20Privacy%20models.html">
+     Differential Privacy Models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/epsilon_delta-differential_privacy.html">
+     (
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     ,
+     <span class="math notranslate nohighlight">
+      \(\delta\)
+     </span>
+     )-Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Epsilon-differential_privacy.html">
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     -Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Epsilon-indist.html">
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     -Indistinguishability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Data%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Distributional%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Direct.html">
+     Direct Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Edge%20Computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Aware.html">
+     Energy-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Efficient.html">
+     Energy-efficient Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Evaluation.html">
+     Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Equity.html">
+     Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Explanation%20by%20Design.html">
+     Explanation by Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Fair%20Machine%20Learning.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Fairness.html">
+     Fairness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Features%20Importance.html">
+     Feature Importance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Frame.html">
+     The Frame Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Fog%20Computing.html">
+     Fog Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Generalizable%20XAI.html">
+     Model Agnostic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Global%20Explanations.html">
+     Global Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20AI.html">
+     Green AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20Computing.html">
+     Green Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20IT.html">
+     Green IT
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/ICT%20sustainability.html">
+     ICT sustainability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Intended.html">
+     Intended Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/K-Anonymity.html">
+     K-anonymity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Linking%20Attack.html">
+     Linking Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Local%20Explanations.html">
+     Local Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Meaningful%20human%20control.html">
+     Meaningful Human Control
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Measurement.html">
+     Measurement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Mesh%20Computing.html">
+     Mesh Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Misdirect.html">
+     Misdirect Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Model-Agnostic.html">
+     Model Agnostic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Model-Specific.html">
+     Model Specific
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Negative%20Side%20Effects.html">
+     Negative Side Effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Not%20Generalizable%20XAI.html">
+     Model Specific
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Perturbation.html">
+     Achiving Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Post-hoc%20Explanations.html">
+     Post-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Power%20Aware.html">
+     Power-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Privacy%20model.html">
+     Privacy models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Provenance.html">
+     Provenance Tracking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Pseudonymised%20Data.html">
+     Pseudonymization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Re-identification%20Attack.html">
+     Re-identification Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Regenerative%20Design.html">
+     Regenerative Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Reliability.html">
+     Reliability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Repeatability.html">
+     Repeatability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Replicability.html">
+     Replicability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Reproducibility.html">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Scheduling.html">
+     Resource Scheduling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Robustness.html">
+     Robustness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Saliency%20Maps.html">
+     Saliency Maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Security.html">
+     Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Segregation.html">
+     Segregation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Single%20Tree%20Approximation.html">
+     Single Tree Approxiamation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Testing.html">
+     Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Traceability.html">
+     Traceability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Transparency.html">
+     Transparency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Unintended.html">
+     Unintended Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Wicked.html">
+     Wicked Problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Workload%20Forecast.html">
+     Workload Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Workload%20Prediction.html">
+     Workload Prediction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/T3.2/evaluation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.2/evaluation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Evaluation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="evaluation">
+<h1>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h1>
+<p><em>Synonyms</em>: Assessment, Testing, Measurement.</p>
+<div class="section" id="in-brief">
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<p><strong>AI measurement</strong> is any activity that estimates
+attributes as <em>measures</em>— of an AI system or some of its components,
+abstractly or in particular contexts of operation. These attributes, if
+well estimated, can be used to explain and predict the <em>behaviour</em> of
+the system. This can stem from an engineering perspective, trying to
+understand whether a particular AI system meets the specifications or
+the intention of their designers, known respectively as
+<strong>verification</strong> and <strong>validation</strong>. Under this perspective, AI
+measurement is close to computer systems
+<strong>testing</strong> (hardware and/or software) and other
+evaluation procedures in engineering. However, in AI there is an
+extremely complex <em>adaptive</em> behaviour, and in many cases, with a lack
+of a written and operational specification. What the systems has to do
+depends on some constraints and utility functions that have to be
+optimised, is specified by example (from which the system has to learn a
+model) or ultimately depends on feedback from the user or the
+environment (e.g., in the form of rewards).</p>
+</div>
+<div class="section" id="more-in-detail">
+<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>AI <strong>measurement</strong> has been taken place since the
+early days of AI and has framed the discipline very significantly.
+Actually, one of the foundational ideas behind AI is the famous
+imitation game <span id="id1">[<a class="reference internal" href="#id2063">2</a>]</span>, which —somewhat misleadingly—
+is usually referred to as the Turing <em>test</em>. However, this initial
+emphasis on evaluation, albeit mostly philosophical, did not develop
+into technical AI evaluation as an established subfield in AI, in the
+same way the early <a class="reference internal" href="reliability.html"><span class="doc">Reliability</span></a> and
+<a class="reference internal" href="robustness.html"><span class="doc">Robustness</span></a> problems in software engineering
+led to the important areas of software validation, verification and
+testing, today using both theoretical and experimental approaches
+<span id="id2">[<a class="reference internal" href="reliability.html#id2103">5</a>, <a class="reference internal" href="#id2113">3</a>]</span>. Still, there are some recent
+surveys and books covering the problem of AI evaluation, and giving
+comprehensive or partial views of AI measurement, such as
+<span id="id3">[<a class="reference internal" href="#id370">4</a>, <a class="reference internal" href="#id388">5</a>, <a class="reference internal" href="#id368">6</a>, <a class="reference internal" href="#id222">7</a>, <a class="reference internal" href="#id240">8</a>, <a class="reference internal" href="#id1909">9</a>, <a class="reference internal" href="#id221">10</a>, <a class="reference internal" href="#id118">11</a>, <a class="reference internal" href="#id204">12</a>, <a class="reference internal" href="#id208">13</a>, <a class="reference internal" href="#id211">14</a>]</span>.</p>
+<p>The tradition in AI measurement turns around the concept of
+‘task-oriented evaluation’. For instance, given a scheduling problem, a
+board game or a classification problem, systems are evaluated according
+to some metric of <em>task performance</em>. To standardise the comparisons
+among systems, there are datasets and benchmarks that are used for
+evaluating these systems, so that evaluation data is not cherry-picked
+by the AI designers. We find a myriad of examples of the latter in
+PapersWithCode<a class="footnote-reference brackets" href="#pwc" id="id4">1</a> (PwC), an open-source, community-centric platform
+which offers researchers access to hundreds of benchmarks and thousands
+of results from associated papers, with an emphasis on machine learning.
+PwC collects information about the performance of different AI systems
+during a given period, typically ranging from the introduction of the
+benchmark to the present day.
+Figure <a class="reference internal" href="#fig-pwcimagenet"><span class="std std-numref">14</span></a> shows an example of the evolution of
+results for ImageNet<span id="id5">[<a class="reference internal" href="#id2114">15</a>]</span>.</p>
+<div class="figure align-center" id="fig-pwcimagenet">
+<a class="reference internal image-reference" href="../_images/PwC.png"><img alt="../_images/PwC.png" src="../_images/PwC.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">State-of-the-Art for the image classification task using the benchmark ImageNet. The points represent the accuracy of all the attempts from 2011 to 2022. The connected points on the Pareto front are shown in blue. Chart from
+<a class="reference external" href="https://paperswithcode.com/sota/image-classification-on-imagenet">https://paperswithcode.com/sota/image-classification-on-imagenet</a></span><a class="headerlink" href="#fig-pwcimagenet" title="Permalink to this image">¶</a></p>
+</div>
+<p>However, the focus on particular benchmarks (which are known by the
+researchers in advance) and the power of machine learning techniques has
+led to a problem of benchmark specialisation, a phenomenon that is
+related to issues such as “teaching to the test” (students prepare for
+the test but do not know how to solve cases that differ slightly from
+those of the exam) or Goodhart’s or Campbell’s laws (optimising to the
+indicator may lead to the metric not measuring what it measured
+originally, with possibly some other side effects). One clear
+manifestation of this phenomenon is the ‘challenge-solve-and-replace’
+evaluation dynamics <span id="id6">[<a class="reference internal" href="#id228">16</a>]</span> or a
+‘dataset-solve-and-patch’ adversarial benchmark co-evolution
+<span id="id7">[<a class="reference internal" href="#id229">17</a>]</span>, which means that as soon as a benchmark is
+released, performance grows quickly because researchers specialise the
+design and training of the system to the benchmark, but not to the
+general task <span id="id8">[<a class="reference internal" href="#id118">11</a>]</span>. Ultimately the benchmark needs to be
+replaced by another one (usually more complex or adversarially
+designed), in a continuous cycle.</p>
+<p>This task-oriented evaluation has been blamed for some of the failures
+or narrowness of AI in the past —lack of common sense, of generality,
+of adaptability to new contexts and distributions. As we said, since the
+beginning of the discipline, other approaches for AI measurement have
+been used or proposed. These include the Turing test, and endless
+variants <span id="id9">[<a class="reference internal" href="#id1833">18</a>, <a class="reference internal" href="#id201">19</a>]</span>, the use of human tests,
+from science exams <span id="id10">[<a class="reference internal" href="#id203">20</a>]</span> to psychometric tests
+<span id="id11">[<a class="reference internal" href="#id1783">21</a>, <a class="reference internal" href="#id863">22</a>, <a class="reference internal" href="#id1628">23</a>]</span>,
+the adaptation of psychophysics <span id="id12">[<a class="reference internal" href="#id249">24</a>]</span> or item response
+theory <span id="id13">[<a class="reference internal" href="#id237">25</a>]</span>, the use of collections of video games
+<span id="id14">[<a class="reference internal" href="#id2097">26</a>]</span>, the exploration of naive physics
+<span id="id15">[<a class="reference internal" href="#id202">27</a>]</span>, or the adaptation of tests from animal cognition
+<span id="id16">[<a class="reference internal" href="#id212">28</a>]</span>. All these approaches attempt to measure
+intelligence more broadly, some general cognitive abilities or at least
+skills that could be applied to a range of different tasks. Accordingly,
+these fall under the paradigm of ‘capability-oriented evaluation’
+<span id="id17">[<a class="reference internal" href="#id370">4</a>]</span>.</p>
+<p>The key difference between performance and capability is that
+performance is affected by the distribution, while capability is not.
+For instance, the same individual (an AI system or a human) can have
+different degrees of performance for the same task or set of tasks if we
+change the distribution of examples (e.g., by including more difficult
+examples), but the capability should be the same, since it should be a
+property of an individual. If a person or computer has the capability of
+resolving simple negation, this <em>capability</em> is not changed by including
+many double negations in the dataset, even if this decreases
+performance. However, identifying and estimating the level for different
+capabilities is much more challenging than measuring performance. Also,
+drawing conclusions about the cognitive abilities of AI systems requires
+caution, even from the most-well designed experiments. But this is also
+true even when performance is used as a proxy for capability
+<span id="id18">[<a class="reference internal" href="#id286">29</a>]</span>.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="id19"><dl class="citation">
+<dt class="label" id="id2112"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>John D Musa, Anthony Iannino, and Kazuhira Okumoto. Software reliability. <em>Advances in computers</em>, 30:85–170, 1990.</p>
+</dd>
+<dt class="label" id="id2063"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>A.M. Turing. Computing machinery and intelligence. <em>Mind</em>, 59(236):433, 1950.</p>
+</dd>
+<dt class="label" id="id2113"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dd><p>W Richards Adrion, Martha A Branstad, and John C Cherniavsky. Validation, verification, and testing of computer software. <em>ACM Computing Surveys (CSUR)</em>, 14(2):159–192, 1982.</p>
+</dd>
+<dt class="label" id="id370"><span class="brackets">4</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id17">2</a>)</span></dt>
+<dd><p>José Hernández-Orallo. Evaluation in artificial intelligence: from task-oriented to ability-oriented measurement. <em>Artificial Intelligence Review</em>, 48(3):397–447, 2017.</p>
+</dd>
+<dt class="label" id="id388"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
+<dd><p>J. Hernández-Orallo. <em>The Measure of All Minds: Evaluating Natural and Artificial Intelligence</em>. Cambridge University Press, 2017.</p>
+</dd>
+<dt class="label" id="id368"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
+<dd><p>José Hernández-Orallo, Marco Baroni, Jordi Bieger, Nader Chmait, David L Dowe, Katja Hofmann, Fernando Martínez-Plumed, Claes Strannegård, and Kristinn R Thórisson. A new AI evaluation cosmos: ready to play the game? <em>AI Magazine</em>, 2017.</p>
+</dd>
+<dt class="label" id="id222"><span class="brackets"><a class="fn-backref" href="#id3">7</a></span></dt>
+<dd><p>Chris Welty, Praveen Paritosh, and Lora Aroyo. Metrology for AI: from benchmarks to instruments. <em>arXiv preprint arXiv:1911.01875</em>, 2019.</p>
+</dd>
+<dt class="label" id="id240"><span class="brackets"><a class="fn-backref" href="#id3">8</a></span></dt>
+<dd><p>Peter Flach. Performance evaluation in machine learning: the good, the bad, the ugly and the way forward. In <em>AAAI</em>. 2019.</p>
+</dd>
+<dt class="label" id="id1909"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
+<dd><p>Peter Flach. Measurement theory for data science and AI: modelling the skills of learning machines and developing standardised benchmark tests. <span>Turing Institute, <a class="reference external" href="#"></a></span>https://www.turing.ac.uk/research/research-projects/measurement-theory-data-science-and-ai, 2019.</p>
+</dd>
+<dt class="label" id="id221"><span class="brackets"><a class="fn-backref" href="#id3">10</a></span></dt>
+<dd><p>Guillaume Avrin. Evaluation of artificial intelligence systems. <span>Laboratoire National de Métrologie et d’Essais : <a class="reference external" href="#"></a></span>https://www.lne.fr/en/testing/evaluation-artificial-intelligence-systems, 2019.</p>
+</dd>
+<dt class="label" id="id118"><span class="brackets">11</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p>Jose Hernandez-Orallo. Ai evaluation: on broken yardsticks and measurement scales. In <em>AAAI Workshop on Evaluating Evaluation of AI Systems</em>. 2020.</p>
+</dd>
+<dt class="label" id="id204"><span class="brackets"><a class="fn-backref" href="#id3">12</a></span></dt>
+<dd><p>Fernando Martínez-Plumed and José Hernández-Orallo. Dual indicators to analyze ai benchmarks: difficulty, discrimination, ability, and generality. <em>IEEE Transactions on Games</em>, 12(2):121–131, 2020. <a class="reference external" href="https://doi.org/10.1109/TG.2018.2883773">doi:10.1109/TG.2018.2883773</a>.</p>
+</dd>
+<dt class="label" id="id208"><span class="brackets"><a class="fn-backref" href="#id3">13</a></span></dt>
+<dd><p>José Hernández-Orallo. Identifying artificial intelligence capabilities: what and how to test. 2021.</p>
+</dd>
+<dt class="label" id="id211"><span class="brackets"><a class="fn-backref" href="#id3">14</a></span></dt>
+<dd><p>Jose Hernandez-Orallo, Wout Schellaert, and Fernando Martinez-Plumed. Training on the test set: mapping the system-problem space in ai. <em>AAAI Senior Member Track - Blue Sky Ideas</em>, 2022.</p>
+</dd>
+<dt class="label" id="id2114"><span class="brackets"><a class="fn-backref" href="#id5">15</a></span></dt>
+<dd><p>Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. Imagenet: a large-scale hierarchical image database. In <em>2009 IEEE conference on computer vision and pattern recognition</em>, 248–255. Ieee, 2009.</p>
+</dd>
+<dt class="label" id="id228"><span class="brackets"><a class="fn-backref" href="#id6">16</a></span></dt>
+<dd><p>David Schlangen. Language tasks and language games: on methodology in current natural language processing research. <em>arXiv preprint arXiv:1908.10747</em>, 2019.</p>
+</dd>
+<dt class="label" id="id229"><span class="brackets"><a class="fn-backref" href="#id7">17</a></span></dt>
+<dd><p>Rowan Zellers, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi. Hellaswag: can a machine really finish your sentence? <em>arXiv preprint arXiv:1905.07830</em>, 2019.</p>
+</dd>
+<dt class="label" id="id1833"><span class="brackets"><a class="fn-backref" href="#id9">18</a></span></dt>
+<dd><p>G. Oppy and D. L. Dowe. The Turing Test. In Edward N. Zalta, editor, <em>Stanford Encyclopedia of Philosophy</em>. 2011. <span>Stanford University, <a class="reference external" href="#"></a></span>http://plato.stanford.edu/entries/turing-test/.</p>
+</dd>
+<dt class="label" id="id201"><span class="brackets"><a class="fn-backref" href="#id9">19</a></span></dt>
+<dd><p>José Hernández-Orallo. Twenty years beyond the turing test: moving beyond the human judges too. <em>Minds and Machines</em>, 30(4):533–562, 2020.</p>
+</dd>
+<dt class="label" id="id203"><span class="brackets"><a class="fn-backref" href="#id10">20</a></span></dt>
+<dd><p>Todor Mihaylov, Peter Clark, Tushar Khot, and Ashish Sabharwal. Can a suit of armor conduct electricity? a new dataset for open book question answering. <em>arXiv preprint arXiv:1809.02789</em>, 2018.</p>
+</dd>
+<dt class="label" id="id1783"><span class="brackets"><a class="fn-backref" href="#id11">21</a></span></dt>
+<dd><p>S. Bringsjord and B. Schimanski. What is artificial intelligence? Psychometric AI as an answer. In <em>International Joint Conference on Artificial Intelligence</em>, 887–893. 2003.</p>
+</dd>
+<dt class="label" id="id863"><span class="brackets"><a class="fn-backref" href="#id11">22</a></span></dt>
+<dd><p>D. L. Dowe and J. Hernandez-Orallo. IQ tests are not for machines, yet. <em>Intelligence</em>, 40(2):77–81, 2012. URL: <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0160289611001619">http://www.sciencedirect.com/science/article/pii/S0160289611001619</a>, <a class="reference external" href="https://doi.org/10.1016/j.intell.2011.12.001">doi:10.1016/j.intell.2011.12.001</a>.</p>
+</dd>
+<dt class="label" id="id1628"><span class="brackets"><a class="fn-backref" href="#id11">23</a></span></dt>
+<dd><p>J. Hernández-Orallo, F. Mart\'ınez-Plumed, U. Schmid, M. Siebers, and D. L. Dowe. Computer models solving human intelligence test problems: progress and implications. <em>Artificial Intelligence</em>, 230:74–107, 2016.</p>
+</dd>
+<dt class="label" id="id249"><span class="brackets"><a class="fn-backref" href="#id12">24</a></span></dt>
+<dd><p>Joel Z Leibo and others. Psychlab: a psychology laboratory for deep reinforcement learning agents. <em>arXiv preprint arXiv:1801.08116</em>, 2018.</p>
+</dd>
+<dt class="label" id="id237"><span class="brackets"><a class="fn-backref" href="#id13">25</a></span></dt>
+<dd><p>Fernando Martínez-Plumed, Ricardo BC Prudêncio, Adolfo Martínez-Usó, and José Hernández-Orallo. Item response theory in AI: analysing machine learning classifiers at the instance level. <em>Artificial Intelligence</em>, 271:18–42, 2019.</p>
+</dd>
+<dt class="label" id="id2097"><span class="brackets"><a class="fn-backref" href="#id14">26</a></span></dt>
+<dd><p>Marc G Bellemare, Yavar Naddaf, Joel Veness, and Michael Bowling. The arcade learning environment: an evaluation platform for general agents. <em>Journal of Artificial Intelligence Research</em>, 47:253–279, 2013.</p>
+</dd>
+<dt class="label" id="id202"><span class="brackets"><a class="fn-backref" href="#id15">27</a></span></dt>
+<dd><p>Anton Bakhtin, Laurens van der Maaten, Justin Johnson, Laura Gustafson, and Ross Girshick. Phyre: a new benchmark for physical reasoning. <em>Advances in Neural Information Processing Systems</em>, 2019.</p>
+</dd>
+<dt class="label" id="id212"><span class="brackets"><a class="fn-backref" href="#id16">28</a></span></dt>
+<dd><p>Benjamin Beyret, José Hernández-Orallo, Lucy Cheke, Marta Halina, Murray Shanahan, and Matthew Crosby. The animal-ai environment: training and testing animal-like artificial cognition. <em>arXiv preprint arXiv:1909.07483</em>, 2019.</p>
+</dd>
+<dt class="label" id="id286"><span class="brackets"><a class="fn-backref" href="#id18">29</a></span></dt>
+<dd><p>Ryan Burnell, John Burden, Danaja Rutar, Konstantinos Voudouris, Lucy Cheke, and José Hernández-Orallo. Not a number: identifying instance features for capability-oriented evaluation. <em>IJCAI</em>, 2022.</p>
+</dd>
+</dl>
+</p>
+<hr class="docutils" />
+<p>This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.</p>
+<hr class="docutils" />
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="pwc"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p><a class="reference external" href="http://paperswithcode.com">paperswithcode.com</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./T3.2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="reliability.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Reliability</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="negative_side_effects.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Negative side effects</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

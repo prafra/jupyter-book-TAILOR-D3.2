@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meaningful Human Control &#8212; TAILOR - D3.2 - Handbook on Trustworthy AI</title>
+    <title>Meaningful human control &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -45,16 +45,17 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Frame problem" href="L3.The_frame_problem.html" />
-    <link rel="prev" title="Accountability" href="L2.Accountability.html" />
+    <link rel="next" title="The Frame Problem" href="L3.The_frame_problem.html" />
+    <link rel="prev" title="Wicked problems" href="L3.Wicked_problems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -83,7 +84,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.2 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -105,8 +106,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Jupyter.html">
-   Jupyter demos
+  <a class="reference internal" href="../T3.1.html">
+   Explainable AI Systems
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -114,33 +115,33 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introJupyter.html">
-     Welcome to your Jupyter Book
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_kinds.html">
+     Kinds of Explanations
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/feature_importance.html">
+       Feature Importance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/saliency_maps.html">
+       Saliency Maps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/single_tree.html">
+       Single Tree Approximation
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../markdownJupyter.html">
-     Markdown Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notebooksJupyter.html">
-     Content with notebooks
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../T3.1.html">
-   Explainable AI Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../T3.1/XAI_dimensions.html">
      Dimensions of Explanations
@@ -152,30 +153,139 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/blackbox_transparent.html">
+       Black Box Explanation vs Explanation by Design
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../T3.1/model_specific.html">
        Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/global_local.html">
+       Global vs Local Explanations
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../T3.2.html">
-   Safety and Roboustness
+   Safety and Robustness
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/robustness.html">
+     Robustness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/reliability.html">
+     Reliability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/evaluation.html">
+     Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/negative_side_effects.html">
+     Negative side effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/distributional_shift.html">
+     Distributional shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/security.html">
+     Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/adversarial_attack.html">
+     Adversarial Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.2/data_poisoning.html">
+     Data Poisoning
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../T3.3.html">
    Fairness, Equity, and Justice by Design
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/auditing.html">
+     Auditing AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/equity.html">
+     Discrimination &amp; Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/fairness.html">
+     Fairness notions and metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/fair_ML.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/segregation.html">
+     Segregation
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../T3.4.html">
+  <a class="reference internal" href="L1.Accountability_and_Reproducibility.html">
    Accountability and Reproducibility
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -184,57 +294,40 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="L2.Accountability.html">
      Accountability
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.Wicked_problems.html">
+       Wicked problems
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Meaningful Human Control
+       Meaningful human control
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="L3.The_frame_problem.html">
-       The Frame problem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.Accountability_gaps.html">
-       Accountability Gaps
+       The Frame Problem
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
+   <li class="toctree-l2">
     <a class="reference internal" href="L2.Reproducibility.html">
      Reproducibility
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.Guidelines_reproducibility.html">
-       Guidelines
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="L3.software_frameworks_supporting_reproducibility.html">
-       Software frameworks supporting reproducibility
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="L2.Traceability.html">
      Traceability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -257,38 +350,45 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../T3.5.html">
    Respect for Privacy
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../T3.5/L1.anonymization.html">
-     Data Anonymization and Pseudonymization
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../T3.5/L1.privacy_model.html">
-     Privacy Models
+    <a class="reference internal" href="../T3.5/L1.anonymization.html">
+     Data Anonymization (and Pseudonymization)
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../T3.5/L2.privmod_properties.html">
-       Properties of Privacy Models
+      <a class="reference internal" href="../T3.5/L2.pseudonymization.html">
+       Pseudonymization
       </a>
      </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.privacy_model.html">
+     Privacy Models
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3 has-children">
       <a class="reference internal" href="../T3.5/L2.differential_privacy.html">
        Differential Privacy
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -315,13 +415,8 @@ const thebe_selector_output = ".output, .cell_output"
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../T3.5/L3.computational_DP.html">
-         Computational Differential Privacy
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../T3.5/L3.other_DP.html">
-         Other Variants or Generalizations
+        <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
+         Achieving Differential Privacy
         </a>
        </li>
       </ul>
@@ -330,50 +425,6 @@ const thebe_selector_output = ".output, .cell_output"
       <a class="reference internal" href="../T3.5/L2.k_anonymity.html">
        k-anonymity
       </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../T3.5/L1.privacy_mechanisms.html">
-     Privacy Mechanisms
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
-       Perturbation Mechanism
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-      <label for="toctree-checkbox-12">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../T3.5/L3.local_perturbation.html">
-         Local Perturbation
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../T3.5/L3.laplace.html">
-         Laplace Mechanism
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../T3.5/L3.exponential.html">
-         Exponential Mechanism
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../T3.5/L3.randomness_alignments.html">
-         Randomness Alignments
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
@@ -392,28 +443,13 @@ const thebe_selector_output = ".output, .cell_output"
        Re-identification Attack
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.5/L2.membership.html">
-       Membership Attack
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../T3.5/L2.reconstruction.html">
-       Reconstruction Attack
-      </a>
-     </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../T3.6.html">
    Sustainability
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../AnalyticaIndex.html">
-   Index
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
   <label for="toctree-checkbox-14">
@@ -421,113 +457,187 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Accountability.html">
-     Accountability
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.6/greenAI.html">
+     Green AI
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.6/power_aware.html">
+       Power-aware Computing
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Alignment.html">
-     Alignment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Ante-hoc%20Explanation.html">
-     Ante-hoc Explanation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Assurance.html">
-     Assurance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Attacks%20on%20Anonymization%20Schemes.html">
-     Attacks on Anonymization Schemes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Attacks%20on%20Partition-based%20Algorithms.html">
-     Attacks on Partition-based Algorithms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Attacks%20on%20Pseudonymised%20Data.html">
-     Attacks on Pseudonymised Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Auditing.html">
-     Auditing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Autonomy%20Levels.html">
-     Autonomy Levels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Bias.html">
-     Bias
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Certification%20Standards.html">
-     Certification
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Cloud%20Computing.html">
+    <a class="reference internal" href="../T3.6/cloud_computing.html">
      Cloud Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Computational%20Differential%20Privacy.html">
-     Computational Differential Privacy
+    <a class="reference internal" href="../T3.6/edge_computing.html">
+     Edge Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Corrigibility.html">
-     Corrigibility
+    <a class="reference internal" href="../T3.6/data_centre.html">
+     Data Centre
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Counterfactual%20Explanations.html">
-     Counterfactual explanations
+    <a class="reference internal" href="../T3.6/cradle_to_cradle.html">
+     Cradle-to-cradle Design
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Data%20Anonymization.html">
+    <a class="reference internal" href="../T3.6/resource_prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../AnalyticaIndex.html">
+   Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/2CC2.html">
+     2CC2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Accountability.html">
+     Accountability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20attack.html">
+     Adversarial Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20example.html">
+     Adversarial Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20input.html">
+     Adversarial Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Ante-hoc%20Explanation.html">
+     Ante-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Assessment.html">
+     Assessment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20Anonym.html">
+     Attacks on Anonymization Schema
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20on%20Pseudonymised%20Data.html">
+     Attacks on Pseudonymised Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Auditing.html">
+     Auditing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Black-box%20Explanations.html">
+     Black-box Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Brittleness.html">
+     Brittleness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/C2C.html">
+     C2C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cloud%20Computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Continuous%20monitoring.html">
+     Continuous Performance Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/cradle%202%20cradle.html">
+     Cradle 2 cradle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Data%20Anonymization.html">
      Data Anonymization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Data%20Centers%20Management.html">
-     Data Centers Management
+    <a class="reference internal" href="../index/T3.6/Data%20Center.html">
+     Data Center
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Data%20Minimisation.html">
-     Data Minimisation
+    <a class="reference internal" href="../index/T3.2/Data%20Poisoning.html">
+     Data Poisoning
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Data%20sanitization.html">
-     Data Sanitization
+    <a class="reference internal" href="../index/T3.2/Dependability.html">
+     Dependability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/deFinetti%20Attack.html">
-     deFinetti Attack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Differential%20Privacy%20models.html">
+    <a class="reference internal" href="../index/T3.5/Differential%20Privacy%20models.html">
      Differential Privacy Models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/epsilon_delta-differential_privacy.html">
+    <a class="reference internal" href="../index/T3.5/epsilon_delta-differential_privacy.html">
      (
      <span class="math notranslate nohighlight">
       \(\epsilon\)
@@ -540,7 +650,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Epsilon-differential_privacy.html">
+    <a class="reference internal" href="../index/T3.5/Epsilon-differential_privacy.html">
      <span class="math notranslate nohighlight">
       \(\epsilon\)
      </span>
@@ -548,37 +658,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Differential%20Privacy%20-%20Other%20Variants%20or%20Generalizations.html">
-     Differential Privacy - Other Variants or Generalizations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Dimensions%20of%20Explanations.html">
-     Dimensions of Explanations (Explainable AI Systems)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Discrimination.html">
-     Discrimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Distributional%20Shift.html">
-     Distributional Shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Electricity%20Price%20Forecast.html">
-     Electricity Price Forecast
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Enforcement.html">
-     Enforcement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/epsilon-indistinguishability.html">
+    <a class="reference internal" href="../index/T3.5/Epsilon-indist.html">
      <span class="math notranslate nohighlight">
       \(\epsilon\)
      </span>
@@ -586,358 +666,313 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Equity.html">
+    <a class="reference internal" href="../index/T3.2/Data%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Distributional%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Direct.html">
+     Direct Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Edge%20Computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Aware.html">
+     Energy-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Efficient.html">
+     Energy-efficient Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Evaluation.html">
+     Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Equity.html">
      Equity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Evaluating%20Explanations.html">
-     Evaluating Explanations
+    <a class="reference internal" href="../index/T3.1/Explanation%20by%20Design.html">
+     Explanation by Design
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Exponential%20Mechanism.html">
-     Exponential Mechanism
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Fair%20Machine%20Learning.html">
+    <a class="reference internal" href="../index/T3.3/Fair%20Machine%20Learning.html">
      Fair Machine Learning
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Fairness.html">
+    <a class="reference internal" href="../index/T3.3/Fairness.html">
      Fairness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Features%20Importance.html">
+    <a class="reference internal" href="../index/T3.1/Features%20Importance.html">
      Feature Importance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Generality.html">
-     Generality
+    <a class="reference internal" href="../index/T3.4/Frame.html">
+     The Frame Problem
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/General%20Privacy-related%20Attacks.html">
-     General Privacy-related Attacks
+    <a class="reference internal" href="../index/T3.6/Fog%20Computing.html">
+     Fog Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Global%20Explanations.html">
+    <a class="reference internal" href="../index/T3.1/Generalizable%20XAI.html">
+     Model Agnostic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Global%20Explanations.html">
      Global Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Global%20Recoding.html">
-     Global Recording
+    <a class="reference internal" href="../index/T3.6/Green%20AI.html">
+     Green AI
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Goal%20Stability.html">
-     Goal Stability
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Green%20Computing.html">
+    <a class="reference internal" href="../index/T3.6/Green%20Computing.html">
      Green Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Human-in-the-loop.html">
-     Human-in-the-loop
+    <a class="reference internal" href="../index/T3.6/Green%20IT.html">
+     Green IT
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Impact%20Assessment%20of%20Trustworthy%20AI.html">
-     Impact Assessment of Trustworthy AI
+    <a class="reference internal" href="../index/T3.6/ICT%20sustainability.html">
+     ICT sustainability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Interpretability.html">
-     Interpretability
+    <a class="reference internal" href="../index/T3.2/Intended.html">
+     Intended Behaviour
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Interruptibility.html">
-     Interruptibility
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Justice.html">
+    <a class="reference internal" href="../index/T3.3/Justice.html">
      Justice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/K-Anonymity.html">
+    <a class="reference internal" href="../index/T3.5/K-Anonymity.html">
      K-anonymity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Laplace%20Mechanism.html">
-     Laplace Mecanism
+    <a class="reference internal" href="../index/T3.5/Linking%20Attack.html">
+     Linking Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Local%20Explanations.html">
+    <a class="reference internal" href="../index/T3.1/Local%20Explanations.html">
      Local Explanations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Local%20perturbation.html">
-     Local Perturbation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Local%20Recoding.html">
-     Local Recording
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Meaningful%20human%20control.html">
+    <a class="reference internal" href="../index/T3.4/Meaningful%20human%20control.html">
      Meaningful Human Control
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Membership%20Inference%20Attacks.html">
-     Membership Inference Attack
+    <a class="reference internal" href="../index/T3.2/Measurement.html">
+     Measurement
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Minimality%20Attack.html">
-     Minimality Attack
+    <a class="reference internal" href="../index/T3.6/Mesh%20Computing.html">
+     Mesh Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Model-Agnostic.html">
-     Model Agnostic (Explainable AI Systems)
+    <a class="reference internal" href="../index/T3.2/Misdirect.html">
+     Misdirect Behaviour
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Model-Specific.html">
-     Model Specific (Explainable AI Systems)
+    <a class="reference internal" href="../index/T3.1/Model-Agnostic.html">
+     Model Agnostic
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Mondrian.html">
-     Mondrian
+    <a class="reference internal" href="../index/T3.1/Model-Specific.html">
+     Model Specific
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Monitoring.html">
-     Monitoring
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Moral%20responsibility.html">
-     Moral Responsability
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Multidimensional%20Recoding.html">
-     Multidimensional Recording
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Negative%20Side%20Effects.html">
+    <a class="reference internal" href="../index/T3.2/Negative%20Side%20Effects.html">
      Negative Side Effects
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Nice%20properties%20of%20Privacy%20Models.html">
-     Nice Properties of Privacy Models
+    <a class="reference internal" href="../index/T3.1/Not%20Generalizable%20XAI.html">
+     Model Specific
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Partition-Based%20Algorithms.html">
-     Partition-Based Algorithms
+    <a class="reference internal" href="../index/T3.5/Perturbation.html">
+     Achiving Differential Privacy
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Perturbation%20Mechanisms.html">
-     Perturbation Mechanisms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Post-hoc%20Explanations.html">
+    <a class="reference internal" href="../index/T3.1/Post-hoc%20Explanations.html">
      Post-hoc Explanation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Privacy%20algorithm.html">
-     Privacy Algorithm
+    <a class="reference internal" href="../index/T3.6/Power%20Aware.html">
+     Power-aware Computing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Privacy%20Mechanism.html">
-     Privacy Mechanism
+    <a class="reference internal" href="../index/T3.5/Privacy%20model.html">
+     Privacy models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Privacy%20model.html">
-     Privacy model
+    <a class="reference internal" href="../index/T3.4/Provenance.html">
+     Provenance Tracking
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Privacy-Preserving%20Data%20Publishing.html">
-     Privacy-Preserving Data Publishing
+    <a class="reference internal" href="../index/T3.5/Pseudonymised%20Data.html">
+     Pseudonymization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Problem%20of%20many%20hands.html">
-     Problem of Many Hands
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Randomized%20response.html">
-     Randomized response
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Reconstruction%20Attacks.html">
-     Reconstruction Attacks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Re-identification%20Attack.html">
+    <a class="reference internal" href="../index/T3.5/Re-identification%20Attack.html">
      Re-identification Attack
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Reliability.html">
+    <a class="reference internal" href="../index/T3.6/Regenerative%20Design.html">
+     Regenerative Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Reliability.html">
      Reliability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Repeatability.html">
+    <a class="reference internal" href="../index/T3.4/Repeatability.html">
      Repeatability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Replicability.html">
+    <a class="reference internal" href="../index/T3.4/Replicability.html">
      Replicability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Reproducibility.html">
+    <a class="reference internal" href="../index/T3.4/Reproducibility.html">
      Reproducibility
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Resource%20Prediction.html">
+    <a class="reference internal" href="../index/T3.6/Resource%20Allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Prediction.html">
      Resource Prediction
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Resource%20Scheduling.html">
+    <a class="reference internal" href="../index/T3.6/Resource%20Scheduling.html">
      Resource Scheduling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Reward%20Hacking.html">
-     Reward Hacking
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Robustness.html">
+    <a class="reference internal" href="../index/T3.2/Robustness.html">
      Robustness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Rules%20List%20and%20Rules%20Set.html">
-     Rules List and Rules Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Safety%20Criticality.html">
-     Safety Criticality
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Safety%20Standards.html">
-     Safety Standards
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Saliency%20Maps.html">
+    <a class="reference internal" href="../index/T3.1/Saliency%20Maps.html">
      Saliency Maps
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Scalable%20Oversight%20Problem.html">
-     Scalable Oversight Problem
+    <a class="reference internal" href="../index/T3.2/Security.html">
+     Security
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Security%20under%20post-processing.html">
-     Security under Post-processing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Segregation.html">
+    <a class="reference internal" href="../index/T3.3/Segregation.html">
      Segregation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Self-composition.html">
-     Self-composition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Side%20Effects.html">
-     Side Effects
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Single%20Tree%20Approximation.html">
+    <a class="reference internal" href="../index/T3.1/Single%20Tree%20Approximation.html">
      Single Tree Approxiamation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Specification.html">
-     Specification
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Stochastic%20Forecast.html">
-     Stochastic Forecast
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Testing.html">
+    <a class="reference internal" href="../index/T3.2/Testing.html">
      Testing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Traceability.html">
+    <a class="reference internal" href="../index/T3.4/Traceability.html">
      Traceability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Training%20Corruption.html">
-     Training Corruption
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../index/Transparency.html">
+    <a class="reference internal" href="../index/T3.1/Transparency.html">
      Transparency
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Uncertainty.html">
-     Uncertainty
+    <a class="reference internal" href="../index/T3.2/Unintended.html">
+     Unintended Behaviour
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Validation.html">
-     Validation
+    <a class="reference internal" href="../index/T3.4/Wicked.html">
+     Wicked Problems
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Verification.html">
-     Verification
+    <a class="reference internal" href="../index/T3.6/Workload%20Forecast.html">
+     Workload Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Workload%20Prediction.html">
+     Workload Prediction
     </a>
    </li>
   </ul>
@@ -1024,6 +1059,29 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -1031,11 +1089,34 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Meaningful Human Control</h1>
+                <h1>Meaningful human control</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1043,7 +1124,67 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="meaningful-human-control">
-<h1>Meaningful Human Control<a class="headerlink" href="#meaningful-human-control" title="Permalink to this headline">¶</a></h1>
+<h1>Meaningful human control<a class="headerlink" href="#meaningful-human-control" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-brief">
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<p><strong>Meaningful human control</strong> is the notion that aims to generalize the traditional concept of operational control over technological artifacts to artificial intelligent systems. It implies that artificial systems should not make morally consequential decisions on their own, without appropriate control from responsible humans.</p>
+</div>
+<div class="section" id="more-in-detail">
+<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>The notion of meaningful human control has its origins in the discussions on lethal autonomous weapon systems (LAWS), specifically in regards to life-or-death decisions that such systems could in principle make. Avoiding ethical issues related to autonomous decision making by artificial agents requires that humans, and only humans, have control of and are accountable for the use of lethal force <span id="id1">[<a class="reference internal" href="#id2589">1</a>]</span>. The concrete implications of this requirement are still debated, with proposals range from calls for a full ban of LAWS  <span id="id2">[<a class="reference internal" href="#id2590">2</a>]</span> to suggestions on governance, implementation, and use of such systems that can contribute to meaningful human control  (e.g.  <span id="id3">[<a class="reference internal" href="#id2591">3</a>]</span>,  <span id="id4">[<a class="reference internal" href="#id2592">4</a>]</span>).
+While ethical issues associated with the lack of human control are perhaps most apparent for autonomous weapon systems, they extend far beyond the military domain, to a wider class of human-AI systems that make decisions with moral implications. At the time of writing, researchers have approached meaningful human control in the contexts of automated driving systems  <span id="id5">[<a class="reference internal" href="#id2593">5</a>]</span>  <span id="id6">[<a class="reference internal" href="#id2594">6</a>]</span>, medical decision support systems <span id="id7">[<a class="reference internal" href="#id2595">7</a>]</span>, unmanned aerial vehicles <span id="id8">[<a class="reference internal" href="#id2596">8</a>]</span>, among other domains. Many of these domain-specific operationalizations rely on a philosophical account of meaningful human control proposed by <span id="id9">[<a class="reference internal" href="#id2597">9</a>]</span>. This account builds on the concept of “guidance control” <span id="id10">[<a class="reference internal" href="#id2598">10</a>]</span> and provides two necessary conditions for meaningful human control. The tracking condition requires that the decision-making system tracks and responds to all human reasons (i.e., values, norms, intentions) relevant in given circumstances. The tracing condition requires that any action/decision of the human-AI system should be traceable to at least one human within the system who has proper moral understanding of the situation and the effects of the system in that situation.</p>
+<p>Tracking and tracing, as well as several alternative domain-specific accounts, provide conceptual frameworks for meaningful human control. Making these concepts less vague and more relatable to design and engineering practice is however very challenging <span id="id11">[<a class="reference internal" href="#id2599">11</a>]</span>. In <span id="id12">[<a class="reference internal" href="#id2600">12</a>]</span> an attempt to close this gap between theory and practice is made by proposing four actionable properties that can be addressed throughout the system’s lifecycle:</p>
+<ul class="simple">
+<li><p>Property 1: A system in which humans and AI algorithms interact should have an explicitly defined domain of morally loaded situations within which the system ought to operate.</p></li>
+<li><p>Property 2: Humans and AI agents within the system should have appropriate and mutually compatible representations.</p></li>
+<li><p>Property 3: Responsibility attributed to a human should be commensurate with that human’s ability and authority to control the system.</p></li>
+<li><p>Property 4: There should be explicit links between the actions of the AI agents and actions of humans who are aware of their moral responsibility.</p></li>
+</ul>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="id13"><dl class="citation">
+<dt class="label" id="id2589"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Article 36. Key areas for debate on autonomous weapons systems: memorandum for delegates at the convention on certain conventional weapons (ccw) meeting of experts on lethal autonomous weapons systems. Technical Report, Article 36, 2014. URL: <a class="reference external" href="https://www.article36.org/wp-content/uploads/2014/05/A36-CCW-May-2014.pdf">https://www.article36.org/wp-content/uploads/2014/05/A36-CCW-May-2014.pdf</a>.</p>
+</dd>
+<dt class="label" id="id2590"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Article 36. Killing by machine: key issues for understanding meaningful human control. Technical Report, Article 36, 2015. URL: <a class="reference external" href="https://www.stopkillerrobots.org/wp-content/uploads/2021/09/KILLING_BY_MACHINE_6.4.15.pdf">https://www.stopkillerrobots.org/wp-content/uploads/2021/09/KILLING_BY_MACHINE_6.4.15.pdf</a>.</p>
+</dd>
+<dt class="label" id="id2591"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Heather M Roff and Richard Moyes. Meaningful human control, artificial intelligence and autonomous weapons. In <em>Briefing Paper Prepared for the Informal Meeting of Experts on Lethal Au-Tonomous Weapons Systems, UN Convention on Certain Conventional Weapons</em>. 2016.</p>
+</dd>
+<dt class="label" id="id2592"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>M.C. Horowitz and P Scharre. Meaningful human control in weapon systems: a primer. Technical Report, Center for a New American Security, 2015.</p>
+</dd>
+<dt class="label" id="id2593"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Daniël D Heikoop, Marjan Hagenzieker, Giulio Mecacci, Simeon Calvert, Filippo Santoni De Sio, and Bart van Arem. Human behaviour with automated driving systems: a quantitative framework for meaningful human control. <em>Theoretical issues in ergonomics science</em>, 20(6):711–730, 2019.</p>
+</dd>
+<dt class="label" id="id2594"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Simeon C Calvert, Bart van Arem, Daniël D Heikoop, Marjan Hagenzieker, Giulio Mecacci, and Filippo Santoni de Sio. Gaps in the control of automated vehicles on roads. <em>IEEE intelligent transportation systems magazine</em>, 13(4):146–153, 2020.</p>
+</dd>
+<dt class="label" id="id2595"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>Matthias Braun, Patrik Hummel, Susanne Beck, and Peter Dabrock. Primer on an ethics of ai-based decision support systems in the clinic. <em>Journal of medical ethics</em>, 47(12):e3–e3, 2021.</p>
+</dd>
+<dt class="label" id="id2596"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p>Marc Steen, Jurriaan van Diggelen, Tjerk Timan, and Nanda van der Stap. Meaningful human control of drones: exploring human–machine teaming, informed by four different ethical perspectives. <em>AI and Ethics</em>, pages 1–13, 2022.</p>
+</dd>
+<dt class="label" id="id2597"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dd><p>Filippo Santoni de Sio and Jeroen Van den Hoven. Meaningful human control over autonomous systems: a philosophical account. <em>Frontiers in Robotics and AI</em>, pages 15, 2018.</p>
+</dd>
+<dt class="label" id="id2598"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
+<dd><p>John Martin Fischer and Mark Ravizza. <em>Responsibility and control: A theory of moral responsibility</em>. Cambridge university press, 1998.</p>
+</dd>
+<dt class="label" id="id2599"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dd><p>Rebecca Crootof. A meaningful floor for meaningful human control. <em>Temp. Int'l &amp; Comp. LJ</em>, 30:53, 2016.</p>
+</dd>
+<dt class="label" id="id2600"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
+<dd><p>Luciano Cavalcante Siebert, Maria Luce Lupetti, Evgeni Aizenberg, Niek Beckers, Arkady Zgonnikov, Herman Veluwenkamp, David Abbink, Elisa Giaccardi, Geert-Jan Houben, Catholijn M Jonker, and others. Meaningful human control: actionable properties for ai system development. <em>AI and Ethics</em>, pages 1–15, 2022.</p>
+</dd>
+</dl>
+</p>
+<hr class="docutils" />
+<p>This entry was written by Arkady Zgonnikov and Luciano C Siebert.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1071,17 +1212,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="L2.Accountability.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="L3.Wicked_problems.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Accountability</p>
+            <p class="prev-next-title">Wicked problems</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="L3.The_frame_problem.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Frame problem</p>
+        <p class="prev-next-title">The Frame Problem</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1092,7 +1233,7 @@ const thebe_selector_output = ".output, .cell_output"
     <footer class="footer">
   <p>
     
-      By TAILOR WP3 members; see  <a href="./authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+      By TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
     
         &copy; Copyright 2021.<br/>
   </p>
