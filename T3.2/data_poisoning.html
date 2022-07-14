@@ -37,14 +37,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -89,7 +86,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -1002,8 +999,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -1011,7 +1008,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -1019,11 +1016,11 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/T3.2/data_poisoning.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1035,12 +1032,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.2/data_poisoning.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
     </div>
 </div>
@@ -1048,8 +1045,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1057,10 +1054,10 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -1087,40 +1084,7 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Poisoning</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data-poisoning">
@@ -1150,7 +1114,7 @@ attackers may simply handcraft malicious inputs. <a class="footnote-reference br
 <p><strong>Data poisoning</strong> is a security threat to AI
 systems in which an attacker controls the behaviour of a system by
 manipulating its training, validation or testing data
-<span id="id2">[<a class="reference internal" href="security.html#id2177">4</a>]</span>. While it usually refers to the training data
+<span id="id2">[<a class="reference internal" href="security.html#id2176">4</a>]</span>. While it usually refers to the training data
 for machine learning algorithms, it could also affect some other AI
 systems by corrupting the testing data. Note that when the deployment
 data is corrupted during operation, we are in the situation of an
@@ -1158,7 +1122,7 @@ data is corrupted during operation, we are in the situation of an
 contamination</em>, although contamination is
 usually more accidental than intentional. For instance, many language
 models
-<span id="id3">[<a class="reference internal" href="distributional_shift.html#id2067">8</a>, <a class="reference internal" href="#id2140">5</a>, <a class="reference internal" href="#id198">6</a>, <a class="reference internal" href="#id2363">7</a>, <a class="reference internal" href="#id199">8</a>, <a class="reference internal" href="#id2248">9</a>, <a class="reference internal" href="#id200">10</a>]</span>.
+<span id="id3">[<a class="reference internal" href="distributional_shift.html#id2066">8</a>, <a class="reference internal" href="#id2139">5</a>, <a class="reference internal" href="#id197">6</a>, <a class="reference internal" href="#id2362">7</a>, <a class="reference internal" href="#id198">8</a>, <a class="reference internal" href="#id2247">9</a>, <a class="reference internal" href="#id199">10</a>]</span>.
 are trained with data that is then used for test or validation, leading
 to an overoptimistic <a class="reference internal" href="evaluation.html"><span class="doc">Evaluation</span></a> of a system’s
 behaviour.</p>
@@ -1169,12 +1133,12 @@ conclusions. This type of threat is particularly relevant for deep
 learning systems because they require large amounts of data to train
 which is usually extracted from the web, and, at this scale, it is often
 infeasible to properly vet content. We find examples such as Imagenet
-<span id="id4">[<a class="reference internal" href="#id211">4</a>]</span> or the Open Images Dataset
-<span id="id5">[<a class="reference internal" href="#id2179">11</a>]</span> containing tens or hundreds of millions of images
+<span id="id4">[<a class="reference internal" href="#id210">4</a>]</span> or the Open Images Dataset
+<span id="id5">[<a class="reference internal" href="#id2178">11</a>]</span> containing tens or hundreds of millions of images
 from a wide range of potentially insecure and, in many cases, unknown
 sources. The current reliance of AI systems on such massive datasets
 that are not manually inspected has led to fears that corrupted training
-data can produce flawed models <span id="id6">[<a class="reference internal" href="#id2180">12</a>]</span>.</p>
+data can produce flawed models <span id="id6">[<a class="reference internal" href="#id2179">12</a>]</span>.</p>
 <p>According to the breadth of the attack, data poisoning attacks fall into
 two main categories: attacks targeting <em>availability</em> and attacks
 targeting <em>integrity</em>. Availability attacks are usually unsophisticated
@@ -1194,22 +1158,22 @@ classified into two broad categories: <em>backdoor</em> and <em>triggerless
 poisoning attack</em>. The former causes a model to misclassify samples at
 test time that contain a particular trigger (e.g., small patches in
 images or characters sequence in text)
-<span id="id7">[<a class="reference internal" href="#id2182">13</a>, <a class="reference internal" href="#id2183">14</a>, <a class="reference internal" href="#id2184">15</a>, <a class="reference internal" href="#id2185">16</a>]</span>.
+<span id="id7">[<a class="reference internal" href="#id2181">13</a>, <a class="reference internal" href="#id2182">14</a>, <a class="reference internal" href="#id2183">15</a>, <a class="reference internal" href="#id2184">16</a>]</span>.
 For example, training images could be manipulated so that a vision
 system does not identify any person wearing a piece of clothing having
 the trigger symbol printed on it. In this case model, the attacker
 modifies both the training data (placing poisons) and test data
 (inserting the trigger)
-<span id="id8">[<a class="reference internal" href="#id2186">17</a>, <a class="reference internal" href="#id2187">18</a>, <a class="reference internal" href="#id2188">19</a>]</span>.
+<span id="id8">[<a class="reference internal" href="#id2185">17</a>, <a class="reference internal" href="#id2186">18</a>, <a class="reference internal" href="#id2187">19</a>]</span>.
 Backdoor attacks cause a victim to misclassify any image containing the
 trigger. On the other hand, triggerless poisoning attacks do not require
 modifications at the time of inference and cause a victim to misclassify
-an individual sample <span id="id9">[<a class="reference internal" href="#id2181">20</a>]</span>.</p>
+an individual sample <span id="id9">[<a class="reference internal" href="#id2180">20</a>]</span>.</p>
 <p>Data poisoning attacks can cause considerable damage with minimal
 effort. Their effectiveness is almost directly proportional to the
 quality of the data. Poor quality data will produce subpar results, no
 matter how advanced the model is. For instance, the experiment ImageNet
-Roulette <span id="id10">[<a class="reference internal" href="#id2177">21</a>]</span> used user-uploaded and labelled
+Roulette <span id="id10">[<a class="reference internal" href="#id2176">21</a>]</span> used user-uploaded and labelled
 images to learn how to classify new images. Before long, the system
 began using racial and gender slurs to label people. Seemingly small and
 easily overlooked considerations, such as people using harmful language
@@ -1244,67 +1208,67 @@ of data.</p>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id12"><dl class="citation">
-<dt class="label" id="id115"><span class="brackets"><a class="fn-backref" href="#id2704">1</a></span></dt>
-<dd><p>Leslie David. Understanding artificial intelligence ethics and safety. <em>The Alan Turing Institute, https://doi.org/10.5281/zenodo.3240529</em>, 2019.</p>
+<dt class="label" id="id115"><span class="brackets"><a class="fn-backref" href="#id2703">1</a></span></dt>
+<dd><p>Leslie David. Understanding artificial intelligence ethics and safety. <em>The Alan Turing Institute</em>, 2019. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.3240529">https://doi.org/10.5281/zenodo.3240529</a>.</p>
 </dd>
-<dt class="label" id="id2065"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dt class="label" id="id2064"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
 <dd><p>Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: pre-training of deep bidirectional transformers for language understanding. <em>arXiv preprint arXiv:1810.04805</em>, 2018.</p>
 </dd>
-<dt class="label" id="id2178"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dt class="label" id="id2177"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
 <dd><p>Avi Schwarzschild, Micah Goldblum, Arjun Gupta, John P Dickerson, and Tom Goldstein. Just how toxic is data poisoning? a unified benchmark for backdoor and data poisoning attacks. In <em>International Conference on Machine Learning</em>, 9389–9398. PMLR, 2021.</p>
 </dd>
-<dt class="label" id="id211"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id210"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, and others. Imagenet large scale visual recognition challenge. <em>International journal of computer vision</em>, 115(3):211–252, 2015.</p>
 </dd>
-<dt class="label" id="id2140"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
+<dt class="label" id="id2139"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
 <dd><p>Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, and others. Language models are few-shot learners. <em>Advances in neural information processing systems</em>, 33:1877–1901, 2020.</p>
 </dd>
-<dt class="label" id="id198"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
+<dt class="label" id="id197"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
 <dd><p>Jack W Rae, Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, Sarah Henderson, Roman Ring, Susannah Young, and others. Scaling language models: methods, analysis &amp; insights from training Gopher. <em>arXiv preprint arXiv:2112.11446</em>, 2021.</p>
 </dd>
-<dt class="label" id="id2363"><span class="brackets"><a class="fn-backref" href="#id3">7</a></span></dt>
+<dt class="label" id="id2362"><span class="brackets"><a class="fn-backref" href="#id3">7</a></span></dt>
 <dd><p>Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and Jacob Steinhardt. Measuring massive multitask language understanding. <em>arXiv preprint arXiv:2009.03300</em>, 2020.</p>
 </dd>
-<dt class="label" id="id199"><span class="brackets"><a class="fn-backref" href="#id3">8</a></span></dt>
+<dt class="label" id="id198"><span class="brackets"><a class="fn-backref" href="#id3">8</a></span></dt>
 <dd><p>Dan Hendrycks, Steven Basart, Saurav Kadavath, Mantas Mazeika, Akul Arora, Ethan Guo, Collin Burns, Samir Puranik, Horace He, Dawn Song, and Jacob Steinhardt. Measuring coding challenge competence with APPS. 2021. <a class="reference external" href="https://arxiv.org/abs/2105.09938">arXiv:2105.09938</a>.</p>
 </dd>
-<dt class="label" id="id2248"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
+<dt class="label" id="id2247"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
 <dd><p>Rishi Bommasani and others. On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258, 2021.</p>
 </dd>
-<dt class="label" id="id200"><span class="brackets"><a class="fn-backref" href="#id3">10</a></span></dt>
+<dt class="label" id="id199"><span class="brackets"><a class="fn-backref" href="#id3">10</a></span></dt>
 <dd><p>Long Ouyang, Jeff Wu, Xu Jiang, Diogo Almeida, Carroll L Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, and others. Training language models to follow instructions with human feedback. <em>arXiv preprint arXiv:2203.02155</em>, 2022.</p>
 </dd>
-<dt class="label" id="id2179"><span class="brackets"><a class="fn-backref" href="#id5">11</a></span></dt>
+<dt class="label" id="id2178"><span class="brackets"><a class="fn-backref" href="#id5">11</a></span></dt>
 <dd><p>Alina Kuznetsova, Hassan Rom, Neil Alldrin, Jasper Uijlings, Ivan Krasin, Jordi Pont-Tuset, Shahab Kamali, Stefan Popov, Matteo Malloci, Alexander Kolesnikov, and others. The open images dataset v4. <em>International Journal of Computer Vision</em>, 128(7):1956–1981, 2020.</p>
 </dd>
-<dt class="label" id="id2180"><span class="brackets"><a class="fn-backref" href="#id6">12</a></span></dt>
+<dt class="label" id="id2179"><span class="brackets"><a class="fn-backref" href="#id6">12</a></span></dt>
 <dd><p>Lu Jiang, Zhengyuan Zhou, Thomas Leung, Li-Jia Li, and Li Fei-Fei. Mentornet: learning data-driven curriculum for very deep neural networks on corrupted labels. In <em>International Conference on Machine Learning</em>, 2304–2313. PMLR, 2018.</p>
 </dd>
-<dt class="label" id="id2182"><span class="brackets"><a class="fn-backref" href="#id7">13</a></span></dt>
+<dt class="label" id="id2181"><span class="brackets"><a class="fn-backref" href="#id7">13</a></span></dt>
 <dd><p>Xinyun Chen, Chang Liu, Bo Li, Kimberly Lu, and Dawn Song. Targeted backdoor attacks on deep learning systems using data poisoning. <em>arXiv preprint arXiv:1712.05526</em>, 2017.</p>
 </dd>
-<dt class="label" id="id2183"><span class="brackets"><a class="fn-backref" href="#id7">14</a></span></dt>
+<dt class="label" id="id2182"><span class="brackets"><a class="fn-backref" href="#id7">14</a></span></dt>
 <dd><p>Jiazhu Dai, Chuanshuai Chen, and Yufeng Li. A backdoor attack against lstm-based text classification systems. <em>IEEE Access</em>, 7:138872–138878, 2019.</p>
 </dd>
-<dt class="label" id="id2184"><span class="brackets"><a class="fn-backref" href="#id7">15</a></span></dt>
+<dt class="label" id="id2183"><span class="brackets"><a class="fn-backref" href="#id7">15</a></span></dt>
 <dd><p>Aniruddha Saha, Akshayvarun Subramanya, and Hamed Pirsiavash. Hidden trigger backdoor attacks. In <em>Proceedings of the AAAI conference on artificial intelligence</em>, volume 34, 11957–11965. 2020.</p>
 </dd>
-<dt class="label" id="id2185"><span class="brackets"><a class="fn-backref" href="#id7">16</a></span></dt>
+<dt class="label" id="id2184"><span class="brackets"><a class="fn-backref" href="#id7">16</a></span></dt>
 <dd><p>Alexander Turner, Dimitris Tsipras, and Aleksander Madry. Clean-label backdoor attacks. 2018.</p>
 </dd>
-<dt class="label" id="id2186"><span class="brackets"><a class="fn-backref" href="#id8">17</a></span></dt>
+<dt class="label" id="id2185"><span class="brackets"><a class="fn-backref" href="#id8">17</a></span></dt>
 <dd><p>Battista Biggio, Blaine Nelson, and Pavel Laskov. Poisoning attacks against support vector machines. <em>arXiv preprint arXiv:1206.6389</em>, 2012.</p>
 </dd>
-<dt class="label" id="id2187"><span class="brackets"><a class="fn-backref" href="#id8">18</a></span></dt>
+<dt class="label" id="id2186"><span class="brackets"><a class="fn-backref" href="#id8">18</a></span></dt>
 <dd><p>W Ronny Huang, Jonas Geiping, Liam Fowl, Gavin Taylor, and Tom Goldstein. Metapoison: practical general-purpose clean-label data poisoning. <em>Advances in Neural Information Processing Systems</em>, 33:12080–12091, 2020.</p>
 </dd>
-<dt class="label" id="id2188"><span class="brackets"><a class="fn-backref" href="#id8">19</a></span></dt>
+<dt class="label" id="id2187"><span class="brackets"><a class="fn-backref" href="#id8">19</a></span></dt>
 <dd><p>Chen Zhu, W Ronny Huang, Hengduo Li, Gavin Taylor, Christoph Studer, and Tom Goldstein. Transferable clean-label poisoning attacks on deep neural nets. In <em>International Conference on Machine Learning</em>, 7614–7623. PMLR, 2019.</p>
 </dd>
-<dt class="label" id="id2181"><span class="brackets"><a class="fn-backref" href="#id9">20</a></span></dt>
+<dt class="label" id="id2180"><span class="brackets"><a class="fn-backref" href="#id9">20</a></span></dt>
 <dd><p>Ali Shafahi, W Ronny Huang, Mahyar Najibi, Octavian Suciu, Christoph Studer, Tudor Dumitras, and Tom Goldstein. Poison frogs! targeted clean-label poisoning attacks on neural networks. <em>Advances in neural information processing systems</em>, 2018.</p>
 </dd>
-<dt class="label" id="id2177"><span class="brackets"><a class="fn-backref" href="#id10">21</a></span></dt>
+<dt class="label" id="id2176"><span class="brackets"><a class="fn-backref" href="#id10">21</a></span></dt>
 <dd><p>Kate Crawford and Trevor Paglen. Excavating ai: the politics of images in machine learning training sets. <em>AI and Society</em>, 2019.</p>
 </dd>
 </dl>
@@ -1315,7 +1279,7 @@ of data.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="def3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Definition taken from <span id="id2704">[<a class="reference internal" href="security.html#id114">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
+<dd><p>Definition taken from <span id="id2703">[<a class="reference internal" href="security.html#id114">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
 </dd>
 <dt class="label" id="cmmc"><span class="brackets"><a class="fn-backref" href="#id11">2</a></span></dt>
 <dd><p><a class="reference external" href="https://cmmc-coe.org/test/">https://cmmc-coe.org/test/</a></p>
@@ -1346,8 +1310,8 @@ of data.</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+        
+            <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="adversarial_attack.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1364,17 +1328,19 @@ of data.</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see <a href="../author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 

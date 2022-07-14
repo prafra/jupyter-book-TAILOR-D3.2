@@ -37,14 +37,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -89,7 +86,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -1002,8 +999,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -1011,7 +1008,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -1019,11 +1016,11 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/T3.2/adversarial_attack.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1035,12 +1032,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.2/adversarial_attack.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
     </div>
 </div>
@@ -1048,8 +1045,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1057,10 +1054,10 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -1087,40 +1084,7 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Adversarial Attack</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="adversarial-attack">
@@ -1157,26 +1121,26 @@ implication for the adoption of critical systems like applications in
 autonomous transportation, medical imaging, and security and
 surveillance.</p>
 <p>To get an idea of what adversarial examples look like, consider the
-example in Fig. <a class="reference internal" href="#fig-advex"><span class="std std-numref">16</span></a>  shown in <span id="id1">[<a class="reference internal" href="security.html#id2172">3</a>]</span>: starting
-with an image of a panda from ImageNet  <span id="id2">[<a class="reference internal" href="data_poisoning.html#id211">4</a>]</span>, the
+example in Fig. <a class="reference internal" href="#fig-advex"><span class="std std-numref">16</span></a>  shown in <span id="id1">[<a class="reference internal" href="security.html#id2171">3</a>]</span>: starting
+with an image of a panda from ImageNet  <span id="id2">[<a class="reference internal" href="data_poisoning.html#id210">4</a>]</span>, the
 attacker adds a imperceptibly perturbation (i.e., an small vector whose
 elements are equal to the sign of the elements of the gradient of the
 cost function with respect to the input), to make the image be
 recognised as a gibbon with high confidence by a particular deep neural
-net (GoogLeNet  <span id="id3">[<a class="reference internal" href="#id2171">3</a>]</span>). Also, recent research has shown
+net (GoogLeNet  <span id="id3">[<a class="reference internal" href="#id2170">3</a>]</span>). Also, recent research has shown
 that even in physical world scenarios, machine learning systems are
-vulnerable to adversarial examples:  <span id="id4">[<a class="reference internal" href="#id2169">4</a>]</span> shows how
+vulnerable to adversarial examples:  <span id="id4">[<a class="reference internal" href="#id2168">4</a>]</span> shows how
 printed adversarial images (with modifications imperceptible to the
 human eye) obtained from a cell-phone camera are not correctly
 classified by the models. In general, adversarial examples have the
 potential to be dangerous. For example, attackers could target
 autonomous vehicles by using stickers or paint to create an adversarial
 stop sign that the vehicle would interpret as a ‘yield’ or other sign,
-as discussed in  <span id="id5">[<a class="reference internal" href="#id2170">5</a>]</span>.</p>
+as discussed in  <span id="id5">[<a class="reference internal" href="#id2169">5</a>]</span>.</p>
 <div class="figure align-center" id="fig-advex">
 <a class="reference internal image-reference" href="../_images/adversarial_img_1.png"><img alt="../_images/adversarial_img_1.png" src="../_images/adversarial_img_1.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">An adversarial input, overlaid on a typical image, can cause a
-classifier to miscategorise a panda as a gibbon. Adapted from  <span id="id6">[<a class="reference internal" href="security.html#id2172">3</a>]</span>.</span><a class="headerlink" href="#fig-advex" title="Permalink to this image">¶</a></p>
+classifier to miscategorise a panda as a gibbon. Adapted from  <span id="id6">[<a class="reference internal" href="security.html#id2171">3</a>]</span>.</span><a class="headerlink" href="#fig-advex" title="Permalink to this image">¶</a></p>
 </div>
 <p>In response to concerns about the threats posed to a safe and trusted
 environment for AI technologies by adversarial attacks a field called
@@ -1199,19 +1163,19 @@ found at <a href="https://github.com/IBM/adversarialrobustness-toolbox" target=_
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id7"><dl class="citation">
-<dt class="label" id="id2168"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
+<dt class="label" id="id2167"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
 <dd><p>Ian J Goodfellow, Jonathon Shlens, and Christian Szegedy. Explaining and harnessing adversarial examples. <em>arXiv preprint arXiv:1412.6572</em>, 2014.</p>
 </dd>
-<dt class="label" id="id206"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id205"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, and others. Imagenet large scale visual recognition challenge. <em>International journal of computer vision</em>, 115(3):211–252, 2015.</p>
 </dd>
-<dt class="label" id="id2171"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id2170"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovich. Going deeper with convolutions. In <em>Proceedings of the IEEE conference on computer vision and pattern recognition</em>, 1–9. 2015.</p>
 </dd>
-<dt class="label" id="id2169"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id2168"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>Alexey Kurakin, Ian J Goodfellow, and Samy Bengio. Adversarial examples in the physical world. In <em>Artificial intelligence safety and security</em>, pages 99–112. Chapman and Hall/CRC, 2018.</p>
 </dd>
-<dt class="label" id="id2170"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id2169"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Nicolas Papernot, Patrick McDaniel, Ian Goodfellow, Somesh Jha, Z Berkay Celik, and Ananthram Swami. Practical black-box attacks against machine learning. In <em>Proceedings of the 2017 ACM on Asia conference on computer and communications security</em>, 506–519. 2017.</p>
 </dd>
 </dl>
@@ -1243,8 +1207,8 @@ found at <a href="https://github.com/IBM/adversarialrobustness-toolbox" target=_
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+        
+            <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="security.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1261,17 +1225,19 @@ found at <a href="https://github.com/IBM/adversarialrobustness-toolbox" target=_
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see <a href="../author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 

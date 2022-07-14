@@ -37,14 +37,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -89,7 +86,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -1002,8 +999,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -1011,7 +1008,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -1019,11 +1016,11 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/T3.2/evaluation.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1035,12 +1032,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.2/evaluation.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
     </div>
 </div>
@@ -1048,8 +1045,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1057,10 +1054,10 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -1087,40 +1084,7 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Evaluation</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="evaluation">
@@ -1151,7 +1115,7 @@ environment (e.g., in the form of rewards).</p>
 <p>AI <strong>measurement</strong> has been taken place since the
 early days of AI and has framed the discipline very significantly.
 Actually, one of the foundational ideas behind AI is the famous
-imitation game <span id="id1">[<a class="reference internal" href="#id2063">2</a>]</span>, which —somewhat misleadingly—
+imitation game <span id="id1">[<a class="reference internal" href="#id2062">2</a>]</span>, which —somewhat misleadingly—
 is usually referred to as the Turing <em>test</em>. However, this initial
 emphasis on evaluation, albeit mostly philosophical, did not develop
 into technical AI evaluation as an established subfield in AI, in the
@@ -1159,10 +1123,10 @@ same way the early <a class="reference internal" href="reliability.html"><span c
 <a class="reference internal" href="robustness.html"><span class="doc">Robustness</span></a> problems in software engineering
 led to the important areas of software validation, verification and
 testing, today using both theoretical and experimental approaches
-<span id="id2">[<a class="reference internal" href="reliability.html#id2103">5</a>, <a class="reference internal" href="#id2113">3</a>]</span>. Still, there are some recent
+<span id="id2">[<a class="reference internal" href="reliability.html#id2102">5</a>, <a class="reference internal" href="#id2112">3</a>]</span>. Still, there are some recent
 surveys and books covering the problem of AI evaluation, and giving
 comprehensive or partial views of AI measurement, such as
-<span id="id3">[<a class="reference internal" href="#id370">4</a>, <a class="reference internal" href="#id388">5</a>, <a class="reference internal" href="#id368">6</a>, <a class="reference internal" href="#id222">7</a>, <a class="reference internal" href="#id240">8</a>, <a class="reference internal" href="#id1909">9</a>, <a class="reference internal" href="#id221">10</a>, <a class="reference internal" href="#id118">11</a>, <a class="reference internal" href="#id204">12</a>, <a class="reference internal" href="#id208">13</a>, <a class="reference internal" href="#id211">14</a>]</span>.</p>
+<span id="id3">[<a class="reference internal" href="#id369">4</a>, <a class="reference internal" href="#id387">5</a>, <a class="reference internal" href="#id367">6</a>, <a class="reference internal" href="#id221">7</a>, <a class="reference internal" href="#id239">8</a>, <a class="reference internal" href="#id1908">9</a>, <a class="reference internal" href="#id220">10</a>, <a class="reference internal" href="#id118">11</a>, <a class="reference internal" href="#id203">12</a>, <a class="reference internal" href="#id207">13</a>, <a class="reference internal" href="#id210">14</a>]</span>.</p>
 <p>The tradition in AI measurement turns around the concept of
 ‘task-oriented evaluation’. For instance, given a scheduling problem, a
 board game or a classification problem, systems are evaluated according
@@ -1177,7 +1141,7 @@ PwC collects information about the performance of different AI systems
 during a given period, typically ranging from the introduction of the
 benchmark to the present day.
 Figure <a class="reference internal" href="#fig-pwcimagenet"><span class="std std-numref">14</span></a> shows an example of the evolution of
-results for ImageNet<span id="id5">[<a class="reference internal" href="#id2114">15</a>]</span>.</p>
+results for ImageNet<span id="id5">[<a class="reference internal" href="#id2113">15</a>]</span>.</p>
 <div class="figure align-center" id="fig-pwcimagenet">
 <a class="reference internal image-reference" href="../_images/PwC.png"><img alt="../_images/PwC.png" src="../_images/PwC.png" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">State-of-the-Art for the image classification task using the benchmark ImageNet. The points represent the accuracy of all the attempts from 2011 to 2022. The connected points on the Pareto front are shown in blue. Chart from
@@ -1192,9 +1156,9 @@ those of the exam) or Goodhart’s or Campbell’s laws (optimising to the
 indicator may lead to the metric not measuring what it measured
 originally, with possibly some other side effects). One clear
 manifestation of this phenomenon is the ‘challenge-solve-and-replace’
-evaluation dynamics <span id="id6">[<a class="reference internal" href="#id228">16</a>]</span> or a
+evaluation dynamics <span id="id6">[<a class="reference internal" href="#id227">16</a>]</span> or a
 ‘dataset-solve-and-patch’ adversarial benchmark co-evolution
-<span id="id7">[<a class="reference internal" href="#id229">17</a>]</span>, which means that as soon as a benchmark is
+<span id="id7">[<a class="reference internal" href="#id228">17</a>]</span>, which means that as soon as a benchmark is
 released, performance grows quickly because researchers specialise the
 design and training of the system to the benchmark, but not to the
 general task <span id="id8">[<a class="reference internal" href="#id118">11</a>]</span>. Ultimately the benchmark needs to be
@@ -1205,18 +1169,18 @@ or narrowness of AI in the past —lack of common sense, of generality,
 of adaptability to new contexts and distributions. As we said, since the
 beginning of the discipline, other approaches for AI measurement have
 been used or proposed. These include the Turing test, and endless
-variants <span id="id9">[<a class="reference internal" href="#id1833">18</a>, <a class="reference internal" href="#id201">19</a>]</span>, the use of human tests,
-from science exams <span id="id10">[<a class="reference internal" href="#id203">20</a>]</span> to psychometric tests
-<span id="id11">[<a class="reference internal" href="#id1783">21</a>, <a class="reference internal" href="#id863">22</a>, <a class="reference internal" href="#id1628">23</a>]</span>,
-the adaptation of psychophysics <span id="id12">[<a class="reference internal" href="#id249">24</a>]</span> or item response
-theory <span id="id13">[<a class="reference internal" href="#id237">25</a>]</span>, the use of collections of video games
-<span id="id14">[<a class="reference internal" href="#id2097">26</a>]</span>, the exploration of naive physics
-<span id="id15">[<a class="reference internal" href="#id202">27</a>]</span>, or the adaptation of tests from animal cognition
-<span id="id16">[<a class="reference internal" href="#id212">28</a>]</span>. All these approaches attempt to measure
+variants <span id="id9">[<a class="reference internal" href="#id1832">18</a>, <a class="reference internal" href="#id200">19</a>]</span>, the use of human tests,
+from science exams <span id="id10">[<a class="reference internal" href="#id202">20</a>]</span> to psychometric tests
+<span id="id11">[<a class="reference internal" href="#id1782">21</a>, <a class="reference internal" href="#id862">22</a>, <a class="reference internal" href="#id1627">23</a>]</span>,
+the adaptation of psychophysics <span id="id12">[<a class="reference internal" href="#id248">24</a>]</span> or item response
+theory <span id="id13">[<a class="reference internal" href="#id236">25</a>]</span>, the use of collections of video games
+<span id="id14">[<a class="reference internal" href="#id2096">26</a>]</span>, the exploration of naive physics
+<span id="id15">[<a class="reference internal" href="#id201">27</a>]</span>, or the adaptation of tests from animal cognition
+<span id="id16">[<a class="reference internal" href="#id211">28</a>]</span>. All these approaches attempt to measure
 intelligence more broadly, some general cognitive abilities or at least
 skills that could be applied to a range of different tasks. Accordingly,
 these fall under the paradigm of ‘capability-oriented evaluation’
-<span id="id17">[<a class="reference internal" href="#id370">4</a>]</span>.</p>
+<span id="id17">[<a class="reference internal" href="#id369">4</a>]</span>.</p>
 <p>The key difference between performance and capability is that
 performance is affected by the distribution, while capability is not.
 For instance, the same individual (an AI system or a human) can have
@@ -1231,96 +1195,96 @@ capabilities is much more challenging than measuring performance. Also,
 drawing conclusions about the cognitive abilities of AI systems requires
 caution, even from the most-well designed experiments. But this is also
 true even when performance is used as a proxy for capability
-<span id="id18">[<a class="reference internal" href="#id286">29</a>]</span>.</p>
+<span id="id18">[<a class="reference internal" href="#id285">29</a>]</span>.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id19"><dl class="citation">
-<dt class="label" id="id2112"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id2111"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>John D Musa, Anthony Iannino, and Kazuhira Okumoto. Software reliability. <em>Advances in computers</em>, 30:85–170, 1990.</p>
 </dd>
-<dt class="label" id="id2063"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dt class="label" id="id2062"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
 <dd><p>A.M. Turing. Computing machinery and intelligence. <em>Mind</em>, 59(236):433, 1950.</p>
 </dd>
-<dt class="label" id="id2113"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dt class="label" id="id2112"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
 <dd><p>W Richards Adrion, Martha A Branstad, and John C Cherniavsky. Validation, verification, and testing of computer software. <em>ACM Computing Surveys (CSUR)</em>, 14(2):159–192, 1982.</p>
 </dd>
-<dt class="label" id="id370"><span class="brackets">4</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id17">2</a>)</span></dt>
+<dt class="label" id="id369"><span class="brackets">4</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id17">2</a>)</span></dt>
 <dd><p>José Hernández-Orallo. Evaluation in artificial intelligence: from task-oriented to ability-oriented measurement. <em>Artificial Intelligence Review</em>, 48(3):397–447, 2017.</p>
 </dd>
-<dt class="label" id="id388"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
+<dt class="label" id="id387"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
 <dd><p>J. Hernández-Orallo. <em>The Measure of All Minds: Evaluating Natural and Artificial Intelligence</em>. Cambridge University Press, 2017.</p>
 </dd>
-<dt class="label" id="id368"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
+<dt class="label" id="id367"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
 <dd><p>José Hernández-Orallo, Marco Baroni, Jordi Bieger, Nader Chmait, David L Dowe, Katja Hofmann, Fernando Martínez-Plumed, Claes Strannegård, and Kristinn R Thórisson. A new AI evaluation cosmos: ready to play the game? <em>AI Magazine</em>, 2017.</p>
 </dd>
-<dt class="label" id="id222"><span class="brackets"><a class="fn-backref" href="#id3">7</a></span></dt>
+<dt class="label" id="id221"><span class="brackets"><a class="fn-backref" href="#id3">7</a></span></dt>
 <dd><p>Chris Welty, Praveen Paritosh, and Lora Aroyo. Metrology for AI: from benchmarks to instruments. <em>arXiv preprint arXiv:1911.01875</em>, 2019.</p>
 </dd>
-<dt class="label" id="id240"><span class="brackets"><a class="fn-backref" href="#id3">8</a></span></dt>
+<dt class="label" id="id239"><span class="brackets"><a class="fn-backref" href="#id3">8</a></span></dt>
 <dd><p>Peter Flach. Performance evaluation in machine learning: the good, the bad, the ugly and the way forward. In <em>AAAI</em>. 2019.</p>
 </dd>
-<dt class="label" id="id1909"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
+<dt class="label" id="id1908"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
 <dd><p>Peter Flach. Measurement theory for data science and AI: modelling the skills of learning machines and developing standardised benchmark tests. <span>Turing Institute, <a class="reference external" href="#"></a></span>https://www.turing.ac.uk/research/research-projects/measurement-theory-data-science-and-ai, 2019.</p>
 </dd>
-<dt class="label" id="id221"><span class="brackets"><a class="fn-backref" href="#id3">10</a></span></dt>
+<dt class="label" id="id220"><span class="brackets"><a class="fn-backref" href="#id3">10</a></span></dt>
 <dd><p>Guillaume Avrin. Evaluation of artificial intelligence systems. <span>Laboratoire National de Métrologie et d’Essais : <a class="reference external" href="#"></a></span>https://www.lne.fr/en/testing/evaluation-artificial-intelligence-systems, 2019.</p>
 </dd>
 <dt class="label" id="id118"><span class="brackets">11</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
 <dd><p>Jose Hernandez-Orallo. Ai evaluation: on broken yardsticks and measurement scales. In <em>AAAI Workshop on Evaluating Evaluation of AI Systems</em>. 2020.</p>
 </dd>
-<dt class="label" id="id204"><span class="brackets"><a class="fn-backref" href="#id3">12</a></span></dt>
+<dt class="label" id="id203"><span class="brackets"><a class="fn-backref" href="#id3">12</a></span></dt>
 <dd><p>Fernando Martínez-Plumed and José Hernández-Orallo. Dual indicators to analyze ai benchmarks: difficulty, discrimination, ability, and generality. <em>IEEE Transactions on Games</em>, 12(2):121–131, 2020. <a class="reference external" href="https://doi.org/10.1109/TG.2018.2883773">doi:10.1109/TG.2018.2883773</a>.</p>
 </dd>
-<dt class="label" id="id208"><span class="brackets"><a class="fn-backref" href="#id3">13</a></span></dt>
+<dt class="label" id="id207"><span class="brackets"><a class="fn-backref" href="#id3">13</a></span></dt>
 <dd><p>José Hernández-Orallo. Identifying artificial intelligence capabilities: what and how to test. 2021.</p>
 </dd>
-<dt class="label" id="id211"><span class="brackets"><a class="fn-backref" href="#id3">14</a></span></dt>
+<dt class="label" id="id210"><span class="brackets"><a class="fn-backref" href="#id3">14</a></span></dt>
 <dd><p>Jose Hernandez-Orallo, Wout Schellaert, and Fernando Martinez-Plumed. Training on the test set: mapping the system-problem space in ai. <em>AAAI Senior Member Track - Blue Sky Ideas</em>, 2022.</p>
 </dd>
-<dt class="label" id="id2114"><span class="brackets"><a class="fn-backref" href="#id5">15</a></span></dt>
+<dt class="label" id="id2113"><span class="brackets"><a class="fn-backref" href="#id5">15</a></span></dt>
 <dd><p>Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. Imagenet: a large-scale hierarchical image database. In <em>2009 IEEE conference on computer vision and pattern recognition</em>, 248–255. Ieee, 2009.</p>
 </dd>
-<dt class="label" id="id228"><span class="brackets"><a class="fn-backref" href="#id6">16</a></span></dt>
+<dt class="label" id="id227"><span class="brackets"><a class="fn-backref" href="#id6">16</a></span></dt>
 <dd><p>David Schlangen. Language tasks and language games: on methodology in current natural language processing research. <em>arXiv preprint arXiv:1908.10747</em>, 2019.</p>
 </dd>
-<dt class="label" id="id229"><span class="brackets"><a class="fn-backref" href="#id7">17</a></span></dt>
+<dt class="label" id="id228"><span class="brackets"><a class="fn-backref" href="#id7">17</a></span></dt>
 <dd><p>Rowan Zellers, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi. Hellaswag: can a machine really finish your sentence? <em>arXiv preprint arXiv:1905.07830</em>, 2019.</p>
 </dd>
-<dt class="label" id="id1833"><span class="brackets"><a class="fn-backref" href="#id9">18</a></span></dt>
+<dt class="label" id="id1832"><span class="brackets"><a class="fn-backref" href="#id9">18</a></span></dt>
 <dd><p>G. Oppy and D. L. Dowe. The Turing Test. In Edward N. Zalta, editor, <em>Stanford Encyclopedia of Philosophy</em>. 2011. <span>Stanford University, <a class="reference external" href="#"></a></span>http://plato.stanford.edu/entries/turing-test/.</p>
 </dd>
-<dt class="label" id="id201"><span class="brackets"><a class="fn-backref" href="#id9">19</a></span></dt>
+<dt class="label" id="id200"><span class="brackets"><a class="fn-backref" href="#id9">19</a></span></dt>
 <dd><p>José Hernández-Orallo. Twenty years beyond the turing test: moving beyond the human judges too. <em>Minds and Machines</em>, 30(4):533–562, 2020.</p>
 </dd>
-<dt class="label" id="id203"><span class="brackets"><a class="fn-backref" href="#id10">20</a></span></dt>
+<dt class="label" id="id202"><span class="brackets"><a class="fn-backref" href="#id10">20</a></span></dt>
 <dd><p>Todor Mihaylov, Peter Clark, Tushar Khot, and Ashish Sabharwal. Can a suit of armor conduct electricity? a new dataset for open book question answering. <em>arXiv preprint arXiv:1809.02789</em>, 2018.</p>
 </dd>
-<dt class="label" id="id1783"><span class="brackets"><a class="fn-backref" href="#id11">21</a></span></dt>
+<dt class="label" id="id1782"><span class="brackets"><a class="fn-backref" href="#id11">21</a></span></dt>
 <dd><p>S. Bringsjord and B. Schimanski. What is artificial intelligence? Psychometric AI as an answer. In <em>International Joint Conference on Artificial Intelligence</em>, 887–893. 2003.</p>
 </dd>
-<dt class="label" id="id863"><span class="brackets"><a class="fn-backref" href="#id11">22</a></span></dt>
+<dt class="label" id="id862"><span class="brackets"><a class="fn-backref" href="#id11">22</a></span></dt>
 <dd><p>D. L. Dowe and J. Hernandez-Orallo. IQ tests are not for machines, yet. <em>Intelligence</em>, 40(2):77–81, 2012. URL: <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0160289611001619">http://www.sciencedirect.com/science/article/pii/S0160289611001619</a>, <a class="reference external" href="https://doi.org/10.1016/j.intell.2011.12.001">doi:10.1016/j.intell.2011.12.001</a>.</p>
 </dd>
-<dt class="label" id="id1628"><span class="brackets"><a class="fn-backref" href="#id11">23</a></span></dt>
+<dt class="label" id="id1627"><span class="brackets"><a class="fn-backref" href="#id11">23</a></span></dt>
 <dd><p>J. Hernández-Orallo, F. Mart\'ınez-Plumed, U. Schmid, M. Siebers, and D. L. Dowe. Computer models solving human intelligence test problems: progress and implications. <em>Artificial Intelligence</em>, 230:74–107, 2016.</p>
 </dd>
-<dt class="label" id="id249"><span class="brackets"><a class="fn-backref" href="#id12">24</a></span></dt>
+<dt class="label" id="id248"><span class="brackets"><a class="fn-backref" href="#id12">24</a></span></dt>
 <dd><p>Joel Z Leibo and others. Psychlab: a psychology laboratory for deep reinforcement learning agents. <em>arXiv preprint arXiv:1801.08116</em>, 2018.</p>
 </dd>
-<dt class="label" id="id237"><span class="brackets"><a class="fn-backref" href="#id13">25</a></span></dt>
+<dt class="label" id="id236"><span class="brackets"><a class="fn-backref" href="#id13">25</a></span></dt>
 <dd><p>Fernando Martínez-Plumed, Ricardo BC Prudêncio, Adolfo Martínez-Usó, and José Hernández-Orallo. Item response theory in AI: analysing machine learning classifiers at the instance level. <em>Artificial Intelligence</em>, 271:18–42, 2019.</p>
 </dd>
-<dt class="label" id="id2097"><span class="brackets"><a class="fn-backref" href="#id14">26</a></span></dt>
+<dt class="label" id="id2096"><span class="brackets"><a class="fn-backref" href="#id14">26</a></span></dt>
 <dd><p>Marc G Bellemare, Yavar Naddaf, Joel Veness, and Michael Bowling. The arcade learning environment: an evaluation platform for general agents. <em>Journal of Artificial Intelligence Research</em>, 47:253–279, 2013.</p>
 </dd>
-<dt class="label" id="id202"><span class="brackets"><a class="fn-backref" href="#id15">27</a></span></dt>
+<dt class="label" id="id201"><span class="brackets"><a class="fn-backref" href="#id15">27</a></span></dt>
 <dd><p>Anton Bakhtin, Laurens van der Maaten, Justin Johnson, Laura Gustafson, and Ross Girshick. Phyre: a new benchmark for physical reasoning. <em>Advances in Neural Information Processing Systems</em>, 2019.</p>
 </dd>
-<dt class="label" id="id212"><span class="brackets"><a class="fn-backref" href="#id16">28</a></span></dt>
+<dt class="label" id="id211"><span class="brackets"><a class="fn-backref" href="#id16">28</a></span></dt>
 <dd><p>Benjamin Beyret, José Hernández-Orallo, Lucy Cheke, Marta Halina, Murray Shanahan, and Matthew Crosby. The animal-ai environment: training and testing animal-like artificial cognition. <em>arXiv preprint arXiv:1909.07483</em>, 2019.</p>
 </dd>
-<dt class="label" id="id286"><span class="brackets"><a class="fn-backref" href="#id18">29</a></span></dt>
+<dt class="label" id="id285"><span class="brackets"><a class="fn-backref" href="#id18">29</a></span></dt>
 <dd><p>Ryan Burnell, John Burden, Danaja Rutar, Konstantinos Voudouris, Lucy Cheke, and José Hernández-Orallo. Not a number: identifying instance features for capability-oriented evaluation. <em>IJCAI</em>, 2022.</p>
 </dd>
 </dl>
@@ -1359,8 +1323,8 @@ true even when performance is used as a proxy for capability
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+        
+            <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="reliability.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1377,17 +1341,19 @@ true even when performance is used as a proxy for capability
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see <a href="../author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 

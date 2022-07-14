@@ -9,7 +9,6 @@
 This is a working document for the Version 1 of the *D3.3 Handbook on Trustworthy AI*, the Tailor WP3 Handbook on Trustworthy AI. This
 is a Tailor project deliverable with two versions: Version 1 (M22) and Version 2 (M46).
 
-PROVA!!!
 
 ## About TAILOR
 

@@ -37,14 +37,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -89,7 +86,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -1002,8 +999,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -1011,7 +1008,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -1019,11 +1016,11 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/T3.4/L3.Meaningful_human_control.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1035,12 +1032,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.4/L3.Meaningful_human_control.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
         
     </div>
 </div>
@@ -1048,8 +1045,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -1057,10 +1054,10 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -1087,40 +1084,7 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Meaningful human control</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="meaningful-human-control">
@@ -1131,9 +1095,9 @@
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p>The notion of meaningful human control has its origins in the discussions on lethal autonomous weapon systems (LAWS), specifically in regards to life-or-death decisions that such systems could in principle make. Avoiding ethical issues related to autonomous decision making by artificial agents requires that humans, and only humans, have control of and are accountable for the use of lethal force <span id="id1">[<a class="reference internal" href="#id2589">1</a>]</span>. The concrete implications of this requirement are still debated, with proposals range from calls for a full ban of LAWS  <span id="id2">[<a class="reference internal" href="#id2590">2</a>]</span> to suggestions on governance, implementation, and use of such systems that can contribute to meaningful human control  (e.g.  <span id="id3">[<a class="reference internal" href="#id2591">3</a>]</span>,  <span id="id4">[<a class="reference internal" href="#id2592">4</a>]</span>).
-While ethical issues associated with the lack of human control are perhaps most apparent for autonomous weapon systems, they extend far beyond the military domain, to a wider class of human-AI systems that make decisions with moral implications. At the time of writing, researchers have approached meaningful human control in the contexts of automated driving systems  <span id="id5">[<a class="reference internal" href="#id2593">5</a>]</span>  <span id="id6">[<a class="reference internal" href="#id2594">6</a>]</span>, medical decision support systems <span id="id7">[<a class="reference internal" href="#id2595">7</a>]</span>, unmanned aerial vehicles <span id="id8">[<a class="reference internal" href="#id2596">8</a>]</span>, among other domains. Many of these domain-specific operationalizations rely on a philosophical account of meaningful human control proposed by <span id="id9">[<a class="reference internal" href="#id2597">9</a>]</span>. This account builds on the concept of “guidance control” <span id="id10">[<a class="reference internal" href="#id2598">10</a>]</span> and provides two necessary conditions for meaningful human control. The tracking condition requires that the decision-making system tracks and responds to all human reasons (i.e., values, norms, intentions) relevant in given circumstances. The tracing condition requires that any action/decision of the human-AI system should be traceable to at least one human within the system who has proper moral understanding of the situation and the effects of the system in that situation.</p>
-<p>Tracking and tracing, as well as several alternative domain-specific accounts, provide conceptual frameworks for meaningful human control. Making these concepts less vague and more relatable to design and engineering practice is however very challenging <span id="id11">[<a class="reference internal" href="#id2599">11</a>]</span>. In <span id="id12">[<a class="reference internal" href="#id2600">12</a>]</span> an attempt to close this gap between theory and practice is made by proposing four actionable properties that can be addressed throughout the system’s lifecycle:</p>
+<p>The notion of meaningful human control has its origins in the discussions on lethal autonomous weapon systems (LAWS), specifically in regards to life-or-death decisions that such systems could in principle make. Avoiding ethical issues related to autonomous decision making by artificial agents requires that humans, and only humans, have control of and are accountable for the use of lethal force <span id="id1">[<a class="reference internal" href="#id2588">1</a>]</span>. The concrete implications of this requirement are still debated, with proposals range from calls for a full ban of LAWS  <span id="id2">[<a class="reference internal" href="#id2589">2</a>]</span> to suggestions on governance, implementation, and use of such systems that can contribute to meaningful human control  (e.g.  <span id="id3">[<a class="reference internal" href="#id2590">3</a>]</span>,  <span id="id4">[<a class="reference internal" href="#id2591">4</a>]</span>).
+While ethical issues associated with the lack of human control are perhaps most apparent for autonomous weapon systems, they extend far beyond the military domain, to a wider class of human-AI systems that make decisions with moral implications. At the time of writing, researchers have approached meaningful human control in the contexts of automated driving systems  <span id="id5">[<a class="reference internal" href="#id2592">5</a>]</span>  <span id="id6">[<a class="reference internal" href="#id2593">6</a>]</span>, medical decision support systems <span id="id7">[<a class="reference internal" href="#id2594">7</a>]</span>, unmanned aerial vehicles <span id="id8">[<a class="reference internal" href="#id2595">8</a>]</span>, among other domains. Many of these domain-specific operationalizations rely on a philosophical account of meaningful human control proposed by <span id="id9">[<a class="reference internal" href="#id2596">9</a>]</span>. This account builds on the concept of “guidance control” <span id="id10">[<a class="reference internal" href="#id2597">10</a>]</span> and provides two necessary conditions for meaningful human control. The tracking condition requires that the decision-making system tracks and responds to all human reasons (i.e., values, norms, intentions) relevant in given circumstances. The tracing condition requires that any action/decision of the human-AI system should be traceable to at least one human within the system who has proper moral understanding of the situation and the effects of the system in that situation.</p>
+<p>Tracking and tracing, as well as several alternative domain-specific accounts, provide conceptual frameworks for meaningful human control. Making these concepts less vague and more relatable to design and engineering practice is however very challenging <span id="id11">[<a class="reference internal" href="#id2598">11</a>]</span>. In <span id="id12">[<a class="reference internal" href="#id2599">12</a>]</span> an attempt to close this gap between theory and practice is made by proposing four actionable properties that can be addressed throughout the system’s lifecycle:</p>
 <ul class="simple">
 <li><p>Property 1: A system in which humans and AI algorithms interact should have an explicitly defined domain of morally loaded situations within which the system ought to operate.</p></li>
 <li><p>Property 2: Humans and AI agents within the system should have appropriate and mutually compatible representations.</p></li>
@@ -1144,40 +1108,40 @@ While ethical issues associated with the lack of human control are perhaps most 
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id13"><dl class="citation">
-<dt class="label" id="id2589"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id2588"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Article 36. Key areas for debate on autonomous weapons systems: memorandum for delegates at the convention on certain conventional weapons (ccw) meeting of experts on lethal autonomous weapons systems. Technical Report, Article 36, 2014. URL: <a class="reference external" href="https://www.article36.org/wp-content/uploads/2014/05/A36-CCW-May-2014.pdf">https://www.article36.org/wp-content/uploads/2014/05/A36-CCW-May-2014.pdf</a>.</p>
 </dd>
-<dt class="label" id="id2590"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id2589"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Article 36. Killing by machine: key issues for understanding meaningful human control. Technical Report, Article 36, 2015. URL: <a class="reference external" href="https://www.stopkillerrobots.org/wp-content/uploads/2021/09/KILLING_BY_MACHINE_6.4.15.pdf">https://www.stopkillerrobots.org/wp-content/uploads/2021/09/KILLING_BY_MACHINE_6.4.15.pdf</a>.</p>
 </dd>
-<dt class="label" id="id2591"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id2590"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Heather M Roff and Richard Moyes. Meaningful human control, artificial intelligence and autonomous weapons. In <em>Briefing Paper Prepared for the Informal Meeting of Experts on Lethal Au-Tonomous Weapons Systems, UN Convention on Certain Conventional Weapons</em>. 2016.</p>
 </dd>
-<dt class="label" id="id2592"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id2591"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>M.C. Horowitz and P Scharre. Meaningful human control in weapon systems: a primer. Technical Report, Center for a New American Security, 2015.</p>
 </dd>
-<dt class="label" id="id2593"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id2592"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Daniël D Heikoop, Marjan Hagenzieker, Giulio Mecacci, Simeon Calvert, Filippo Santoni De Sio, and Bart van Arem. Human behaviour with automated driving systems: a quantitative framework for meaningful human control. <em>Theoretical issues in ergonomics science</em>, 20(6):711–730, 2019.</p>
 </dd>
-<dt class="label" id="id2594"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dt class="label" id="id2593"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p>Simeon C Calvert, Bart van Arem, Daniël D Heikoop, Marjan Hagenzieker, Giulio Mecacci, and Filippo Santoni de Sio. Gaps in the control of automated vehicles on roads. <em>IEEE intelligent transportation systems magazine</em>, 13(4):146–153, 2020.</p>
 </dd>
-<dt class="label" id="id2595"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dt class="label" id="id2594"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
 <dd><p>Matthias Braun, Patrik Hummel, Susanne Beck, and Peter Dabrock. Primer on an ethics of ai-based decision support systems in the clinic. <em>Journal of medical ethics</em>, 47(12):e3–e3, 2021.</p>
 </dd>
-<dt class="label" id="id2596"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dt class="label" id="id2595"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
 <dd><p>Marc Steen, Jurriaan van Diggelen, Tjerk Timan, and Nanda van der Stap. Meaningful human control of drones: exploring human–machine teaming, informed by four different ethical perspectives. <em>AI and Ethics</em>, pages 1–13, 2022.</p>
 </dd>
-<dt class="label" id="id2597"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dt class="label" id="id2596"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
 <dd><p>Filippo Santoni de Sio and Jeroen Van den Hoven. Meaningful human control over autonomous systems: a philosophical account. <em>Frontiers in Robotics and AI</em>, pages 15, 2018.</p>
 </dd>
-<dt class="label" id="id2598"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
+<dt class="label" id="id2597"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
 <dd><p>John Martin Fischer and Mark Ravizza. <em>Responsibility and control: A theory of moral responsibility</em>. Cambridge university press, 1998.</p>
 </dd>
-<dt class="label" id="id2599"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dt class="label" id="id2598"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
 <dd><p>Rebecca Crootof. A meaningful floor for meaningful human control. <em>Temp. Int'l &amp; Comp. LJ</em>, 30:53, 2016.</p>
 </dd>
-<dt class="label" id="id2600"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
+<dt class="label" id="id2599"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
 <dd><p>Luciano Cavalcante Siebert, Maria Luce Lupetti, Evgeni Aizenberg, Niek Beckers, Arkady Zgonnikov, Herman Veluwenkamp, David Abbink, Elisa Giaccardi, Geert-Jan Houben, Catholijn M Jonker, and others. Meaningful human control: actionable properties for ai system development. <em>AI and Ethics</em>, pages 1–15, 2022.</p>
 </dd>
 </dl>
@@ -1209,8 +1173,8 @@ While ethical issues associated with the lack of human control are perhaps most 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+        
+            <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="L3.Wicked_problems.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1227,17 +1191,19 @@ While ethical issues associated with the lack of human control are perhaps most 
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see <a href="../author.html" target="_blank">here</a> for the complete list of contributors.<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
