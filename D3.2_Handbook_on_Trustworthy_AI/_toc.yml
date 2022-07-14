@@ -2,11 +2,11 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: TAILOR
+root: main/TAILOR
 chapters:
 - file: authors
 #chapters:
-- file: T3.1
+- file: T3.1/T3.1
   title: Explainable AI Systems
   sections:
   - file: T3.1/XAI_kinds
@@ -20,7 +20,7 @@ chapters:
     - file: T3.1/model_specific
     - file: T3.1/global_local
 #chapters:
-- file: T3.2
+- file: T3.2/T3.2
   title: Safety and Robustness
   sections:
   - file: T3.2/alignment
@@ -32,7 +32,7 @@ chapters:
   - file: T3.2/security
   - file: T3.2/adversarial_attack
   - file: T3.2/data_poisoning
-- file: T3.3
+- file: T3.3/T3.3
   title: Fairness, Equity, and Justice by Design
   sections:
   - file: T3.3/auditing
@@ -55,7 +55,7 @@ chapters:
     sections:
     - file: T3.4/L3.Provenance_tracking
     - file: T3.4/L3.Continuous_performance_monitoring
-- file: T3.5
+- file: T3.5/T3.5
   sections:
   - file: T3.5/L1.anonymization
     sections:
@@ -72,7 +72,7 @@ chapters:
     sections:
     - file: T3.5/L2.reidentification
 
-- file: T3.6
+- file: T3.6/T3.6
   sections:
   - file: T3.6/greenAI
     sections:
@@ -83,7 +83,7 @@ chapters:
   - file: T3.6/cradle_to_cradle
   - file: T3.6/resource_prediction
   - file: T3.6/resource_allocation
-- file: AnalyticaIndex 
+- file: main/AnalyticaIndex 
   sections:
   - file: index/T3.6/2CC2
   - file: index/T3.4/Accountability
