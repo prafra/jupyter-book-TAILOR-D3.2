@@ -10,6 +10,4 @@
 :filter: docname in docnames
 ```
 
----
- 
-This entry was readapted from ** by.
+> This entry was readapted from ** by.

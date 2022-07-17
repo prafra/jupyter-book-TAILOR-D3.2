@@ -93,6 +93,4 @@ far is not keeping up with the developments of AI as a field.
 :filter: docname in docnames
 ```
 
----
- 
-This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
+> This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.

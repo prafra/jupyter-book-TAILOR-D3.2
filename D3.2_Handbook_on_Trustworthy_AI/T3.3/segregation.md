@@ -184,11 +184,7 @@ index has been proposed[^multi-seg] in {cite}`DBLP:conf/edbt/0001R19`.
 :filter: docname in docnames
 ```
 
----
-
-This entry was readapted from *Alessandro Baroni and Salvatore Ruggieri. Segregation discovery in a social network of companies. J. Intell. Inf. Syst., 51(1):71–96, 2018* by Salvatore Ruggieri
-
----
+> This entry was readapted from *Alessandro Baroni and Salvatore Ruggieri. Segregation discovery in a social network of companies. J. Intell. Inf. Syst., 51(1):71–96, 2018* by Salvatore Ruggieri
 
 [^oasis]: [cran.r-project.org/package=OasisR](https://cran.r-project.org/package=OasisR)
 

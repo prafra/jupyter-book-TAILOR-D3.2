@@ -12,8 +12,6 @@
 Cradle to Cradle is a philosophy that views rubbish as an infinite resource and encourages people to do the right thing from the start. It’s about making community and product development work like a healthy ecological system, where all resources are utilised efficiently and in a cyclical manner. Industry, according to C2C, should safeguard and enhance ecosystems and nature’s biological metabolism. It is a comprehensive economic, industrial, and social framework aimed at creating jobs that are efficient and waste-free. The concept may be applied to many facets of human civilization, including urban landscapes, buildings, economy, adn social systems.
 
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

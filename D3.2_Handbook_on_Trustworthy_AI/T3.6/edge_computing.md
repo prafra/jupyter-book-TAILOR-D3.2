@@ -13,8 +13,6 @@ Edge computing is defined as any form of computer software that provides reduced
 Edge computing has its roots in content distributed networks, which were developed in the late 1990s to provide web and video content from edge servers located near consumers. In The early 2000s, these networks expanded to host applications and application components at edge servers, leading to the first commercial edge computing services, which hosted applications including dealer locators, shopping carts, real-time data aggregators, and ad insertion engines. Edge and fog computing are examples of new technologies that can help reduce energy use. These technologies enable redistribution computing closer to the user, lowering network energy costs. Furthermore, having fewer data centres reduces the amount of energy consumed in operations such as refrigeration and maintenance. 
 
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

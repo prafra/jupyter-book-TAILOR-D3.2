@@ -144,8 +144,6 @@ auditors of AI systems, yet some <a href="https://ec.europa.eu/futurium/en/syste
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Alejandra Bringas Colmenarejo, Stefan Buijsman, and Salvatore Ruggieri.
+> This entry was written by Alejandra Bringas Colmenarejo, Stefan Buijsman, and Salvatore Ruggieri.
 
 

@@ -1,10 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: TAILOR - D3.3 - Handbook on Trustworthy AI
-#author: TAILOR WP3 members; see <a href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors.
-author: TAILOR WP3 members; see <a href="../authors.html" target="_blank">here</a> for the complete list of contributors. # need to move all home files (i.e., TAILOR, T3.X, AnalyticalIndex) in a subfolder
-#author: TAILOR WP3 members; see <a href="./authors.html" target="_blank">here</a> for the complete list of contributors. # first tentative
+title: TAILOR – D3.3 – Handbook on Trustworthy AI
+author: TAILOR WP3 members; see <a href="/authors.html" target="_blank">here</a> for the complete list of contributors. # need to move all home files (i.e., TAILOR, T3.X, AnalyticalIndex) in a subfolder
 logo: TAILOR-logo-coloured.png
 
 # Force re-execution of notebooks on each build.
@@ -29,12 +27,13 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: git@github.com:prafra/jupyter-book-TAILOR-D3.2.git # https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/prafra/jupyter-book-TAILOR-D3.2  # Online location of your book
+  path_to_book: D3.2_Handbook_on_Trustworthy_AI  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+  baseurl: https://prafra.github.io/jupyter-book-TAILOR-D3.2/

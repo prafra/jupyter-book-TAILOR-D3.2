@@ -141,8 +141,4 @@ review of landscape and gaps in fairness tool kits is given in
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Resmi Ramachandran Pillai, Fredrik Heintz, Miguel Couceiro, and Guilherme Alves.
-
-
+> This entry was written by Resmi Ramachandran Pillai, Fredrik Heintz, Miguel Couceiro, and Guilherme Alves.

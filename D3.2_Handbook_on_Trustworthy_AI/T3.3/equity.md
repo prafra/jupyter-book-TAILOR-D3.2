@@ -88,8 +88,6 @@ trade-off between privilege and unprivileged groups.
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Stefan Buijsman and Miguel Couceiro.
+> This entry was written by Stefan Buijsman and Miguel Couceiro.
 
 

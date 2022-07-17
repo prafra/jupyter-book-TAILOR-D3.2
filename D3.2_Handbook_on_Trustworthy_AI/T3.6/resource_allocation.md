@@ -15,8 +15,6 @@ The provision of services and storage space for certain tasks specified by users
 Cloud computing technology continues to be used by businesses for a variety of purposes, including enhancing productivity, lowering cloud costs, ensuring data security and storing unlimited data. Knowledge of resource allocation is becoming increasingly important for cloud customers that seek to reduce their cloud use expenses. While there are several techniques for distributing resource in the cloud, the most successful method ison that optimises cloud service provider revenu while also ensuring cloud user pleasure.
 
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

@@ -279,11 +279,7 @@ level of benefits. Fairness metrics have focused more on
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Resmi Ramachandranpillai, Fredrik Heintz, Stefan Buijsman, Miguel Couceiro, Guilherme Alves, Karima Makhlouf, and Sami Zhioua.
-
----
+> This entry was written by Resmi Ramachandranpillai, Fredrik Heintz, Stefan Buijsman, Miguel Couceiro, Guilherme Alves, Karima Makhlouf, and Sami Zhioua.
 
 [^statistical]: $TP,FP,FN,$ and $TN$ stand for: true positives, false positives, false negatives, and true negatives, respectively.
 [^parity]: Called explanatory features in {cite}`kamiran2013quantifying`.

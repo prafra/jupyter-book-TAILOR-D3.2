@@ -89,6 +89,4 @@ found at <a href="https://github.com/IBM/adversarialrobustness-toolbox" target=_
 :filter: docname in docnames
 ```
 
----
- 
-This entry was readapted from *Leslie David. Understanding artificial intelligence ethics and safety. The Alan Turing Institute, https://doi.org/10.5281/zenodo.3240529, 2019* by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
+> This entry was readapted from *Leslie David. Understanding artificial intelligence ethics and safety. The Alan Turing Institute, https://doi.org/10.5281/zenodo.3240529, 2019* by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
