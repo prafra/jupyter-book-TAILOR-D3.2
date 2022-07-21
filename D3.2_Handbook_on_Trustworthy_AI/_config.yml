@@ -10,6 +10,13 @@ logo: TAILOR-logo-coloured.png
 execute:
   execute_notebooks: off #force
 
+exclude_patterns:
+  - .DS_Store
+  - .git
+  - .github
+  - .gitignore
+  - .nojekyll
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
@@ -37,3 +44,9 @@ html:
   use_issues_button: true
   use_repository_button: true
   baseurl: https://prafra.github.io/jupyter-book-TAILOR-D3.2/
+
+sphinx:
+  config:
+    bibtex_reference_style: label
+    html_extra_path:
+      - .nojekyll
