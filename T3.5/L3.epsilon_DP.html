@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>\(\epsilon\)-Differential Privacy &#8212; TAILOR – D3.3 – Handbook on Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1264,16 +1265,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="epsilon-differential-privacy">
+  <section class="tex2jax_ignore mathjax_ignore" id="epsilon-differential-privacy">
 <h1><span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy<a class="headerlink" href="#epsilon-differential-privacy" title="Permalink to this headline">#</a></h1>
 <p><em>Synonyms</em>: <span class="math notranslate nohighlight">\(\epsilon\)</span>-indistinguishability.</p>
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong><span class="math notranslate nohighlight">\(\epsilon\)</span>-Differential Privacy</strong> is the simpler form of <a class="reference internal" href="L2.differential_privacy.html"><span class="doc">Differential Privacy</span></a>, where <span class="math notranslate nohighlight">\(\epsilon\)</span> represents the level of privacy guarantee.</p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
-<div class="section" id="the-statistical-databases-context">
+<section id="the-statistical-databases-context">
 <h3>The Statistical Databases Context<a class="headerlink" href="#the-statistical-databases-context" title="Permalink to this headline">#</a></h3>
 <p>The seminal <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model lays down the basic
 notions related to differential privacy by formalizing the intuitive
@@ -1288,8 +1289,8 @@ of queries containing counts, sums, averages, <em>etc</em>), and the
 <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model aims at limiting the information
 leakage about the private dataset.</p>
 <!--(Remember that disclosing raw aggregates might lead at least to membership inference attacks and to reconstruction attacks - see {doc}`./L2.membership` and {doc}`./L2.reconstruction`.)-->
-</div>
-<div class="section" id="formalizing-differential-privacy">
+</section>
+<section id="formalizing-differential-privacy">
 <h3>Formalizing Differential Privacy<a class="headerlink" href="#formalizing-differential-privacy" title="Permalink to this headline">#</a></h3>
 <p>In a nutshell, the <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model requires that
 the presence/absence of any <em>possible</em> individual does not shift any
@@ -1321,8 +1322,8 @@ the requirement. Common values range from <span class="math notranslate nohighli
 <p>Please see <a class="reference internal" href="L2.perturbation_mechanisms.html"><span class="doc">Achieving Differential Privacy</span></a> for a synthesis of
 <strong>how</strong> common functions can be adapted in order to satisfy
 <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy.</p>
-</div>
-<div class="section" id="self-composability-and-safety-under-post-processing">
+</section>
+<section id="self-composability-and-safety-under-post-processing">
 <h3>Self-Composability and Safety Under Post-Processing<a class="headerlink" href="#self-composability-and-safety-under-post-processing" title="Permalink to this headline">#</a></h3>
 <p>The <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model is self-composable as
 follows. The <em>parallel composition</em> of two functions, respectively
@@ -1333,15 +1334,16 @@ satisfies <span class="math notranslate nohighlight">\((\epsilon_1 + \epsilon_2)
 <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model is as well convex and safe under
 post-processing.</p>
 <!-- We refer to {doc}`./L2.privmod_properties` for the definitions of these properties.-->
-</div>
-</div>
-<div class="section" id="bibliography">
+</section>
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p>The <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy model was introduced in
-<span id="id1">[<a class="reference internal" href="#id2670">1</a>]</span> and the
+<span id="id1">[<a class="reference internal" href="#id2670" title="Cynthia Dwork. Differential privacy. In ICALP. 2006.">1</a>]</span> and the
 <span class="math notranslate nohighlight">\(\epsilon\)</span>-indistinguishability model in
-<span id="id2">[<a class="reference internal" href="#id2669">2</a>]</span>.</p>
-<p id="id3"><dl class="citation">
+<span id="id2">[<a class="reference internal" href="#id2669" title="Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In TCC. 2006.">2</a>]</span>.</p>
+<div class="docutils container" id="id3">
+<dl class="citation">
 <dt class="label" id="id2670"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Cynthia Dwork. Differential privacy. In <em>ICALP</em>. 2006.</p>
 </dd>
@@ -1349,12 +1351,12 @@ post-processing.</p>
 <dd><p>Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In <em>TCC</em>. 2006.</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was written by Tristan Allard.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

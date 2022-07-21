@@ -27,11 +27,11 @@ WP3 (Trustworthy AI) aims at advancing knowledge on the six dimensions and putti
 
 This book (to be consolidated in the second phase of the project) represents the first period deliverable, providing an encyclopedia of the major terms related to trustworthiness.
 Here, you can find definitions related to:
-- {doc}`T3.1`. 
-- {doc}`T3.2`. 
-- {doc}`T3.3`. 
-- {doc}`T3.4/L1.Accountability_and_Reproducibility`. 
-- {doc}`T3.5`.
-- {doc}`T3.6`.
+- {doc}`../T3.1/T3.1`. 
+- {doc}`../T3.2/T3.2`. 
+- {doc}`../T3.3/T3.3`. 
+- {doc}`../T3.4/L1.Accountability_and_Reproducibility`. 
+- {doc}`../T3.5/T3.5`.
+- {doc}`../T3.6/T3.6`.
 
 

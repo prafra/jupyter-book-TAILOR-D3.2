@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Re-identification Attack &#8212; TAILOR – D3.3 – Handbook on Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1228,14 +1229,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="re-identification-attack">
+  <section class="tex2jax_ignore mathjax_ignore" id="re-identification-attack">
 <h1>Re-identification Attack<a class="headerlink" href="#re-identification-attack" title="Permalink to this headline">#</a></h1>
 <p><em>Synonyms</em>: Linking attack, Attack on pseudonymised data</p>
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Re-identification attack</strong> aims to link a certain set of data related to an individual in a dataset (which does not contain direct identifiers) to a real identity, relying on additional information.</p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>A first, basic, and simple way to preserve a subject’s privacy is to
 de-couple the identity of said subject from its data. This is process is
@@ -1251,18 +1252,18 @@ elements of the person, i.e., those elements that permit to identify
 both directly or indirectly that person in the data. Anonymous data
 cannot be re-identified by definition, even when using additional
 information, therefore this type of data is not subject to the current privacy
-regulations (e.g., the GDPR <span id="id1">[<a class="reference internal" href="T3.5.html#id15">1</a>]</span>).</p>
+regulations (e.g., the GDPR <span id="id1">[<a class="reference internal" href="T3.5.html#id15" title="European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.">1</a>]</span>).</p>
 <p>This key difference can be better understood with the famous real life
 example of the attack on the privacy of the Governor of Massachussetts.
 In 1996, <em>William Floyd Weld</em>, then Governor of Massachusetts, lost his
 consciousness during a public event. Rushed to the nearby Deaconess
 Waltham Hospital, he was officially diagnosed with influenza and
-consequently discharged the following day <span id="id2">[<a class="reference internal" href="#id2684">3</a>]</span>. Some time
+consequently discharged the following day <span id="id2">[<a class="reference internal" href="#id2684" title="Daniel C. Barth-Jones. The 're-identification' of governor william weld's medical information: a critical re-examination of health data identification risks and privacy protections, then and now. 2012. doi:http://dx.doi.org/10.2139/ssrn.2076397.">3</a>]</span>. Some time
 later, professor Latanya Sweeney, a graduate computer science student at
 MIT at the time, successfully reconstructed what had happened to the
 governor and inferred his diagnosis linking two different data sources:
 a publicly available voter rolls dataset and a hospital dataset without patients’ names, thus
-considered anonymous <span id="id3">[<a class="reference internal" href="#id2685">4</a>]</span>. The voter rolls dataset contained
+considered anonymous <span id="id3">[<a class="reference internal" href="#id2685" title="Latanya Sweeney. Weaving technology and policy together to maintain confidentiality. The Journal of Law, Medicine &amp; Ethics, 25(2-3):98-110, 1997. PMID: 11066504. URL: https://doi.org/10.1111/j.1748-720X.1997.tb01885.x, arXiv:https://doi.org/10.1111/j.1748-720X.1997.tb01885.x, doi:10.1111/j.1748-720X.1997.tb01885.x.">4</a>]</span>. The voter rolls dataset contained
 the name, address, ZIP code, birth date, sex and other attributes of
 every voter in the city of Cambridge (Middlesex County). The hospital
 dataset was issued to researchers by the Massachusetts Group Insurance
@@ -1442,11 +1443,12 @@ in the Governor’s own ZIP code</em>.</p>
 </table>
 <p>In <a class="reference internal" href="#tab-vote"><span class="std std-numref">Table 3</span></a> and <a class="reference internal" href="#tab-medical"><span class="std std-numref">Table 4</span></a> we can see a simplified version of Sweeney’s attack.
 Looking at the tables singularly, no <em>sensitive information</em> (i.e., the diagnosis) about the Governor William Floyd Weld can be inferred. However, from <a class="reference internal" href="#tab-vote"><span class="std std-numref">Table 3</span></a> we gain access to the date of birth and ZIP code of Governor. Then, we can search for the persons born on July 31, 1945 in <a class="reference internal" href="#tab-medical"><span class="std std-numref">Table 4</span></a>, finding patients number 1, 2, 3 and 4. However, ids 3 and 4 correspond to women, so we should consider only individuals 1 and 2. Finally, we can look at the ZIP code in <a class="reference internal" href="#tab-medical"><span class="std std-numref">Table 4</span></a>: the patient number 1 lives in a different area, so we only have one patient (the number 2) that can be the Governor. In brief, we can see that, matching the information colored in <span style='background:#00bfec'>blue</span> from the two tables, there is no other possibility for Governor Weld but to be a patient suffering from a stroke. This was a clear breach of the privacy of the Governor, as the public statement about his health differed from the actual cause of hospitalization.</p>
-<p>Sweeney conducted similar attacks in a more structured and generalised experiment, finding that 87% of the United States population was uniquely or nearly uniquely identified by the combination of ZIP code, gender, and date of birth <span id="id4">[<a class="reference internal" href="#id2686">2</a>]</span>. This leaded Sweeney to theorize the k-anonymity principle, and call the attributes used for the re-identification process <em>quasi-identifier</em>.</p>
-</div>
-<div class="section" id="bibliography">
+<p>Sweeney conducted similar attacks in a more structured and generalised experiment, finding that 87% of the United States population was uniquely or nearly uniquely identified by the combination of ZIP code, gender, and date of birth <span id="id4">[<a class="reference internal" href="#id2686" title="Latanya Sweeney. K-anonymity: a model for protecting privacy. Int. J. Uncertain. Fuzziness Knowl.-Based Syst., 10(5):557–570, oct 2002. URL: https://doi.org/10.1142/S0218488502001648, doi:10.1142/S0218488502001648.">2</a>]</span>. This leaded Sweeney to theorize the k-anonymity principle, and call the attributes used for the re-identification process <em>quasi-identifier</em>.</p>
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id5"><dl class="citation">
+<div class="docutils container" id="id5">
+<dl class="citation">
 <dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
 </dd>
@@ -1460,12 +1462,12 @@ Looking at the tables singularly, no <em>sensitive information</em> (i.e., the d
 <dd><p>Latanya Sweeney. Weaving technology and policy together to maintain confidentiality. <em>The Journal of Law, Medicine &amp; Ethics</em>, 25(2-3):98–110, 1997. PMID: 11066504. URL: <a class="reference external" href="https://doi.org/10.1111/j.1748-720X.1997.tb01885.x">https://doi.org/10.1111/j.1748-720X.1997.tb01885.x</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1111/j.1748-720X.1997.tb01885.x">arXiv:https://doi.org/10.1111/j.1748-720X.1997.tb01885.x</a>, <a class="reference external" href="https://doi.org/10.1111/j.1748-720X.1997.tb01885.x">doi:10.1111/j.1748-720X.1997.tb01885.x</a>.</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was readapted from <em>Comandé et al. Elgar Encyclopedia of Law and Data Science. Edward Elgar Publishing (2022) ISBN: 978 1 83910 458 9</em> by Francesca Pratesi, Roberto Pellungrini, and Anna Monreale.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

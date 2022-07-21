@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Continuous Performance Monitoring &#8212; TAILOR – D3.3 – Handbook on Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1228,13 +1229,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="continuous-performance-monitoring">
+  <section class="tex2jax_ignore mathjax_ignore" id="continuous-performance-monitoring">
 <h1>Continuous Performance Monitoring<a class="headerlink" href="#continuous-performance-monitoring" title="Permalink to this headline">#</a></h1>
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Continuous performance monitoring</strong> is the activity to track, log and monitor over time the behaviour and the performance of Artificial Intelligence and Machine Learning models. This activity is particularly relevant after in-production deployment in order to detect any performance drifts and outages of the model.</p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>Monitoring the live functioning of a produtionalised ML/AI model or
 system is an emergent topic that is gaining increasing attention as more
@@ -1255,12 +1256,12 @@ input data fed into the ML model may contain unexpected patterns not
 present in the training datasets. Moreover, the characteristics of data
 may change over time, causing that the relationships at the core of the
 ML methods do not stand valid any more.</p>
-<p>This phenomenon, termed <em>concept</em> or <em>model drift</em> <span id="id1">[<a class="reference internal" href="#id2647">1</a>]</span>,
+<p>This phenomenon, termed <em>concept</em> or <em>model drift</em> <span id="id1">[<a class="reference internal" href="#id2647" title="Alexey Tsymbal. The problem of concept drift: definitions and related work. 2004.">1</a>]</span>,
 can lead the model to make wrong predictions. Additionally, if the
 nature (or distribution) of the input data become vastly different with
 respect to those used for training, the performance can even drop below
 acceptance. This phenomenon is known as <em>covariate shift</em>
-<span id="id2">[<a class="reference internal" href="#id2648">2</a>]</span>. Performance degradation can also result from the impact
+<span id="id2">[<a class="reference internal" href="#id2648" title="Masashi Sugiyama and Motoaki Kawanabe. Machine Learning in Non-Stationary Environments. MIT Press, 2012. ISBN 9780262017091.">2</a>]</span>. Performance degradation can also result from the impact
 that the same deployed ML model may have on the decision process that it
 supports. The ML model may influence other elements involved in the
 decision or induce an overall change in the phenomenon that is being
@@ -1275,14 +1276,14 @@ also in relation to any consequence the methods can have. The first work
 published in 2015 described the various challenges that ML methods raise
 after deployment in relation to data dependencies, model complexity,
 reproducibility, testing, and changes in the external world
-<span id="id3">[<a class="reference internal" href="#id2649">3</a>]</span>. After that, several methods have been presented in
-the literature, focusing specifically on data <span id="id4">[<a class="reference internal" href="#id2650">4</a>]</span>, on
-the role of humans in ML deployment <span id="id5">[<a class="reference internal" href="#id2651">5</a>]</span>, on testing
-strategies <span id="id6">[<a class="reference internal" href="#id2652">6</a>]</span>, or the definition of a general framework to
+<span id="id3">[<a class="reference internal" href="#id2649" title="D. Sculley, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-François Crespo, and Dan Dennison. Hidden technical debt in machine learning systems. In C. Cortes, N. Lawrence, D. Lee, M. Sugiyama, and R. Garnett, editors, Advances in Neural Information Processing Systems, volume 28. Curran Associates, Inc., 2015. URL: https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf.">3</a>]</span>. After that, several methods have been presented in
+the literature, focusing specifically on data <span id="id4">[<a class="reference internal" href="#id2650" title="Neoklis Polyzotis, Sudip Roy, Steven Euijong Whang, and Martin Zinkevich. Data management challenges in production machine learning. In Proceedings of the 2017 ACM International Conference on Management of Data, SIGMOD '17, 1723–1726. New York, NY, USA, 2017. Association for Computing Machinery. URL: https://doi.org/10.1145/3035918.3054782, doi:10.1145/3035918.3054782.">4</a>]</span>, on
+the role of humans in ML deployment <span id="id5">[<a class="reference internal" href="#id2651" title="Ilias Flaounas. Beyond the technical challenges for deploying machine learning solutions in a software company. 2017. URL: https://arxiv.org/abs/1708.02363, doi:10.48550/ARXIV.1708.02363.">5</a>]</span>, on testing
+strategies <span id="id6">[<a class="reference internal" href="#id2652" title="Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, and D. Sculley. What’s your ml test score? a rubric for ml production systems. In NIPS 2016 Workshop (2016). 2016.">6</a>]</span>, or the definition of a general framework to
 track ML methods in their live functioning (e.g., pipelines, datasets,
-execution configurations, code and human actions) <span id="id7">[<a class="reference internal" href="#id2653">7</a>]</span>.</p>
+execution configurations, code and human actions) <span id="id7">[<a class="reference internal" href="#id2653" title="Vinay Sridhar, Sriram Subramanian, Dulcardo Arteaga, Swaminathan Sundararaman, Drew Roselli, and Nisha Talagala. Model governance: reducing the anarchy of production ML. In 2018 USENIX Annual Technical Conference (USENIX ATC 18), 351–358. Boston, MA, jul 2018. USENIX Association. URL: https://www.usenix.org/conference/atc18/presentation/sridhar.">7</a>]</span>.</p>
 <p>Overall, the best practices, promoted also from industrial actors
-<span id="id8">[<a class="reference internal" href="#id2655">8</a>, <a class="reference internal" href="#id2654">9</a>]</span>, include a continuous monitoring of the
+<span id="id8">[<a class="reference internal" href="#id2655" title="Accenture. Model behavior. nothing artificial. 2017.">8</a>, <a class="reference internal" href="#id2654" title="SaS. Machine learning model governance. white paper. 2019.">9</a>]</span>, include a continuous monitoring of the
 ML system to assess its quality and “vitality”. Various types of metrics
 are suggested in this respect, focusing mainly on performance
 evaluation. The idea is to detect changes in the behaviour and then act
@@ -1299,14 +1300,15 @@ training phase and to analyse them more in detail to understand any
 drifts. The reactive approach entails detecting a wrong output and
 identifying its causes, so as to understand how the method can be
 rectified.</p>
-<p>The Continuous Delivery <span id="id9">[<a class="reference internal" href="#id2656">10</a>]</span> and DevOps <span id="id10">[<a class="reference internal" href="#id2657">11</a>]</span>
+<p>The Continuous Delivery <span id="id9">[<a class="reference internal" href="#id2656" title="Wolff. A Practical Guide to Continuous Delivery. Addison-Wesley, 2017. ISBN.">10</a>]</span> and DevOps <span id="id10">[<a class="reference internal" href="#id2657" title="Loukides. MWhat is DevOps? O'Reilly Media, 2012. ISBN.">11</a>]</span>
 approaches have been also proposed to better manage the risks of
 releasing changes to Machine Learning applications and, then, do them in
 a safe and reliable way.</p>
-</div>
-<div class="section" id="bibliography">
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id11"><dl class="citation">
+<div class="docutils container" id="id11">
+<dl class="citation">
 <dt class="label" id="id2647"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Alexey Tsymbal. The problem of concept drift: definitions and related work. 2004.</p>
 </dd>
@@ -1341,12 +1343,12 @@ a safe and reliable way.</p>
 <dd><p>Loukides. <em>MWhat is DevOps?</em> O'Reilly Media, 2012. ISBN.</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was written by Sara Colantonio.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
