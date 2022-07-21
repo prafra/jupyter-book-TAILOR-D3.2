@@ -114,7 +114,7 @@ very difficult to vet. Also, with the current trend of using pretrained
 models and tuning them with smaller amounts of particular data, the risk
 is more on the data used for these pretrained models than unauthorised
 access to the finetuning data. Inspecting the models once trained, using
-techniques from [explainable AI](../T3.1.md) is also
+techniques from [explainable AI](../T3.1/T3.1.md) is also
 challenging, as the trapdoors may represent a very small percentage of
 the behaviour of the system. Overall, **data
 poisoning** is a complex problem that is closely
@@ -130,11 +130,7 @@ of data.
 :filter: docname in docnames
 ```
 
----
- 
-This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
-
----
+> This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
 
 [^def3]: Definition taken from {cite}`david2019understanding` under Creative Commons Attribution License 4.0.
 [^cmmc]: https://cmmc-coe.org/test/

@@ -28,7 +28,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/T3.5/Differential Privacy models`
 
 - [Differential Privacy - ($\epsilon$,$\delta$)-Differential Privacy](../index/T3.5/epsilon_delta-differential_privacy.md)
-- [Differential Privacy - $\epsilon$-Differential Privacy](../index/T3.5/epsilon_delta-differential_privacy.md)
+- [Differential Privacy - $\epsilon$-Differential Privacy](../index/T3.5/Epsilon-differential_privacy.md)
 - [Differential Privacy - $\epsilon$-Indistinguishability](../index/T3.5/Epsilon-indist.md)
 
 - {doc}`../index/T3.2/Data Shift`

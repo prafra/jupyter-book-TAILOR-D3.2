@@ -188,11 +188,7 @@ debated {cite}`Wachter2019`.
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Alejandra Bringas Colmenarejo and Salvatore Ruggieri.
-
----
+> This entry was written by Alejandra Bringas Colmenarejo and Salvatore Ruggieri.
 
 [^declaration]: Protected group, protected grounds and prohibited grounds are also used as synonymous of grounds of discrimination.
 [^lgbt]: For 2021, see <a href="https://www.hrw.org/video-photos/interactive/2021/04/23/country-profiles-sexual-orientation-and-gender-identity" target=_blank>the Human Right Watch World Report</a>.

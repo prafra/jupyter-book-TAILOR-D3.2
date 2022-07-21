@@ -4,7 +4,7 @@
 Explanations returned by an AI system depend on various factors (such as the task or the available data); generally speaking, each kind of explanations serves better a specific context.
 ## More in detail
 
-Increasing research on [XAI](../T3.1.md) is bringing to light a wide list of explanations and explanation methods for "opening" black box models. 
+Increasing research on [XAI](./T3.1.md) is bringing to light a wide list of explanations and explanation methods for "opening" black box models. 
 The explanations returned depend on various factors, such as:
 - the type of task they are needed for,
 - on which kind of data the AI system acts, 
@@ -22,6 +22,4 @@ In this part of the Encyclopedia, we review a subset of the most used types of e
 :filter: docname in docnames
 ```
 
----
- 
-This entry was readapted from *Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)* by Francesca Pratesi and Riccardo Guidotti.
+> This entry was readapted from *Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)* by Francesca Pratesi and Riccardo Guidotti.

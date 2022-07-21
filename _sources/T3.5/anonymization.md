@@ -10,6 +10,4 @@ Reference examples: The goal of {doc}`../T3.5` is ... {cite}`flach_fat`
 :filter: docname in docnames
 ```
 
----
- 
-This entry was written by.
+> This entry was written by.

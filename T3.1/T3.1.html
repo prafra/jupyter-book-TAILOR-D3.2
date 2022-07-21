@@ -5,10 +5,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explainable AI &#8212; TAILOR - D3.3 - Handbook on Trustworthy AI</title>
+    <title>Explainable AI &#8212; TAILOR – D3.3 – Handbook on Trustworthy AI</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,36 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/T3.1/T3.1.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -61,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -70,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -82,22 +98,23 @@
       <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TAILOR - D3.3 - Handbook on Trustworthy AI</h1>
+      <h1 class="site-logo" id="site-title">TAILOR – D3.3 – Handbook on Trustworthy AI</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TAILOR.html">
-   Welcome to TAILOR
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    Welcome to TAILOR
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -978,90 +995,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/T3.1/T3.1.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="git@github.com:prafra/jupyter-book-TAILOR-D3.2.git/issues/new?title=Issue%20on%20page%20%2FT3.1/T3.1.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FT3.1/T3.1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/T3.1/T3.1.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
    In Brief
@@ -1104,27 +1211,85 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Explainable AI</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-the-black-box-problem">
+   Open the Black-Box Problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension">
+   Software Frameworks Supporting Dimension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-keywords">
+   Main Keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="explainable-ai">
-<h1>Explainable AI<a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h1>
+<h1>Explainable AI<a class="headerlink" href="#explainable-ai" title="Permalink to this headline">#</a></h1>
 <!--- This is a comment -->
 <div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Explainable AI</strong> (often shortened to <strong>XAI</strong>) is one of the ethical dimensions that is studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a>.
 The origin of XAI dates back to the entering into force of the General Data Protection Regulation (GDPR).
 The GDPR <span id="id1">[<a class="reference internal" href="../T3.5/T3.5.html#id15">1</a>]</span>, in its <a href="https://gdpr-info.eu/recitals/no-71/" target=_blank>Recital 71</a>, also mentions the right to explanation, as a suitable safeguard to ensure fair and transparent processing in respect of data subjects. It is defined as the right “to obtain an explanation of the decision reached after profiling”. <!-- TODO: add link to profiling -->
 According to NIST report <span id="id2">[<a class="reference internal" href="#id35">2</a>]</span>, an explanation is the evidence, support, or reasoning related to a system’s output or process, where the output of a system differs by task, and the process refers to the procedures, design, and system workflow which underlie the system.</p>
 </div>
 <div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
 <p>While other aspects of ethics and trustworthiness, such as <a class="reference internal" href="../T3.5/T3.5.html"><span class="doc">Respect for Privacy</span></a>, are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.
 In this part, we will cover the main elements that define the explanation of AI systems. First, we will try to survey briefly the main guidelines related to explainability.
 Then, we summarize a taxonomy that can be used to classify explanations.
@@ -1133,29 +1298,29 @@ Next, we will describe the requirements to provide good explanations and some of
 Finally, we will give some examples of possible solutions we can adopt to provide explanations describing the reasoning behind an ML/AI model.</p>
 </div>
 <div class="section" id="motivation-and-background">
-<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">#</a></h2>
 <p>So far, the usage of black boxes in AI and ML processes has implied the possibility of inadvertently making wrong decisions due to a systematic bias in training data collection. Several practical examples have been provided, highlighting the “bias in, bias out” concept. One of the most famous examples of this concept regards a classification task: the algorithm’s goal was to distinguish between photos of Wolves and Eskimo Dogs (huskies) <span id="id3">[<a class="reference internal" href="saliency_maps.html#id34">1</a>]</span>. Here, the training phase of the process was done with 20 images, hand-selected such that all pictures of wolves had snow in the background, while pictures of huskies did not. This choice was intentional because it was part of a social experiment. In any case, on a collection of additional 60 images, the classifier predicts “Wolf” if there is snow (or light background at the bottom), and “Husky” otherwise, regardless of animal color, position, pose, etc (see an example in Fig. <a class="reference internal" href="#husky"><span class="std std-numref">1</span></a>).</p>
 <div class="figure align-center" id="husky">
 <a class="reference internal image-reference" href="../_images/husky3.png"><img alt="../_images/husky3.png" src="../_images/husky3.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Raw data and explanation of a bad model’s prediction in the “Husky vs Wolf” task <span id="id4">[<a class="reference internal" href="saliency_maps.html#id34">1</a>]</span>. On the right, there is the original image; on the left, there is the explanation of the classification.</span><a class="headerlink" href="#husky" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Raw data and explanation of a bad model’s prediction in the “Husky vs Wolf” task <span id="id4">[<a class="reference internal" href="saliency_maps.html#id34">1</a>]</span>. On the right, there is the original image; on the left, there is the explanation of the classification.</span><a class="headerlink" href="#husky" title="Permalink to this image">#</a></p>
 </div>
 <p>However, one of the most worrisome cases was discovered and published by ProPublica, an independent, nonprofit newsroom that produces investigative journalism with moral force. In <span id="id5">[<a class="reference internal" href="#id31">4</a>]</span>, the authors showed how software can actually be racist. In a nutshell, the authors analyzed a tool called COMPAS (which stands for Correctional Offender Management Profiling for Alternative Sanctions). COMPAS tries to predict, among other indexes, the recidivism of defendants, who are ranked low, medium, or high risk. It was used in many US states (such as New York and Wisconsin) to suggest to judges an appropriate probation or treatment plan for individuals being sentenced. Indeed, the tool was quite accurate (around 70 percent overall with 16,000 probationers), but ProPublica journalists found that black defendants were far more likely than white defendants to be incorrectly judged to be at a higher risk of recidivism, while white defendants were more likely than black defendants to be incorrectly flagged as low risk.</p>
 <p>From the above examples, it appears evident that explanation technologies can help companies for creating safer, more trustable products, and better managing any possible liability they may have.</p>
 </div>
 <div class="section" id="open-the-black-box-problem">
-<h2>Open the Black-Box Problem<a class="headerlink" href="#open-the-black-box-problem" title="Permalink to this headline">¶</a></h2>
-<p>The <em>Open the Black Box Problems</em> for understanding how a black box works can be summarized in the taxonomy proposed in <span id="id6">[<a class="reference internal" href="XAI_kinds.html#id15">1</a>]</span> and reported in Fig. <a class="reference internal" href="#t3-1taxonomy"><span class="std std-numref">2</span></a>. The Open the Black Box Problems can be separated from one side as the problem of explaining how the decision system returned certain outcomes (<em>Black Box Explanation</em>) and on the other side as the problem of directly designing a transparent classifier that solves the same classification problem (<em>Transparent Box Design</em>). Moreover, the Black Box Explanation problem can be further divided among <em>Model Explanation</em> when the explanation involves the whole logic of the obscure classifier, <em>Outcome Explanation</em> when the target is to understand the reasons for the decisions on a given object, and <em>Model Inspection</em> when the target to understand how internally the black box behaves changing the input.</p>
-<div class="figure align-center" id="t3-1taxonomy">
+<h2>Open the Black-Box Problem<a class="headerlink" href="#open-the-black-box-problem" title="Permalink to this headline">#</a></h2>
+<p>The <em>Open the Black Box Problems</em> for understanding how a black box works can be summarized in the taxonomy proposed in <span id="id6">[<a class="reference internal" href="XAI_kinds.html#id15">1</a>]</span> and reported in Fig. <a class="reference internal" href="#t3-1taxonomy31"><span class="std std-numref">2</span></a>. The Open the Black Box Problems can be separated from one side as the problem of explaining how the decision system returned certain outcomes (<em>Black Box Explanation</em>) and on the other side as the problem of directly designing a transparent classifier that solves the same classification problem (<em>Transparent Box Design</em>). Moreover, the Black Box Explanation problem can be further divided among <em>Model Explanation</em> when the explanation involves the whole logic of the obscure classifier, <em>Outcome Explanation</em> when the target is to understand the reasons for the decisions on a given object, and <em>Model Inspection</em> when the target to understand how internally the black box behaves changing the input.</p>
+<div class="figure align-center" id="t3-1taxonomy31">
 <a class="reference internal image-reference" href="../_images/T3.1_taxonomy.jpg"><img alt="../_images/T3.1_taxonomy.jpg" src="../_images/T3.1_taxonomy.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A possible taxonomy about solutions to the Open the Black-Box problem <span id="id7">[<a class="reference internal" href="XAI_kinds.html#id15">1</a>]</span>.</span><a class="headerlink" href="#t3-1taxonomy" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A possible taxonomy about solutions to the Open the Black-Box problem <span id="id7">[<a class="reference internal" href="XAI_kinds.html#id15">1</a>]</span>.</span><a class="headerlink" href="#t3-1taxonomy31" title="Permalink to this image">#</a></p>
 </div>
 <p>On a different dimension, a lot of effort has been put into defining what are the possible  <a class="reference internal" href="XAI_dimensions.html"><span class="doc">Dimensions of Explanations</span></a> (e.g., we can discriminate between <a class="reference internal" href="model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>), the requirements to provide good explanations (see <!-- TODO: add anchor {ref}`guidelines` --> guidelines), how to <!-- TODO: add link [evaluate explanations](./evaluating_explanations.md) --> evaluate explanations, and to understand the <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>. Then, it is important to note that a variety of different kinds of explanations can be provided, such as <a class="reference internal" href="single_tree.html"><span class="doc">Single Tree Approximation</span></a>, <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>, <a class="reference internal" href="saliency_maps.html"><span class="doc">Saliency Maps</span></a>, Factual and Counterfactual, Exemplars and Counter-Exemplars, and Rules List and Rules Sets.<!--[Factual and Counterfactual](./counterfactuals.md), exemplars and counter-exemplars, [Rules List and Rules Sets](./rules.md).--></p>
 </div>
 <div class="section" id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">#</a></h2>
 <p>Given the relative novelty of the topic, a lot of guidelines have been developed in recent years.</p>
 <p>However, the most authoritative guideline is the <a href="https://wayback.archive-it.org/12090/20201227221227/https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai" target=_blank>High-Level Expert Group on Artificial Intelligence - Ethics Guidelines for Trustworthy AI</a>. Here, the explainability topic is included in the broader <a class="reference internal" href="blackbox_transparent.html"><span class="doc std std-doc">transparency</span></a>. According to this guideline, explainability concerns the ability to explain both the technical processes of an AI system and the related human decisions (e.g., application areas of a system). Following the GDPR interpretation, in <span id="id8">[<a class="reference internal" href="../T3.4/L2.Accountability.html#id42">1</a>]</span>, it is stated that whenever an AI system has a significant impact on people’s lives, it should be possible to demand a suitable explanation of the AI system’s decision-making process. Such explanation should be timely and adapted to the expertise of the stakeholder concerned (e.g., layperson, regulator, or researcher). In addition, explanations of the degree to which an AI system influences and shapes the organizational decision-making process, design choices of the system, and the rationale for deploying it, should be available (hence ensuring business model transparency).</p>
-<p>Another distinguished authority that has been worked on ethical guidance is <strong>the Alan Turing Institute</strong>, the UK’s national institute for data science and artificial intelligence, where David Leslie <span id="id9">[<a class="reference internal" href="#id33">7</a>]</span> summarized the risks due to the lack of transparency or the absence of a valid explanation, and he advocates the use of <!-- TODO: add link {doc}`./counterfactuals`--> counterfactuals for contrasting unfair decisions. Together with the Information Commissioner’s Office (ICO), which is responsible for overseeing data protection in the UK, it has been published more recent and complete guidance <span id="id10">[<a class="reference internal" href="../T3.4/L2.Accountability.html#id44">2</a>]</span>. Here, six steps are recommended to develop a system:</p>
+<p>Another distinguished authority that has been worked on ethical guidance is <strong>the Alan Turing Institute</strong>, the UK’s national institute for data science and artificial intelligence, where David Leslie <span id="id9">[<a class="reference internal" href="#id33">7</a>]</span> summarized the risks due to the lack of transparency or the absence of a valid explanation, and he advocates the use of <!-- TODO: add link {doc}`./counterfactuals`--> counterfactuals for contrasting unfair decisions. Together with the Information Commissioner’s Office (ICO), which is responsible for overseeing data protection in the UK, it has been published more recent and complete guidance <span id="id10">[<a class="reference internal" href="#id34">8</a>]</span>. Here, six steps are recommended to develop a system:</p>
 <ol class="simple">
 <li><p>Select priority explanations by considering the domain, use case, and impact on the individual.</p></li>
 <li><p>Collect and pre-process data in an explanation-aware manner, stressing the fact that the way in which data is collected and pre-processed may affect the quality of the explanation.</p></li>
@@ -1172,14 +1337,14 @@ Finally, we will give some examples of possible solutions we can adopt to provid
 </ul>
 </div>
 <div class="section" id="software-frameworks-supporting-dimension">
-<h2>Software Frameworks Supporting Dimension<a class="headerlink" href="#software-frameworks-supporting-dimension" title="Permalink to this headline">¶</a></h2>
+<h2>Software Frameworks Supporting Dimension<a class="headerlink" href="#software-frameworks-supporting-dimension" title="Permalink to this headline">#</a></h2>
 <p>Within the European Research Council (ERC) <a href="https://xai-project.eu/" target=_blank>XAI project</a> and the European Union’s Horizon 2020 <a href="http://project.sobigdata.eu/" target=_blank> SoBigData++ project</a>, we are developing an infrastructure for sharing experimental datasets and explanation algorithms with the research community, creating a common ground for researchers working on explanations of black boxes from different domains.
 All resources, provided they are not prohibited by specific legal/ethical constraints, will be collected and described in a <a href="https://sobigdata.d4science.org/catalogue-sobigdata" target=_blank>findable catalogue</a>.
 A dedicated virtual research environment will be activated, so that a variety of relevant resources, such as data, methods, experimental workflows, platforms, and literature, will be managed through the SoBigData++ e-infrastructure services and made available to the research community through a variety of regulated access policies.
 We will provide a link to the libraries and framework as soon as they be will fully published.</p>
 </div>
 <div class="section" id="main-keywords">
-<h2>Main Keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Main Keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>: Explanations returned by an AI system depend on various factors (such as the task or the available data); generally speaking, each kind of explanations serves better a specific context.</p></li>
 <li><p><a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>: The <strong>feature importance</strong> technique provides a score, representing the “importance”, for all the input features for a given AI model, i.e., a higher importance means that the corresponding feature will have a larger effect on the model.</p></li>
@@ -1192,7 +1357,7 @@ We will provide a link to the libraries and framework as soon as they be will fu
 </ul>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <!-- :style: unsrtalpha -->
 <p id="id16"><dl class="citation">
 <dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -1211,19 +1376,19 @@ We will provide a link to the libraries and framework as soon as they be will fu
 <dd><p>R. Guidotti, A. Monreale, S. Ruggieri, F. Turini, F. Giannotti, and D. Pedreschi. A survey of methods for explaining black box models. <em>ACM computing surveys (CSUR)</em>, 2018.</p>
 </dd>
 <dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
-<dd><p>High Level Expert Group on AI. Ethics Guidelines for Trustworthy AI. 2019. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2022-05-10).</p>
+<dd><p>High-Level Expert Group on Artificial Intelligence. Ethics Guidelines for Trustworthy AI. 2019. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2022-02-16).</p>
 </dd>
 <dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id9">7</a></span></dt>
 <dd><p>David Leslie (the Alan Turing Institute). Understanding artificial intelligence ethics and safety - a guide for the responsible design and implementation of ai systems in the public sector. URL: <a class="reference external" href="https://www.turing.ac.uk/sites/default/files/2019-06/understanding_artificial_intelligence_ethics_and_safety.pdf">https://www.turing.ac.uk/sites/default/files/2019-06/understanding_artificial_intelligence_ethics_and_safety.pdf</a> (visited on 2022-02-16).</p>
 </dd>
 <dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id10">8</a></span></dt>
-<dd><p>Information Commissioner's Office (ICO). Accountability framework. URL: <a class="reference external" href="https://ico.org.uk/for-organisations/accountability-framework/">https://ico.org.uk/for-organisations/accountability-framework/</a> (visited on 2022-05-25).</p>
+<dd><p>Information Commissioner's Office (ICO) and The Alan Turing Institute. Explaining decisions made with AI. URL: <a class="reference external" href="https://ico.org.uk/for-organisations/guide-to-data-protection/key-dp-themes/explaining-decisions-made-with-ai/">https://ico.org.uk/for-organisations/guide-to-data-protection/key-dp-themes/explaining-decisions-made-with-ai/</a> (visited on 2022-02-16).</p>
 </dd>
 </dl>
 </p>
-<hr class="docutils" />
-<p>This entry was readapted from <em>Pratesi, Trasarti, Giannotti. Ethics in Smart Information Systems. Policy Press (currently under review)</em> and from <em>Guidotti, Monreale, Ruggieri, Turini, Giannotti, Pedreschi. A survey of methods for explaining black box models. ACM Computing Surveys, Volume 51 Issue 5 (2019)</em> by Francesca Pratesi.</p>
-<hr class="docutils" />
+<blockquote>
+<div><p>This entry was readapted from <em>Pratesi, Trasarti, Giannotti. Ethics in Smart Information Systems. Policy Press (currently under review)</em> and from <em>Guidotti, Monreale, Ruggieri, Turini, Giannotti, Pedreschi. A survey of methods for explaining black box models. ACM Computing Surveys, Volume 51 Issue 5 (2019)</em> by Francesca Pratesi.</p>
+</div></blockquote>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="nist-draft"><span class="brackets"><a class="fn-backref" href="#id12">1</a></span></dt>
@@ -1263,9 +1428,11 @@ We will provide a link to the libraries and framework as soon as they be will fu
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../authors.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1281,26 +1448,28 @@ We will provide a link to the libraries and framework as soon as they be will fu
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di TAILOR WP3 members; see <a href="/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TAILOR WP3 members; see <a href="/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -178,11 +178,7 @@ judicial system {cite}`Pah2022`).
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Alejandra Bringas Colmenarejo, Stefan Buijsman, and Salvatore Ruggieri.
-
----
+> This entry was written by Alejandra Bringas Colmenarejo, Stefan Buijsman, and Salvatore Ruggieri.
 
 [^constitution]: See <a href="https://www.europeansocialsurvey.org/data/themes.html?t=justfair" target=_blank>the European Social Survey page</a> for a survey on
 perceptions of political justice in Europe.

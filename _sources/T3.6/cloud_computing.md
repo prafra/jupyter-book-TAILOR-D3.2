@@ -17,8 +17,6 @@ In autonomous computing, users can provision resources on-demand by automating a
 Cloud computing can significantly lower carbon emissions and energy use thanks to **virtualization**, **dynamic provisioning environment**, **multi-tenancy**, and [**green data centre technologies**](./data_centre.md). Certain on-premises applications can be moved into the cloud by large enterprises and small businesses in order to reduce their energy consumption and carbon emissions. People can buy products and services online without having to travel to physical stores, reducing greenhouse gas emissions associated with travel. One example would be online shopping, where they purchase products online without having to drive and waste fuel to reach the physical stores.
 
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

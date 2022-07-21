@@ -9,7 +9,7 @@ We distinguish between **model-specific** or **model-agnostic** explanation meth
 
 This is one of the first {doc}`XAI_dimensions` we should consider.
 
-The most used approach to explain AI black boxes is known as *reverse engineering*. The name comes from the fact that the explanation is retrieved by observing what happens to the output, i.e., the AI decision, when changing the input in a controlled way. An explanation method is model-specific, or not generalizable {cite}`martens`, 
+The most used approach to explain AI black boxes is known as *reverse engineering*. The name comes from the fact that the explanation is retrieved by observing what happens to the output, i.e., the AI decision, when changing the input in a controlled way. An explanation method is model-specific, or not generalizable {cite}`martens2007comprehensible_48`, 
 whether it considers inputs or outputs as well as the inner-workings of a machine learning model.
 The drawback of this approach is that it can be used to interpret only particular types of black box models. For example, if an explanation approach is designed to interpret a Random Forest {cite}`kumar` and internally uses a concept of distance between trees, then such an approach cannot be used to explain the predictions of a neural network.
 
@@ -42,6 +42,4 @@ https://explainer.ai/
 :filter: docname in docnames
 ```
 
----
-
-This entry was readapted from *Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)* by Francesca Pratesi and Riccardo Guidotti.
+> This entry was readapted from *Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)* by Francesca Pratesi and Riccardo Guidotti.
