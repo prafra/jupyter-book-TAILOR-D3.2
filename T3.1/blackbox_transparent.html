@@ -49,6 +49,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://prafra.github.io/jupyter-book-TAILOR-D3.2/T3.1/blackbox_transparent.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Model-Specific vs Model-Agnostic Explainers" href="model_specific.html" />
@@ -91,7 +92,7 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../main/TAILOR.html">
+  <a class="reference internal" href="../TAILOR.html">
    Welcome to TAILOR
   </a>
  </li>
@@ -1103,7 +1104,7 @@ In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency<
 <a class="reference internal image-reference" href="../_images/post.png"><img alt="../_images/post.png" src="../_images/post.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id23">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
 </div>
-<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="T3.1.html#id30">3</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id49">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id72">3</a>]</span>.</p>
+<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id34">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id49">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id72">3</a>]</span>.</p>
 <p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[<a class="reference internal" href="#id87">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id88">6</a>]</span>.
 In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id51">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
 </div>
@@ -1185,7 +1186,7 @@ In the literature, there are various models recognized to be interpretable. Exam
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see <a href="../authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+          Di TAILOR WP3 members; see <a href="/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>
