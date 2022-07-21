@@ -1,0 +1,31 @@
+name: 🔧 Build the 📖 Jupyter Book and 🚀 deploy it to GitHub Pages
+on: push
+jobs:
+  build-n-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout code 🛎️
+      uses: actions/checkout@v2.3.1
+      with:
+        persist-credentials: false
+    - name: Set up Python 3.7 🐍
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+        cache: 'pip'
+    - name: Install dependencies 💾
+      run: pip install -r D3.2_Handbook_on_Trustworthy_AI/requirements.txt
+    - name: 🔧 Build the book 📖
+      run: jb build -n D3.2_Handbook_on_Trustworthy_AI
+    - name: ☑️ Validate links 🔗
+      continue-on-error: true
+      run: jb build -q --builder linkcheck D3.2_Handbook_on_Trustworthy_AI
+    - name: Deploy 🚀
+      if: github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: D3.2_Handbook_on_Trustworthy_AI/_build/html
+        CLEAN: true

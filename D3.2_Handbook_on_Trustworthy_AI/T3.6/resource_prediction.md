@@ -16,8 +16,6 @@ Cloud service demand, on the other hand, is difficult to forecast due to factors
  The benefits of predicting the future demands include better resource utilisation and a reduction of the overall location with the opportunity of serving more customers, which leads to an increase in profit and an overall reduction of energy and maintenance costs, with a possible improvement in environmental impact.
 
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

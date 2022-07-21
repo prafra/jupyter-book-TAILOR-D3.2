@@ -70,10 +70,6 @@ recover from the error, such as for instance, in a space mission.
 :filter: docname in docnames
 ```
 
----
- 
-This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
-
----
+> This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
 
 [^robustness]: From here the definition is taken from {cite}`david2019understanding` under Creative Commons Attribution License 4.0.

@@ -13,8 +13,6 @@ Low-power design strategies attempt to decrease power or energy consumption in p
 
 Power-aware computing's major purpose is to save energy while routing communications from source to destination. The contemporary period is characterised by wireless networks, in which nodes connect with one another over many hops. In this technology, many data transfer protocols are employed. Different routing techniques will draw more power from the battery. In power-aware computing, power-aware routing metrics have played an essential role.
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

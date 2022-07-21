@@ -133,8 +133,6 @@ bias could be mitigated are:
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Resmi Ramachandranpillai, Fredrik Heintz, Miguel Couceiro, and Gabriel Gonzalez-Castañé.
+> This entry was written by Resmi Ramachandranpillai, Fredrik Heintz, Miguel Couceiro, and Gabriel Gonzalez-Castañé.
 
 

@@ -32,8 +32,6 @@ Data centre design that is energy efficient should assist to better use a data c
 :filter: docname in docnames
 ```
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

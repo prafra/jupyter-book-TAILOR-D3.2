@@ -27,8 +27,6 @@ Government regulatory agencies are also actively working to promote green comput
 
 
 
----
-
-This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
+> This entry was written by Andrea Rossi, Andrea Visentin and Barry O'Sullivan.
 
 

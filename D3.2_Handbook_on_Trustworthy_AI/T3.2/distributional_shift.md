@@ -119,10 +119,6 @@ occurring
 :filter: docname in docnames
 ```
 
----
- 
-This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
-
----
+> This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
 
 [^def]: Definition taken from {cite}`david2019understanding` under Creative Commons Attribution License 4.0.

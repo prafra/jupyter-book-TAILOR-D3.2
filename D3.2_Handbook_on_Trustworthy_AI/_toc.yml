@@ -121,7 +121,6 @@ chapters:
   - file: index/T3.6/Energy Aware
   - file: index/T3.6/Energy Efficient
   - file: index/T3.2/Evaluation
-  - file: index/T3.5/epsilon-indistinguishability
   - file: index/T3.3/Equity
   - file: index/T3.1/Explanation by Design
   - file: index/T3.3/Fair Machine Learning

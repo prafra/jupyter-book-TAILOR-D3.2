@@ -69,9 +69,7 @@ unique global weighted rule list by using a scoring system. \[style\]
 
 [\[fig:rules\_corels\]]{#fig:rules_corels label="fig:rules_corels"}
 
----
-
-This entry was readapted from \*Guidotti, Monreale, Pedreschi,
-Giannotti. Principles of Explainable Artificial Intelligence. Springer
-International Publish- ing (2021)\* by Francesca Pratesi and Riccardo
-Guidotti.
+> This entry was readapted from \*Guidotti, Monreale, Pedreschi,
+> Giannotti. Principles of Explainable Artificial Intelligence. Springer
+> International Publish- ing (2021)\* by Francesca Pratesi and Riccardo
+> Guidotti.
