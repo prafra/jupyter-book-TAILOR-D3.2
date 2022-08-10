@@ -1,37 +1,33 @@
-# Welcome to TAILOR
+# The TAILOR Handbook of Trustworthy AI
+
+## An encyclopedia of the major scientific and technical terms related to Trustworthy Artificial Intelligence
 
 **TAILOR: Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization**
 
-*D3.3 Handbook on Trustworthy AI (Version 1)*
-
-## Read this first
-
-This is a working document for the Version 1 of the *D3.3 Handbook on Trustworthy AI*, the Tailor WP3 Handbook on Trustworthy AI. This
-is a Tailor project deliverable with two versions: Version 1 (M22) and Version 2 (M46).
+Add an introduction to the first page.
+Add an Executive summary to the first page. This should be stand-alone, so that we can use it in formal reporting, for websites, social media etc.
 
 
-## About TAILOR
+This book (to be consolidated in the second phase of the project) represents the first period deliverable of the TAILOR project, providing an encyclopedia of the major terms related to trustworthiness.
 
-<a href="https://tailor-network.eu" terget=_blank>TAILOR</a> is an EU-funded ICT-48 Network (GA 952215) with the purpose of building the capacity of providing the scientific foundations for Trustworthy AI in Europe by developing a network of research excellence centres leveraging and combining learning, optimization and reasoning.
+## About the TAILOR Handbook
 
-- TAILOR will create a network of research excellence centres across all of Europe on the Foundations of Trustworthy AI based on four powerful instruments (a strategic roadmap committee, basic research program to address grand challenges, a connectivity fund for active dissemination to the larger AI community, and network collaboration activities promoting research exchanges, training materials and events, and joint PhD supervision.
-- TAILOR will develop an ambitious research and innovation roadmap for the foundation of Trustworthy AI leveraging Europe’s strengths and opportunities, across multiple disciplines, maturity levels, and geographical location. Seeds for its implementation will be proposed: challenges regarding both the basic research themes and application use-cases; a PhD program favouring immersion of PhDs in industry.
-- TAILOR will launch and execute five basic research programs validating the operation of the network and performing ground-breaking basic research integrating learning, optimisation and reasoning in key areas for providing the scientific foundations for Trustworthy AI.
-- TAILOR will develop and build on new mechanisms to step up AI outreach, harmonize training curricula, and significantly strengthen European capacities in AI research on Trustworthy AI.
-- TAILOR brings together leading AI research centres from learning, optimisation and reasoning together with major European companies representing important industry sectors into a single scientific network to reduce the fragmentation, boost the collaboration, and increase the AI research capacity of Europe as well as attracting and retaining talents in Europe.
+This is a working document for the Version 1 of the *D3.3 Handbook on Trustworthy AI*, the TAILOR WP3 Handbook on Trustworthy AI. This
+is a <a href="https://tailor-network.eu" terget=_blank>TAILOR</a> project deliverable with two versions: Version 1 (M22) and Version 2 (M46).
 
-TAILOR, like all the research projects, is based on Work Pakages (WPs).
-WP3 (Trustworthy AI) aims at advancing knowledge on the six dimensions and putting each of them in relationships with foundation themes.
+The Handbook on Trustworthy AI assumes an encyclopedia-like structure and is presented in the form of a publically accessible WIKI. 
+To do so, the Jupiter Book framework has been used.
+In the long term, the Handbook is meant to become a point of reference for resources (key concepts, tools, documentation, tutorials, teaching material, etc.) related to Trustworthy AI.
 
-## About the Encyclopedia
+Here, you can find information about the topics of each of the task of WP3, summarizing one of the aspects of Trustworthy AI; the order of the chapters that are in this Handbook simply reflects the order of the task in the workpackage. 
+In particolar, in this Encyclopedia you can find definition related to:
+- {doc}`../T3.1/T3.1`. In this part of the Handbook, we will provide an overview of the main properties that an explanation should have and of the several methods to provide multimodal explanations; moreover, our focus will be also on overcome the need of expaining opaque model and, instead, move towards the use of transparent models. 
+- {doc}`../T3.2/T3.2`. In this section of the Encyclopedia, we will analyze the challenges in developing AI systems that are safe, reliable, and robust; we will also provide a way to evaluate this aspects in practice, and we will promote the dynamic evaluation in managing risk during the normal use of AI systems.
+- {doc}`../T3.3/T3.3`. In this chapter, we will start recalling what the grounds of discrimination are, how we can define a bias or segregation; then, we will make a step in defining what fair machine learning could be, and what are the metrics we can adopt to measure (un)fairness.
+- {doc}`../T3.4/L1.Accountability_and_Reproducibility`. Here, we analyze the two souls of this topic, i.e., the two interrelated concepts of {doc}`../T3.4/L2.Accountability` and {doc}`../T3.4/L2.Reproducibility`: the former term is more related to responsability, blameworthiness, liability, and prevent misuse, where the latter term is more related to measures, quality standards, and procedures to model the development of learning methods for AI.
+- {doc}`../T3.5/T3.5`. This section will provide an overview of the main attack that can put at risk individual privacy, we will explain the difference between pseudonymization and actual anonymization, and we will describe the main family of privacy models.
+- {doc}`../T3.6/T3.6`. The last chapter of the Handbook is focus of one of the newest challenge that our society is facing, in particular, our focus is to provide solutions for optimizing both the resources used in AI systems and the computation itself.
 
-This book (to be consolidated in the second phase of the project) represents the first period deliverable, providing an encyclopedia of the major terms related to trustworthiness.
-Here, you can find definitions related to:
-- {doc}`T3.1`. 
-- {doc}`T3.2`. 
-- {doc}`T3.3`. 
-- {doc}`T3.4/L1.Accountability_and_Reproducibility`. 
-- {doc}`T3.5`.
-- {doc}`T3.6`.
+Finally, we report a final chapter, where you can find an {doc}`main/AnalyticaIndex`, which lists all entries in alphabetical order; in each term you can find a reference to a short definition of the entry and where it is used within the Handbook, with the link to go more in dept with the definition. Potential synonyms have their own entries in this index.
 
-
+## Executive Summary
