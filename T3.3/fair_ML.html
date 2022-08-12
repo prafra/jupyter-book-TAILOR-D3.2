@@ -1240,17 +1240,17 @@ input data, as in-processing, which modify the learning algorithm, and post-proc
 <section id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>Fairness can be promoted in three different ways in ML as surveyed in
-<span id="id1">[<a class="reference internal" href="#id2495" title="Simon Caton and Christian Haas. Fairness in machine learning: a survey. arXiv preprint arXiv:2010.04053, 2020. URL: https://arxiv.org/abs/2010.04053.">3</a>]</span>. This survey provides a clear categorization of
+<span id="id1">[<a class="reference internal" href="#id2499" title="Simon Caton and Christian Haas. Fairness in machine learning: a survey. arXiv preprint arXiv:2010.04053, 2020. URL: https://arxiv.org/abs/2010.04053.">3</a>]</span>. This survey provides a clear categorization of
 methods under pre-process, in-process and post-process approaches.</p>
 <p>Pre-process approaches are the most flexible ones that transforms the
 data so that the underlying bias is removed. One advantage of using
 pre-process techniques is that it is the most inspectable method, as it
 is the earliest opportunity to mitigate biases and measure how it
 affects the outcome compared to the other two approaches in fair machine
-learning <span id="id2">[<a class="reference internal" href="#id2494" title="Brian d'Alessandro, Cathy O'Neil, and Tom LaGatta. Conscientious classification: a data scientist's guide to discrimination-aware classification. Big data, 5(2):120–134, 2017.">4</a>]</span>. Suppression or Fairness Through
+learning <span id="id2">[<a class="reference internal" href="#id2498" title="Brian d'Alessandro, Cathy O'Neil, and Tom LaGatta. Conscientious classification: a data scientist's guide to discrimination-aware classification. Big data, 5(2):120–134, 2017.">4</a>]</span>. Suppression or Fairness Through
 Unawareness is a baseline method that accounts for removing the
 sensitive features and proxy sensitive features from the dataset
-<span id="id3">[<a class="reference internal" href="#id2540" title="Pratik Gajane and Mykola Pechenizkiy. On formalizing fairness in prediction with machine learning. arXiv preprint arXiv:1710.03184, 2017. URL: https://arxiv.org/abs/1710.03184.">5</a>]</span>. A recent study <span id="id4">[<a class="reference internal" href="#id2541" title="Boris Ruf and Marcin Detyniecki. Active fairness instead of unawareness. arXiv preprint arXiv:2009.06251, 2020. URL: https://arxiv.org/abs/2009.06251.">6</a>]</span> proved that
+<span id="id3">[<a class="reference internal" href="#id2544" title="Pratik Gajane and Mykola Pechenizkiy. On formalizing fairness in prediction with machine learning. arXiv preprint arXiv:1710.03184, 2017. URL: https://arxiv.org/abs/1710.03184.">5</a>]</span>. A recent study <span id="id4">[<a class="reference internal" href="#id2545" title="Boris Ruf and Marcin Detyniecki. Active fairness instead of unawareness. arXiv preprint arXiv:2009.06251, 2020. URL: https://arxiv.org/abs/2009.06251.">6</a>]</span> proved that
 removing sensitive information does not guarantee fair outcomes.
 Massaging the dataset (relabeling) method can act in two ways:</p>
 <ol class="simple">
@@ -1266,51 +1266,51 @@ of any of the sensitive attributes. That means it corrects the past
 unfair outcomes by giving more weightage to correct cases and less
 weightage to incorrect cases. Learning fair representations approach
 fairness fundamentally differently by aiming for a middle ground
-between-group fairness and individual fairness <span id="id5">[<a class="reference internal" href="#id2496" title="Richard S. Zemel, Yu Wu, Kevin Swersky, Toniann Pitassi, and Cynthia Dwork. Learning fair representations. In ICML (3), volume 28 of JMLR Workshop and Conference Proceedings, 325–333. JMLR.org, 2013.">7</a>]</span>. It
+between-group fairness and individual fairness <span id="id5">[<a class="reference internal" href="#id2500" title="Richard S. Zemel, Yu Wu, Kevin Swersky, Toniann Pitassi, and Cynthia Dwork. Learning fair representations. In ICML (3), volume 28 of JMLR Workshop and Conference Proceedings, 325–333. JMLR.org, 2013.">7</a>]</span>. It
 turns the pre-process problem into a combined optimization problem that
 finds trade-offs between-group fairness, individual fairness, and
 accuracy.</p>
 <p>In-process approaches modify the learning algorithms to remove biases
 during model training by either incorporating fairness into the
 optimization equation or imposing a constraint as regularization
-<span id="id6">[<a class="reference internal" href="#id2497" title="Rachel K. E. Bellamy, Kuntal Dey, Michael Hind, Samuel C. Hoffman, Stephanie Houde, Kalapriya Kannan, Pranay Lohia, Jacquelyn Martino, Sameep Mehta, Aleksandra Mojsilovic, Seema Nagar, Karthikeyan Natesan Ramamurthy, John T. Richards, Diptikalyan Saha, Prasanna Sattigeri, Moninder Singh, Kush R. Varshney, and Yunfeng Zhang. AI fairness 360: an extensible toolkit for detecting and mitigating algorithmic bias. IBM J. Res. Dev., 63(4/5):4:1–4:15, 2019.">8</a>, <a class="reference internal" href="#id2498" title="Richard Berk, Hoda Heidari, Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, Seth Neel, and Aaron Roth. A convex framework for fair regression. CoRR, 2017.">9</a>]</span>. The main categories of in-processing
+<span id="id6">[<a class="reference internal" href="#id2501" title="Rachel K. E. Bellamy, Kuntal Dey, Michael Hind, Samuel C. Hoffman, Stephanie Houde, Kalapriya Kannan, Pranay Lohia, Jacquelyn Martino, Sameep Mehta, Aleksandra Mojsilovic, Seema Nagar, Karthikeyan Natesan Ramamurthy, John T. Richards, Diptikalyan Saha, Prasanna Sattigeri, Moninder Singh, Kush R. Varshney, and Yunfeng Zhang. AI fairness 360: an extensible toolkit for detecting and mitigating algorithmic bias. IBM J. Res. Dev., 63(4/5):4:1–4:15, 2019.">8</a>, <a class="reference internal" href="#id2502" title="Richard Berk, Hoda Heidari, Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, Seth Neel, and Aaron Roth. A convex framework for fair regression. CoRR, 2017.">9</a>]</span>. The main categories of in-processing
 approaches are adversarial debiasing and prejudice removal. The former
 involves an adversary to predict the sensitive attributes from a
 downstream task (classification or regression), and thus the model
 learns a representation independent of sensitive features. Learning fair
 representations can be done by adding noise to the predictive power
 using the regulation. Adversarial reweighted learning
-<span id="id7">[<a class="reference internal" href="#id2499" title="Preethi Lahoti, Alex Beutel, Jilin Chen, Kang Lee, Flavien Prost, Nithum Thain, Xuezhi Wang, and Ed H. Chi. Fairness without demographics through adversarially reweighted learning. In NeurIPS. 2020.">10</a>]</span> uses non-sensitive features and labels to measure
+<span id="id7">[<a class="reference internal" href="#id2503" title="Preethi Lahoti, Alex Beutel, Jilin Chen, Kang Lee, Flavien Prost, Nithum Thain, Xuezhi Wang, and Ed H. Chi. Fairness without demographics through adversarially reweighted learning. In NeurIPS. 2020.">10</a>]</span> uses non-sensitive features and labels to measure
 unfairness and co-train the adversarial reweighting approach to
 improving learning. On the other hand, the prejudice remover approach
 has various techniques to mitigate biases during training. Some of the
 standard methods are:</p>
 <ol class="simple">
-<li><p>Heuristic-based: Use Roony rules <span id="id8">[<a class="reference internal" href="#id2500" title="Caitlin Kuhlman, MaryAnn Van Valkenburg, and Elke A. Rundensteiner. FARE: diagnostics for fair ranking using pairwise error metrics. In WWW, 2936–2942. ACM, 2019.">11</a>]</span>, which
+<li><p>Heuristic-based: Use Roony rules <span id="id8">[<a class="reference internal" href="#id2504" title="Caitlin Kuhlman, MaryAnn Van Valkenburg, and Elke A. Rundensteiner. FARE: diagnostics for fair ranking using pairwise error metrics. In WWW, 2936–2942. ACM, 2019.">11</a>]</span>, which
 effectively rank problems.</p></li>
 <li><p>Algorithmic Changes: These can be made in every single step of
 calibration, such as input, output, and model structure
-<span id="id9">[<a class="reference internal" href="#id2494" title="Brian d'Alessandro, Cathy O'Neil, and Tom LaGatta. Conscientious classification: a data scientist's guide to discrimination-aware classification. Big data, 5(2):120–134, 2017.">4</a>, <a class="reference internal" href="#id2501" title="Benjamin Fish, Jeremy Kun, and Ádám Dániel Lelkes. A confidence-based approach for balancing fairness and accuracy. In SDM, 144–152. SIAM, 2016.">12</a>, <a class="reference internal" href="#id2502" title="Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Li Wei, Yi Wu, Lukasz Heldt, Zhe Zhao, Lichan Hong, Ed H. Chi, and Cristos Goodrow. Fairness in recommendation ranking through pairwise comparisons. In KDD, 2212–2220. ACM, 2019.">13</a>, <a class="reference internal" href="#id2503" title="Dylan Slack, Sorelle A. Friedler, and Emile Givental. Fairness warnings and fair-MAML: learning fairly with minimal data. In FAT*, 200–209. ACM, 2020.">14</a>, <a class="reference internal" href="#id2504" title="Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Allison Woodruff, Christine Luu, Pierre Kreitmann, Jonathan Bischof, and Ed H. Chi. Putting fairness principles into practice: challenges, metrics, and improvements. In AIES, 453–459. ACM, 2019.">15</a>, <a class="reference internal" href="#id2505" title="Jialu Wang, Yang Liu, and Caleb C. Levy. Fair classification with group-dependent label noise. In FAccT, 526–536. ACM, 2021.">16</a>, <a class="reference internal" href="#id2506" title="Cynthia Dwork, Nicole Immorlica, Adam Tauman Kalai, and Mark D. M. Leiserson. Decoupled classifiers for group-fair and efficient machine learning. In FAT, volume 81 of Proceedings of Machine Learning Research, 119–133. PMLR, 2018.">17</a>, <a class="reference internal" href="#id2507" title="Christos Louizos, Kevin Swersky, Yujia Li, Max Welling, and Richard S. Zemel. The variational fair autoencoder. In ICLR. 2016.">18</a>, <a class="reference internal" href="#id2508" title="Anay Mehrotra and L. Elisa Celis. Mitigating bias in set selection with noisy protected attributes. In FAccT, 237–248. ACM, 2021.">19</a>]</span>.</p></li>
+<span id="id9">[<a class="reference internal" href="#id2498" title="Brian d'Alessandro, Cathy O'Neil, and Tom LaGatta. Conscientious classification: a data scientist's guide to discrimination-aware classification. Big data, 5(2):120–134, 2017.">4</a>, <a class="reference internal" href="#id2505" title="Benjamin Fish, Jeremy Kun, and Ádám Dániel Lelkes. A confidence-based approach for balancing fairness and accuracy. In SDM, 144–152. SIAM, 2016.">12</a>, <a class="reference internal" href="#id2506" title="Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Li Wei, Yi Wu, Lukasz Heldt, Zhe Zhao, Lichan Hong, Ed H. Chi, and Cristos Goodrow. Fairness in recommendation ranking through pairwise comparisons. In KDD, 2212–2220. ACM, 2019.">13</a>, <a class="reference internal" href="#id2507" title="Dylan Slack, Sorelle A. Friedler, and Emile Givental. Fairness warnings and fair-MAML: learning fairly with minimal data. In FAT*, 200–209. ACM, 2020.">14</a>, <a class="reference internal" href="#id2508" title="Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Allison Woodruff, Christine Luu, Pierre Kreitmann, Jonathan Bischof, and Ed H. Chi. Putting fairness principles into practice: challenges, metrics, and improvements. In AIES, 453–459. ACM, 2019.">15</a>, <a class="reference internal" href="#id2509" title="Jialu Wang, Yang Liu, and Caleb C. Levy. Fair classification with group-dependent label noise. In FAccT, 526–536. ACM, 2021.">16</a>, <a class="reference internal" href="#id2510" title="Cynthia Dwork, Nicole Immorlica, Adam Tauman Kalai, and Mark D. M. Leiserson. Decoupled classifiers for group-fair and efficient machine learning. In FAT, volume 81 of Proceedings of Machine Learning Research, 119–133. PMLR, 2018.">17</a>, <a class="reference internal" href="#id2511" title="Christos Louizos, Kevin Swersky, Yujia Li, Max Welling, and Richard S. Zemel. The variational fair autoencoder. In ICLR. 2016.">18</a>, <a class="reference internal" href="#id2512" title="Anay Mehrotra and L. Elisa Celis. Mitigating bias in set selection with noisy protected attributes. In FAccT, 237–248. ACM, 2021.">19</a>]</span>.</p></li>
 <li><p>Using pre-trained models: It involves combining available
 pre-trained models and transferring them to reduce bias
-<span id="id10">[<a class="reference internal" href="#id2509" title="David Madras, Elliot Creager, Toniann Pitassi, and Richard S. Zemel. Learning adversarially fair and transferable representations. In ICML, volume 80 of Proceedings of Machine Learning Research, 3381–3390. PMLR, 2018.">20</a>]</span></p></li>
+<span id="id10">[<a class="reference internal" href="#id2513" title="David Madras, Elliot Creager, Toniann Pitassi, and Richard S. Zemel. Learning adversarially fair and transferable representations. In ICML, volume 80 of Proceedings of Machine Learning Research, 3381–3390. PMLR, 2018.">20</a>]</span></p></li>
 <li><p>Counterfactual and Causal Reasoning: This considers a model to be
 group or individual fair if its prediction in the real world is
 similar to the counterfactual world, where individuals belong to a
 different protected group. Causal reasoning can be used to caution
-against those counterfactual explanations <span id="id11">[<a class="reference internal" href="#id2510" title="Joshua R Loftus, Chris Russell, Matt J Kusner, and Ricardo Silva. Causal reasoning for algorithmic fairness. arXiv preprint arXiv:1805.05859, 2018. URL: https://arxiv.org/abs/1805.05859.">21</a>]</span>
-<span id="id12">[<a class="reference internal" href="#id2511" title="Razieh Nabi, Daniel Malinsky, and Ilya Shpitser. Learning optimal fair policies. In ICML, volume 97 of Proceedings of Machine Learning Research, 4674–4682. PMLR, 2019.">22</a>]</span>. A primary concern on the use and misuse of
-counterfactual fairness has been studied in <span id="id13">[<a class="reference internal" href="#id2512" title="Atoosa Kasirzadeh and Andrew Smart. The use and misuse of counterfactuals in ethical machine learning. In FAccT, 228–236. ACM, 2021.">23</a>]</span>.</p></li>
+against those counterfactual explanations <span id="id11">[<a class="reference internal" href="#id2514" title="Joshua R Loftus, Chris Russell, Matt J Kusner, and Ricardo Silva. Causal reasoning for algorithmic fairness. arXiv preprint arXiv:1805.05859, 2018. URL: https://arxiv.org/abs/1805.05859.">21</a>]</span>
+<span id="id12">[<a class="reference internal" href="#id2515" title="Razieh Nabi, Daniel Malinsky, and Ilya Shpitser. Learning optimal fair policies. In ICML, volume 97 of Proceedings of Machine Learning Research, 4674–4682. PMLR, 2019.">22</a>]</span>. A primary concern on the use and misuse of
+counterfactual fairness has been studied in <span id="id13">[<a class="reference internal" href="#id2516" title="Atoosa Kasirzadeh and Andrew Smart. The use and misuse of counterfactuals in ethical machine learning. In FAccT, 228–236. ACM, 2021.">23</a>]</span>.</p></li>
 </ol>
 <p>Finally, post-process approaches are the most versatile approaches if
 the model is already in the production stage and it does not require
 retraining the model. Another advantage of using post-processing is that
 the fairness (individual and group) of any downstream tasks can be
 easily satisfied concerning the domain and application of the model
-<span id="id14">[<a class="reference internal" href="#id2513" title="Pranay Kr. Lohia, Karthikeyan Natesan Ramamurthy, Manish Bhide, Diptikalyan Saha, Kush R. Varshney, and Ruchir Puri. Bias mitigation post-processing for individual and group fairness. In ICASSP, 2847–2851. IEEE, 2019.">24</a>]</span>. Also, post-processing is agnostic to the input data,
+<span id="id14">[<a class="reference internal" href="#id2517" title="Pranay Kr. Lohia, Karthikeyan Natesan Ramamurthy, Manish Bhide, Diptikalyan Saha, Kush R. Varshney, and Ruchir Puri. Bias mitigation post-processing for individual and group fairness. In ICASSP, 2847–2851. IEEE, 2019.">24</a>]</span>. Also, post-processing is agnostic to the input data,
 which makes it easier to implement. However, post-processing procedures
 may present weaker results when compare to pre-processing
-ones <span id="id15">[<a class="reference internal" href="fairness.html#id2494" title="Nikita Kozodoi, Johannes Jacob, and Stefan Lessmann. Fairness in credit scoring: assessment, implementation and profit implications. European Journal of Operational Research, 297(3):1083–1094, 2022.">22</a>, <a class="reference internal" href="#id2590" title="Dana Pessach and Erez Shmueli. A review on fairness in machine learning. ACM Computing Surveys (CSUR), 55(3):1–44, 2022.">25</a>]</span>.</p>
+ones <span id="id15">[<a class="reference internal" href="fairness.html#id2498" title="Nikita Kozodoi, Johannes Jacob, and Stefan Lessmann. Fairness in credit scoring: assessment, implementation and profit implications. European Journal of Operational Research, 297(3):1083–1094, 2022.">22</a>, <a class="reference internal" href="#id2594" title="Dana Pessach and Erez Shmueli. A review on fairness in machine learning. ACM Computing Surveys (CSUR), 55(3):1–44, 2022.">25</a>]</span>.</p>
 <p><strong>Assessment tools</strong>: Tools can assist practitioners or organizations in
 documenting the measures, providing guidance, helping formalize
 processes, and empowering automated decisions. There are various types
@@ -1355,85 +1355,85 @@ application perspective to analyze and document their effects.</p></li>
 responsibility of users to understand the after-effects of which tools
 they are using, and which types of biases can mitigate. A detailed
 review of landscape and gaps in fairness tool kits is given in
-<span id="id16">[<a class="reference internal" href="#id2524" title="Michelle Seng Ah Lee and Jatinder Singh. The landscape and gaps in open source fairness toolkits. In CHI, 699:1–699:13. ACM, 2021.">1</a>]</span>.</p>
+<span id="id16">[<a class="reference internal" href="#id2528" title="Michelle Seng Ah Lee and Jatinder Singh. The landscape and gaps in open source fairness toolkits. In CHI, 699:1–699:13. ACM, 2021.">1</a>]</span>.</p>
 </section>
 <section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <div class="docutils container" id="id17">
 <dl class="citation">
-<dt class="label" id="id2524"><span class="brackets"><a class="fn-backref" href="#id16">1</a></span></dt>
+<dt class="label" id="id2528"><span class="brackets"><a class="fn-backref" href="#id16">1</a></span></dt>
 <dd><p>Michelle Seng Ah Lee and Jatinder Singh. The landscape and gaps in open source fairness toolkits. In <em>CHI</em>, 699:1–699:13. ACM, 2021.</p>
 </dd>
-<dt class="label" id="id2471"><span class="brackets"><a class="fn-backref" href="#id15">2</a></span></dt>
+<dt class="label" id="id2475"><span class="brackets"><a class="fn-backref" href="#id15">2</a></span></dt>
 <dd><p>Nikita Kozodoi, Johannes Jacob, and Stefan Lessmann. Fairness in credit scoring: assessment, implementation and profit implications. <em>European Journal of Operational Research</em>, 297(3):1083–1094, 2022.</p>
 </dd>
-<dt class="label" id="id2495"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
+<dt class="label" id="id2499"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
 <dd><p>Simon Caton and Christian Haas. Fairness in machine learning: a survey. <em>arXiv preprint arXiv:2010.04053</em>, 2020. URL: <a class="reference external" href="https://arxiv.org/abs/2010.04053">https://arxiv.org/abs/2010.04053</a>.</p>
 </dd>
-<dt class="label" id="id2494"><span class="brackets">4</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id9">2</a>)</span></dt>
+<dt class="label" id="id2498"><span class="brackets">4</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id9">2</a>)</span></dt>
 <dd><p>Brian d'Alessandro, Cathy O'Neil, and Tom LaGatta. Conscientious classification: a data scientist's guide to discrimination-aware classification. <em>Big data</em>, 5(2):120–134, 2017.</p>
 </dd>
-<dt class="label" id="id2540"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
+<dt class="label" id="id2544"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
 <dd><p>Pratik Gajane and Mykola Pechenizkiy. On formalizing fairness in prediction with machine learning. <em>arXiv preprint arXiv:1710.03184</em>, 2017. URL: <a class="reference external" href="https://arxiv.org/abs/1710.03184">https://arxiv.org/abs/1710.03184</a>.</p>
 </dd>
-<dt class="label" id="id2541"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
+<dt class="label" id="id2545"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
 <dd><p>Boris Ruf and Marcin Detyniecki. Active fairness instead of unawareness. <em>arXiv preprint arXiv:2009.06251</em>, 2020. URL: <a class="reference external" href="https://arxiv.org/abs/2009.06251">https://arxiv.org/abs/2009.06251</a>.</p>
 </dd>
-<dt class="label" id="id2496"><span class="brackets"><a class="fn-backref" href="#id5">7</a></span></dt>
+<dt class="label" id="id2500"><span class="brackets"><a class="fn-backref" href="#id5">7</a></span></dt>
 <dd><p>Richard S. Zemel, Yu Wu, Kevin Swersky, Toniann Pitassi, and Cynthia Dwork. Learning fair representations. In <em>ICML (3)</em>, volume 28 of JMLR Workshop and Conference Proceedings, 325–333. JMLR.org, 2013.</p>
 </dd>
-<dt class="label" id="id2497"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dt class="label" id="id2501"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
 <dd><p>Rachel K. E. Bellamy, Kuntal Dey, Michael Hind, Samuel C. Hoffman, Stephanie Houde, Kalapriya Kannan, Pranay Lohia, Jacquelyn Martino, Sameep Mehta, Aleksandra Mojsilovic, Seema Nagar, Karthikeyan Natesan Ramamurthy, John T. Richards, Diptikalyan Saha, Prasanna Sattigeri, Moninder Singh, Kush R. Varshney, and Yunfeng Zhang. AI fairness 360: an extensible toolkit for detecting and mitigating algorithmic bias. <em>IBM J. Res. Dev.</em>, 63(4/5):4:1–4:15, 2019.</p>
 </dd>
-<dt class="label" id="id2498"><span class="brackets"><a class="fn-backref" href="#id6">9</a></span></dt>
+<dt class="label" id="id2502"><span class="brackets"><a class="fn-backref" href="#id6">9</a></span></dt>
 <dd><p>Richard Berk, Hoda Heidari, Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, Seth Neel, and Aaron Roth. A convex framework for fair regression. <em>CoRR</em>, 2017.</p>
 </dd>
-<dt class="label" id="id2499"><span class="brackets"><a class="fn-backref" href="#id7">10</a></span></dt>
+<dt class="label" id="id2503"><span class="brackets"><a class="fn-backref" href="#id7">10</a></span></dt>
 <dd><p>Preethi Lahoti, Alex Beutel, Jilin Chen, Kang Lee, Flavien Prost, Nithum Thain, Xuezhi Wang, and Ed H. Chi. Fairness without demographics through adversarially reweighted learning. In <em>NeurIPS</em>. 2020.</p>
 </dd>
-<dt class="label" id="id2500"><span class="brackets"><a class="fn-backref" href="#id8">11</a></span></dt>
+<dt class="label" id="id2504"><span class="brackets"><a class="fn-backref" href="#id8">11</a></span></dt>
 <dd><p>Caitlin Kuhlman, MaryAnn Van Valkenburg, and Elke A. Rundensteiner. FARE: diagnostics for fair ranking using pairwise error metrics. In <em>WWW</em>, 2936–2942. ACM, 2019.</p>
 </dd>
-<dt class="label" id="id2501"><span class="brackets"><a class="fn-backref" href="#id9">12</a></span></dt>
+<dt class="label" id="id2505"><span class="brackets"><a class="fn-backref" href="#id9">12</a></span></dt>
 <dd><p>Benjamin Fish, Jeremy Kun, and Ádám Dániel Lelkes. A confidence-based approach for balancing fairness and accuracy. In <em>SDM</em>, 144–152. SIAM, 2016.</p>
 </dd>
-<dt class="label" id="id2502"><span class="brackets"><a class="fn-backref" href="#id9">13</a></span></dt>
+<dt class="label" id="id2506"><span class="brackets"><a class="fn-backref" href="#id9">13</a></span></dt>
 <dd><p>Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Li Wei, Yi Wu, Lukasz Heldt, Zhe Zhao, Lichan Hong, Ed H. Chi, and Cristos Goodrow. Fairness in recommendation ranking through pairwise comparisons. In <em>KDD</em>, 2212–2220. ACM, 2019.</p>
 </dd>
-<dt class="label" id="id2503"><span class="brackets"><a class="fn-backref" href="#id9">14</a></span></dt>
+<dt class="label" id="id2507"><span class="brackets"><a class="fn-backref" href="#id9">14</a></span></dt>
 <dd><p>Dylan Slack, Sorelle A. Friedler, and Emile Givental. Fairness warnings and fair-MAML: learning fairly with minimal data. In <em>FAT*</em>, 200–209. ACM, 2020.</p>
 </dd>
-<dt class="label" id="id2504"><span class="brackets"><a class="fn-backref" href="#id9">15</a></span></dt>
+<dt class="label" id="id2508"><span class="brackets"><a class="fn-backref" href="#id9">15</a></span></dt>
 <dd><p>Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Allison Woodruff, Christine Luu, Pierre Kreitmann, Jonathan Bischof, and Ed H. Chi. Putting fairness principles into practice: challenges, metrics, and improvements. In <em>AIES</em>, 453–459. ACM, 2019.</p>
 </dd>
-<dt class="label" id="id2505"><span class="brackets"><a class="fn-backref" href="#id9">16</a></span></dt>
+<dt class="label" id="id2509"><span class="brackets"><a class="fn-backref" href="#id9">16</a></span></dt>
 <dd><p>Jialu Wang, Yang Liu, and Caleb C. Levy. Fair classification with group-dependent label noise. In <em>FAccT</em>, 526–536. ACM, 2021.</p>
 </dd>
-<dt class="label" id="id2506"><span class="brackets"><a class="fn-backref" href="#id9">17</a></span></dt>
+<dt class="label" id="id2510"><span class="brackets"><a class="fn-backref" href="#id9">17</a></span></dt>
 <dd><p>Cynthia Dwork, Nicole Immorlica, Adam Tauman Kalai, and Mark D. M. Leiserson. Decoupled classifiers for group-fair and efficient machine learning. In <em>FAT</em>, volume 81 of Proceedings of Machine Learning Research, 119–133. PMLR, 2018.</p>
 </dd>
-<dt class="label" id="id2507"><span class="brackets"><a class="fn-backref" href="#id9">18</a></span></dt>
+<dt class="label" id="id2511"><span class="brackets"><a class="fn-backref" href="#id9">18</a></span></dt>
 <dd><p>Christos Louizos, Kevin Swersky, Yujia Li, Max Welling, and Richard S. Zemel. The variational fair autoencoder. In <em>ICLR</em>. 2016.</p>
 </dd>
-<dt class="label" id="id2508"><span class="brackets"><a class="fn-backref" href="#id9">19</a></span></dt>
+<dt class="label" id="id2512"><span class="brackets"><a class="fn-backref" href="#id9">19</a></span></dt>
 <dd><p>Anay Mehrotra and L. Elisa Celis. Mitigating bias in set selection with noisy protected attributes. In <em>FAccT</em>, 237–248. ACM, 2021.</p>
 </dd>
-<dt class="label" id="id2509"><span class="brackets"><a class="fn-backref" href="#id10">20</a></span></dt>
+<dt class="label" id="id2513"><span class="brackets"><a class="fn-backref" href="#id10">20</a></span></dt>
 <dd><p>David Madras, Elliot Creager, Toniann Pitassi, and Richard S. Zemel. Learning adversarially fair and transferable representations. In <em>ICML</em>, volume 80 of Proceedings of Machine Learning Research, 3381–3390. PMLR, 2018.</p>
 </dd>
-<dt class="label" id="id2510"><span class="brackets"><a class="fn-backref" href="#id11">21</a></span></dt>
+<dt class="label" id="id2514"><span class="brackets"><a class="fn-backref" href="#id11">21</a></span></dt>
 <dd><p>Joshua R Loftus, Chris Russell, Matt J Kusner, and Ricardo Silva. Causal reasoning for algorithmic fairness. <em>arXiv preprint arXiv:1805.05859</em>, 2018. URL: <a class="reference external" href="https://arxiv.org/abs/1805.05859">https://arxiv.org/abs/1805.05859</a>.</p>
 </dd>
-<dt class="label" id="id2511"><span class="brackets"><a class="fn-backref" href="#id12">22</a></span></dt>
+<dt class="label" id="id2515"><span class="brackets"><a class="fn-backref" href="#id12">22</a></span></dt>
 <dd><p>Razieh Nabi, Daniel Malinsky, and Ilya Shpitser. Learning optimal fair policies. In <em>ICML</em>, volume 97 of Proceedings of Machine Learning Research, 4674–4682. PMLR, 2019.</p>
 </dd>
-<dt class="label" id="id2512"><span class="brackets"><a class="fn-backref" href="#id13">23</a></span></dt>
+<dt class="label" id="id2516"><span class="brackets"><a class="fn-backref" href="#id13">23</a></span></dt>
 <dd><p>Atoosa Kasirzadeh and Andrew Smart. The use and misuse of counterfactuals in ethical machine learning. In <em>FAccT</em>, 228–236. ACM, 2021.</p>
 </dd>
-<dt class="label" id="id2513"><span class="brackets"><a class="fn-backref" href="#id14">24</a></span></dt>
+<dt class="label" id="id2517"><span class="brackets"><a class="fn-backref" href="#id14">24</a></span></dt>
 <dd><p>Pranay Kr. Lohia, Karthikeyan Natesan Ramamurthy, Manish Bhide, Diptikalyan Saha, Kush R. Varshney, and Ruchir Puri. Bias mitigation post-processing for individual and group fairness. In <em>ICASSP</em>, 2847–2851. IEEE, 2019.</p>
 </dd>
-<dt class="label" id="id2590"><span class="brackets"><a class="fn-backref" href="#id15">25</a></span></dt>
+<dt class="label" id="id2594"><span class="brackets"><a class="fn-backref" href="#id15">25</a></span></dt>
 <dd><p>Dana Pessach and Erez Shmueli. A review on fairness in machine learning. <em>ACM Computing Surveys (CSUR)</em>, 55(3):1–44, 2022.</p>
 </dd>
 </dl>
