@@ -30,19 +30,28 @@ In particolar, in this Encyclopedia you can find definition related to:
 
 Finally, we report a final chapter, where you can find an {doc}`main/AnalyticaIndex`, which lists all entries in alphabetical order; in each term you can find a reference to a short definition of the entry and where it is used within the Handbook, with the link to go more in dept with the definition. Potential synonyms have their own entries in this index.
 
+### Related work
+
+Respect to other encyclopedias or handbooks, the TAILOR Handbook of Trustworthy AI is characterized by:
+- A choice of terms which is directly related to the experience of the TAILOR consortium, i.e., all the entries were chosen by the TAILOR partners in a bottom-up way, and inserted in the Handbook if they are relevant with the research pursued in the project development.
+- The fact that, given the living-document nature of the Handbook and the attitude of openess of the TAILOR network of excellence, we are ready to correct, integrate, and update information, and receptive to (even external) suggestions.
+- The wiki structure will permit to take advantage of hyperlinks to jump directly to correlated terms.
+- Unlike other encyclopedias (such as {cite}`ElgarEncyclopedia,encyclopediaAI`), it is freely acessible.
+- We are not focused on general and omni-comprehensive machine learning or artificial intelligence resources (for this, other work {cite}`EncyclopediaML` can be more exhaustive), or very specific ethical aspects on very specific topic (e.g., privacy in mobile data {cite}`Handbook_mobile_data_privacy`), but, starting from the work done in the HLEG report, which is one of the leading work in the EU, we specificly focus on the operative aspects of trustworthy AI.
+
+
 ## Executive Summary
 
 WP3 management and task leaders decided to transform one of the deliverable of the TAILOR EU project in a encyclopedia-like document and present it in the form of a publically accessible WIKI. To do so, the <a href="https://jupyterbook.org/en/stable/intro.html" target=_blank>Jupiter Book framework</a> has been used, which is an open source project, supported by an open community of contributors, many of whom come from the <a href="https://executablebooks.org/" target=_blank>Executable Books Community</a> and the <a href="https://jupyter.org/community" target=_blank>Jupyter community</a>.
 
 The main goal of the Handbook of Trustworthy AI is to provide to non experts, especially researchers and students, an overview of the problem related to the developing of ethical and trustworty AI systems. In particular, we want to provide an overview of the main dimensions of trustworthiness, starting with a understandable explaination of the dimension itsleves, and then presenting the characterization of the problems (staring with a brief summary and the explaination of the importance of the dimension, presenting a taxonomy and some guidelines, if they are available and consolidated), summarizing what are the major challenges and solutions in the field, as well as what are the lastest research developments.
 
-The wiki structure will permit to take advantage of hyperlinks to jump directly to correlated terms. Moreover, each entry will be correlated with a bibliography, allowing the reader to go more in depth with a specific topic. 
-
-Respect to other encyclopedias, the TAILOR Handbook of Trustworthy AI is characterized by:
-- a choice of terms which is directly related to the experience of the TAILOR consortium, i.e., all the entries were chosen by the TAILOR partners in a bottom-up way, and inserted in the Handbook if they are relevant with the research pursued in the project development;
-- the fact that, given the living-document nature of the Handbook and the attitude of openess of the TAILOR network of excellence, we are receptive to suggestions.
+However, each entry will be correlated with a bibliography, allowing the reader to go more in depth with a specific topic. 
 
 All the entries have a list of authors that have directly contributed to the writing (some of them are already external to the TAILOR consortium), while the complete list of contributors can be found [here](./authors.md).
+
+
+
 
 
 <!--The plan will be to integrate it into the TAILOR web page and to make a Wikipedia entry (by v2 of the handbook). A final paper book is also planned by then.-->
