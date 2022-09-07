@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reliability &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1232,10 +1231,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="reliability">
+  <div class="tex2jax_ignore mathjax_ignore section" id="reliability">
 <h1>Reliability<a class="headerlink" href="#reliability" title="Permalink to this headline">#</a></h1>
 <p><em>Synonyms</em>: Dependability.</p>
-<section id="in-brief">
+<div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>The objective of <strong>reliability</strong> <a class="footnote-reference brackets" href="#robustness" id="id1">1</a> is that an
 AI system behaves exactly as its designers intended and anticipated,
@@ -1244,8 +1243,8 @@ programmed to carry out at any time. Reliability is therefore a measure
 of consistency of operation and can establish confidence in the safety
 of a system based upon the dependability with which it operationally
 conforms to its intended functionality.</p>
-</section>
-<section id="more-in-detail">
+</div>
+<div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>The usual definition of <strong>reliability</strong> is the
 probability of a system performing its intended functions under expected
@@ -1260,21 +1259,21 @@ different from traditional reliability studies, is on the software
 system. Compared to hardware reliability, software reliability is
 typically more difficult to test, which brings challenges to the
 research and development of reliable AI systems.</p>
-<p>Kaur and Bahl <span id="id2">[<a class="reference internal" href="#id2143" title="Gurpreet Kaur and Kailash Bahl. Software reliability, metrics, reliability improvement using agile process. International Journal of Innovative Science, Engineering &amp; Technology, 1(3):143–147, 2014.">1</a>]</span> defined the reliability of software as
+<p>Kaur and Bahl <span id="id2">[<a class="reference internal" href="#id2143">1</a>]</span> defined the reliability of software as
 “the probability of the failure-free software operation for a specified
 period of time in a specified environment”. There are thus three key
 elements in the definition of reliability, “failure”, “time” and
 “environment” (or “operational profile”). Failure means that in some
 way the software has not functioned according to the customer’s
-requirements <span id="id3">[<a class="reference internal" href="#id2158" title="John Rushby. Quality measures and assurance for AI software. Volume 18. National Aeronautics and Space Administration, Scientific and Technical …, 1988.">2</a>]</span>. The failure events of an AI system
+requirements <span id="id3">[<a class="reference internal" href="#id2158">2</a>]</span>. The failure events of an AI system
 can be mostly related to software errors, in addition to the failure of
-hardware. For hardware failures, <span id="id4">[<a class="reference internal" href="#id2144" title="Muhammad Abdullah Hanif, Faiq Khalid, Rachmad Vidya Wicaksana Putra, Semeen Rehman, and Muhammad Shafique. Robust machine learning systems: reliability and security for deep neural networks. In 2018 IEEE 24th International Symposium on On-Line Testing And Robust System Design (IOLTS), 257–260. IEEE, 2018.">3</a>]</span> discussed that AI
+hardware. For hardware failures, <span id="id4">[<a class="reference internal" href="#id2144">3</a>]</span> discussed that AI
 hardware failures are related to software errors, aging, process
 variation, and temperature. Software failures, understood as a departure
 of the external behavior of the program from the user’s requirements,
 are usually related to software errors and interruptions. For example,
 the occurrence of a disengagement event is considered as a failure of
-the system for autonomous vehicles <span id="id5">[<a class="reference internal" href="#id2145" title="Yili Hong, Jie Min, Caleb B King, and William Q Meeker. Reliability analysis of artificial intelligence systems using recurrent events data from autonomous vehicles. arXiv preprint arXiv:2102.01740, 2021.">4</a>]</span>). Note also
+the system for autonomous vehicles <span id="id5">[<a class="reference internal" href="#id2145">4</a>]</span>). Note also
 the related term of software “fault”, which refers to a defect in a
 program that, when executed under certain conditions, causes a
 failure—that is, what is generally called a “bug”. The time scale in
@@ -1291,7 +1290,7 @@ attributes of software quality, it is also the most readily quantified
 and measured. From the basic notion of reliability, many different
 measures can be developed to quantify the occurrence of failures in
 time. Some of the most important of these measures, and their
-interrelationships are summarised below (adapted from <span id="id6">[<a class="reference internal" href="#id2158" title="John Rushby. Quality measures and assurance for AI software. Volume 18. National Aeronautics and Space Administration, Scientific and Technical …, 1988.">2</a>]</span>):</p>
+interrelationships are summarised below (adapted from <span id="id6">[<a class="reference internal" href="#id2158">2</a>]</span>):</p>
 <ul class="simple">
 <li><p><strong>Hazard Rate</strong>, denoted by <span class="math notranslate nohighlight">\(z(t)\)</span>, is the conditional failure
 density at time <span class="math notranslate nohighlight">\(t\)</span>, given that no failure has occurred up to that
@@ -1308,7 +1307,7 @@ number of failures expected to occur in the half open interval
 <span class="math notranslate nohighlight">\((t,t + \delta t]\)</span> is <span class="math notranslate nohighlight">\(\lambda(t) \dot \delta  t\)</span>.</p></li>
 </ul>
 <p>Failure intensity is the measure most commonly used in the
-quantification of software reliability <span id="id7">[<a class="reference internal" href="#id2158" title="John Rushby. Quality measures and assurance for AI software. Volume 18. National Aeronautics and Space Administration, Scientific and Technical …, 1988.">2</a>]</span>. Software
+quantification of software reliability <span id="id7">[<a class="reference internal" href="#id2158">2</a>]</span>. Software
 reliability models have appeared as people try to understand the
 features of how and why software fails, and attempt to quantify software
 reliability. Given that the quantities associated with reliability are
@@ -1316,7 +1315,7 @@ usually random variables (due to of the complexity of the factors
 influencing the occurrence of a failure), reliability models follow the
 form of random stochastic processes defining the behaviour of software
 failures to time. Over 200 models have been established since the early
-1970s (see <span id="id8">[<a class="reference internal" href="#id2106" title="John D Musa, Anthony Iannino, and Kazuhira Okumoto. Software reliability. Advances in computers, 30:85–170, 1990.">5</a>]</span> for a survey of software reliability
+1970s (see <span id="id8">[<a class="reference internal" href="#id2106">5</a>]</span> for a survey of software reliability
 models). Since the number of faults in a program generally changes over
 time (as they are usually repaired when they appear), the probability
 distributions of the components of a reliability model vary with time
@@ -1326,16 +1325,15 @@ processes.</p>
 reliability because of the critical nature of a particular application,
 e.g. for autopilot software, they often use formal logical systems to
 maximise their certainty of implementation correctness
-<span id="id9">[<a class="reference internal" href="#id2150" title="Donald C Latham. Department of defense trusted computer system evaluation criteria. Department of Defense, 1986.">6</a>, <a class="reference internal" href="#id2151" title="Stuart Russell. Unifying logic and probability. Communications of the ACM, 58(7):88–97, 2015.">7</a>]</span>.</p>
+<span id="id9">[<a class="reference internal" href="#id2150">6</a>, <a class="reference internal" href="#id2151">7</a>]</span>.</p>
 <p>While many of the concepts in software reliability apply to artificial
 intelligence, some approaches are not directly applicable because the
 lack of a clear specification, and accordingly there are many other
 sources of faults that are not software ‘bugs’ or hardware errors.</p>
-</section>
-<section id="bibliography">
+</div>
+<div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id10">
-<dl class="citation">
+<p id="id10"><dl class="citation">
 <dt class="label" id="id2143"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Gurpreet Kaur and Kailash Bahl. Software reliability, metrics, reliability improvement using agile process. <em>International Journal of Innovative Science, Engineering &amp; Technology</em>, 1(3):143–147, 2014.</p>
 </dd>
@@ -1358,7 +1356,7 @@ sources of faults that are not software ‘bugs’ or hardware errors.</p>
 <dd><p>Stuart Russell. Unifying logic and probability. <em>Communications of the ACM</em>, 58(7):88–97, 2015.</p>
 </dd>
 </dl>
-</div>
+</p>
 <blockquote>
 <div><p>This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.</p>
 </div></blockquote>
@@ -1368,8 +1366,8 @@ sources of faults that are not software ‘bugs’ or hardware errors.</p>
 <dd><p>Definition taken from {cite}`david2019understanding under Creative Commons Attribution License 4.0.</p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
