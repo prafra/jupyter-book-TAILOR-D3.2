@@ -50,8 +50,13 @@ However, each entry will be correlated with a bibliography, allowing the reader 
 
 All the entries have a list of authors that have directly contributed to the writing (some of them are already external to the TAILOR consortium), while the complete list of contributors can be found [here](./authors.md).
 
-
-
-
-
 <!--The plan will be to integrate it into the TAILOR web page and to make a Wikipedia entry (by v2 of the handbook). A final paper book is also planned by then.-->
+
+## Bibliography
+
+```{bibliography}
+:style: unsrt
+:filter: docname in docnames
+```
+
+
