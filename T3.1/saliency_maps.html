@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saliency Maps &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1230,46 +1229,43 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="saliency-maps">
+  <div class="tex2jax_ignore mathjax_ignore section" id="saliency-maps">
 <h1>Saliency Maps<a class="headerlink" href="#saliency-maps" title="Permalink to this headline">#</a></h1>
-<section id="in-brief">
+<div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>Saliency maps are explanations used on image classification tasks. A <strong>saliency map</strong> is an image where each pixel’s color represents a value modeling the importance of that pixel in the original image (i.e., the one given in input to the explainer) for the prediction.</p>
-</section>
-<section id="more-in-detail">
+</div>
+<div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>The most used type of explanation for explaining AI systems working on images consists of <strong>saliency maps</strong>. A saliency map is an image where each pixel’s color represents a value modeling the importance of that pixel for the prediction, i.e., they show the positive (or negative) contribution of each pixel to the black box
 outcome. Saliency maps are a very typical example of <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local explanation methods</span></a> since they are tailored to the image that must be explained.</p>
-<p>In the literature, there exist different explanation methods locally explaining deep neural networks for image classification. The two most used model-specific techniques are <em>perturbation-based attribution methods</em> <span id="id1">[<a class="reference internal" href="#id66" title="Ruth C Fong and Andrea Vedaldi. Interpretable explanations of black boxes by meaningful perturbation. In Proceedings of the IEEE International Conference on Computer Vision, 3429–3437. 2017.">3</a>, <a class="reference internal" href="#id118" title="Matthew D Zeiler and Rob Fergus. Visualizing and understanding convolutional networks. In European conference on computer vision, 818–833. Springer, 2014.">4</a>]</span> and
-<em>gradient attribution methods</em> such as <span style="font-variant:small-caps;">sal</span> <span id="id2">[<a class="reference internal" href="#id109" title="Karen Simonyan, Andrea Vedaldi, and Andrew Zisserman. Deep inside convolutional networks: visualising image classification models and saliency maps. arXiv preprint arXiv:1312.6034, 2013.">5</a>]</span>, <span style="font-variant:small-caps;">elrp</span> <span id="id3">[<a class="reference internal" href="#id52" title="Sebastian Bach, Alexander Binder, Grégoire Montavon, Frederick Klauschen, Klaus-Robert Müller, and Wojciech Samek. On pixel-wise explanations for non-linear classifier decisions by layer-wise relevance propagation. PloS one, 10(7):e0130140, 2015.">6</a>]</span>, <span style="font-variant:small-caps;">grad</span> <span id="id4">[<a class="reference internal" href="#id108" title="Avanti Shrikumar, Peyton Greenside, Anna Shcherbina, and Anshul Kundaje. Not just a black box: learning important features through propagating activation differences. arXiv preprint arXiv:1605.01713, 2016.">7</a>]</span>, and <span style="font-variant:small-caps;">intg</span> <span id="id5">[<a class="reference internal" href="#id111" title="Mukund Sundararajan, Ankur Taly, and Qiqi Yan. Axiomatic attribution for deep networks. arXiv preprint arXiv:1703.01365, 2017.">8</a>]</span>.</p>
+<p>In the literature, there exist different explanation methods locally explaining deep neural networks for image classification. The two most used model-specific techniques are <em>perturbation-based attribution methods</em> <span id="id1">[<a class="reference internal" href="#id66">3</a>, <a class="reference internal" href="#id118">4</a>]</span> and
+<em>gradient attribution methods</em> such as <span style="font-variant:small-caps;">sal</span> <span id="id2">[<a class="reference internal" href="#id109">5</a>]</span>, <span style="font-variant:small-caps;">elrp</span> <span id="id3">[<a class="reference internal" href="#id52">6</a>]</span>, <span style="font-variant:small-caps;">grad</span> <span id="id4">[<a class="reference internal" href="#id108">7</a>]</span>, and <span style="font-variant:small-caps;">intg</span> <span id="id5">[<a class="reference internal" href="#id111">8</a>]</span>.</p>
 <p>Without entering into the details, these XAI approaches aim at attributing an importance score to each pixel in order to minimize the probability of the deep neural network (DNN) labeling the image with a different outcome when only the most important pixels are considered. Indeed, the areas retrieved by these methods are also called <em>attention areas</em>.</p>
 <p>The aforementioned XAI methods are specifically designed for specific DNN models, i.e., they are <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-specific</span></a>.</p>
-<p>However, relying on appropriate image transformations that take advantage of the concept of “superpixels” <span id="id6">[<a class="reference internal" href="#id38" title="M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In SIGKDD. 2016.">1</a>]</span>, i.e., the results of the segmentation of an image into regions by considering proximity or similarity measures, also <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agnostic explanation</span></a> methods (such as <span style="font-variant:small-caps;">lime</span> <span id="id7">[<a class="reference internal" href="#id38" title="M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In SIGKDD. 2016.">1</a>]</span>, <span style="font-variant:small-caps;">anchor</span> <span id="id8">[<a class="reference internal" href="#id101" title="Marco Tulio Ribeiro, Sameer Singh, and Carlos Guestrin. Anchors: high-precision model-agnostic explanations. In Thirty-Second AAAI Conference on Artificial Intelligence. 2018.">9</a>]</span>, and <span style="font-variant:small-caps;">lore</span> <span id="id9">[<a class="reference internal" href="#id119" title="Riccardo Guidotti, Anna Monreale, Salvatore Ruggieri, Dino Pedreschi, Franco Turini, and Fosca Giannotti. Local rule-based explanations of black box decision systems. 2018. https://arxiv.org/abs/1805.10820.">10</a>]</span>) can be employed to explain AI working on images for any kind of black box model.</p>
+<p>However, relying on appropriate image transformations that take advantage of the concept of “superpixels” <span id="id6">[<a class="reference internal" href="#id38">1</a>]</span>, i.e., the results of the segmentation of an image into regions by considering proximity or similarity measures, also <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agnostic explanation</span></a> methods (such as <span style="font-variant:small-caps;">lime</span> <span id="id7">[<a class="reference internal" href="#id38">1</a>]</span>, <span style="font-variant:small-caps;">anchor</span> <span id="id8">[<a class="reference internal" href="#id101">9</a>]</span>, and <span style="font-variant:small-caps;">lore</span> <span id="id9">[<a class="reference internal" href="#id119">10</a>]</span>) can be employed to explain AI working on images for any kind of black box model.</p>
 <p>The attention areas of explanations returned by these methods are strictly dependent on both:</p>
 <ul class="simple">
 <li><p>the technique used for segmenting the image to explain and</p></li>
 <li><p>to a neighborhood consisting of unrealistic synthetic images with “suppressed”
-superpixels <span id="id10">[<a class="reference internal" href="#id72" title="Riccardo Guidotti, Anna Monreale, and Leonardo Cariaggi. Investigating neighborhood generation methods for explanations of obscure image classifiers. In Pacific-Asia Conference on Knowledge Discovery and Data Mining, 55–68. Springer, 2019.">11</a>]</span>.</p></li>
+superpixels <span id="id10">[<a class="reference internal" href="#id72">11</a>]</span>.</p></li>
 </ul>
 <p>A different approach for generating neighborhoods is introduced by the <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local</span></a> <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agostic</span></a> explanation method
-<span style="font-variant:small-caps;">abele</span> <span id="id11">[<a class="reference internal" href="#id74" title="Riccardo Guidotti, Anna Monreale, Stan Matwin, and Dino Pedreschi. Black box explanation by learning image exemplars in the latent feature space. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases, 189–205. Springer, 2019.">12</a>]</span>. This method relies on a generative model, i.e., an adversarial autoencoder <span id="id12">[<a class="reference internal" href="#id89" title="Alireza Makhzani, Jonathon Shlens, Navdeep Jaitly, Ian Goodfellow, and Brendan Frey. Adversarial autoencoders. arXiv preprint arXiv:1511.05644, 2015.">13</a>]</span>, to produce a realistic synthetic neighborhood that allows retrieving more understandable saliency maps.
+<span style="font-variant:small-caps;">abele</span> <span id="id11">[<a class="reference internal" href="#id74">12</a>]</span>. This method relies on a generative model, i.e., an adversarial autoencoder <span id="id12">[<a class="reference internal" href="#id89">13</a>]</span>, to produce a realistic synthetic neighborhood that allows retrieving more understandable saliency maps.
 Indeed, saliency maps returned by <span style="font-variant:small-caps;">abele</span> highlight the contiguous attention
 areas that can be varied while maintaining the same classification from the black
 box used by the AI system.</p>
 <p>Fig. <a class="reference internal" href="#xai-saliency"><span class="std std-numref">5</span></a> reports a comparison of saliency maps for
 the classification of the handwritten digits “9” and “0” for the explanation methods
-<span style="font-variant:small-caps;">abele</span> <span id="id13">[<a class="reference internal" href="#id74" title="Riccardo Guidotti, Anna Monreale, Stan Matwin, and Dino Pedreschi. Black box explanation by learning image exemplars in the latent feature space. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases, 189–205. Springer, 2019.">12</a>, <a class="reference internal" href="#id73" title="Riccardo Guidotti, Anna Monreale, Fosca Giannotti, Dino Pedreschi, Salvatore Ruggieri, and Franco Turini. Factual and counterfactual explanations for black box decision making. IEEE Intelligent Systems, 34(6):14–23, 2019.">14</a>]</span>, <span style="font-variant:small-caps;">lime</span> <span id="id14">[<a class="reference internal" href="#id38" title="M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In SIGKDD. 2016.">1</a>]</span>, <span style="font-variant:small-caps;">sal</span> <span id="id15">[<a class="reference internal" href="#id109" title="Karen Simonyan, Andrea Vedaldi, and Andrew Zisserman. Deep inside convolutional networks: visualising image classification models and saliency maps. arXiv preprint arXiv:1312.6034, 2013.">5</a>]</span>, <span style="font-variant:small-caps;">elrp</span> <span id="id16">[<a class="reference internal" href="#id52" title="Sebastian Bach, Alexander Binder, Grégoire Montavon, Frederick Klauschen, Klaus-Robert Müller, and Wojciech Samek. On pixel-wise explanations for non-linear classifier decisions by layer-wise relevance propagation. PloS one, 10(7):e0130140, 2015.">6</a>]</span>, <span style="font-variant:small-caps;">grad</span> <span id="id17">[<a class="reference internal" href="#id108" title="Avanti Shrikumar, Peyton Greenside, Anna Shcherbina, and Anshul Kundaje. Not just a black box: learning important features through propagating activation differences. arXiv preprint arXiv:1605.01713, 2016.">7</a>]</span>, and <span style="font-variant:small-caps;">intg</span> <span id="id18">[<a class="reference internal" href="#id111" title="Mukund Sundararajan, Ankur Taly, and Qiqi Yan. Axiomatic attribution for deep networks. arXiv preprint arXiv:1703.01365, 2017.">8</a>]</span>.</p>
-<figure class="align-center" id="xai-saliency">
+<span style="font-variant:small-caps;">abele</span> <span id="id13">[<a class="reference internal" href="#id74">12</a>, <a class="reference internal" href="#id73">14</a>]</span>, <span style="font-variant:small-caps;">lime</span> <span id="id14">[<a class="reference internal" href="#id38">1</a>]</span>, <span style="font-variant:small-caps;">sal</span> <span id="id15">[<a class="reference internal" href="#id109">5</a>]</span>, <span style="font-variant:small-caps;">elrp</span> <span id="id16">[<a class="reference internal" href="#id52">6</a>]</span>, <span style="font-variant:small-caps;">grad</span> <span id="id17">[<a class="reference internal" href="#id108">7</a>]</span>, and <span style="font-variant:small-caps;">intg</span> <span id="id18">[<a class="reference internal" href="#id111">8</a>]</span>.</p>
+<div class="figure align-center" id="xai-saliency">
 <a class="reference internal image-reference" href="../_images/saliency.png"><img alt="../_images/saliency.png" src="../_images/saliency.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Example of saliency maps returned by different explanation methods. The first column contains the image analyzed and the label assigned by the black box model <em>b</em> of the AI system. <span id="id19">[<a class="reference internal" href="single_tree.html#id27" title="Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing, 2021.">1</a>]</span>.</span><a class="headerlink" href="#xai-saliency" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="bibliography">
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Example of saliency maps returned by different explanation methods. The first column contains the image analyzed and the label assigned by the black box model <em>b</em> of the AI system. <span id="id19">[<a class="reference internal" href="single_tree.html#id27">1</a>]</span>.</span><a class="headerlink" href="#xai-saliency" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id20">
-<dl class="citation">
+<p id="id20"><dl class="citation">
 <dt class="label" id="id38"><span class="brackets">1</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>,<a href="#id14">3</a>)</span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
 </dd>
@@ -1313,12 +1309,12 @@ the classification of the handwritten digits “9” and “0” for the explana
 <dd><p>Riccardo Guidotti, Anna Monreale, Fosca Giannotti, Dino Pedreschi, Salvatore Ruggieri, and Franco Turini. Factual and counterfactual explanations for black box decision making. <em>IEEE Intelligent Systems</em>, 34(6):14–23, 2019.</p>
 </dd>
 </dl>
-</div>
+</p>
 <blockquote>
 <div><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
 </div></blockquote>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

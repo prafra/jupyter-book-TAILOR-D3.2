@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Distributional shift &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1230,10 +1229,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="distributional-shift">
+  <div class="tex2jax_ignore mathjax_ignore section" id="distributional-shift">
 <h1>Distributional shift<a class="headerlink" href="#distributional-shift" title="Permalink to this headline">#</a></h1>
 <p><em>Synonyms</em>: Data shift.</p>
-<section id="in-brief">
+<div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>Once trained, most machine learning systems operate on static
 models of the world that have been built from historical data which have
@@ -1249,8 +1248,8 @@ cases, the system and the operators must remain vigilant to the
 potentially rapid concept drifts that may occur in the complex, dynamic,
 and evolving environments in which your AI project will intervene.
 Remaining aware of these transformations in the data is crucial for safe AI. <a class="footnote-reference brackets" href="#def" id="id1">1</a></p>
-</section>
-<section id="more-in-detail">
+</div>
+<div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>A common use case of machine learning in real world settings is to learn
 a model from historical data and then deploy the model on future unseen
@@ -1259,7 +1258,7 @@ from the historical data distribution (i.e., the joint distribution of
 inputs and outputs differs between training and test o deployment
 stages), machine learning techniques that depend precariously on the
 i.i.d. assumption tend to fail. This phenomena is call distributional
-shift and is a very common problem <span id="id2">[<a class="reference internal" href="#id2163" title="Joaquin Quiñonero-Candela, Masashi Sugiyama, Anton Schwaighofer, and Neil D Lawrence. Dataset shift in machine learning. Mit Press, 2008.">3</a>]</span>. Note that a
+shift and is a very common problem <span id="id2">[<a class="reference internal" href="#id2163">3</a>]</span>. Note that a
 particular case of distributional shift occurs when only the input
 distribution changes (covariate shift) or there is a shift in the target
 variable (prior probability shift).</p>
@@ -1270,24 +1269,24 @@ reasons ranging from the bias introduced by experimental design to the
 irreproducibility of the testing conditions at training time. An example
 is email spam filtering, which may fail to recognise spam that differs
 in form from the spam the automatic filter has been built on
-<span id="id3">[<a class="reference internal" href="#id2172" title="Shai Ben-David, John Blitzer, Koby Crammer, and Fernando Pereira. Analysis of representations for domain adaptation. Advances in neural information processing systems, 2006.">4</a>]</span>, yet often the model being highly confident in its
+<span id="id3">[<a class="reference internal" href="#id2172">4</a>]</span>, yet often the model being highly confident in its
 erroneous classifications. This issue is especially important in
 high-risk applications of machine learning, such as finance, medicine,
 and autonomous vehicles, where a mistake may incur financial or
 reputational loss, or possible loss of life. It is therefore important
 to assess both a model’s robustness to distribution shift and its
 estimates of predictive uncertainty, which enable it to detect
-distributional shifts <span id="id4">[<a class="reference internal" href="negative_side_effects.html#id174" title="Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete problems in AI safety. 2016.">1</a>, <a class="reference internal" href="#id2166" title="Yarin Gal and Zoubin Ghahramani. Dropout as a bayesian approximation: representing model uncertainty in deep learning. In international conference on machine learning, 1050–1059. PMLR, 2016.">5</a>]</span>.</p>
+distributional shifts <span id="id4">[<a class="reference internal" href="negative_side_effects.html#id174">1</a>, <a class="reference internal" href="#id2166">5</a>]</span>.</p>
 <p>In general, the greater the degree of shift, the poorer the model’s
 performance is. The performance of learned models tend to drop
 significantly even with a tiny amount of distribution shift between
-training and test <span id="id5">[<a class="reference internal" href="#id2164" title="Benjamin Recht, Rebecca Roelofs, Ludwig Schmidt, and Vaishaal Shankar. Do imagenet classifiers generalize to imagenet? In International Conference on Machine Learning, 5389–5400. PMLR, 2019.">6</a>, <a class="reference internal" href="#id2165" title="Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan, Ian Goodfellow, and Rob Fergus. Intriguing properties of neural networks. arxiv 2013. arXiv preprint arXiv:1312.6199, 2013.">7</a>]</span>, which
+training and test <span id="id5">[<a class="reference internal" href="#id2164">6</a>, <a class="reference internal" href="#id2165">7</a>]</span>, which
 makes it challenging to reliably deploy machine learning in real world
 applications. Although one can always increase training coverage by
-adding more sources of data <span id="id6">[<a class="reference internal" href="#id2070" title="Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805, 2018.">8</a>]</span>, data augmentation
-<span id="id7">[<a class="reference internal" href="#id2167" title="Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and Adrian Vladu. Towards deep learning models resistant to adversarial attacks. arXiv preprint arXiv:1706.06083, 2017.">9</a>, <a class="reference internal" href="#id2168" title="Connor Shorten and Taghi M Khoshgoftaar. A survey on image data augmentation for deep learning. Journal of big data, 6(1):1–48, 2019.">10</a>]</span>, or injecting structural bias
+adding more sources of data <span id="id6">[<a class="reference internal" href="#id2070">8</a>]</span>, data augmentation
+<span id="id7">[<a class="reference internal" href="#id2167">9</a>, <a class="reference internal" href="#id2168">10</a>]</span>, or injecting structural bias
 into models
-<span id="id8">[<a class="reference internal" href="#id2169" title="Kunihiko Fukushima and Sei Miyake. Neocognitron: a self-organizing neural network model for a mechanism of visual pattern recognition. In Competition and cooperation in neural nets, pages 267–285. Springer, 1982.">11</a>, <a class="reference internal" href="#id2170" title="Sepp Hochreiter and Jürgen Schmidhuber. Long short-term memory. Neural computation, 9(8):1735–1780, 1997.">12</a>, <a class="reference internal" href="#id2171" title="Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems, 2017.">13</a>]</span>
+<span id="id8">[<a class="reference internal" href="#id2169">11</a>, <a class="reference internal" href="#id2170">12</a>, <a class="reference internal" href="#id2171">13</a>]</span>
 for generalisation to any potential input for the learned model, it is
 unrealistic to expect a learned model to predict accurately under any
 form of distribution shift due to the combinatorial nature of real world
@@ -1301,7 +1300,7 @@ to guide future active data collection to covered shifted distributions.
 Therefore, in addition to improving the generalisation performance of
 models in general, methods that explicitly deal with the presence of
 distribution shift are also desirable for machine learning to be used in
-practice <span id="id9">[<a class="reference internal" href="#id2173" title="Yifan Wu. Learning to Predict and Make Decisions under Distribution Shift. PhD thesis, University of California, 2021.">14</a>]</span>.</p>
+practice <span id="id9">[<a class="reference internal" href="#id2173">14</a>]</span>.</p>
 <p>In terms of assessment, the robustness of learning models to
 distributional shift is typically assessed via metrics of predictive
 performance on a particular task: given two (or more) evaluation sets,
@@ -1320,27 +1319,26 @@ behaviour may be influenced by the strength of the economy, this being
 not explicitly specified in the data. In this case, the concept of
 interest (consumer behaviour) depends on some hidden context, not known
 a priori, and not given explicitly in the form of predictive features,
-making the learning task more complicated <span id="id10">[<a class="reference internal" href="#id2174" title="Alexey Tsymbal. The problem of concept drift: definitions and related work. Computer Science Department, Trinity College Dublin, 106(2):58, 2004.">15</a>]</span>.
+making the learning task more complicated <span id="id10">[<a class="reference internal" href="#id2174">15</a>]</span>.
 In this sense, concept shift can be categorised into 3 types:</p>
 <ol class="simple">
 <li><p><em>sudden, abrupt or instantaneous concept shift</em> (e.g., following the previous example, the COVID-19 lockdowns significantly changed customer behaviour);</p></li>
-<li><p><em>gradual concept shift</em> (e.g., customers are influenced by wider economic issues, unemployment rates or other trends) which can be divided further into moderate and slow drifts, depending on the rate of the changes <span id="id11">[<a class="reference internal" href="#id2176" title="Kenneth O Stanley. Learning concept drift with a committee of decision trees. Informe técnico: UT-AI-TR-03-302, Department of Computer Sciences, University of Texas at Austin, USA, 2003.">16</a>]</span>;</p></li>
-<li><p><em>cyclic concept drifts</em>, where hidden contexts may be expected to recur due to cyclic phenomena, such as seasons of the year or may be associated with irregular phenomena, such as inflation rates or market mood <span id="id12">[<a class="reference internal" href="#id2175" title="Michael Bonnell Harries, Claude Sammut, and Kim Horn. Extracting hidden context. Machine learning, 32(2):101–126, 1998.">17</a>]</span>.</p></li>
+<li><p><em>gradual concept shift</em> (e.g., customers are influenced by wider economic issues, unemployment rates or other trends) which can be divided further into moderate and slow drifts, depending on the rate of the changes <span id="id11">[<a class="reference internal" href="#id2176">16</a>]</span>;</p></li>
+<li><p><em>cyclic concept drifts</em>, where hidden contexts may be expected to recur due to cyclic phenomena, such as seasons of the year or may be associated with irregular phenomena, such as inflation rates or market mood <span id="id12">[<a class="reference internal" href="#id2175">17</a>]</span>.</p></li>
 </ol>
 <p>Concept drift may be present on supervised learning problems where
 predictions are made and data is collected over time. These are
 traditionally called online or incremental learning problems
-<span id="id13">[<a class="reference internal" href="#id2177" title="Gregory Ditzler and Robi Polikar. Incremental learning of concept drift from streaming imbalanced data. IEEE transactions on knowledge and data engineering, 25(10):2283–2301, 2012.">18</a>]</span>, given the change expected in the data over
+<span id="id13">[<a class="reference internal" href="#id2177">18</a>]</span>, given the change expected in the data over
 time. For its part, the common methods for detecting concept drift in
 machine learning generally include ongoing monitoring of the performance
 (e.g., accuracy) and confidence scores of a learning model. If average
 performance or confidence deteriorates over time, concept shift could be
 occurring</p>
-</section>
-<section id="bibliography">
+</div>
+<div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id14">
-<dl class="citation">
+<p id="id14"><dl class="citation">
 <dt class="label" id="id180"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
 <dd><p>Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete problems in AI safety. 2016.</p>
 </dd>
@@ -1396,18 +1394,18 @@ occurring</p>
 <dd><p>Gregory Ditzler and Robi Polikar. Incremental learning of concept drift from streaming imbalanced data. <em>IEEE transactions on knowledge and data engineering</em>, 25(10):2283–2301, 2012.</p>
 </dd>
 </dl>
-</div>
+</p>
 <blockquote>
 <div><p>This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.</p>
 </div></blockquote>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="def"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Definition taken from <span id="id2710">[<a class="reference internal" href="security.html#id118" title="Leslie David. Understanding artificial intelligence ethics and safety. The Alan Turing Institute, 2019. URL: https://doi.org/10.5281/zenodo.3240529.">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
+<dd><p>Definition taken from <span id="id2710">[<a class="reference internal" href="security.html#id118">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

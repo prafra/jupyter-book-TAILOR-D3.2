@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Model-Specific vs Model-Agnostic Explainers &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1230,36 +1229,33 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="model-specific-vs-model-agnostic-explainers">
+  <div class="tex2jax_ignore mathjax_ignore section" id="model-specific-vs-model-agnostic-explainers">
 <h1>Model-Specific vs Model-Agnostic Explainers<a class="headerlink" href="#model-specific-vs-model-agnostic-explainers" title="Permalink to this headline">#</a></h1>
 <p><em>Synonyms</em>: Not Generalizable vs Generalizable Explanations.</p>
-<section id="in-brief">
+<div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>We distinguish between <strong>model-specific</strong> or <strong>model-agnostic</strong> explanation methods depending on whether the technique adopted to retrieve the explanation acts on a particular model adopted by an AI system, or can be used on any type of AI.</p>
-</section>
-<section id="more-in-detail">
+</div>
+<div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>This is one of the first <a class="reference internal" href="XAI_dimensions.html"><span class="doc">Dimensions of Explanations</span></a> we should consider.</p>
-<p>The most used approach to explain AI black boxes is known as <em>reverse engineering</em>. The name comes from the fact that the explanation is retrieved by observing what happens to the output, i.e., the AI decision, when changing the input in a controlled way. An explanation method is model-specific, or not generalizable <span id="id1">[<a class="reference internal" href="#id6" title="David Martens, Bart Baesens, Tony Van Gestel, and Jan Vanthienen. Comprehensible credit scoring models using rule extraction from support vector machines. European journal of operational research, 183((3)):1466–-1476, 2007.">2</a>]</span>,
+<p>The most used approach to explain AI black boxes is known as <em>reverse engineering</em>. The name comes from the fact that the explanation is retrieved by observing what happens to the output, i.e., the AI decision, when changing the input in a controlled way. An explanation method is model-specific, or not generalizable <span id="id1">[<a class="reference internal" href="#id6">2</a>]</span>,
 whether it considers inputs or outputs as well as the inner-workings of a machine learning model.
-The drawback of this approach is that it can be used to interpret only particular types of black box models. For example, if an explanation approach is designed to interpret a Random Forest <span id="id2">[<a class="reference internal" href="single_tree.html#id14" title="Pang-Ning Tan, Michael Steinbach, and Vipin Kumar. Introduction to data mining. Pearson Addison-Wesley, 2006.">3</a>]</span> and internally uses a concept of distance between trees, then such an approach cannot be used to explain the predictions of a neural network.</p>
+The drawback of this approach is that it can be used to interpret only particular types of black box models. For example, if an explanation approach is designed to interpret a Random Forest <span id="id2">[<a class="reference internal" href="single_tree.html#id14">3</a>]</span> and internally uses a concept of distance between trees, then such an approach cannot be used to explain the predictions of a neural network.</p>
 <p>On the other hand, an explanation method is model-agnostic, or generalizable, when it can be used independently from the black box model being explained. In other words, the AI’s internal characteristics are not exploited to build the interpretable model approximating the black box behavior.</p>
 <p>In Fig. <a class="reference internal" href="#specific-agnostic"><span class="std std-numref">9</span></a>, there is a summarization of these two kinds of approaches.</p>
-<figure class="align-center" id="specific-agnostic">
+<div class="figure align-center" id="specific-agnostic">
 <a class="reference internal image-reference" href="../_images/TAILOR-modelspecific&amp;agnostic.png"><img alt="../_images/TAILOR-modelspecific&amp;agnostic.png" src="../_images/TAILOR-modelspecific&amp;agnostic.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">On the left, an explainer which exploites the internal structure and behaviour of the model. On the right, an explainer which uses the model as a black-box to understand its reasoning.</span><a class="headerlink" href="#specific-agnostic" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">On the left, an explainer which exploites the internal structure and behaviour of the model. On the right, an explainer which uses the model as a black-box to understand its reasoning.</span><a class="headerlink" href="#specific-agnostic" title="Permalink to this image">#</a></p>
+</div>
 <!--- @misc{explainer,
  author={Spinner, Thilo and Schlegel, Udo and Sch ̈afer, Hanna and El-Assady, Mennatallah},
 https://explainer.ai/
 -->
-</section>
-<section id="bibliography">
+</div>
+<div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id3">
-<dl class="citation">
+<p id="id3"><dl class="citation">
 <dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Pang-Ning Tan, Michael Steinbach, and Vipin Kumar. <em>Introduction to data mining</em>. Pearson Addison-Wesley, 2006.</p>
 </dd>
@@ -1267,12 +1263,12 @@ https://explainer.ai/
 <dd><p>David Martens, Bart Baesens, Tony Van Gestel, and Jan Vanthienen. Comprehensible credit scoring models using rule extraction from support vector machines. <em>European journal of operational research</em>, 183((3)):1466––1476, 2007.</p>
 </dd>
 </dl>
-</div>
+</p>
 <blockquote>
 <div><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
 </div></blockquote>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

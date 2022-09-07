@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Black Box Explanation vs Explanation by Design &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1230,32 +1229,29 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="black-box-explanation-vs-explanation-by-design">
+  <div class="tex2jax_ignore mathjax_ignore section" id="black-box-explanation-vs-explanation-by-design">
 <h1>Black Box Explanation vs Explanation by Design<a class="headerlink" href="#black-box-explanation-vs-explanation-by-design" title="Permalink to this headline">#</a></h1>
 <p><em>Synonyms</em>: Post-hoc vs Ante-hoc Explanations.</p>
-<section id="in-brief">
+<div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>The difference between <strong>Black Box Explanation</strong> (or <strong>Post-hoc Explanations</strong>) and <strong>Explanation by Design</strong> (or <strong>Ante-hoc Explanations</strong>) regards the ability to know and exploit the behaviour of the AI model. With a black box explanation, we pair the black box model with an interpretation the black box decisions or model, while in the second case, the strategy is to rely, by design, on a transparent model.</p>
-</section>
-<section id="more-in-detail">
+</div>
+<div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>When we talk about <strong>Black Box Explanation</strong>, the strategy is to couple an AI with a black box model with an explanation method able to interpret the black box decisions.
 In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency</strong>), the idea is to substitute the obscure model with a transparent model in which the decision process is accessible by design, i.e., explainability is inserted into a model from the very beginning.</p>
 <p>Figure <a class="reference internal" href="#post-hoc"><span class="std std-numref">8</span></a> depicts this distinction.</p>
-<figure class="align-center" id="post-hoc">
+<div class="figure align-center" id="post-hoc">
 <a class="reference internal image-reference" href="../_images/post.png"><img alt="../_images/post.png" src="../_images/post.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id27" title="Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing, 2021.">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id38" title="M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In SIGKDD. 2016.">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id53" title="M. Craven and J. W. Shavlik. Extracting tree-structured representations of trained networks. In Advances in neural information processing systems, volume 8, 24–30. 1996.">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id76" title="S. M. Lundberg and S.-I. Lee. A unified approach to interpreting model predictions. In Advances in neural information processing systems, 4765–4774. 2017.">3</a>]</span>.</p>
-<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[<a class="reference internal" href="#id91" title="C. Rudin. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nature Machine Intelligence, 1(5):206–215, 2019.">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id92" title="C. Rudin and J. Radin. Why are we using black box models in ai when we don’t need to? A lesson from an explainable AI competition. Harvard Data Science Review, 2019.">6</a>]</span>.
-In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id55" title="A. A. Freitas. Comprehensible classification models: a position paper. ACM SIGKDD explorations newsletter, 15(1):1–10, 2014.">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
-</section>
-<section id="bibliography">
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id27">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">#</a></p>
+</div>
+<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id38">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id53">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id76">3</a>]</span>.</p>
+<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[<a class="reference internal" href="#id91">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id92">6</a>]</span>.
+In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id7">[<a class="reference internal" href="#id55">7</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
+</div>
+<div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id8">
-<dl class="citation">
+<p id="id8"><dl class="citation">
 <dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>M.T. Ribeiro, S. Singh, and C. Guestrin. &quot;why should I trust you?&quot;: explaining the predictions of any classifier. In <em>SIGKDD</em>. 2016.</p>
 </dd>
@@ -1278,12 +1274,12 @@ In the literature, there are various models recognized to be interpretable. Exam
 <dd><p>A. A. Freitas. Comprehensible classification models: a position paper. <em>ACM SIGKDD explorations newsletter</em>, 15(1):1–10, 2014.</p>
 </dd>
 </dl>
-</div>
+</p>
 <blockquote>
 <div><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
 </div></blockquote>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

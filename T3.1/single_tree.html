@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Tree Approximation &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1230,35 +1229,33 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="single-tree-approximation">
+  <div class="tex2jax_ignore mathjax_ignore section" id="single-tree-approximation">
 <h1>Single Tree Approximation<a class="headerlink" href="#single-tree-approximation" title="Permalink to this headline">#</a></h1>
-<section id="in-brief">
+<div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>The <strong>single tree appoximation</strong> is an approach that aims at building a decision tree to approximate the behavior of a black box, typically a neural network.</p>
-</section>
-<section id="more-in-detail">
+</div>
+<div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>Decision trees are the simplest example of <a class="reference internal" href="blackbox_transparent.html"><span class="doc std std-doc">transparent techniques</span></a>. Moreover, they can be built to provide <a class="reference internal" href="blackbox_transparent.html"><span class="doc std std-doc">post-hoc explanations</span></a> of black-boxes.
-One of the first approaches introduced to explain neural networks is <span style="font-variant:small-caps;">trepan</span> <span id="id1">[<a class="reference internal" href="#id53" title="M. Craven and J. W. Shavlik. Extracting tree-structured representations of trained networks. In Advances in neural information processing systems, volume 8, 24–30. 1996.">2</a>]</span>.
+One of the first approaches introduced to explain neural networks is <span style="font-variant:small-caps;">trepan</span> <span id="id1">[<a class="reference internal" href="#id53">2</a>]</span>.
 <span style="font-variant:small-caps;">trepan</span> is a <a class="reference internal" href="global_local.html"><span class="doc std std-doc">global explanation method</span></a> that is able to model the whole logic of a
-neural network working on tabular data with a <strong>single decision tree</strong> <span id="id2">[<a class="reference internal" href="#id14" title="Pang-Ning Tan, Michael Steinbach, and Vipin Kumar. Introduction to data mining. Pearson Addison-Wesley, 2006.">3</a>]</span>. The decision tree
+neural network working on tabular data with a <strong>single decision tree</strong> <span id="id2">[<a class="reference internal" href="#id14">3</a>]</span>. The decision tree
 returned by <span style="font-variant:small-caps;">trepan</span> as an explanation is a <em>global transparent surrogate</em>. Indeed, every
 path from the root of the tree to a leaf explains the reasons for the final decision that is
 reported in the leaf itself. An example of a decision tree returned by <span style="font-variant:small-caps;">trepan</span> is illustrated
 in Fig. <a class="reference internal" href="#xai-tree"><span class="std std-numref">6</span></a>.</p>
-<figure class="align-center" id="xai-tree">
+<div class="figure align-center" id="xai-tree">
 <a class="reference internal image-reference" href="../_images/tree.png"><img alt="../_images/tree.png" src="../_images/tree.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Example of global tree-based explanation returned by <span style="font-variant:small-caps;">trepan</span> <span id="id3">[<a class="reference internal" href="#id27" title="Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing, 2021.">1</a>]</span>.</span><a class="headerlink" href="#xai-tree" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Example of global tree-based explanation returned by <span style="font-variant:small-caps;">trepan</span> <span id="id3">[<a class="reference internal" href="#id27">1</a>]</span>.</span><a class="headerlink" href="#xai-tree" title="Permalink to this image">#</a></p>
+</div>
 <p>This global explanation reveals that the black box first focuses on the
 value of the feature <em>rest ECG</em>; Depending on its degree (abnormal, normal,
 hypertrophy), tha black box takes different decisions depending on additional factors such as sex or
 cholesterol.
 In particular, <span style="font-variant:small-caps;">trepan</span> queries the neural network to induce the decision
-tree by maximizing the <em>gain ratio</em> <span id="id4">[<a class="reference internal" href="#id14" title="Pang-Ning Tan, Michael Steinbach, and Vipin Kumar. Introduction to data mining. Pearson Addison-Wesley, 2006.">3</a>]</span> on the data with respect to the neural network’s predictions.</p>
-<p>A weakness of common decision trees like ID3 or C4.5 <span id="id5">[<a class="reference internal" href="#id90" title="J Ross Quinlan. C4.5: Programs for Machine Learning. Elsevier, 1993.">4</a>]</span> is
+tree by maximizing the <em>gain ratio</em> <span id="id4">[<a class="reference internal" href="#id14">3</a>]</span> on the data with respect to the neural network’s predictions.</p>
+<p>A weakness of common decision trees like ID3 or C4.5 <span id="id5">[<a class="reference internal" href="#id90">4</a>]</span> is
 that the amount of data to find the splits near to the leaves is much lower than those
 used initially.
 Thus, in order to retrieve how a neural network works in detail,
@@ -1271,18 +1268,17 @@ the fidelity of the single tree explanation with respect to the black box decisi
 is <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agnostic</span></a> because it does not exploit any internal characteristic of neural
 networks to retrieve the explanation tree. Moreover, it does not place any requirements on either the architecture of the network or its training method. Thus, it can be theoretically employed to
 provide explanations to every kind of classifier.</p>
-<p>In <span id="id6">[<a class="reference internal" href="#id49" title="Olcay Boz. Extracting decision trees from trained neural networks. In Proceedings of the eighth ACM SIGKDD international conference on Knowledge discovery and data mining, 456–461. 2002.">5</a>]</span> is presented an extension of <span style="font-variant:small-caps;">trepan</span> that aims to keep the tree explanation
+<p>In <span id="id6">[<a class="reference internal" href="#id49">5</a>]</span> is presented an extension of <span style="font-variant:small-caps;">trepan</span> that aims to keep the tree explanation
 simple and compact by introducing four splitting approaches in order to find the
 most relevant features during the tree construction.
-In <span id="id7">[<a class="reference internal" href="#id68" title="Ulf Johansson and Lars Niklasson. Evolving decision trees using oracle guides. In 2009 IEEE Symposium on Computational Intelligence and Data Mining, 238–244. IEEE, 2009.">6</a>]</span>, genetic programming is used for building a single decision tree that approximates the behavior of a neural
+In <span id="id7">[<a class="reference internal" href="#id68">6</a>]</span>, genetic programming is used for building a single decision tree that approximates the behavior of a neural
 network ensemble by considering additional genetic features obtained as combinations of the original data and the novel data annotated by the black box models. Both
-methods described in <span id="id8">[<a class="reference internal" href="#id49" title="Olcay Boz. Extracting decision trees from trained neural networks. In Proceedings of the eighth ACM SIGKDD international conference on Knowledge discovery and data mining, 456–461. 2002.">5</a>]</span>, <span id="id9">[<a class="reference internal" href="#id68" title="Ulf Johansson and Lars Niklasson. Evolving decision trees using oracle guides. In 2009 IEEE Symposium on Computational Intelligence and Data Mining, 238–244. IEEE, 2009.">6</a>]</span>, like <span style="font-variant:small-caps;">trepan</span>, return explanations in the form of a global decision
+methods described in <span id="id8">[<a class="reference internal" href="#id49">5</a>]</span>, <span id="id9">[<a class="reference internal" href="#id68">6</a>]</span>, like <span style="font-variant:small-caps;">trepan</span>, return explanations in the form of a global decision
 tree.</p>
-</section>
-<section id="bibliography">
+</div>
+<div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id10">
-<dl class="citation">
+<p id="id10"><dl class="citation">
 <dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
 <dd><p>Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. <em>Principles of Explainable Artificial Intelligence</em>. Springer International Publishing, 2021.</p>
 </dd>
@@ -1302,12 +1298,12 @@ tree.</p>
 <dd><p>Ulf Johansson and Lars Niklasson. Evolving decision trees using oracle guides. In <em>2009 IEEE Symposium on Computational Intelligence and Data Mining</em>, 238–244. IEEE, 2009.</p>
 </dd>
 </dl>
-</div>
+</p>
 <blockquote>
 <div><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
 </div></blockquote>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
