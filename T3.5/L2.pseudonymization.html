@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Pseudonymization &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1243,13 +1244,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="pseudonymization">
+  <section class="tex2jax_ignore mathjax_ignore" id="pseudonymization">
 <h1>Pseudonymization<a class="headerlink" href="#pseudonymization" title="Permalink to this headline">#</a></h1>
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Pseudonymisation</strong> aims to substitute one or more identifiers that link(s) the identity of an individual to its data with a surrogate value, called <strong>pseudonym</strong> or <strong>token</strong>.</p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>To preserve a subject’s privacy, one of the most basic methodology is to
 de-couple the identity of said subject from its data. This is process is
@@ -1263,7 +1264,7 @@ identity. This association should be secured and inaccessible to anybody
 having access tho the pseudonymised data, so that protection is
 guaranteed.</p>
 <p>Following the description in the <a href="https://gdpr-info.eu/art-4-gdpr/" target=_blank>Article 4(5)</a> of the
-European General Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="T3.5.html#id15">1</a>]</span>:</p>
+European General Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="T3.5.html#id15" title="European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.">1</a>]</span>:</p>
 <!--````{panels}
 "the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person".
 ````-->
@@ -1277,7 +1278,7 @@ pseudonymisation techniques. Indeed, pseudonymization reduces the risk of publis
 <!--The goal of pseudonymization process is to reduce the risk of a direct
 re-identification of the data subjects based on the published data (See {ref}`L2.reidentification`).-->
 <p>The pseudonym must be distinguishable and irreversible in the absence of additional information. This means that it should not be possible to reconstruct the original value by just considering the pseudonym, i.e., there does not exist any function that computes the original value with the pseudonym as input. The correspondence between original value and pseudonym must be stored in a separate location and must be secured against data breaches. Surrogate values need also to be managed after the generation, either internally or externally. In the latter case, the institution who owns data outsources this service to a qualified (and trusted) third party.</p>
-<div class="section" id="pseudonymisation-techniques">
+<section id="pseudonymisation-techniques">
 <h3>Pseudonymisation techniques<a class="headerlink" href="#pseudonymisation-techniques" title="Permalink to this headline">#</a></h3>
 <p>There are several techniques that perform pseudonymisation. They can be
 generally summarized in three main categories:</p>
@@ -1294,15 +1295,15 @@ length returns a value of fixed size (e.g., size 256 bits, which correspond to
 function is usually a deterministic function and must be
 irreversible, i.e., for any input of the function it is infeasible
 to compute the inverse function from the output. Functions typically
-used for hashing are <em>SHA-2</em> <span id="id2">[<a class="reference internal" href="#id2693">2</a>]</span> and <em>SHA-3</em> <span id="id3">[<a class="reference internal" href="#id2694">3</a>]</span>, for example
+used for hashing are <em>SHA-2</em> <span id="id2">[<a class="reference internal" href="#id2693" title="Information Technology Laboratory, National Institute of Standards and Technology. Secure hash standard (SHS). URL: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf (visited on 2022-05-02).">2</a>]</span> and <em>SHA-3</em> <span id="id3">[<a class="reference internal" href="#id2694" title="Information Technology Laboratory, National Institute of Standards and Technology. SHA-3 standard: permutation-based hash and extendable-output functions. URL: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf (visited on 2022-05-02).">3</a>]</span>, for example
 the <em>SHA3-512</em> which has output values of length 512 bits.</p></li>
 <li><p><strong>Keyed-hash based</strong>: a combination of the previous techniques where
-the hash function requires a key, called <em>salt</em> <span id="id4">[<a class="reference internal" href="#id2695">4</a>]</span>, to compute
+the hash function requires a key, called <em>salt</em> <span id="id4">[<a class="reference internal" href="#id2695" title="Information Technology Laboratory, National Institute of Standards and Technology. The keyed-hash message authentication code (hmac). URL: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.198-1.pdf (visited on 2022-05-02).">4</a>]</span>, to compute
 its output. This is generally considered a more robust approach that
 simple hashing. Varying the key, the same data subject’s identifier
 can be translated in several different pseudonyms. In cryptography
 literature, these are referred to as <em>message authentication codes</em>
-<span id="id5">[<a class="reference internal" href="#id2696">5</a>]</span>. This family of techniques is more robust against some
+<span id="id5">[<a class="reference internal" href="#id2696" title="Alfred J. Menezes, Scott A. Vanstone, and Paul C. van Oorschot. Handbook of Applied Cryptography. CRC Press, 1996. URL: https://cacr.uwaterloo.ca/hac/ (visited on 2022-05-02).">5</a>]</span>. This family of techniques is more robust against some
 brute-force attacks, especially if the salt is changed sufficiently
 often.</p></li>
 <li><p><strong>Keyed-hash function with deletion</strong>: equal to the previous one,
@@ -1315,13 +1316,14 @@ methods. However, tokenization is a non-mathematical approach: data
 is replaced but the type or length is not altered. Typically
 knowledge of a token has no usefulness for a third party. Another
 difference is that tokenization is fast and can be done with few
-computational resources.<span id="id6">[<a class="reference internal" href="#id2697">6</a>]</span></p></li>
+computational resources.<span id="id6">[<a class="reference internal" href="#id2697" title="Data Protection Working Party. Opinion 05/2014 on Anonymisation Techniques. URL: https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216\_en.pdf (visited on 2022-05-02).">6</a>]</span></p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="bibliography">
+</section>
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id7"><dl class="citation">
+<div class="docutils container" id="id7">
+<dl class="citation">
 <dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
 </dd>
@@ -1341,12 +1343,12 @@ computational resources.<span id="id6">[<a class="reference internal" href="#id2
 <dd><p>Data Protection Working Party. Opinion 05/2014 on Anonymisation Techniques. URL: <a class="reference external" href="https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216\_en.pdf">https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216\_en.pdf</a> (visited on 2022-05-02).</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was readapted from <em>Comandé et al. Elgar Encyclopedia of Law and Data Science. Edward Elgar Publishing (2022) ISBN: 978 1 83910 458 9</em> by Francesca Pratesi, Roberto Pellungrini, and Anna Monreale.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

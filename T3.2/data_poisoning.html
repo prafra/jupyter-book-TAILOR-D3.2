@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Data Poisoning &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1229,9 +1230,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-poisoning">
+  <section class="tex2jax_ignore mathjax_ignore" id="data-poisoning">
 <h1>Data Poisoning<a class="headerlink" href="#data-poisoning" title="Permalink to this headline">#</a></h1>
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Data poisoning</strong> occurs when an adversary
 modifies or manipulates part of the dataset upon which a model will be
@@ -1250,13 +1251,13 @@ ill-intentioned attackers, who aim to manipulate training examples.
 Likewise, in third-party data curation processes (such as
 ‘crowdsourced’ labelling, annotation, and content identification),
 attackers may simply handcraft malicious inputs. <a class="footnote-reference brackets" href="#def3" id="id1">1</a></p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p><strong>Data poisoning</strong> is a security threat to AI
 systems in which an attacker controls the behaviour of a system by
 manipulating its training, validation or testing data
-<span id="id2">[<a class="reference internal" href="security.html#id2180">4</a>]</span>. While it usually refers to the training data
+<span id="id2">[<a class="reference internal" href="security.html#id2180" title="Avi Schwarzschild, Micah Goldblum, Arjun Gupta, John P Dickerson, and Tom Goldstein. Just how toxic is data poisoning? a unified benchmark for backdoor and data poisoning attacks. In International Conference on Machine Learning, 9389–9398. PMLR, 2021.">4</a>]</span>. While it usually refers to the training data
 for machine learning algorithms, it could also affect some other AI
 systems by corrupting the testing data. Note that when the deployment
 data is corrupted during operation, we are in the situation of an
@@ -1264,7 +1265,7 @@ data is corrupted during operation, we are in the situation of an
 contamination</em>, although contamination is
 usually more accidental than intentional. For instance, many language
 models
-<span id="id3">[<a class="reference internal" href="distributional_shift.html#id2070">8</a>, <a class="reference internal" href="#id2143">5</a>, <a class="reference internal" href="#id201">6</a>, <a class="reference internal" href="#id2366">7</a>, <a class="reference internal" href="#id202">8</a>, <a class="reference internal" href="#id2251">9</a>, <a class="reference internal" href="#id203">10</a>]</span>.
+<span id="id3">[<a class="reference internal" href="distributional_shift.html#id2070" title="Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805, 2018.">8</a>, <a class="reference internal" href="#id2143" title="Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, and others. Language models are few-shot learners. Advances in neural information processing systems, 33:1877–1901, 2020.">5</a>, <a class="reference internal" href="#id201" title="Jack W Rae, Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, Sarah Henderson, Roman Ring, Susannah Young, and others. Scaling language models: methods, analysis &amp; insights from training Gopher. arXiv preprint arXiv:2112.11446, 2021.">6</a>, <a class="reference internal" href="#id2366" title="Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and Jacob Steinhardt. Measuring massive multitask language understanding. arXiv preprint arXiv:2009.03300, 2020.">7</a>, <a class="reference internal" href="#id202" title="Dan Hendrycks, Steven Basart, Saurav Kadavath, Mantas Mazeika, Akul Arora, Ethan Guo, Collin Burns, Samir Puranik, Horace He, Dawn Song, and Jacob Steinhardt. Measuring coding challenge competence with APPS. 2021. arXiv:2105.09938.">8</a>, <a class="reference internal" href="#id2251" title="Rishi Bommasani and others. On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258, 2021.">9</a>, <a class="reference internal" href="#id203" title="Long Ouyang, Jeff Wu, Xu Jiang, Diogo Almeida, Carroll L Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, and others. Training language models to follow instructions with human feedback. arXiv preprint arXiv:2203.02155, 2022.">10</a>]</span>.
 are trained with data that is then used for test or validation, leading
 to an overoptimistic <a class="reference internal" href="evaluation.html"><span class="doc">Evaluation</span></a> of a system’s
 behaviour.</p>
@@ -1275,12 +1276,12 @@ conclusions. This type of threat is particularly relevant for deep
 learning systems because they require large amounts of data to train
 which is usually extracted from the web, and, at this scale, it is often
 infeasible to properly vet content. We find examples such as Imagenet
-<span id="id4">[<a class="reference internal" href="#id214">4</a>]</span> or the Open Images Dataset
-<span id="id5">[<a class="reference internal" href="#id2182">11</a>]</span> containing tens or hundreds of millions of images
+<span id="id4">[<a class="reference internal" href="#id214" title="Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, and others. Imagenet large scale visual recognition challenge. International journal of computer vision, 115(3):211–252, 2015.">4</a>]</span> or the Open Images Dataset
+<span id="id5">[<a class="reference internal" href="#id2182" title="Alina Kuznetsova, Hassan Rom, Neil Alldrin, Jasper Uijlings, Ivan Krasin, Jordi Pont-Tuset, Shahab Kamali, Stefan Popov, Matteo Malloci, Alexander Kolesnikov, and others. The open images dataset v4. International Journal of Computer Vision, 128(7):1956–1981, 2020.">11</a>]</span> containing tens or hundreds of millions of images
 from a wide range of potentially insecure and, in many cases, unknown
 sources. The current reliance of AI systems on such massive datasets
 that are not manually inspected has led to fears that corrupted training
-data can produce flawed models <span id="id6">[<a class="reference internal" href="#id2183">12</a>]</span>.</p>
+data can produce flawed models <span id="id6">[<a class="reference internal" href="#id2183" title="Lu Jiang, Zhengyuan Zhou, Thomas Leung, Li-Jia Li, and Li Fei-Fei. Mentornet: learning data-driven curriculum for very deep neural networks on corrupted labels. In International Conference on Machine Learning, 2304–2313. PMLR, 2018.">12</a>]</span>.</p>
 <p>According to the breadth of the attack, data poisoning attacks fall into
 two main categories: attacks targeting <em>availability</em> and attacks
 targeting <em>integrity</em>. Availability attacks are usually unsophisticated
@@ -1300,22 +1301,22 @@ classified into two broad categories: <em>backdoor</em> and <em>triggerless
 poisoning attack</em>. The former causes a model to misclassify samples at
 test time that contain a particular trigger (e.g., small patches in
 images or characters sequence in text)
-<span id="id7">[<a class="reference internal" href="#id2185">13</a>, <a class="reference internal" href="#id2186">14</a>, <a class="reference internal" href="#id2187">15</a>, <a class="reference internal" href="#id2188">16</a>]</span>.
+<span id="id7">[<a class="reference internal" href="#id2185" title="Xinyun Chen, Chang Liu, Bo Li, Kimberly Lu, and Dawn Song. Targeted backdoor attacks on deep learning systems using data poisoning. arXiv preprint arXiv:1712.05526, 2017.">13</a>, <a class="reference internal" href="#id2186" title="Jiazhu Dai, Chuanshuai Chen, and Yufeng Li. A backdoor attack against lstm-based text classification systems. IEEE Access, 7:138872–138878, 2019.">14</a>, <a class="reference internal" href="#id2187" title="Aniruddha Saha, Akshayvarun Subramanya, and Hamed Pirsiavash. Hidden trigger backdoor attacks. In Proceedings of the AAAI conference on artificial intelligence, volume 34, 11957–11965. 2020.">15</a>, <a class="reference internal" href="#id2188" title="Alexander Turner, Dimitris Tsipras, and Aleksander Madry. Clean-label backdoor attacks. 2018.">16</a>]</span>.
 For example, training images could be manipulated so that a vision
 system does not identify any person wearing a piece of clothing having
 the trigger symbol printed on it. In this case model, the attacker
 modifies both the training data (placing poisons) and test data
 (inserting the trigger)
-<span id="id8">[<a class="reference internal" href="#id2189">17</a>, <a class="reference internal" href="#id2190">18</a>, <a class="reference internal" href="#id2191">19</a>]</span>.
+<span id="id8">[<a class="reference internal" href="#id2189" title="Battista Biggio, Blaine Nelson, and Pavel Laskov. Poisoning attacks against support vector machines. arXiv preprint arXiv:1206.6389, 2012.">17</a>, <a class="reference internal" href="#id2190" title="W Ronny Huang, Jonas Geiping, Liam Fowl, Gavin Taylor, and Tom Goldstein. Metapoison: practical general-purpose clean-label data poisoning. Advances in Neural Information Processing Systems, 33:12080–12091, 2020.">18</a>, <a class="reference internal" href="#id2191" title="Chen Zhu, W Ronny Huang, Hengduo Li, Gavin Taylor, Christoph Studer, and Tom Goldstein. Transferable clean-label poisoning attacks on deep neural nets. In International Conference on Machine Learning, 7614–7623. PMLR, 2019.">19</a>]</span>.
 Backdoor attacks cause a victim to misclassify any image containing the
 trigger. On the other hand, triggerless poisoning attacks do not require
 modifications at the time of inference and cause a victim to misclassify
-an individual sample <span id="id9">[<a class="reference internal" href="#id2184">20</a>]</span>.</p>
+an individual sample <span id="id9">[<a class="reference internal" href="#id2184" title="Ali Shafahi, W Ronny Huang, Mahyar Najibi, Octavian Suciu, Christoph Studer, Tudor Dumitras, and Tom Goldstein. Poison frogs! targeted clean-label poisoning attacks on neural networks. Advances in neural information processing systems, 2018.">20</a>]</span>.</p>
 <p>Data poisoning attacks can cause considerable damage with minimal
 effort. Their effectiveness is almost directly proportional to the
 quality of the data. Poor quality data will produce subpar results, no
 matter how advanced the model is. For instance, the experiment ImageNet
-Roulette <span id="id10">[<a class="reference internal" href="#id2180">21</a>]</span> used user-uploaded and labelled
+Roulette <span id="id10">[<a class="reference internal" href="#id2180" title="Kate Crawford and Trevor Paglen. Excavating ai: the politics of images in machine learning training sets. AI and Society, 2019.">21</a>]</span> used user-uploaded and labelled
 images to learn how to classify new images. Before long, the system
 began using racial and gender slurs to label people. Seemingly small and
 easily overlooked considerations, such as people using harmful language
@@ -1346,10 +1347,11 @@ poisoning</strong> is a complex problem that is closely
 related to other major problems in AI safety, and will remain
 problematic with the current paradigm of learning from massive amounts
 of data.</p>
-</div>
-<div class="section" id="bibliography">
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id12"><dl class="citation">
+<div class="docutils container" id="id12">
+<dl class="citation">
 <dt class="label" id="id119"><span class="brackets"><a class="fn-backref" href="#id2708">1</a></span></dt>
 <dd><p>Leslie David. Understanding artificial intelligence ethics and safety. <em>The Alan Turing Institute</em>, 2019. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.3240529">https://doi.org/10.5281/zenodo.3240529</a>.</p>
 </dd>
@@ -1414,21 +1416,21 @@ of data.</p>
 <dd><p>Kate Crawford and Trevor Paglen. Excavating ai: the politics of images in machine learning training sets. <em>AI and Society</em>, 2019.</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.</p>
 </div></blockquote>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="def3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Definition taken from <span id="id2708">[<a class="reference internal" href="security.html#id118">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
+<dd><p>Definition taken from <span id="id2708">[<a class="reference internal" href="security.html#id118" title="Leslie David. Understanding artificial intelligence ethics and safety. The Alan Turing Institute, 2019. URL: https://doi.org/10.5281/zenodo.3240529.">1</a>]</span> under Creative Commons Attribution License 4.0.</p>
 </dd>
 <dt class="label" id="cmmc"><span class="brackets"><a class="fn-backref" href="#id11">2</a></span></dt>
 <dd><p><a class="reference external" href="https://cmmc-coe.org/test/">https://cmmc-coe.org/test/</a></p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

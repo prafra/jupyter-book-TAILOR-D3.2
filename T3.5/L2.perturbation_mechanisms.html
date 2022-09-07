@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Achieving Differential Privacy &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1245,14 +1246,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="achieving-differential-privacy">
+  <section class="tex2jax_ignore mathjax_ignore" id="achieving-differential-privacy">
 <h1>Achieving Differential Privacy<a class="headerlink" href="#achieving-differential-privacy" title="Permalink to this headline">#</a></h1>
 <!--# Perturbation Mechanisms-->
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>Differential privacy guarantees can be provided by perturbation mechanisms aim at randomizing the output distributions of functions in order to provide privacy guarantees.</p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>Perturbation mechanisms aim at randomizing the output distributions of
 functions in order to provide privacy guarantees. We focus on the
@@ -1274,7 +1275,7 @@ for perturbing elaborate functions. Finally, <span class="xref myst">Randomized 
 Mechanisms</span> input and output one single row
 at a time (represented as a vector of bits): they are local mechanisms
 and can be applied prior to the data collection.</p>
-<div class="section" id="history">
+<section id="history">
 <h3>History<a class="headerlink" href="#history" title="Permalink to this headline">#</a></h3>
 <p>The earliest known randomized response mechanism has been proposed in
 the 1960’s (decades before differential privacy) by Warner, a
@@ -1287,20 +1288,21 @@ from the industry.</p>
 <!-- (see, e.g.,
 https://www.chromium.org/developers/design-documents/rappor/)--> 
 <p>The Laplace mechanism (resp. the Gaussian mechanism) has been proposed jointly with the seminal <a class="reference internal" href="L3.epsilon_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy</span></a> model (resp. the <a class="reference internal" href="L3.epsilon_delta_DP.html"><span class="doc std std-doc"><span class="math notranslate nohighlight">\((\epsilon, \delta)\)</span>-differential privacy</span></a> model). Its generalization as the Exponential mechanism was proposed the following year.</p>
-</div>
-</div>
-<div class="section" id="bibliography">
+</section>
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p>The early randomized response mechanism was proposed in
-<span id="id1">[<a class="reference internal" href="#id2681">3</a>]</span>, the Laplace mechanism in
-<span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2673">2</a>]</span> and the Exponential mechanism in
-<span id="id3">[<a class="reference internal" href="#id2680">4</a>]</span>. The Gaussian mechanism was shown to
+<span id="id1">[<a class="reference internal" href="#id2681" title="Stanley L. Warner. Randomized response: a survey technique for eliminating evasive answer bias. Journal of the American Statistical Association, 60 309:63-6, 1965.">3</a>]</span>, the Laplace mechanism in
+<span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2673" title="Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In TCC. 2006.">2</a>]</span> and the Exponential mechanism in
+<span id="id3">[<a class="reference internal" href="#id2680" title="Frank McSherry and Kunal Talwar. Mechanism design via differential privacy. 48th Annual IEEE Symposium on Foundations of Computer Science (FOCS'07), pages 94-103, 2007.">4</a>]</span>. The Gaussian mechanism was shown to
 satisfy <span class="math notranslate nohighlight">\((\epsilon, \delta)\)</span>-differential privacy in
-<span id="id4">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2676">1</a>]</span>. Finally,
-<span id="id5">[<a class="reference internal" href="#id2682">5</a>]</span> provides an overview and an
+<span id="id4">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2676" title="Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In EUROCRYPT. 2006.">1</a>]</span>. Finally,
+<span id="id5">[<a class="reference internal" href="#id2682" title="Graham Cormode, Samuel Maddock, and Carsten Maple. Frequency estimation under local differential privacy. Proc. VLDB Endow., 14(11):2046–2058, 2021.">5</a>]</span> provides an overview and an
 evaluation of various randomized response mechanisms proposed before
 2021.</p>
-<p id="id6"><dl class="citation">
+<div class="docutils container" id="id6">
+<dl class="citation">
 <dt class="label" id="id2676"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In <em>TCC</em>. 2006.</p>
 </dd>
@@ -1317,12 +1319,12 @@ evaluation of various randomized response mechanisms proposed before
 <dd><p>Graham Cormode, Samuel Maddock, and Carsten Maple. Frequency estimation under local differential privacy. <em>Proc. VLDB Endow.</em>, 14(11):2046–2058, 2021.</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was written by Tristan Allard.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

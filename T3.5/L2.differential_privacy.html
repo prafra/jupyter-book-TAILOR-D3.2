@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Differential Privacy &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1265,15 +1266,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="differential-privacy">
+  <section class="tex2jax_ignore mathjax_ignore" id="differential-privacy">
 <h1>Differential Privacy<a class="headerlink" href="#differential-privacy" title="Permalink to this headline">#</a></h1>
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Differential privacy</strong> implies that adding or deleting a single record does not significantly affect the result of any analysis.</p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
-<div class="section" id="the-family-of-differential-privacy-models">
+<section id="the-family-of-differential-privacy-models">
 <h3>The Family of Differential Privacy Models<a class="headerlink" href="#the-family-of-differential-privacy-models" title="Permalink to this headline">#</a></h3>
 <p>Differential privacy is a prominent family of privacy-preserving data
 publishing models (see <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>). It comprehends
@@ -1289,8 +1290,8 @@ the way they formalize it - for example, on the quantification of the
 impact of an individual or on the tolerance to possible failures of
 the guarantees (though improbable). They usually exhibit properties
 that have been identified as key requirements to privacy models. &lt;!–(see <span class="xref std std-doc">./L2.privmod_properties</span> for details).</p>
-</div>
-<div class="section" id="achieving-differential-privacy">
+</section>
+<section id="achieving-differential-privacy">
 <h3>Achieving Differential Privacy<a class="headerlink" href="#achieving-differential-privacy" title="Permalink to this headline">#</a></h3>
 <p>Designing a function that satisfies differential privacy often boils
 down to carefully combining basic perturbation mechanisms (such as,
@@ -1301,8 +1302,8 @@ self-composability properties), or that the output distribution of the
 function complies with the targeted differential privacy model
 (through, e.g., randomness alignments). We refer the interested reader
 to <a class="reference internal" href="L2.perturbation_mechanisms.html"><span class="doc">Achieving Differential Privacy</span></a> for more information.</p>
-</div>
-<div class="section" id="an-expanding-universe">
+</section>
+<section id="an-expanding-universe">
 <h3>An expanding universe<a class="headerlink" href="#an-expanding-universe" title="Permalink to this headline">#</a></h3>
 <p>The seminal differential privacy models were proposed in the
 mid-2000’s and include <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy (see
@@ -1318,18 +1319,19 @@ earned the original authors the prestigious Gödel Prize
 in 2017. Famous organizations (e.g., the US Census Bureau) and
 companies (e.g., Google, Apple, LinkedIn, Microsoft) have launched
 ambitious real-life applications of differential privacy.</p>
-</div>
-</div>
-<div class="section" id="bibliography">
+</section>
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p>The seminal differential privacy models were introduced in
-<span id="id1">[<a class="reference internal" href="L3.epsilon_DP.html#id2674">1</a>]</span>, <span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2673">2</a>]</span>,
-and <span id="id3">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2676">1</a>]</span>. Differential privacy is thoroughly
-introduced in <span id="id4">[<a class="reference internal" href="#id2676">4</a>]</span> and numerous variants and
-extensions are surveyed in <span id="id5">[<a class="reference internal" href="#id2679">5</a>]</span>. The book
-<span id="id6">[<a class="reference internal" href="#id2674">6</a>]</span> surveys differential privacy
+<span id="id1">[<a class="reference internal" href="L3.epsilon_DP.html#id2674" title="Cynthia Dwork. Differential privacy. In ICALP. 2006.">1</a>]</span>, <span id="id2">[<a class="reference internal" href="L3.epsilon_DP.html#id2673" title="Cynthia Dwork, Frank McSherry, Kobbi Nissim, and Adam D. Smith. Calibrating noise to sensitivity in private data analysis. In TCC. 2006.">2</a>]</span>,
+and <span id="id3">[<a class="reference internal" href="L3.epsilon_delta_DP.html#id2676" title="Cynthia Dwork, Krishnaram Kenthapadi, Frank McSherry, Ilya Mironov, and Moni Naor. Our data, ourselves: privacy via distributed noise generation. In EUROCRYPT. 2006.">1</a>]</span>. Differential privacy is thoroughly
+introduced in <span id="id4">[<a class="reference internal" href="#id2676" title="Cynthia Dwork and Aaron Roth. The algorithmic foundations of differential privacy. Found. Trends Theor. Comput. Sci., 9:211-407, 2014.">4</a>]</span> and numerous variants and
+extensions are surveyed in <span id="id5">[<a class="reference internal" href="#id2679" title="Damien Desfontaines and Balázs Pejó. Sok: differential privacies. Proceedings on Privacy Enhancing Technologies, 2020:288 - 313, 2020.">5</a>]</span>. The book
+<span id="id6">[<a class="reference internal" href="#id2674" title="Joseph P. Near and Xi He. Differential privacy for databases. Foundations and Trends in Databases, 11:109-225, 2021.">6</a>]</span> surveys differential privacy
 techniques related to database queries.</p>
-<p id="id7"><dl class="citation">
+<div class="docutils container" id="id7">
+<dl class="citation">
 <dt class="label" id="id2678"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Cynthia Dwork. Differential privacy. In <em>ICALP</em>. 2006.</p>
 </dd>
@@ -1349,14 +1351,14 @@ techniques related to database queries.</p>
 <dd><p>Joseph P. Near and Xi He. Differential privacy for databases. <em>Foundations and Trends in Databases</em>, 11:109–225, 2021.</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was written by Tristan Allard.</p>
 </div></blockquote>
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

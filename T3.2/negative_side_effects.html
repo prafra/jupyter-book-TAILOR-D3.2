@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Negative side effects &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1229,9 +1230,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="negative-side-effects">
+  <section class="tex2jax_ignore mathjax_ignore" id="negative-side-effects">
 <h1>Negative side effects<a class="headerlink" href="#negative-side-effects" title="Permalink to this headline">#</a></h1>
-<div class="section" id="in-brief">
+<section id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Negative side effects</strong> are an important safety
 issue in AI system that considers all possible unintended harm that is
@@ -1244,31 +1245,31 @@ this is even more poignant as written specifications are usually
 replaced by an optimisation or loss function, in which it is even more
 difficult to express these things the system should not do, as they
 frequently rely on ‘common sense’.</p>
-</div>
-<div class="section" id="more-in-detail">
+</section>
+<section id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p><strong>Negative Side Effects</strong> are unanticipated or
 unintended effects caused by an AI system during operation. Negative
 side effects are a key issue within the AI safety literature
-<span id="id1">[<a class="reference internal" href="#id174">1</a>]</span> and typically stem from the difficulty of fully
+<span id="id1">[<a class="reference internal" href="#id174" title="Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete problems in AI safety. 2016.">1</a>]</span> and typically stem from the difficulty of fully
 articulating everything that we want the AI system <em>not</em> to do. Negative
 side effects can be of two kinds, related to some preservation of the
 environment or related to the use of resources. For instance, a clumsy
 incompetent agent may break everything around it
-<span id="id2">[<a class="reference internal" href="#id153">2</a>]</span>, not preserving things that should be
+<span id="id2">[<a class="reference internal" href="#id153" title="Sandhya Saisubramanian, Shlomo Zilberstein, and Ece Kamar. Avoiding negative side effects due to incomplete knowledge of ai systems. arXiv preprint arXiv:2008.12146, 2020.">2</a>]</span>, not preserving things that should be
 unrelated to the goal. On the other hand, a very proficient agent may
 exhaust all available resources and disrupt any other agent (machine or
-human) that interferes with its goals <span id="id3">[<a class="reference internal" href="#id150">3</a>]</span>.
+human) that interferes with its goals <span id="id3">[<a class="reference internal" href="#id150" title="Roman V Yampolskiy. Artificial intelligence safety and security. CRC Press, 2018.">3</a>]</span>.
 Recognising these two different causes for side effects is crucial for
 the design of safer AI systems.</p>
 <p>There are a number of proposed methods for measuring the negative side
-effects caused by a system <span id="id4">[<a class="reference internal" href="#id176">4</a>, <a class="reference internal" href="#id177">5</a>, <a class="reference internal" href="#id179">6</a>]</span>,
+effects caused by a system <span id="id4">[<a class="reference internal" href="#id176" title="Stuart Armstrong and Benjamin Levinstein. Low impact artificial intelligences. arXiv preprint arXiv:1705.10720, 2017.">4</a>, <a class="reference internal" href="#id177" title="Jan Leike, Miljan Martic, Victoria Krakovna, Pedro A. Ortega, Tom Everitt, Andrew Lefrancq, Laurent Orseau, and Shane Legg. Ai safety gridworlds. 2017. arXiv:1711.09883.">5</a>, <a class="reference internal" href="#id179" title="Alexander Matt Turner, Dylan Hadfield-Menell, and Prasad Tadepalli. Conservative agency via attainable utility preservation. Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, Feb 2020.">6</a>]</span>,
 but a recurring theme is based on estimating counterfactual scenarios in
 which the system was not present (or acted differently), and comparing
 the changes in the state of the world. Alternatively, in some approaches
 for mitigating side effects, these are set externally (marked safe
 areas) or incorporated as a “secondary objective”
-<span id="id5">[<a class="reference internal" href="#id151">7</a>]</span> for which trade-offs are found. But in these
+<span id="id5">[<a class="reference internal" href="#id151" title="Sandhya Saisubramanian, Ece Kamar, and Shlomo Zilberstein. A multi-objective approach to mitigate negative side effects. In Proceedings of the 29th International Joint Conference on Artificial Intelligence. 2020.">7</a>]</span> for which trade-offs are found. But in these
 approaches side effects just become part of the specification or the
 optimisation function, significantly deviating from the original
 definition of <em>side</em> effect.</p>
@@ -1279,20 +1280,22 @@ many cases, this information is not even available to the agent during
 operation, so we cannot modify the agent’s behaviour according to this
 information, such as marking some forbidden areas of operation.</p>
 <p>While some other safety issues in RL have received important attention
-<span id="id6">[<a class="reference internal" href="#id154">8</a>]</span>, dealing with side effects is still mostly
+<span id="id6">[<a class="reference internal" href="#id154" title="Javier Garcıa and Fernando Fernández. A comprehensive survey on safe reinforcement learning. Journal of Machine Learning Research, 16(1):1437–1480, 2015.">8</a>]</span>, dealing with side effects is still mostly
 unexplored, especially in realistic situations where the agent does not
 have any feedback about side effects during training or operation. Also,
 the analysis of AI safety in reinforcement learning has usually been
 conducted with toy scenarios, not having the complex interaction of the
-real world. SafeLife <span id="id7">[<a class="reference internal" href="#id127">9</a>]</span> is an exception in this landscape, as a
+real world. SafeLife <span id="id7">[<a class="reference internal" href="#id127" title="Carroll L. Wainwright and Peter Eckersley. Safelife 1.0: exploring side effects in complex environments. 2019. arXiv:1912.01217.">9</a>]</span> is an exception in this landscape, as a
 very rich and full <em>ecosystem</em> where many complex behaviours and effects
 can be analysed.</p>
-<div class="figure align-center" id="safelife">
+<figure class="align-center" id="safelife">
 <a class="reference internal image-reference" href="../_images/SafeLifelevel7.png"><img alt="../_images/SafeLifelevel7.png" src="../_images/SafeLifelevel7.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">An example task instance from SafeLife. The agent  <img alt="alt" src="../_images/agent.png" /> must create life
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">An example task instance from SafeLife. The agent  <img alt="alt" src="../_images/agent.png" /> must create life
 structures  <img alt="alt text" src="../_images/greylife.png" /> in the designated blue positions before moving to the goal  <img alt="" src="../_images/goal.png" />.
 Ideally the agent should not disturb the green life cells <img alt="" src="../_images/greenlife.png" />.</span><a class="headerlink" href="#safelife" title="Permalink to this image">#</a></p>
-</div>
+</figcaption>
+</figure>
 <p>Fig.  <a class="reference internal" href="#safelife"><span class="std std-numref">15</span></a> gives the visual representation of a state
 of a SafeLife instance. There we can see that achieving the goals can be
 done carefully so that the green life cells are not disturbed. The real
@@ -1301,10 +1304,11 @@ reward or a constraint) that the green life cells should not be
 disturbed. In this case, only agents that try to be minimise changes
 that are not necessary for the goals will be expected to have low side
 effects.</p>
-</div>
-<div class="section" id="bibliography">
+</section>
+<section id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id8"><dl class="citation">
+<div class="docutils container" id="id8">
+<dl class="citation">
 <dt class="label" id="id174"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete problems in AI safety. 2016.</p>
 </dd>
@@ -1333,12 +1337,12 @@ effects.</p>
 <dd><p>Carroll L. Wainwright and Peter Eckersley. Safelife 1.0: exploring side effects in complex environments. 2019. <a class="reference external" href="https://arxiv.org/abs/1912.01217">arXiv:1912.01217</a>.</p>
 </dd>
 </dl>
-</p>
+</div>
 <blockquote>
 <div><p>This entry was written by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
