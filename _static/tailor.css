@@ -16,9 +16,7 @@ main#main-content div.admonition table {
 }
 
 /*Hide navi buttons*/
-/* the following would be more correct (we could have some problem in future if we want to add another div with the same name, i.e., for similar buttons), but it didn't work because plain html (i.e., not pushed on gitpages) doesn't have "footer.footer-article":
-footer.footer-article div.prev-next-area { */
-div.prev-next-area {
+footer.footer-article div.prev-next-area {
   visibility: hidden;
 }
 

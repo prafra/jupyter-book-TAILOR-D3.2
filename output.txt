@@ -1,0 +1,63 @@
+T3.4/L2.Reproducibility.md:276: [redirected permanently] http://arxiv.org/abs/1803.09010 to https://arxiv.org/abs/1803.09010
+T3.3/fair_ML.md:109: [broken] http://fairlean.py: HTTPConnectionPool(host='fairlean.py', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb4b2b57250>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+T3.4/L2.Reproducibility.md:276: [redirected permanently] http://arxiv.org/abs/2003.12206 to https://arxiv.org/abs/2003.12206
+T3.4/L2.Reproducibility.md:276: [redirected permanently] http://arxiv.org/abs/1808.07261 to https://arxiv.org/abs/1808.07261
+T3.4/L3.Provenance_tracking.md:96: [broken] http://dblp.uni-trier.de/db/conf/IEEEscc/scc2010.html#LimLCF10: Anchor 'LimLCF10' not found
+T3.3/discrimination.md:184: [redirected with Found] http://ec.europa.eu/social/main.jsp?catId=738\&pubId=51 to https://ec.europa.eu/social/home.jsp?langId=en
+T3.2/evaluation.md:127: [redirected permanently] http://plato.stanford.edu/entries/turing-test/ to https://plato.stanford.edu/entries/turing-test/
+T3.2/evaluation.md:136: [redirected permanently] http://paperswithcode.com to https://paperswithcode.com/
+T3.4/L3.Provenance_tracking.md:96: [redirected with Found] http://oa.upm.es/19478/ to https://oa.upm.es/19478/
+T3.3/segregation.md:180: [redirected with Found] http://ssrn.com/abstract=2363701 to https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2363701
+T3.3/segregation.md:180: [redirected with Found] http://ssrn.com/abstract=2553436 to https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2553436
+T3.3/discrimination.md:184: [redirected permanently] http://www.apa.org/pi/lgbt/resources/guidelines.aspx to https://www.apa.org:443/pi/lgbt/resources/guidelines
+T3.4/L2.Reproducibility.md:276: [redirected permanently] http://journal.frontiersin.org/article/10.3389/fninf.2017.00076/full to https://www.frontiersin.org/articles/10.3389/fninf.2017.00076/full
+T3.3/segregation.md:180: [redirected permanently] http://www.flickr.com/photos/walkingsf/sets/72157624812674967/detail/ to https://www.flickr.com/photos/walkingsf/sets/72157624812674967/detail/
+T3.4/L3.Provenance_tracking.md:105: [redirected permanently] http://www.opmw.org/model/OPMW/ to https://www.opmw.org/model/OPMW/
+T3.4/L3.Provenance_tracking.md:96: [redirected permanently] http://www.w3.org/TR/2013/REC-prov-o-20130430/ to https://www.w3.org/TR/2013/REC-prov-o-20130430/
+T3.4/L2.Accountability.md:82: [redirected permanently] http://www.coe.int/en/web/internet-users-rights/guide to https://www.coe.int/en/web/freedom-expression/internet-users-rights
+T3.4/L2.Reproducibility.md:276: [broken] https://arxiv.org/abs/https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.2020.0210: 404 Client Error: NOT FOUND for url: https://arxiv.org/abs/https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.2020.0210
+T3.5/L2.reidentification.md:123: [broken] https://arxiv.org/abs/https://doi.org/10.1111/j.1748-720X.1997.tb01885.x: 404 Client Error: NOT FOUND for url: https://arxiv.org/abs/https://doi.org/10.1111/j.1748-720X.1997.tb01885.x
+T3.4/L2.Reproducibility.md:276: [broken] https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/scitranslmed.aaf5027: 404 Client Error: NOT FOUND for url: https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/scitranslmed.aaf5027
+T3.3/segregation.md:189: [redirected with See Other] https://cran.r-project.org/package=OasisR to https://cran.r-project.org/web/packages/OasisR/index.html
+T3.3/segregation.md:191: [redirected with See Other] https://cran.r-project.org/package=seg to https://cran.r-project.org/web/packages/seg/index.html
+TAILOR.md:55: [redirected with Found] https://doi.org/10.1007/978-1-4899-7687-1 to https://link.springer.com/referencework/10.1007/978-1-4899-7687-1
+TAILOR.md:55: [redirected with Found] https://doi.org/10.1007/978-3-319-98161-1 to https://link.springer.com/book/10.1007/978-3-319-98161-1
+T3.4/L3.Provenance_tracking.md:96: [redirected with Found] https://doi.org/10.1007/s00778-017-0486-1 to https://link.springer.com/article/10.1007/s00778-017-0486-1
+T3.2/evaluation.md:127: [redirected with Found] https://doi.org/10.1016/j.intell.2011.12.001 to https://linkinghub.elsevier.com/retrieve/pii/S0160289611001619
+T3.4/L3.Provenance_tracking.md:96: [redirected with Found] https://doi.org/10.1016/j.future.2017.01.008 to https://linkinghub.elsevier.com/retrieve/pii/S0167739X17300274
+T3.4/L2.Reproducibility.md:276: [redirected with Found] https://doi.org/10.1038/s41592-021-01256-7 to https://www.nature.com/articles/s41592-021-01256-7
+T3.4/L2.Reproducibility.md:276: [redirected with Found] https://doi.org/10.1098/rsta.2020.0210 to https://royalsocietypublishing.org/doi/10.1098/rsta.2020.0210
+T3.4/L2.Traceability.md:79: [redirected with Found] https://doi.org/10.1080/01605682.2021.1922098 to https://www.tandfonline.com/doi/full/10.1080/01605682.2021.1922098
+T3.4/L3.Provenance_tracking.md:96: [redirected with Found] https://doi.org/10.1109/TETC.2018.2865094 to https://ieeexplore.ieee.org/document/8437181/
+T3.2/evaluation.md:127: [redirected with Found] https://doi.org/10.1109/TG.2018.2883773 to https://ieeexplore.ieee.org/document/8550672/
+T3.4/L3.Provenance_tracking.md:96: [redirected permanently] https://doi.org/10.1109/MC.2007.421 to https://ieeexplore.ieee.org/document/4404805/
+T3.5/L2.k_anonymity.md:54: [redirected with Found] https://doi.org/10.1142/S0218488502001648 to https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
+T3.4/L2.Reproducibility.md:276: [redirected with Found] https://doi.org/10.1145/3287560.3287596 to https://dl.acm.org/doi/10.1145/3287560.3287596
+T3.4/L3.Continuous_performance_monitoring.md:87: [redirected with Found] https://doi.org/10.1145/3035918.3054782 to https://dl.acm.org/doi/10.1145/3035918.3054782
+T3.5/L2.reidentification.md:123: [redirected with Found] https://doi.org/10.1111/j.1748-720X.1997.tb01885.x to https://www.cambridge.org/core/journals/journal-of-law-medicine-and-ethics/article/abs/weaving-technology-and-policy-together-to-maintain-confidentiality/F1A6F8EB0A0CD590FFBDCAAB515E4A1F
+T3.4/L2.Reproducibility.md:276: [redirected permanently] https://doi.org/10.17226/25303 to https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science
+T3.4/L2.Reproducibility.md:276: [redirected with Found] https://doi.org/10.3390/app11198861 to https://www.mdpi.com/2076-3417/11/19/8861
+T3.4/L3.Provenance_tracking.md:96: [redirected with Found] https://doi.org/10.3390/bdcc5020020 to https://www.mdpi.com/2504-2289/5/2/20
+T3.4/L2.Reproducibility.md:276: [redirected permanently] https://doi.org/10.3389/fninf.2017.00076 to https://www.frontiersin.org/articles/10.3389/fninf.2017.00076/full
+T3.4/L2.Traceability.md:79: [redirected with Found] https://doi.org/10.2759/002360 to https://op.europa.eu/en/publication-detail/-/publication/73552fcd-f7c2-11ea-991b-01aa75ed71a1/language-en
+T3.4/L3.Continuous_performance_monitoring.md:87: [redirected with Found] https://doi.org/10.48550/ARXIV.1708.02363 to https://arxiv.org/abs/1708.02363
+T3.4/L2.Traceability.md:79: [redirected with Found] https://doi.org/10.48550/ARXIV.2109.09658 to https://arxiv.org/abs/2109.09658
+T3.1/T3.1.md:94: [redirected with Found] https://doi.org/10.6028/NIST.IR.8312 to https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8312.pdf
+T3.1/T3.1.md:105: [redirected with Found] https://doi.org/10.6028/NIST.IR.8312-draft to https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8312-draft.pdf
+T3.2/T3.2.md:151: [redirected with Found] https://doi.org/10.5281/zenodo.3240529 to https://zenodo.org/record/3240529
+TAILOR.md:55: [redirected with Found] https://doi.org/10.4018/978-1-59904-849-9 to https://www.igi-global.com/gateway/book/343
+T3.5/L2.reidentification.md:123: [redirected with Found] https://doi.org/http://dx.doi.org/10.2139/ssrn.2076397 to https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2076397
+T3.5/L2.pseudonymization.md:91: [redirected with Found] https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216\_en.pdf to https://ec.europa.eu/newsroom/article29/items
+T3.4/L2.Accountability.md:82: [redirected permanently] https://fra.europa.eu/en/opinion/2017/business-human-rights to https://fra.europa.eu/en/publication/2017/improving-access-remedy-area-business-and-human-rights-eu-level
+T3.2/T3.2.md:163: [redirected permanently] https://medium.com/@deepmindsafetyresearch/building-safe-artificial-intelligence-52f5f75058f1 to https://deepmindsafetyresearch.medium.com/building-safe-artificial-intelligence-52f5f75058f1
+T3.3/T3.3.md:127: [redirected with Found] https://standards.ieee.org/industry-connections/ecpais.html to https://standards.ieee.org/industry-connections/ecpais/
+T3.3/justice.md:174: [redirected with Found] https://ssrn.com/abstract=2245322 to https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2245322
+T3.3/justice.md:174: [redirected with Found] https://ssrn.com/abstract=3841534 to https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3841534
+T3.3/T3.3.md:127: [redirected permanently] https://standards.ieee.org/project/7003.html to https://standards.ieee.org/ieee/7003/6980/
+T3.2/T3.2.md:151: [redirected with Found] https://www.ai-safety.org/ to http://survey-smiles.com
+T3.4/L2.Reproducibility.md:276: [redirected permanently] https://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2012.pdf to https://www.bipm.org/documents/20126/2071204/JCGM_200_2012.pdf/f0e1ad45-d337-bbeb-53a6-15fe649d0ff1
+TAILOR.md:55: [redirected with Found] https://www.e-elgar.com/shop/gbp/elgar-encyclopedia-of-law-and-data-science-9781839104589.html to https://www.e-elgar.com/shop/usd/elgar-encyclopedia-of-law-and-data-science-9781839104589.html
+T3.2/evaluation.md:127: [broken] https://www.turing.ac.uk/research/research-projects/measurement-theory-data-science-and-ai: 403 Client Error: Forbidden for url: https://www.turing.ac.uk/research/research-projects/measurement-theory-data-science-and-ai
+T3.2/T3.2.md:163: [redirected permanently] https://www.york.ac.uk/assuring-autonomy/research/body-of-knowledge/ to https://www.york.ac.uk/assuring-autonomy/guidance/body-of-knowledge/
+T3.4/L2.Reproducibility.md:276: [redirected with Found] https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science to https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science
+T3.3/segregation.md:193: [broken] http://geoseganalyzer.ucs.inrs.ca: HTTPConnectionPool(host='geoseganalyzer.ucs.inrs.ca', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb4b0a9b710>: Failed to establish a new connection: [Errno 110] Connection timed out'))
