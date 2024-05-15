@@ -20,18 +20,18 @@ chapters:
     - file: T3.1/model_specific
     - file: T3.1/global_local
 #chapters:
-- file: T3.2/T3.2
-  title: Safety and Robustness
+- file: Technical Robustness and Safety/Technical Robustness and Safety
+  title: Technical Robustness and Safety
   sections:
-  - file: T3.2/alignment
-  - file: T3.2/robustness
-  - file: T3.2/reliability
-  - file: T3.2/evaluation
-  - file: T3.2/negative_side_effects
-  - file: T3.2/distributional_shift
-  - file: T3.2/security
-  - file: T3.2/adversarial_attack
-  - file: T3.2/data_poisoning
+  - file: Technical Robustness and Safety/alignment
+  - file: Technical Robustness and Safety/robustness
+  - file: Technical Robustness and Safety/reliability
+  - file: Technical Robustness and Safety/evaluation
+  - file: Technical Robustness and Safety/negative_side_effects
+  - file: Technical Robustness and Safety/distributional_shift
+  - file: Technical Robustness and Safety/security
+  - file: Technical Robustness and Safety/adversarial_attack
+  - file: Technical Robustness and Safety/data_poisoning
 - file: T3.3/T3.3
   title: Fairness, Equity, and Justice by Design
   sections:
