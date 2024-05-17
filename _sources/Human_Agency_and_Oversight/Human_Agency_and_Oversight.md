@@ -1,6 +1,6 @@
 # Human Agency and Oversight
 
-TODO PROVA PROVA PROVA
+TODO
 
 ## Main Keywords
 
