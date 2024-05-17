@@ -6,10 +6,10 @@ root: TAILOR
 chapters:
 - file: authors
 #chapters:
-- file: Human Agency and Oversight/Human Agency and Oversight
+- file: Human_Agency_and_Oversight/Human_Agency_and_Oversight
   title: Human Agency and Oversight
   sections:
-  - file: Human Agency and Oversight/Meaningful_human_control
+  - file: Human_Agency_and_Oversight/Meaningful_human_control
 - file: Transparency/Transparency
   title: Transparency
   sections:
@@ -23,29 +23,29 @@ chapters:
     - file: Transparency/blackbox_transparent
     - file: Transparency/model_specific
     - file: Transparency/global_local
-- file: Technical Robustness and Safety/Technical Robustness and Safety
+- file: Technical_Robustness_and_Safety/Technical_Robustness_and_Safety
   title: Technical Robustness and Safety
   sections:
-  - file: Technical Robustness and Safety/alignment
-  - file: Technical Robustness and Safety/robustness
-  - file: Technical Robustness and Safety/reliability
-  - file: Technical Robustness and Safety/evaluation
-  - file: Technical Robustness and Safety/negative_side_effects
-  - file: Technical Robustness and Safety/distributional_shift
-  - file: Technical Robustness and Safety/security
-  - file: Technical Robustness and Safety/adversarial_attack
-  - file: Technical Robustness and Safety/data_poisoning
+  - file: Technical_Robustness_and_Safety/alignment
+  - file: Technical_Robustness_and_Safety/robustness
+  - file: Technical_Robustness_and_Safety/reliability
+  - file: Technical_Robustness_and_Safety/evaluation
+  - file: Technical_Robustness_and_Safety/negative_side_effects
+  - file: Technical_Robustness_and_Safety/distributional_shift
+  - file: Technical_Robustness_and_Safety/security
+  - file: Technical_Robustness_and_Safety/adversarial_attack
+  - file: Technical_Robustness_and_Safety/data_poisoning
 - file: Diversity_Non-Discrimination_and_ Fairness/Diversity_Non-Discrimination_and_Fairness
   title: Diversity, Non-Discrimination, and Fairness
   sections:
-  - file: Diversity, Non-Discrimination, and Fairness/auditing
-  - file: Diversity, Non-Discrimination, and Fairness/bias
-  - file: Diversity, Non-Discrimination, and Fairness/equity
-  - file: Diversity, Non-Discrimination, and Fairness/fairness
-  - file: Diversity, Non-Discrimination, and Fairness/fair_ML
-  - file: Diversity, Non-Discrimination, and Fairness/discrimination
-  - file: Diversity, Non-Discrimination, and Fairness/justice
-  - file: Diversity, Non-Discrimination, and Fairness/segregation
+  - file: Diversity_Non-Discrimination_and_ Fairness/auditing
+  - file: Diversity_Non-Discrimination_and_ Fairness/bias
+  - file: Diversity_Non-Discrimination_and_ Fairness/equity
+  - file: Diversity_Non-Discrimination_and_ Fairness/fairness
+  - file: Diversity_Non-Discrimination_and_ Fairness/fair_ML
+  - file: Diversity_Non-Discrimination_and_ Fairness/discrimination
+  - file: Diversity_Non-Discrimination_and_ Fairness/justice
+  - file: Diversity_Non-Discrimination_and_ Fairness/segregation
 - file: Accountability/Accountability_and_Reproducibility
   title: Accountability
   sections:
@@ -58,33 +58,33 @@ chapters:
     sections:
     - file: Accountability/L3.Provenance_tracking
     - file: Accountability/L3.Continuous_performance_monitoring
-- file: Privacy and Data Governance/Privacy and Data Governance
+- file: Privacy_and_Data_Governance/Privacy_and_Data_Governance
   sections:
-  - file: Privacy and Data Governance/L1.anonymization
+  - file: Privacy_and_Data_Governance/L1.anonymization
     sections:
-    - file: Privacy and Data Governance/L2.pseudonymization
-  - file: Privacy and Data Governance/L1.privacy_model
+    - file: Privacy_and_Data_Governance/L2.pseudonymization
+  - file: Privacy_and_Data_Governance/L1.privacy_model
     sections:
-    - file: Privacy and Data Governance/L2.differential_privacy
+    - file: Privacy_and_Data_Governance/L2.differential_privacy
       sections:
-      - file: Privacy and Data Governance/L3.epsilon_DP
-      - file: Privacy and Data Governance/L3.epsilon_delta_DP
-      - file: Privacy and Data Governance/L2.perturbation_mechanisms
-    - file: Privacy and Data Governance/L2.k_anonymity
-  - file: Privacy and Data Governance/L1.attacks
+      - file: Privacy_and_Data_Governance/L3.epsilon_DP
+      - file: Privacy_and_Data_Governance/L3.epsilon_delta_DP
+      - file: Privacy_and_Data_Governance/L2.perturbation_mechanisms
+    - file: Privacy_and_Data_Governance/L2.k_anonymity
+  - file: Privacy_and_Data_Governance/L1.attacks
     sections:
-    - file: Privacy and Data Governance/L2.reidentification
-- file: Societal and Environmental Wellbeing/Societal and Environmental Wellbeing
+    - file: Privacy_and_Data_Governance/L2.reidentification
+- file: Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing
   sections:
-  - file: Societal and Environmental Wellbeing/greenAI
+  - file: Societal_and_Environmental_Wellbeing/greenAI
     sections:
-     - file: Societal and Environmental Wellbeing/power_aware
-  - file: Societal and Environmental Wellbeing/cloud_computing
-  - file: Societal and Environmental Wellbeing/edge_computing
-  - file: Societal and Environmental Wellbeing/data_centre
-  - file: Societal and Environmental Wellbeing/cradle_to_cradle
-  - file: Societal and Environmental Wellbeing/resource_prediction
-  - file: Societal and Environmental Wellbeing/resource_allocation
+     - file: Societal_and_Environmental_Wellbeing/power_aware
+  - file: Societal_and_Environmental_Wellbeing/cloud_computing
+  - file: Societal_and_Environmental_Wellbeing/edge_computing
+  - file: Societal_and_Environmental_Wellbeing/data_centre
+  - file: Societal_and_Environmental_Wellbeing/cradle_to_cradle
+  - file: Societal_and_Environmental_Wellbeing/resource_prediction
+  - file: Societal_and_Environmental_Wellbeing/resource_allocation
 - file: TAILOR_project
 - file: main/AnalyticalIndex 
   sections:
