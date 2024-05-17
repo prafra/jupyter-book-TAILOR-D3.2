@@ -6,6 +6,10 @@ root: TAILOR
 chapters:
 - file: authors
 #chapters:
+- file: Human Agency and Oversight/Human Agency and Oversight
+  title: Human Agency and Oversight
+  sections:
+  - file: Human Agency and Oversight/Meaningful_human_control
 - file: Transparency/Transparency
   title: Transparency
   sections:
@@ -19,7 +23,6 @@ chapters:
     - file: Transparency/blackbox_transparent
     - file: Transparency/model_specific
     - file: Transparency/global_local
-#chapters:
 - file: Technical Robustness and Safety/Technical Robustness and Safety
   title: Technical Robustness and Safety
   sections:
@@ -49,7 +52,6 @@ chapters:
   - file: Accountability/L2.Accountability
     sections:
     - file: Accountability/L3.Wicked_problems
-    - file: Accountability/L3.Meaningful_human_control
     - file: Accountability/L3.The_frame_problem
   - file: Accountability/L2.Reproducibility
   - file: Accountability/L2.Traceability
