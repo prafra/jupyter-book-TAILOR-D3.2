@@ -35,7 +35,7 @@ chapters:
   - file: Technical Robustness and Safety/security
   - file: Technical Robustness and Safety/adversarial_attack
   - file: Technical Robustness and Safety/data_poisoning
-- file: Diversity, Non-Discrimination, and Fairness/Diversity, Non-Discrimination, and Fairness
+- file: Diversity_Non-Discrimination_and_ Fairness/Diversity_Non-Discrimination_and_Fairness
   title: Diversity, Non-Discrimination, and Fairness
   sections:
   - file: Diversity, Non-Discrimination, and Fairness/auditing
