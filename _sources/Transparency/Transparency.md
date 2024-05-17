@@ -11,7 +11,7 @@ According to NIST report {cite}`nist`, an explanation is the evidence, support, 
 
 ## Abstract
 
-While other aspects of ethics and trustworthiness, such as {doc}`../Privacy and Data Governance/Privacy and Data Governance`, are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.
+While other aspects of ethics and trustworthiness, such as {doc}`../Privacy_and_Data_Governance/Privacy_and_Data_Governance`, are not novel concepts, and a lot of scientific literature has been explored on these topics, the study of explainability is a new challenge.
 In this part, we will cover the main elements that define the explanation of AI systems. First, we will try to survey briefly the main guidelines related to explainability.
 Then, we summarize a taxonomy that can be used to classify explanations. 
 We will define the possible  {doc}`./XAI_dimensions` (e.g., we can discriminate between {doc}`./model_specific`).
