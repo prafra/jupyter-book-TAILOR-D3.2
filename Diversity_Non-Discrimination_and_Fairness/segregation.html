@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meaningful human control &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    <title>Segregation &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,11 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Human Agency and Oversight/Meaningful_human_control.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/segregation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Explainable AI –&gt; Transparency" href="../Transparency/Transparency.html" />
-    <link rel="prev" title="Human Agency and Oversight" href="Human%20Agency%20and%20Oversight.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,24 +114,24 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="Human%20Agency%20and%20Oversight.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Human%20Agency%20and%20Oversight/Human%20Agency%20and%20Oversight.html">
    Human Agency and Oversight
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Human%20Agency%20and%20Oversight/Meaningful_human_control.html">
      Meaningful human control
     </a>
    </li>
@@ -572,7 +572,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FHuman Agency and Oversight/Meaningful_human_control.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/segregation.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -600,7 +600,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Human Agency and Oversight/Meaningful_human_control.md"
+        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/segregation.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -683,7 +683,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Meaningful human control</h1>
+                <h1>Segregation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -718,68 +718,256 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="meaningful-human-control">
-<h1>Meaningful human control<a class="headerlink" href="#meaningful-human-control" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="segregation">
+<h1>Segregation<a class="headerlink" href="#segregation" title="Permalink to this headline">#</a></h1>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
-<p><strong>Meaningful human control</strong> is the notion that aims to generalize the traditional concept of operational control over technological artifacts to artificial intelligent systems. It implies that artificial systems should not make morally consequential decisions on their own, without appropriate control from responsible humans.</p>
+<p><strong>Social segregation</strong> refers to the separation of groups on the grounds of personal or cultural traits. Separation can be physical (e.g., in schools or neighborhoods) or virtual (e.g., in social networks).</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
-<p>The notion of meaningful human control has its origins in the discussions on lethal autonomous weapon systems (LAWS), specifically in regards to life-or-death decisions that such systems could in principle make. Avoiding ethical issues related to autonomous decision making by artificial agents requires that humans, and only humans, have control of and are accountable for the use of lethal force <span id="id1">[<a class="reference internal" href="#id332">1</a>]</span>. The concrete implications of this requirement are still debated, with proposals range from calls for a full ban of LAWS  <span id="id2">[<a class="reference internal" href="#id333">2</a>]</span> to suggestions on governance, implementation, and use of such systems that can contribute to meaningful human control  (e.g.  <span id="id3">[<a class="reference internal" href="#id334">3</a>]</span>,  <span id="id4">[<a class="reference internal" href="#id335">4</a>]</span>).
-While ethical issues associated with the lack of human control are perhaps most apparent for autonomous weapon systems, they extend far beyond the military domain, to a wider class of human-AI systems that make decisions with moral implications. At the time of writing, researchers have approached meaningful human control in the contexts of automated driving systems  <span id="id5">[<a class="reference internal" href="#id336">5</a>]</span>  <span id="id6">[<a class="reference internal" href="#id337">6</a>]</span>, medical decision support systems <span id="id7">[<a class="reference internal" href="#id338">7</a>]</span>, unmanned aerial vehicles <span id="id8">[<a class="reference internal" href="#id339">8</a>]</span>, among other domains. Many of these domain-specific operationalizations rely on a philosophical account of meaningful human control proposed by <span id="id9">[<a class="reference internal" href="#id340">9</a>]</span>. This account builds on the concept of “guidance control” <span id="id10">[<a class="reference internal" href="#id341">10</a>]</span> and provides two necessary conditions for meaningful human control. The tracking condition requires that the decision-making system tracks and responds to all human reasons (i.e., values, norms, intentions) relevant in given circumstances. The tracing condition requires that any action/decision of the human-AI system should be traceable to at least one human within the system who has proper moral understanding of the situation and the effects of the system in that situation.</p>
-<p>Tracking and tracing, as well as several alternative domain-specific accounts, provide conceptual frameworks for meaningful human control. Making these concepts less vague and more relatable to design and engineering practice is however very challenging <span id="id11">[<a class="reference internal" href="#id342">11</a>]</span>. In <span id="id12">[<a class="reference internal" href="#id343">12</a>]</span> an attempt to close this gap between theory and practice is made by proposing four actionable properties that can be addressed throughout the system’s lifecycle:</p>
-<ul class="simple">
-<li><p>Property 1: A system in which humans and AI algorithms interact should have an explicitly defined domain of morally loaded situations within which the system ought to operate.</p></li>
-<li><p>Property 2: Humans and AI agents within the system should have appropriate and mutually compatible representations.</p></li>
-<li><p>Property 3: Responsibility attributed to a human should be commensurate with that human’s ability and authority to control the system.</p></li>
-<li><p>Property 4: There should be explicit links between the actions of the AI agents and actions of humans who are aware of their moral responsibility.</p></li>
-</ul>
+<p><em>Social segregation</em> refers to the “<em>separation of socially defined
+groups</em>” <span id="id1">[<a class="reference internal" href="#id307">1</a>]</span>. People are partitioned into two or
+more groups on the grounds of personal or cultural traits that can
+foster discrimination, such as gender, age, ethnicity, income, skin
+color, language, religion, political opinion, membership of a national
+minority, etc. (see entry on <a class="reference internal" href="discrimination.html"><span class="doc">Grounds of Discrimination</span></a>). Contact, communication, or interaction
+among groups are limited by their physical, working or socio-economic
+distance. Such a separation is observed when dissecting the society into
+organizational units (neighborhoods, schools, job types).</p>
+<div class="figure align-center" id="segregationmap">
+<a class="reference internal image-reference" href="../_images/segregationmap.png"><img alt="../_images/segregationmap.png" src="../_images/segregationmap.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">Racial spatial segregation in New York City, based on Census 2000 data
+<span id="id2">[<a class="reference internal" href="#id308">2</a>]</span>. One dot for each 500 residents. Red dots are Whites, blue
+dots are Blacks, green dots are Asian, orange dots are Hispanic, and
+yellow dots are other races.</span><a class="headerlink" href="#segregationmap" title="Permalink to this image">#</a></p>
+</div>
+<p>Early studies on residential segregation trace back to 1930’s
+<span id="id3">[<a class="reference internal" href="#id309">3</a>]</span>. In this context, social groups are set apart
+in neighborhoods where they live in, in schools they attend to, or in
+companies they work at. As sharply pointed out in
+Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>, racial segregation (a.k.a. residential
+segregation on the grounds of race) very often emerges in cities
+characterized by ethnic diversity. Schelling’s segregation model
+<span id="id4">[<a class="reference internal" href="#id310">4</a>, <a class="reference internal" href="#id311">5</a>]</span> shows that there is a natural tendency to
+spatial segregation, as a collective phenomenon, even if each individual
+is relatively tolerant – in his famous abstract simulation model, Nobel
+laureate Schelling assumed that a person changes residence only if less
+than 30% of the neighbors are of his/her own race.</p>
+<p><span id="id5">[<a class="reference internal" href="#id312">6</a>]</span> argued that segregation is shifting from ancient forms on
+the grounds of racial, ethnic and gender traits to modern socio-economic
+and cultural segregation on the basis of income, job position, and
+political-religious opinions. An earlier comparison of ideological
+segregation of the American electorate online and offline is offered in
+<span id="id6">[<a class="reference internal" href="#id313">7</a>]</span>. The paper found that segregation in news
+consumption is higher online than offline, but significantly lower than
+the segregation of face-to-face interactions with neighbors, co-workers,
+or family members. More recently, it has been warned that the filter
+bubble generated by personalization of online social networks may foster
+segregation <span id="id7">[<a class="reference internal" href="#id314">8</a>]</span>, opinion
+polarization <span id="id8">[<a class="reference internal" href="#id315">9</a>]</span>, and lack of consensus between different
+social groups. Segregation in social network has been investigated in
+<span id="id9">[<a class="reference internal" href="#id323">10</a>]</span>, with experiments on segregation on the
+grounds of sex and age for directors in the boards of the companies.
+Other works have focused on religious social networks
+<span id="id10">[<a class="reference internal" href="#id332">11</a>]</span>,</p>
+<p>A segregation index provides a quantitative measure of the degree of
+segregation of social groups (e.g., Blacks, Whites, Hispanics, etc.)
+distributed among units of social organization (e.g., schools,
+neighborhoods, jobs, etc.). Several indexes have been proposed in the
+literature. The surveys <span id="id11">[<a class="reference internal" href="#id320">12</a>, <a class="reference internal" href="#id321">13</a>]</span>
+represent the earliest attempts to categorize them. Afterward,
+<span id="id12">[<a class="reference internal" href="#id322">14</a>]</span> provided a shared classification with reference
+to five key dimensions: evenness, exposure, concentration,
+centralization, and clustering. Finally,
+<span id="id13">[<a class="reference internal" href="#id333">15</a>]</span> adapts segregation measure to
+graphs representing social networks. In this entry, we will consider
+basic evenness and exposure indexes. Other three classes of indexes are
+specifically concerned with spatial notions of segregation.
+Concentration indexes measure the relative amount of physical space
+occupied by social groups in an urban area. Centralization indexes
+measure the degree to which a group is spatially located near the center
+of an urban area. Clustering indexes measure the degree to which group
+members live disproportionately in contiguous areas.</p>
+<p>We restrict here to consider binary indexes, which assume a partitioning
+of the population into two groups, say majority and minority (but could
+be men/women, native/immigrant, White/NonWhite, etc.). Let <span class="math notranslate nohighlight">\(T\)</span> be size
+of the total population, <span class="math notranslate nohighlight">\(0 &lt; M &lt; T\)</span> be the size of the minority group,
+and <span class="math notranslate nohighlight">\(P = M/T\)</span> be the overall fraction of the minority group. Assume that
+there are <span class="math notranslate nohighlight">\(n\)</span> organizational units (or simply, units), and that for
+<span class="math notranslate nohighlight">\(i \in [1, n]\)</span>, <span class="math notranslate nohighlight">\(t_i\)</span> is the size of the population in unit <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(m_i\)</span>
+is the size of the minority group in unit <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(p_i = m_i/t_i\)</span> is
+the fraction of the minority population in unit <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<p><em>Evenness indexes.</em> Evenness indexes measure the difference in the
+distributions of social groups among organizational units. The
+<em>dissimilarity index</em> <span class="math notranslate nohighlight">\(D\)</span> is the weighted mean absolute deviation of
+every unit’s minority proportion from the global minority proportion: <br>
+<span class="math notranslate nohighlight">\(D = \frac{1}{2 \cdot P \cdot (1-P)} \sum_{i=1}^n \frac{t_i}{T}
+\cdot | p_i - P | \label{equ:dissimilarity}\)</span> <br>
+The normalization factor
+<span class="math notranslate nohighlight">\(2 \cdot P \cdot (1-P)\)</span> is to obtain an index in the range <span class="math notranslate nohighlight">\([0, 1]\)</span>.
+Since <span class="math notranslate nohighlight">\(D\)</span> measures dispersion of minorities over the units, higher
+values of the index mean higher segregation. Dissimilarity is minimum
+when for all <span class="math notranslate nohighlight">\(i \in [1, n]\)</span>, <span class="math notranslate nohighlight">\(p_i = P\)</span>, namely the distribution of the
+minority group is uniform over units. It is maximum when for all
+<span class="math notranslate nohighlight">\(i \in [1, n]\)</span>, either <span class="math notranslate nohighlight">\(p_i = 1\)</span> or <span class="math notranslate nohighlight">\(p_i = 0\)</span>, namely every unit
+includes members of only one group (complete segregation).</p>
+<p>The second widely adopted index is the <em>information index</em>, also known
+as the <em>Theil index</em> in social sciences <span id="id14">[<a class="reference internal" href="#id324">16</a>]</span> and normalized
+mutual information in machine learning <span id="id15">[<a class="reference internal" href="#id325">17</a>]</span>. Let the
+population entropy be <span class="math notranslate nohighlight">\(E = -
+P \cdot \log{P}-(1-P) \cdot \log{(1-P)}\)</span>, and the entropy of unit <span class="math notranslate nohighlight">\(i\)</span> be
+<span class="math notranslate nohighlight">\(E_i = - p_i \cdot \log{p_i}-(1-p_i) \cdot \log{(1-p_i)}\)</span>. The
+information index is the weighted mean fractional deviation of every
+unit’s entropy from the population entropy: <br>
+<span class="math notranslate nohighlight">\(H = \sum_{i=1}^n \frac{t_i}{T} \cdot \frac{(E-E_i)}{E}\)</span> <br	>
+Information index ranges in <span class="math notranslate nohighlight">\([0, 1]\)</span>. Since it denotes a relative reduction in
+uncertainty in the distribution of groups after considering units,
+higher values mean higher segregation of groups over the units.
+Information index reaches the minimum when all the units respect the
+global entropy (full integration), and the maximum when every unit
+contains only one group (complete segregation).</p>
+<p>The third evenness measure is the <em>Gini index</em>, defined as the mean
+absolute difference between minority proportions weighted across all
+pairs of units, and normalized to the maximum weighted mean difference.
+In formula: <br>
+<span class="math notranslate nohighlight">\(\label{eq:Gini}
+G = \frac{1}{2 \cdot T^2 \cdot P \cdot (1-P)} \cdot \sum_{i=1}^n
+\sum_{j=1}^n t_i \cdot t_j \cdot |p_i - p_j|\)</span> <br>
+Here
+<span class="math notranslate nohighlight">\(\sum_{i=1}^n \sum_{j=1}^n t_i \cdot t_j \cdot |p_i - p_j|\)</span> is the
+weighted mean absolute difference. The normalization factor is obtained
+by maximizing such a value. The definition of the Gini index stems from
+econometrics, where it is used as a measure of the inequality of income
+distribution <span id="id16">[<a class="reference internal" href="#id326">18</a>]</span>. The Gini index ranges in <span class="math notranslate nohighlight">\([0, 1]\)</span>
+with higher values denoting higher segregation. The maximum and minimum
+values are reached in the same cases of the dissimilarity index.</p>
+<p><em>Exposure indexes.</em> Exposure indexes measure the degree of potential
+contact, or possibility of interaction, between members of social
+groups. The most used measure of exposure is the <em>isolation index</em>
+<span id="id17">[<a class="reference internal" href="#id328">19</a>]</span>, defined as the likelihood that a member of the
+minority group is exposed to another member of the same group in a unit.
+For a unit <span class="math notranslate nohighlight">\(i\)</span>, this can be estimated as the product of the likelihood
+that a member of the minority group is in the unit (<span class="math notranslate nohighlight">\(m_i/M\)</span>) by the
+likelihood that she is exposed to another minority member in the unit
+(<span class="math notranslate nohighlight">\(m_i/t_i\)</span>, or <span class="math notranslate nohighlight">\(p_i\)</span>) – assuming that the two events are independent.
+In formula: <br>
+<span class="math notranslate nohighlight">\(I = \frac{1}{M} \cdot \sum_{i=1}^n m_i \cdot p_i\)</span></p>
+<p>The right hand-side formula can be read as the minority-weighted average
+of minority proportions in units. The isolation index ranges over
+<span class="math notranslate nohighlight">\([P, 1]\)</span>, with higher values denoting higher segregation. The minimum
+value is reached when for <span class="math notranslate nohighlight">\(i \in [1, n]\)</span>, <span class="math notranslate nohighlight">\(p_i = P\)</span>, namely the
+distribution of the minority group is uniform over the units. The
+maximum value is reached when there is only one <span class="math notranslate nohighlight">\(k \in [1, n]\)</span> such that
+<span class="math notranslate nohighlight">\(m_k = t_k = M\)</span>, namely there is a unit containing all minority members
+and no majority member.</p>
+<p>A dual measure is the <em>interaction index</em>, which is the likelihood that
+a member of the minority group is exposed to a member of the majority
+group in a unit. By reasoning as above, this leads to the formula: <br>
+<span class="math notranslate nohighlight">\(\mathit{Int} = \frac{1}{M} \cdot \sum_{i=1}^n m_i \cdot (1-p_i)\)</span> <br>
+It clearly holds that <span class="math notranslate nohighlight">\(I + \mathit{Int} = 1\)</span>. Hence, lower values denote
+higher segregation. A more general definition of interaction index
+occurs when more than two groups are considered in the analysis, so that
+the exposure of the minority group to one of the other groups is worth
+to be considered <span id="id18">[<a class="reference internal" href="#id322">14</a>]</span>.</p>
+<p>The key problem of assessing social segregation has been investigated by
+hypothesis testing, i.e., by formulating one or more possible contexts
+of segregation against a certain social group, and then in empirically
+testing such hypotheses. Such an approach is currently supported by
+statistical tools, such as the R packages <em>OasisR</em><a class="footnote-reference brackets" href="#oasis" id="id19">1</a> and <em>seg</em><a class="footnote-reference brackets" href="#seg" id="id20">2</a>
+<span id="id21">[<a class="reference internal" href="#id330">20</a>]</span>, or by GIS tools such as the <em>Geo-Segregation Analyzer</em><a class="footnote-reference brackets" href="#geo-seg" id="id22">3</a>
+<span id="id23">[<a class="reference internal" href="#id329">21</a>]</span>. A tool for multidimensional exploration of segregation
+index has been proposed<a class="footnote-reference brackets" href="#multi-seg" id="id24">4</a> in <span id="id25">[<a class="reference internal" href="#id331">22</a>]</span>.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id13"><dl class="citation">
-<dt class="label" id="id332"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Article 36. Key areas for debate on autonomous weapons systems: memorandum for delegates at the convention on certain conventional weapons (ccw) meeting of experts on lethal autonomous weapons systems. Technical Report, Article 36, 2014. URL: <a class="reference external" href="https://www.article36.org/wp-content/uploads/2014/05/A36-CCW-May-2014.pdf">https://www.article36.org/wp-content/uploads/2014/05/A36-CCW-May-2014.pdf</a>.</p>
+<p id="id26"><dl class="citation">
+<dt class="label" id="id307"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Douglas S Massey. Segregation and the perpetuation of disadvantage. In <em>The Oxford Handbook of the Social Science of Poverty</em>, pages 369–393. Oxford University Press, 2016.</p>
 </dd>
-<dt class="label" id="id333"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Article 36. Killing by machine: key issues for understanding meaningful human control. Technical Report, Article 36, 2015. URL: <a class="reference external" href="https://www.stopkillerrobots.org/wp-content/uploads/2021/09/KILLING_BY_MACHINE_6.4.15.pdf">https://www.stopkillerrobots.org/wp-content/uploads/2021/09/KILLING_BY_MACHINE_6.4.15.pdf</a>.</p>
+<dt class="label" id="id308"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Eric Fischer. Distribution of race and ethnicity in US major cities. 2011. under Creative Commons licence, CC BY-SA 2.0. URL: <a class="reference external" href="http://www.flickr.com/photos/walkingsf/sets/72157624812674967/detail/">http://www.flickr.com/photos/walkingsf/sets/72157624812674967/detail/</a>.</p>
 </dd>
-<dt class="label" id="id334"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Heather M Roff and Richard Moyes. Meaningful human control, artificial intelligence and autonomous weapons. In <em>Briefing Paper Prepared for the Informal Meeting of Experts on Lethal Au-Tonomous Weapons Systems, UN Convention on Certain Conventional Weapons</em>. 2016.</p>
+<dt class="label" id="id309"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Nancy A Denton and Douglas S Massey. Residential segregation of Blacks, Hispanics, and Asians by socioeconomic status and generation. <em>Social Science Quarterly</em>, 69(4):797–817, 1988.</p>
 </dd>
-<dt class="label" id="id335"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>M.C. Horowitz and P Scharre. Meaningful human control in weapon systems: a primer. Technical Report, Center for a New American Security, 2015.</p>
+<dt class="label" id="id310"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Thomas C Schelling. Dynamic models of segregation. <em>Journal of Mathematical Sociology</em>, 1(2):143–186, 1971.</p>
 </dd>
-<dt class="label" id="id336"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
-<dd><p>Daniël D Heikoop, Marjan Hagenzieker, Giulio Mecacci, Simeon Calvert, Filippo Santoni De Sio, and Bart van Arem. Human behaviour with automated driving systems: a quantitative framework for meaningful human control. <em>Theoretical issues in ergonomics science</em>, 20(6):711–730, 2019.</p>
+<dt class="label" id="id311"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
+<dd><p>W. A. V. Clark. Residential preferences and neighborhood racial segregation: a test of the Schelling segregation model. <em>Demography</em>, 28(1):1–19, 1991.</p>
 </dd>
-<dt class="label" id="id337"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
-<dd><p>Simeon C Calvert, Bart van Arem, Daniël D Heikoop, Marjan Hagenzieker, Giulio Mecacci, and Filippo Santoni de Sio. Gaps in the control of automated vehicles on roads. <em>IEEE intelligent transportation systems magazine</em>, 13(4):146–153, 2020.</p>
+<dt class="label" id="id312"><span class="brackets"><a class="fn-backref" href="#id5">6</a></span></dt>
+<dd><p>Douglas S. Massey, Jonathan Rothwell, and Thurston Domina. The changing bases of segregation in the United States. <em>Annals of the American Academy of Political and Social Science</em>, 626:74–90, 2009.</p>
 </dd>
-<dt class="label" id="id338"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
-<dd><p>Matthias Braun, Patrik Hummel, Susanne Beck, and Peter Dabrock. Primer on an ethics of ai-based decision support systems in the clinic. <em>Journal of medical ethics</em>, 47(12):e3–e3, 2021.</p>
+<dt class="label" id="id313"><span class="brackets"><a class="fn-backref" href="#id6">7</a></span></dt>
+<dd><p>Matthew Gentzkow and Jesse M Shapiro. Ideological segregation online and offline. <em>Quarterly Journal of Economics</em>, 126(4):1799–1839, 2011.</p>
 </dd>
-<dt class="label" id="id339"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
-<dd><p>Marc Steen, Jurriaan van Diggelen, Tjerk Timan, and Nanda van der Stap. Meaningful human control of drones: exploring human–machine teaming, informed by four different ethical perspectives. <em>AI and Ethics</em>, pages 1–13, 2022.</p>
+<dt class="label" id="id314"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
+<dd><p>Seth Flaxman, Sharad Goel, and Justin M Rao. Filter bubbles, echo chambers, and online news consumption. <em>Public Opinion Quarterly</em>, 80:298–320, 2016. URL: <a class="reference external" href="http://ssrn.com/abstract=2363701">http://ssrn.com/abstract=2363701</a>.</p>
 </dd>
-<dt class="label" id="id340"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
-<dd><p>Filippo Santoni de Sio and Jeroen Van den Hoven. Meaningful human control over autonomous systems: a philosophical account. <em>Frontiers in Robotics and AI</em>, pages 15, 2018.</p>
+<dt class="label" id="id315"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
+<dd><p>Michael Maes and Lukas Bischofberger. Will the personalization of online social networks foster opinion polarization? 2015. URL: <a class="reference external" href="http://ssrn.com/abstract=2553436">http://ssrn.com/abstract=2553436</a>.</p>
 </dd>
-<dt class="label" id="id341"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
-<dd><p>John Martin Fischer and Mark Ravizza. <em>Responsibility and control: A theory of moral responsibility</em>. Cambridge university press, 1998.</p>
+<dt class="label" id="id323"><span class="brackets"><a class="fn-backref" href="#id9">10</a></span></dt>
+<dd><p>Alessandro Baroni and Salvatore Ruggieri. Segregation discovery in a social network of companies. <em>J. Intell. Inf. Syst.</em>, 51(1):71–96, 2018.</p>
 </dd>
-<dt class="label" id="id342"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
-<dd><p>Rebecca Crootof. A meaningful floor for meaningful human control. <em>Temp. Int'l &amp; Comp. LJ</em>, 30:53, 2016.</p>
+<dt class="label" id="id332"><span class="brackets"><a class="fn-backref" href="#id10">11</a></span></dt>
+<dd><p>Jiantao Hu, Qian-Ming Zhang, and Tao Zhou. Segregation in religion networks. <em>EPJ Data Sci.</em>, 8(1):6:1–6:11, 2019.</p>
 </dd>
-<dt class="label" id="id343"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
-<dd><p>Luciano Cavalcante Siebert, Maria Luce Lupetti, Evgeni Aizenberg, Niek Beckers, Arkady Zgonnikov, Herman Veluwenkamp, David Abbink, Elisa Giaccardi, Geert-Jan Houben, Catholijn M Jonker, and others. Meaningful human control: actionable properties for ai system development. <em>AI and Ethics</em>, pages 1–15, 2022.</p>
+<dt class="label" id="id320"><span class="brackets"><a class="fn-backref" href="#id11">12</a></span></dt>
+<dd><p>Otis Dudley Duncan and Beverly Duncan. A methodological analysis of segregation indexes. <em>American Sociological Review</em>, 20(2):210–217, 1955.</p>
+</dd>
+<dt class="label" id="id321"><span class="brackets"><a class="fn-backref" href="#id11">13</a></span></dt>
+<dd><p>D. R. James and K. E. Tauber. Measures of segregation. <em>Sociological Methodology</em>, 13:1–32, 1985.</p>
+</dd>
+<dt class="label" id="id322"><span class="brackets">14</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id18">2</a>)</span></dt>
+<dd><p>Douglas S Massey and Nancy A Denton. The dimensions of residential segregation. <em>Social Forces</em>, 67(2):281–315, 1988.</p>
+</dd>
+<dt class="label" id="id333"><span class="brackets"><a class="fn-backref" href="#id13">15</a></span></dt>
+<dd><p>Michal Bojanowski and Rense Corten. Measuring segregation in social networks. <em>Soc. Networks</em>, 39:14–32, 2014.</p>
+</dd>
+<dt class="label" id="id324"><span class="brackets"><a class="fn-backref" href="#id14">16</a></span></dt>
+<dd><p>R. Mora and J. Ruiz-Castillo. Entropy-based segregation indices. <em>Sociological Methodology</em>, 41:159–194, 2011.</p>
+</dd>
+<dt class="label" id="id325"><span class="brackets"><a class="fn-backref" href="#id15">17</a></span></dt>
+<dd><p>T. Mitchell. <em>Machine Learning</em>. The Mc-Graw-Hill Companies, Inc., 1997.</p>
+</dd>
+<dt class="label" id="id326"><span class="brackets"><a class="fn-backref" href="#id16">18</a></span></dt>
+<dd><p>Joseph L Gastwirth. A general definition of the Lorenz curve. <em>Econometrica: Journal of the Econometric Society</em>, 39(6):1037–1039, 1971.</p>
+</dd>
+<dt class="label" id="id328"><span class="brackets"><a class="fn-backref" href="#id17">19</a></span></dt>
+<dd><p>Wendell Bell. A probability model for the measurement of ecological segregation. <em>Social Forces</em>, 32(4):357–364, 1954.</p>
+</dd>
+<dt class="label" id="id330"><span class="brackets"><a class="fn-backref" href="#id21">20</a></span></dt>
+<dd><p>Seong-Yun Hong, David O'Sullivan, and Yukio Sadahiro. Implementing spatial segregation measures in R. <em>PLoS ONE</em>, 9(11):e113767, 2014.</p>
+</dd>
+<dt class="label" id="id329"><span class="brackets"><a class="fn-backref" href="#id23">21</a></span></dt>
+<dd><p>Philippe Apparicio, Joan Carles Martori, Amber L. Pearson, Éric Fournier, and Denis Apparicio. An open-source software for calculating indices of urban residential segregation. <em>Social Science Computer Review</em>, 32(1):117–128, 2014.</p>
+</dd>
+<dt class="label" id="id331"><span class="brackets"><a class="fn-backref" href="#id25">22</a></span></dt>
+<dd><p>Alessandro Baroni and Salvatore Ruggieri. Scube: A tool for segregation discovery. In <em>EDBT</em>, 542–545. OpenProceedings.org, 2019.</p>
 </dd>
 </dl>
 </p>
 <blockquote>
-<div><p>This entry was written by Arkady Zgonnikov and Luciano C Siebert.</p>
+<div><p>This entry was readapted from <em>Alessandro Baroni and Salvatore Ruggieri. Segregation discovery in a social network of companies. J. Intell. Inf. Syst., 51(1):71–96, 2018</em> by Salvatore Ruggieri</p>
 </div></blockquote>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="oasis"><span class="brackets"><a class="fn-backref" href="#id19">1</a></span></dt>
+<dd><p><a class="reference external" href="https://cran.r-project.org/package=OasisR">cran.r-project.org/package=OasisR</a></p>
+</dd>
+<dt class="label" id="seg"><span class="brackets"><a class="fn-backref" href="#id20">2</a></span></dt>
+<dd><p><a class="reference external" href="https://cran.r-project.org/package=seg">cran.r-project.org/package=seg</a></p>
+</dd>
+<dt class="label" id="geo-seg"><span class="brackets"><a class="fn-backref" href="#id22">3</a></span></dt>
+<dd><p><a class="reference external" href="http://geoseganalyzer.ucs.inrs.ca">geoseganalyzer.ucs.inrs.ca</a></p>
+</dd>
+<dt class="label" id="multi-seg"><span class="brackets"><a class="fn-backref" href="#id24">4</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/ruggieris/SCube">github.com/ruggieris/SCube</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -796,7 +984,7 @@ While ethical issues associated with the lack of human control are perhaps most 
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Human Agency and Oversight"
+            path: "./Diversity_Non-Discrimination_and_Fairness"
         },
         predefinedOutput: true
     }
@@ -810,20 +998,6 @@ While ethical issues associated with the lack of human control are perhaps most 
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Human%20Agency%20and%20Oversight.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Human Agency and Oversight</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../Transparency/Transparency.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Explainable AI –&gt; Transparency</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
