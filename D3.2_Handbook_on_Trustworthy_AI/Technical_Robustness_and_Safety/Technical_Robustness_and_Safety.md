@@ -1,4 +1,4 @@
-# Technical Robustness and Safety
+# Technical Robustness and Safety 2
 
 ## In Brief
 
@@ -155,7 +155,7 @@ Some introductory sources for AI Safety and Robustnes are {cite}`amodei2016,espi
 :filter: docname in docnames
 ```
 
-> This entry was readapted from FRANCESCA *Huáscar Espinoza, Han Yu, Xiaowei Huang, Freddy Lecue, José Hernández-Orallo, Seán Ó hÉigeartaigh, and Richard Mallah. Towards an AI safety landscape: an overview. Artificial Intelligence Safety 2019, https://www.ai-safety.org/.* by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
+> This entry was readapted from FRANCESCA PRATESI *Huáscar Espinoza, Han Yu, Xiaowei Huang, Freddy Lecue, José Hernández-Orallo, Seán Ó hÉigeartaigh, and Richard Mallah. Towards an AI safety landscape: an overview. Artificial Intelligence Safety 2019, https://www.ai-safety.org/.* by Jose Hernandez-Orallo, Fernando Martinez-Plumed, Santiago Escobar, and Pablo A. M. Casares.
 
 <!-- http://ceur-ws.org/Vol-2419/ -->
 <!--[^1]: Most of this section is taken from {cite}`espinoza2019`.-->
