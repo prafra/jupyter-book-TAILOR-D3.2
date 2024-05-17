@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>k-anonymity &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Privacy and Data Governance/L2.k_anonymity.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Attacks on anonymization schemes" href="L1.attacks.html" />
+    <link rel="prev" title="Achieving Differential Privacy" href="L2.perturbation_mechanisms.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The TAILOR Handbook of Trustworthy AI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../authors.html">
+   Complete List of Contributors
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transparency/Transparency.html">
+   Transparency
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Transparency/XAI_kinds.html">
+     Kinds of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Transparency/feature_importance.html">
+       Feature Importance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Transparency/saliency_maps.html">
+       Saliency Maps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Transparency/single_tree.html">
+       Single Tree Approximation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Transparency/XAI_dimensions.html">
+     Dimensions of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Transparency/blackbox_transparent.html">
+       Black Box Explanation vs Explanation by Design
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Transparency/model_specific.html">
+       Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Transparency/global_local.html">
+       Global vs Local Explanations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/Technical%20Robustness%20and%20Safety.html">
+   Technical Robustness and Safety
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/robustness.html">
+     Robustness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/reliability.html">
+     Reliability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/evaluation.html">
+     Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/negative_side_effects.html">
+     Negative side effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/distributional_shift.html">
+     Distributional shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/security.html">
+     Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/adversarial_attack.html">
+     Adversarial Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Technical%20Robustness%20and%20Safety/data_poisoning.html">
+     Data Poisoning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/Diversity%2C%20Non-Discrimination%2C%20and%20Fairness.html">
+   Diversity, Non-Discrimination, and Fairness
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/auditing.html">
+     Auditing AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/equity.html">
+     Discrimination &amp; Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/fairness.html">
+     Fairness notions and metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/fair_ML.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Diversity%2C%20Non-Discrimination%2C%20and%20Fairness/segregation.html">
+     Segregation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Accountability/Accountability_and_Reproducibility.html">
+   Accountability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Accountability/L2.Accountability.html">
+     Accountability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L3.Wicked_problems.html">
+       Wicked problems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L3.Meaningful_human_control.html">
+       Meaningful human control
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L3.The_frame_problem.html">
+       The Frame Problem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Accountability/L2.Reproducibility.html">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Accountability/L2.Traceability.html">
+     Traceability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L3.Provenance_tracking.html">
+       Provenance Tracking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L3.Continuous_performance_monitoring.html">
+       Continuous Performance Monitoring
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Privacy%20and%20Data%20Governance.html">
+   Respect for Privacy
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="L1.anonymization.html">
+     Data Anonymization (and Pseudonymization)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L2.pseudonymization.html">
+       Pseudonymization
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="L1.privacy_model.html">
+     Privacy Models
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="L2.differential_privacy.html">
+       Differential Privacy
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.epsilon_DP.html">
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         -Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L3.epsilon_delta_DP.html">
+         (
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         ,
+         <span class="math notranslate nohighlight">
+          \(\delta\)
+         </span>
+         )-Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="L2.perturbation_mechanisms.html">
+         Achieving Differential Privacy
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       k-anonymity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="L1.attacks.html">
+     Attacks on anonymization schemes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L2.reidentification.html">
+       Re-identification Attack
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/Societal%20and%20Environmental%20Wellbeing.html">
+   Sustainability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/greenAI.html">
+     Green AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/power_aware.html">
+       Power-aware Computing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/cloud_computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/edge_computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/data_centre.html">
+     Data Centre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/cradle_to_cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/resource_prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Societal%20and%20Environmental%20Wellbeing/resource_allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR_project.html">
+   About TAILOR
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FPrivacy and Data Governance/L2.k_anonymity.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Privacy and Data Governance/L2.k_anonymity.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#weakness-of-k-anonymity-model">
+     Weakness of
+     <em>
+      k
+     </em>
+     -anonymity model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>k-anonymity</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#weakness-of-k-anonymity-model">
+     Weakness of
+     <em>
+      k
+     </em>
+     -anonymity model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="k-anonymity">
+<h1>k-anonymity<a class="headerlink" href="#k-anonymity" title="Permalink to this headline">#</a></h1>
+<!-- NOTE: Table 1 is hard written in caption of Table 2 -->
+<div class="section" id="in-brief">
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
+<!--Essentially, *k*-anonimity paradigm is based on comparison among individuals present in data, and it aims to make each individual so similar as to be indistinguishable from others.-->
+<p><strong>k-anonimity</strong> (and the whole family of <strong>anonymity by indistinguishability</strong> models) is based on comparison among individuals present in data, and it aims to make each individual so similar as to be indistinguishable from at least <em>k-1</em> others.</p>
+</div>
+<div class="section" id="more-in-detail">
+<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
+<p>One of the most common models for anonymization is <em>k</em>-anonymity, where a subject is considered anonymous if an adversary cannot achieve identification of her within a set of other <em>k-1</em> subjects. This set of <em>k</em> individuals is called the <em>anonymity set</em>. Identification, in this context, means the ability to distinguish the subject from other individuals with whom his/her data are grouped. This definition of anonymity is implicitly quantifiable as it depends from the size of the anonymity set. Clearly, a bigger anonymity set implies a better guarantee regarding indistinguishability. For example, the anonymity of a subject with an anonymity set of size 30 is better than the one that can be achieved with an anonymity set of size 5.</p>
+<p>The k-anonymity framework was originally applied on relational tables <span id="id1">[<a class="reference internal" href="#id434">1</a>]</span>. The basic assumption is that attributes are partitioned in <em>quasi-identifiers</em> and <em>sensitive attributes</em> <span id="id2">[<a class="reference internal" href="L2.reidentification.html#id430">2</a>]</span>. The quasi-identifiers are attributes that can be linked to external information to re-identify the individual to whom the information refers (so-called <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>). Usually, they are publicly known or easy to obtain with a superficial knowledge of the subject: for example, age, zip-code, and gender are classic quasi identifiers. The sensitive attributes, instead, represent the information to be protected. Indeed, a dataset satisfies the property of <em>k</em>-anonymity if each released record has at least <em>k−1</em> other records also visible in the release whose values are indistinct over the quasi-identifiers.</p>
+<p>In <em>k</em>-anonymity techniques, strategies such as <em>generalization</em> and <em>suppression</em> are usually applied to reduce the granularity of representation of quasi-identifiers. It is clear that these methods guarantee privacy but also reduce the accuracy of applications on the transformed data. Indeed, one of the main challenge of <em>k</em>-anonymity is to find the minimum level of changes (in terms of generalization or suppression) that allows us to guarantee high privacy and good data precision. In <a class="reference internal" href="#tab-k-anonymity-applied"><span class="std std-numref">Table 2</span></a>, one can find an example of a privacy mitigation through generalization that allows to reach <em>3</em>-anonymity, i.e., <em>k</em>-anonymity with <em>3</em> as the minimum size of each anonymity set, starting from the situation depicted in <a class="reference internal" href="#tab-k-anonymity-original"><span class="std std-numref">Table 1</span></a>.</p>
+<table class="colwidths-auto table" id="tab-k-anonymity-original">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">A potential extract from a medical dataset. Gender, date of birth, and ZIP code are the quasi-identifiers, while the Disease is the sensitive attribute. An adversary knowing that Alice was born in 1974 and lives in Boston, MA, who gains access to this dataset, will discover that Alice is the patient number 1000 and that she has Lyme Disease.</span><a class="headerlink" href="#tab-k-anonymity-original" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pseudo-id</p></th>
+<th class="head"><p>Gender</p></th>
+<th class="head"><p>Date of Birth</p></th>
+<th class="head"><p>ZIP code</p></th>
+<th class="head"><p>Disease</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>F</p></td>
+<td><p>5 June 1975</p></td>
+<td><p>02108</p></td>
+<td><p>Lyme Disease</p></td>
+</tr>
+<tr class="row-odd"><td><p>1001</p></td>
+<td><p>F</p></td>
+<td><p>15 May 1973</p></td>
+<td><p>01970</p></td>
+<td><p>Hypertension</p></td>
+</tr>
+<tr class="row-even"><td><p>1002</p></td>
+<td><p>F</p></td>
+<td><p>3 December 1977</p></td>
+<td><p>02657</p></td>
+<td><p>Vertigo</p></td>
+</tr>
+<tr class="row-odd"><td><p>1003</p></td>
+<td><p>M</p></td>
+<td><p>5 September 1941</p></td>
+<td><p>10238</p></td>
+<td><p>Stroke</p></td>
+</tr>
+<tr class="row-even"><td><p>1004</p></td>
+<td><p>M</p></td>
+<td><p>15 June 1947</p></td>
+<td><p>10042</p></td>
+<td><p>Stroke</p></td>
+</tr>
+<tr class="row-odd"><td><p>1005</p></td>
+<td><p>M</p></td>
+<td><p>25 April 1946</p></td>
+<td><p>10133</p></td>
+<td><p>Stroke</p></td>
+</tr>
+<tr class="row-even"><td><p>1006</p></td>
+<td><p>F</p></td>
+<td><p>25 December 1942</p></td>
+<td><p>10053</p></td>
+<td><p>Diabetes</p></td>
+</tr>
+<tr class="row-odd"><td><p>1007</p></td>
+<td><p>F</p></td>
+<td><p>5 October 1949</p></td>
+<td><p>10053</p></td>
+<td><p>Osteoporosis</p></td>
+</tr>
+<tr class="row-even"><td><p>1008</p></td>
+<td><p>F</p></td>
+<td><p>6 July 1946</p></td>
+<td><p>10053</p></td>
+<td><p>Arthritis</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table" id="tab-k-anonymity-applied">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">The <em>3</em>-anonymous version of the dataset shown in Table 1. The gender attribute is maintained as is, while the date of birth was replaced by an interval of years and the precision of the ZIP code was reduced. An adversary knowing the same information described in Table 1 cannot be sure if Alice is the patient number 1000, 1001 or 1002. Indeed, now each patient is included in an anonymity set of at least <em>3</em> individuals.</span><a class="headerlink" href="#tab-k-anonymity-applied" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pseudo-id</p></th>
+<th class="head"><p>Gender</p></th>
+<th class="head"><p>Date of Birth</p></th>
+<th class="head"><p>ZIP code</p></th>
+<th class="head"><p>Disease</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>F</p></td>
+<td><p>[1970-1979]</p></td>
+<td><p>0****</p></td>
+<td><p>Lyme Disease</p></td>
+</tr>
+<tr class="row-odd"><td><p>1001</p></td>
+<td><p>F</p></td>
+<td><p>[1970-1979]</p></td>
+<td><p>0****</p></td>
+<td><p>Hypertension</p></td>
+</tr>
+<tr class="row-even"><td><p>1002</p></td>
+<td><p>F</p></td>
+<td><p>[1970-1979]</p></td>
+<td><p>0****</p></td>
+<td><p>Vertigo</p></td>
+</tr>
+<tr class="row-odd"><td><p>1003</p></td>
+<td><p>M</p></td>
+<td><p>[1940-1949]</p></td>
+<td><p>10***</p></td>
+<td><p>Stroke</p></td>
+</tr>
+<tr class="row-even"><td><p>1004</p></td>
+<td><p>M</p></td>
+<td><p>[1940-1949]</p></td>
+<td><p>10***</p></td>
+<td><p>Stroke</p></td>
+</tr>
+<tr class="row-odd"><td><p>1005</p></td>
+<td><p>M</p></td>
+<td><p>[1940-1949]</p></td>
+<td><p>10***</p></td>
+<td><p>Stroke</p></td>
+</tr>
+<tr class="row-even"><td><p>1006</p></td>
+<td><p>F</p></td>
+<td><p>[1940-1949]</p></td>
+<td><p>10053</p></td>
+<td><p>Diabetes</p></td>
+</tr>
+<tr class="row-odd"><td><p>1007</p></td>
+<td><p>F</p></td>
+<td><p>[1940-1949]</p></td>
+<td><p>10053</p></td>
+<td><p>Osteoporosis</p></td>
+</tr>
+<tr class="row-even"><td><p>1008</p></td>
+<td><p>F</p></td>
+<td><p>[1940-1949]</p></td>
+<td><p>10053</p></td>
+<td><p>Arthritis</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="weakness-of-k-anonymity-model">
+<h3>Weakness of <em>k</em>-anonymity model<a class="headerlink" href="#weakness-of-k-anonymity-model" title="Permalink to this headline">#</a></h3>
+<p>Unfortunately, the <em>k</em>-anonymity framework can be vulnerable in some cases. In particular, it is not safe against <em>homogeneity attack</em> and <em>background knowledge attack</em>. The homogeneity attack exploits a possible lack of variety in the sensitive attributes. Indeed, an adversary can infer the value of the sensitive attributes when a <em>k</em>-anonymous dataset contains a group of <em>k</em> entries with the same value for the sensitive attributes. As an example, suppose that the attacker is searching for Bob in the dataset presented in <a class="reference internal" href="#tab-k-anonymity-applied"><span class="std std-numref">Table 2</span></a>: the adversary knows that Bob was born in July 1946. Even if the attacker is not able to discriminate Bob between patients 1003, 1004, and 1005, the disease associated with all these three patients is a stroke; thus, the adversary cannot re-identify Bob, but he/she can still infer that Bob suffers from heart disease.
+In a background knowledge attack, instead, an attacker knows information useful to associate some quasi-identifiers with some sensitive attributes: as an example, remaining in the medical domain, it is common knowledge that certain diseases are more frequent in a specific gender.</p>
+</div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id434"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Latanya Sweeney. Uniqueness of simple demographics in the U.S. population. 2000. LIDAP-WP4.</p>
+</dd>
+<dt class="label" id="id428"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Latanya Sweeney. K-anonymity: a model for protecting privacy. <em>Int. J. Uncertain. Fuzziness Knowl.-Based Syst.</em>, 10(5):557–570, oct 2002. URL: <a class="reference external" href="https://doi.org/10.1142/S0218488502001648">https://doi.org/10.1142/S0218488502001648</a>, <a class="reference external" href="https://doi.org/10.1142/S0218488502001648">doi:10.1142/S0218488502001648</a>.</p>
+</dd>
+</dl>
+</p>
+<blockquote>
+<div><p>This entry was readapted from <em>Comandé et al. Elgar Encyclopedia of Law and Data Science. Edward Elgar Publishing (2022) ISBN: 978 1 83910 458 9</em> by Francesca Pratesi, Roberto Pellungrini, and Anna Monreale.</p>
+</div></blockquote>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Privacy and Data Governance"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="L2.perturbation_mechanisms.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Achieving Differential Privacy</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="L1.attacks.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Attacks on anonymization schemes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

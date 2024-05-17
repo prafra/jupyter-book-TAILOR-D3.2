@@ -25,7 +25,7 @@ are covered by the related term of
 related to {doc}`security`, as in both cases the
 system must withstand (adversarial) attacks. However, robustness does
 not usually cover elements such as unauthorised access that compromises
-[privacy](../T3.5/T3.5.md), but only those that can lead to
+[privacy](../Privacy and Data Governance/Privacy and Data Governance.md), but only those that can lead to
 operational failure or damage.
 
 **Robustness** can be ensured by *prevention* or

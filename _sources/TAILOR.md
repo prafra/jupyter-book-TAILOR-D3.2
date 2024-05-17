@@ -28,7 +28,7 @@ In particolar, in this Encyclopedia you can find definition related to:
 - {doc}`../T3.5/T3.5`. This section will provide an overview of the main attack that can put at risk individual privacy, we will explain the difference between pseudonymization and actual anonymization, and we will describe the main family of privacy models.
 - {doc}`../T3.6/T3.6`. The last chapter of the Handbook is focus of one of the newest challenge that our society is facing, in particular, our focus is to provide solutions for optimizing both the resources used in AI systems and the computation itself.
 
-Finally, we report a final chapter, where you can find an {doc}`main/AnalyticaIndex`, which lists all entries in alphabetical order; in each term you can find a reference to a short definition of the entry and where it is used within the Handbook, with the link to go more in dept with the definition. Potential synonyms have their own entries in this index.
+Finally, we report a final chapter, where you can find an {doc}`main/AnalyticalIndex`, which lists all entries in alphabetical order; in each term you can find a reference to a short definition of the entry and where it is used within the Handbook, with the link to go more in dept with the definition. Potential synonyms have their own entries in this index.
 
 ### Related work
 
