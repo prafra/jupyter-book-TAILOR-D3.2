@@ -44,7 +44,7 @@ Actions to ensure safety and robustness of AI systems need to take a
 holistic perspective, encompassing all the elements and stages
 associated with the conception, design, implementation and maintenance
 of these systems. We organise<!--[^1]--> the field of AI safety and robustness
-into seven groups, following similar categorisations[^landscape]:
+into seven groups, following similar categorisations<!--[^landscape]-->:
 
 -   **AI Safety Foundations**: This category covers a number of foundational
     concepts, characteristics and problems related to AI safety that
@@ -160,6 +160,7 @@ Some introductory sources for AI Safety and Robustnes are {cite}`amodei2016,espi
 <!-- http://ceur-ws.org/Vol-2419/ -->
 <!--[^1]: Most of this section is taken from {cite}`espinoza2019`.-->
 
+<!--
 [^landscape]: FLI's Landscape of AI Safety and Beneficence Research for research
     contextualization and in preparation for brainstorming at the
     Beneficial AI 2017 conference
@@ -172,3 +173,4 @@ Some introductory sources for AI Safety and Robustnes are {cite}`amodei2016,espi
     and Ortega et al (DeepMind) structure of the technical AI safety
     field
     (<https://medium.com/@deepmindsafetyresearch/building-safe-artificial-intelligence-52f5f75058f1>).
+-->
