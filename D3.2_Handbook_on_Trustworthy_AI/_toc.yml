@@ -6,19 +6,19 @@ root: TAILOR
 chapters:
 - file: authors
 #chapters:
-- file: T3.1/T3.1
-  title: Explainable AI Systems
+- file: Transparency/Transparency
+  title: Transparency
   sections:
-  - file: T3.1/XAI_kinds
+  - file: Transparency/XAI_kinds
     sections:     
-    - file: T3.1/feature_importance
-    - file: T3.1/saliency_maps
-    - file: T3.1/single_tree
-  - file: T3.1/XAI_dimensions
+    - file: Transparency/feature_importance
+    - file: Transparency/saliency_maps
+    - file: Transparency/single_tree
+  - file: Transparency/XAI_dimensions
     sections:
-    - file: T3.1/blackbox_transparent
-    - file: T3.1/model_specific
-    - file: T3.1/global_local
+    - file: Transparency/blackbox_transparent
+    - file: Transparency/model_specific
+    - file: Transparency/global_local
 #chapters:
 - file: Technical Robustness and Safety/Technical Robustness and Safety
   title: Technical Robustness and Safety
@@ -32,58 +32,59 @@ chapters:
   - file: Technical Robustness and Safety/security
   - file: Technical Robustness and Safety/adversarial_attack
   - file: Technical Robustness and Safety/data_poisoning
-- file: T3.3/T3.3
-  title: Fairness, Equity, and Justice by Design
+- file: Diversity, Non-Discrimination, and Fairness/Diversity, Non-Discrimination, and Fairness
+  title: Diversity, Non-Discrimination, and Fairness
   sections:
-  - file: T3.3/auditing
-  - file: T3.3/bias
-  - file: T3.3/equity
-  - file: T3.3/fairness
-  - file: T3.3/fair_ML
-  - file: T3.3/discrimination
-  - file: T3.3/justice
-  - file: T3.3/segregation
-- file: T3.4/L1.Accountability_and_Reproducibility
+  - file: Diversity, Non-Discrimination, and Fairness/auditing
+  - file: Diversity, Non-Discrimination, and Fairness/bias
+  - file: Diversity, Non-Discrimination, and Fairness/equity
+  - file: Diversity, Non-Discrimination, and Fairness/fairness
+  - file: Diversity, Non-Discrimination, and Fairness/fair_ML
+  - file: Diversity, Non-Discrimination, and Fairness/discrimination
+  - file: Diversity, Non-Discrimination, and Fairness/justice
+  - file: Diversity, Non-Discrimination, and Fairness/segregation
+- file: Accountability/Accountability_and_Reproducibility
+  title: Accountability
   sections:
-  - file: T3.4/L2.Accountability
+  - file: Accountability/L2.Accountability
     sections:
-    - file: T3.4/L3.Wicked_problems
-    - file: T3.4/L3.Meaningful_human_control
-    - file: T3.4/L3.The_frame_problem
-  - file: T3.4/L2.Reproducibility
-  - file: T3.4/L2.Traceability
+    - file: Accountability/L3.Wicked_problems
+    - file: Accountability/L3.Meaningful_human_control
+    - file: Accountability/L3.The_frame_problem
+  - file: Accountability/L2.Reproducibility
+  - file: Accountability/L2.Traceability
     sections:
-    - file: T3.4/L3.Provenance_tracking
-    - file: T3.4/L3.Continuous_performance_monitoring
-- file: T3.5/T3.5
+    - file: Accountability/L3.Provenance_tracking
+    - file: Accountability/L3.Continuous_performance_monitoring
+- file: Privacy and Data Governance/Privacy and Data Governance
   sections:
-  - file: T3.5/L1.anonymization
+  - file: Privacy and Data Governance/L1.anonymization
     sections:
-    - file: T3.5/L2.pseudonymization
-  - file: T3.5/L1.privacy_model
+    - file: Privacy and Data Governance/L2.pseudonymization
+  - file: Privacy and Data Governance/L1.privacy_model
     sections:
-    - file: T3.5/L2.differential_privacy
+    - file: Privacy and Data Governance/L2.differential_privacy
       sections:
-      - file: T3.5/L3.epsilon_DP
-      - file: T3.5/L3.epsilon_delta_DP
-      - file: T3.5/L2.perturbation_mechanisms
-    - file: T3.5/L2.k_anonymity
-  - file: T3.5/L1.attacks
+      - file: Privacy and Data Governance/L3.epsilon_DP
+      - file: Privacy and Data Governance/L3.epsilon_delta_DP
+      - file: Privacy and Data Governance/L2.perturbation_mechanisms
+    - file: Privacy and Data Governance/L2.k_anonymity
+  - file: Privacy and Data Governance/L1.attacks
     sections:
-    - file: T3.5/L2.reidentification
-- file: T3.6/T3.6
+    - file: Privacy and Data Governance/L2.reidentification
+- file: Societal and Environmental Wellbeing/Societal and Environmental Wellbeing
   sections:
-  - file: T3.6/greenAI
+  - file: Societal and Environmental Wellbeing/greenAI
     sections:
-     - file: T3.6/power_aware
-  - file: T3.6/cloud_computing
-  - file: T3.6/edge_computing
-  - file: T3.6/data_centre
-  - file: T3.6/cradle_to_cradle
-  - file: T3.6/resource_prediction
-  - file: T3.6/resource_allocation
+     - file: Societal and Environmental Wellbeing/power_aware
+  - file: Societal and Environmental Wellbeing/cloud_computing
+  - file: Societal and Environmental Wellbeing/edge_computing
+  - file: Societal and Environmental Wellbeing/data_centre
+  - file: Societal and Environmental Wellbeing/cradle_to_cradle
+  - file: Societal and Environmental Wellbeing/resource_prediction
+  - file: Societal and Environmental Wellbeing/resource_allocation
 - file: TAILOR_project
-- file: main/AnalyticaIndex 
+- file: main/AnalyticalIndex 
   sections:
   - file: index/T3.6/2CC2
   - file: index/T3.4/Accountability
