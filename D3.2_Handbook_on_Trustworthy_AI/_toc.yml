@@ -35,17 +35,17 @@ chapters:
   - file: Technical_Robustness_and_Safety/security
   - file: Technical_Robustness_and_Safety/adversarial_attack
   - file: Technical_Robustness_and_Safety/data_poisoning
-- file: Diversity_Non-Discrimination_and_ Fairness/Diversity_Non-Discrimination_and_Fairness
+- file: Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness
   title: Diversity, Non-Discrimination, and Fairness
   sections:
-  - file: Diversity_Non-Discrimination_and_ Fairness/auditing
-  - file: Diversity_Non-Discrimination_and_ Fairness/bias
-  - file: Diversity_Non-Discrimination_and_ Fairness/equity
-  - file: Diversity_Non-Discrimination_and_ Fairness/fairness
-  - file: Diversity_Non-Discrimination_and_ Fairness/fair_ML
-  - file: Diversity_Non-Discrimination_and_ Fairness/discrimination
-  - file: Diversity_Non-Discrimination_and_ Fairness/justice
-  - file: Diversity_Non-Discrimination_and_ Fairness/segregation
+  - file: Diversity_Non-Discrimination_and_Fairness/auditing
+  - file: Diversity_Non-Discrimination_and_Fairness/bias
+  - file: Diversity_Non-Discrimination_and_Fairness/equity
+  - file: Diversity_Non-Discrimination_and_Fairness/fairness
+  - file: Diversity_Non-Discrimination_and_Fairness/fair_ML
+  - file: Diversity_Non-Discrimination_and_Fairness/discrimination
+  - file: Diversity_Non-Discrimination_and_Fairness/justice
+  - file: Diversity_Non-Discrimination_and_Fairness/segregation
 - file: Accountability/Accountability_and_Reproducibility
   title: Accountability
   sections:
@@ -88,92 +88,92 @@ chapters:
 - file: TAILOR_project
 - file: main/AnalyticalIndex 
   sections:
-  - file: index/T3.6/2CC2
-  - file: index/T3.4/Accountability
-  - file: index/T3.2/Alignment
-  - file: index/T3.2/Adversarial attack
-  - file: index/T3.2/Adversarial example
-  - file: index/T3.2/Adversarial input
-  - file: index/T3.1/Ante-hoc Explanation
-  - file: index/T3.2/Assessment
-  - file: index/T3.5/Attacks Anonym
-  - file: index/T3.5/Attacks on Pseudonymised Data
-  - file: index/T3.3/Auditing
-  - file: index/T3.3/Bias
-  - file: index/T3.1/Black-box Explanations
-  - file: index/T3.2/Brittleness
-  - file: index/T3.6/C2C
-  - file: index/T3.6/Cloud Computing
-  - file: index/T3.4/Continuous monitoring
-  - file: index/T3.6/cradle 2 cradle
-  - file: index/T3.6/Cradle
-  - file: index/T3.5/Data Anonymization
-  - file: index/T3.6/Data Center
-  - file: index/T3.2/Data Poisoning
-  - file: index/T3.2/Dependability
-  - file: index/T3.5/Differential Privacy models
-  - file: index/T3.5/epsilon_delta-differential_privacy
-  - file: index/T3.5/Epsilon-differential_privacy
-  - file: index/T3.5/Epsilon-indist
-  - file: index/T3.2/Data Shift
-  - file: index/T3.1/Dimensions of Explanations
-  - file: index/T3.3/Discrimination
-  - file: index/T3.2/Distributional Shift
-  - file: index/T3.2/Direct
-  - file: index/T3.6/Edge Computing
-  - file: index/T3.6/Energy Aware
-  - file: index/T3.6/Energy Efficient
-  - file: index/T3.2/Evaluation
-  - file: index/T3.3/Equity
-  - file: index/T3.1/Explanation by Design
-  - file: index/T3.3/Fair Machine Learning
-  - file: index/T3.3/Fairness
-  - file: index/T3.1/Features Importance
-  - file: index/T3.4/Frame
-  - file: index/T3.6/Fog Computing
-  - file: index/T3.1/Generalizable XAI
-  - file: index/T3.1/Global Explanations
-  - file: index/T3.6/Green AI
-  - file: index/T3.6/Green Computing
-  - file: index/T3.6/Green IT
-  - file: index/T3.6/ICT sustainability
-  - file: index/T3.2/Intended
-  - file: index/T3.3/Justice
-  - file: index/T3.5/K-Anonymity
-  - file: index/T3.5/Linking Attack
-  - file: index/T3.1/Local Explanations
-  - file: index/T3.4/Meaningful human control
-  - file: index/T3.2/Measurement
-  - file: index/T3.6/Mesh Computing
-  - file: index/T3.2/Misdirect
-  - file: index/T3.1/Model-Agnostic
-  - file: index/T3.1/Model-Specific
-  - file: index/T3.2/Negative Side Effects
-  - file: index/T3.1/Not Generalizable XAI
-  - file: index/T3.5/Perturbation
-  - file: index/T3.1/Post-hoc Explanations
-  - file: index/T3.6/Power Aware
-  - file: index/T3.5/Privacy model
-  - file: index/T3.4/Provenance
-  - file: index/T3.5/Pseudonymised Data
-  - file: index/T3.5/Re-identification Attack
-  - file: index/T3.6/Regenerative Design
-  - file: index/T3.2/Reliability
-  - file: index/T3.4/Repeatability
-  - file: index/T3.4/Replicability
-  - file: index/T3.4/Reproducibility
-  - file: index/T3.6/Resource Allocation
-  - file: index/T3.6/Resource Prediction
-  - file: index/T3.6/Resource Scheduling
-  - file: index/T3.2/Robustness
-  - file: index/T3.1/Saliency Maps
-  - file: index/T3.2/Security
-  - file: index/T3.3/Segregation
-  - file: index/T3.1/Single Tree Approximation
-  - file: index/T3.2/Testing
-  - file: index/T3.4/Traceability
-  - file: index/T3.1/Transparency
-  - file: index/T3.2/Unintended
-  - file: index/T3.4/Wicked
-  - file: index/T3.6/Workload Forecast
-  - file: index/T3.6/Workload Prediction
+  - file: index/Societal_and_Environmental_Wellbeing/2CC2
+  - file: index/Accountability/Accountability
+  - file: index/Technical_Robustness_and_Safety/Alignment
+  - file: index/Technical_Robustness_and_Safety/Adversarial attack
+  - file: index/Technical_Robustness_and_Safety/Adversarial example
+  - file: index/Technical_Robustness_and_Safety/Adversarial input
+  - file: index/Transparency/Ante-hoc Explanation
+  - file: index/Technical_Robustness_and_Safety/Assessment
+  - file: index/Privacy_and_Data_Governance/Attacks Anonym
+  - file: index/Privacy_and_Data_Governance/Attacks on Pseudonymised Data
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Auditing
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Bias
+  - file: index/Transparency/Black-box Explanations
+  - file: index/Technical_Robustness_and_Safety/Brittleness
+  - file: index/Societal_and_Environmental_Wellbeing/C2C
+  - file: index/Societal_and_Environmental_Wellbeing/Cloud Computing
+  - file: index/Accountability/Continuous monitoring
+  - file: index/Societal_and_Environmental_Wellbeing/cradle 2 cradle
+  - file: index/Societal_and_Environmental_Wellbeing/Cradle
+  - file: index/Privacy_and_Data_Governance/Data Anonymization
+  - file: index/Societal_and_Environmental_Wellbeing/Data Center
+  - file: index/Technical_Robustness_and_Safety/Data Poisoning
+  - file: index/Technical_Robustness_and_Safety/Dependability
+  - file: index/Privacy_and_Data_Governance/Differential Privacy models
+  - file: index/Privacy_and_Data_Governance/epsilon_delta-differential_privacy
+  - file: index/Privacy_and_Data_Governance/Epsilon-differential_privacy
+  - file: index/Privacy_and_Data_Governance/Epsilon-indist
+  - file: index/Technical_Robustness_and_Safety/Data Shift
+  - file: index/Transparency/Dimensions of Explanations
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Discrimination
+  - file: index/Technical_Robustness_and_Safety/Distributional Shift
+  - file: index/Technical_Robustness_and_Safety/Direct
+  - file: index/Societal_and_Environmental_Wellbeing/Edge Computing
+  - file: index/Societal_and_Environmental_Wellbeing/Energy Aware
+  - file: index/Societal_and_Environmental_Wellbeing/Energy Efficient
+  - file: index/Technical_Robustness_and_Safety/Evaluation
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Equity
+  - file: index/Transparency/Explanation by Design
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Fair Machine Learning
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Fairness
+  - file: index/Transparency/Features Importance
+  - file: index/Accountability/Frame
+  - file: index/Societal_and_Environmental_Wellbeing/Fog Computing
+  - file: index/Transparency/Generalizable XAI
+  - file: index/Transparency/Global Explanations
+  - file: index/Societal_and_Environmental_Wellbeing/Green AI
+  - file: index/Societal_and_Environmental_Wellbeing/Green Computing
+  - file: index/Societal_and_Environmental_Wellbeing/Green IT
+  - file: index/Societal_and_Environmental_Wellbeing/ICT sustainability
+  - file: index/Technical_Robustness_and_Safety/Intended
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Justice
+  - file: index/Privacy_and_Data_Governance/K-Anonymity
+  - file: index/Privacy_and_Data_Governance/Linking Attack
+  - file: index/Transparency/Local Explanations
+  - file: index/Human_Agency_and_Oversight/Meaningful human control
+  - file: index/Technical_Robustness_and_Safety/Measurement
+  - file: index/Societal_and_Environmental_Wellbeing/Mesh Computing
+  - file: index/Technical_Robustness_and_Safety/Misdirect
+  - file: index/Transparency/Model-Agnostic
+  - file: index/Transparency/Model-Specific
+  - file: index/Technical_Robustness_and_Safety/Negative Side Effects
+  - file: index/Transparency/Not Generalizable XAI
+  - file: index/Privacy_and_Data_Governance/Perturbation
+  - file: index/Transparency/Post-hoc Explanations
+  - file: index/Societal_and_Environmental_Wellbeing/Power Aware
+  - file: index/Privacy_and_Data_Governance/Privacy model
+  - file: index/Accountability/Provenance
+  - file: index/Privacy_and_Data_Governance/Pseudonymised Data
+  - file: index/Privacy_and_Data_Governance/Re-identification Attack
+  - file: index/Societal_and_Environmental_Wellbeing/Regenerative Design
+  - file: index/Technical_Robustness_and_Safety/Reliability
+  - file: index/Accountability/Repeatability
+  - file: index/Accountability/Replicability
+  - file: index/Accountability/Reproducibility
+  - file: index/Societal_and_Environmental_Wellbeing/Resource Allocation
+  - file: index/Societal_and_Environmental_Wellbeing/Resource Prediction
+  - file: index/Societal_and_Environmental_Wellbeing/Resource Scheduling
+  - file: index/Technical_Robustness_and_Safety/Robustness
+  - file: index/Transparency/Saliency Maps
+  - file: index/Technical_Robustness_and_Safety/Security
+  - file: index/Diversity_Non-Discrimination_and_Fairness/Segregation
+  - file: index/Transparency/Single Tree Approximation
+  - file: index/Technical_Robustness_and_Safety/Testing
+  - file: index/Accountability/Traceability
+  - file: index/Transparency/Transparency
+  - file: index/Technical_Robustness_and_Safety/Unintended
+  - file: index/Accountability/Wicked
+  - file: index/Societal_and_Environmental_Wellbeing/Workload Forecast
+  - file: index/Societal_and_Environmental_Wellbeing/Workload Prediction
