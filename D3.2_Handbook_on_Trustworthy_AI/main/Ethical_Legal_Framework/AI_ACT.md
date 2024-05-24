@@ -23,7 +23,9 @@ is a Tailor project deliverable with two versions: Version 1 (M22) and Version 2
 TAILOR, like all the research projects, is based on Work Pakages (WPs).
 WP3 (Trustworthy AI) aims at advancing knowledge on the six dimensions and putting each of them in relationships with foundation themes.
 
+(prova)=
 ## About the Encyclopedia
+
 
 This book (to be consolidated in the second phase of the project) represents the first period deliverable, providing an encyclopedia of the major terms related to trustworthiness.
 Here, you can find definitions related to:
