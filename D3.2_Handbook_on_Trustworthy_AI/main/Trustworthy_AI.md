@@ -3,9 +3,9 @@ In the last years, several definition on what Trustworthy AI is are given by the
 
 Indeed, according to this document, Trustworthy AI has three components, which should be met throughout the system's entire life cycle. Indeed, it should be:
 
-\: 1\. **lawful**, complying with all applicable laws and regulations; 
-\: 2\. **ethical**, ensuring adherence to ethical principles and values; 
-\: 3\. **robust**, both from a technical and social perspective since, even with good intentions, AI systems can cause unintentional harm. 
+1. **lawful**, complying with all applicable laws and regulations; 
+2. **ethical**, ensuring adherence to ethical principles and values; 
+3. **robust**, both from a technical and social perspective since, even with good intentions, AI systems can cause unintentional harm. 
 
 Each component in itself is necessary but not sufficient for the achievement of Trustworthy AI.  <!--Ideally, all three components work in harmony and overlap in their operation. If, in practice, tensions arise between these components, society should endeavour to align them.--><br>
 We will provide some additional details on what it is intended for each of these three components.
@@ -42,7 +42,7 @@ In order to provide a better understanding on Trustworthy AI, within the [TAILOR
 
 ## Bibliography
 
-```{bibliography}
+```{../bibliography}
 :style: unsrt
 :filter: docname in docnames
 ```
