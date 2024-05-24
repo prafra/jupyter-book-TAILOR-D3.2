@@ -5,6 +5,10 @@ format: jb-book
 root: TAILOR
 chapters:
 - file: authors
+- file: main/Trustworthy_AI
+- file: main/Ethical_Legal_Framework/Ethical_Legal_Framework
+- file: main/Ethical_Legal_Framework/HLEG
+- file: main/Ethical_Legal_Framework/AIACT
 #chapters:
 - file: Human_Agency_and_Oversight/Human_Agency_and_Oversight
   title: Human Agency and Oversight
