@@ -11,7 +11,7 @@ point the link
 -->
 
 
-On 8 April 2019, the High-Level Expert Group on AI presented the [Ethics Guidelines for Trustworthy Artificial Intelligence](./HLEG) {cite}`HLEG`, an influential document that set the stage for Trustworthy AI.
+On 8 April 2019, the High-Level Expert Group on AI presented the *''Ethics Guidelines for Trustworthy Artificial Intelligence''* {cite}`HLEG`, an influential document that set the stage for Trustworthy AI.
 
 ## In brief
 The guidance in this document is provided in three chapters, from the most abstract in Chapter I to the most concrete in Chapter III:
@@ -94,7 +94,7 @@ AI systems should neither cause nor exacerbate harm or otherwise adversely affec
 The development, deployment, and use of AI systems must be fair. There are, of course, [many different interpretations of fairness](../../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness), but according to the Guidelines, this dimension implies a commitment to ensuring equal and just distribution of both benefits and costs and ensuring that individuals and groups are free from unfair bias, discrimination, and stigmatization Equal opportunity in terms of access to education, goods, services and technology should also be fostered. Additionally, fairness implies that AI practitioners should respect the principle of proportionality between means and ends, and consider carefully how to balance competing interests and objectives. <!--The procedural dimension of fairness entails the ability to contest and seek effective redress against decisions made by AI systems and by the humans operating them. In order to do so, the entity accountable for the decision must be identifiable, and the decision-making processes should be explicable.-->
 
 **The principle of explicability.**
-Explicability is crucial for building and maintaining users' trust in AI systems. This means that processes need to be transparent, the capabilities and purpose of AI systems openly communicated, and decisions – to the extent possible – explainable to those directly and indirectly affected. Without such information, a decision cannot be duly contested. An explanation as to why a model has generated a particular output or decision (and what combination of input factors contributed to that) is not always possible. These cases are referred to as [''black box''](../../Transparency/Transparency) algorithms and require special attention. In those circumstances, other explicability measures (e.g., [traceability](../../Accountability/Traceability), [auditability](../../Diversity_Non-Discrimination_and_Fairness/auditing), and transparent communication on system capabilities) may be required, provided that the system as a whole respects fundamental rights. %The degree to which explicability is needed is highly dependent on the context and the severity of the consequences if that output is erroneous or otherwise inaccurate.
+Explicability is crucial for building and maintaining users' trust in AI systems. This means that processes need to be transparent, the capabilities and purpose of AI systems openly communicated, and decisions – to the extent possible – explainable to those directly and indirectly affected. Without such information, a decision cannot be duly contested. An explanation as to why a model has generated a particular output or decision (and what combination of input factors contributed to that) is not always possible. These cases are referred to as [''black box''](../../Transparency/blackbox_transparent) algorithms and require special attention. In those circumstances, other explicability measures (e.g., [traceability](../../Accountability/Traceability), [auditability](../../Diversity_Non-Discrimination_and_Fairness/auditing), and transparent communication on system capabilities) may be required, provided that the system as a whole respects fundamental rights. <!--The degree to which explicability is needed is highly dependent on the context and the severity of the consequences if that output is erroneous or otherwise inaccurate.-->
 
 ###The seven key requirements
 
@@ -111,11 +111,10 @@ The Guidelines identified a list of seven requirements (see also Figure {numref}
 - [Human agency and oversight](../../Human_Agency_and_Oversight/Human_Agency_and_Oversight). Including fundamental rights, human agency, and human oversight.
 - [Technical robustness and safety](../../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety). Including resilience to attack and security, fall back plan and general safety, accuracy, reliability and reproducibility.
 - [Privacy and data governance](../../Privacy_and_Data_Governance/Privacy_and_Data_Governance). Including respect for privacy, quality and integrity of data, and access to data.
-- [Transparency](../../Transparency). Including traceability, explainability and communication.
+- [Transparency](../../Transparency/Transparency). Including traceability, explainability and communication.
 - [Diversity, non-discrimination and fairness](../../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness) Including the avoidance of unfair bias, accessibility and universal design, and stakeholder participation.
 - [Societal and environmental wellbeing](../../Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing). Including sustainability and environmental friendliness, social impact, society and democracy.
 - [Accountability](../../Accountability/Accountability_and_Reproducibility). Including auditability, minimization and reporting of negative impact, trade-offs, and redress.
-\end{enumerate}
 
 
 ```{figure} ./TAIrequiremens.png
