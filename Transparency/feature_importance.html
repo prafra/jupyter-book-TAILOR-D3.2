@@ -137,7 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../main/Ethical_Legal_Framework/HLEG.html">
-     Welcome to TAILOR
+     Ethics Guidelines for Trustworthy AI by High-Level Expert Group on Artificial Intelligence
     </a>
    </li>
   </ul>
@@ -1283,7 +1283,7 @@ record. This means it is possible to identify the features leading to a specific
 In the following, we provide a couple of examples obtained with two of the most popular methods, namely <span style="font-variant:small-caps;">lime</span> and <span style="font-variant:small-caps;">shap</span>, both <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agnostic</span></a> <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local</span></a> explanation methods.</p>
 <p>The <span style="font-variant:small-caps;">lime</span> explanation method <span id="id1">[<a class="reference internal" href="saliency_maps.html#id46">1</a>]</span> randomly generates synthetic instances around the analyzed record. Then it returns the features importance as the coefficient of a linear regression model adopted as a local surrogate. The synthetic instances are weighted according to their proximity to the instance of interest.
 The <a href="https://en.wikipedia.org/wiki/Lasso_(statistics)" target=_blank>Lasso model</a> is trained to approximate the probability of the decision of the
-black box in the synthetic neighborhood of the instance analyzed. Fig. <a class="reference internal" href="#xai-feature-lime"><span class="std std-numref">3</span></a> shows
+black box in the synthetic neighborhood of the instance analyzed. Fig. <a class="reference internal" href="#xai-feature-lime"><span class="std std-numref">5</span></a> shows
 the features importance returned by <span style="font-variant:small-caps;">lime</span> in a scenario where we want to predict if a mushroom is edible or poisonous. Indeed, here the prediction class has only two classes, and we want to understand which features are most relevant to discriminate between the two classes.
 In this example, the feature <em>odor=foul</em> has a positive contribution of 0.26
 in predicting of a mushroom as <em>poisonous</em>, <em>stack-surface-above-ring=silky</em> has
@@ -1291,7 +1291,7 @@ a positive contribution of 0.11, <em>spore-print-color=chocolate</em> has a posi
 while <em>gill-size=broad</em> has a negative contribution of 0.13.</p>
 <div class="figure align-center" id="xai-feature-lime">
 <a class="reference internal image-reference" href="../_images/featureimportance_xai_tailor.png"><img alt="../_images/featureimportance_xai_tailor.png" src="../_images/featureimportance_xai_tailor.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Example of explanation based on features importance by <span style="font-variant:small-caps;">lime</span> <span id="id2">[<a class="reference internal" href="single_tree.html#id35">1</a>]</span>.</span><a class="headerlink" href="#xai-feature-lime" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Example of explanation based on features importance by <span style="font-variant:small-caps;">lime</span> <span id="id2">[<a class="reference internal" href="single_tree.html#id35">1</a>]</span>.</span><a class="headerlink" href="#xai-feature-lime" title="Permalink to this image">#</a></p>
 </div>
 <p>The <span style="font-variant:small-caps;">shap</span> explanation method <span id="id3">[<a class="reference internal" href="#id84">3</a>]</span> connects game theory
 with local explanations exploiting the <em>Shapely values</em> of a conditional expectation
@@ -1307,14 +1307,14 @@ Thus, a Shapley value is the <em>average marginal
 contribution</em> of a feature value across all possible coalitions, i.e., combinations <span id="id5">[<a class="reference internal" href="#id89">5</a>]</span>.
 Therefore, <span style="font-variant:small-caps;">shap</span> returns the local unique additive feature importance for each specific
 record. The higher a Shapely value, the higher the contribution of the feature.
-Fig. <a class="reference internal" href="#xai-feature-shap"><span class="std std-numref">4</span></a> shows an example of <span style="font-variant:small-caps;">shap</span> explanation, where the features importance
+Fig. <a class="reference internal" href="#xai-feature-shap"><span class="std std-numref">6</span></a> shows an example of <span style="font-variant:small-caps;">shap</span> explanation, where the features importance
 is expressed in the form of a <em>force plot</em>. The example is based on the Boston Housing Dataset<a class="footnote-reference brackets" href="#boston" id="id6">1</a>, a dataset that collects information relative to a portion of US census data (such as the age) along with some information about the areas (i.e., pupil-teacher ratio by town or accessibility to radial highways). This explanation each feature’s contribution levelin pushing the black box prediction from the base value (the
 average model output over the dataset, which is 24.41 in this example) to the model
 output. The features pushing the prediction higher are shown in light blue, and those pushing
 the prediction lower are shown in orange.</p>
 <div class="figure align-center" id="xai-feature-shap">
 <a class="reference internal image-reference" href="../_images/featureimportance_xai_tailor2.png"><img alt="../_images/featureimportance_xai_tailor2.png" src="../_images/featureimportance_xai_tailor2.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Example of explanation based on features importance by <span style="font-variant:small-caps;">shap</span> <span id="id7">[<a class="reference internal" href="single_tree.html#id35">1</a>]</span>.</span><a class="headerlink" href="#xai-feature-shap" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Example of explanation based on features importance by <span style="font-variant:small-caps;">shap</span> <span id="id7">[<a class="reference internal" href="single_tree.html#id35">1</a>]</span>.</span><a class="headerlink" href="#xai-feature-shap" title="Permalink to this image">#</a></p>
 </div>
 <p>Even if the classic application case of feature importance is with tabular data, it is important to note that, under appropriate settings, <span style="font-variant:small-caps;">lime</span> and <span style="font-variant:small-caps;">shap</span>
 can also be used to explain the decisions of AI working on textual data and images.</p>

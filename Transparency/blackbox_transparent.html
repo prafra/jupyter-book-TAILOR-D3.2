@@ -137,7 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../main/Ethical_Legal_Framework/HLEG.html">
-     Welcome to TAILOR
+     Ethics Guidelines for Trustworthy AI by High-Level Expert Group on Artificial Intelligence
     </a>
    </li>
   </ul>
@@ -1274,10 +1274,10 @@ title="Print to PDF"
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>When we talk about <strong>Black Box Explanation</strong>, the strategy is to couple an AI with a black box model with an explanation method able to interpret the black box decisions.
 In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency</strong>), the idea is to substitute the obscure model with a transparent model in which the decision process is accessible by design, i.e., explainability is inserted into a model from the very beginning.</p>
-<p>Figure <a class="reference internal" href="#post-hoc"><span class="std std-numref">8</span></a> depicts this distinction.</p>
+<p>Figure <a class="reference internal" href="#post-hoc"><span class="std std-numref">10</span></a> depicts this distinction.</p>
 <div class="figure align-center" id="post-hoc">
 <a class="reference internal image-reference" href="../_images/post.png"><img alt="../_images/post.png" src="../_images/post.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id35">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[<a class="reference internal" href="single_tree.html#id35">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">#</a></p>
 </div>
 <p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="saliency_maps.html#id46">1</a>]</span> <span id="id3">[<a class="reference internal" href="single_tree.html#id61">2</a>]</span> <span id="id4">[<a class="reference internal" href="feature_importance.html#id84">3</a>]</span>.</p>
 <p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[<a class="reference internal" href="#id99">5</a>]</span> <span id="id6">[<a class="reference internal" href="#id100">6</a>]</span>.
