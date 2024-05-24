@@ -20,7 +20,7 @@ The law provides both positive and negative obligations, which means that it sho
 Achieving Trustworthy AI requires not only compliance with the law, which is but one of its three components. Laws are not always up to speed with technological developments, can at times be out of step with ethical norms or may simply not be well suited to addressing certain issues. For AI systems to be trustworthy, they should hence also be ethical, ensuring alignment with ethical norms.
 Regarding ethics, some philosophical currents (such as Floridi's work {cite}`Floridi`) have been discriminating between hard and soft ethics. 
 
-**Hard ethics** is what we usually have in mind when discussing values, rights, duties, and responsibilities—or, more broadly, what is morally right or wrong, and what ought or ought not to be done—in the course of formulating new regulations or challenging existing ones. In short, hard ethics is what makes or shapes the law. %Thus, in the best scenario, lobbying in favour of some good legislation or to improve that which already exists can be a case of hard ethics. For example, hard ethics helped to dismantle apartheid in South Africa and supported the approval of legislation in Iceland that requires public and private businesses to prove that they offer equal pay to employees, irrespective of their gender (the gender pay gap continues to be a scandal in most countries).
+**Hard ethics** is what we usually have in mind when discussing values, rights, duties, and responsibilities— or, more broadly, what is morally right or wrong, and what ought or ought not to be done—in the course of formulating new regulations or challenging existing ones. In short, hard ethics is what makes or shapes the law. %Thus, in the best scenario, lobbying in favour of some good legislation or to improve that which already exists can be a case of hard ethics. For example, hard ethics helped to dismantle apartheid in South Africa and supported the approval of legislation in Iceland that requires public and private businesses to prove that they offer equal pay to employees, irrespective of their gender (the gender pay gap continues to be a scandal in most countries).
 
 **Soft ethics** covers the same normative ground as hard ethics, but it does so by considering what ought and ought not to be done over and above the existing regulation, not against it, or despite its scope, or to change it, or to by-pass it (e.g. in terms of self-regulation). In other words, soft ethics is post-compliance ethics: in this case, ''ought implies may''.
 
@@ -42,7 +42,7 @@ In order to provide a better understanding on Trustworthy AI, within the [TAILOR
 
 ## Bibliography
 
-```{../bibliography}
+```{bibliography} ../references.bib
 :style: unsrt
 :filter: docname in docnames
 ```
