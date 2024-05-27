@@ -35,6 +35,6 @@ In particular, the use of real-time biometric identification systems is investig
 As a general norm, the use of such systems shall be authorized only if the law enforcement authority
 has completed a fundamental rights impact assessment. The EU AI Act envisages some derogation in justified cases of urgency, provided that such authorization is requested within 24 hours. The authorization shall be requested to a competent judicial authority or an independent administrative authority whose decision is binding.
 
-In any case, the use of the "real-time" remote biometric identification systems must be *necessary for, and proportionate to, achieving one of the objectives specified above* (see last point of previous list) and remains limited to what is strictly necessary concerning the period of time as well as the geographic and personal scope.
+In any case, the use of the "real-time" remote biometric identification systems must be *necessary for, and proportionate to, achieving one of the objectives specified above* (see last point of the first list in this entry) and remains limited to what is strictly necessary concerning the period of time as well as the geographic and personal scope.
 
 > This entry was re-adapted from the Artificial Intelligence Act by Francesca Pratesi and Umberto Straccia.
