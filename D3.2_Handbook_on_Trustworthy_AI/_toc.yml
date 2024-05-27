@@ -9,7 +9,10 @@ chapters:
 - file: main/Ethical_Legal_Framework/Ethical_Legal_Framework
   sections:
   - file: main/Ethical_Legal_Framework/HLEG
-  - file: main/Ethical_Legal_Framework/AIACT
+  - file: main/Ethical_Legal_Framework/AI_ACT
+    sections:
+    - file: main/Ethical_Legal_Framework/Prohibited_AI
+    - file: main/Ethical_Legal_Framework/High_Risk_AI
 #chapters:
 - file: Human_Agency_and_Oversight/Human_Agency_and_Oversight
   title: Human Agency and Oversight
