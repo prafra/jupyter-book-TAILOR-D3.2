@@ -1,6 +1,6 @@
 # Prohibited AI Practices
 
-Article 5 of the EU AI Act lists all the *AI systems that are not allowed* in Europe:
+Article 5 of the EU AI Act {cite}`AIACT` lists all the *AI systems that are not allowed* in Europe:
 
 - *subliminal techniques or purposefully manipulative or deceptive techniques*, with the objective or the effect of materially distorting the behavior of a person or a group of persons by appreciably impairing their ability to make an informed decision;
 - systems that *exploit any of the vulnerabilities* of a natural person or a specific group of persons due to their age, disability, or a specific social or economic situation, with the objective or the effect of materially distorting the behavior of that person(s) in a manner that (likely) causes significant harm;
@@ -11,7 +11,7 @@ Article 5 of the EU AI Act lists all the *AI systems that are not allowed* in Eu
 - systems that create or expand *facial recognition databases* through the untargeted scraping of facial images from the internet or CCTV footage;
 - systems to *infer emotions* of a natural person in the areas of workplace and education institutions, unless these systems are used for medical or safety reasons;
 - *biometric categorisation systems* that categorize individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation, except lawfully acquired biometric datasets in the area of law enforcement;
-- \label{par:real-time} *"real-time" remote biometric identification systems in publicly accessible spaces* for the purposes of law enforcement, unless and in so far as such use is strictly necessary for one of the following objectives:
+- (par:real-time)=*"real-time" remote biometric identification systems in publicly accessible spaces* for the purposes of law enforcement, unless and in so far as such use is strictly necessary for one of the following objectives:
   - the targeted search for specific victims of abduction, trafficking in human beings or sexual exploitation of human beings, as well as the search for missing persons;
   - the prevention of a specific, substantial, and imminent threat to the life or physical safety of natural persons or a genuine and present or genuine and foreseeable threat of a terrorist attack;
   - the localization or identification of a person suspected of having committed a criminal offence, for the purpose of conducting a criminal investigation or prosecution or executing a criminal penalty for offences referred to in Annex II of the EU AI Act and punishable in the Member State concerned by a custodial sentence or a detention order for a maximum period of at least four years.
@@ -25,6 +25,6 @@ In particular, the use of real-time biometric identification systems is investig
 As a general norm, the use of such systems shall be authorized only if the law enforcement authority
 has completed a fundamental rights impact assessment. The EU AI Act envisages some derogation in justified cases of urgency, provided that such authorization is requested within 24 hours. The authorization shall be requested to a competent judicial authority or an independent administrative authority whose decision is binding.
 
-In any case, the use of the "real-time" remote biometric identification systems must be *necessary for, and proportionate to, achieving one of the objectives specified above* (see point \ref{par:real-time}) and remains limited to what is strictly necessary concerning the period of time as well as the geographic and personal scope.
+In any case, the use of the "real-time" remote biometric identification systems must be *necessary for, and proportionate to, achieving one of the objectives specified above* (see point {ref}`par:real-time`}) and remains limited to what is strictly necessary concerning the period of time as well as the geographic and personal scope.
 
 > This entry was re-adapted from the Artificial Intelligence Act by Francesca Pratesi and Umberto Straccia.
