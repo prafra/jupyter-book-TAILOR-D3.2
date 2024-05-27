@@ -22,9 +22,9 @@ The pyramid of AI systems based on their risk
 ```
 A graphical representation of this classification is given in Figure {numref}`{number} <fig:aiact_risk_pyramid>`, while the four categories are summarized in the following {cite}`pyramid`:
 
-- [Unacceptable Risk](./Prohibited_AI). The technologies that create an ''unacceptable risk'' are completely banned.
+- [Unacceptable Risk](./Prohibited_AI). The technologies that create an "unacceptable risk" are completely banned.
     
-- [High-Risk](./High-Risk_AI). The "high-risk" category is heavily regulated, with significant requirements for the systems and obligations for the providers, importers, distributors, and deployers of these technologies.
+- [High-Risk](./High_Risk_AI). The "high-risk" category is heavily regulated, with significant requirements for the systems and obligations for the providers, importers, distributors, and deployers of these technologies.
     
 - **Limited risk**. Limited risk refers to the risks associated with a lack of transparency in AI usage. The EU AI Act introduces specific transparency obligations to ensure that humans are informed when necessary, fostering trust. For instance, when using AI systems such as chatbots, humans should be made aware that they are interacting with a machine so they can take an informed decision to continue or step back. Providers will also have to ensure that AI-generated content is identifiable. Besides, AI-generated text published with the purpose to inform the public on matters of public interest must be labelled as artificially generated. This also applies to audio and video content constituting deep fakes.
     
@@ -36,9 +36,9 @@ A graphical representation of this classification is given in Figure {numref}`{n
 The EU AI Act is composed of 180 Recitals, 113 Articles organized in 13 Chapters, and 13 Annexes.
 Here, the main structure of the AI Act is provided, chapter by chapter, to help in its consultancy.
 
-- *Chapter I - General Provisions*. Four articles where the preliminary information (such as the scope of the Regulation) and the basic definitions (such as "AI system'', "risk'', "deployer'', "provider'', "making available on the market'', and "putting into service'') are given.
+- *Chapter I - General Provisions*. Four articles where the preliminary information (such as the scope of the Regulation) and the basic definitions (such as "AI system", "risk", "deployer", "provider", "making available on the market", and "putting into service") are given.
 
-- *Chapter II - Prohibited AI Practices*. One article listing the AI practices that shall be prohibited. We reported this list [here](Prohibited_AI).
+- *Chapter II - Prohibited AI Practices*. One article listing the AI practices that shall be prohibited. We reported this list [here](./Prohibited_AI).
 
 - *Chapter III - High-risk AI Systems*. The main part of the Regulation, it is composed of forty-four articles divided into five Sections: 
 	- Classification of AI systems as high-risk (Articles 6 and 7).
@@ -51,9 +51,9 @@ We examine more in depth the high-risk systems [here](High_Risk_AI)).
 
 - *Chapter IV - Transparency Obligations for Providers and Deployers of Certain AI Systems*. This Chapter, composed of one article only, lists all the obligations that providers and deployers of limited risk AI systems have. Indeed, such AI systems must be designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system (e.g., chatbots, or a clear disclosure that a content has been artificially generated). 
 
-- *Chapter V - General-Purpose AI Models*. This Chapter, composed of 6 Articles, regulates General-purpose AI models, including large generative AI models, which might also be integrated into other AI systems.  A key point of this Chapter is the obligation of transparency to understand such models better and ensure that their providers respect copyright law when training their models. In addition, some of these models could pose systemic risks, because they are widely used or very capable (for now, the threshold is fixed to have a training measured in floating point operations -or FLOPS- greater than $10^{25}$). Providers of such models must assess and mitigate risks, report serious incidents, conduct state-of-the-art tests and model evaluations, ensure cybersecurity, and provide information on the energy consumption of their models.
+- *Chapter V - General-Purpose AI Models*. This Chapter, composed of 6 Articles, regulates General-purpose AI models, including large generative AI models, which might also be integrated into other AI systems.  A key point of this Chapter is the obligation of transparency to understand such models better and ensure that their providers respect copyright law when training their models. In addition, some of these models could pose systemic risks, because they are widely used or very capable (for now, the threshold is fixed to have a training measured in floating point operations -or FLOPS- greater than **$10^{25}$). **Providers of such models must assess and mitigate risks, report serious incidents, conduct state-of-the-art tests and model evaluations, ensure cybersecurity, and provide information on the energy consumption of their models.
 
-- *Chapter VI - Measures in Support of Innovation*. This Chapter is composed of seven Articles and introduces the "regulatory sandboxes'', i.e., a mechanism established to foster innovation in AI, experimenting and testing in a controlled environment new products and services under a regulator’s supervision.
+- *Chapter VI - Measures in Support of Innovation*. This Chapter is composed of seven Articles and introduces the "regulatory sandboxes"", i.e., a mechanism established to foster innovation in AI, experimenting and testing in a controlled environment new products and services under a regulator’s supervision.
 
 - *Chapter VII - Governance*. This Chapter is composed of seven Articles, dealing with the establishment of mechanisms that can help in facilitating the application of the EU AI Act, such as the European Artificial Intelligence Board Advisory forum and the Scientific panel of independent experts. Moreover, this Chapter advocates the designation of national competent authorities and single points of contact.
 
