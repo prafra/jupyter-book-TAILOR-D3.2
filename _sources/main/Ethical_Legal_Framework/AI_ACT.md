@@ -31,7 +31,7 @@ A graphical representation of this classification is given in Figure {numref}`{n
 - **Minimal or no risk**. The EU AI Act allows the free use of minimal-risk AI. This includes applications such as AI-enabled video games or spam filters. The vast majority of AI systems currently used in the EU fall into this category.
 
 
-### The structure of the EU AI ACT}
+### The structure of the EU AI ACT
 
 The EU AI Act is composed of 180 Recitals, 113 Articles organized in 13 Chapters, and 13 Annexes.
 Here, the main structure of the AI Act is provided, chapter by chapter, to help in its consultancy.
@@ -46,8 +46,7 @@ Here, the main structure of the AI Act is provided, chapter by chapter, to help 
 	- Obligations of providers and deployers of high-risk AI systems and other parties (Articles 16-27).
 	- Notifying authorities and notified bodies (Articles 28-39).
 	- Standards, conformity assessment, certificates, and registration (Articles 40-49).
-
-We examine more in depth the high-risk systems [here](High_Risk_AI)).
+  We examine more in depth the high-risk systems [here](High_Risk_AI).
 
 - *Chapter IV - Transparency Obligations for Providers and Deployers of Certain AI Systems*. This Chapter, composed of one article only, lists all the obligations that providers and deployers of limited risk AI systems have. Indeed, such AI systems must be designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system (e.g., chatbots, or a clear disclosure that a content has been artificially generated). 
 
