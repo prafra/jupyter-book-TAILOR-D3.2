@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Ethical and Legal Framework &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    <title>Prohibited AI Practices &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/main/Ethical_Legal_Framework/Prohibited_AI.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="The Ethical and Legal Framework" href="High_Risk_AI.html" />
+    <link rel="next" title="High Risk AI Systems" href="High_Risk_AI.html" />
     <link rel="prev" title="The EU AI Act" href="AI_ACT.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -152,12 +152,12 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       The Ethical and Legal Framework
+       Prohibited AI Practices
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="High_Risk_AI.html">
-       The Ethical and Legal Framework
+       High Risk AI Systems
       </a>
      </li>
     </ul>
@@ -1216,7 +1216,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The Ethical and Legal Framework</h1>
+                <h1>Prohibited AI Practices</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1228,31 +1228,45 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-ethical-and-legal-framework">
-<h1>The Ethical and Legal Framework<a class="headerlink" href="#the-ethical-and-legal-framework" title="Permalink to this headline">#</a></h1>
-<!-- TODO 
-
-point the link
-[risk-based approach](./Ethical_Legal_Framework/AI_ACT.md}
-to the correct section of the entry
-
-
--->
-<p>In these pages, we focus on the European framework only, mostly relying on two main sources, which are described below and in the linked pages.</p>
-<p>The first document, at least chronologically speaking, we refer to is the <a class="reference internal" href="HLEG.html"><span class="doc std std-doc">Ethical Guidelines for Trustworthy AI</span></a> <span id="id1">[<a class="reference internal" href="#id18">1</a>]</span>, which, as the name itself suggests is not a law or a legal obligation. Nevertheless, it is commonly recognized as the most relevant document in the field of Trustworthy AI.
-Here, as we already mentioned, there are listed a definition of Trustworthy AI, the foundation of Trustworthy AI, the seven key requirements that AI systems should implement and meet throughout their entire life cycle, and a concrete assessment list to operationalize the requirements.</p>
-<p>Then, the other fundamental source is the world’s first comprehensive law on Artificial Intelligence (AI): the <a class="reference internal" href="AI_ACT.html"><span class="doc std std-doc">EU AI Act</span></a> <span id="id2">[<a class="reference internal" href="#id20">2</a>]</span>. The text provides a classification of AI systems using a <a class="reference internal" href="AI_ACT.html"><span class="doc std std-doc">risk-based approach</span></a>; four levels of risk were identified, and different obligations are listed for the different categories of AI systems to be compliant with this law.</p>
-<p id="id3"><dl class="citation">
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>High-Level Expert Group on Artificial Intelligence. Ethics guidelines for trustworthy ai. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2024-04-23).</p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Artificial Intelligence Act, European Parliament legislative resolution of 13 March 2024 on the proposal for a regulation of the European Parliament and of the Council on laying down harmonised rules on Artificial Intelligence (Artificial Intelligence Act) and amending certain Union Legislative Acts (COM(2021)0206 – C9-0146/2021 – 2021/0106(COD)), P9_TA(2024)0138. 2024. URL: <a class="reference external" href="https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf">https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf</a> (visited on 2024-04-23).</p>
-</dd>
-</dl>
-</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="prohibited-ai-practices">
+<h1>Prohibited AI Practices<a class="headerlink" href="#prohibited-ai-practices" title="Permalink to this headline">#</a></h1>
+<p>Article 5 of the EU AI Act lists all the <em>AI systems that are not allowed</em> in Europe:</p>
+<ul class="simple">
+<li><p><em>subliminal techniques or purposefully manipulative or deceptive techniques</em>, with the objective or the effect of materially distorting the behavior of a person or a group of persons by appreciably impairing their ability to make an informed decision;</p></li>
+<li><p>systems that <em>exploit any of the vulnerabilities</em> of a natural person or a specific group of persons due to their age, disability, or a specific social or economic situation, with the objective or the effect of materially distorting the behavior of that person(s) in a manner that (likely) causes significant harm;</p></li>
+<li><p>systems for the <em>evaluation or classification of natural persons based on their social behavior</em> or known, inferred or predicted personal or personality characteristics, with the social score leading to either or both of the following:</p>
+<ul>
+<li><p>detrimental or unfavorable treatment in social contexts that are unrelated to the contexts in which the data was originally generated or collected;</p></li>
+<li><p>detrimental or unfavourable treatment that is unjustified or disproportionate to their social behaviour or its gravity;</p></li>
+</ul>
+</li>
+<li><p>systems for making risk assessments of natural persons in order to <em>assess or predict the risk of a natural person committing a criminal offence</em>, based solely on the profiling of a natural person or on assessing their personality traits and characteristics, unless these systems are used only to support the human assessment;</p></li>
+<li><p>systems that create or expand <em>facial recognition databases</em> through the untargeted scraping of facial images from the internet or CCTV footage;</p></li>
+<li><p>systems to <em>infer emotions</em> of a natural person in the areas of workplace and education institutions, unless these systems are used for medical or safety reasons;</p></li>
+<li><p><em>biometric categorisation systems</em> that categorize individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation, except lawfully acquired biometric datasets in the area of law enforcement;</p></li>
+<li><p>\label{par:real-time} <em>“real-time” remote biometric identification systems in publicly accessible spaces</em> for the purposes of law enforcement, unless and in so far as such use is strictly necessary for one of the following objectives:</p>
+<ul>
+<li><p>the targeted search for specific victims of abduction, trafficking in human beings or sexual exploitation of human beings, as well as the search for missing persons;</p></li>
+<li><p>the prevention of a specific, substantial, and imminent threat to the life or physical safety of natural persons or a genuine and present or genuine and foreseeable threat of a terrorist attack;</p></li>
+<li><p>the localization or identification of a person suspected of having committed a criminal offence, for the purpose of conducting a criminal investigation or prosecution or executing a criminal penalty for offences referred to in Annex II of the EU AI Act and punishable in the Member State concerned by a custodial sentence or a detention order for a maximum period of at least four years.</p></li>
+</ul>
+</li>
+</ul>
+<p>In particular, the use of real-time biometric identification systems is investigated in Article 5 of the EU AI Act, where it is also specified that a real-time biometric identification system:</p>
+<ul class="simple">
+<li><p>shall be deployed for the purposes set out in that point only to confirm the identity of the specifically targeted individual, and it shall take into account the following elements:</p>
+<ul>
+<li><p>the nature of the situation giving rise to the possible use, in particular the seriousness, probability, and scale of the harm that would be caused if the system were not used;</p></li>
+<li><p>the consequences of the use of the system for the rights and freedoms of all persons concerned, in particular the seriousness, the probability, and the scale of those consequences.</p></li>
+</ul>
+</li>
+<li><p>shall comply with necessary and proportionate safeguards and conditions in relation to the use in accordance with the national law authorizing the use thereof, in particular as regards the temporal, geographic, and personal limitations.</p></li>
+</ul>
+<p>As a general norm, the use of such systems shall be authorized only if the law enforcement authority
+has completed a fundamental rights impact assessment. The EU AI Act envisages some derogation in justified cases of urgency, provided that such authorization is requested within 24 hours. The authorization shall be requested to a competent judicial authority or an independent administrative authority whose decision is binding.</p>
+<p>In any case, the use of the “real-time” remote biometric identification systems must be <em>necessary for, and proportionate to, achieving one of the objectives specified above</em> (see point \ref{par:real-time}) and remains limited to what is strictly necessary concerning the period of time as well as the geographic and personal scope.</p>
 <blockquote>
-<div><p>This entry was written by Francesca Pratesi and Umberto Straccia.</p>
+<div><p>This entry was re-adapted from the Artificial Intelligence Act by Francesca Pratesi and Umberto Straccia.</p>
 </div></blockquote>
 </div>
 
@@ -1293,7 +1307,7 @@ Here, as we already mentioned, there are listed a definition of Trustworthy AI, 
     <a class='right-next' id="next-link" href="High_Risk_AI.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Ethical and Legal Framework</p>
+        <p class="prev-next-title">High Risk AI Systems</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

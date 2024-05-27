@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Ethical and Legal Framework &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    <title>High Risk AI Systems &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Human Agency and Oversight" href="../../Human_Agency_and_Oversight/Human_Agency_and_Oversight.html" />
-    <link rel="prev" title="The Ethical and Legal Framework" href="Prohibited_AI.html" />
+    <link rel="prev" title="Prohibited AI Practices" href="Prohibited_AI.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -152,12 +152,12 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="Prohibited_AI.html">
-       The Ethical and Legal Framework
+       Prohibited AI Practices
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       The Ethical and Legal Framework
+       High Risk AI Systems
       </a>
      </li>
     </ul>
@@ -1216,7 +1216,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The Ethical and Legal Framework</h1>
+                <h1>High Risk AI Systems</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1228,31 +1228,27 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-ethical-and-legal-framework">
-<h1>The Ethical and Legal Framework<a class="headerlink" href="#the-ethical-and-legal-framework" title="Permalink to this headline">#</a></h1>
-<!-- TODO 
-
-point the link
-[risk-based approach](./Ethical_Legal_Framework/AI_ACT.md}
-to the correct section of the entry
-
-
--->
-<p>In these pages, we focus on the European framework only, mostly relying on two main sources, which are described below and in the linked pages.</p>
-<p>The first document, at least chronologically speaking, we refer to is the <a class="reference internal" href="HLEG.html"><span class="doc std std-doc">Ethical Guidelines for Trustworthy AI</span></a> <span id="id1">[<a class="reference internal" href="Prohibited_AI.html#id18">1</a>]</span>, which, as the name itself suggests is not a law or a legal obligation. Nevertheless, it is commonly recognized as the most relevant document in the field of Trustworthy AI.
-Here, as we already mentioned, there are listed a definition of Trustworthy AI, the foundation of Trustworthy AI, the seven key requirements that AI systems should implement and meet throughout their entire life cycle, and a concrete assessment list to operationalize the requirements.</p>
-<p>Then, the other fundamental source is the world’s first comprehensive law on Artificial Intelligence (AI): the <a class="reference internal" href="AI_ACT.html"><span class="doc std std-doc">EU AI Act</span></a> <span id="id2">[<a class="reference internal" href="Prohibited_AI.html#id20">2</a>]</span>. The text provides a classification of AI systems using a <a class="reference internal" href="AI_ACT.html"><span class="doc std std-doc">risk-based approach</span></a>; four levels of risk were identified, and different obligations are listed for the different categories of AI systems to be compliant with this law.</p>
-<p id="id3"><dl class="citation">
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>High-Level Expert Group on Artificial Intelligence. Ethics guidelines for trustworthy ai. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2024-04-23).</p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Artificial Intelligence Act, European Parliament legislative resolution of 13 March 2024 on the proposal for a regulation of the European Parliament and of the Council on laying down harmonised rules on Artificial Intelligence (Artificial Intelligence Act) and amending certain Union Legislative Acts (COM(2021)0206 – C9-0146/2021 – 2021/0106(COD)), P9_TA(2024)0138. 2024. URL: <a class="reference external" href="https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf">https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf</a> (visited on 2024-04-23).</p>
-</dd>
-</dl>
-</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="high-risk-ai-systems">
+<h1>High Risk AI Systems<a class="headerlink" href="#high-risk-ai-systems" title="Permalink to this headline">#</a></h1>
+<p>For an AI system to be classified into the “high-risk” category, there are two different criteria to be considered:</p>
+<ul class="simple">
+<li><p>an AI system is considered “high-risk” if is intended to be used as a safety component of a product or is itself a product covered by the Union harmonization legislation listed in Annex II of the EU AI Act (which includes, for example, the Directive on the safety of toys, the Regulations on medical devices, the Regulation on personal protective equipment, \ldots), and the product is required to undergo a third-party conformity assessment pursuant to the legislation listed in Annex II;</p></li>
+<li><p>even if the first criterion does not apply, an AI system is considered ``high-risk’’ if it is included in the systems referred to in Annex III of the EU AI Act. This criterion does not apply to systems that do not pose significant risk of harm to the health, safety, or fundamental rights of natural persons according to the criteria listed in Article 6 of the EU AI Act, unless the system performs profiling of natural persons.</p></li>
+</ul>
+<p>Thus, it is important to look into the Annex III of the EU AI Act, where high-risk systems are listed. In particular, high-risk systems are systems used in the following areas:</p>
+<!--%High-risk systems listed in Annex III of the AI Act are some systems used in the following areas:-->
+<ul class="simple">
+<li><p><em>Biometrics</em>, for example, remote biometric identification systems and emotion recognition AI.</p></li>
+<li><p><em>Critical infrastructure</em>, for example, AI systems used as safety component of a water supply infrastructure or for road traffic.</p></li>
+<li><p><em>Education and vocational training</em>, for example, systems used to determine access to an educational institution, proctoring systems, AI used to evaluate learning outcomes.</p></li>
+<li><p><em>Employment, workers management and access to self-employment</em>, for example, systems used for recruitment or to make decisions related to promotions.</p></li>
+<li><p><em>Access to and enjoyment of essential private services and essential public services and benefits</em>, for example, systems used to evaluate the eligibility of natural persons for healthcare services and systems used to establish a person’s credit score.</p></li>
+<li><p><em>Law enforcement</em>, for example, polygraphs and systems used by authorities to evaluate the reliability of evidence during an investigation.</p></li>
+<li><p><em>Migration, asylum, and border control management</em>, for example, systems used by authorities to assess the risk of irregular migration posed by a natural person who intends to enter into the territory of a Member State.</p></li>
+<li><p><em>Administration of justice and democratic processes</em>, for example, systems used to assist a judicial authority in applying the law to a concrete set of facts, systems used to influence the outcome of an election.</p></li>
+</ul>
 <blockquote>
-<div><p>This entry was written by Francesca Pratesi and Umberto Straccia.</p>
+<div><p>This entry was re-adapted from the Artificial Intelligence Act by Francesca Pratesi and Umberto Straccia.</p>
 </div></blockquote>
 </div>
 
@@ -1287,7 +1283,7 @@ Here, as we already mentioned, there are listed a definition of Trustworthy AI, 
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The Ethical and Legal Framework</p>
+            <p class="prev-next-title">Prohibited AI Practices</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../../Human_Agency_and_Oversight/Human_Agency_and_Oversight.html" title="next page">
