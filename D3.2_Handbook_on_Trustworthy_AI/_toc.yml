@@ -113,7 +113,7 @@ chapters:
   - file: index/Transparency/Black-box Explanations
   - file: index/Technical_Robustness_and_Safety/Brittleness
   - file: index/Societal_and_Environmental_Wellbeing/C2C
-  - file: index/index/Human_Agency_and_Oversight/Causal_responsibility`
+  - file: index/Human_Agency_and_Oversight/Causal_responsibility
   - file: index/Societal_and_Environmental_Wellbeing/Cloud Computing
   - file: index/Accountability/Continuous monitoring
   - file: index/Societal_and_Environmental_Wellbeing/cradle 2 cradle
@@ -153,7 +153,7 @@ chapters:
   - file: index/Privacy_and_Data_Governance/K-Anonymity
   - file: index/Privacy_and_Data_Governance/Linking Attack
   - file: index/Transparency/Local Explanations
-  - file: index/Human_Agency_and_Oversight/Meaningful human control
+  - file: index/Human_Agency_and_Oversight/Meaningful_human_control
   - file: index/Technical_Robustness_and_Safety/Measurement
   - file: index/Societal_and_Environmental_Wellbeing/Mesh Computing
   - file: index/Technical_Robustness_and_Safety/Misdirect
@@ -165,7 +165,7 @@ chapters:
   - file: index/Transparency/Post-hoc Explanations
   - file: index/Societal_and_Environmental_Wellbeing/Power Aware
   - file: index/Privacy_and_Data_Governance/Privacy model
-  - file: index/Accountability/Problem_of_many_hands`
+  - file: index/Accountability/Problem_of_many_hands
   - file: index/Accountability/Provenance
   - file: index/Privacy_and_Data_Governance/Pseudonymised Data
   - file: index/Privacy_and_Data_Governance/Re-identification Attack
