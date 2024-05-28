@@ -17,6 +17,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Transparency/Black-box Explanations`
 - {doc}`../index/Technical_Robustness_and_Safety/Brittleness`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/C2C`
+- {doc}`../index/Human_Agency_and_Oversight/Causal_responsibility`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Cloud Computing`
 - {doc}`../index/Accountability/Continuous monitoring`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/cradle 2 cradle`
@@ -58,7 +59,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Privacy_and_Data_Governance/K-Anonymity`
 - {doc}`../index/Privacy_and_Data_Governance/Linking Attack`
 - {doc}`../index/Transparency/Local Explanations`
-- {doc}`../index/Human_Agency_and_Oversight/Meaningful human control`
+- {doc}`../index/Human_Agency_and_Oversight/Meaningful_human_control`
 - {doc}`../index/Technical_Robustness_and_Safety/Measurement`
 - {doc}`../index/Technical_Robustness_and_Safety/Misdirect`
 - {doc}`../index/Transparency/Model-Agnostic`
@@ -68,6 +69,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Privacy_and_Data_Governance/Perturbation`
 - {doc}`../index/Transparency/Post-hoc Explanations`
 - {doc}`../index/Privacy_and_Data_Governance/Privacy model`
+- {doc}`../index/Accountability/Problem_of_many_hands`
 - {doc}`../index/Accountability/Provenance`
 - {doc}`../index/Privacy_and_Data_Governance/Pseudonymised Data`
 - {doc}`../index/Privacy_and_Data_Governance/Re-identification Attack`

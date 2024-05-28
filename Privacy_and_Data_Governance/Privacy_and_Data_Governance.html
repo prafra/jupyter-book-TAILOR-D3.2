@@ -181,6 +181,11 @@ const thebe_selector_output = ".output, .cell_output"
      Meaningful human control
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Human_Agency_and_Oversight/Causal_responsibility.html">
+     Causal Responsibility
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -386,6 +391,11 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toctree-l3">
       <a class="reference internal" href="../Accountability/L3.The_frame_problem.html">
        The Frame Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L3.Problem_of_many_hands.html">
+       The Problem of Many Hands
       </a>
      </li>
     </ul>
@@ -879,11 +889,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Human_Agency_and_Oversight/Meaningful%20human%20control.html">
-     Meaningful Human Control
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../index/Technical_Robustness_and_Safety/Measurement.html">
      Measurement
     </a>
@@ -1342,12 +1347,12 @@ title="Print to PDF"
 <div class="section" id="in-brief">
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>Respect for Privacy is an ethical aspect studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a> for ensuring personal data protection that is at the core of the General
-Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="../main/Trustworthy_AI.html#id12">2</a>]</span>. GDPR, in its <a href="https://gdpr-info.eu/art-5-gdpr/" target=_blank>Article 5</a>, promote <em>privacy by design</em> in the form of a certain number of general principles for ensuring <em>privacy as the default</em> in the whole chain of data processing for a given task. We outline the challenges and solutions for enforcing privacy by design approaches.</p>
+Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span>. GDPR, in its <a href="https://gdpr-info.eu/art-5-gdpr/" target=_blank>Article 5</a>, promote <em>privacy by design</em> in the form of a certain number of general principles for ensuring <em>privacy as the default</em> in the whole chain of data processing for a given task. We outline the challenges and solutions for enforcing privacy by design approaches.</p>
 </div>
 <div class="section" id="abstract">
 <h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
 <p>When protecting personal data, we are faced to the dilemma of disclosing no sensitive data while learning useful information about a population.
-One approach for solving this tension between privacy and utility is based on <em>data encryption</em> and consists in developping secure computation protocols able to learn models or to compute statistics on encrypted data. A lot of scientific literature <span id="id2">[<a class="reference internal" href="#id435">2</a>]</span> <span id="id3">[<a class="reference internal" href="#id436">3</a>]</span> <span id="id4">[<a class="reference internal" href="#id437">4</a>]</span> <span id="id5">[<a class="reference internal" href="#id438">5</a>]</span> has been exploring this security-based approach depending on the target computational task.
+One approach for solving this tension between privacy and utility is based on <em>data encryption</em> and consists in developping secure computation protocols able to learn models or to compute statistics on encrypted data. A lot of scientific literature <span id="id2">[<a class="reference internal" href="#id465">2</a>]</span> <span id="id3">[<a class="reference internal" href="#id466">3</a>]</span> <span id="id4">[<a class="reference internal" href="#id467">4</a>]</span> <span id="id5">[<a class="reference internal" href="#id468">5</a>]</span> has been exploring this security-based approach depending on the target computational task.
 Another approach consists in conducting data analysis tasks on datasets made anonymous by the application of some <span class="xref std std-doc">./L1.privacy_mechanisms</span>.
 according to some <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>. Anonymization must no be reduced to <a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a> (see also <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>), which is defined in GDPR <a href="https://gdpr-info.eu/art-4-gdpr/" target=_blank>Article 4</a> as “the processing
 of personal data in such a way that the data cannot be attributed to a specific data subject without the use of additional information.”
@@ -1378,7 +1383,7 @@ of practice, 2017. https://ico.org.uk/media/for-organisations/documents/1595/pia
 <ul class="simple">
 <li><p><a href="https://amnesia.openaire.eu/" target=_blank>Amnesia</a>, a tool for anonymize tabular data relying on <a class="reference internal" href="L2.k_anonymity.html"><span class="doc">k-anonymity</span></a> paradigm;</p></li>
 <li><p><a href="https://arx.deidentifier.org/anonymization-tool/" target=_blank>AXR</a>, a tool that incorporates different <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>;</p></li>
-<li><p><a href="https://github.com/scikit-mobility/scikit-mobility" target=_blank>Scikit-mobility</a>, a Python library for mobility analysis that includes the computation of privacy risks in such setting, based on the work presented in <span id="id8">[<a class="reference internal" href="#id439">6</a>]</span> <span id="id9">[<a class="reference internal" href="#id440">7</a>]</span>.</p></li>
+<li><p><a href="https://github.com/scikit-mobility/scikit-mobility" target=_blank>Scikit-mobility</a>, a Python library for mobility analysis that includes the computation of privacy risks in such setting, based on the work presented in <span id="id8">[<a class="reference internal" href="#id469">6</a>]</span> <span id="id9">[<a class="reference internal" href="#id470">7</a>]</span>.</p></li>
 </ul>
 </div>
 <div class="section" id="taxonomic-organisation-of-terms">
@@ -1411,22 +1416,22 @@ In Fig. <a class="reference internal" href="#t3-5taxonomy35"><span class="std st
 <dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
 </dd>
-<dt class="label" id="id435"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id465"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>C. Castelluccia, A. C.-F. Chan, E. Mykletun, and G. Tsudik. Efficient and Provably Secure Aggregation of Encrypted Data in Wireless Sensor Networks. <em>ACM Transactions on Sensor Networks (TOSN)</em>, 5(3):20:1–20:36, 2009.</p>
 </dd>
-<dt class="label" id="id436"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id466"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Q.-C. To, B. Nguyen, and P. Pucheral. Private and Scalable Execution of SQL Aggregates on a Secure Decentralized Architecture. <em>ACM Transactions on Database Systems (TODS)</em>, 41(3):16:1–16:43, 2016.</p>
 </dd>
-<dt class="label" id="id437"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id467"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>J. Mirval, L. Bouganim, and I. Sandu Popa. Practical Fully-Decentralized Secure Aggregation for Personal Data Management Systems. In <em>International Conference on Scientific and Statistical Database Management (SSDBM)</em>, 259–264. 2021.</p>
 </dd>
-<dt class="label" id="id438"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id468"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>R. Ciucanu, M. Giraud, P. Lafourcade, and L. Ye. Secure Grouping and Aggregation with MapReduce. In <em>International Joint Conference on e-Business and Telecommunications (ICETE) – Volume 2: International Conference on Security and Cryptography (SECRYPT)</em>, 514–521. 2018.</p>
 </dd>
-<dt class="label" id="id439"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
+<dt class="label" id="id469"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
 <dd><p>Luca Pappalardo, Filippo Simini, Gianni Barlacchi, and Roberto Pellungrini. Scikit-mobility: a python library for the analysis, generation and risk assessment of mobility data. 2019. https://arxiv.org/abs/1907.07062.</p>
 </dd>
-<dt class="label" id="id440"><span class="brackets"><a class="fn-backref" href="#id9">7</a></span></dt>
+<dt class="label" id="id470"><span class="brackets"><a class="fn-backref" href="#id9">7</a></span></dt>
 <dd><p>Francesca Pratesi, Anna Monreale, Roberto Trasarti, Fosca Giannotti, Dino Pedreschi, and Tadashi Yanagihara. PRUDEnce: a system for assessing privacy risk vs utility in data sharing ecosystems. <em>Transaction Data Privacy</em>, 11(2):139–167, 2018.</p>
 </dd>
 </dl>

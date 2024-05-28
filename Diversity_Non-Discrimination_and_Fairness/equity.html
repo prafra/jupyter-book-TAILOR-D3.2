@@ -179,6 +179,11 @@ const thebe_selector_output = ".output, .cell_output"
      Meaningful human control
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Human_Agency_and_Oversight/Causal_responsibility.html">
+     Causal Responsibility
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -384,6 +389,11 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toctree-l3">
       <a class="reference internal" href="../Accountability/L3.The_frame_problem.html">
        The Frame Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L3.Problem_of_many_hands.html">
+       The Problem of Many Hands
       </a>
      </li>
     </ul>
@@ -877,11 +887,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../index/Human_Agency_and_Oversight/Meaningful%20human%20control.html">
-     Meaningful Human Control
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../index/Technical_Robustness_and_Safety/Measurement.html">
      Measurement
     </a>
@@ -1308,17 +1313,17 @@ the input variables, and so no direct discrimination will take place.
 Instead, indirect discrimination (where there is direct discrimination
 on features that strongly correlate with a protected feature, in such a
 way that users with a socially salient value of the feature – e.g.
-women – are worse off, cf. <span id="id1">[<a class="reference internal" href="#id222">1</a>]</span>) is the most common type
+women – are worse off, cf. <span id="id1">[<a class="reference internal" href="#id252">1</a>]</span>) is the most common type
 of discrimination in machine learning systems. For ways to detect these
 cases of indirect discrimination, see the <a class="reference internal" href="fairness.html"><span class="doc std std-doc">fairness metrics</span></a>.</p>
 <p>This type of indirect discrimination is often unintentional.
 Philosophical accounts thus disagree about the degree of intentionality
 that is required for bias to count as discrimination: mental state
-accounts <span id="id2">[<a class="reference internal" href="#id223">2</a>]</span> require systematic animosity or preferences
+accounts <span id="id2">[<a class="reference internal" href="#id253">2</a>]</span> require systematic animosity or preferences
 towards a certain group. Such animosity need not be present among the
 designers of the system, though it may be part of the reason for the
 societal biases that filter through into the data. Other accounts
-<span id="id3">[<a class="reference internal" href="#id222">1</a>, <a class="reference internal" href="fairness.html#id244">2</a>]</span> opt for weaker notions of intentionality,
+<span id="id3">[<a class="reference internal" href="#id252">1</a>, <a class="reference internal" href="fairness.html#id274">2</a>]</span> opt for weaker notions of intentionality,
 where it is sufficient to enable the feature/group membership to play a
 role in the decision making procedure. This clearly allows for the
 (frequent) scenario where an algorithm has disparate impacts on groups
@@ -1329,12 +1334,12 @@ smokers is not clearly a case of discrimination. So when is a bias a
 case of discrimination?</p>
 <p>An influential point of departure is the idea that biases should not be
 on features outside of people’s control
-<span id="id4">[<a class="reference internal" href="#id225">4</a>, <a class="reference internal" href="#id224">5</a>]</span>. This might explain why the
+<span id="id4">[<a class="reference internal" href="#id255">4</a>, <a class="reference internal" href="#id254">5</a>]</span>. This might explain why the
 paradigmatic cases of discrimination is when there is disparate
 treatment based on gender, race, or ethnicity (cf. the entry <a class="reference internal" href="discrimination.html"><span class="doc">Grounds of Discrimination</span></a>), as we
 cannot choose these. However, there are more features beyond our
 control, as illustrated by the ‘other people’s choice principle’
-<span id="id5">[<a class="reference internal" href="#id225">4</a>]</span>: statistical patterns resulting from other
+<span id="id5">[<a class="reference internal" href="#id255">4</a>]</span>: statistical patterns resulting from other
 people’s choices are not in our control either, and thus may lead to
 discrimination. Consequently, charging higher premiums to a buyer of a
 red car because on average drivers of red cars cause more accidents may
@@ -1344,18 +1349,18 @@ other hand, charging higher premiums to smokers does not violate this
 principle, since smoking is a direct cause of higher health risks. In
 practice, however, it is difficult to draw a clear border, as e.g.
 socio-economic status impacts people’s choices. Instead, some authors
-<span id="id6">[<a class="reference internal" href="justice.html#id188">2</a>]</span> suggest to consider notions of <a class="reference internal" href="justice.html"><span class="doc">Justice</span></a> as guiding the distribution of benefits and burdens resulting from the
+<span id="id6">[<a class="reference internal" href="justice.html#id218">2</a>]</span> suggest to consider notions of <a class="reference internal" href="justice.html"><span class="doc">Justice</span></a> as guiding the distribution of benefits and burdens resulting from the
 use of AI. For example, luck egalitarianism would consider it
 discriminatory to uphold biases which reflect factors of luck. Still,
 while the exact confines of normatively problematic discrimination are
 difficult to define, it is clear that gender, race, etc. are protected
 features and that such discrimination needs to be detected and tackled.</p>
-<p>Following the egalitarian principles of <span id="id7">[<a class="reference internal" href="#id142">7</a>, <a class="reference internal" href="#id141">8</a>]</span>, some
+<p>Following the egalitarian principles of <span id="id7">[<a class="reference internal" href="#id172">7</a>, <a class="reference internal" href="#id171">8</a>]</span>, some
 authors address fairness from a multi-agent perspective
-<span id="id8">[<a class="reference internal" href="#id140">9</a>, <a class="reference internal" href="#id139">10</a>]</span> in automated decision making. Taking a welfare
-perspective <span id="id9">[<a class="reference internal" href="#id120">11</a>]</span> propose a family of welfare based measures
+<span id="id8">[<a class="reference internal" href="#id170">9</a>, <a class="reference internal" href="#id169">10</a>]</span> in automated decision making. Taking a welfare
+perspective <span id="id9">[<a class="reference internal" href="#id150">11</a>]</span> propose a family of welfare based measures
 that can be integrated together with other fairness and performance
-constraints. Following the same tracks, <span id="id10">[<a class="reference internal" href="#id124">12</a>]</span> considered the
+constraints. Following the same tracks, <span id="id10">[<a class="reference internal" href="#id154">12</a>]</span> considered the
 temporal/sequential dimension and addressed fairness in the context of
 Markov decision processes and reinforcement learning. Such
 multi-objective and welfare approaches not only enforce human
@@ -1366,40 +1371,40 @@ trade-off between privilege and unprivileged groups.</p>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p id="id11"><dl class="citation">
-<dt class="label" id="id222"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dt class="label" id="id252"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
 <dd><p>Kasper Lippert-Rasmussen. <em>Born free and equal?: A philosophical inquiry into the nature of discrimination</em>. Oxford University Press, 2013.</p>
 </dd>
-<dt class="label" id="id223"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id253"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Thomas M Scanlon. Moral dimensions. In <em>Moral Dimensions</em>. Harvard University Press, 2009.</p>
 </dd>
-<dt class="label" id="id215"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id245"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Michele Loi and Markus Christen. Choosing how to discriminate: navigating ethical trade-offs in fair algorithmic design for the insurance sector. <em>Philosophy &amp; Technology</em>, 34(4):967–992, 2021.</p>
 </dd>
-<dt class="label" id="id225"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
+<dt class="label" id="id255"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
 <dd><p>Kasper Lippert-Rasmussen. Nothing personal: on statistical discrimination. <em>Journal of Political Philosophy</em>, 15(4):385–403, 2007.</p>
 </dd>
-<dt class="label" id="id224"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
+<dt class="label" id="id254"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
 <dd><p>Daniel E Palmer. Insurance, risk assessment and fairness: an ethical analysis. In <em>Insurance ethics for a more ethical world</em>. Emerald Group Publishing Limited, 2007.</p>
 </dd>
-<dt class="label" id="id159"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dt class="label" id="id189"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p>Reuben Binns, Max Van Kleek, Michael Veale, Ulrik Lyngs, Jun Zhao, and Nigel Shadbolt. 'it's reducing a human being to a percentage': perceptions of justice in algorithmic decisions. In <em>CHI</em>, 377. ACM, 2018.</p>
 </dd>
-<dt class="label" id="id142"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dt class="label" id="id172"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
 <dd><p>John Rawls. <em>A theory of justice</em>. Harvard university press, 2009.</p>
 </dd>
-<dt class="label" id="id141"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
+<dt class="label" id="id171"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
 <dd><p>Hervé Moulin. <em>Fair division and collective welfare</em>. MIT press, 2004.</p>
 </dd>
-<dt class="label" id="id140"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
+<dt class="label" id="id170"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
 <dd><p>Steven de Jong, Karl Tuyls, and Katja Verbeeck. Fairness in multi-agent systems. <em>Knowl. Eng. Rev.</em>, 23(2):153–180, 2008.</p>
 </dd>
-<dt class="label" id="id139"><span class="brackets"><a class="fn-backref" href="#id8">10</a></span></dt>
+<dt class="label" id="id169"><span class="brackets"><a class="fn-backref" href="#id8">10</a></span></dt>
 <dd><p>Jianye Hao and Ho-fung Leung. <em>Fairness in Cooperative Multiagent Systems</em>, pages 27–70. Springer Berlin Heidelberg, Berlin, Heidelberg, 2016.</p>
 </dd>
-<dt class="label" id="id120"><span class="brackets"><a class="fn-backref" href="#id9">11</a></span></dt>
+<dt class="label" id="id150"><span class="brackets"><a class="fn-backref" href="#id9">11</a></span></dt>
 <dd><p>Hoda Heidari, Claudio Ferrari, Krishna P. Gummadi, and Andreas Krause. Fairness behind a veil of ignorance: A welfare analysis for automated decision making. In <em>NeurIPS</em>, 1273–1283. 2018.</p>
 </dd>
-<dt class="label" id="id124"><span class="brackets"><a class="fn-backref" href="#id10">12</a></span></dt>
+<dt class="label" id="id154"><span class="brackets"><a class="fn-backref" href="#id10">12</a></span></dt>
 <dd><p>Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, and Aaron Roth. Fairness in reinforcement learning. In <em>ICML</em>, volume 70 of Proceedings of Machine Learning Research, 1617–1626. PMLR, 2017.</p>
 </dd>
 </dl>
