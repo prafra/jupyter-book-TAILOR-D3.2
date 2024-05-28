@@ -5,6 +5,7 @@
 #author: TAILOR WP3 members; see <a href="/jupyter-book-TAILOR-D3.2/authors.html" target="_blank">here</a> for the complete list of contributors. # need to move all home files (i.e., TAILOR, T3.X, AnalyticalIndex) in a subfolder
 title: The TAILOR Handbook of Trustworthy AI
 author: TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. # need to move all home files (i.e., TAILOR, T3.X, AnalyticalIndex) in a subfolder
+This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215
 logo: TAILOR-logo-coloured.png
 
 # Force re-execution of notebooks on each build.
