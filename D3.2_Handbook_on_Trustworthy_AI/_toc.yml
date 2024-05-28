@@ -18,6 +18,7 @@ chapters:
   title: Human Agency and Oversight
   sections:
   - file: Human_Agency_and_Oversight/Meaningful_human_control
+  - file: Human_Agency_and_Oversight/Causal_responsibility
 - file: Transparency/Transparency
   title: Transparency
   sections:
@@ -61,6 +62,7 @@ chapters:
     sections:
     - file: Accountability/L3.Wicked_problems
     - file: Accountability/L3.The_frame_problem
+    - file: Accountability/L3.Problem_of_many_hands
   - file: Accountability/L2.Reproducibility
   - file: Accountability/L2.Traceability
     sections:

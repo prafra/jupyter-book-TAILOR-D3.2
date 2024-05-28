@@ -10,6 +10,7 @@ Coordinators:
 > - Riccardo Albertoni - Istituto di Matematica Applicata e Tecnologie Informatiche "Enrico Magenes", Consiglio Nazionale delle Ricerche (IMATI-CNR), Via De Marini, 6, 16149 Genova, Italy <!-- T3.4 -->
 > - Tristan Allard - University of Rennes, CNRS, IRISA, 35000 Rennes, France <!-- T3.5 -->
 > - Guilherme Alves, University of Lorraine, CNRS, Inria, LORIA, 54000 Nancy, France <!-- T3.3 -->
+> - George Ashwin - Faculty of Electrical Engineering Mathematics and Computer Science, Delft University of Technology, Delft, The Netherlands 
 > - Alejandra Bringas Colmenarejo, School of Law, University of Southampton, SO17 1BJ, United Kindom   <!-- T3.3 -->
 > - Stefan Buijsman - Delft University of Technology, Jaffalaan 5, 2628 BX, Delft, The Netherlands <!-- T3.3 -->
 > - Pablo A M Casares - VRAIN, Universitat Politècnica de València <!-- T3.2 -->
@@ -37,5 +38,7 @@ Coordinators:
 > - Andrea Visentin - School of Computer Science & IT, University College Cork, Cork, Ireland <!-- T3.6 -->
 > - Arkady Zgonnikov - Faculty of Mechanical, Maritime and Materials Engineering, Delft University of Technology, Delft, The Netherlands <!-- T3.4 -->
 > - Sami Zhioua, Inria, Ecole Polytechnique, IPP, 91120, Paris, France <!-- T3.3 -->
+
+
 
 
