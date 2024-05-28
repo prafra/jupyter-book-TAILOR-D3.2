@@ -62,3 +62,4 @@ With respect to other encyclopedias or handbooks, the TAILOR HTAI is characteriz
 
 > This entry was written by Francesca Pratesi and Umberto Straccia.
 
+> This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215
