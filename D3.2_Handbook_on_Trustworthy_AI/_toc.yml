@@ -113,7 +113,7 @@ chapters:
   - file: index/Transparency/Black-box Explanations
   - file: index/Technical_Robustness_and_Safety/Brittleness
   - file: index/Societal_and_Environmental_Wellbeing/C2C
-  - {doc}`../index/Human_Agency_and_Oversight/Causal_responsibility`
+  - file: index/index/Human_Agency_and_Oversight/Causal_responsibility`
   - file: index/Societal_and_Environmental_Wellbeing/Cloud Computing
   - file: index/Accountability/Continuous monitoring
   - file: index/Societal_and_Environmental_Wellbeing/cradle 2 cradle
@@ -165,7 +165,7 @@ chapters:
   - file: index/Transparency/Post-hoc Explanations
   - file: index/Societal_and_Environmental_Wellbeing/Power Aware
   - file: index/Privacy_and_Data_Governance/Privacy model
-  - {doc}`../index/Accountability/Problem_of_many_hands`
+  - file: index/Accountability/Problem_of_many_hands`
   - file: index/Accountability/Provenance
   - file: index/Privacy_and_Data_Governance/Pseudonymised Data
   - file: index/Privacy_and_Data_Governance/Re-identification Attack
