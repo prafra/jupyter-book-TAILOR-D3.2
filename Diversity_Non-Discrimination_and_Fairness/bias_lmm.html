@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discrimination &amp; Equity &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    <title>Bias and Fairness in LLMs &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,11 +50,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/equity.html" />
+    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/bias_lmm.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Fairness notions and metrics" href="fairness.html" />
-    <link rel="prev" title="Bias" href="bias.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -309,16 +307,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="Diversity_Non-Discrimination_and_Fairness.html">
    Diversity, Non-Discrimination, and Fairness
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="auditing.html">
      Auditing AI
@@ -329,8 +327,8 @@ const thebe_selector_output = ".output, .cell_output"
      Bias
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="equity.html">
      Discrimination &amp; Equity
     </a>
    </li>
@@ -1159,7 +1157,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/equity.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/bias_lmm.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1187,7 +1185,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/equity.md"
+        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/bias_lmm.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1253,7 +1251,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
+   More in detail
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1270,7 +1268,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Discrimination & Equity</h1>
+                <h1>Bias and Fairness in LLMs</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1287,7 +1285,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
+   More in detail
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1305,66 +1303,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="discrimination-equity">
-<h1>Discrimination &amp; Equity<a class="headerlink" href="#discrimination-equity" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="bias-and-fairness-in-llms">
+<h1>Bias and Fairness in LLMs<a class="headerlink" href="#bias-and-fairness-in-llms" title="Permalink to this headline">#</a></h1>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
-<p>Forms of bias that count as discrimination against social groups or individuals should be avoided, both from legal and ethical perspectives. Discrimination can be direct or indirect, intentional or unintentional.</p>
+<p>Within the Natural Language Processing (NLP) field, bias manifests in several forms, possibly leading to harms and unfairness. We review here intrinsic, lantent bias; extrinsic harms, and data selection bias in Large Language Models (LLMs).</p>
 </div>
 <div class="section" id="more-in-detail">
-<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
-<p>Not all forms of <em>bias</em> (also known as <em>statistical discrimination</em>) are problematic. Here we use the normative sense of <em>discrimination</em>, where all forms of bias that count as discrimination are considered problematic and should be avoided. This discrimination can be direct (where a protected feature is intentionally used in the decision making procedure).
-In such a case explainability tools such as feature importance methods can help to detect whether a model’s decisions are based on the feature, in addition to the other <a class="reference internal" href="fairness.html"><span class="doc std std-doc">fairness metrics</span></a>. Often, however, protected features are purposely not included among the input variables, and so no direct discrimination will take place.
-Instead, indirect discrimination (where there is direct discrimination on features that strongly correlate with a protected feature, in such a
-way that users with a socially salient value of the feature – e.g. women – are worse off <span id="id1">[<a class="reference internal" href="#id252">1</a>]</span>) is the most common type of discrimination in machine learning systems. For ways to detect these cases of indirect discrimination, see the <a class="reference internal" href="fairness.html"><span class="doc std std-doc">fairness metrics</span></a> entry.</p>
-<p>This type of indirect discrimination is often unintentional. Philosophical accounts thus disagree about the degree of intentionality that is required for bias to count as discrimination: mental state accounts <span id="id2">[<a class="reference internal" href="#id253">2</a>]</span> require systematic animosity or preferences towards a certain group. Such animosity need not be present among the designers of the system, though it may be part of the reason for the societal biases that filter through into the data. Other accounts <span id="id3">[<a class="reference internal" href="#id252">1</a>, <a class="reference internal" href="fairness.html#id274">2</a>]</span> opt for weaker notions of intentionality, where it is sufficient to enable the feature/group membership to play a role in the decision making procedure. This clearly allows for the (frequent) scenario where an algorithm has disparate impacts on groups even when this was not the result of preferences/animosities of the developers. Yet even then not all types of bias are considered normatively problematic: a statistical bias that negatively impacts smokers is not clearly a case of discrimination. So when is a bias a case of discrimination?</p>
-<p>An influential point of departure is the idea that biases should not be on features outside of people’s control <span id="id4">[<a class="reference internal" href="#id255">4</a>, <a class="reference internal" href="#id254">5</a>]</span>. This might explain why the paradigmatic cases of discrimination is when there is disparate treatment based on gender, race, or ethnicity (see the entry <a class="reference internal" href="discrimination.html"><span class="doc">Grounds of Discrimination</span></a>), as we cannot choose these. However, there are more features beyond our control, as illustrated by the “other people’s choice principle” <span id="id5">[<a class="reference internal" href="#id255">4</a>]</span>: statistical patterns resulting from other people’s choices are not in our control either, and thus may lead to discrimination. Consequently, charging higher premiums to a buyer of a red car because on average drivers of red cars cause more accidents may be seen as problematic. It violates the other people’s choice principle, as a buyer has no control over the driving of other car owners. On the other hand, charging higher premiums to smokers does not violate this principle, since smoking is a direct cause of higher health risks. In practice, however, it is difficult to draw a clear border, as e.g. socio-economic status impacts people’s choices. Instead, some authors <span id="id6">[<a class="reference internal" href="justice.html#id218">2</a>]</span> suggest to consider notions of <a class="reference internal" href="justice.html"><span class="doc">Justice</span></a> as guiding the distribution of benefits and burdens resulting from the use of AI. For example, luck egalitarianism would consider it discriminatory to uphold biases which reflect factors of luck. Still, while the exact confines of normatively problematic discrimination are difficult to define, it is clear that gender, race, etc. are protected features and that such discrimination needs to be detected and tackled.</p>
-<p>Following the egalitarian principles of <span id="id7">[<a class="reference internal" href="#id172">7</a>, <a class="reference internal" href="#id171">8</a>]</span>, some authors address fairness from a multi-agent perspective <span id="id8">[<a class="reference internal" href="#id170">9</a>, <a class="reference internal" href="#id169">10</a>]</span> in automated decision making. Taking a welfare perspective <span id="id9">[<a class="reference internal" href="#id150">11</a>]</span> propose a family of welfare based measures that can be integrated together with other fairness and performance constraints. Following the same tracks,
-<span id="id10">[<a class="reference internal" href="#id154">12</a>]</span> considered the temporal/sequential dimension and addressed fairness in the context of Markov decision processes and reinforcement learning. Such multi-objective and welfare approaches not only enforce human intervention and social criteria  to prevent unfair outcomes for some users or stakeholders, but could be adapted to ensure equity and fair trade-off between privilege and unprivileged groups.</p>
+<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
+<p>Large Language Models (LLMs) are ubiquitous in NLP and are often used as a base step for fine-tuning models on downstream tasks.
+The unparalleled ability of LLMs to generalize from vast corpora is affected by an inherent reinforcement of biases (see also the entry <a class="reference internal" href="bias.html"><span class="doc">Bias</span></a>). Since biases are communicated and embedded in language, they manifest in texts, both learnt and produced by LLMs.
+As foundation models, they are often employed in human-centric scenarios where their outputs may have undesired effects on historically marginalized groups of people, including discriminatory consequences.</p>
+<p>In {cite}’DBLP:journals/corr/Bommasani2021Opportunities, authors introduce the concepts of \textbf{intrinsic, latent biases}, i.e., “properties of the foundation model that can lead to harm in downstream systems”, and <strong>extrinsic harms</strong>, i.e., “specific harms from the downstream applications that are created by adapting a foundation model”. Representational bias pertains to the intrinsic harms and manifests itself as misrepresentation, under-representation, and over-representation. From the extrinsic level, harms manifest as the generation of abusive content, and marked performance disparities among different demographic groups.</p>
+<p>These issues warn that LLMs concretely impact society, posing a severe risk and limitation to the well-being of under-represented minorities, ultimately amplifying pre-existing social stereotypes, possible marginalization, and explicit harms <span id="id1">[]</span>.
+Current research has highlighted cases emblematic of harms arising from LLMs.
+For instance, studies have shown that word embeddings can encode and perpetuate gender bias by echoing and strengthening societal stereotypes <span id="id2">[]</span>.
+These biases are not merely encoded within language models’ representations but are also perpetuated to downstream tasks~\cite{blodgett-etal-2021-stereotyping,stanczak2021survey}, where they can manifest in an uneven treatment of different demographic groups.
+For example, automatic translation systems have been found to reproduce damaging gender and racial biases, especially towards gendered pronoun languages <span id="id3">[]</span>.
+Similarly, gender bias can be propagated in coreference resolution if models are trained on biased text <span id="id4">[]</span>.
+Moreover, it was found that human annotators have a tendency to label social media posts written in Afro-American English as hateful more often than other messages. This harmful pattern could potentially result in the development of a biased system that reproduces and amplifies these same discriminatory attitudes <span id="id5">[]</span>.
+Recent studies have also documented the anti-Muslim sentiment exhibited by GPT-3, which generated toxic and abusive text when interrogated with prompts containing references to Islam and Muslims <span id="id6">[]</span>.
+Summarizing, sensitive axes targeted by biases in LLMs are gender, age, sexual orientation, physical appearance, disability, nationality, ethnicity and race, socioeconomic status, religion, culture and intersectional identities. It is crucial to acknowledge how biases directed towards certain groups are yet underexplored and unaddressed by the research community <span id="id7">[]</span>.</p>
+<p>Although biases manifest differently in the various NLP tasks, they can be assessed through formal fairness notions measuring through a score the LLM output w.r.t. a social group. Fairness is evaluated using a range of metrics <span id="id8">[]</span>, which often present conflicting perspectives <span id="id9">[]</span> (see also the entry <a class="reference internal" href="fairness.html"><span class="doc">Fairness notions and metrics</span></a>). Moreover, defining fairness in the NLP context is challenging, and existing works are often inaccurate, inconsistent, and contradictory in formalizing bias <span id="id10">[]</span>.
+Nonetheless, starting from carefully auditing models’ output is mandatory to mitigate and avoid stigmatization and discrimination, given the sensitive contexts in which LLMs are deployed <span id="id11">[]</span>.</p>
+<p><em>Data selection bias</em> is defined as mistakes originating from texts sampled, selected and preprocessed to train LLMs, or introduced within the subsequent fine-tuning stage. These systematic errors arise from (i) skewed composition and distribution of knowledge domain and textual genre, (ii) range of time of the data gathered, (iii) demographic groups that create (and therefore represent) the data vs the affected application stakeholders, (iv) focusing mainly on high-resources languages (cultures) amplifying the gap w.r.t. low-resource languages (cultures), feeding a vicious feedback loop <span id="id12">[]</span>.
+To address this issue, several strategies are suggested, e.g.,~starting from a sound conceptualization step, that should guide the choice of the most appropriate assessment measures and mitigation strategies that, among others, could consist of leveraging smaller, more curated datasets, together with enhancing the diversity of the cultures and languages to which the model has been exposed <span id="id13">[]</span>.</p>
+<p>Investigating the other steps of the LLM life-cycle, potential entry points for bias injection are the model itself (e.g., equal treatment of different social groups when computing the loss), the evaluation step (e.g., leveraging on aggregate measures) and the deployment phase (e.g., unintended uses of the model) <span id="id14">[]</span>.
+Tracing back the source of these biases is extremely challenging, and attempts to mitigate them are often not successful nor effective. Indeed, in-depth data training investigation and counteracting bias by design are not doable in practice due to the huge data quantities, unfeasible to fully verify and assess, and the resources needed to develop LLMs from scratch. A recommended direction consists of collectively designing new, more accurate, holistic evaluation benchmarks, encompassing and testing different ethical desiderata <span id="id15">[]</span>.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id11"><dl class="citation">
-<dt class="label" id="id252"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
-<dd><p>Kasper Lippert-Rasmussen. <em>Born free and equal?: A philosophical inquiry into the nature of discrimination</em>. Oxford University Press, 2013.</p>
-</dd>
-<dt class="label" id="id253"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Thomas M Scanlon. Moral dimensions. In <em>Moral Dimensions</em>. Harvard University Press, 2009.</p>
-</dd>
-<dt class="label" id="id245"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Michele Loi and Markus Christen. Choosing how to discriminate: navigating ethical trade-offs in fair algorithmic design for the insurance sector. <em>Philosophy &amp; Technology</em>, 34(4):967–992, 2021.</p>
-</dd>
-<dt class="label" id="id255"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
-<dd><p>Kasper Lippert-Rasmussen. Nothing personal: on statistical discrimination. <em>Journal of Political Philosophy</em>, 15(4):385–403, 2007.</p>
-</dd>
-<dt class="label" id="id254"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
-<dd><p>Daniel E Palmer. Insurance, risk assessment and fairness: an ethical analysis. In <em>Insurance ethics for a more ethical world</em>. Emerald Group Publishing Limited, 2007.</p>
-</dd>
-<dt class="label" id="id189"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
-<dd><p>Reuben Binns, Max Van Kleek, Michael Veale, Ulrik Lyngs, Jun Zhao, and Nigel Shadbolt. 'it's reducing a human being to a percentage': perceptions of justice in algorithmic decisions. In <em>CHI</em>, 377. ACM, 2018.</p>
-</dd>
-<dt class="label" id="id172"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
-<dd><p>John Rawls. <em>A theory of justice</em>. Harvard university press, 2009.</p>
-</dd>
-<dt class="label" id="id171"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
-<dd><p>Hervé Moulin. <em>Fair division and collective welfare</em>. MIT press, 2004.</p>
-</dd>
-<dt class="label" id="id170"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
-<dd><p>Steven de Jong, Karl Tuyls, and Katja Verbeeck. Fairness in multi-agent systems. <em>Knowl. Eng. Rev.</em>, 23(2):153–180, 2008.</p>
-</dd>
-<dt class="label" id="id169"><span class="brackets"><a class="fn-backref" href="#id8">10</a></span></dt>
-<dd><p>Jianye Hao and Ho-fung Leung. <em>Fairness in Cooperative Multiagent Systems</em>, pages 27–70. Springer Berlin Heidelberg, Berlin, Heidelberg, 2016.</p>
-</dd>
-<dt class="label" id="id150"><span class="brackets"><a class="fn-backref" href="#id9">11</a></span></dt>
-<dd><p>Hoda Heidari, Claudio Ferrari, Krishna P. Gummadi, and Andreas Krause. Fairness behind a veil of ignorance: A welfare analysis for automated decision making. In <em>NeurIPS</em>, 1273–1283. 2018.</p>
-</dd>
-<dt class="label" id="id154"><span class="brackets"><a class="fn-backref" href="#id10">12</a></span></dt>
-<dd><p>Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, and Aaron Roth. Fairness in reinforcement learning. In <em>ICML</em>, volume 70 of Proceedings of Machine Learning Research, 1617–1626. PMLR, 2017.</p>
-</dd>
-</dl>
-</p>
-<blockquote>
-<div><p>This entry was written by Stefan Buijsman and Miguel Couceiro.</p>
+<span class="target" id="id16"></span><blockquote>
+<div><p>This entry was partially readapted from~\cite{DBLP:journals/corr/Marchiori23, DBLP:journals/corr/Setzu24} by Marta Marchiori Manerba}</p>
 </div></blockquote>
 </div>
 </div>
@@ -1396,20 +1366,6 @@ way that users with a socially salient value of the feature – e.g. women – a
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="bias.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Bias</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="fairness.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fairness notions and metrics</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

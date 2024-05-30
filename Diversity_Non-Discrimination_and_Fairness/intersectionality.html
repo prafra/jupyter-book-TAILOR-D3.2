@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discrimination &amp; Equity &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    <title>Intersectionality &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,11 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/equity.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/intersectionality.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Fairness notions and metrics" href="fairness.html" />
-    <link rel="prev" title="Bias" href="bias.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -309,16 +309,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="Diversity_Non-Discrimination_and_Fairness.html">
    Diversity, Non-Discrimination, and Fairness
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="auditing.html">
      Auditing AI
@@ -329,8 +329,8 @@ const thebe_selector_output = ".output, .cell_output"
      Bias
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="equity.html">
      Discrimination &amp; Equity
     </a>
    </li>
@@ -1159,7 +1159,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/equity.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/intersectionality.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1187,7 +1187,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/equity.md"
+        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/intersectionality.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1270,7 +1270,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Discrimination & Equity</h1>
+                <h1>Intersectionality</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1305,67 +1305,46 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="discrimination-equity">
-<h1>Discrimination &amp; Equity<a class="headerlink" href="#discrimination-equity" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="intersectionality">
+<h1>Intersectionality<a class="headerlink" href="#intersectionality" title="Permalink to this headline">#</a></h1>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
-<p>Forms of bias that count as discrimination against social groups or individuals should be avoided, both from legal and ethical perspectives. Discrimination can be direct or indirect, intentional or unintentional.</p>
+<p><strong>Intersectionality</strong> focuses on a specific type of bias due to the combination of sensitive factors. An individual might not be discriminated against based on race or based on gender only, but she might be discriminated against because of a combination of both. Black women are particularly prone to this type of discrimination.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
-<p>Not all forms of <em>bias</em> (also known as <em>statistical discrimination</em>) are problematic. Here we use the normative sense of <em>discrimination</em>, where all forms of bias that count as discrimination are considered problematic and should be avoided. This discrimination can be direct (where a protected feature is intentionally used in the decision making procedure).
-In such a case explainability tools such as feature importance methods can help to detect whether a model’s decisions are based on the feature, in addition to the other <a class="reference internal" href="fairness.html"><span class="doc std std-doc">fairness metrics</span></a>. Often, however, protected features are purposely not included among the input variables, and so no direct discrimination will take place.
-Instead, indirect discrimination (where there is direct discrimination on features that strongly correlate with a protected feature, in such a
-way that users with a socially salient value of the feature – e.g. women – are worse off <span id="id1">[<a class="reference internal" href="#id252">1</a>]</span>) is the most common type of discrimination in machine learning systems. For ways to detect these cases of indirect discrimination, see the <a class="reference internal" href="fairness.html"><span class="doc std std-doc">fairness metrics</span></a> entry.</p>
-<p>This type of indirect discrimination is often unintentional. Philosophical accounts thus disagree about the degree of intentionality that is required for bias to count as discrimination: mental state accounts <span id="id2">[<a class="reference internal" href="#id253">2</a>]</span> require systematic animosity or preferences towards a certain group. Such animosity need not be present among the designers of the system, though it may be part of the reason for the societal biases that filter through into the data. Other accounts <span id="id3">[<a class="reference internal" href="#id252">1</a>, <a class="reference internal" href="fairness.html#id274">2</a>]</span> opt for weaker notions of intentionality, where it is sufficient to enable the feature/group membership to play a role in the decision making procedure. This clearly allows for the (frequent) scenario where an algorithm has disparate impacts on groups even when this was not the result of preferences/animosities of the developers. Yet even then not all types of bias are considered normatively problematic: a statistical bias that negatively impacts smokers is not clearly a case of discrimination. So when is a bias a case of discrimination?</p>
-<p>An influential point of departure is the idea that biases should not be on features outside of people’s control <span id="id4">[<a class="reference internal" href="#id255">4</a>, <a class="reference internal" href="#id254">5</a>]</span>. This might explain why the paradigmatic cases of discrimination is when there is disparate treatment based on gender, race, or ethnicity (see the entry <a class="reference internal" href="discrimination.html"><span class="doc">Grounds of Discrimination</span></a>), as we cannot choose these. However, there are more features beyond our control, as illustrated by the “other people’s choice principle” <span id="id5">[<a class="reference internal" href="#id255">4</a>]</span>: statistical patterns resulting from other people’s choices are not in our control either, and thus may lead to discrimination. Consequently, charging higher premiums to a buyer of a red car because on average drivers of red cars cause more accidents may be seen as problematic. It violates the other people’s choice principle, as a buyer has no control over the driving of other car owners. On the other hand, charging higher premiums to smokers does not violate this principle, since smoking is a direct cause of higher health risks. In practice, however, it is difficult to draw a clear border, as e.g. socio-economic status impacts people’s choices. Instead, some authors <span id="id6">[<a class="reference internal" href="justice.html#id218">2</a>]</span> suggest to consider notions of <a class="reference internal" href="justice.html"><span class="doc">Justice</span></a> as guiding the distribution of benefits and burdens resulting from the use of AI. For example, luck egalitarianism would consider it discriminatory to uphold biases which reflect factors of luck. Still, while the exact confines of normatively problematic discrimination are difficult to define, it is clear that gender, race, etc. are protected features and that such discrimination needs to be detected and tackled.</p>
-<p>Following the egalitarian principles of <span id="id7">[<a class="reference internal" href="#id172">7</a>, <a class="reference internal" href="#id171">8</a>]</span>, some authors address fairness from a multi-agent perspective <span id="id8">[<a class="reference internal" href="#id170">9</a>, <a class="reference internal" href="#id169">10</a>]</span> in automated decision making. Taking a welfare perspective <span id="id9">[<a class="reference internal" href="#id150">11</a>]</span> propose a family of welfare based measures that can be integrated together with other fairness and performance constraints. Following the same tracks,
-<span id="id10">[<a class="reference internal" href="#id154">12</a>]</span> considered the temporal/sequential dimension and addressed fairness in the context of Markov decision processes and reinforcement learning. Such multi-objective and welfare approaches not only enforce human intervention and social criteria  to prevent unfair outcomes for some users or stakeholders, but could be adapted to ensure equity and fair trade-off between privilege and unprivileged groups.</p>
+<p>Historically, the topic of intersectionality has been influenced by several studies in the late twentieth century about violence against dark skinned women <span id="id1">[]</span>. On one hand, feminist efforts focused on politicizing experiences of women and on the other hand, antiracist efforts focused on politicizing experiences of people of color. However, both types of activists have frequently proceeded as though the issues and experiences they each detail occur on mutually exclusive terrains.
+Consequently, this intersectional identity as both women and with dark skin within a discourse targeting to respond to one or the other, women of color are marginalized within both. That is, the intersection of racism and sexism in black women’s lives cannot be captured by looking at the race or gender dimensions separately.</p>
+<p>In 2018, the Gender Shades project <span id="id2">[<a class="reference internal" href="#id224">1</a>]</span> described the first intersectional evaluation of face recognition systems. Instead of evaluating accuracy
+by gender or skin type alone, Buolamwini et al.~examined four intersectional subgroups: dark-skinned females, dark-skinned males, light-skinned females, and light-skinned males. The three evaluated commercial gender classifiers, namely, Microsoft Cognitive Services Face <span id="id3">[]</span>, IBM Watson Visual Recognition <span id="id4">[]</span>, and Face++ (a computer vision company headquartered in China <span id="id5">[]</span>), had the lowest accuracy on dark-skinned females. More precisely, they had the highest error rates for all evaluated gender classifiers ranging from <span class="math notranslate nohighlight">\(20\)</span> to <span class="math notranslate nohighlight">\(35\%\)</span>.</p>
+<div class="figure align-center" id="fig-interaction">
+<a class="reference internal image-reference" href="../_images/Interaction.pdf"><img alt="../_images/Interaction.pdf" src="../_images/Interaction.pdf" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">Interaction Bias, where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are sensitive variables and <span class="math notranslate nohighlight">\(Y\)</span> is an outcome.</span><a class="headerlink" href="#fig-interaction" title="Permalink to this image">#</a></p>
+</div>
+<p>Studying the problem of discrimination from the lenses of causality, intersectionality can be captured by the concept of interaction <span id="id6">[]</span>. Interaction is observed when two causes of the outcome interact with each other, making the joint effect smaller or greater than the sum of individual effects. Interaction is graphically illustrated in Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>, where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are sensitive attributes and <span class="math notranslate nohighlight">\(Y\)</span> is the outcome[^binary]. Note that regular DAGs are not able to express interaction. Figure <code class="docutils literal notranslate"><span class="pre">{number}&lt;fig:interaction&gt;</span></code> employs the graphical representation proposed by~\cite{weinberg2007can}. The arrows pointing to arrows instead of nodes account for the interaction term.</p>
+<p>The interaction term coincides with the portion of the effect due to intersectionality and can be expressed as follows:<br>
+<span class="math notranslate nohighlight">\(\textit{Interaction}(A,B) = P(Y_1|a_1, b_1) - P(Y_1|a_0, b_1) - P(Y_1|a_1, b_0) + P(Y_1|a_0, b_0)\)</span><br></p>
+<p>In practice, intersectionality presents some challenges. The first challenge is related to the complexity of data collection and analysis. In other words, collecting and analyzing data on intersecting factors can be challenging due to limited resources, methodological constraints, and privacy concerns. Second, groups that are not (yet) defined in anti-discrimination law may exist and may need protection <span id="id7">[]</span>.</p>
+<p>More generally, there are three practical concerns along the machine learning pipeline related to intersectionality in a fairness context <span id="id8">[]</span>. The first problem is related to which factors to consider when training models. It is advised to evaluate the most granular intersecting factors in the dataset while integrating domain knowledge with experiments to understand which are best to include when training models. The second problem concerns the challenge of handling increasingly small groups of individuals. Due to additional ethical considerations, it is advisable to refrain from directly applying conventional machine learning techniques to imbalanced data. Instead, exploring inherent structures among groups with shared identities is encouraged.
+The third problem is related to evaluating a large number of sub-groups. In the context of binary attributes, fairness assessment often involves comparing group differences using performance metrics derived from the confusion matrix. When dealing with more than two groups, evaluation metrics have a similar structure, albeit more generalized.
+They are typically expressed in relation to the maximum disparity (or ratio) of a performance metric either between one group and all others <span id="id9">[<a class="reference internal" href="#id316">2</a>]</span> or between two specific groups<span id="id10">[]</span>.
+Hence, methods are proposed for conducting pairwise comparisons more judiciously and introducing supplementary metrics to capture broader algorithmic trends that existing metrics may overlook <span id="id11">[]</span>.</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id11"><dl class="citation">
-<dt class="label" id="id252"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
-<dd><p>Kasper Lippert-Rasmussen. <em>Born free and equal?: A philosophical inquiry into the nature of discrimination</em>. Oxford University Press, 2013.</p>
+<p id="id12"><dl class="citation">
+<dt class="label" id="id224"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Joy Adowaa Buolamwini. <em>Gender shades: intersectional phenotypic and demographic evaluation of face datasets and gender classifiers</em>. PhD thesis, Massachusetts Institute of Technology, 2017.</p>
 </dd>
-<dt class="label" id="id253"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Thomas M Scanlon. Moral dimensions. In <em>Moral Dimensions</em>. Harvard University Press, 2009.</p>
-</dd>
-<dt class="label" id="id245"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Michele Loi and Markus Christen. Choosing how to discriminate: navigating ethical trade-offs in fair algorithmic design for the insurance sector. <em>Philosophy &amp; Technology</em>, 34(4):967–992, 2021.</p>
-</dd>
-<dt class="label" id="id255"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
-<dd><p>Kasper Lippert-Rasmussen. Nothing personal: on statistical discrimination. <em>Journal of Political Philosophy</em>, 15(4):385–403, 2007.</p>
-</dd>
-<dt class="label" id="id254"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
-<dd><p>Daniel E Palmer. Insurance, risk assessment and fairness: an ethical analysis. In <em>Insurance ethics for a more ethical world</em>. Emerald Group Publishing Limited, 2007.</p>
-</dd>
-<dt class="label" id="id189"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
-<dd><p>Reuben Binns, Max Van Kleek, Michael Veale, Ulrik Lyngs, Jun Zhao, and Nigel Shadbolt. 'it's reducing a human being to a percentage': perceptions of justice in algorithmic decisions. In <em>CHI</em>, 377. ACM, 2018.</p>
-</dd>
-<dt class="label" id="id172"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
-<dd><p>John Rawls. <em>A theory of justice</em>. Harvard university press, 2009.</p>
-</dd>
-<dt class="label" id="id171"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
-<dd><p>Hervé Moulin. <em>Fair division and collective welfare</em>. MIT press, 2004.</p>
-</dd>
-<dt class="label" id="id170"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
-<dd><p>Steven de Jong, Karl Tuyls, and Katja Verbeeck. Fairness in multi-agent systems. <em>Knowl. Eng. Rev.</em>, 23(2):153–180, 2008.</p>
-</dd>
-<dt class="label" id="id169"><span class="brackets"><a class="fn-backref" href="#id8">10</a></span></dt>
-<dd><p>Jianye Hao and Ho-fung Leung. <em>Fairness in Cooperative Multiagent Systems</em>, pages 27–70. Springer Berlin Heidelberg, Berlin, Heidelberg, 2016.</p>
-</dd>
-<dt class="label" id="id150"><span class="brackets"><a class="fn-backref" href="#id9">11</a></span></dt>
-<dd><p>Hoda Heidari, Claudio Ferrari, Krishna P. Gummadi, and Andreas Krause. Fairness behind a veil of ignorance: A welfare analysis for automated decision making. In <em>NeurIPS</em>, 1273–1283. 2018.</p>
-</dd>
-<dt class="label" id="id154"><span class="brackets"><a class="fn-backref" href="#id10">12</a></span></dt>
-<dd><p>Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, and Aaron Roth. Fairness in reinforcement learning. In <em>ICML</em>, volume 70 of Proceedings of Machine Learning Research, 1617–1626. PMLR, 2017.</p>
+<dt class="label" id="id316"><span class="brackets"><a class="fn-backref" href="#id9">2</a></span></dt>
+<dd><p>Michael J. Kearns, Seth Neel, Aaron Roth, and Zhiwei Steven Wu. Preventing fairness gerrymandering: auditing and learning for subgroup fairness. In <em>ICML</em>, volume 80 of Proceedings of Machine Learning Research, 2569–2577. PMLR, 2018.</p>
 </dd>
 </dl>
 </p>
 <blockquote>
-<div><p>This entry was written by Stefan Buijsman and Miguel Couceiro.</p>
+<div><p>This entry was written by Karima Makhlouf and Sami Zhioua.</p>
 </div></blockquote>
+<p>[^binary] Without loss of generality, all three variables are assumed to be binary with sets of values <span class="math notranslate nohighlight">\(\{a_0,a_1\}\)</span>, <span class="math notranslate nohighlight">\(\{b_0,b_1\}\)</span>, and <span class="math notranslate nohighlight">\(\{y_0,y_1\}\)</span>, respectively.</p>
 </div>
 </div>
 
@@ -1396,20 +1375,6 @@ way that users with a socially salient value of the feature – e.g. women – a
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="bias.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Bias</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="fairness.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fairness notions and metrics</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
