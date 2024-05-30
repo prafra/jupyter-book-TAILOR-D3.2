@@ -55,6 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/intersectionality.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Justice" href="justice.html" />
+    <link rel="prev" title="Grounds of Discrimination" href="discrimination.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -309,16 +311,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Diversity_Non-Discrimination_and_Fairness.html">
    Diversity, Non-Discrimination, and Fairness
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="auditing.html">
      Auditing AI
@@ -327,6 +329,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="bias.html">
      Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bias_factors.html">
+     Bias Conducive Factors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bias_lmm.html">
+     Bias and Fairness in LLMs
     </a>
    </li>
    <li class="toctree-l2">
@@ -347,6 +359,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="discrimination.html">
      Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Intersectionality
     </a>
    </li>
    <li class="toctree-l2">
@@ -1319,9 +1336,9 @@ Consequently, this intersectional identity as both women and with dark skin with
 by gender or skin type alone, Buolamwini et al.~examined four intersectional subgroups: dark-skinned females, dark-skinned males, light-skinned females, and light-skinned males. The three evaluated commercial gender classifiers, namely, Microsoft Cognitive Services Face <span id="id3">[]</span>, IBM Watson Visual Recognition <span id="id4">[]</span>, and Face++ (a computer vision company headquartered in China <span id="id5">[]</span>), had the lowest accuracy on dark-skinned females. More precisely, they had the highest error rates for all evaluated gender classifiers ranging from <span class="math notranslate nohighlight">\(20\)</span> to <span class="math notranslate nohighlight">\(35\%\)</span>.</p>
 <div class="figure align-center" id="fig-interaction">
 <a class="reference internal image-reference" href="../_images/Interaction.pdf"><img alt="../_images/Interaction.pdf" src="../_images/Interaction.pdf" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-text">Interaction Bias, where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are sensitive variables and <span class="math notranslate nohighlight">\(Y\)</span> is an outcome.</span><a class="headerlink" href="#fig-interaction" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Interaction Bias, where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are sensitive variables and <span class="math notranslate nohighlight">\(Y\)</span> is an outcome.</span><a class="headerlink" href="#fig-interaction" title="Permalink to this image">#</a></p>
 </div>
-<p>Studying the problem of discrimination from the lenses of causality, intersectionality can be captured by the concept of interaction <span id="id6">[]</span>. Interaction is observed when two causes of the outcome interact with each other, making the joint effect smaller or greater than the sum of individual effects. Interaction is graphically illustrated in Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>, where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are sensitive attributes and <span class="math notranslate nohighlight">\(Y\)</span> is the outcome[^binary]. Note that regular DAGs are not able to express interaction. Figure <code class="docutils literal notranslate"><span class="pre">{number}&lt;fig:interaction&gt;</span></code> employs the graphical representation proposed by~\cite{weinberg2007can}. The arrows pointing to arrows instead of nodes account for the interaction term.</p>
+<p>Studying the problem of discrimination from the lenses of causality, intersectionality can be captured by the concept of interaction <span id="id6">[]</span>. Interaction is observed when two causes of the outcome interact with each other, making the joint effect smaller or greater than the sum of individual effects. Interaction is graphically illustrated in Figure <a class="reference internal" href="#fig-interaction"><span class="std std-numref">20</span></a>, where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are sensitive attributes and <span class="math notranslate nohighlight">\(Y\)</span> is the outcome[^binary]. Note that regular DAGs are not able to express interaction. Figure <code class="docutils literal notranslate"><span class="pre">{number}&lt;fig:interaction&gt;</span></code> employs the graphical representation proposed by~\cite{weinberg2007can}. The arrows pointing to arrows instead of nodes account for the interaction term.</p>
 <p>The interaction term coincides with the portion of the effect due to intersectionality and can be expressed as follows:<br>
 <span class="math notranslate nohighlight">\(\textit{Interaction}(A,B) = P(Y_1|a_1, b_1) - P(Y_1|a_0, b_1) - P(Y_1|a_1, b_0) + P(Y_1|a_0, b_0)\)</span><br></p>
 <p>In practice, intersectionality presents some challenges. The first challenge is related to the complexity of data collection and analysis. In other words, collecting and analyzing data on intersecting factors can be challenging due to limited resources, methodological constraints, and privacy concerns. Second, groups that are not (yet) defined in anti-discrimination law may exist and may need protection <span id="id7">[]</span>.</p>
@@ -1375,6 +1392,20 @@ Hence, methods are proposed for conducting pairwise comparisons more judiciously
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="discrimination.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Grounds of Discrimination</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="justice.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Justice</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
