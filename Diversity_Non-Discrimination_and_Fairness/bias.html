@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bias &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,36 +18,37 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/bias.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,21 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -85,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -103,18 +88,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../TAILOR.html">
-                    The TAILOR Handbook of Trustworthy AI
-                </a>
-            </li>
-        </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR.html">
+   The TAILOR Handbook of Trustworthy AI
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -678,6 +662,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/bias_factors.html">
+     Bias Conducive Factors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/bias_lmm.html">
+     Bias and Fairness in LLMs
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Black-box%20Explanations.html">
      Black-box Explanation
     </a>
@@ -1091,250 +1085,127 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
             
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Diversity_Non-Discrimination_and_Fairness/bias.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/bias.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenuti
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
-    <div id="rtd-footer-container"></div>
 </div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/bias.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/bias.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
-</div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Bias</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-in-detail">
-   More in Detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
-                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="bias">
-<h1>Bias<a class="headerlink" href="#bias" title="Permalink to this headline">#</a></h1>
+<h1>Bias<a class="headerlink" href="#bias" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-brief">
-<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 <p><strong>Bias</strong> refers to an inclination towards or against a particular individual, group,
 or sub-groups. AI models may inherit biases from training data or introduce
 new forms of bias.</p>
 </div>
 <div class="section" id="more-in-detail">
-<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
-<p>The success of Machine Learning (ML) systems in visual recognition, online advertising, and recommendation systems have inspired its use in applications such as employee hiring, legal systems, social systems, and voice interfaces such as Alexa, Siri, and the like. Along with the proliferation of these domains, a significant concern regarding the trustworthiness of decisions has risen due to various biases (or systematic errors) which may produce skewed results in the automated decision making. The word ‘bias’ has an established normative explanation in legal language, where it refers to “judgement based on preconceived notions or prejudices, as opposed to the impartial evaluation of facts” <span id="id1">[<a class="reference internal" href="#id320">3</a>]</span>. In a more generalized version, bias refers to an inclination towards or against a particular individual, group, or sub-groups. The real world is often described as biased in this sense, and since machine learning techniques simply imitate observations of the world, it should come as no surprise that the resulting systems also capture the same bias <span id="id2">[<a class="reference internal" href="#id158">1</a>]</span>.</p>
-<p>Correctional Offender Management Profiling for Alternative Sanctions (COMPAS) <span id="id3">[<a class="reference internal" href="#id258">4</a>]</span> software for recidivism prediction, used by the U.S department courts to decide whether to release a person or keep them in prison, has discontinued its use after a careful investigation conducted by the U.S officers as they concluded that the software is biased against African-Americans. Also, the use of predictive policing <span id="id4">[<a class="reference internal" href="#id259">5</a>]</span> software has been ceased due to the presence of racial biases. Amazon’s employment hiring <span id="id5">[<a class="reference internal" href="#id260">6</a>]</span> application realized that it is biased against women. Content personalization and ad ranking systems have been accused of filter bubbles and racial and gender profiling. Bidirectional Encoder Representations from Transformers (BERT), has shown signs of gender biases in google search as it is observed that the gender-neutral terms (such as receptionist, doctor, nurse etc.) acquire stereotype and bias due to the context in which they are present in the corpus <span id="id6">[<a class="reference internal" href="#id321">7</a>]</span>. In image domain, a latest gender classification report from the National Institute for Standards and Technology (NIST) pointed out that image classification algorithms performed worse for female-labeled faces than male-labeled faces , exhibit gender biases <span id="id7">[<a class="reference internal" href="#id322">8</a>]</span>. A bias can exist in different forms and shapes based on the domain and context of application. The main reasons for the origin of these biases are manifold. An outline of bias-inducing stages in the ML pipeline is detailed in <span id="id8">[<a class="reference internal" href="#id150">2</a>]</span>. Based on this study, bias definitions can be induced in data, algorithms, and user interaction feedback loops.</p>
-<p>ML systems are primarly based on  data-driven approaches; therefore, the outcome of ML-based decision-making processes depends on the input data and the interpretation of that data. This decision-making process involves numerous data analyses, such as uncovering patterns in the data, finding correlations and trends, missing data imputations, and data pre-processing. The performance of ML models depends on the data used to train these models and the analysis performed on the training data. It is noted that the primary source of biases is from the data and its processing- involves what data was used for training, how it was collected, and how the data was generated and pre-processed. A general definition of dataset bias is that the data is not representative of the population of study <span id="id9">[<a class="reference internal" href="#id261">9</a>]</span>. Nevertheless, in a broader sense, it also occurs when the data does not contain features for specific applications we are interested in. Additionally, human interactions with the data produce bias against a specific group or individual <span id="id10">[<a class="reference internal" href="#id261">9</a>]</span>. Various forms of dataset biases have been identified in ML systems. Sample/selection biases emerge due to the non-random sampling of groups and sub-groups. Exclusion bias arises at the data pre-processing stage when valuable data are omitted thought to be unnecessary. When the data used for training a model is different from the data collected from the real world, for example, the training data is collected using a fixed camera in image training, but the production data is collected using different cameras, a measurement bias can be occurred. Recall bias is a kind of measurement bias, and it occurs when similar data are inconsistently labeled. Observer bias occurs when we observe data based on what we want to see or expect to see. Association biases are resultant of the spurious correlations between features in the data.</p>
+<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>The success of Machine Learning (ML) systems in visual recognition, online advertising, and recommendation systems have inspired its use in applications such as employee hiring, legal systems, social systems, and voice interfaces such as Alexa, Siri, and the like. Along with the proliferation of these domains, a significant concern regarding the trustworthiness of decisions has risen due to various biases (or systematic errors) which may produce skewed results in the automated decision making. The word ‘bias’ has an established normative explanation in legal language, where it refers to “judgement based on preconceived notions or prejudices, as opposed to the impartial evaluation of facts” <span id="id1">[]</span>. In a more generalized version, bias refers to an inclination towards or against a particular individual, group, or sub-groups. The real world is often described as biased in this sense, and since machine learning techniques simply imitate observations of the world, it should come as no surprise that the resulting systems also capture the same bias <span id="id2">[]</span>.</p>
+<p>Correctional Offender Management Profiling for Alternative Sanctions (COMPAS) <span id="id3">[]</span> software for recidivism prediction, used by the U.S department courts to decide whether to release a person or keep them in prison, has discontinued its use after a careful investigation conducted by the U.S officers as they concluded that the software is biased against African-Americans. Also, the use of predictive policing <span id="id4">[]</span> software has been ceased due to the presence of racial biases. Amazon’s employment hiring <span id="id5">[]</span> application realized that it is biased against women. Content personalization and ad ranking systems have been accused of filter bubbles and racial and gender profiling. Bidirectional Encoder Representations from Transformers (BERT), has shown signs of gender biases in google search as it is observed that the gender-neutral terms (such as receptionist, doctor, nurse etc.) acquire stereotype and bias due to the context in which they are present in the corpus <span id="id6">[]</span>. In image domain, a latest gender classification report from the National Institute for Standards and Technology (NIST) pointed out that image classification algorithms performed worse for female-labeled faces than male-labeled faces , exhibit gender biases <span id="id7">[]</span>. A bias can exist in different forms and shapes based on the domain and context of application. The main reasons for the origin of these biases are manifold. An outline of bias-inducing stages in the ML pipeline is detailed in <span id="id8">[]</span>. Based on this study, bias definitions can be induced in data, algorithms, and user interaction feedback loops.</p>
+<p>ML systems are primarly based on  data-driven approaches; therefore, the outcome of ML-based decision-making processes depends on the input data and the interpretation of that data. This decision-making process involves numerous data analyses, such as uncovering patterns in the data, finding correlations and trends, missing data imputations, and data pre-processing. The performance of ML models depends on the data used to train these models and the analysis performed on the training data. It is noted that the primary source of biases is from the data and its processing- involves what data was used for training, how it was collected, and how the data was generated and pre-processed. A general definition of dataset bias is that the data is not representative of the population of study <span id="id9">[]</span>. Nevertheless, in a broader sense, it also occurs when the data does not contain features for specific applications we are interested in. Additionally, human interactions with the data produce bias against a specific group or individual <span id="id10">[]</span>. Various forms of dataset biases have been identified in ML systems. Sample/selection biases emerge due to the non-random sampling of groups and sub-groups. Exclusion bias arises at the data pre-processing stage when valuable data are omitted thought to be unnecessary. When the data used for training a model is different from the data collected from the real world, for example, the training data is collected using a fixed camera in image training, but the production data is collected using different cameras, a measurement bias can be occurred. Recall bias is a kind of measurement bias, and it occurs when similar data are inconsistently labeled. Observer bias occurs when we observe data based on what we want to see or expect to see. Association biases are resultant of the spurious correlations between features in the data.</p>
 <p>Furthermore, algorithmic biases are systematic errors in computer systems or models that cause certain privileges in outcomes concerning a particular group or a person. These biases can emerge in various ways. Foremost among these are the design of the algorithm or the way it uses the datasets to be coded, collected, selected, and processed. Algorithmic errors may lead to biased outcomes even though the data used for training are unbiased.
-A clear example is pre-existing bias, arising as the result of underlying social and institutional ideologies <span id="id11">[<a class="reference internal" href="#id368">10</a>]</span>. Another algorithmic bias is caused by technical biases manifested due the technical limitations of code, its computational resources, its design, and the constraints on the system. Technical biases are more frequent when we rely more on the algorithm in other domains or unanticipated contexts. Moreover, and related to the algorithm internals, correlation biases materialise when algorithms assume conclusions from the correlations in data attributes without knowing the specific purpose of those attributes. Finally, another known bias – in between the identified ones – are feedback loop biases. These arise when there is a recursion error in the mechanism in which information is processed into the data-model-experience pipeline.</p>
+A clear example is pre-existing bias, arising as the result of underlying social and institutional ideologies <span id="id11">[]</span>. Another algorithmic bias is caused by technical biases manifested due the technical limitations of code, its computational resources, its design, and the constraints on the system. Technical biases are more frequent when we rely more on the algorithm in other domains or unanticipated contexts. Moreover, and related to the algorithm internals, correlation biases materialise when algorithms assume conclusions from the correlations in data attributes without knowing the specific purpose of those attributes. Finally, another known bias – in between the identified ones – are feedback loop biases. These arise when there is a recursion error in the mechanism in which information is processed into the data-model-experience pipeline.</p>
 <p>The skewed outcomes from the biased data or (and) biased algorithms affect user decisions which may result in a more biased data for future ML systems. For example, consider a search engine which ranks queries. The end users interact mostly with the top ranked results, rather than going down the list, that can affect popularity and user interest of the upcoming decisions, due to the biased interactions.</p>
 <p>As a long term vision to create responsible ML systems, identifying and mitigating biases throughout the ML development life cycle should be given paramount importance. In a broader sense, the different ways the bias could be mitigated are:</p>
 <ol class="simple">
@@ -1346,41 +1217,8 @@ A clear example is pre-existing bias, arising as the result of underlying social
 </ol>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
-<p id="id12"><dl class="citation">
-<dt class="label" id="id158"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>Eirini Ntoutsi, Pavlos Fafalios, Ujwal Gadiraju, Vasileios Iosifidis, Wolfgang Nejdl, Maria-Esther Vidal, Salvatore Ruggieri, Franco Turini, Symeon Papadopoulos, Emmanouil Krasanakis, Ioannis Kompatsiaris, Katharina Kinder-Kurlanda, Claudia Wagner, Fariba Karimi, Miriam Fernández, Harith Alani, Bettina Berendt, Tina Kruegel, Christian Heinze, Klaus Broelemann, Gjergji Kasneci, Thanassis Tiropanis, and Steffen Staab. Bias in data-driven artificial intelligence systems - an introductory survey. <em>WIREs Data Mining Knowl. Discov.</em>, 2020.</p>
-</dd>
-<dt class="label" id="id150"><span class="brackets"><a class="fn-backref" href="#id8">2</a></span></dt>
-<dd><p>Ninareh Mehrabi, Fred Morstatter, Nripsuta Saxena, Kristina Lerman, and Aram Galstyan. A survey on bias and fairness in machine learning. <em>ACM Comput. Surv.</em>, 54(6):115:1–115:35, 2021.</p>
-</dd>
-<dt class="label" id="id320"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
-<dd><p>A Campolo, M Sanfilippo, M Whittaker, and K Crawford. Ai now 2017 symposium and workshop. <em>AI Now Institute at New York University</em>, 2018.</p>
-</dd>
-<dt class="label" id="id258"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
-<dd><p>Tim Brennan and William Dieterich. Correctional offender management profiles for alternative sanctions (compas). <em>Handbook of Recidivism Risk/Needs Assessment Tools (2018)</em>, 2018.</p>
-</dd>
-<dt class="label" id="id259"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
-<dd><p>Kiana Alikhademi, Emma Drobina, Diandra Prioleau, Brianna Richardson, Duncan Purves, and Juan E Gilbert. A review of predictive policing from the perspective of fairness. <em>Artificial Intelligence and Law</em>, pages 1–17, 2021.</p>
-</dd>
-<dt class="label" id="id260"><span class="brackets"><a class="fn-backref" href="#id5">6</a></span></dt>
-<dd><p>Akhil Alfons Kodiyan. An overview of ethical issues in using ai systems in hiring with a case study of amazon’s ai based hiring tool. <em>Researchgate Preprint</em>, 2019.</p>
-</dd>
-<dt class="label" id="id321"><span class="brackets"><a class="fn-backref" href="#id6">7</a></span></dt>
-<dd><p>Moin Nadeem, Anna Bethke, and Siva Reddy. Stereoset: measuring stereotypical bias in pretrained language models. In <em>ACL/IJCNLP (1)</em>, 5356–5371. Association for Computational Linguistics, 2021.</p>
-</dd>
-<dt class="label" id="id322"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
-<dd><p>Patrick J Grother, Patrick J Grother, and Mei Ngan. <em>Face recognition vendor test (frvt)</em>. US Department of Commerce, National Institute of Standards and Technology, 2014.</p>
-</dd>
-<dt class="label" id="id261"><span class="brackets">9</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id10">2</a>)</span></dt>
-<dd><p>Tatiana Tommasi, Novi Patricia, Barbara Caputo, and Tinne Tuytelaars. A deeper look at dataset bias. In <em>Domain adaptation in computer vision applications</em>, pages 37–55. Springer, 2017.</p>
-</dd>
-<dt class="label" id="id368"><span class="brackets"><a class="fn-backref" href="#id11">10</a></span></dt>
-<dd><p>Roel Dobbe, Sarah Dean, Thomas Krendl Gilbert, and Nitin Kohli. A broader view on bias in automated decision-making: reflecting on epistemology and dynamics. <em>CoRR</em>, 2018. <a class="reference external" href="https://arxiv.org/abs/1807.00553">arXiv:1807.00553</a>.</p>
-</dd>
-</dl>
-</p>
-<blockquote>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="id12"></span><blockquote>
 <div><p>This entry was written by Resmi Ramachandranpillai, Fredrik Heintz, Miguel Couceiro, and Gabriel Gonzalez-Castañé.</p>
 </div></blockquote>
 </div>
@@ -1408,11 +1246,9 @@ A clear example is pre-existing bias, arising as the result of underlying social
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="auditing.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1428,28 +1264,26 @@ A clear example is pre-existing bias, arising as the result of underlying social
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+        
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
     </div>
-    
-</div>
+  </footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
