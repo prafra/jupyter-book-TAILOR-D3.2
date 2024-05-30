@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fairness, Equity, and Justice by Design –&gt; Diversity, Non-Discrimination, and Fairness &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +103,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TAILOR.html">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -1085,86 +1101,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
    In brief
@@ -1202,42 +1308,95 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Fairness, Equity, and Justice by Design –> Diversity, Non-Discrimination, and Fairness</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivations-and-background">
+   Motivations and background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standards-and-guidelines">
+   Standards and guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension">
+   Software frameworks supporting dimension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-keywords">
+   Main keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="fairness-equity-and-justice-by-design-diversity-non-discrimination-and-fairness">
-<h1>Fairness, Equity, and Justice by Design –&gt; Diversity, Non-Discrimination, and Fairness<a class="headerlink" href="#fairness-equity-and-justice-by-design-diversity-non-discrimination-and-fairness" title="Permalink to this headline">¶</a></h1>
+<h1>Fairness, Equity, and Justice by Design –&gt; Diversity, Non-Discrimination, and Fairness<a class="headerlink" href="#fairness-equity-and-justice-by-design-diversity-non-discrimination-and-fairness" title="Permalink to this headline">#</a></h1>
 <div class="section" id="in-brief">
-<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>The term fairness is defined as the quality or state of being fair; or a
 lack of favoritism towards one side. However, fairness can mean
 different concepts to different peoples, different contexts, and
-different disciplines <span id="id1">[]</span>. An unfair Artificial
+different disciplines <span id="id1">[<a class="reference internal" href="fairness.html#id290">1</a>]</span>. An unfair Artificial
 Intelligence (AI) model produces results that are biased towards
 particular individuals or groups. The most relevant case of bias is
 discrimination against protected-by-law social groups. Equity requires
 that people are treated according to their needs, which does not mean
-all people are treated equally <span id="id2">[]</span>. Justice is the
+all people are treated equally <span id="id2">[<a class="reference internal" href="#id155">2</a>]</span>. Justice is the
 “fair and equitable treatment of all individuals under the law”
-<span id="id3">[]</span>.</p>
+<span id="id3">[<a class="reference internal" href="justice.html#id209">1</a>]</span>.</p>
 </div>
 <div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
 <p>We first provide motivations and background on fairness, equity and justice in AI.  This consists of warnings and legal obligations about potential harms of unscrutinized AI tools, especially in socially sensitive decision making. A taxonomy of fair-AI algorithms is then presented, based on the step of the AI development process in which fairness is checked/controlled for. Next, we summarize the guidelines and draft standards for fair-AI, and the software frameworks supporting the dimension. Finally, the main keywords of the dimension are extensively detailed.</p>
 </div>
 <div class="section" id="motivations-and-background">
-<h2>Motivations and background <a class="footnote-reference brackets" href="#readapt" id="id4">1</a><a class="headerlink" href="#motivations-and-background" title="Permalink to this headline">¶</a></h2>
+<h2>Motivations and background <a class="footnote-reference brackets" href="#readapt" id="id4">1</a><a class="headerlink" href="#motivations-and-background" title="Permalink to this headline">#</a></h2>
 <p>Increasingly sophisticated algorithms from AI and Machine Learning (ML) support knowledge discovery from big data of human activity.
 They enable the extraction of patterns and profiles of human behavior which are able to make extremely accurate predictions.
 Decisions are then being partly or fully delegated to such algorithms for a wide range of socially sensitive tasks: personnel selection and wages, credit scoring, criminal justice, assisted diagnosis in medicine, personalization in schooling, sentiment analysis in texts and images, people monitoring through facial recognition, news recommendation, community bulding in social networks, dynamic pricing of services and products.</p>
-<p>The benefits of algorithmic-based decision making cannot be neglected, e.g., procedural regularity – same procedure applied to each data subject. However, automated decisions based on profiling or social sorting may be biased <span id="id5">[]</span> for several reasons. Historical data may contain human (cognitive) bias and discriminatory practices that are endemic, to which the algorithms assign the status of general rules. Also, the usage of AI/ML models reinforces such practices because data about model’s decisions become inputs in subsequent model construction (feedback loops).
-Algorithms may wrongly interpret spurious correlations in data as causation, making predictions based on ungrounded reasons. Moreover, algorithms pursue the utilitarian optimization of quality metrics, such as accuracy of predictions, that favor precision over the majority of people against small groups. Finally, the technical process of designing and deploying algorithms is not yet mature and standardized. Rather, it is full of small and big decisions (sometimes, trial and error steps) that may hide bias, such as selecting non-representative data, performing overspecialization of the models, ignoring socio-technical impacts, or using models in deployment contexts they are not tested for. These risks are exacerbated by the fact that the AI/ML models are extremely large and complex for human understanding, or not even intelligible, sometimes they are based on randomness or time-dependent non-reproducible conditions <span id="id6">[]</span>.</p>
+<p>The benefits of algorithmic-based decision making cannot be neglected, e.g., procedural regularity – same procedure applied to each data subject. However, automated decisions based on profiling or social sorting may be biased <span id="id5">[<a class="reference internal" href="bias.html#id158">1</a>]</span> for several reasons. Historical data may contain human (cognitive) bias and discriminatory practices that are endemic, to which the algorithms assign the status of general rules. Also, the usage of AI/ML models reinforces such practices because data about model’s decisions become inputs in subsequent model construction (feedback loops).
+Algorithms may wrongly interpret spurious correlations in data as causation, making predictions based on ungrounded reasons. Moreover, algorithms pursue the utilitarian optimization of quality metrics, such as accuracy of predictions, that favor precision over the majority of people against small groups. Finally, the technical process of designing and deploying algorithms is not yet mature and standardized. Rather, it is full of small and big decisions (sometimes, trial and error steps) that may hide bias, such as selecting non-representative data, performing overspecialization of the models, ignoring socio-technical impacts, or using models in deployment contexts they are not tested for. These risks are exacerbated by the fact that the AI/ML models are extremely large and complex for human understanding, or not even intelligible, sometimes they are based on randomness or time-dependent non-reproducible conditions <span id="id6">[<a class="reference internal" href="#id189">5</a>]</span>.</p>
 <p>Legal restrictions on automated decision-making are provided by the EU
 General Data Protection Regulation, which states (<a href="https://gdpr-info.eu/art-22-gdpr/" target=_blank>Article 22</a>) “the right
 not to be subject to a decision based solely on automated processing”.
@@ -1247,10 +1406,10 @@ use appropriate mathematical or statistical procedures […] to
 prevent, inter alia, discriminatory effects on natural persons”.</p>
 <p>Fair algorithms are designed with the purpose of preventing biased decisions in algorithmic decision making.  Quantitative definitions have been
 introduced in philosophy, economics, and machine learning in the last 50 years
-<span id="id7">[]</span>,
+<span id="id7">[<a class="reference internal" href="#id154">6</a>, <a class="reference internal" href="#id153">7</a>, <a class="reference internal" href="auditing.html#id178">1</a>]</span>,
 with more than 20 different definitions of fairness appeared thus far in
 the computer science literature
-<span id="id8">[]</span>.
+<span id="id8">[<a class="reference internal" href="bias.html#id150">2</a>, <a class="reference internal" href="#id219">10</a>]</span>.
 Four non-mutually exclusive strategies can be devised for
 fairness-by-design of AI/ML models.</p>
 <p><em>Pre-processing approaches.</em> They consists of a controlled sanitization of the data used to train an AI/ML model with respect to specific biases. Pre-processing approaches allow for obtaining less biased data, which can be used for training AI/ML models. An advantage of pre-processing approaches is that they are independent of the AI/ML model and algorithm at hand.</p>
@@ -1261,7 +1420,7 @@ Post-processing approaches consist of altering the model’s internals, for inst
 <p><em>Prediction-time approaches.</em> The last strategy assumes no change in the construction of AI/ML models, but rather correcting their predictions at run-time. Proposed approaches include promoting, demoting or rejecting predictions close to the decision boundary,  differentiating the decision boundary itself over different social groups, or wrapping a fair classifier on top of a black-box base classifier. Such approaches may be applied to legacy software, including non-AI/ML algorithms, that cannot be replaced by in-processing approaches or changed by post-processing approaches.</p>
 </div>
 <div class="section" id="standards-and-guidelines">
-<h2>Standards and guidelines<a class="headerlink" href="#standards-and-guidelines" title="Permalink to this headline">¶</a></h2>
+<h2>Standards and guidelines<a class="headerlink" href="#standards-and-guidelines" title="Permalink to this headline">#</a></h2>
 <p>Several initiatives have started to audit, standardize and certify algorithmic fairness, such as the <a class="reference external" href="https://ico.org.uk/about-the-ico/ico-and-stakeholder-consultations/ico-consultation-on-the-draft-ai-auditing-framework-guidance-for-organisations">ICO Draft on AI Auditing
 Framework</a>,
 the draft <a class="reference external" href="https://standards.ieee.org/project/7003.html">IEEE P7003™ Standard on Algorithmic Bias
@@ -1277,14 +1436,14 @@ data</a>”,
 and the European Union Agency for Fundamental Rights (FRA) maintains <a href="https://fra.europa.eu/en/promising-practices-list" target=_blank>a
 list</a> of promising practices for equality data collection.</p>
 <p>Very few scientific works attempt at investigating the practical applicability of fairness in AI
-<span id="id9">[]</span>.
+<span id="id9">[<a class="reference internal" href="#id162">11</a>, <a class="reference internal" href="#id161">12</a>]</span>.
 This issue is challenging, and likely to require domain-specific
-approaches <span id="id10">[]</span>. On the educational side,
+approaches <span id="id10">[<a class="reference internal" href="#id160">13</a>]</span>. On the educational side,
 however, there are hundreds of university courses on technology ethics
-<span id="id11">[]</span>, many of which cover fairness in AI.</p>
+<span id="id11">[<a class="reference internal" href="#id163">14</a>]</span>, many of which cover fairness in AI.</p>
 </div>
 <div class="section" id="software-frameworks-supporting-dimension">
-<h2>Software frameworks supporting dimension<a class="headerlink" href="#software-frameworks-supporting-dimension" title="Permalink to this headline">¶</a></h2>
+<h2>Software frameworks supporting dimension<a class="headerlink" href="#software-frameworks-supporting-dimension" title="Permalink to this headline">#</a></h2>
 <!--The landscape of software libraries and tools is very large. Existing
 proposals cover almost every step of the data-friven AI development
 process (data collection, data processing, model development, model
@@ -1295,10 +1454,10 @@ maximization, distribution/allocation of goods), and every type of data
 gaps for a few fairness toolkits can be found in
 {cite}`lee2021landscape,DBLP:journals/corr/abs-2112-05700`.-->
 <p>The landscape of software libraries and tools is very large. Existing proposals cover almost every step of the data-friven AI development process (data collection, data processing, model development, model deployment, model monitoring), every type of AI models (classification, regression, clustering, ranking, community detection, influence maximization, distribution/allocation of goods), and every type of data (tabular, text, images, videos).</p>
-<p>Reviews and critical discussions of gaps for a few fairness toolkits can be found in~<span id="id12">[]</span>.</p>
+<p>Reviews and critical discussions of gaps for a few fairness toolkits can be found in~<span id="id12">[<a class="reference internal" href="fair_ML.html#id305">1</a>, <a class="reference internal" href="#id164">16</a>]</span>.</p>
 </div>
 <div class="section" id="main-keywords">
-<h2>Main keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Main keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="auditing.html"><span class="doc">Auditing AI</span></a>: <strong>Auditing AI</strong> aims to identify and address possible risks and impacts while ensuring robust and trustworthy (see <a class="reference internal" href="../Accountability/L2.Accountability.html"><span class="doc">Accountability</span></a>).</p></li>
 <li><p><a class="reference internal" href="bias.html"><span class="doc">Bias</span></a>: <strong>Bias</strong> refers to an inclination towards or against a particular individual, group, or sub-groups. AI models may inherit biases from training data or introduce new forms of bias.</p></li>
@@ -1311,14 +1470,68 @@ gaps for a few fairness toolkits can be found in
 </ul>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id13"></span><blockquote>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<p id="id13"><dl class="citation">
+<dt class="label" id="id263"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Deirdre K Mulligan, Joshua A Kroll, Nitin Kohli, and Richmond Y Wong. This thing called fairness: disciplinary confusion realizing a value in technology. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 3(CSCW):1–36, 2019.</p>
+</dd>
+<dt class="label" id="id155"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Martha Minow. Equality vs. Equity. <em>American Journal of Law and Equality</em>, 1:167–193, 2021.</p>
+</dd>
+<dt class="label" id="id182"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Jeffrey Lehman, Shirelle Phelps, and others. <em>West's encyclopedia of American law</em>. Thomson/Gale, 2004.</p>
+</dd>
+<dt class="label" id="id159"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>Eirini Ntoutsi, Pavlos Fafalios, Ujwal Gadiraju, Vasileios Iosifidis, Wolfgang Nejdl, Maria-Esther Vidal, Salvatore Ruggieri, Franco Turini, Symeon Papadopoulos, Emmanouil Krasanakis, Ioannis Kompatsiaris, Katharina Kinder-Kurlanda, Claudia Wagner, Fariba Karimi, Miriam Fernández, Harith Alani, Bettina Berendt, Tina Kruegel, Christian Heinze, Klaus Broelemann, Gjergji Kasneci, Thanassis Tiropanis, and Steffen Staab. Bias in data-driven artificial intelligence systems - an introductory survey. <em>WIREs Data Mining Knowl. Discov.</em>, 2020.</p>
+</dd>
+<dt class="label" id="id189"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dd><p>Joshua A. Kroll, Joanna Huey, Solon Barocas, Edward W. Felten, Joel R. Reidenberg, David G. Robinson, and Harlan Yu. Accountable algorithms. <em>U. of Penn. Law Review</em>, 165:633–705, 2017.</p>
+</dd>
+<dt class="label" id="id154"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dd><p>Ben Hutchinson and Margaret Mitchell. 50 years of test (un)fairness: lessons for machine learning. In <em>FAT</em>, 49–58. ACM, 2019.</p>
+</dd>
+<dt class="label" id="id153"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>Reuben Binns. Fairness in machine learning: lessons from political philosophy. In <em>FAT</em>, volume 81 of Proceedings of Machine Learning Research, 149–159. PMLR, 2018.</p>
+</dd>
+<dt class="label" id="id165"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
+<dd><p>Andrea Romei and Salvatore Ruggieri. A multidisciplinary survey on discrimination analysis. <em>Knowl. Eng. Rev.</em>, 29(5):582–638, 2014.</p>
+</dd>
+<dt class="label" id="id151"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
+<dd><p>Ninareh Mehrabi, Fred Morstatter, Nripsuta Saxena, Kristina Lerman, and Aram Galstyan. A survey on bias and fairness in machine learning. <em>ACM Comput. Surv.</em>, 54(6):115:1–115:35, 2021.</p>
+</dd>
+<dt class="label" id="id219"><span class="brackets"><a class="fn-backref" href="#id8">10</a></span></dt>
+<dd><p>Indre Zliobaite. Measuring discrimination in algorithmic decision making. <em>Data Min. Knowl. Discov.</em>, 31(4):1060–1089, 2017.</p>
+</dd>
+<dt class="label" id="id162"><span class="brackets"><a class="fn-backref" href="#id9">11</a></span></dt>
+<dd><p>Karima Makhlouf, Sami Zhioua, and Catuscia Palamidessi. On the applicability of machine learning fairness notions. <em>SIGKDD Explor.</em>, 23(1):14–23, 2021.</p>
+</dd>
+<dt class="label" id="id161"><span class="brackets"><a class="fn-backref" href="#id9">12</a></span></dt>
+<dd><p>Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Allison Woodruff, Christine Luu, Pierre Kreitmann, Jonathan Bischof, and Ed H. Chi. Putting fairness principles into practice: challenges, metrics, and improvements. In <em>AIES</em>, 453–459. ACM, 2019.</p>
+</dd>
+<dt class="label" id="id160"><span class="brackets"><a class="fn-backref" href="#id10">13</a></span></dt>
+<dd><p>Michelle Seng Ah Lee and Luciano Floridi. Algorithmic fairness in mortgage lending: from absolute conditions to relational trade-offs. <em>Minds Mach.</em>, 31(1):165–191, 2021.</p>
+</dd>
+<dt class="label" id="id163"><span class="brackets"><a class="fn-backref" href="#id11">14</a></span></dt>
+<dd><p>Casey Fiesler, Natalie Garrett, and Nathan Beard. What do we teach when we teach tech ethics?: A syllabi analysis. In <em>SIGCSE</em>, 289–295. ACM, 2020.</p>
+</dd>
+<dt class="label" id="id302"><span class="brackets"><a class="fn-backref" href="#id12">15</a></span></dt>
+<dd><p>Michelle Seng Ah Lee and Jatinder Singh. The landscape and gaps in open source fairness toolkits. In <em>CHI</em>, 699:1–699:13. ACM, 2021.</p>
+</dd>
+<dt class="label" id="id164"><span class="brackets"><a class="fn-backref" href="#id12">16</a></span></dt>
+<dd><p>Brianna Richardson and Juan E. Gilbert. A framework for fairness: A systematic review of existing fair AI solutions. <em>CoRR</em>, 2021.</p>
+</dd>
+<dt class="label" id="id188"><span class="brackets"><a class="fn-backref" href="#id487">17</a></span></dt>
+<dd><p>Salvatore Ruggieri. Algorithmic fairness. In <em>Elgar Encyclopedia of Law and Data Science</em>. Edward Elgar Publishing Limited, 2022.</p>
+</dd>
+</dl>
+</p>
+<blockquote>
 <div><p>This entry was written by Salvatore Ruggieri.</p>
 </div></blockquote>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="readapt"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
-<dd><p>This Section was readapted from <span id="id66">[]</span>.</p>
+<dd><p>This Section was readapted from <span id="id487">[<a class="reference internal" href="#id188">17</a>]</span>.</p>
 </dd>
 </dl>
 </div>
@@ -1348,9 +1561,11 @@ gaps for a few fairness toolkits can be found in
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Technical_Robustness_and_Safety/data_poisoning.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1366,26 +1581,28 @@ gaps for a few fairness toolkits can be found in
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

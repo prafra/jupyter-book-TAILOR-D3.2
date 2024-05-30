@@ -6,9 +6,10 @@
 
 Add an introduction to the first page.
 Add an Executive summary to the first page. This should be stand-alone, so that we can use it in formal reporting, for websites, social media etc.
--->
+
 
 This book (to be consolidated in the second phase of the project) represents the first period deliverable of the TAILOR project, providing an encyclopedia of the major terms related to trustworthiness.
+-->
 
 ## Executive Abstract
 

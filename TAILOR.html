@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The TAILOR Handbook of Trustworthy AI &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/TAILOR.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -61,7 +61,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -70,9 +84,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -87,17 +102,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="authors.html">
    Complete List of Contributors
@@ -1084,86 +1100,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/TAILOR.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FTAILOR.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FTAILOR.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/TAILOR.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#executive-abstract">
    Executive Abstract
@@ -1186,36 +1292,76 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The TAILOR Handbook of Trustworthy AI</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#executive-abstract">
+   Executive Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-tailor-handbook">
+   About the TAILOR Handbook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#related-work">
+   Related work
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-tailor-handbook-of-trustworthy-ai">
-<h1>The TAILOR Handbook of Trustworthy AI<a class="headerlink" href="#the-tailor-handbook-of-trustworthy-ai" title="Permalink to this headline">¶</a></h1>
+<h1>The TAILOR Handbook of Trustworthy AI<a class="headerlink" href="#the-tailor-handbook-of-trustworthy-ai" title="Permalink to this headline">#</a></h1>
 <p><strong>An encyclopedia of the major scientific and technical terms related to Trustworthy Artificial Intelligence</strong></p>
 <!--**TAILOR: Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization**
 
 Add an introduction to the first page.
 Add an Executive summary to the first page. This should be stand-alone, so that we can use it in formal reporting, for websites, social media etc.
+
+
+This book (to be consolidated in the second phase of the project) represents the first period deliverable of the TAILOR project, providing an encyclopedia of the major terms related to trustworthiness.
 -->
-<p>This book (to be consolidated in the second phase of the project) represents the first period deliverable of the TAILOR project, providing an encyclopedia of the major terms related to trustworthiness.</p>
 <div class="section" id="executive-abstract">
-<h2>Executive Abstract<a class="headerlink" href="#executive-abstract" title="Permalink to this headline">¶</a></h2>
+<h2>Executive Abstract<a class="headerlink" href="#executive-abstract" title="Permalink to this headline">#</a></h2>
 <p>The main goal of the <em>Handbook of Trustworthy AI</em> (HTAI) is to provide to non-experts, researchers and students, an overview of the problem related to the developing of ethical and trustworthy AI systems. In particular, the HTAI aims at providing an overview of the main dimensions of trustworthiness, starting with a understandable explanation of the dimension itself, and then presenting the characterization of the problems (starting with a brief summary and the explanation of the importance of the dimension, presenting a taxonomy and some guidelines, if they are available and consolidated), summarizing what are the major challenges and solutions in the field, and concluding with what are the latest research developments.</p>
 <p>Each entry will be correlated with a bibliography, allowing the reader to go more in depth with a specific topic if interested knowing more about it.</p>
 <p>All the entries have a list of authors that have directly contributed to the writing of the HTAI (some of them are already external to the TAILOR consortium), while the complete list of contributors can be found <a class="reference internal" href="authors.html"><span class="doc std std-doc">here</span></a>.</p>
 </div>
 <div class="section" id="about-the-tailor-handbook">
-<h2>About the TAILOR Handbook<a class="headerlink" href="#about-the-tailor-handbook" title="Permalink to this headline">¶</a></h2>
+<h2>About the TAILOR Handbook<a class="headerlink" href="#about-the-tailor-handbook" title="Permalink to this headline">#</a></h2>
 <p>The HTAI assumes an encyclopedia-like structure and is presented in the form of a publicly accessible WIKI. To do so, the Jupiter Book framework has been used. In the long term, the Handbook is meant to become a point of reference for resources (key concepts, tools, documentation, tutorials, teaching material, etc.) related to Trustworthy AI.</p>
 <p>Here, you can find the <a class="reference internal" href="main/Ethical_Legal_Framework/Ethical_Legal_Framework.html"><span class="doc">The Ethical and Legal Framework</span></a> we are referring to, to have the context of the current European context.</p>
 <!-- {doc}`../T3.4/L1.Accountability_and_Reproducibility`. -->
-<p>Moreover, you can find information about the topics of each of the task of the <a href="https://tailor-network.eu" target=_blank>TAILOR WP3</a>, summarizing one of the aspects of Trustworthy AI. The organization of the chapters is based on the seven principles described in the Ethics Guidelines for Trustworthy AI of the High-Level Expert Group on Artificial Intelligence <span id="id1">[<a class="reference internal" href="main/Trustworthy_AI.html#id22">1</a>]</span>. In particular, in this Encyclopedia, you can find definitions related to:</p>
+<p>Moreover, you can find information about the topics of each of the task of the <a href="https://tailor-network.eu" target=_blank>TAILOR WP3</a>, summarizing one of the aspects of Trustworthy AI. The organization of the chapters is based on the seven principles described in the Ethics Guidelines for Trustworthy AI of the High-Level Expert Group on Artificial Intelligence <span id="id1">[<a class="reference internal" href="#id22">1</a>]</span>. In particular, in this Encyclopedia, you can find definitions related to:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="Human_Agency_and_Oversight/Human_Agency_and_Oversight.html"><span class="doc std std-doc">Human Agency and Oversight</span></a>. This section of the Encyclopedia defines Human agency, i.e., the necessity of knowledge and tools to comprehend and interact properly with AI systems, and Human oversight in different phases of AI processes.</p></li>
 <li><p><a class="reference internal" href="Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html"><span class="doc std std-doc">Technical Robustness and Safety</span></a>. In this section of the Encyclopedia, we analyze the challenges in developing AI systems that are safe, reliable, and robust; we also provide a way to evaluate these aspects in practice, and we promote the dynamic evaluation in managing risk during the normal use of AI systems.</p></li>
@@ -1225,23 +1371,23 @@ Add an Executive summary to the first page. This should be stand-alone, so that 
 <li><p><a class="reference internal" href="Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html"><span class="doc std std-doc">Diversity, Non-Discrimination, and Fairness</span></a>. In this chapter, we will start recalling what the grounds of discrimination are, how we can define a bias or segregation; then, we will make a step in determining what fair machine learning could be, what are the metrics we can adopt to measure (un)fairness, and, more generally, how we could move towards Justice by Design systems.</p></li>
 <li><p><a class="reference internal" href="Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html"><span class="doc std std-doc">Societal and Environmental Wellbeing</span></a>. The last chapter of the Handbook is focus of one of the newest challenge that our society is facing. In particular, our focus is on environmental wellbeing (aka sustainability) and on providing solutions to optimize both the resources used in AI systems and the computation itself.</p></li>
 </ul>
-<p>As one can see, we mapped one of the seven requirements for Trustworthy AI, as defined by the High-Level Expert Group on AI <span id="id2">[<a class="reference internal" href="main/Trustworthy_AI.html#id22">1</a>]</span>, in a chapter of this Handbook. However, there are some differences in emphasis, as the <a href="https://tailor-network.eu" target=_blank>TAILOR project</a> is more focused on specific aspects, e.g., more on privacy than on data governance, more on the sustainability of AI than on societal wellbeing, and more on <a class="reference internal" href="Transparency/blackbox_transparent.html"><span class="doc std std-doc">post-hoc explanations</span></a> than on <a class="reference internal" href="Transparency/Transparency.html"><span class="doc std std-doc">transparency</span></a>.</p>
+<p>As one can see, we mapped one of the seven requirements for Trustworthy AI, as defined by the High-Level Expert Group on AI <span id="id2">[<a class="reference internal" href="#id22">1</a>]</span>, in a chapter of this Handbook. However, there are some differences in emphasis, as the <a href="https://tailor-network.eu" target=_blank>TAILOR project</a> is more focused on specific aspects, e.g., more on privacy than on data governance, more on the sustainability of AI than on societal wellbeing, and more on <a class="reference internal" href="Transparency/blackbox_transparent.html"><span class="doc std std-doc">post-hoc explanations</span></a> than on <a class="reference internal" href="Transparency/Transparency.html"><span class="doc std std-doc">transparency</span></a>.</p>
 <p>Finally, we report a final chapter, where you can find an <a class="reference internal" href="main/AnalyticalIndex.html"><span class="doc std std-doc">Index</span></a> that lists all entries in alphabetical order. In each term, you can find a reference to a short definition of the entry and where it is used within the Handbook, with a link to go more in-depth with the definition. Potential synonyms have their own entries in this index.</p>
 </div>
 <div class="section" id="related-work">
-<h2>Related work<a class="headerlink" href="#related-work" title="Permalink to this headline">¶</a></h2>
+<h2>Related work<a class="headerlink" href="#related-work" title="Permalink to this headline">#</a></h2>
 <p>With respect to other encyclopedias or handbooks, the TAILOR HTAI is characterized by:</p>
 <ul class="simple">
-<li><p>A choice of terms directly related to the experience of the <span class="xref myst">TAILOR</span> consortium; i.e., all the entries were chosen by the TAILOR partners in a bottom-up way and inserted in the Handbook if they are relevant to the research pursued in the project development.</p></li>
+<li><p>A choice of terms directly related to the experience of the <a class="reference internal" href="main/TAILOR.html"><span class="doc std std-doc">TAILOR</span></a> consortium; i.e., all the entries were chosen by the TAILOR partners in a bottom-up way and inserted in the Handbook if they are relevant to the research pursued in the project development.</p></li>
 <li><p>The fact that, given the living-document nature of the Handbook and the attitude of oneness of the TAILOR network of excellence, we are ready to correct, integrate, and update information, and receptive to (even external) suggestions.</p></li>
 <li><p>The wiki structure will permit to take advantage of hyperlinks to jump directly to correlated terms.</p></li>
 <li><p>Unlike other encyclopedias (such as <span id="id3">[<a class="reference internal" href="#id20">2</a>, <a class="reference internal" href="#id21">3</a>]</span>), it is freely accessible.</p></li>
-<li><p>We are not focused on general and omni-comprehensive machine learning or artificial intelligence resources (for this, other work <span id="id4">[<a class="reference internal" href="#id19">4</a>]</span> can be more exhaustive), or very specific ethical aspects on very specific topics (e.g., privacy in mobile data <span id="id5">[<a class="reference internal" href="#id18">5</a>]</span>), but, starting from the work done in the High-Level Expert Group report <span id="id6">[<a class="reference internal" href="main/Trustworthy_AI.html#id22">1</a>]</span>, which is one of the leading work in the EU, we specifically focus on the operative aspects of trustworthy AI.</p></li>
+<li><p>We are not focused on general and omni-comprehensive machine learning or artificial intelligence resources (for this, other work <span id="id4">[<a class="reference internal" href="#id19">4</a>]</span> can be more exhaustive), or very specific ethical aspects on very specific topics (e.g., privacy in mobile data <span id="id5">[<a class="reference internal" href="#id18">5</a>]</span>), but, starting from the work done in the High-Level Expert Group report <span id="id6">[<a class="reference internal" href="#id22">1</a>]</span>, which is one of the leading work in the EU, we specifically focus on the operative aspects of trustworthy AI.</p></li>
 </ul>
 <!--The plan will be to integrate it into the TAILOR web page and to make a Wikipedia entry (by v2 of the handbook). A final paper book is also planned by then.-->
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p id="id7"><dl class="citation">
 <dt class="label" id="id22"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id6">3</a>)</span></dt>
 <dd><p>High-Level Expert Group on Artificial Intelligence. Ethics guidelines for trustworthy ai. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2024-04-23).</p>
@@ -1293,8 +1439,10 @@ Add an Executive summary to the first page. This should be stand-alone, so that 
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
     <a class='right-next' id="next-link" href="authors.html" title="next page">
     <div class="prev-next-info">
@@ -1304,26 +1452,28 @@ Add an Executive summary to the first page. This should be stand-alone, so that 
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

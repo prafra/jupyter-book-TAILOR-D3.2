@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ethics Guidelines for Trustworthy AI by High-Level Expert Group on Artificial Intelligence &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/main/Ethical_Legal_Framework/HLEG.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -62,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +103,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../TAILOR.html">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../authors.html">
    Complete List of Contributors
@@ -314,16 +330,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../Diversity_Non-Discrimination_and_Fairness/bias_factors.html">
-     Bias Conducive Factors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Diversity_Non-Discrimination_and_Fairness/bias_lmm.html">
-     Bias and Fairness in LLMs
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../Diversity_Non-Discrimination_and_Fairness/equity.html">
      Discrimination &amp; Equity
     </a>
@@ -341,11 +347,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../Diversity_Non-Discrimination_and_Fairness/discrimination.html">
      Grounds of Discrimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Diversity_Non-Discrimination_and_Fairness/intersectionality.html">
-     Intersectionality
     </a>
    </li>
    <li class="toctree-l2">
@@ -662,16 +663,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../index/Diversity_Non-Discrimination_and_Fairness/bias_factors.html">
-     Bias Conducive Factors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../index/Diversity_Non-Discrimination_and_Fairness/bias_lmm.html">
-     Bias and Fairness in LLMs
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../index/Transparency/Black-box%20Explanations.html">
      Black-box Explanation
     </a>
@@ -684,11 +675,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../index/Societal_and_Environmental_Wellbeing/C2C.html">
      C2C
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../index/Human_Agency_and_Oversight/Causal_responsibility.html">
-     Causal Responsibility
     </a>
    </li>
    <li class="toctree-l2">
@@ -901,11 +887,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../index/Human_Agency_and_Oversight/Meaningful_human_control.html">
-     Meaningful Human Control
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../index/Technical_Robustness_and_Safety/Measurement.html">
      Measurement
     </a>
@@ -958,11 +939,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../index/Privacy_and_Data_Governance/Privacy%20model.html">
      Privacy models
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../index/Accountability/Problem_of_many_hands.html">
-     Problem of Many Hands
     </a>
    </li>
    <li class="toctree-l2">
@@ -1085,86 +1061,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/main/Ethical_Legal_Framework/HLEG.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2Fmain/Ethical_Legal_Framework/HLEG.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2Fmain/Ethical_Legal_Framework/HLEG.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/main/Ethical_Legal_Framework/HLEG.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
    In brief
@@ -1199,17 +1265,67 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Ethics Guidelines for Trustworthy AI by High-Level Expert Group on Artificial Intelligence</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in detail
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-three-pillars">
+     The three pillars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-four-ethical-principles">
+     The four ethical principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-seven-key-requirements">
+     The seven key requirements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operationalise-the-key-requirements">
+     Operationalise the key requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="ethics-guidelines-for-trustworthy-ai-by-high-level-expert-group-on-artificial-intelligence">
-<h1>Ethics Guidelines for Trustworthy AI by High-Level Expert Group on Artificial Intelligence<a class="headerlink" href="#ethics-guidelines-for-trustworthy-ai-by-high-level-expert-group-on-artificial-intelligence" title="Permalink to this headline">¶</a></h1>
+<h1>Ethics Guidelines for Trustworthy AI by High-Level Expert Group on Artificial Intelligence<a class="headerlink" href="#ethics-guidelines-for-trustworthy-ai-by-high-level-expert-group-on-artificial-intelligence" title="Permalink to this headline">#</a></h1>
 <!--
 
 point the link
@@ -1221,7 +1337,7 @@ point the link
 -->
 <p>On 8 April 2019, the High-Level Expert Group on AI presented the <em>‘’Ethics Guidelines for Trustworthy Artificial Intelligence’’</em> <span id="id1">[<a class="reference internal" href="../Trustworthy_AI.html#id22">1</a>]</span>, an influential document that set the stage for Trustworthy AI.</p>
 <div class="section" id="in-brief">
-<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>The guidance in this document is provided in three chapters, from the most abstract in Chapter I to the most concrete in Chapter III:</p>
 <ul class="simple">
 <li><p><em>Chapter I – Foundations of Trustworthy AI</em>: sets out the foundations of Trustworthy AI by laying out its fundamental-rights based approach. It identifies and describes the ethical principles that must be adhered to in order to ensure ethical and robust AI.</p></li>
@@ -1237,18 +1353,18 @@ point the link
 <p>Each component in itself is necessary but not sufficient for the achievement of Trustworthy AI.  Ideally, all three components work in harmony and overlap in their operation. If, in practice, tensions arise between these components, society should endeavor to align them.</p>
 </div>
 <div class="section" id="more-in-detail">
-<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>In Figure <a class="reference internal" href="#fig-hleg"><span class="std std-numref">1</span></a>, we reported the main outcomes of the Guidelines.
 First, the three pillars of Trustworthy AI are introduced. Then, in Chapter I the four ethical principles are described.
 Thirdly, the seven key requirements are listed in Chapter II.
 Finally, Chapter III offers a more practical way to assess Trustworthy AI.
 We will briefly examine all these concepts in the following.</p>
 <div class="figure align-center" id="fig-hleg">
-<a class="reference internal image-reference" href="main/Ethical_Legal_Framework/hleg.png"><img alt="main/Ethical_Legal_Framework/hleg.png" src="main/Ethical_Legal_Framework/hleg.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">The Guidelines as a framework for Trustworthy AI <span id="id2">[]</span>.</span><a class="headerlink" href="#fig-hleg" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/hleg.png"><img alt="../../_images/hleg.png" src="../../_images/hleg.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">The Guidelines as a framework for Trustworthy AI <span id="id2">[<a class="reference internal" href="../../Transparency/Transparency.html#id74">2</a>]</span>.</span><a class="headerlink" href="#fig-hleg" title="Permalink to this image">#</a></p>
 </div>
 <div class="section" id="the-three-pillars">
-<h3>The three pillars<a class="headerlink" href="#the-three-pillars" title="Permalink to this headline">¶</a></h3>
+<h3>The three pillars<a class="headerlink" href="#the-three-pillars" title="Permalink to this headline">#</a></h3>
 <p>As one can see, the three pillars (described in the document’s introduction) of Trustworthy AI are that an AI system must be lawful, ethical, and robust.
 We will provide some additional details on what is intended for each of these three components.</p>
 <p><strong>Lawful AI.</strong>
@@ -1265,7 +1381,7 @@ Even if an ethical purpose is ensured, individuals and society must also be conf
 Ethical and robust AI are hence closely intertwined and complement each other. The principles put forward in Chapter I, and the requirements derived from these principles in Chapter II, address both components.</p>
 </div>
 <div class="section" id="the-four-ethical-principles">
-<h3>The four ethical principles<a class="headerlink" href="#the-four-ethical-principles" title="Permalink to this headline">¶</a></h3>
+<h3>The four ethical principles<a class="headerlink" href="#the-four-ethical-principles" title="Permalink to this headline">#</a></h3>
 <p>AI systems should improve individual and collective wellbeing. The four ethical principles, rooted in fundamental rights, must be respected in order to ensure that AI systems are developed, deployed and used in a trustworthy manner. They are specified as ethical imperatives, such that AI practitioners should always strive to adhere to them.</p>
 <p>These are the principles of:</p>
 <ol class="simple">
@@ -1286,7 +1402,7 @@ The development, deployment, and use of AI systems must be fair. There are, of c
 Explicability is crucial for building and maintaining users’ trust in AI systems. This means that processes need to be transparent, the capabilities and purpose of AI systems openly communicated, and decisions – to the extent possible – explainable to those directly and indirectly affected. Without such information, a decision cannot be duly contested. An explanation as to why a model has generated a particular output or decision (and what combination of input factors contributed to that) is not always possible. These cases are referred to as <a class="reference internal" href="../../Transparency/blackbox_transparent.html"><span class="doc std std-doc">‘’black box’’</span></a> algorithms and require special attention. In those circumstances, other explicability measures (e.g., <span class="xref myst">traceability</span>, <a class="reference internal" href="../../Diversity_Non-Discrimination_and_Fairness/auditing.html"><span class="doc std std-doc">auditability</span></a>, and transparent communication on system capabilities) may be required, provided that the system as a whole respects fundamental rights. <!--The degree to which explicability is needed is highly dependent on the context and the severity of the consequences if that output is erroneous or otherwise inaccurate.--></p>
 </div>
 <div class="section" id="the-seven-key-requirements">
-<h3>The seven key requirements<a class="headerlink" href="#the-seven-key-requirements" title="Permalink to this headline">¶</a></h3>
+<h3>The seven key requirements<a class="headerlink" href="#the-seven-key-requirements" title="Permalink to this headline">#</a></h3>
 <p>The principles outlined before must be translated into concrete requirements to achieve Trustworthy AI. These requirements are applicable to different stakeholders partaking in AI systems’ life cycle: developers, deployers, and end-users, as well as the broader society. By developers, we refer to those who research, design and/or develop AI systems. By deployers, we refer to public or private organizations that use AI systems within their business processes and offer products and services to others. End-users are those engaging with the AI system, directly or indirectly. Finally, the broader society encompasses all others that are directly or indirectly affected by AI systems.</p>
 <p>Different groups of stakeholders have different roles to play in ensuring that the requirements are met:</p>
 <ul class="simple">
@@ -1305,12 +1421,12 @@ Explicability is crucial for building and maintaining users’ trust in AI syste
 <li><p><a class="reference internal" href="../../Accountability/Accountability_and_Reproducibility.html"><span class="doc std std-doc">Accountability</span></a>. Including auditability, minimization and reporting of negative impact, trade-offs, and redress.</p></li>
 </ul>
 <div class="figure align-center" id="fig-tairequiremens">
-<a class="reference internal image-reference" href="main/Ethical_Legal_Framework/TAIrequiremens.png"><img alt="main/Ethical_Legal_Framework/TAIrequiremens.png" src="main/Ethical_Legal_Framework/TAIrequiremens.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Interrelationship of the seven requirements: all are of equal importance, support each other, and should be implemented and evaluated throughout the AI system’s lifecycle <span id="id4">[]</span>.</span><a class="headerlink" href="#fig-tairequiremens" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/TAIrequiremens.png"><img alt="../../_images/TAIrequiremens.png" src="../../_images/TAIrequiremens.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Interrelationship of the seven requirements: all are of equal importance, support each other, and should be implemented and evaluated throughout the AI system’s lifecycle <span id="id4">[<a class="reference internal" href="../../Transparency/Transparency.html#id74">2</a>]</span>.</span><a class="headerlink" href="#fig-tairequiremens" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="operationalise-the-key-requirements">
-<h3>Operationalise the key requirements<a class="headerlink" href="#operationalise-the-key-requirements" title="Permalink to this headline">¶</a></h3>
+<h3>Operationalise the key requirements<a class="headerlink" href="#operationalise-the-key-requirements" title="Permalink to this headline">#</a></h3>
 <p>Finally, Chapter III offers a more practical way to assess Trustworthy AI. In particular, the Guidelines proposed a (non-exhaustive) Trustworthy AI assessment list, based on the key requirements listed before. This list particularly applies to AI systems that directly interact with users, and is primarily addressed to developers and deployers of AI systems (whether self-developed or acquired from third parties). It is further developed in the <a href="https://futurium.ec.europa.eu/en/european-ai-alliance/pages/welcome-altai-portal" target=_blank>Assessment List for Trustworthy Artificial Intelligence (ALTAI) tool</a>.
 In addition, this chapter offers a general recommendation on how to implement the assessment list for Trustworthy AI through a governance structure embracing both operational and management levels.</p>
 <p id="id5"><dl class="citation">
@@ -1351,9 +1467,11 @@ In addition, this chapter offers a general recommendation on how to implement th
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Ethical_Legal_Framework.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1369,26 +1487,28 @@ In addition, this chapter offers a general recommendation on how to implement th
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
