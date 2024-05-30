@@ -14,8 +14,8 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Privacy_and_Data_Governance/Attacks on Pseudonymised Data`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Auditing`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Bias`
-- {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Bias Conducive Factors`
-- {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Bias and Fairness in LLMs`
+- {doc}`../index/Diversity_Non-Discrimination_and_Fairness/bias_factors`
+- {doc}`../index/Diversity_Non-Discrimination_and_Fairness/bias_lmm`
 - {doc}`../index/Transparency/Black-box Explanations`
 - {doc}`../index/Technical_Robustness_and_Safety/Brittleness`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/C2C`
@@ -57,7 +57,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Green IT`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/ICT sustainability`
 - {doc}`../index/Technical_Robustness_and_Safety/Intended`
-- {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Intersectionality`
+- {doc}`../index/Diversity_Non-Discrimination_and_Fairness/intersectionality`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Justice`
 - {doc}`../index/Privacy_and_Data_Governance/K-Anonymity`
 - {doc}`../index/Privacy_and_Data_Governance/Linking Attack`
