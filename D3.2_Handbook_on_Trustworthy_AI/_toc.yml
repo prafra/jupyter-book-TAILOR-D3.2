@@ -49,10 +49,13 @@ chapters:
   sections:
   - file: Diversity_Non-Discrimination_and_Fairness/auditing
   - file: Diversity_Non-Discrimination_and_Fairness/bias
+  - file: Diversity_Non-Discrimination_and_Fairness/bias_factors
+  - file: Diversity_Non-Discrimination_and_Fairness/bias_lmm
   - file: Diversity_Non-Discrimination_and_Fairness/equity
   - file: Diversity_Non-Discrimination_and_Fairness/fairness
   - file: Diversity_Non-Discrimination_and_Fairness/fair_ML
   - file: Diversity_Non-Discrimination_and_Fairness/discrimination
+  - file: Diversity_Non-Discrimination_and_Fairness/intersectionality
   - file: Diversity_Non-Discrimination_and_Fairness/justice
   - file: Diversity_Non-Discrimination_and_Fairness/segregation
 - file: Accountability/Accountability_and_Reproducibility
