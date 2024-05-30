@@ -110,6 +110,8 @@ chapters:
   - file: index/Privacy_and_Data_Governance/Attacks on Pseudonymised Data
   - file: index/Diversity_Non-Discrimination_and_Fairness/Auditing
   - file: index/Diversity_Non-Discrimination_and_Fairness/Bias
+  - file: index/Diversity_Non-Discrimination_and_Fairness/bias_factors
+  - file: index/Diversity_Non-Discrimination_and_Fairness/bias_lmm 
   - file: index/Transparency/Black-box Explanations
   - file: index/Technical_Robustness_and_Safety/Brittleness
   - file: index/Societal_and_Environmental_Wellbeing/C2C
@@ -149,6 +151,7 @@ chapters:
   - file: index/Societal_and_Environmental_Wellbeing/Green IT
   - file: index/Societal_and_Environmental_Wellbeing/ICT sustainability
   - file: index/Technical_Robustness_and_Safety/Intended
+  - file: index/Technical_Robustness_and_Safety/intersectionality  
   - file: index/Diversity_Non-Discrimination_and_Fairness/Justice
   - file: index/Privacy_and_Data_Governance/K-Anonymity
   - file: index/Privacy_and_Data_Governance/Linking Attack
