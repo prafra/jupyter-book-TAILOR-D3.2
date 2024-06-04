@@ -22,16 +22,19 @@ chapters:
 - file: Transparency/Transparency
   title: Transparency
   sections:
-  - file: Transparency/XAI_kinds
-    sections:     
-    - file: Transparency/feature_importance
-    - file: Transparency/saliency_maps
-    - file: Transparency/single_tree
   - file: Transparency/XAI_dimensions
     sections:
     - file: Transparency/blackbox_transparent
     - file: Transparency/model_specific
     - file: Transparency/global_local
+  - file: Transparency/XAI
+    sections:
+    - file: Transparency/XAI_kinds
+      sections:     
+      - file: Transparency/counterfactual
+      - file: Transparency/feature_importance
+      - file: Transparency/saliency_maps
+      - file: Transparency/single_tree
 - file: Technical_Robustness_and_Safety/Technical_Robustness_and_Safety
   title: Technical Robustness and Safety
   sections:
@@ -121,6 +124,8 @@ chapters:
   - file: index/Human_Agency_and_Oversight/Causal_responsibility
   - file: index/Societal_and_Environmental_Wellbeing/Cloud Computing
   - file: index/Accountability/Continuous monitoring
+  - file: index/Transparency/Counterexemplar
+  - file: index/Transparency/Counterfactual
   - file: index/Societal_and_Environmental_Wellbeing/cradle 2 cradle
   - file: index/Societal_and_Environmental_Wellbeing/Cradle
   - file: index/Privacy_and_Data_Governance/Data Anonymization
@@ -141,6 +146,8 @@ chapters:
   - file: index/Societal_and_Environmental_Wellbeing/Energy Efficient
   - file: index/Technical_Robustness_and_Safety/Evaluation
   - file: index/Diversity_Non-Discrimination_and_Fairness/Equity
+  - file: index/Transparency/Exemplars
+  - file: index/Transparency/Explainable AI
   - file: index/Transparency/Explanation by Design
   - file: index/Diversity_Non-Discrimination_and_Fairness/Fair Machine Learning
   - file: index/Diversity_Non-Discrimination_and_Fairness/Fairness
@@ -154,11 +161,12 @@ chapters:
   - file: index/Societal_and_Environmental_Wellbeing/Green IT
   - file: index/Societal_and_Environmental_Wellbeing/ICT sustainability
   - file: index/Technical_Robustness_and_Safety/Intended
-  - file: index/Technical_Robustness_and_Safety/intersectionality  
+  - file: index/Diversity_Non-Discrimination_and_Fairness/intersectionality  
   - file: index/Diversity_Non-Discrimination_and_Fairness/Justice
   - file: index/Privacy_and_Data_Governance/K-Anonymity
   - file: index/Privacy_and_Data_Governance/Linking Attack
   - file: index/Transparency/Local Explanations
+  - file: index/Transparency/Lore
   - file: index/Human_Agency_and_Oversight/Meaningful_human_control
   - file: index/Technical_Robustness_and_Safety/Measurement
   - file: index/Societal_and_Environmental_Wellbeing/Mesh Computing
@@ -172,6 +180,7 @@ chapters:
   - file: index/Societal_and_Environmental_Wellbeing/Power Aware
   - file: index/Privacy_and_Data_Governance/Privacy model
   - file: index/Accountability/Problem_of_many_hands
+  - file: index/Transparency/Prototypes
   - file: index/Accountability/Provenance
   - file: index/Privacy_and_Data_Governance/Pseudonymised Data
   - file: index/Privacy_and_Data_Governance/Re-identification Attack
@@ -184,6 +193,7 @@ chapters:
   - file: index/Societal_and_Environmental_Wellbeing/Resource Prediction
   - file: index/Societal_and_Environmental_Wellbeing/Resource Scheduling
   - file: index/Technical_Robustness_and_Safety/Robustness
+  - file: index/Transparency/Rules
   - file: index/Transparency/Saliency Maps
   - file: index/Technical_Robustness_and_Safety/Security
   - file: index/Diversity_Non-Discrimination_and_Fairness/Segregation
@@ -192,6 +202,7 @@ chapters:
   - file: index/Accountability/Traceability
   - file: index/Transparency/Transparency
   - file: index/Technical_Robustness_and_Safety/Unintended
+  - file: index/Transparency/XAI
   - file: index/Accountability/Wicked
   - file: index/Societal_and_Environmental_Wellbeing/Workload Forecast
   - file: index/Societal_and_Environmental_Wellbeing/Workload Prediction

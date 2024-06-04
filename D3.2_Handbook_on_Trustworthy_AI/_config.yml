@@ -27,12 +27,12 @@ latex:
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
-  - T3.1/references.bib
-  - T3.2/references.bib
-  - T3.3/references.bib
-  - T3.4/references.bib
-  - T3.5/references.bib
-  - T3.6/references.bib
+  - Transparency/references.bib
+  - Technical_Robustness_and_Safety/references.bib
+  - Diversity_Non-Discrimination_and_Fairness/references.bib
+  - Accountability/references.bib
+  - Privacy_and_Data_Governance/references.bib
+  - Societal_and_Environmental_Wellbeing/references.bib
 
 # Information about where the book exists on the web
 repository:

@@ -22,6 +22,8 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Human_Agency_and_Oversight/Causal_responsibility`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Cloud Computing`
 - {doc}`../index/Accountability/Continuous monitoring`
+- {doc}`../index/Transparency/Counterexemplar`
+- {doc}`../index/Transparency/Counterfactual`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/cradle 2 cradle`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Cradle`
 - {doc}`../index/Privacy_and_Data_Governance/Data Anonymization`
@@ -44,6 +46,8 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Energy Efficient`
 - {doc}`../index/Technical_Robustness_and_Safety/Evaluation`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Equity`
+- {doc}`../index/Transparency/Exemplars`
+- {doc}`../index/Transparency/Explainable AI`
 - {doc}`../index/Transparency/Explanation by Design`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Fair Machine Learning`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Fairness`
@@ -61,6 +65,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Justice`
 - {doc}`../index/Privacy_and_Data_Governance/K-Anonymity`
 - {doc}`../index/Privacy_and_Data_Governance/Linking Attack`
+- {doc}`../index/Transparency/Lore`
 - {doc}`../index/Transparency/Local Explanations`
 - {doc}`../index/Human_Agency_and_Oversight/Meaningful_human_control`
 - {doc}`../index/Technical_Robustness_and_Safety/Measurement`
@@ -73,6 +78,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Transparency/Post-hoc Explanations`
 - {doc}`../index/Privacy_and_Data_Governance/Privacy model`
 - {doc}`../index/Accountability/Problem_of_many_hands`
+- {doc}`../index/Transparency/Prototypes`
 - {doc}`../index/Accountability/Provenance`
 - {doc}`../index/Privacy_and_Data_Governance/Pseudonymised Data`
 - {doc}`../index/Privacy_and_Data_Governance/Re-identification Attack`
@@ -85,6 +91,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Resource Prediction`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Resource Scheduling`
 - {doc}`../index/Technical_Robustness_and_Safety/Robustness`
+- {doc}`../index/Transparency/Rules`
 - {doc}`../index/Transparency/Saliency Maps`
 - {doc}`../index/Technical_Robustness_and_Safety/Security`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Segregation`
@@ -93,6 +100,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Accountability/Traceability`
 - {doc}`../index/Transparency/Transparency`
 - {doc}`../index/Technical_Robustness_and_Safety/Unintended`
+- {doc}`../index/Transparency/XAI`
 - {doc}`../index/Accountability/Wicked`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Workload Forecast`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Workload Prediction`
