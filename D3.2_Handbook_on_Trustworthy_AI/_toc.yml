@@ -33,6 +33,9 @@ chapters:
       sections:     
       - file: Transparency/counterfactual
       - file: Transparency/feature_importance
+      - file: Transparency/lore
+      - file: Transparency/prototypes
+      - file: Transparency/rules
       - file: Transparency/saliency_maps
       - file: Transparency/single_tree
 - file: Technical_Robustness_and_Safety/Technical_Robustness_and_Safety
