@@ -121,14 +121,21 @@ We will provide a link to the libraries and framework as soon as they be will fu
 
 
 ## Main Keywords
-- {doc}`./XAI_kinds`: Explanations returned by an AI system depend on various factors (such as the task or the available data); generally speaking, each kind of explanations serves better a specific context.
-- {doc}`./feature_importance`: The **feature importance** technique provides a score, representing the “importance”, for all the input features for a given AI model, i.e., a higher importance means that the corresponding feature will have a larger effect on the model.
-- {doc}`./saliency_maps`: Saliency maps are explanations used on image classification tasks. A **saliency map** is an image where each pixel's color represents a value modeling the importance of that pixel in the original image (i.e., the one given in input to the explainer) for the prediction.
-- {doc}`./single_tree`: The **single tree appoximation** is an approach that aims at building a decision tree to approximate the behavior of a black box, typically a neural network.
 - {doc}`./XAI_dimensions`: **Dimensions of explanations** are useful to analyze the interpretability of AI systems and to classify the explanation method.
 - {doc}`./blackbox_transparent`: The difference between **Black Box Explanation** (or **Post-hoc Explanations**) and **Explanation by Design** (or **Ante-hoc Explanations**) regards the ability to know and exploit the behaviour of the AI model. With a black box explanation, we pair the black box model with an interpretation the black box decisions or model, while in the second case, the strategy is to rely, by design, on a transparent model.
 - {doc}`./model_specific`: We distinguish between **model-specific** or **model-agnostic** explanation method depending on whether the technique adopted to retrieve the explanation acts on a particular model adopted by an AI system, or can be used on any type of AI. 
 - {doc}`./global_local`: We distinguish between a **global** or **local** explanation depending on whether the explanation allows understanding the whole logic of a model used by an AI system or the explanation refers to a specific case, i.e., only a single decision is interpretable.
+- {doc}`./XAI`: **Explainable AI** (often shortened to **XAI**) is one of the ethical dimensions described in the General Data Protection Regulation (GDPR).
+Indeed, the GDPR mentions the right to explanation, as a suitable safeguard to ensure fair and transparent processing in respect of data subjects. It is defined as the right "to obtain an explanation of the decision reached after profiling".
+- {doc}`./XAI_kinds`: Explanations returned by an AI system depend on various factors (such as the task or the available data); generally speaking, each kind of explanations serves better a specific context.
+- {doc}:`./counterfactual`: A **counterfactual explanation** shows what should have been different to change the decision of an AI system. For example, a counterfactual explanation could be a local explaination of a certain istance by providing the nearest istances that lead to a different decision or describing a small change in the input of the model that lead to a change in the outcome of the model.
+- {doc}`./feature_importance`: The **feature importance** technique provides a score, representing the “importance”, for all the input features for a given AI model, i.e., a higher importance means that the corresponding feature will have a larger effect on the model.
+- {doc}`./lore`: **Local Rule-based Explanation** aims to extract a rule that provides a local explaination for a certain instance of the model.
+- {doc}`./prototypes`: **Prototype-based explanation** methods return as explanation a selection of particular instances of the dataset for locally explaining the behavior of the AI system.
+- {doc}`./rules`: A **decision rule** is generally formed by a set of conditions and by a consequent, e.g., if conditions, then consequent.
+- {doc}`./saliency_maps`: Saliency maps are explanations used on image classification tasks. A **saliency map** is an image where each pixel's color represents a value modeling the importance of that pixel in the original image (i.e., the one given in input to the explainer) for the prediction.
+- {doc}`./single_tree`: The **single tree appoximation** is an approach that aims at building a decision tree to approximate the behavior of a black box, typically a neural network.
+
 
 ## Bibliography
 

@@ -1,4 +1,4 @@
-# Accountability and Reproducibility
+# Accountability, Reproducibility, and Traceability
 
 ## In brief
 
@@ -15,9 +15,9 @@ A third dimension strictly correlated with {doc}`./L2.Accountability` and {doc}`
 ## Main Keywords
 
 - {doc}`./L2.Accountability`: **Accountability** is an ethical aspect studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a> to ensure that a given actor or actors can render an account of the actions of an AI system. The accountability concept is strictly related to the concept of responsibility.
-- {doc}`./L3.Wicked_problems`: A class of problems for which science provides insufficient or inappropriate resolution.
 - {doc}`./L3.Problem_of_many_hands`: The **problem of many hands** aims to understand who is morally responsible in a situation with several actors.
 - {doc}`./L3.The_frame_problem`: The **frame problem** is the challenge of knowing and modeling the relevant features and context of situations, and getting an agent to act on those without consideration all the irrelevant facts as well.
+- {doc}`./L3.Wicked_problems`: A class of problems for which science provides insufficient or inappropriate resolution.
 - {doc}`./L2.Reproducibility`: **Reproducibility** is the ability of independent investigators to draw the same conclusions from an experiment by following the documentation shared by the original investigators.
 - {doc}`./L2.Traceability`: **Traceability** can be defined as the need to maintain a complete and clear documentation of the data, processes, artefacts and actors involved in the entire lifecycle of an AI model, starting from its design and ending with its production serving.
 - {doc}`./L3.Provenance_tracking`: **Provenance tracking** represents the tracking of “information that describes the production process of an end product, which can be anything from a piece of data to a physical object. […] Essentially, provenance can be seen as meta-data that, instead of describing data, describes a production process.”
