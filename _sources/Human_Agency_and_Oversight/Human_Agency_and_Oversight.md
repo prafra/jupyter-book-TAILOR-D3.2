@@ -39,13 +39,13 @@ Other important standards are the ISO norms, in particular the <a href="https://
 
 
 Last but not least, the <a href="https://artificialintelligenceact.com/title-iii/chapter-2/article-14/" target=_blank>Article 14 of the AI Act</a> is related to the human oversight, with the aim at preventing or minimising the risks to health, safety or fundamental rights that may emerge when a high-risk AI system is used in accordance with its intended purpose or under conditions of reasonably foreseeable misuse.
-However, an unforeseen consequence pointed out in some critical articles {cite}`holistic` is that <a href="https://artificialintelligenceact.com/title-iii/chapter-2/article-14/" target=_blank>Article 14 (1) of the AI Act</a> could create a legal loophole to justify the shifting of responsibilities and accountabilities from one party (users of AI systems working as human overseers) to another (designers of AI systems). This ambiguity could create legal challenges as human overseers could argue that <a href="https://artificialintelligenceact.com/title-iii/chapter-2/article-14/" target=_blank>Article 14 of the AI ACT</a> is not intended to regulate them. Moreover, authors of {cite}`holistic` highlighted how Article 14 of the EU AI Act provides little detail on the human overseers' responsibilities. This lack of clear guidelines on the responsibility of human overseers or what constitutes meaningful human oversight under the proposal arguably undermines a human-centric approach.
+However, an unforeseen consequence pointed out in some critical articles {cite}`holistic` is that <a href="https://artificialintelligenceact.com/title-iii/chapter-2/article-14/" target=_blank>Article 14 (1) of the AI Act</a> could create a legal loophole to justify the shifting of responsibilities and accountabilities from one party (users of AI systems working as human overseers) to another (designers of AI systems). This ambiguity could create legal challenges as human overseers could argue that <a href="https://artificialintelligenceact.com/title-iii/chapter-2/article-14/" target=_blank>Article 14 of the AI ACT</a> is not intended to regulate them. Moreover, authors of \cite{holistic} highlight how Article 14 of the EU AI Act provides little detail on the human overseers' responsibilities. This lack of clear guidelines on the responsibility of human overseers or what constitutes meaningful human oversight under the proposal arguably undermines a human-centric approach.
 
 ## Software frameworks supporting dimension
 
 To the best of our knowledge, there are no software framework supporting human autonomy and oversight.
 However, beside the aforementioned guidelines, there are other guidelines and recommendations, both from the academia and the private sector, such as the ones provided by:
-- <a href="https://digitalfuturesociety.com/app/uploads/2022/11/Towards_meaningful_oversight_of_automated_decision_making_systems.pdf" target=_blank>Digital Future Society</a>.
+- <a href="https://digitalfuturesociety.com/app/uploads/2022/11/Towards_meaningful_oversight_of_automated_decision_making_systems.pdf" target=_blank>Digital Future Society/a>.
 In this report, authors first put the human oversight dimension in context, defining different typologies of human-algorithm interaction, then reported some case studies to explain better the problem, and finally listed some policy recommendations, like defining the minimum human involvement, being aware of automation context-dependency, and adequately training developers and operators.
 - <a href="https://www.ibm.com/blog/best-practices-for-augmenting-human-intelligence-with-ai/" target=_blank>IBM</a>. In this report, author reported the major standards on
 human oversight, a great variety of case studies in which AI systems can be applied and the ethical risks (e.g., overtrust) that can occur, and a list of best practices to be applied to mitigate such risks.
@@ -55,7 +55,6 @@ human oversight, a great variety of case studies in which AI systems can be appl
 ## Main Keywords
 
 - {doc}`./Meaningful_human_control`: **Meaningful human control** is the notion that aims to generalize the traditional concept of operational control over technological artifacts to artificial intelligent systems. It implies that artificial systems should not make morally consequential decisions on their own, without appropriate control from responsible humans.
-- {doc}`./Casual_responsability`: **Causal responsibility** is the notion of responsibility that is concerned with actual causation.
 
 ## Bibliography
 

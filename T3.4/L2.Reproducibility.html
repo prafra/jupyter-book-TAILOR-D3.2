@@ -1,0 +1,1616 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproducibility &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/T3.4/L2.Reproducibility.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Traceability" href="L2.Traceability.html" />
+    <link rel="prev" title="The Frame Problem" href="L3.The_frame_problem.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The TAILOR Handbook of Trustworthy AI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../authors.html">
+   Complete List of Contributors
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.1/T3.1.html">
+   Explainable AI Systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_kinds.html">
+     Kinds of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/feature_importance.html">
+       Feature Importance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/saliency_maps.html">
+       Saliency Maps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/single_tree.html">
+       Single Tree Approximation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_dimensions.html">
+     Dimensions of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/blackbox_transparent.html">
+       Black Box Explanation vs Explanation by Design
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/model_specific.html">
+       Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/global_local.html">
+       Global vs Local Explanations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.3/T3.3.html">
+   Fairness, Equity, and Justice by Design
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/auditing.html">
+     Auditing AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/equity.html">
+     Discrimination &amp; Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/fairness.html">
+     Fairness notions and metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/fair_ML.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.3/segregation.html">
+     Segregation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="L1.Accountability_and_Reproducibility.html">
+   Accountability and Reproducibility
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="L2.Accountability.html">
+     Accountability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.Wicked_problems.html">
+       Wicked problems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.Meaningful_human_control.html">
+       Meaningful human control
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.The_frame_problem.html">
+       The Frame Problem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="L2.Traceability.html">
+     Traceability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.Provenance_tracking.html">
+       Provenance Tracking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="L3.Continuous_performance_monitoring.html">
+       Continuous Performance Monitoring
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.5/T3.5.html">
+   Respect for Privacy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.anonymization.html">
+     Data Anonymization (and Pseudonymization)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.pseudonymization.html">
+       Pseudonymization
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.privacy_model.html">
+     Privacy Models
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../T3.5/L2.differential_privacy.html">
+       Differential Privacy
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.epsilon_DP.html">
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         -Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.epsilon_delta_DP.html">
+         (
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         ,
+         <span class="math notranslate nohighlight">
+          \(\delta\)
+         </span>
+         )-Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
+         Achieving Differential Privacy
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.k_anonymity.html">
+       k-anonymity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.attacks.html">
+     Attacks on anonymization schemes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.reidentification.html">
+       Re-identification Attack
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.6/T3.6.html">
+   Sustainability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.6/greenAI.html">
+     Green AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.6/power_aware.html">
+       Power-aware Computing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cloud_computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/edge_computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/data_centre.html">
+     Data Centre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cradle_to_cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR_project.html">
+   About TAILOR
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../main/AnalyticaIndex.html">
+   Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/2CC2.html">
+     2CC2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Accountability.html">
+     Accountability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20attack.html">
+     Adversarial Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20example.html">
+     Adversarial Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20input.html">
+     Adversarial Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Ante-hoc%20Explanation.html">
+     Ante-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Assessment.html">
+     Assessment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20Anonym.html">
+     Attacks on Anonymization Schema
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20on%20Pseudonymised%20Data.html">
+     Attacks on Pseudonymised Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Auditing.html">
+     Auditing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Black-box%20Explanations.html">
+     Black-box Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Brittleness.html">
+     Brittleness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/C2C.html">
+     C2C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cloud%20Computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Continuous%20monitoring.html">
+     Continuous Performance Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/cradle%202%20cradle.html">
+     Cradle 2 cradle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Data%20Anonymization.html">
+     Data Anonymization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Data%20Center.html">
+     Data Center
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Data%20Poisoning.html">
+     Data Poisoning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Dependability.html">
+     Dependability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Differential%20Privacy%20models.html">
+     Differential Privacy Models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/epsilon_delta-differential_privacy.html">
+     (
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     ,
+     <span class="math notranslate nohighlight">
+      \(\delta\)
+     </span>
+     )-Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Epsilon-differential_privacy.html">
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     -Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Epsilon-indist.html">
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     -Indistinguishability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Data%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Distributional%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Direct.html">
+     Direct Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Edge%20Computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Aware.html">
+     Energy-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Efficient.html">
+     Energy-efficient Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Evaluation.html">
+     Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Equity.html">
+     Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Explanation%20by%20Design.html">
+     Explanation by Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Fair%20Machine%20Learning.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Fairness.html">
+     Fairness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Features%20Importance.html">
+     Feature Importance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Frame.html">
+     The Frame Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Fog%20Computing.html">
+     Fog Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Generalizable%20XAI.html">
+     Model Agnostic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Global%20Explanations.html">
+     Global Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20AI.html">
+     Green AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20Computing.html">
+     Green Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20IT.html">
+     Green IT
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/ICT%20sustainability.html">
+     ICT sustainability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Intended.html">
+     Intended Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/K-Anonymity.html">
+     K-anonymity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Linking%20Attack.html">
+     Linking Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Local%20Explanations.html">
+     Local Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Meaningful%20human%20control.html">
+     Meaningful Human Control
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Measurement.html">
+     Measurement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Mesh%20Computing.html">
+     Mesh Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Misdirect.html">
+     Misdirect Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Model-Agnostic.html">
+     Model Agnostic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Model-Specific.html">
+     Model Specific
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Negative%20Side%20Effects.html">
+     Negative Side Effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Not%20Generalizable%20XAI.html">
+     Model Specific
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Perturbation.html">
+     Achiving Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Post-hoc%20Explanations.html">
+     Post-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Power%20Aware.html">
+     Power-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Privacy%20model.html">
+     Privacy models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Provenance.html">
+     Provenance Tracking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Pseudonymised%20Data.html">
+     Pseudonymization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Re-identification%20Attack.html">
+     Re-identification Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Regenerative%20Design.html">
+     Regenerative Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Reliability.html">
+     Reliability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Repeatability.html">
+     Repeatability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Replicability.html">
+     Replicability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Reproducibility.html">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Scheduling.html">
+     Resource Scheduling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Robustness.html">
+     Robustness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Saliency%20Maps.html">
+     Saliency Maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Security.html">
+     Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Segregation.html">
+     Segregation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Single%20Tree%20Approximation.html">
+     Single Tree Approxiamation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Testing.html">
+     Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Traceability.html">
+     Traceability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Transparency.html">
+     Transparency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Unintended.html">
+     Unintended Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Wicked.html">
+     Wicked Problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Workload%20Forecast.html">
+     Workload Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Workload%20Prediction.html">
+     Workload Prediction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FT3.4/L2.Reproducibility.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/T3.4/L2.Reproducibility.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminology">
+   Terminology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-frameworks-supporting-reproducibility">
+   Software frameworks supporting reproducibility
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Reproducibility</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminology">
+   Terminology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-frameworks-supporting-reproducibility">
+   Software frameworks supporting reproducibility
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="reproducibility">
+<h1>Reproducibility<a class="headerlink" href="#reproducibility" title="Permalink to this headline">#</a></h1>
+<p><em>Synonyms:</em> Replicability, Repeatability.</p>
+<div class="section" id="in-brief">
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
+<p><strong>Reproducibility</strong> is the ability of independent investigators to draw the same conclusions from an experiment by following the documentation shared by the original investigators <span id="id1">[<a class="reference internal" href="#id404">1</a>]</span>.</p>
+</div>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
+<p>This entry firstly introduces the motivations behind reproducibility in
+the scientific process and, then, in artificial intelligence and machine
+learning. Due to the rather wide range of different meanings of
+reproducibility in the literature and the ambiguity of the terms, a
+brief review of the most important definitions is provided and
+discussed. In this context, we promote the most stable formulation of
+the definition. Practical guidelines to various standards for
+documenting code, technical experiment setup, and data are also
+discussed.</p>
+</div>
+<div class="section" id="motivation-and-background">
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">#</a></h2>
+<p>Reproducibility in science means that one can repeat or replicate the
+same (or sufficiently similar) experiment and obtain the same (or
+sufficiently similar) research results as the original scientists on the
+basis of their publications and descriptions. To this aim and to ease
+the replication, the discovered claims, methods and analyses should be
+described in a sufficiently detailed and transparent way. Diverse
+reproducibility settings have been identified in the literature, see
+e.g. <span id="id2">[<a class="reference internal" href="#id404">1</a>]</span> <span id="id3">[<a class="reference internal" href="#id421">2</a>]</span>, but from a more general standpoint, reproducibility entails that studies are reproduced
+by independent researchers.</p>
+<p>Reproducibility is an essential ingredient of the scientific method,
+meant to verify the published results and claims and to enable a
+continuous self-correcting process in scientific discoveries.
+Unfortunately, the rising of a so-called research replication crisis has
+been lately pointed out (<span id="id4">[<a class="reference internal" href="#id401">3</a>]</span>). According to several surveys, a
+relatively too large amount of published research results, in such
+disciplines as chemistry, biology, medicine and pharmacy, earth and
+environmental sciences, cannot be repeated. This may suggest issues with
+these results or at least with their good descriptions. Reproducibility
+in artificial intelligence (AI) and, in particular machine learning
+(ML), are specifically challenging. The continuously increasing
+complexity of new methods (often having many hyper-parameters that need
+specialized optimization strategies), the size of studied datasets and
+the use of advanced computational resources pose many difficulties for
+communicating the necessary results as compared to the older works. The
+paper <span id="id5">[<a class="reference internal" href="#id402">4</a>]</span> presents the view of some researchers (such as J.
+Pineau citing her interview) claiming that ML was previously more
+theoretically based, while it has become a more experimental science in
+the past decade, and many proposals of new models, in particular deep
+networks, come from running many experiments with the intensive use of
+available data. In this context, the authors (<span id="id6">[<a class="reference internal" href="#id405">5</a>]</span>)
+indicate growing difficulties in reproducing the work of others. Other
+reasons of difficulty in reproducibility include: lack of access to the
+same training data or differences in data distribution;
+mis-specification or under-specification of the model or training
+procedure; lack of availability of the code necessary to run the
+experiments, or errors in the code; under-specification of the metrics
+used to report results; selective reporting of results and ignorance of
+the danger of adaptive overfitting as well as the use of adaptation
+strategies embedded in the development libraries.</p>
+<p>Nevertheless, software solutions and systems based on AI and ML are
+gaining momentum. Many of them are being used in high-stake applications
+where their decisions can have an impact on people and society, and
+their improper operation may cause harm. In this frame, the quest for
+reproducibility of such methods is even more urgent and reproducibility
+becomes one of the key postulates within Responsible AI or Trustworthy
+AI. <span id="id7">[<a class="reference internal" href="#id403">6</a>]</span> also claims that reproducibility of AI is very
+important for other reasons. Researchers, students and R&amp;D engineers
+need to have a good understanding of new and, often quite complex,
+methods, reproduce them (sometimes by their own re-implementations),
+carefully check their correctness, examine their working conditions and
+limitations, as well as to verify the presented results, especially if
+they need to further use them in their systems often applied to complex
+tasks. Moreover much of AI new projects receive either public or
+business funds, so it should be subject to accountability and it is
+necessary to convince others that these projects can produce reliable
+results.</p>
+</div>
+<div class="section" id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">#</a></h2>
+<p>In this handbook, we follow the concept of reproducibility introduced by
+<span id="id8">[<a class="reference internal" href="#id400">7</a>]</span>. According to this concept, which is also adopted in a
+number of more recent papers
+(e.g.,<span id="id9">[<a class="reference internal" href="#id404">1</a>]</span>; <span id="id10">[<a class="reference internal" href="#id411">8</a>]</span>; <span id="id11">[<a class="reference internal" href="#id405">5</a>]</span>),
+<em>reproducibility</em> refers to the ability of an independent researcher to
+reproduce the same, or reasonably similar results using the data and the
+experimental setup provided by the original authors.</p>
+<p>Reproducibility should not be confused with other terms describing the
+ability to replicate the results in science, such as replicability and
+repeatability (<span id="id12">[<a class="reference internal" href="#id421">2</a>]</span>]). <em>Replicability</em> defined in a way consistent with our understanding of reproducibility is the
+ability of an independent researcher to produce results that are
+consistent with the conclusions of the original work, using new data or
+different the experimental setup. The term <em>repeatability</em> appears in
+some references, e.g. <span id="id13">[<a class="reference internal" href="#id408">9</a>]</span> that uses a notion of reproducibility
+inconsistent with our definition, but should be considered to describe
+an ability of a researcher to repeat his/her own experimental procedures
+using same experimental setup and data, while achieving reasonably
+repeatable results that support the same conclusions.</p>
+<p>In order to compare these reproducibility-related terms, the main
+conceptual dimensions need to be identified. Based on the analysis of
+the literature, the following dimensions can be distinguished: (i)
+availability of the components originally deployed in experimental
+workflows (i.e., data, code and analysis as considered by
+<span id="id14">[<a class="reference internal" href="#id405">5</a>]</span>; <span id="id15">[<a class="reference internal" href="#id406">10</a>]</span>; <span id="id16">[<a class="reference internal" href="#id407">11</a>]</span>); (ii)
+teams involved in the experimentation (i.e., whether or not the
+experiments was conducted by the same group who is running the
+reproducibility validation); (iii) reasons because the experiment or
+part of it is re-conducted (i.e., validating the repeatability of the
+experiment or as suggested by <span id="id17">[<a class="reference internal" href="#id404">1</a>]</span> corroborating the
+scientific hypothesis and theory the experiment aims to support. With
+respect to these conceptual dimensions, the reproducibility-related
+terms used in the literature can be clustered in the following way:</p>
+<ul class="simple">
+<li><p>Most of the literature (including <span id="id18">[<a class="reference internal" href="#id405">5</a>]</span>; <span id="id19">[<a class="reference internal" href="#id404">1</a>]</span>; <span id="id20">[<a class="reference internal" href="#id409">12</a>]</span>]) refers to reproducibility as the
+attempt to replicate experiment as much as possible as the original
+one, that is by using original data, code and analysis when
+available. Computational reproducibility, method reproducibility,
+direct replication and recomputation are used in lieu of
+reproducibility respectively by <span id="id21">[<a class="reference internal" href="#id406">10</a>]</span>,
+<span id="id22">[<a class="reference internal" href="#id413">13</a>]</span>, <span id="id23">[<a class="reference internal" href="#id414">14</a>]</span>, <span id="id24">[<a class="reference internal" href="#id415">15</a>]</span> and
+<span id="id25">[<a class="reference internal" href="#id416">16</a>]</span>. <span id="id26">[<a class="reference internal" href="#id404">1</a>]</span> distinguishes the notion of
+reproducibility from corroborating the scientific hypotheses or
+theory to ground which the experiment is designed for.</p></li>
+<li><p>The term replicability is highlighted by
+<span id="id27">[<a class="reference internal" href="#id400">7</a>]</span>, <span id="id28">[<a class="reference internal" href="#id411">8</a>]</span>, <span id="id29">[<a class="reference internal" href="#id409">12</a>]</span>, <span id="id30">[<a class="reference internal" href="#id405">5</a>]</span>, where an independent team can obtain the same result using the data, which could be slightly different, and methods which they develop completely independently or change slightly. Furthermore <span id="id31">[<a class="reference internal" href="#id411">8</a>]</span>; <span id="id32">[<a class="reference internal" href="#id405">5</a>]</span> use another name –
+robust – for carrying out the experiments with the same data and
+some changes in an analysis or code implementations.</p></li>
+<li><p>Some works such as <span id="id33">[<a class="reference internal" href="#id408">9</a>]</span> <span id="id34">[<a class="reference internal" href="#id411">8</a>]</span>; <span id="id35">[<a class="reference internal" href="#id412">17</a>]</span>; <span id="id36">[<a class="reference internal" href="#id404">1</a>]</span> uses repeatability to indicate a weaker level of reproducibility where the replication of the experiment is achieved by the same team that provided the original experiments.</p></li>
+</ul>
+<p>In the context of the above literature review, it is also worth
+clarifying the discussion of what is reproduced as a result of the above
+activities and how to understand the term result. In the case of AI
+works, <span id="id37">[<a class="reference internal" href="#id404">1</a>]</span> distinguishes between different possible
+results to reproduce:</p>
+<ul class="simple">
+<li><p>Outcome – the result of applying the model implementation for
+selected data (e.g., predictions - labels for test examples)</p></li>
+<li><p>Analysis – calculated measures or other indicators (e.g. prediction
+accuracy values)</p></li>
+<li><p>Interpretation – more general conclusions from the experiments.
+According to Gunderesn the last point is the most important in
+reproducibility, because in the scientific method certain hypotheses
+are tested or certain beliefs are confirmed.</p></li>
+</ul>
+<p>Similar importance of refining the levels of reproducibility has the
+division proposed in <span id="id38">[<a class="reference internal" href="#id413">13</a>]</span>:</p>
+<ul class="simple">
+<li><p>Reproducibility of methods: the ability to implement, as exactly as
+possible, the experimental and computational procedures, with the
+same data and tools, to obtain the same results</p></li>
+<li><p>Reproducibility of results: the production of corroborating results
+in a new study, having used the same experimental methods</p></li>
+<li><p>Reproducibility of inference: the drawing of qualitatively similar
+conclusions from either an independent replication of a study or a
+reanalysis of the original study</p></li>
+</ul>
+<p>The general definitions should be however made more specific whenever we
+apply it to contemporary artificial intelligence research, and to the
+sub-field of machine learning in particular. The reasons are grounded in
+the high complication of the modern software processing pipelines, that
+often depend on third-party software (frameworks, libraries), use an
+extended set of metaparameters that are crucial to arrive at the correct
+results, and require modern hardware (e.g. recent GPU cards) with it’s
+specific architecture and drivers. These features of AI research and
+applications make this field different from the general science, where
+reproducibility refers primarily to the careful documentation of the
+experimental procedure.</p>
+<p>In AI systems, the main components of the experimental setup are
+software and data. The software plays the role of our experimental
+setup. Although depending on the specific context, hardware components
+may be included as well (e.g. in computer vision, robotics), most of the
+AI-related research is conducted on pre-recorded datasets, so we can
+limit our scope to the software. The other dimension is data. Together,
+software and data define the conceptual dimensions of the space on which
+the defined terms are spanned in AI. However, as we noticed earlier, AI
+is a very broad field, with a number of distinctive sub-fields that have
+specific requirements when it comes to defining the exact elements of
+software, and sometimes have specific requirements as to the data, such
+as elimination of biases or privacy issues. This motivates the
+introduction of guidelines or “best practices” for reproducibility, that
+often also include terms that define the degree to which the postulate
+of full reproducibility is met, usually in relation to the amount of
+code, technical details and data that the author shares with readers.</p>
+</div>
+<div class="section" id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">#</a></h2>
+<p>Definitions of the different reproducibility-related terms are often
+accompanied by badges and guidelines helping people in making the
+definitions operational.</p>
+<ul class="simple">
+<li><p>Some definitions differentiate the notion of reproducibility
+according to the kind of resource shared. For example
+<span id="id39">[<a class="reference internal" href="#id406">10</a>]</span> focus on <em>computational reproducibility</em> with
+<strong>bronze, silver, gold</strong> standards. <span id="id40">[<a class="reference internal" href="#id407">11</a>]</span> and
+<span id="id41">[<a class="reference internal" href="#id404">1</a>]</span> propose different increasing levels <em>R1, R2, R3, R4</em>
+depending on whether experiment descriptions, codes, data and
+experiment are stored. &#64;ACMv1.1 recommends that three separate
+badges related to artefact review be associated with research
+articles in ACM publications: Artifacts Evaluated, Artifacts
+Available and Results Validated.</p></li>
+<li><p>Guidelines ease the description of experiments. For example,
+<span id="id42">[<a class="reference internal" href="#id405">5</a>]</span> provides a special Machine learning
+reproducibility checklist; datasheets <span id="id43">[<a class="reference internal" href="#id418">18</a>]</span>,
+model cards <span id="id44">[<a class="reference internal" href="#id417">19</a>]</span> and factsheets
+<span id="id45">[<a class="reference internal" href="#id419">20</a>]</span> provides templates for describing datasets
+and the AI models deployed increasing the transparency and
+accountability of experimentations and operational intelligent
+systems.</p></li>
+</ul>
+<p>Below a few of the above guidelines are precised. Following
+<span id="id46">[<a class="reference internal" href="#id406">10</a>]</span>’s proposal, the three degrees of the reproducibility
+standards for ML are based on availability of data, model, and code, as
+well as other analyses or programming dependencies. For instance, in the
+bronze standards (the minimal requirements for reproducibility) the
+authors should make the data, model and its source code publicly
+available for downloading. The silver standard extends it by
+additionally providing: dependencies of the analysis (in a form to be
+installed in a single command), recording key details of the analysis
+and used software requirements. Furthermore, all elements in the
+analysis should be documented to be set deterministic. Within the gold
+standard the authors should also prepare this analysis reproducible with
+a single command - which is the most demanding with respect to full
+automatization of the reproducibility process.</p>
+<p><span id="id47">[<a class="reference internal" href="#id405">5</a>]</span> specify the necessary elements to be documented and
+made public with respect to the following categories: model and
+algorithm, theoretical claims, datasets used in experiments, shared code
+including dependencies specifications, all reported experimental results
+(with all details for the experimental setup, hyper-parameters, training
+details, definitions of evaluation measures, and description of the
+computing infrastructure used). <span id="id48">[<a class="reference internal" href="#id411">8</a>]</span> provide similar
+recommendations for ML in robotics, by focusing on the reproducibility
+of computation experiments on real robots. They stress the role of
+managing properly the software dependencies, distinguishing between
+experimental code and library code, and documenting the measurement
+metrics, which is essential for reinforcement learning.</p>
+<p>Datasheets by <span id="id49">[<a class="reference internal" href="#id418">18</a>]</span> specify how to document the
+motivation, composition, collection process, recommended uses for data
+deployed in the systems and experiments; model cards by
+<span id="id50">[<a class="reference internal" href="#id417">19</a>]</span> ease the description of model’s intended use
+cases limiting their usage in contexts for which they are not well
+suited; factsheets <span id="id51">[<a class="reference internal" href="#id419">20</a>]</span> provide a template for
+describing the purpose, performance, safety, security, and provenance
+information to be completed by AI service providers for examination by
+consumers.</p>
+</div>
+<div class="section" id="software-frameworks-supporting-reproducibility">
+<h2>Software frameworks supporting reproducibility<a class="headerlink" href="#software-frameworks-supporting-reproducibility" title="Permalink to this headline">#</a></h2>
+<p>Lately, a paradigm based on tailoring the DevOps approach to AI and ML
+is emerging as a practical tool for ensuring reproducibility. This
+paradigm makes use of frameworks for Machine Learning Model
+Operationalization Management (MLOps), which streamline the whole
+development lifecycle of AI and ML models. MLOps enables developers and
+auditors to keep track of and inspect the various choices done and the
+artefacts produced in the different phases of AI and ML design and
+development (i.e., data gathering, data analysis, data
+transformation/preparation, model training and development, model
+validation, and model serving). <span id="id52">[<a class="reference internal" href="#id422">21</a>]</span> analyze some of the
+available open tools for MLOps. This allows for maintaining a
+comprehensive documentation that is at the basis of model
+reproducibility.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<p id="id53"><dl class="citation">
+<dt class="label" id="id404"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id9">3</a>,<a href="#id17">4</a>,<a href="#id19">5</a>,<a href="#id26">6</a>,<a href="#id36">7</a>,<a href="#id37">8</a>,<a href="#id41">9</a>)</span></dt>
+<dd><p>Odd Erik Gundersen. The fundamental principles of reproducibility. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, 379(2197):20200210, 2021. URL: <a class="reference external" href="https://royalsocietypublishing.org/doi/abs/10.1098/rsta.2020.0210">https://royalsocietypublishing.org/doi/abs/10.1098/rsta.2020.0210</a>, <a class="reference external" href="https://arxiv.org/abs/https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.2020.0210">arXiv:https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.2020.0210</a>, <a class="reference external" href="https://doi.org/10.1098/rsta.2020.0210">doi:10.1098/rsta.2020.0210</a>.</p>
+</dd>
+<dt class="label" id="id421"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id12">2</a>)</span></dt>
+<dd><p>Hans E. Plesser. Reproducibility vs. Replicability: A Brief History of a Confused Terminology. <em>Frontiers in Neuroinformatics</em>, 11:76, January 2018. URL: <a class="reference external" href="http://journal.frontiersin.org/article/10.3389/fninf.2017.00076/full">http://journal.frontiersin.org/article/10.3389/fninf.2017.00076/full</a> (visited on 2021-11-18), <a class="reference external" href="https://doi.org/10.3389/fninf.2017.00076">doi:10.3389/fninf.2017.00076</a>.</p>
+</dd>
+<dt class="label" id="id401"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>Monya Baker. 1,500 scientists lift the lid on reproducibility. <em>Nature</em>, 533:452–454, 2016.</p>
+</dd>
+<dt class="label" id="id402"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>Will Douglas Heaven. Ai is wrestling with a replication crisis. <em>MIT Technology Review</em>, 2020.</p>
+</dd>
+<dt class="label" id="id405"><span class="brackets">5</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id11">2</a>,<a href="#id14">3</a>,<a href="#id18">4</a>,<a href="#id30">5</a>,<a href="#id32">6</a>,<a href="#id42">7</a>,<a href="#id47">8</a>)</span></dt>
+<dd><p>Joelle Pineau, Philippe Vincent-Lamarre, Koustuv Sinha, Vincent Larivière, Alina Beygelzimer, Florence d'Alché-Buc, Emily Fox, and Hugo Larochelle. Improving Reproducibility in Machine Learning Research (A Report from the NeurIPS 2019 Reproducibility Program). <em>arXiv:2003.12206 [cs, stat]</em>, December 2020. arXiv: 2003.12206. URL: <a class="reference external" href="http://arxiv.org/abs/2003.12206">http://arxiv.org/abs/2003.12206</a> (visited on 2021-09-26).</p>
+</dd>
+<dt class="label" id="id403"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dd><p>Edward Raff. A step toward quantifying independently reproducible machine learning research. 2019. <a class="reference external" href="https://arxiv.org/abs/1909.06674">arXiv:1909.06674</a>.</p>
+</dd>
+<dt class="label" id="id400"><span class="brackets">7</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id27">2</a>)</span></dt>
+<dd><p>Jon F. Claerbout and Martin Karrenbach. Electronic documents give reproducible research a new meaning. In <em>SEG Technical Program Expanded Abstracts 1992</em>, 601–604. 2005.</p>
+</dd>
+<dt class="label" id="id411"><span class="brackets">8</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id28">2</a>,<a href="#id31">3</a>,<a href="#id34">4</a>,<a href="#id48">5</a>)</span></dt>
+<dd><p>Nicolai A. Lynnerup, Laura Nolling, Rasmus Hasle, and John Hallam. A survey on reproducibility by evaluating deep reinforcement learning algorithms on real-world robots. In Leslie Pack Kaelbling, Danica Kragic, and Komei Sugiura, editors, <em>Proceedings of the Conference on Robot Learning</em>, volume 100 of Proceedings of Machine Learning Research, 466–489. PMLR, 30 Oct–01 Nov 2020. URL: <a class="reference external" href="https://proceedings.mlr.press/v100/lynnerup20a.html">https://proceedings.mlr.press/v100/lynnerup20a.html</a>.</p>
+</dd>
+<dt class="label" id="id408"><span class="brackets">9</span><span class="fn-backref">(<a href="#id13">1</a>,<a href="#id33">2</a>)</span></dt>
+<dd><p>ACM Artifact Review and Badging - Version 1.1. August 2020. URL: <a class="reference external" href="https://www.acm.org/publications/policies/artifact-review-and-badging-current">https://www.acm.org/publications/policies/artifact-review-and-badging-current</a> (visited on 2022-01-20).</p>
+</dd>
+<dt class="label" id="id406"><span class="brackets">10</span><span class="fn-backref">(<a href="#id15">1</a>,<a href="#id21">2</a>,<a href="#id39">3</a>,<a href="#id46">4</a>)</span></dt>
+<dd><p>Benjamin J. Heil, Michael M. Hoffman, Florian Markowetz, Su-In Lee, Casey S. Greene, and Stephanie C. Hicks. Reproducibility standards for machine learning in the life sciences. <em>Nature Methods</em>, October 2021. URL: <a class="reference external" href="https://www.nature.com/articles/s41592-021-01256-7">https://www.nature.com/articles/s41592-021-01256-7</a> (visited on 2021-11-18), <a class="reference external" href="https://doi.org/10.1038/s41592-021-01256-7">doi:10.1038/s41592-021-01256-7</a>.</p>
+</dd>
+<dt class="label" id="id407"><span class="brackets">11</span><span class="fn-backref">(<a href="#id16">1</a>,<a href="#id40">2</a>)</span></dt>
+<dd><p>Odd Erik Gundersen and Sigbjørn Kjensmo. State of the Art: Reproducibility in Artificial Intelligence. In <em>Proceedings of the AAAI Conference on Artificial Intelligence,</em>. 2018.</p>
+</dd>
+<dt class="label" id="id409"><span class="brackets">12</span><span class="fn-backref">(<a href="#id20">1</a>,<a href="#id29">2</a>)</span></dt>
+<dd><p>National Academies of Sciences, Engineering, and Medicine. <em>Reproducibility and Replicability in Science</em>. The National Academies Press, Washington, DC, 2019. ISBN 978-0-309-48616-3. URL: <a class="reference external" href="https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science">https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science</a>, <a class="reference external" href="https://doi.org/10.17226/25303">doi:10.17226/25303</a>.</p>
+</dd>
+<dt class="label" id="id413"><span class="brackets">13</span><span class="fn-backref">(<a href="#id22">1</a>,<a href="#id38">2</a>)</span></dt>
+<dd><p>Steven N. Goodman, Daniele Fanelli, and John P. A. Ioannidis. What does research reproducibility mean? <em>Science Translational Medicine</em>, 8(341):341ps12–341ps12, 2016. URL: <a class="reference external" href="https://www.science.org/doi/abs/10.1126/scitranslmed.aaf5027">https://www.science.org/doi/abs/10.1126/scitranslmed.aaf5027</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/scitranslmed.aaf5027">arXiv:https://www.science.org/doi/pdf/10.1126/scitranslmed.aaf5027</a>, <a class="reference external" href="https://doi.org/10.1126/scitranslmed.aaf5027">doi:10.1126/scitranslmed.aaf5027</a>.</p>
+</dd>
+<dt class="label" id="id414"><span class="brackets"><a class="fn-backref" href="#id23">14</a></span></dt>
+<dd><p>Stephan Guttinger. The limits of replicability. <em>European Journal for Philosophy of Science</em>, 10(2):1–17, 2020.</p>
+</dd>
+<dt class="label" id="id415"><span class="brackets"><a class="fn-backref" href="#id24">15</a></span></dt>
+<dd><p>Ian P Gent and Lars Kotthoff. Recomputation. org: experiences of its first year and lessons learned. In <em>2014 IEEE/ACM 7th International Conference on Utility and Cloud Computing</em>, 968–973. IEEE, 2014.</p>
+</dd>
+<dt class="label" id="id416"><span class="brackets"><a class="fn-backref" href="#id25">16</a></span></dt>
+<dd><p>Victoria C Stodden. Trust your science? open your data and code. 2011. URL: <a class="reference external" href="https://magazine.amstat.org/blog/2011/07/01/trust-your-science/">https://magazine.amstat.org/blog/2011/07/01/trust-your-science/</a>.</p>
+</dd>
+<dt class="label" id="id412"><span class="brackets"><a class="fn-backref" href="#id35">17</a></span></dt>
+<dd><p>Joint Committee for Guides in Metrology. The international vocabulary of metrology – basic and general concepts and associated terms - 3rd edition with minor corrections. <em>JcGM</em>, 2012. URL: <a class="reference external" href="https://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2012.pdf">https://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2012.pdf</a>.</p>
+</dd>
+<dt class="label" id="id418"><span class="brackets">18</span><span class="fn-backref">(<a href="#id43">1</a>,<a href="#id49">2</a>)</span></dt>
+<dd><p>Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé III, and Kate Crawford. Datasheets for Datasets. <em>arXiv:1803.09010 [cs]</em>, March 2020. arXiv: 1803.09010. URL: <a class="reference external" href="http://arxiv.org/abs/1803.09010">http://arxiv.org/abs/1803.09010</a> (visited on 2021-09-14).</p>
+</dd>
+<dt class="label" id="id417"><span class="brackets">19</span><span class="fn-backref">(<a href="#id44">1</a>,<a href="#id50">2</a>)</span></dt>
+<dd><p>Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, and Timnit Gebru. Model Cards for Model Reporting. In <em>Proceedings of the Conference on Fairness, Accountability, and Transparency</em>, 220–229. Atlanta GA USA, January 2019. ACM. URL: <a class="reference external" href="https://dl.acm.org/doi/10.1145/3287560.3287596">https://dl.acm.org/doi/10.1145/3287560.3287596</a> (visited on 2021-09-14), <a class="reference external" href="https://doi.org/10.1145/3287560.3287596">doi:10.1145/3287560.3287596</a>.</p>
+</dd>
+<dt class="label" id="id419"><span class="brackets">20</span><span class="fn-backref">(<a href="#id45">1</a>,<a href="#id51">2</a>)</span></dt>
+<dd><p>Matthew Arnold, Rachel K. E. Bellamy, Michael Hind, Stephanie Houde, Sameep Mehta, Aleksandra Mojsilovic, Ravi Nair, Karthikeyan Natesan Ramamurthy, Darrell Reimer, Alexandra Olteanu, David Piorkowski, Jason Tsay, and Kush R. Varshney. FactSheets: Increasing Trust in AI Services through Supplier's Declarations of Conformity. <em>arXiv:1808.07261 [cs]</em>, February 2019. URL: <a class="reference external" href="http://arxiv.org/abs/1808.07261">http://arxiv.org/abs/1808.07261</a> (visited on 2021-09-14).</p>
+</dd>
+<dt class="label" id="id422"><span class="brackets"><a class="fn-backref" href="#id52">21</a></span></dt>
+<dd><p>Philipp Ruf, Manav Madan, Christoph Reich, and Djaffar Ould-Abdeslam. Demystifying mlops and presenting a recipe for the selection of open-source tools. <em>Applied Sciences</em>, 2021. URL: <a class="reference external" href="https://www.mdpi.com/2076-3417/11/19/8861">https://www.mdpi.com/2076-3417/11/19/8861</a>, <a class="reference external" href="https://doi.org/10.3390/app11198861">doi:10.3390/app11198861</a>.</p>
+</dd>
+</dl>
+</p>
+<blockquote>
+<div><p>This entry was written by Riccardo Albertoni, Sara Colantonio, Piotr Skrzypczyński, and Jerzy Stefanowski.</p>
+</div></blockquote>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./T3.4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="L3.The_frame_problem.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The Frame Problem</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="L2.Traceability.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Traceability</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

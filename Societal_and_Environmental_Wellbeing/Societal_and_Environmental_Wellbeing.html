@@ -5,11 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sustainability &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    <title>Societal_and_Environmental_Wellbeing &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,36 +18,37 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,21 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -85,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -103,18 +88,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../TAILOR.html">
-                    The TAILOR Handbook of Trustworthy AI
-                </a>
-            </li>
-        </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR.html">
+   The TAILOR Handbook of Trustworthy AI
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -197,38 +181,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Transparency/XAI_kinds.html">
-     Kinds of Explanations
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Transparency/feature_importance.html">
-       Feature Importance
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Transparency/saliency_maps.html">
-       Saliency Maps
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Transparency/single_tree.html">
-       Single Tree Approximation
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../Transparency/XAI_dimensions.html">
      Dimensions of Explanations
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -250,14 +207,73 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Transparency/XAI.html">
+     Explainable AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Transparency/XAI_kinds.html">
+       Kinds of Explanations
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/counterfactual.html">
+         Counterfactuals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/feature_importance.html">
+         Feature Importance
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/lore.html">
+         Local Rule-based Explanation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/prototypes.html">
+         Prototypes
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/rules.html">
+         Rules List and Rules Set
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/saliency_maps.html">
+         Saliency Maps
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/single_tree.html">
+         Single Tree Approximation
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html">
    Technical Robustness and Safety
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -313,8 +329,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html">
    Diversity, Non-Discrimination, and Fairness
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -380,8 +396,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Accountability/Accountability_and_Reproducibility.html">
    Accountability
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -390,8 +406,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Accountability/L2.Accountability.html">
      Accountability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -422,8 +438,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Accountability/L2.Traceability.html">
      Traceability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -444,10 +460,10 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Privacy_and_Data_Governance/Privacy_and_Data_Governance.html">
-   Respect for Privacy
+   Privacy and Data Governance
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -456,8 +472,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Privacy_and_Data_Governance/L1.anonymization.html">
      Data Anonymization (and Pseudonymization)
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -473,8 +489,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Privacy_and_Data_Governance/L1.privacy_model.html">
      Privacy Models
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -483,8 +499,8 @@ const thebe_selector_output = ".output, .cell_output"
       <a class="reference internal" href="../Privacy_and_Data_Governance/L2.differential_privacy.html">
        Differential Privacy
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-      <label for="toctree-checkbox-15">
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -528,8 +544,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Privacy_and_Data_Governance/L1.attacks.html">
      Attacks on anonymization schemes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-    <label for="toctree-checkbox-16">
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -545,10 +561,10 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Sustainability
+   Societal_and_Environmental_Wellbeing
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-  <label for="toctree-checkbox-17">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -557,8 +573,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="greenAI.html">
      Green AI
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -611,8 +627,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../main/AnalyticalIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -715,6 +731,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Continuous%20monitoring.html">
      Continuous Performance Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Counterexemplar.html">
+     Counterexemplars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Counterfactual.html">
+     Counterfactuals
     </a>
    </li>
    <li class="toctree-l2">
@@ -832,6 +858,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Exemplars.html">
+     Exemplars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Explainable%20AI.html">
+     Explainable AI
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Explanation%20by%20Design.html">
      Explanation by Design
     </a>
@@ -897,6 +933,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/intersectionality.html">
+     Intersectionality
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/Justice.html">
      Justice
     </a>
@@ -914,6 +955,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Local%20Explanations.html">
      Local Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Lore.html">
+     Local Rule-based Explanation
     </a>
    </li>
    <li class="toctree-l2">
@@ -982,6 +1028,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Prototypes.html">
+     Prototypes
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Provenance.html">
      Provenance Tracking
     </a>
@@ -1042,6 +1093,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Rules.html">
+     Rules List and Rules Set
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Saliency%20Maps.html">
      Saliency Maps
     </a>
@@ -1082,6 +1138,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/XAI.html">
+     XAI
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Wicked.html">
      Wicked Problems
     </a>
@@ -1101,317 +1162,170 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
             
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FSocietal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenuti
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taxonomic-organisation-of-terms">
+   Taxonomic Organisation of Terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-keywords">
+   Main Keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-recommended-reading">
+   Further Recommended Reading
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
-    <div id="rtd-footer-container"></div>
 </div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FSocietal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
-</div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstract">
-   Abstract
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation-and-background">
-   Motivation and Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#guidelines">
-   Guidelines
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taxonomic-organisation-of-terms">
-   Taxonomic Organisation of Terms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-keywords">
-   Main Keywords
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-recommended-reading">
-   Further Recommended Reading
-  </a>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sustainability</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstract">
-   Abstract
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation-and-background">
-   Motivation and Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#guidelines">
-   Guidelines
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taxonomic-organisation-of-terms">
-   Taxonomic Organisation of Terms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-keywords">
-   Main Keywords
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-recommended-reading">
-   Further Recommended Reading
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
-                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="sustainability">
-<h1>Sustainability<a class="headerlink" href="#sustainability" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="societal-and-environmental-wellbeing">
+<h1>Societal_and_Environmental_Wellbeing<a class="headerlink" href="#societal-and-environmental-wellbeing" title="Permalink to this headline">¶</a></h1>
+<!-- Sustainability-->
 <div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 <p>Sustainability is an ethical aspect studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a>.
 Sustainability in AI refers to the application of AI technology (from the power consumption of the hardware to the processing and storage of a very large dataset) while considering problems related to sustainable development.
-The sustainability in AI can be divided into two branches that should be addressed: AI for Sustainability and Sustainability of AI <span id="id1">[<a class="reference internal" href="#id473">1</a>]</span>. The first branch is the most developed branch whose aim is to achieve the United Nations Sustainable Development Goals (SDGs) and where not-for-profit organisation such as <a href="https://ai4good.org/" target=_blank>AI4Good</a> or <a href="https://www.forclimate.ai/" target=_blank>AI for Climate</a> are active to address the scope. In this branch we consider AI applications whose objective is to use the algorithm for environmental purposes such as reducing the energy cost of large data centres or better predicting the weather forecast to maximise renewable energy production. The second branch regards the sustainable development of AI/ML itself, concerning how to measure the sustainability of developing and utilising AI models such as the computational cost of training AI algorithms or the amount of CO2 emission.</p>
+The sustainability in AI can be divided into two branches that should be addressed: AI for Sustainability and Sustainability of AI <span id="id1">[<a class="reference internal" href="#id2794">1</a>]</span>. The first branch is the most developed branch whose aim is to achieve the United Nations Sustainable Development Goals (SDGs) and where not-for-profit organisation such as <a href="https://ai4good.org/" target=_blank>AI4Good</a> or <a href="https://www.forclimate.ai/" target=_blank>AI for Climate</a> are active to address the scope. In this branch we consider AI applications whose objective is to use the algorithm for environmental purposes such as reducing the energy cost of large data centres or better predicting the weather forecast to maximise renewable energy production. The second branch regards the sustainable development of AI/ML itself, concerning how to measure the sustainability of developing and utilising AI models such as the computational cost of training AI algorithms or the amount of CO2 emission.</p>
 </div>
 <div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <p>In this part we will cover the main elements that define sustainability in AI systems. Some of them are related to the aspects of AI for sustainability and can be common to computer systems in general, others are related to the sustainability of AI. We will focus on sustainability in AI with more attention to new AI-specific issues and challenges because they are less covered in the literature. We include a taxonomic organisation of terms in the area of AI sustainability and their definition.</p>
 </div>
 <div class="section" id="motivation-and-background">
-<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">#</a></h2>
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
 <p>Given the increasing capabilities and widespread use of artificial intelligence, there is a growing concern about its impact on the environment related to the carbon footprints and the power consumption needed for training, store and developing AI models and algorithms. There is a wide literature regarding the dangers of climate change and the need of modifying the habits of use of the technology by consumers and industries. Plans such as the European Green Deal promulgated by the European Commission has the aim to tackle climate change. AI has the potential to accelerate the efforts of protecting the planet with many applications such as the use of machine learning to optimise the energy consumption efficiency, reducing the CO2 emission, monitoring quality of the air, the water, the biodiversity changes, the vegetation, the forest cover, and preventing natural disasters.</p>
 </div>
 <div class="section" id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">#</a></h2>
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
 <p>The guidelines include common elements that should be considered in the design and build of a piece of technology while using ML and other emerging technologies.
 In 2015 the United Nations General Assembly set up the Sustainable Development Goals, a list of 17 interlinked global goals that are intended to be achieved by the year 2030. Not-for-profit organisations such as AI4Good also described a list of guidelines like “Guidelines on the Implementation of Eco-friendly Criteria for AI and other Emerging Technologies” and “Guidelines on the environmental efficiency of machine learning processes in supply chain management” (both guidelines can be found <a href="https://www.itu.int/en/ITU-T/focusgroups/ai4ee/Pages/WG3deliverables.aspx" target=_blank>here</a>) with the scope of addressing very important aspects on the use of AI and its development.</p>
 </div>
 <div class="section" id="taxonomic-organisation-of-terms">
-<h2>Taxonomic Organisation of Terms<a class="headerlink" href="#taxonomic-organisation-of-terms" title="Permalink to this headline">#</a></h2>
+<h2>Taxonomic Organisation of Terms<a class="headerlink" href="#taxonomic-organisation-of-terms" title="Permalink to this headline">¶</a></h2>
 <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure that by 2030 all people enjoy peace and prosperity. They were adopted by the United Nations in 2015 as. They are divided into 17 goals -they recognize that action in one area will affect outcomes in others and that development must balance social, economic and environmental sustainability (see <a href="https://www.undp.org/sustainable-development-goals#:~:text=The%20Sustainable%20Development%20Goals%20(SDGs)%2C%20also%20known%20as%20the,people%20enjoy%20peace%20and%20prosperity" target=_blank>here</a> for further details).</p>
 <p>AI is involved in many of these 17 Global Goals, including <a href="https://www.undp.org/sustainable-development-goals#sustainable-cities-and-communities" target=_blank>Sustainable cities and communities</a> and <a href="https://www.undp.org/sustainable-development-goals#responsible-consumption-and-production" target=_blank>Responsible consumption and production</a> with areas like production optimization, smart cities and green computing.</p>
 <div class="figure align-center" id="t3-6taxonomy36">
 <a class="reference internal image-reference" href="../_images/UN_Sustainable_Development_Goals_pillars.jpg"><img alt="../_images/UN_Sustainable_Development_Goals_pillars.jpg" src="../_images/UN_Sustainable_Development_Goals_pillars.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">A possible taxonomy about Sustainability Goals <span id="id2">[<a class="reference internal" href="#id474">2</a>]</span>.</span><a class="headerlink" href="#t3-6taxonomy36" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">A possible taxonomy about Sustainability Goals <span id="id2">[<a class="reference internal" href="#id2795">2</a>]</span>.</span><a class="headerlink" href="#t3-6taxonomy36" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="main-keywords">
-<h2>Main Keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">#</a></h2>
+<h2>Main Keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="greenAI.html"><span class="doc">Green AI</span></a>: The goal of Green AI (also known as <em>Green IT</em>, <em>Green Computing</em>, or <em>ICT Sustainability</em>) is to minimise the negative aspects of IT operations on the environment. To do so, computers and IT products can be designed, manufactured and disposed of in an environmentally-friendly manner.</p></li>
 <li><p><a class="reference internal" href="power_aware.html"><span class="doc">Power-aware Computing</span></a>: Power-aware computing (also called <em>Energy-aware Computing</em> and <em>Energy-efficient Computing</em>) is part of the Green IT. Power-aware design strategies strive to maximise performance in high-performance systems within power dissipation and power consumption constraints. Reduced power utilisation on a node is one way to reduce the amount of energy required to compute. Lowering the frequency at which the CPU works on one approach to do this. Reduced clock speed, on the other hand, increases the time to solution, posing a potential compromise.</p></li>
@@ -1424,20 +1338,20 @@ In 2015 the United Nations General Assembly set up the Sustainable Development G
 </ul>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <!-- :style: unsrtalpha -->
 <p id="id3"><dl class="citation">
-<dt class="label" id="id473"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id2794"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Aimee van Wynsberghe. Sustainable AI: AI for sustainability and the sustainability of AI. <em>AI and Ethics</em>, 1(3):213–218, 2021.</p>
 </dd>
-<dt class="label" id="id474"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id2795"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Department of Economic United Nations and Social Affair. Sustainable development. URL: <a class="reference external" href="https://sdgs.un.org/goals">https://sdgs.un.org/goals</a> (visited on 2022-05-02).</p>
 </dd>
 </dl>
 </p>
 </div>
 <div class="section" id="further-recommended-reading">
-<h2>Further Recommended Reading<a class="headerlink" href="#further-recommended-reading" title="Permalink to this headline">#</a></h2>
+<h2>Further Recommended Reading<a class="headerlink" href="#further-recommended-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>van Wynsberghe, Aimee. “Sustainable AI: AI for sustainability and the sustainability of AI.” AI and Ethics 1.3 (2021): 213-218.</p></li>
 <li><p>Vinuesa, Ricardo, et al. “The role of artificial intelligence in achieving the Sustainable Development Goals.” Nature communications 11.1 (2020): 1-10.</p></li>
@@ -1480,11 +1394,9 @@ In 2015 the United Nations General Assembly set up the Sustainable Development G
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Privacy_and_Data_Governance/L2.reidentification.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1500,28 +1412,26 @@ In 2015 the United Nations General Assembly set up the Sustainable Development G
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+        
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
     </div>
-    
-</div>
+  </footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

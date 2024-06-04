@@ -5,11 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Respect for Privacy &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    <title>Privacy and Data Governance &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,39 +18,40 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Privacy_and_Data_Governance/Privacy_and_Data_Governance.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,21 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -87,10 +73,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -105,18 +90,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../TAILOR.html">
-                    The TAILOR Handbook of Trustworthy AI
-                </a>
-            </li>
-        </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR.html">
+   The TAILOR Handbook of Trustworthy AI
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../authors.html">
    Complete List of Contributors
@@ -199,38 +183,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Transparency/XAI_kinds.html">
-     Kinds of Explanations
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Transparency/feature_importance.html">
-       Feature Importance
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Transparency/saliency_maps.html">
-       Saliency Maps
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Transparency/single_tree.html">
-       Single Tree Approximation
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../Transparency/XAI_dimensions.html">
      Dimensions of Explanations
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -252,14 +209,73 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Transparency/XAI.html">
+     Explainable AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Transparency/XAI_kinds.html">
+       Kinds of Explanations
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/counterfactual.html">
+         Counterfactuals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/feature_importance.html">
+         Feature Importance
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/lore.html">
+         Local Rule-based Explanation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/prototypes.html">
+         Prototypes
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/rules.html">
+         Rules List and Rules Set
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/saliency_maps.html">
+         Saliency Maps
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Transparency/single_tree.html">
+         Single Tree Approximation
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html">
    Technical Robustness and Safety
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -315,8 +331,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html">
    Diversity, Non-Discrimination, and Fairness
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -382,8 +398,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Accountability/Accountability_and_Reproducibility.html">
    Accountability
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -392,8 +408,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Accountability/L2.Accountability.html">
      Accountability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -424,8 +440,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Accountability/L2.Traceability.html">
      Traceability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -446,10 +462,10 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Respect for Privacy
+   Privacy and Data Governance
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -458,8 +474,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="L1.anonymization.html">
      Data Anonymization (and Pseudonymization)
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -475,8 +491,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="L1.privacy_model.html">
      Privacy Models
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -485,8 +501,8 @@ const thebe_selector_output = ".output, .cell_output"
       <a class="reference internal" href="L2.differential_privacy.html">
        Differential Privacy
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-      <label for="toctree-checkbox-15">
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -530,8 +546,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="L1.attacks.html">
      Attacks on anonymization schemes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-    <label for="toctree-checkbox-16">
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -547,10 +563,10 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html">
-   Sustainability
+   Societal_and_Environmental_Wellbeing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-  <label for="toctree-checkbox-17">
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -559,8 +575,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/greenAI.html">
      Green AI
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -613,8 +629,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../main/AnalyticalIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -717,6 +733,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Continuous%20monitoring.html">
      Continuous Performance Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Counterexemplar.html">
+     Counterexemplars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Counterfactual.html">
+     Counterfactuals
     </a>
    </li>
    <li class="toctree-l2">
@@ -834,6 +860,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Exemplars.html">
+     Exemplars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Explainable%20AI.html">
+     Explainable AI
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Explanation%20by%20Design.html">
      Explanation by Design
     </a>
@@ -899,6 +935,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/intersectionality.html">
+     Intersectionality
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/Justice.html">
      Justice
     </a>
@@ -916,6 +957,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Local%20Explanations.html">
      Local Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Lore.html">
+     Local Rule-based Explanation
     </a>
    </li>
    <li class="toctree-l2">
@@ -984,6 +1030,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Prototypes.html">
+     Prototypes
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Provenance.html">
      Provenance Tracking
     </a>
@@ -1044,6 +1095,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Rules.html">
+     Rules List and Rules Set
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Saliency%20Maps.html">
      Saliency Maps
     </a>
@@ -1084,6 +1140,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/XAI.html">
+     XAI
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Wicked.html">
      Wicked Problems
     </a>
@@ -1103,317 +1164,170 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
             
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Privacy_and_Data_Governance/Privacy_and_Data_Governance.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FPrivacy_and_Data_Governance/Privacy_and_Data_Governance.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenuti
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension">
+   Software Frameworks Supporting Dimension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taxonomic-organisation-of-terms">
+   Taxonomic Organisation of Terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-keywords-tba">
+   Main Keywords (TBA)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
-    <div id="rtd-footer-container"></div>
 </div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FPrivacy_and_Data_Governance/Privacy_and_Data_Governance.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/Privacy_and_Data_Governance/Privacy_and_Data_Governance.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
-</div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstract">
-   Abstract
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation-and-background">
-   Motivation and Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#guidelines">
-   Guidelines
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension">
-   Software Frameworks Supporting Dimension
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taxonomic-organisation-of-terms">
-   Taxonomic Organisation of Terms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-keywords-tba">
-   Main Keywords (TBA)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Respect for Privacy</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-brief">
-   In Brief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstract">
-   Abstract
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation-and-background">
-   Motivation and Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#guidelines">
-   Guidelines
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software-frameworks-supporting-dimension">
-   Software Frameworks Supporting Dimension
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taxonomic-organisation-of-terms">
-   Taxonomic Organisation of Terms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-keywords-tba">
-   Main Keywords (TBA)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
-                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="respect-for-privacy">
-<h1>Respect for Privacy<a class="headerlink" href="#respect-for-privacy" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="privacy-and-data-governance">
+<h1>Privacy and Data Governance<a class="headerlink" href="#privacy-and-data-governance" title="Permalink to this headline">¶</a></h1>
+<!-- Respect for Privacy-->
 <div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 <p>Respect for Privacy is an ethical aspect studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a> for ensuring personal data protection that is at the core of the General
-Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span>. GDPR, in its <a href="https://gdpr-info.eu/art-5-gdpr/" target=_blank>Article 5</a>, promote <em>privacy by design</em> in the form of a certain number of general principles for ensuring <em>privacy as the default</em> in the whole chain of data processing for a given task. We outline the challenges and solutions for enforcing privacy by design approaches.</p>
+Data Protection Regulation (GDPR) <span id="id1">[<a class="reference internal" href="../main/Ethical_Legal_Framework/HLEG.html#id10">2</a>]</span>. GDPR, in its <a href="https://gdpr-info.eu/art-5-gdpr/" target=_blank>Article 5</a>, promote <em>privacy by design</em> in the form of a certain number of general principles for ensuring <em>privacy as the default</em> in the whole chain of data processing for a given task. We outline the challenges and solutions for enforcing privacy by design approaches.</p>
 </div>
 <div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <p>When protecting personal data, we are faced to the dilemma of disclosing no sensitive data while learning useful information about a population.
-One approach for solving this tension between privacy and utility is based on <em>data encryption</em> and consists in developping secure computation protocols able to learn models or to compute statistics on encrypted data. A lot of scientific literature <span id="id2">[<a class="reference internal" href="#id465">2</a>]</span> <span id="id3">[<a class="reference internal" href="#id466">3</a>]</span> <span id="id4">[<a class="reference internal" href="#id467">4</a>]</span> <span id="id5">[<a class="reference internal" href="#id468">5</a>]</span> has been exploring this security-based approach depending on the target computational task.
+One approach for solving this tension between privacy and utility is based on <em>data encryption</em> and consists in developping secure computation protocols able to learn models or to compute statistics on encrypted data. A lot of scientific literature <span id="id2">[<a class="reference internal" href="#id2786">2</a>]</span> <span id="id3">[<a class="reference internal" href="#id2787">3</a>]</span> <span id="id4">[<a class="reference internal" href="#id2788">4</a>]</span> <span id="id5">[<a class="reference internal" href="#id2789">5</a>]</span> has been exploring this security-based approach depending on the target computational task.
 Another approach consists in conducting data analysis tasks on datasets made anonymous by the application of some <span class="xref std std-doc">./L1.privacy_mechanisms</span>.
 according to some <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>. Anonymization must no be reduced to <a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a> (see also <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>), which is defined in GDPR <a href="https://gdpr-info.eu/art-4-gdpr/" target=_blank>Article 4</a> as “the processing
 of personal data in such a way that the data cannot be attributed to a specific data subject without the use of additional information.”
 Anonymization, as defined in GDPR (see <a href="https://gdpr-info.eu/recitals/no-26/" target=_blank>Recital 26</a>), refers to a process that removes any possibility of identifying a person even with additional information. In the resulting anonymized data, the connection should be completely lost between data and the individuals. Based on such a definition, anonymization is very difficult to model formally and to verify algorithmically. We will briefly survey the main privacy models and their properties, as well as the main privacy mechanisms which can be applied for enforcing the corresponding privacy properties or for providing strong guarantees of robustness to attacks.</p>
 </div>
 <div class="section" id="motivation-and-background">
-<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">#</a></h2>
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
 <p>Publishing datasets plays an essential role in open data research and in promoting transparency of government agencies. Unfortunately, the process of data publication can be highly risky as it may disclose individuals’ sensitive information. Hence, an essential step before publishing datasets is to remove any uniquely identifiable information from them. This is called <a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a> and consists in masking or replacing by pseudonyms values of properties that directly identify persons such as their name, address, postcode, telephone number, photograph or image, or some other unique personal characteristic.</p>
 <p><a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a> is not sufficient however for preserving the privacy of users. Adversaries can re-identify individuals in datasets based on common attributes called quasi-identifiers or may have prior knowledge about the users. Such side information enables them to reveal sensitive information that can cause physical, financial, and reputational harms to people.</p>
 <p>Therefore, it is crucial to assess carefully <em>privacy risks</em> before the publication of datasets. Detection of privacy breaches should come with <a class="reference internal" href="../Transparency/Transparency.html"><span class="doc std std-doc">explanations</span></a> that can then be used to guide the choice of the appropriate <span class="xref myst">anonymization mechanisms</span> to mitigate the detected privacy risks. <em>Anonymization</em> should provide provable guarantees for privacy properties induced by some <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>. <a class="reference internal" href="L2.differential_privacy.html"><span class="doc">Differential Privacy</span></a> and <a class="reference internal" href="L2.k_anonymity.html"><span class="doc">k-anonymity</span></a> are the two main privacy models for which <span class="xref std std-doc">./L1.privacy_mechanisms</span> have been designed. They enjoy different properties based on the type of perturbations or transfomations applied on the data to anonymize.</p>
 <p>The strength of <a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a> and anonymization techniques can be assessed by their robustness to <a class="reference internal" href="L1.attacks.html"><span class="doc std std-doc">privacy attacks</span></a> that aim at re-identifying individuals in datasets based on common attributes called quasi-identifiers or on prior knowledge.</p>
 </div>
 <div class="section" id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">#</a></h2>
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
 <p><em>EDBP</em> has published several guidelines. The EDPB <a href="https://ec.europa.eu/newsroom/article29/items/611236" target=_blank>Guidelines on Data Protection Impact Assessment</a>
 focus on determining whether a processing operation is likely to result in a high risk to the data subject or not. It provides guidance on how to assess data protection risks and how to carry out a data protection risk assessment.</p>
 <p><em>Data minimisation</em> is a strong recommendation to limit the collection of personal information to what is directly relevant and necessary to accomplish a specified purpose, and to retain the data only for as long as is necessary to fulfil that purpose.</p>
 <p>The most authoritative guideline on <a href="https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-42019-article-25-data-protection-design-and" target=_blank>data protection “by design and by default”</a> outlines the data subject’s rights and freedoms and the data protection principles that are illustrated through examples of practical cases. It emphasizes the obligation for controllers to stay up to date on technological advances on handling data protection risks, and to implement and update the measures and safeguards taking into account the evolving technological landscape.</p>
 </div>
 <div class="section" id="software-frameworks-supporting-dimension">
-<h2>Software Frameworks Supporting Dimension<a class="headerlink" href="#software-frameworks-supporting-dimension" title="Permalink to this headline">#</a></h2>
+<h2>Software Frameworks Supporting Dimension<a class="headerlink" href="#software-frameworks-supporting-dimension" title="Permalink to this headline">¶</a></h2>
 <p>There are some practical tools that help in enanching respect for privacy and awareness, in particular definining and mitigating potential privacy risks.
 This is compliant with the <a href="https://gdpr-info.eu/art-35-gdpr/" target=_blank>Data Protection Impact Assessment</a> introduced in the GDPR.</p>
 <p>Risks can be identified and addressed at an early stage by analyzing how the proposed uses of personal information and technology will work in practice. We should identify the privacy and related risks, evaluate the privacy solutions and integrate them into the project plan. <!-- missing citation: Information Commissioner’s Office. Conducting privacy impact assessments code
@@ -1423,20 +1337,20 @@ of practice, 2017. https://ico.org.uk/media/for-organisations/documents/1595/pia
 <ul class="simple">
 <li><p><a href="https://amnesia.openaire.eu/" target=_blank>Amnesia</a>, a tool for anonymize tabular data relying on <a class="reference internal" href="L2.k_anonymity.html"><span class="doc">k-anonymity</span></a> paradigm;</p></li>
 <li><p><a href="https://arx.deidentifier.org/anonymization-tool/" target=_blank>AXR</a>, a tool that incorporates different <a class="reference internal" href="L1.privacy_model.html"><span class="doc">Privacy Models</span></a>;</p></li>
-<li><p><a href="https://github.com/scikit-mobility/scikit-mobility" target=_blank>Scikit-mobility</a>, a Python library for mobility analysis that includes the computation of privacy risks in such setting, based on the work presented in <span id="id8">[<a class="reference internal" href="#id469">6</a>]</span> <span id="id9">[<a class="reference internal" href="#id470">7</a>]</span>.</p></li>
+<li><p><a href="https://github.com/scikit-mobility/scikit-mobility" target=_blank>Scikit-mobility</a>, a Python library for mobility analysis that includes the computation of privacy risks in such setting, based on the work presented in <span id="id8">[<a class="reference internal" href="#id2790">6</a>]</span> <span id="id9">[<a class="reference internal" href="#id2791">7</a>]</span>.</p></li>
 </ul>
 </div>
 <div class="section" id="taxonomic-organisation-of-terms">
-<h2>Taxonomic Organisation of Terms<a class="headerlink" href="#taxonomic-organisation-of-terms" title="Permalink to this headline">#</a></h2>
+<h2>Taxonomic Organisation of Terms<a class="headerlink" href="#taxonomic-organisation-of-terms" title="Permalink to this headline">¶</a></h2>
 <p>The <em>Respect for Privacy</em> dimension mainly regards the Data Protection. The Assessment of Privacy Risks can be performed, and two diffent strategies are available two protect the data privacy. The first one regards the application of <span class="xref myst">Anonymization Mechanisms</span>, such as <a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a>, <a class="reference internal" href="L2.k_anonymity.html"><span class="doc">k-anonymity</span></a>, or <a class="reference internal" href="L2.differential_privacy.html"><span class="doc">Differential Privacy</span></a>. The second strategy is Data Encryption, which is strictly related with the <a class="reference internal" href="../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html"><span class="doc std std-doc">Security Dimension</span></a>.
-In Fig. <a class="reference internal" href="#t3-5taxonomy35"><span class="std std-numref">22</span></a>, one can find the taxonomy proposed here. In blue, there are highlighted the possible attacks related to the various strategies, i.e., <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>, <span class="xref std std-doc">./L2.membership</span>, and Security Attacks.</p>
+In Fig. <a class="reference internal" href="#t3-5taxonomy35"><span class="std std-numref">27</span></a>, one can find the taxonomy proposed here. In blue, there are highlighted the possible attacks related to the various strategies, i.e., <a class="reference internal" href="L2.reidentification.html"><span class="doc">Re-identification Attack</span></a>, <span class="xref std std-doc">./L2.membership</span>, and Security Attacks.</p>
 <div class="figure align-center" id="t3-5taxonomy35">
 <a class="reference internal image-reference" href="../_images/TAILOR_fig_privacy_blue.png"><img alt="../_images/TAILOR_fig_privacy_blue.png" src="../_images/TAILOR_fig_privacy_blue.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">A possible taxonomy about solutions to the Respect for Privacy dimension.</span><a class="headerlink" href="#t3-5taxonomy35" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">A possible taxonomy about solutions to the Respect for Privacy dimension.</span><a class="headerlink" href="#t3-5taxonomy35" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="main-keywords-tba">
-<h2>Main Keywords (TBA)<a class="headerlink" href="#main-keywords-tba" title="Permalink to this headline">#</a></h2>
+<h2>Main Keywords (TBA)<a class="headerlink" href="#main-keywords-tba" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="L1.anonymization.html"><span class="doc">Data Anonymization (and Pseudonymization)</span></a>: A data subject is considered anonymous if it is <em>reasonably</em> hard to attribute his personal data to him/her.</p></li>
 <li><p><a class="reference internal" href="L2.pseudonymization.html"><span class="doc">Pseudonymization</span></a>: <strong>Pseudonymisation</strong> aims to substitute one or more identifiers that link(s) the identity of an individual to its data with a surrogate value, called <strong>pseudonym</strong> or <strong>token</strong>.</p></li>
@@ -1451,27 +1365,27 @@ In Fig. <a class="reference internal" href="#t3-5taxonomy35"><span class="std st
 </ul>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
 <p id="id10"><dl class="citation">
 <dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>European Parliament &amp; Council. General data protection regulation. 2016. L119, 4/5/2016, p. 1–88.</p>
 </dd>
-<dt class="label" id="id465"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id2786"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>C. Castelluccia, A. C.-F. Chan, E. Mykletun, and G. Tsudik. Efficient and Provably Secure Aggregation of Encrypted Data in Wireless Sensor Networks. <em>ACM Transactions on Sensor Networks (TOSN)</em>, 5(3):20:1–20:36, 2009.</p>
 </dd>
-<dt class="label" id="id466"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id2787"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Q.-C. To, B. Nguyen, and P. Pucheral. Private and Scalable Execution of SQL Aggregates on a Secure Decentralized Architecture. <em>ACM Transactions on Database Systems (TODS)</em>, 41(3):16:1–16:43, 2016.</p>
 </dd>
-<dt class="label" id="id467"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id2788"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>J. Mirval, L. Bouganim, and I. Sandu Popa. Practical Fully-Decentralized Secure Aggregation for Personal Data Management Systems. In <em>International Conference on Scientific and Statistical Database Management (SSDBM)</em>, 259–264. 2021.</p>
 </dd>
-<dt class="label" id="id468"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id2789"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>R. Ciucanu, M. Giraud, P. Lafourcade, and L. Ye. Secure Grouping and Aggregation with MapReduce. In <em>International Joint Conference on e-Business and Telecommunications (ICETE) – Volume 2: International Conference on Security and Cryptography (SECRYPT)</em>, 514–521. 2018.</p>
 </dd>
-<dt class="label" id="id469"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
+<dt class="label" id="id2790"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
 <dd><p>Luca Pappalardo, Filippo Simini, Gianni Barlacchi, and Roberto Pellungrini. Scikit-mobility: a python library for the analysis, generation and risk assessment of mobility data. 2019. https://arxiv.org/abs/1907.07062.</p>
 </dd>
-<dt class="label" id="id470"><span class="brackets"><a class="fn-backref" href="#id9">7</a></span></dt>
+<dt class="label" id="id2791"><span class="brackets"><a class="fn-backref" href="#id9">7</a></span></dt>
 <dd><p>Francesca Pratesi, Anna Monreale, Roberto Trasarti, Fosca Giannotti, Dino Pedreschi, and Tadashi Yanagihara. PRUDEnce: a system for assessing privacy risk vs utility in data sharing ecosystems. <em>Transaction Data Privacy</em>, 11(2):139–167, 2018.</p>
 </dd>
 </dl>
@@ -1515,11 +1429,9 @@ In Fig. <a class="reference internal" href="#t3-5taxonomy35"><span class="std st
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Accountability/L3.Continuous_performance_monitoring.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1535,28 +1447,26 @@ In Fig. <a class="reference internal" href="#t3-5taxonomy35"><span class="std st
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+        
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Di TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+        
+            &copy; Diritto d'autore 2021.<br/>
+      </p>
     </div>
-    
-</div>
+  </footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

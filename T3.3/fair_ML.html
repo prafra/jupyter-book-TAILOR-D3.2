@@ -1,0 +1,1454 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fair Machine Learning &#8212; The TAILOR Handbook of Trustworthy AI</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/T3.3/fair_ML.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Grounds of Discrimination" href="discrimination.html" />
+    <link rel="prev" title="Fairness notions and metrics" href="fairness.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/TAILOR-logo-coloured.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The TAILOR Handbook of Trustworthy AI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../authors.html">
+   Complete List of Contributors
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.1/T3.1.html">
+   Explainable AI Systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_kinds.html">
+     Kinds of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/feature_importance.html">
+       Feature Importance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/saliency_maps.html">
+       Saliency Maps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/single_tree.html">
+       Single Tree Approximation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.1/XAI_dimensions.html">
+     Dimensions of Explanations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/blackbox_transparent.html">
+       Black Box Explanation vs Explanation by Design
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/model_specific.html">
+       Model-Specific vs Model-Agnostic Explainers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.1/global_local.html">
+       Global vs Local Explanations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="T3.3.html">
+   Fairness, Equity, and Justice by Design
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="auditing.html">
+     Auditing AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="equity.html">
+     Discrimination &amp; Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fairness.html">
+     Fairness notions and metrics
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="segregation.html">
+     Segregation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.4/L1.Accountability_and_Reproducibility.html">
+   Accountability and Reproducibility
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.4/L2.Accountability.html">
+     Accountability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Wicked_problems.html">
+       Wicked problems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Meaningful_human_control.html">
+       Meaningful human control
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.The_frame_problem.html">
+       The Frame Problem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.4/L2.Reproducibility.html">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.4/L2.Traceability.html">
+     Traceability
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Provenance_tracking.html">
+       Provenance Tracking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.4/L3.Continuous_performance_monitoring.html">
+       Continuous Performance Monitoring
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.5/T3.5.html">
+   Respect for Privacy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.anonymization.html">
+     Data Anonymization (and Pseudonymization)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.pseudonymization.html">
+       Pseudonymization
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.privacy_model.html">
+     Privacy Models
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../T3.5/L2.differential_privacy.html">
+       Differential Privacy
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.epsilon_DP.html">
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         -Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L3.epsilon_delta_DP.html">
+         (
+         <span class="math notranslate nohighlight">
+          \(\epsilon\)
+         </span>
+         ,
+         <span class="math notranslate nohighlight">
+          \(\delta\)
+         </span>
+         )-Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../T3.5/L2.perturbation_mechanisms.html">
+         Achieving Differential Privacy
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.k_anonymity.html">
+       k-anonymity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.5/L1.attacks.html">
+     Attacks on anonymization schemes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.5/L2.reidentification.html">
+       Re-identification Attack
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../T3.6/T3.6.html">
+   Sustainability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../T3.6/greenAI.html">
+     Green AI
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../T3.6/power_aware.html">
+       Power-aware Computing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cloud_computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/edge_computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/data_centre.html">
+     Data Centre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/cradle_to_cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../T3.6/resource_allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TAILOR_project.html">
+   About TAILOR
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../main/AnalyticaIndex.html">
+   Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/2CC2.html">
+     2CC2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Accountability.html">
+     Accountability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Alignment.html">
+     Alignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20attack.html">
+     Adversarial Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20example.html">
+     Adversarial Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Adversarial%20input.html">
+     Adversarial Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Ante-hoc%20Explanation.html">
+     Ante-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Assessment.html">
+     Assessment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20Anonym.html">
+     Attacks on Anonymization Schema
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Attacks%20on%20Pseudonymised%20Data.html">
+     Attacks on Pseudonymised Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Auditing.html">
+     Auditing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Bias.html">
+     Bias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Black-box%20Explanations.html">
+     Black-box Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Brittleness.html">
+     Brittleness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/C2C.html">
+     C2C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cloud%20Computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Continuous%20monitoring.html">
+     Continuous Performance Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/cradle%202%20cradle.html">
+     Cradle 2 cradle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Cradle.html">
+     Cradle-to-cradle Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Data%20Anonymization.html">
+     Data Anonymization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Data%20Center.html">
+     Data Center
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Data%20Poisoning.html">
+     Data Poisoning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Dependability.html">
+     Dependability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Differential%20Privacy%20models.html">
+     Differential Privacy Models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/epsilon_delta-differential_privacy.html">
+     (
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     ,
+     <span class="math notranslate nohighlight">
+      \(\delta\)
+     </span>
+     )-Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Epsilon-differential_privacy.html">
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     -Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Epsilon-indist.html">
+     <span class="math notranslate nohighlight">
+      \(\epsilon\)
+     </span>
+     -Indistinguishability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Data%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Dimensions%20of%20Explanations.html">
+     Dimensions of Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Discrimination.html">
+     Grounds of Discrimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Distributional%20Shift.html">
+     Distributional Shift
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Direct.html">
+     Direct Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Edge%20Computing.html">
+     Edge Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Aware.html">
+     Energy-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Energy%20Efficient.html">
+     Energy-efficient Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Evaluation.html">
+     Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Equity.html">
+     Equity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Explanation%20by%20Design.html">
+     Explanation by Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Fair%20Machine%20Learning.html">
+     Fair Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Fairness.html">
+     Fairness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Features%20Importance.html">
+     Feature Importance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Frame.html">
+     The Frame Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Fog%20Computing.html">
+     Fog Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Generalizable%20XAI.html">
+     Model Agnostic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Global%20Explanations.html">
+     Global Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20AI.html">
+     Green AI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20Computing.html">
+     Green Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Green%20IT.html">
+     Green IT
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/ICT%20sustainability.html">
+     ICT sustainability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Intended.html">
+     Intended Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Justice.html">
+     Justice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/K-Anonymity.html">
+     K-anonymity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Linking%20Attack.html">
+     Linking Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Local%20Explanations.html">
+     Local Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Meaningful%20human%20control.html">
+     Meaningful Human Control
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Measurement.html">
+     Measurement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Mesh%20Computing.html">
+     Mesh Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Misdirect.html">
+     Misdirect Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Model-Agnostic.html">
+     Model Agnostic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Model-Specific.html">
+     Model Specific
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Negative%20Side%20Effects.html">
+     Negative Side Effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Not%20Generalizable%20XAI.html">
+     Model Specific
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Perturbation.html">
+     Achiving Differential Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Post-hoc%20Explanations.html">
+     Post-hoc Explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Power%20Aware.html">
+     Power-aware Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Privacy%20model.html">
+     Privacy models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Provenance.html">
+     Provenance Tracking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Pseudonymised%20Data.html">
+     Pseudonymization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.5/Re-identification%20Attack.html">
+     Re-identification Attack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Regenerative%20Design.html">
+     Regenerative Design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Reliability.html">
+     Reliability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Repeatability.html">
+     Repeatability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Replicability.html">
+     Replicability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Reproducibility.html">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Allocation.html">
+     Resource Allocation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Prediction.html">
+     Resource Prediction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Resource%20Scheduling.html">
+     Resource Scheduling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Robustness.html">
+     Robustness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Saliency%20Maps.html">
+     Saliency Maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Security.html">
+     Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.3/Segregation.html">
+     Segregation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Single%20Tree%20Approximation.html">
+     Single Tree Approxiamation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Testing.html">
+     Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Traceability.html">
+     Traceability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.1/Transparency.html">
+     Transparency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.2/Unintended.html">
+     Unintended Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.4/Wicked.html">
+     Wicked Problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Workload%20Forecast.html">
+     Workload Forecast
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/T3.6/Workload%20Prediction.html">
+     Workload Prediction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FT3.3/fair_ML.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/T3.3/fair_ML.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Fair Machine Learning</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="fair-machine-learning">
+<h1>Fair Machine Learning<a class="headerlink" href="#fair-machine-learning" title="Permalink to this headline">#</a></h1>
+<div class="section" id="in-brief">
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
+<p><strong>Fair Machine Learning models</strong> take into account the issues of bias and fairness. Approaches can be categorized as pre-processig, which transform the
+input data, as in-processing, which modify the learning algorithm, and post-processing, which alter models’ internals or their decisions.</p>
+</div>
+<div class="section" id="more-in-detail">
+<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
+<p>Fairness can be promoted in three different ways in ML as surveyed in
+<span id="id1">[<a class="reference internal" href="#id239">3</a>]</span>. This survey provides a clear categorization of
+methods under pre-process, in-process and post-process approaches.</p>
+<p>Pre-process approaches are the most flexible ones that transforms the
+data so that the underlying bias is removed. One advantage of using
+pre-process techniques is that it is the most inspectable method, as it
+is the earliest opportunity to mitigate biases and measure how it
+affects the outcome compared to the other two approaches in fair machine
+learning <span id="id2">[<a class="reference internal" href="#id238">4</a>]</span>. Suppression or Fairness Through
+Unawareness is a baseline method that accounts for removing the
+sensitive features and proxy sensitive features from the dataset
+<span id="id3">[<a class="reference internal" href="#id284">5</a>]</span>. A recent study <span id="id4">[<a class="reference internal" href="#id285">6</a>]</span> proved that
+removing sensitive information does not guarantee fair outcomes.
+Massaging the dataset (relabeling) method can act in two ways:</p>
+<ol class="simple">
+<li><p>Identify unfair outcomes and correct them by changing the label to what
+ought to have happened.</p></li>
+<li><p>Identify sensitive classes and relabel them
+so that the outcome is fair.</p></li>
+</ol>
+<p>Reweighting approach has several positive
+aspects compared to suppression and relabeling. It works by postulating
+that a fair dataset would have no conditional dependence on the outcome
+of any of the sensitive attributes. That means it corrects the past
+unfair outcomes by giving more weightage to correct cases and less
+weightage to incorrect cases. Learning fair representations approach
+fairness fundamentally differently by aiming for a middle ground
+between-group fairness and individual fairness <span id="id5">[<a class="reference internal" href="#id240">7</a>]</span>. It
+turns the pre-process problem into a combined optimization problem that
+finds trade-offs between-group fairness, individual fairness, and
+accuracy.</p>
+<p>In-process approaches modify the learning algorithms to remove biases
+during model training by either incorporating fairness into the
+optimization equation or imposing a constraint as regularization
+<span id="id6">[<a class="reference internal" href="#id241">8</a>, <a class="reference internal" href="#id242">9</a>]</span>. The main categories of in-processing
+approaches are adversarial debiasing and prejudice removal. The former
+involves an adversary to predict the sensitive attributes from a
+downstream task (classification or regression), and thus the model
+learns a representation independent of sensitive features. Learning fair
+representations can be done by adding noise to the predictive power
+using the regulation. Adversarial reweighted learning
+<span id="id7">[<a class="reference internal" href="#id243">10</a>]</span> uses non-sensitive features and labels to measure
+unfairness and co-train the adversarial reweighting approach to
+improving learning. On the other hand, the prejudice remover approach
+has various techniques to mitigate biases during training. Some of the
+standard methods are:</p>
+<ol class="simple">
+<li><p>Heuristic-based: Use Roony rules <span id="id8">[<a class="reference internal" href="#id244">11</a>]</span>, which
+effectively rank problems.</p></li>
+<li><p>Algorithmic Changes: These can be made in every single step of
+calibration, such as input, output, and model structure
+<span id="id9">[<a class="reference internal" href="#id238">4</a>, <a class="reference internal" href="#id245">12</a>, <a class="reference internal" href="#id246">13</a>, <a class="reference internal" href="#id247">14</a>, <a class="reference internal" href="#id248">15</a>, <a class="reference internal" href="#id249">16</a>, <a class="reference internal" href="#id250">17</a>, <a class="reference internal" href="#id251">18</a>, <a class="reference internal" href="#id252">19</a>]</span>.</p></li>
+<li><p>Using pre-trained models: It involves combining available
+pre-trained models and transferring them to reduce bias
+<span id="id10">[<a class="reference internal" href="#id253">20</a>]</span></p></li>
+<li><p>Counterfactual and Causal Reasoning: This considers a model to be
+group or individual fair if its prediction in the real world is
+similar to the counterfactual world, where individuals belong to a
+different protected group. Causal reasoning can be used to caution
+against those counterfactual explanations <span id="id11">[<a class="reference internal" href="#id254">21</a>]</span>
+<span id="id12">[<a class="reference internal" href="#id255">22</a>]</span>. A primary concern on the use and misuse of
+counterfactual fairness has been studied in <span id="id13">[<a class="reference internal" href="#id256">23</a>]</span>.</p></li>
+</ol>
+<p>Finally, post-process approaches are the most versatile approaches if
+the model is already in the production stage and it does not require
+retraining the model. Another advantage of using post-processing is that
+the fairness (individual and group) of any downstream tasks can be
+easily satisfied concerning the domain and application of the model
+<span id="id14">[<a class="reference internal" href="#id257">24</a>]</span>. Also, post-processing is agnostic to the input data,
+which makes it easier to implement. However, post-processing procedures
+may present weaker results when compare to pre-processing
+ones <span id="id15">[<a class="reference internal" href="fairness.html#id238">22</a>, <a class="reference internal" href="#id334">25</a>]</span>.</p>
+<p><strong>Assessment tools</strong>: Tools can assist practitioners or organizations in
+documenting the measures, providing guidance, helping formalize
+processes, and empowering automated decisions. There are various types
+of tools to identify and mitigate the biases. Out of which,
+technical/quantitative tools and qualitative tools are primarily used in
+real-world applications by engineers and data
+scientists. Technical/quantitative tools focus on data or AI pipeline
+through technical solutions. One major drawback is that it may miss
+essential fairness considerations; for example, it cannot be employed to
+mitigate bias in the COMPAS algorithm as the nuances could not be
+adequately captured. It lacks methods to understand and mitigate biases
+but perpetuates a misleading notion that “Fair ML” is not a complex
+task to achieve. Some of the standard solutions in this category are:</p>
+<ol class="simple">
+<li><p>IBM’s AI Fairness 360 Toolkit: It is a python toolkit through the
+lens of technical solutions under fairness metrics.</p></li>
+<li><p>Google’s What-If Tool explores the model’s performance on a dataset
+through hypothetical situations. It allows users to explore
+different definitions of fairness constraints under various feature
+intersections.</p></li>
+<li><p>Microsoft’s <a class="reference external" href="http://fairlean.py">fairlean.py</a>: It is a python package consisting of
+mitigation algorithms and metrics for model assessment.</p></li>
+</ol>
+<p>On the other hand, Quantitative techniques can delve into the nuances of
+fairness. They can enable teams to explore the societal implications,
+analyses fairness harms and tradeoffs, and propose plans to find the
+potential sources of bias and ways to mitigate them. Two of the most
+prominent qualitative techniques are:</p>
+<ol class="simple">
+<li><p>Co-designed AI fairness checklist (2020): This checklist is designed
+by a group of Microsoft researchers and academicians, 49 individuals
+from 12 technical organizations. It covers the items included in
+different stages of the AI pipeline, including envision, define,
+prototype, build, launch, and evolve, and is customizable according
+to the deployment.</p></li>
+<li><p>Fairness Analytic (2019): This analytic tool is developed by
+Mulligan et al. to promote fairness at the earlier stages of product
+development. It enables teams to understand biases from a specific
+application perspective to analyze and document their effects.</p></li>
+</ol>
+<p>While these tools exist to analyze the potential harms, it is the
+responsibility of users to understand the after-effects of which tools
+they are using, and which types of biases can mitigate. A detailed
+review of landscape and gaps in fairness tool kits is given in
+<span id="id16">[<a class="reference internal" href="#id268">1</a>]</span>.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<p id="id17"><dl class="citation">
+<dt class="label" id="id268"><span class="brackets"><a class="fn-backref" href="#id16">1</a></span></dt>
+<dd><p>Michelle Seng Ah Lee and Jatinder Singh. The landscape and gaps in open source fairness toolkits. In <em>CHI</em>, 699:1–699:13. ACM, 2021.</p>
+</dd>
+<dt class="label" id="id215"><span class="brackets"><a class="fn-backref" href="#id15">2</a></span></dt>
+<dd><p>Nikita Kozodoi, Johannes Jacob, and Stefan Lessmann. Fairness in credit scoring: assessment, implementation and profit implications. <em>European Journal of Operational Research</em>, 297(3):1083–1094, 2022.</p>
+</dd>
+<dt class="label" id="id239"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
+<dd><p>Simon Caton and Christian Haas. Fairness in machine learning: a survey. <em>arXiv preprint arXiv:2010.04053</em>, 2020. URL: <a class="reference external" href="https://arxiv.org/abs/2010.04053">https://arxiv.org/abs/2010.04053</a>.</p>
+</dd>
+<dt class="label" id="id238"><span class="brackets">4</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p>Brian d'Alessandro, Cathy O'Neil, and Tom LaGatta. Conscientious classification: a data scientist's guide to discrimination-aware classification. <em>Big data</em>, 5(2):120–134, 2017.</p>
+</dd>
+<dt class="label" id="id284"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
+<dd><p>Pratik Gajane and Mykola Pechenizkiy. On formalizing fairness in prediction with machine learning. <em>arXiv preprint arXiv:1710.03184</em>, 2017. URL: <a class="reference external" href="https://arxiv.org/abs/1710.03184">https://arxiv.org/abs/1710.03184</a>.</p>
+</dd>
+<dt class="label" id="id285"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
+<dd><p>Boris Ruf and Marcin Detyniecki. Active fairness instead of unawareness. <em>arXiv preprint arXiv:2009.06251</em>, 2020. URL: <a class="reference external" href="https://arxiv.org/abs/2009.06251">https://arxiv.org/abs/2009.06251</a>.</p>
+</dd>
+<dt class="label" id="id240"><span class="brackets"><a class="fn-backref" href="#id5">7</a></span></dt>
+<dd><p>Richard S. Zemel, Yu Wu, Kevin Swersky, Toniann Pitassi, and Cynthia Dwork. Learning fair representations. In <em>ICML (3)</em>, volume 28 of JMLR Workshop and Conference Proceedings, 325–333. JMLR.org, 2013.</p>
+</dd>
+<dt class="label" id="id241"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dd><p>Rachel K. E. Bellamy, Kuntal Dey, Michael Hind, Samuel C. Hoffman, Stephanie Houde, Kalapriya Kannan, Pranay Lohia, Jacquelyn Martino, Sameep Mehta, Aleksandra Mojsilovic, Seema Nagar, Karthikeyan Natesan Ramamurthy, John T. Richards, Diptikalyan Saha, Prasanna Sattigeri, Moninder Singh, Kush R. Varshney, and Yunfeng Zhang. AI fairness 360: an extensible toolkit for detecting and mitigating algorithmic bias. <em>IBM J. Res. Dev.</em>, 63(4/5):4:1–4:15, 2019.</p>
+</dd>
+<dt class="label" id="id242"><span class="brackets"><a class="fn-backref" href="#id6">9</a></span></dt>
+<dd><p>Richard Berk, Hoda Heidari, Shahin Jabbari, Matthew Joseph, Michael J. Kearns, Jamie Morgenstern, Seth Neel, and Aaron Roth. A convex framework for fair regression. <em>CoRR</em>, 2017.</p>
+</dd>
+<dt class="label" id="id243"><span class="brackets"><a class="fn-backref" href="#id7">10</a></span></dt>
+<dd><p>Preethi Lahoti, Alex Beutel, Jilin Chen, Kang Lee, Flavien Prost, Nithum Thain, Xuezhi Wang, and Ed H. Chi. Fairness without demographics through adversarially reweighted learning. In <em>NeurIPS</em>. 2020.</p>
+</dd>
+<dt class="label" id="id244"><span class="brackets"><a class="fn-backref" href="#id8">11</a></span></dt>
+<dd><p>Caitlin Kuhlman, MaryAnn Van Valkenburg, and Elke A. Rundensteiner. FARE: diagnostics for fair ranking using pairwise error metrics. In <em>WWW</em>, 2936–2942. ACM, 2019.</p>
+</dd>
+<dt class="label" id="id245"><span class="brackets"><a class="fn-backref" href="#id9">12</a></span></dt>
+<dd><p>Benjamin Fish, Jeremy Kun, and Ádám Dániel Lelkes. A confidence-based approach for balancing fairness and accuracy. In <em>SDM</em>, 144–152. SIAM, 2016.</p>
+</dd>
+<dt class="label" id="id246"><span class="brackets"><a class="fn-backref" href="#id9">13</a></span></dt>
+<dd><p>Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Li Wei, Yi Wu, Lukasz Heldt, Zhe Zhao, Lichan Hong, Ed H. Chi, and Cristos Goodrow. Fairness in recommendation ranking through pairwise comparisons. In <em>KDD</em>, 2212–2220. ACM, 2019.</p>
+</dd>
+<dt class="label" id="id247"><span class="brackets"><a class="fn-backref" href="#id9">14</a></span></dt>
+<dd><p>Dylan Slack, Sorelle A. Friedler, and Emile Givental. Fairness warnings and fair-MAML: learning fairly with minimal data. In <em>FAT*</em>, 200–209. ACM, 2020.</p>
+</dd>
+<dt class="label" id="id248"><span class="brackets"><a class="fn-backref" href="#id9">15</a></span></dt>
+<dd><p>Alex Beutel, Jilin Chen, Tulsee Doshi, Hai Qian, Allison Woodruff, Christine Luu, Pierre Kreitmann, Jonathan Bischof, and Ed H. Chi. Putting fairness principles into practice: challenges, metrics, and improvements. In <em>AIES</em>, 453–459. ACM, 2019.</p>
+</dd>
+<dt class="label" id="id249"><span class="brackets"><a class="fn-backref" href="#id9">16</a></span></dt>
+<dd><p>Jialu Wang, Yang Liu, and Caleb C. Levy. Fair classification with group-dependent label noise. In <em>FAccT</em>, 526–536. ACM, 2021.</p>
+</dd>
+<dt class="label" id="id250"><span class="brackets"><a class="fn-backref" href="#id9">17</a></span></dt>
+<dd><p>Cynthia Dwork, Nicole Immorlica, Adam Tauman Kalai, and Mark D. M. Leiserson. Decoupled classifiers for group-fair and efficient machine learning. In <em>FAT</em>, volume 81 of Proceedings of Machine Learning Research, 119–133. PMLR, 2018.</p>
+</dd>
+<dt class="label" id="id251"><span class="brackets"><a class="fn-backref" href="#id9">18</a></span></dt>
+<dd><p>Christos Louizos, Kevin Swersky, Yujia Li, Max Welling, and Richard S. Zemel. The variational fair autoencoder. In <em>ICLR</em>. 2016.</p>
+</dd>
+<dt class="label" id="id252"><span class="brackets"><a class="fn-backref" href="#id9">19</a></span></dt>
+<dd><p>Anay Mehrotra and L. Elisa Celis. Mitigating bias in set selection with noisy protected attributes. In <em>FAccT</em>, 237–248. ACM, 2021.</p>
+</dd>
+<dt class="label" id="id253"><span class="brackets"><a class="fn-backref" href="#id10">20</a></span></dt>
+<dd><p>David Madras, Elliot Creager, Toniann Pitassi, and Richard S. Zemel. Learning adversarially fair and transferable representations. In <em>ICML</em>, volume 80 of Proceedings of Machine Learning Research, 3381–3390. PMLR, 2018.</p>
+</dd>
+<dt class="label" id="id254"><span class="brackets"><a class="fn-backref" href="#id11">21</a></span></dt>
+<dd><p>Joshua R Loftus, Chris Russell, Matt J Kusner, and Ricardo Silva. Causal reasoning for algorithmic fairness. <em>arXiv preprint arXiv:1805.05859</em>, 2018. URL: <a class="reference external" href="https://arxiv.org/abs/1805.05859">https://arxiv.org/abs/1805.05859</a>.</p>
+</dd>
+<dt class="label" id="id255"><span class="brackets"><a class="fn-backref" href="#id12">22</a></span></dt>
+<dd><p>Razieh Nabi, Daniel Malinsky, and Ilya Shpitser. Learning optimal fair policies. In <em>ICML</em>, volume 97 of Proceedings of Machine Learning Research, 4674–4682. PMLR, 2019.</p>
+</dd>
+<dt class="label" id="id256"><span class="brackets"><a class="fn-backref" href="#id13">23</a></span></dt>
+<dd><p>Atoosa Kasirzadeh and Andrew Smart. The use and misuse of counterfactuals in ethical machine learning. In <em>FAccT</em>, 228–236. ACM, 2021.</p>
+</dd>
+<dt class="label" id="id257"><span class="brackets"><a class="fn-backref" href="#id14">24</a></span></dt>
+<dd><p>Pranay Kr. Lohia, Karthikeyan Natesan Ramamurthy, Manish Bhide, Diptikalyan Saha, Kush R. Varshney, and Ruchir Puri. Bias mitigation post-processing for individual and group fairness. In <em>ICASSP</em>, 2847–2851. IEEE, 2019.</p>
+</dd>
+<dt class="label" id="id334"><span class="brackets"><a class="fn-backref" href="#id15">25</a></span></dt>
+<dd><p>Dana Pessach and Erez Shmueli. A review on fairness in machine learning. <em>ACM Computing Surveys (CSUR)</em>, 55(3):1–44, 2022.</p>
+</dd>
+</dl>
+</p>
+<blockquote>
+<div><p>This entry was written by Resmi Ramachandran Pillai, Fredrik Heintz, Miguel Couceiro, and Guilherme Alves.</p>
+</div></blockquote>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./T3.3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="fairness.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Fairness notions and metrics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="discrimination.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Grounds of Discrimination</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
