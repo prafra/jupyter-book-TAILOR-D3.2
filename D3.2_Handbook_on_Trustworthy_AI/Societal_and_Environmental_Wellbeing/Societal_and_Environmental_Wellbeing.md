@@ -1,4 +1,4 @@
-# Societal_and_Environmental_Wellbeing
+# Societal and Environmental Wellbeing
 <!-- Sustainability-->
 
 ## In Brief

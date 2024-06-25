@@ -4,8 +4,6 @@
 format: jb-book
 root: TAILOR
 chapters:
-- file: authors
-- file: main/Trustworthy_AI
 - file: main/Ethical_Legal_Framework/Ethical_Legal_Framework
   sections:
   - file: main/Ethical_Legal_Framework/HLEG
@@ -14,97 +12,100 @@ chapters:
     - file: main/Ethical_Legal_Framework/Prohibited_AI
     - file: main/Ethical_Legal_Framework/High_Risk_AI
 #chapters:
-- file: Human_Agency_and_Oversight/Human_Agency_and_Oversight
-  title: Human Agency and Oversight
+- file: main/Trustworthy_AI
   sections:
-  - file: Human_Agency_and_Oversight/Meaningful_human_control
-  - file: Human_Agency_and_Oversight/Causal_responsibility
-- file: Transparency/Transparency
-  title: Transparency
-  sections:
-  - file: Transparency/XAI_dimensions
+  - file: Human_Agency_and_Oversight/Human_Agency_and_Oversight
+    title: Human Agency and Oversight
     sections:
-    - file: Transparency/blackbox_transparent
-    - file: Transparency/model_specific
-    - file: Transparency/global_local
-  - file: Transparency/XAI
+    - file: Human_Agency_and_Oversight/Meaningful_human_control
+    - file: Human_Agency_and_Oversight/Causal_responsibility
+  - file: Transparency/Transparency
+    title: Transparency
     sections:
-    - file: Transparency/XAI_kinds
-      sections:     
-      - file: Transparency/counterfactual
-      - file: Transparency/feature_importance
-      - file: Transparency/lore
-      - file: Transparency/prototypes
-      - file: Transparency/rules
-      - file: Transparency/saliency_maps
-      - file: Transparency/single_tree
-- file: Technical_Robustness_and_Safety/Technical_Robustness_and_Safety
-  title: Technical Robustness and Safety
-  sections:
-  - file: Technical_Robustness_and_Safety/alignment
-  - file: Technical_Robustness_and_Safety/robustness
-  - file: Technical_Robustness_and_Safety/reliability
-  - file: Technical_Robustness_and_Safety/evaluation
-  - file: Technical_Robustness_and_Safety/negative_side_effects
-  - file: Technical_Robustness_and_Safety/distributional_shift
-  - file: Technical_Robustness_and_Safety/security
-  - file: Technical_Robustness_and_Safety/adversarial_attack
-  - file: Technical_Robustness_and_Safety/data_poisoning
-- file: Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness
-  title: Diversity, Non-Discrimination, and Fairness
-  sections:
-  - file: Diversity_Non-Discrimination_and_Fairness/auditing
-  - file: Diversity_Non-Discrimination_and_Fairness/bias
-  - file: Diversity_Non-Discrimination_and_Fairness/bias_factors
-  - file: Diversity_Non-Discrimination_and_Fairness/bias_lmm
-  - file: Diversity_Non-Discrimination_and_Fairness/equity
-  - file: Diversity_Non-Discrimination_and_Fairness/fairness
-  - file: Diversity_Non-Discrimination_and_Fairness/fair_ML
-  - file: Diversity_Non-Discrimination_and_Fairness/discrimination
-  - file: Diversity_Non-Discrimination_and_Fairness/intersectionality
-  - file: Diversity_Non-Discrimination_and_Fairness/justice
-  - file: Diversity_Non-Discrimination_and_Fairness/segregation
-- file: Accountability/Accountability_and_Reproducibility
-  title: Accountability
-  sections:
-  - file: Accountability/L2.Accountability
-    sections:
-    - file: Accountability/L3.Wicked_problems
-    - file: Accountability/L3.The_frame_problem
-    - file: Accountability/L3.Problem_of_many_hands
-  - file: Accountability/L2.Reproducibility
-  - file: Accountability/L2.Traceability
-    sections:
-    - file: Accountability/L3.Provenance_tracking
-    - file: Accountability/L3.Continuous_performance_monitoring
-- file: Privacy_and_Data_Governance/Privacy_and_Data_Governance
-  sections:
-  - file: Privacy_and_Data_Governance/L1.anonymization
-    sections:
-    - file: Privacy_and_Data_Governance/L2.pseudonymization
-  - file: Privacy_and_Data_Governance/L1.privacy_model
-    sections:
-    - file: Privacy_and_Data_Governance/L2.differential_privacy
+    - file: Transparency/XAI_dimensions
       sections:
-      - file: Privacy_and_Data_Governance/L3.epsilon_DP
-      - file: Privacy_and_Data_Governance/L3.epsilon_delta_DP
-      - file: Privacy_and_Data_Governance/L2.perturbation_mechanisms
-    - file: Privacy_and_Data_Governance/L2.k_anonymity
-  - file: Privacy_and_Data_Governance/L1.attacks
+      - file: Transparency/blackbox_transparent
+      - file: Transparency/model_specific
+      - file: Transparency/global_local
+    - file: Transparency/XAI
+      sections:
+      - file: Transparency/XAI_kinds
+        sections:     
+        - file: Transparency/counterfactual
+        - file: Transparency/feature_importance
+        - file: Transparency/lore
+        - file: Transparency/prototypes
+        - file: Transparency/rules
+        - file: Transparency/saliency_maps
+        - file: Transparency/single_tree
+  - file: Technical_Robustness_and_Safety/Technical_Robustness_and_Safety
+    title: Technical Robustness and Safety
     sections:
-    - file: Privacy_and_Data_Governance/L2.reidentification
-- file: Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing
-  sections:
-  - file: Societal_and_Environmental_Wellbeing/greenAI
+    - file: Technical_Robustness_and_Safety/alignment
+    - file: Technical_Robustness_and_Safety/robustness
+    - file: Technical_Robustness_and_Safety/reliability
+    - file: Technical_Robustness_and_Safety/evaluation
+    - file: Technical_Robustness_and_Safety/negative_side_effects
+    - file: Technical_Robustness_and_Safety/distributional_shift
+    - file: Technical_Robustness_and_Safety/security
+    - file: Technical_Robustness_and_Safety/adversarial_attack
+    - file: Technical_Robustness_and_Safety/data_poisoning
+  - file: Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness
+    title: Diversity, Non-Discrimination, and Fairness
     sections:
-     - file: Societal_and_Environmental_Wellbeing/power_aware
-  - file: Societal_and_Environmental_Wellbeing/cloud_computing
-  - file: Societal_and_Environmental_Wellbeing/edge_computing
-  - file: Societal_and_Environmental_Wellbeing/data_centre
-  - file: Societal_and_Environmental_Wellbeing/cradle_to_cradle
-  - file: Societal_and_Environmental_Wellbeing/resource_prediction
-  - file: Societal_and_Environmental_Wellbeing/resource_allocation
+    - file: Diversity_Non-Discrimination_and_Fairness/auditing
+    - file: Diversity_Non-Discrimination_and_Fairness/bias
+    - file: Diversity_Non-Discrimination_and_Fairness/bias_factors
+    - file: Diversity_Non-Discrimination_and_Fairness/bias_lmm
+    - file: Diversity_Non-Discrimination_and_Fairness/equity
+    - file: Diversity_Non-Discrimination_and_Fairness/fairness
+    - file: Diversity_Non-Discrimination_and_Fairness/fair_ML
+    - file: Diversity_Non-Discrimination_and_Fairness/discrimination
+    - file: Diversity_Non-Discrimination_and_Fairness/intersectionality
+    - file: Diversity_Non-Discrimination_and_Fairness/justice
+    - file: Diversity_Non-Discrimination_and_Fairness/segregation
+  - file: Accountability/Accountability_and_Reproducibility
+    title: Accountability
+    sections:
+    - file: Accountability/L2.Accountability
+      sections:
+      - file: Accountability/L3.Wicked_problems
+      - file: Accountability/L3.The_frame_problem
+      - file: Accountability/L3.Problem_of_many_hands
+    - file: Accountability/L2.Reproducibility
+    - file: Accountability/L2.Traceability
+      sections:
+      - file: Accountability/L3.Provenance_tracking
+      - file: Accountability/L3.Continuous_performance_monitoring
+  - file: Privacy_and_Data_Governance/Privacy_and_Data_Governance
+    sections:
+    - file: Privacy_and_Data_Governance/L1.anonymization
+      sections:
+      - file: Privacy_and_Data_Governance/L2.pseudonymization
+    - file: Privacy_and_Data_Governance/L1.privacy_model
+      sections:
+      - file: Privacy_and_Data_Governance/L2.differential_privacy
+        sections:
+        - file: Privacy_and_Data_Governance/L3.epsilon_DP
+        - file: Privacy_and_Data_Governance/L3.epsilon_delta_DP
+        - file: Privacy_and_Data_Governance/L2.perturbation_mechanisms
+      - file: Privacy_and_Data_Governance/L2.k_anonymity
+    - file: Privacy_and_Data_Governance/L1.attacks
+      sections:
+      - file: Privacy_and_Data_Governance/L2.reidentification
+  - file: Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing
+    sections:
+    - file: Societal_and_Environmental_Wellbeing/greenAI
+      sections:
+       - file: Societal_and_Environmental_Wellbeing/power_aware  
+    - file: Societal_and_Environmental_Wellbeing/cloud_computing
+    - file: Societal_and_Environmental_Wellbeing/edge_computing
+    - file: Societal_and_Environmental_Wellbeing/data_centre
+    - file: Societal_and_Environmental_Wellbeing/cradle_to_cradle
+    - file: Societal_and_Environmental_Wellbeing/resource_prediction
+    - file: Societal_and_Environmental_Wellbeing/resource_allocation
 - file: TAILOR_project
+- file: authors
 - file: main/AnalyticalIndex 
   sections:
   - file: index/Societal_and_Environmental_Wellbeing/2CC2
