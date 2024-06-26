@@ -14,16 +14,8 @@ group fairness compares quantities at the group level primarily identified by pr
 According to {cite}`kleinberg17`, it is impossible to satisfy all of the above notions, leading to conflicts between fairness definitions. Therefore, one suggestion could be to select appropriate fairness criteria and use those based on the application and deployment. Another concern has risen in {cite}`liu2018delayed`, temporal aspects of fairness notions may harm the sensitive groups over time if not updated.
 
 **Some widely used fairness metrics:** In order to recall some widely used fairness metrics we need to introduce some notation. 
-Let $V$, $A$, and $X$ be three random variables representing, respectively, the total set of features, the sensitive features, and the remaining features describing an individual such that $V=(X,A)$ and $P(V=v_i)$ represents the probability of drawing an individual with a vector of values $v_i$ from the population. For simplicity, we focus on the case where $A$ is a binary random variable where $A=0$ designates the protected group, while $A=1$ designates the non-protected group. Let $Y$ represent the actual outcome and $\hat{Y}$ represent the outcome returned by the prediction algorithm. Without loss of generality, assume that $Y$ and $\hat{Y}$ are binary random variables where $Y=1$ designates a positive instance, while $Y=0$ a negative one. Typically, the predicted outcome $\hat{Y}$ is derived from a score represented by a random variable $S$ where $P[S = s]$ is the probability that the score value is equal to $s$.
-
-
-\textbf{Statistical parity}\cite{dwork2012fairness} is one of the most commonly accepted notions of fairness. It requires the prediction to be statistically independent of  the sensitive feature $(\hat{Y}  \perp A)$. 
-In other words, the predicted acceptance rates for both protected and unprotected groups should be equal. Statistical parity implies that $$\displaystyle \frac{TP+FP}{TP+FP+FN+TN}\footnote{$TP,FP,FN,$ and $TN$ stand for: true positives, false positives, false negatives, and true negatives, respectively.}$$ is equal for both groups. A classifier \^{Y} satisfies statistical parity if:
-\begin{equation}
-\label{eq:sp}
-\pr[\hat{Y} \mid A = 0] = \pr[\hat{Y} \mid A = 1].
-\end{equation}
-<br>
+Let $V$, $A$, and $X$ be three random variables representing, respectively, the total set of features, the sensitive features, and the remaining features describing an individual such that $V=(X,A)$ and $P(V=v_i)$ represents the probability of drawing an individual with a vector of values $v_i$ from the population. 
+For simplicity, we focus on the case where $A$ is a binary random variable where $A=0$ designates the protected group, while $A=1$ designates the non-protected group. Let $Y$ represent the actual outcome and $\hat{Y}$ represent the outcome returned by the prediction algorithm. Without loss of generality, assume that $Y$ and $\hat{Y}$ are binary random variables where $Y=1$ designates a positive instance, while $Y=0$ a negative one. Typically, the predicted outcome $\hat{Y}$ is derived from a score represented by a random variable $S$ where $P[S = s]$ is the probability that the score value is equal to $s$.
 
 **Statistical parity** {cite}`dwork2012fairness` is one of the most commonly accepted notions of fairness. It requires the prediction to be statistically independent of the sensitive feature $(\hat{Y}  \perp A)$.
 In other words, the predicted acceptance rates for both protected and unprotected groups should be equal. Statistical parity implies that<br> $\displaystyle \frac{TP+FP}{TP+FP+FN+TN}$ [^statistical] <br> is equal for both groups. A classifier Ŷ satisfies statistical parity if:<br>  $\label{eq:sp} P[\hat{Y} \mid A = 0] = P[\hat{Y} \mid A = 1].$ <br>
@@ -117,14 +109,14 @@ very strong notion which is very difficult to hold in practice.
 
 **Balance** {cite}`kleinberg17` uses the score ($S$) from which the outcome
 $Y$ is typically derived through thresholding. <br>
-**Balance for positive
-class** focuses on the applicants who constitute positive instances and
+*Balance for positive
+class* focuses on the applicants who constitute positive instances and
 is satisfied if the average score $S$ received by those applicants is
 the same for both groups: <br>
 $\label{eq:balPosclass}
 E[S \mid Y =1,A = 0)] = E[S \mid Y =1,A = 1].$ <br>
-**Balance of negative
-class** focuses instead on the negative class: <br>
+*Balance of negative
+class* focuses instead on the negative class: <br>
 $\label{eq:balNegclass}
 E[S \mid Y =0,A = 0] = E[S \mid Y =0,A = 1].$
 <br>
@@ -221,7 +213,7 @@ example in facial recognition {cite}`xiang2022being` and medical applications
 Finally, there is a connection between [fairness](./Diversity_Non-Discrimination_and_Fairness.md) and {doc}`justice`, seen in
 for example Rawls' work on Justice as Fairness {cite}`rawls2001justice`. And
 indeed, a range of theories of (distributive) justice describe how
-benefits and burdens should be distributed (cf. the entry on ). As such,
+benefits and burdens should be distributed (cf. the entry on {doc}`justice`). As such,
 they can be seen as guiding the outcomes of algorithms even if they
 describe what these distributions should be in society as a whole. Yet,
 as {cite}`kuppler2021distributive` argue at length, there is little overlap

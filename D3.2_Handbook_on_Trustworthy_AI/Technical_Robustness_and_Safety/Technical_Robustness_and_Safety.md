@@ -1,4 +1,4 @@
-# Technical Robustness and Safety 2
+# Technical Robustness and Safety
 
 ## In Brief
 
@@ -146,11 +146,11 @@ Taxonomy of AI Safety. Taken from {cite}`espinoza2019`-
 
 ## Recommended reading
 
-Some introductory sources for AI Safety and Robustnes are {cite}`amodei2016,espinoza2019,gabriel2020artificial,david2019understanding,russell2015research`.
+Some introductory sources for AI Safety and Robustnes are {cite}`espinoza2019,david2019understanding,gabriel2020artificial,amodei2016,russell2015research`.
 
 ## Bibliography
 
-```{bibliography}
+```{bibliography} ./references.bib
 :style: unsrt
 :filter: docname in docnames
 ```

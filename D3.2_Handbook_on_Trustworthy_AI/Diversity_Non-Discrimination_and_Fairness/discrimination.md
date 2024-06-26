@@ -6,7 +6,19 @@ International and national laws prohibit **discriminating on some explicitly def
 
 ## More in Detail
 
-The Universal Declaration of Human Rights prohibit discrimination in several grounds [^declaration]; 1) race, 2) skin colour, 3) sex, 4) language, 5) religion, 6) political or other opinion, 7) national or social origin, 8) property, or 9) birth {cite}`assembly1948universal`, although the list is not exhaustive. By directly addressing these grounds, the Declaration highlights the problematic of considering decisions or regulations on them while leaves the door open to a more extensive view by prohibiting as well discrimination based on *other grounds*. By doing so, the Declaration implies that any difference in treatment or exercise with respect to the rights encompassed in the Declaration would have legal implications. Therefore, grounds of discrimination should not be considered a closed and fixed list but an enumeration opened to debate and reflection as the circumstances and context require. For example, the African Charter on Human and People's Rights prohibits discrimination in grounds of fortune, rather than property {cite}`africanunion` whereas the American Convention on Human Rights includes economic status {cite}`americanconvention` and the Charter of Fundamental Rights of the European Union (E.U.) adds the association with a national minority {cite}`charter2007`.
+The Universal Declaration of Human Rights prohibit discrimination in several grounds [^declaration]; 
+1) race, 
+2) skin colour, 
+3) sex, 
+4) language, 
+5) religion, 
+6) political or other opinion, 
+7) national or social origin, 
+8) property, or 
+9) birth {cite}`assembly1948universal`, <br>
+although the list is not exhaustive. 
+
+By directly addressing these grounds, the Declaration highlights the problematic of considering decisions or regulations on them while leaves the door open to a more extensive view by prohibiting as well discrimination based on *other grounds*. By doing so, the Declaration implies that any difference in treatment or exercise with respect to the rights encompassed in the Declaration would have legal implications. Therefore, grounds of discrimination should not be considered a closed and fixed list but an enumeration opened to debate and reflection as the circumstances and context require. For example, the African Charter on Human and People's Rights prohibits discrimination in grounds of fortune, rather than property {cite}`africanunion` whereas the American Convention on Human Rights includes economic status {cite}`americanconvention` and the Charter of Fundamental Rights of the European Union (E.U.) adds the association with a national minority {cite}`charter2007`.
 
 To this regard, *grounds of discrimination* encompass three different motives on which decisions and policies should not be based (see also the entry {doc}`equity`); (1) grounds innate to the individual such as race, gender, age, disability, (2) grounds intrinsic to the individual freedom and autonomy that is political belief or religion, and (3) grounds highly founded on stereotypes or stigma and which are usually irrelevant for social, economic, or politic interactions, as sexual orientation or ethnicity) {cite}`gerards2013discrimination`. The use of any of these grounds is often perceived as a lack of impartiality influenced by negative and prejudiced reasons and emotions towards certain members of the society. Prohibiting discrimination on these grounds aims to ensure that the distribution of social goods and services do not respond to subjective and irrational feelings, whether that turns out to be an advantage or a disadvantage for the individual or group concerned.
 
