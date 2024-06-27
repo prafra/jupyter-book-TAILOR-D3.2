@@ -28,6 +28,7 @@ latex:
 bibtex_bibfiles:
   - references.bib
   - Transparency/references.bib
+  - Transparency/biblioXAI.bib
   - Technical_Robustness_and_Safety/references.bib
   - Diversity_Non-Discrimination_and_Fairness/references.bib
   - Accountability/references.bib
