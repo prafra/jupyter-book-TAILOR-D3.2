@@ -50,6 +50,7 @@ chapters:
     - file: Technical_Robustness_and_Safety/security
     - file: Technical_Robustness_and_Safety/adversarial_attack
     - file: Technical_Robustness_and_Safety/data_poisoning
+    - file: Technical_Robustness_and_Safety/uncertainty
   - file: Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness
     title: Diversity, Non-Discrimination, and Fairness
     sections:
@@ -95,15 +96,28 @@ chapters:
       - file: Privacy_and_Data_Governance/L2.reidentification
   - file: Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing
     sections:
-    - file: Societal_and_Environmental_Wellbeing/greenAI
+    - file: Societal_and_Environmental_Wellbeing/sustenaible_AI
       sections:
-       - file: Societal_and_Environmental_Wellbeing/power_aware  
-    - file: Societal_and_Environmental_Wellbeing/cloud_computing
-    - file: Societal_and_Environmental_Wellbeing/edge_computing
-    - file: Societal_and_Environmental_Wellbeing/data_centre
-    - file: Societal_and_Environmental_Wellbeing/cradle_to_cradle
-    - file: Societal_and_Environmental_Wellbeing/resource_prediction
-    - file: Societal_and_Environmental_Wellbeing/resource_allocation
+      - file: Societal_and_Environmental_Wellbeing/greenAI
+        sections:
+         - file: Societal_and_Environmental_Wellbeing/power_aware  
+      - file: Societal_and_Environmental_Wellbeing/cloud_computing
+      - file: Societal_and_Environmental_Wellbeing/edge_computing
+      - file: Societal_and_Environmental_Wellbeing/data_centre
+      - file: Societal_and_Environmental_Wellbeing/cradle_to_cradle
+      - file: Societal_and_Environmental_Wellbeing/resource_prediction
+      - file: Societal_and_Environmental_Wellbeing/resource_allocation
+    - file: Societal_and_Environmental_Wellbeing/social_impact
+      sections:
+      - file: Societal_and_Environmental_Wellbeing/human_interaction
+        sections:
+        - file: Societal_and_Environmental_Wellbeing/self-identification
+        - file: Societal_and_Environmental_Wellbeing/emotional_impact
+      - file: Societal_and_Environmental_Wellbeing/workforce_impact
+    - file: Societal_and_Environmental_Wellbeing/society_and_democracy
+      sections:
+      - file: Societal_and_Environmental_Wellbeing/social_scoring
+      - file: Societal_and_Environmental_Wellbeing/propaganda
 - file: TAILOR_project
 - file: authors
 - file: main/AnalyticalIndex 

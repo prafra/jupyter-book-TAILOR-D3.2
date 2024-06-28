@@ -11,7 +11,7 @@ Coordinators:
 > - Tristan Allard - University of Rennes, CNRS, IRISA, 35000 Rennes, France <!-- T3.5 -->
 > - Guilherme Alves, University of Lorraine, CNRS, Inria, LORIA, 54000 Nancy, France <!-- T3.3 -->
 > - George Ashwin - Faculty of Electrical Engineering Mathematics and Computer Science, Delft University of Technology, Delft, The Netherlands <!-- T3.4 -->
-> - Alejandra Bringas Colmenarejo, School of Law, University of Southampton, SO17 1BJ, United Kindom   <!-- T3.3 -->
+> - Alejandra Bringas Colmenarejo, School of Law, University of Southampton, SO17 1BJ, United Kingdom   <!-- T3.3 -->
 > - Stefan Buijsman - Delft University of Technology, Jaffalaan 5, 2628 BX, Delft, The Netherlands <!-- T3.3 -->
 > - Pablo A M Casares - VRAIN, Universitat Politècnica de València <!-- T3.2 -->
 > - Sara Colantonio - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy <!-- T3.4 -->
@@ -32,6 +32,7 @@ Coordinators:
 > - Miquel Perello Nieto, University of Bristol, United Kingdom <!-- T3.2 -->
 > - Francesca Pratesi - Institute of Information Science and Technologies "A. Faedo" of the National Research Council of Italy (ISTI-CNR), Via G. Moruzzi, 1, 56124 Pisa, Italy <!-- T3.1, T3.4, T3.5 -->
 > - Resmi Ramachandran Pillai - Linköping University, Department of Computer and Information Sciences, 58 183 Linköping, Sweden  <!-- T3.3 -->
+> - Nicola Rossberg - School of Computer Science & IT, University College Cork, Cork, Ireland <!-- T3.6 -->
 > - Andrea Rossi - SFI Centre for Research Training in Artificial Intelligence, University College Cork <!-- T3.6 -->
 > - Marie-Christine Rousset - University of Grenoble Alpes, Grenoble, France <!-- T3.5 -->
 > - Salvatore Ruggieri - University of Pisa, Department of Computer Sciences, Largo B. Pontecorvo, 3, 56127 Pisa, Italy  <!-- T3.3 -->

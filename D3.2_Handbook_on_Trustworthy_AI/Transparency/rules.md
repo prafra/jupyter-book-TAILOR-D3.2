@@ -25,9 +25,9 @@ align: center
 Example of local factual and counter-factual explanation returned by <span style="font-variant:small-caps;">rxren</span> {cite}`Guidotti2021`.
 ```
 
-
+<!--
 <span style="font-variant:small-caps;">corels</span>
-
+-->
 
 
 ## Bibliography

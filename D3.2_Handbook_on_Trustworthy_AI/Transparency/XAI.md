@@ -16,7 +16,7 @@ This aspect is analyzed also in the {doc}`blackbox_transparent` entry. <!-- {doc
 The goal of this task is explaining how the decision system returned certain outcomes (the so-called *Black Box Explanation*). Moreover, the Black Box Explanation problem can be further divided among *Model Explanation* when the explanation involves the whole logic of the obscure classifier, *Outcome Explanation* when the target is to understand the reasons for the decisions on a given object, and *Model Inspection* when the target to understand how internally the black box behaves changing the input.
 
 <!-- TODO: prendere solo un pezzo della figura -->
-```{figure} ./T3.1_taxonomy.jpg
+```{figure} ./xai_taxonomy.png
 ---
 name: T3.1taxonomy31
 width: 600px
@@ -30,7 +30,7 @@ On a different dimension, a lot of effort has been put into defining what are th
 <!-- TODO: Togliere!!! -->
 On a different dimension, a lot of effort has been put into defining what are the possible techniques (e.g., we can discriminate between {doc}`./model_specific`), the requirements to provide good explanations (see <!-- TODO: add anchor {ref}`guidelines` --> guidelines), how to <!-- TODO: add link [evaluate explanations](./evaluating_explanations.md) --> evaluate explanations, and to understand the {doc}`./feature_importance`. Then, it is important to note that a variety of different kinds of explanations can be provided, such as {doc}`./single_tree`, {doc}`./feature_importance`, {doc}`./saliency_maps`, Factual and Counterfactual, Exemplars and Counter-Exemplars, and Rules List and Rules Sets.<!--[Factual and Counterfactual](./counterfactuals.md), exemplars and counter-exemplars, [Rules List and Rules Sets](./rules.md).-->
 
-
+<!--
 Transparency
 	Dimensions of Explanations
 	        Black Box Explanation vs Explanation by Design
@@ -41,7 +41,7 @@ Transparency
 			Feature Importance
 			Saliency Maps
 			Single Tree Approximation
-
+-->
 
 ## Bibliography
 
