@@ -29,7 +29,7 @@ Example of local factual and counter-factual explanation returned by <span style
 ```
 
 
-
+-->
 
 ## Bibliography
 
@@ -39,6 +39,5 @@ Example of local factual and counter-factual explanation returned by <span style
 :style: unsrt
 :filter: docname in docnames
 ```
--->
 > This entry was readapted from *Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)* by Francesca Pratesi.
 
