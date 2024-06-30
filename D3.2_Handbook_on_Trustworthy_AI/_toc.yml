@@ -85,12 +85,18 @@ chapters:
       - file: Privacy_and_Data_Governance/L2.pseudonymization
     - file: Privacy_and_Data_Governance/L1.privacy_model
       sections:
+      - file: Privacy_and_Data_Governance/L2.randomization
       - file: Privacy_and_Data_Governance/L2.differential_privacy
         sections:
         - file: Privacy_and_Data_Governance/L3.epsilon_DP
         - file: Privacy_and_Data_Governance/L3.epsilon_delta_DP
         - file: Privacy_and_Data_Governance/L2.perturbation_mechanisms
-      - file: Privacy_and_Data_Governance/L2.k_anonymity
+      - file: Privacy_and_Data_Governance/L2.indistinguishability
+        sections:
+        - file: Privacy_and_Data_Governance/L2.k_anonymity
+        - file: Privacy_and_Data_Governance/L2.l_diversity
+        - file: Privacy_and_Data_Governance/L2.t_closeness
+      - file: Privacy_and_Data_Governance/L2.federated
     - file: Privacy_and_Data_Governance/L1.attacks
       sections:
       - file: Privacy_and_Data_Governance/L2.reidentification
