@@ -130,10 +130,15 @@ chapters:
   sections:
   - file: index/Societal_and_Environmental_Wellbeing/2CC2
   - file: index/Accountability/Accountability
+  - file: index/Societal_and_Environmental_Wellbeing/propaganda
+  - file: index/Societal_and_Environmental_Wellbeing/social_scoring
+  - file: index/Societal_and_Environmental_Wellbeing/human_interaction
+  - file: index/Societal_and_Environmental_Wellbeing/workforce_impact
   - file: index/Technical_Robustness_and_Safety/Alignment
   - file: index/Technical_Robustness_and_Safety/Adversarial attack
   - file: index/Technical_Robustness_and_Safety/Adversarial example
   - file: index/Technical_Robustness_and_Safety/Adversarial input
+  - file: index/Privacy_and_Data_Governance/Indistinguishability
   - file: index/Transparency/Ante-hoc Explanation
   - file: index/Technical_Robustness_and_Safety/Assessment
   - file: index/Privacy_and_Data_Governance/Attacks Anonym
@@ -157,6 +162,7 @@ chapters:
   - file: index/Technical_Robustness_and_Safety/Data Poisoning
   - file: index/Technical_Robustness_and_Safety/Dependability
   - file: index/Privacy_and_Data_Governance/Differential Privacy models
+  - file: index/Societal_and_Environmental_Wellbeing/emotional_impact
   - file: index/Privacy_and_Data_Governance/epsilon_delta-differential_privacy
   - file: index/Privacy_and_Data_Governance/Epsilon-differential_privacy
   - file: index/Privacy_and_Data_Governance/Epsilon-indist
@@ -176,6 +182,7 @@ chapters:
   - file: index/Diversity_Non-Discrimination_and_Fairness/Fair Machine Learning
   - file: index/Diversity_Non-Discrimination_and_Fairness/Fairness
   - file: index/Transparency/Features Importance
+  - file: index/Privacy_and_Data_Governance/Federated
   - file: index/Accountability/Frame
   - file: index/Societal_and_Environmental_Wellbeing/Fog Computing
   - file: index/Transparency/Generalizable XAI
@@ -188,6 +195,7 @@ chapters:
   - file: index/Diversity_Non-Discrimination_and_Fairness/intersectionality  
   - file: index/Diversity_Non-Discrimination_and_Fairness/Justice
   - file: index/Privacy_and_Data_Governance/K-Anonymity
+  - file: index/Privacy_and_Data_Governance/L_diversity
   - file: index/Privacy_and_Data_Governance/Linking Attack
   - file: index/Transparency/Local Explanations
   - file: index/Transparency/Lore
@@ -207,6 +215,7 @@ chapters:
   - file: index/Transparency/Prototypes
   - file: index/Accountability/Provenance
   - file: index/Privacy_and_Data_Governance/Pseudonymised Data
+  - file: index/Privacy_and_Data_Governance/Randomization
   - file: index/Privacy_and_Data_Governance/Re-identification Attack
   - file: index/Societal_and_Environmental_Wellbeing/Regenerative Design
   - file: index/Technical_Robustness_and_Safety/Reliability
@@ -221,7 +230,11 @@ chapters:
   - file: index/Transparency/Saliency Maps
   - file: index/Technical_Robustness_and_Safety/Security
   - file: index/Diversity_Non-Discrimination_and_Fairness/Segregation
+  - file: index/Societal_and_Environmental_Wellbeing/self-identification
   - file: index/Transparency/Single Tree Approximation
+  - file: index/Societal_and_Environmental_Wellbeing/social_impact
+  - file: index/Societal_and_Environmental_Wellbeing/society_and_democracy
+  - file: index/Privacy_and_Data_Governance/T_closeness
   - file: index/Technical_Robustness_and_Safety/Testing
   - file: index/Accountability/Traceability
   - file: index/Transparency/Transparency
