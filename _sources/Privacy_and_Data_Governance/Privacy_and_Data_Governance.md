@@ -69,16 +69,21 @@ A possible taxonomy about solutions to the Respect for Privacy dimension.
 
 
 
-## Main Keywords (TBA)
+## Main Keywords
 
 - {doc}`./L1.anonymization`: A data subject is considered anonymous if it is *reasonably* hard to attribute his personal data to him/her.
 - {doc}`./L2.pseudonymization`: **Pseudonymisation** aims to substitute one or more identifiers that link(s) the identity of an individual to its data with a surrogate value, called **pseudonym** or **token**.
 - {doc}`./L1.privacy_model`: There are essentially two families of models, based on different goals and mechanisms: anonymity by randomization (where the most recent paradigm is Differential Privacy) and anonymity by indistinguishability (whose most famous example is k-anonymity).
+- {doc}`./L2.randomization`: **Randomization methods** are used to perturb data in order to preserve the privacy of sensitive information.
 - {doc}`./L2.differential_privacy`: **Differential privacy** implies that adding or deleting a single record does not significantly affect the result of any analysis.
 - {doc}`./L3.epsilon_DP`: **$\epsilon$-Differential Privacy** is the simpler form of {doc}`./L2.differential_privacy`, where $\epsilon$ represents the level of privacy guarantee.
 - {doc}`./L3.epsilon_delta_DP`: A relaxed version of {doc}`./L2.differential_privacy`, named **($\epsilon$,$\delta$)-Differential Privacy**, allows a little privacy loss ($\delta$) due to a variation in the output distribution for the privacy mechanism.
 - {doc}`./L2.perturbation_mechanisms`: Differential privacy guarantees can be provided by perturbation mechanisms aim at randomizing the output distributions of functions in order to provide privacy guarantees.
+- {doc}`./L2.indistinguishability`: The family of **anonymity by indistinguishability** models is based on comparison among individuals present in data, and it aims to make each individual so similar as to be indistinguishable from others. They aims to produce anonymity sets, i.e., equivalence classes, having specific properties.
 - {doc}`./L2.k_anonymity`: **k-anonimity** (and the whole family of **anonymity by indistinguishability** models) is based on comparison among individuals present in data, and it aims to make each individual so similar as to be indistinguishable from at least *k-1* others.
+- {doc}`./L2.l_diversity`: **l-diversity** aims to protect the diversity of sensitive attributes in the **anonymity by indistinguishability** paradigm. An anonymity set is *l-diverse* if contains at least *l* "well-represented" values for the sensitive attribute.
+- {doc}`./L2.t_closeness`: **t-closeness** aims to maintain the distribution of sensitive attributes in the **anonymity by indistinguishability** paradigm, ensuring that the distance between the two distributions (the original and the private ones) should be limited by a threshold *t*.
+- {doc}`./L2.federated`: **Federated Learning** is a paradigm of distributed processing, where models instead of data are shared among peers.
 - {doc}`./L1.attacks`: There are a variety of attacks that involve data privacy. Some of them are very context-specific (for example, there exists attacks on partition-based algorithms, such as deFinetti Attack or Minimality Attack), while other are more general.
 - {doc}`./L2.reidentification`: **Re-identification attack** aims to link a certain set of data related to an individual in a dataset (which does not contain direct identifiers) to a real identity, relying on additional information.
 

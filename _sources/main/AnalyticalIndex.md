@@ -4,10 +4,15 @@ Here, you can find the list of entries in alphabetical order.
 
 - {doc}`../index/Societal_and_Environmental_Wellbeing/2CC2`
 - {doc}`../index/Accountability/Accountability`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/propaganda`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/social_scoring`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/human_interaction`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/workforce_impact`
 - {doc}`../index/Technical_Robustness_and_Safety/Alignment`
 - {doc}`../index/Technical_Robustness_and_Safety/Adversarial attack`
 - {doc}`../index/Technical_Robustness_and_Safety/Adversarial example`
 - {doc}`../index/Technical_Robustness_and_Safety/Adversarial input`
+- {doc}`../index/Privacy_and_Data_Governance/Indistinguishability`
 - {doc}`../index/Transparency/Ante-hoc Explanation`
 - {doc}`../index/Technical_Robustness_and_Safety/Assessment`
 - {doc}`../index/Privacy_and_Data_Governance/Attacks Anonym`
@@ -42,6 +47,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Technical_Robustness_and_Safety/Distributional Shift`
 - {doc}`../index/Technical_Robustness_and_Safety/Direct`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Edge Computing`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/emotional_impact`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Energy Aware`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Energy Efficient`
 - {doc}`../index/Technical_Robustness_and_Safety/Evaluation`
@@ -52,6 +58,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Fair Machine Learning`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Fairness`
 - {doc}`../index/Transparency/Features Importance`
+- {doc}`../index/Privacy_and_Data_Governance/Federated`
 - {doc}`../index/Accountability/Frame`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Fog Computing`
 - {doc}`../index/Transparency/Generalizable XAI`
@@ -64,6 +71,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/intersectionality`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Justice`
 - {doc}`../index/Privacy_and_Data_Governance/K-Anonymity`
+- {doc}`../index/Privacy_and_Data_Governance/L_diversity`
 - {doc}`../index/Privacy_and_Data_Governance/Linking Attack`
 - {doc}`../index/Transparency/Lore`
 - {doc}`../index/Transparency/Local Explanations`
@@ -81,6 +89,7 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Transparency/Prototypes`
 - {doc}`../index/Accountability/Provenance`
 - {doc}`../index/Privacy_and_Data_Governance/Pseudonymised Data`
+- {doc}`../index/Privacy_and_Data_Governance/Randomization`
 - {doc}`../index/Privacy_and_Data_Governance/Re-identification Attack`
 - {doc}`../index/Societal_and_Environmental_Wellbeing/Regenerative Design`
 - {doc}`../index/Technical_Robustness_and_Safety/Reliability`
@@ -95,7 +104,11 @@ Here, you can find the list of entries in alphabetical order.
 - {doc}`../index/Transparency/Saliency Maps`
 - {doc}`../index/Technical_Robustness_and_Safety/Security`
 - {doc}`../index/Diversity_Non-Discrimination_and_Fairness/Segregation`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/self-identification`
 - {doc}`../index/Transparency/Single Tree Approximation`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/social_impact`
+- {doc}`../index/Societal_and_Environmental_Wellbeing/society_and_democracy`
+- {doc}`../index/Privacy_and_Data_Governance/T_closeness`
 - {doc}`../index/Technical_Robustness_and_Safety/Testing`
 - {doc}`../index/Accountability/Traceability`
 - {doc}`../index/Transparency/Transparency`

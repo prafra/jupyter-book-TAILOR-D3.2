@@ -1,0 +1,5 @@
+# Self-identification of AI
+
+AI systems which are presented to be both high in intelligence and have a good quality design tend to cause humans to anthropomorphize the system; i.e. assign human-like traits to it which can lead to emotional bonding with the system. This is dangerous, especially for vulnerable groups such as older generations or those less acquainted with the mechanisms behind the AI. In addition to the threat of emotional attachment, AI systems have been found to frequently provide false or partially false information and portrait it as fact, due to a phenomenon referred to as AI hallucinations. As such it is important that users can clearly identify an artificial intelligence as such, in order to understand the system’s limitations and prevent emotional attachment and misinformation. The remaining part of this chapter will first explain which AI systems are required to be clearly identifiable and then elaborate on how these criteria should be met. 
+
+You can find futher information about Self-identification of AI [here](../../Societal_and_Environmental_Wellbeing/self-identification.md)
