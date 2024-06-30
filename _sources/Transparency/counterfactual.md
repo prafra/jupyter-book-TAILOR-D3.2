@@ -5,7 +5,7 @@
 ## In Brief
 
 A **counterfactual explanation** shows what should have been different to change the decision of an AI system. For example, a counterfactual explanation could be a local explaination of a certain istance by providing the nearest istances that lead to a different decision or describing a small change in the input of the model that lead to a change in the outcome of the model.
-
+<!--
 ## More in details
 
 A counterfactual explanation shows what should have been different to change the decision of an AI system. Counterfactual explanations are becoming an essential component in XAI methods and applications {cite}`apicella6` because they help people in reasoing on the cause-effect relations between analyzed instances and AI decision {cite}`byrne17`.
@@ -39,6 +39,6 @@ Example of local factual and counter-factual explanation returned by <span style
 :style: unsrt
 :filter: docname in docnames
 ```
-
+-->
 > This entry was readapted from *Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)* by Francesca Pratesi.
 

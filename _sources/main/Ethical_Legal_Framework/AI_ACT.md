@@ -8,6 +8,50 @@ On March 13, 2024, the European Parliament adopted the *Artificial Intelligence 
 The first version of the text proposed in 2021 was significantly amended to take into account the technological progress in the field (for example, the development of general-purpose AI) and the instances of institutions, advocates, and associations.
 One of the most significant changes follows the calls of several organizations and scholars {cite}`LetterPrivacyHub, LetterCivilForum` and introduces the obligation for some deployers - bodies governed by public law, or private operators providing public services, or operators deploying high-risk systems that evaluate the creditworthiness of natural persons, establish their credit score, or use AI for risk assessment and pricing in the case of life and health insurance - to carry out a *Fundamental Rights Impact Assessment ("FRIA")*. The FRIA is required when the aforementioned deployers put into use certain high-risk systems, as listed in Annex III of the EU AI Act {cite}`AIACT`, with the exception of the systems used for critical infrastructures. Article 27 identifies the cases in which the FRIA is mandatory and the content of the assessment, but it does not provide indications on parameters and criteria for the implementation of adequate measurement paths.
 
+It is worth noting the scope of the AI Act, defined in <a href="https://artificialintelligenceact.eu/article/2/" target=_blank>Article 2 of the AI Act</a>:
+```{admonition} Scope of the AI Act
+<!--<a href="https://artificialintelligenceact.eu/article/2/" target=_blank>Article 2 of the AI Act</a> defines the scope of the Regulation:-->
+
+1. This Regulation applies to:
+
+(a) providers placing on the market or putting into service AI systems or placing on the market general-purpose AI models in the Union, irrespective of whether those providers are established or located within the Union or in a third country;
+
+(b) deployers of AI systems that have their place of establishment or are located within the Union;
+
+(c) providers and deployers of AI systems that have their place of establishment or are located in a third country, where the output produced by the AI system is used in the Union;
+
+(d) importers and distributors of AI systems;
+
+(e) product manufacturers placing on the market or putting into service an AI system together with their product and under their own name or trademark;
+
+(f) authorised representatives of providers, which are not established in the Union;
+
+(g) affected persons that are located in the Union.
+
+2. For AI systems classified as high-risk AI systems in accordance with Article 6(1) related to products covered by the Union harmonisation legislation listed in Section B of Annex I, only Article 6(1), Articles 102 to 109 and Article 112 apply. Article 57 applies only in so far as the requirements for high-risk AI systems under this Regulation have been integrated in that Union harmonisation legislation.
+
+3. This Regulation does not apply to areas outside the scope of Union law, and shall not, in any event, affect the competences of the Member States concerning national security, regardless of the type of entity entrusted by the Member States with carrying out tasks in relation to those competences. This Regulation does not apply to AI systems where and in so far they are placed on the market, put into service, or used with or without modification exclusively for military, defence or national security purposes, regardless of the type of entity carrying out those activities. This Regulation does not apply to AI systems which are not placed on the market or put into service in the Union, where the output is used in the Union exclusively for military, defence or national security purposes, regardless of the type of entity carrying out those activities.
+
+4. This Regulation applies neither to public authorities in a third country nor to international organisations falling within the scope of this Regulation pursuant to paragraph 1, where those authorities or organisations use AI systems in the framework of international cooperation or agreements for law enforcement and judicial cooperation with the Union or with one or more Member States, provided that such a third country or international organisation provides adequate safeguards with respect to the protection of fundamental rights and freedoms of individuals.
+
+5. This Regulation shall not affect the application of the provisions on the liability of providers of intermediary services as set out in Chapter II of Regulation (EU) 2022/2065.
+
+6. This Regulation does not apply to AI systems or AI models, including their output, specifically developed and put into service for the sole purpose of scientific research and development.
+
+7. Union law on the protection of personal data, privacy and the confidentiality of communications applies to personal data processed in connection with the rights and obligations laid down in this Regulation. This Regulation shall not affect Regulation
+(EU) 2016/679 or (EU) 2018/1725, or Directive 2002/58/EC or (EU) 2016/680, without prejudice to Article 10(5) and Article 59 of this Regulation.
+
+8. This Regulation does not apply to any research, testing or development activity regarding AI systems or AI models prior to their being placed on the market or put into service. Such activities shall be conducted in accordance with applicable Union law. Testing in real world conditions shall not be covered by that exclusion.
+
+9. This Regulation is without prejudice to the rules laid down by other Union legal acts related to consumer protection and product safety.
+
+10. This Regulation does not apply to obligations of deployers who are natural persons using AI systems in the course of a purely personal non-professional activity.
+
+11. This Regulation does not preclude the Union or Member States from maintaining or introducing laws, regulations or administrative provisions which are more favourable to workers in terms of protecting their rights in respect of the use of AI systems by employers, or from encouraging or allowing the application of collective agreements which are more favourable to workers.
+
+12. This Regulation does not apply to AI systems released under free and open-source licences, unless they are placed on the market or put into service as high-risk AI systems or as an AI system that falls under Article 5 or 50.
+```
+
 ### A risk-based approach
 However, the final text maintains the risk-based approach proposed by the Commission in 2021, with different rules for AI systems depending on the level of risk they pose. The technologies belonging to the high-risk category (i.e., the one that is mainly in the scope of the EU AI Act) are not written in the law itself but are listed in specific annexes to make the general law more durable: indeed, the general principles should be the most durable, while the individual technology can be added to the appropriate annex if needed.
 

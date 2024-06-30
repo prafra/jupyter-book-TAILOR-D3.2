@@ -45,7 +45,7 @@ However, an unforeseen consequence pointed out in some critical articles {cite}`
 
 To the best of our knowledge, there are no software framework supporting human autonomy and oversight.
 However, beside the aforementioned guidelines, there are other guidelines and recommendations, both from the academia and the private sector, such as the ones provided by:
-- <a href="https://digitalfuturesociety.com/app/uploads/2022/11/Towards_meaningful_oversight_of_automated_decision_making_systems.pdf" target=_blank>Digital Future Society/a>.
+- <a href="https://digitalfuturesociety.com/app/uploads/2022/11/Towards_meaningful_oversight_of_automated_decision_making_systems.pdf" target=_blank>Digital Future Society</a>.
 In this report, authors first put the human oversight dimension in context, defining different typologies of human-algorithm interaction, then reported some case studies to explain better the problem, and finally listed some policy recommendations, like defining the minimum human involvement, being aware of automation context-dependency, and adequately training developers and operators.
 - <a href="https://www.ibm.com/blog/best-practices-for-augmenting-human-intelligence-with-ai/" target=_blank>IBM</a>. In this report, author reported the major standards on
 human oversight, a great variety of case studies in which AI systems can be applied and the ethical risks (e.g., overtrust) that can occur, and a list of best practices to be applied to mitigate such risks.
@@ -55,6 +55,7 @@ human oversight, a great variety of case studies in which AI systems can be appl
 ## Main Keywords
 
 - {doc}`./Meaningful_human_control`: **Meaningful human control** is the notion that aims to generalize the traditional concept of operational control over technological artifacts to artificial intelligent systems. It implies that artificial systems should not make morally consequential decisions on their own, without appropriate control from responsible humans.
+- {doc}`Causal_responsibility`: **Causal responsibility** is the notion of responsibility that is concerned with actual causation {cite}`vincentStructuredTaxonomyResponsibility2011,chocklerResponsibilityBlameStructuralModel2004, englTheoryCausalResponsibility2018`.
 
 ## Bibliography
 

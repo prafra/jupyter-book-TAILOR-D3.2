@@ -1,4 +1,4 @@
-# Fairness, Equity, and Justice by Design --> Diversity, Non-Discrimination, and Fairness
+# Diversity, Non-Discrimination, and Fairness
 
 ## In brief
 

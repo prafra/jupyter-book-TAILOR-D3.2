@@ -99,16 +99,6 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../authors.html">
-   Complete List of Contributors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../main/Trustworthy_AI.html">
-   Trustworthy AI
-  </a>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../main/Ethical_Legal_Framework/Ethical_Legal_Framework.html">
    The Ethical and Legal Framework
@@ -148,41 +138,41 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Human_Agency_and_Oversight/Human_Agency_and_Oversight.html">
-   Human Agency and Oversight
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../main/Trustworthy_AI.html">
+   Trustworthy AI
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Human_Agency_and_Oversight/Meaningful_human_control.html">
-     Meaningful human control
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Human_Agency_and_Oversight/Causal_responsibility.html">
-     Causal Responsibility
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="Transparency.html">
-   Transparency
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
   <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Human_Agency_and_Oversight/Human_Agency_and_Oversight.html">
+     Human Agency and Oversight
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Human_Agency_and_Oversight/Meaningful_human_control.html">
+       Meaningful human control
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Human_Agency_and_Oversight/Causal_responsibility.html">
+       Causal Responsibility
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="XAI_dimensions.html">
-     Dimensions of Explanations
+    <a class="reference internal" href="Transparency.html">
+     Transparency
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -190,36 +180,36 @@
      </i>
     </label>
     <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Black Box Explanation vs Explanation by Design
+     <li class="toctree-l3 current active has-children">
+      <a class="reference internal" href="XAI_dimensions.html">
+       Dimensions of Explanations
       </a>
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul class="current">
+       <li class="toctree-l4 current active">
+        <a class="current reference internal" href="#">
+         Black Box Explanation vs Explanation by Design
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="model_specific.html">
+         Model-Specific vs Model-Agnostic Explainers
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="global_local.html">
+         Global vs Local Explanations
+        </a>
+       </li>
+      </ul>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="model_specific.html">
-       Model-Specific vs Model-Agnostic Explainers
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="global_local.html">
-       Global vs Local Explanations
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="XAI.html">
-     Explainable AI
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="XAI_kinds.html">
-       Kinds of Explanations
+      <a class="reference internal" href="XAI.html">
+       Explainable AI
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
       <label for="toctree-checkbox-7">
@@ -228,261 +218,281 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="counterfactual.html">
-         Counterfactuals
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="feature_importance.html">
-         Feature Importance
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="saliency_maps.html">
-         Saliency Maps
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="single_tree.html">
-         Single Tree Approximation
+        <a class="reference internal" href="XAI_kinds.html">
+         Kinds of Explanations
         </a>
        </li>
       </ul>
      </li>
     </ul>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html">
-   Technical Robustness and Safety
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/alignment.html">
-     Alignment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/robustness.html">
-     Robustness
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/reliability.html">
-     Reliability
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/evaluation.html">
-     Evaluation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/negative_side_effects.html">
-     Negative side effects
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/distributional_shift.html">
-     Distributional shift
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/security.html">
-     Security
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/adversarial_attack.html">
-     Adversarial Attack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Technical_Robustness_and_Safety/data_poisoning.html">
-     Data Poisoning
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html">
-   Diversity, Non-Discrimination, and Fairness
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/auditing.html">
-     Auditing AI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/bias.html">
-     Bias
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/bias_factors.html">
-     Bias Conducive Factors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/bias_lmm.html">
-     Bias and Fairness in LLMs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/equity.html">
-     Discrimination &amp; Equity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/fairness.html">
-     Fairness notions and metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/fair_ML.html">
-     Fair Machine Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/discrimination.html">
-     Grounds of Discrimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/intersectionality.html">
-     Intersectionality
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/justice.html">
-     Justice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/segregation.html">
-     Segregation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Accountability/Accountability_and_Reproducibility.html">
-   Accountability
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Accountability/L2.Accountability.html">
+    <a class="reference internal" href="../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html">
+     Technical Robustness and Safety
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/alignment.html">
+       Alignment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/robustness.html">
+       Robustness
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/reliability.html">
+       Reliability
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/evaluation.html">
+       Evaluation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/negative_side_effects.html">
+       Negative side effects
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/distributional_shift.html">
+       Distributional shift
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/security.html">
+       Security
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/adversarial_attack.html">
+       Adversarial Attack
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/data_poisoning.html">
+       Data Poisoning
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Technical_Robustness_and_Safety/uncertainty.html">
+       Uncertainty
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html">
+     Diversity, Non-Discrimination, and Fairness
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/auditing.html">
+       Auditing AI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/bias.html">
+       Bias
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/bias_factors.html">
+       Bias Conducive Factors
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/bias_lmm.html">
+       Bias and Fairness in LLMs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/equity.html">
+       Discrimination &amp; Equity
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/fairness.html">
+       Fairness notions and metrics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/fair_ML.html">
+       Fair Machine Learning
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/discrimination.html">
+       Grounds of Discrimination
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/intersectionality.html">
+       Intersectionality
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/justice.html">
+       Justice
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/segregation.html">
+       Segregation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Accountability/Accountability_and_Reproducibility.html">
      Accountability
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Accountability/L3.Wicked_problems.html">
-       Wicked problems
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Accountability/L3.The_frame_problem.html">
-       The Frame Problem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Accountability/L3.Problem_of_many_hands.html">
-       The Problem of Many Hands
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Accountability/L2.Reproducibility.html">
-     Reproducibility
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Accountability/L2.Traceability.html">
-     Traceability
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Accountability/L3.Provenance_tracking.html">
-       Provenance Tracking
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Accountability/L3.Continuous_performance_monitoring.html">
-       Continuous Performance Monitoring
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Privacy_and_Data_Governance/Privacy_and_Data_Governance.html">
-   Respect for Privacy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Privacy_and_Data_Governance/L1.anonymization.html">
-     Data Anonymization (and Pseudonymization)
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Privacy_and_Data_Governance/L2.pseudonymization.html">
-       Pseudonymization
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Privacy_and_Data_Governance/L1.privacy_model.html">
-     Privacy Models
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../Privacy_and_Data_Governance/L2.differential_privacy.html">
-       Differential Privacy
+      <a class="reference internal" href="../Accountability/L2.Accountability.html">
+       Accountability
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Accountability/L3.Wicked_problems.html">
+         Wicked problems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Accountability/L3.The_frame_problem.html">
+         The Frame Problem
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Accountability/L3.Problem_of_many_hands.html">
+         The Problem of Many Hands
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Accountability/L2.Reproducibility.html">
+       Reproducibility
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Accountability/L2.Traceability.html">
+       Traceability
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Accountability/L3.Provenance_tracking.html">
+         Provenance Tracking
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Accountability/L3.Continuous_performance_monitoring.html">
+         Continuous Performance Monitoring
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Privacy_and_Data_Governance/Privacy_and_Data_Governance.html">
+     Privacy and Data Governance
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Privacy_and_Data_Governance/L1.anonymization.html">
+       Data Anonymization (and Pseudonymization)
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.pseudonymization.html">
+         Pseudonymization
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Privacy_and_Data_Governance/L1.privacy_model.html">
+       Privacy Models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.randomization.html">
+         Randomization Methods
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.differential_privacy.html">
+         Differential Privacy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.k_anonymity.html">
+         k-anonymity
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.l_diversity.html">
+         k-anonymity
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.t_closeness.html">
+         t-closeness
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.federated.html">
+         Federated Learning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Privacy_and_Data_Governance/L1.attacks.html">
+       Attacks on anonymization schemes
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
       <label for="toctree-checkbox-16">
@@ -491,43 +501,17 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../Privacy_and_Data_Governance/L3.epsilon_DP.html">
-         <span class="math notranslate nohighlight">
-          \(\epsilon\)
-         </span>
-         -Differential Privacy
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../Privacy_and_Data_Governance/L3.epsilon_delta_DP.html">
-         (
-         <span class="math notranslate nohighlight">
-          \(\epsilon\)
-         </span>
-         ,
-         <span class="math notranslate nohighlight">
-          \(\delta\)
-         </span>
-         )-Differential Privacy
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.perturbation_mechanisms.html">
-         Achieving Differential Privacy
+        <a class="reference internal" href="../Privacy_and_Data_Governance/L2.reidentification.html">
+         Re-identification Attack
         </a>
        </li>
       </ul>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Privacy_and_Data_Governance/L2.k_anonymity.html">
-       k-anonymity
-      </a>
-     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Privacy_and_Data_Governance/L1.attacks.html">
-     Attacks on anonymization schemes
+    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html">
+     Societal and Environmental Wellbeing
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -535,71 +519,98 @@
      </i>
     </label>
     <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Privacy_and_Data_Governance/L2.reidentification.html">
-       Re-identification Attack
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/sustenaible_AI.html">
+       Sustainable AI
       </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+      <label for="toctree-checkbox-18">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/greenAI.html">
+         Green AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/cloud_computing.html">
+         Cloud Computing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/edge_computing.html">
+         Edge Computing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/data_centre.html">
+         Data Centre
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/cradle_to_cradle.html">
+         Cradle-to-cradle Design
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/resource_prediction.html">
+         Resource Prediction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/resource_allocation.html">
+         Resource Allocation
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/social_impact.html">
+       Social Impact of AI Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+      <label for="toctree-checkbox-19">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/human_interaction.html">
+         AI human interaction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/workforce_impact.html">
+         AI Impact on the Workforce
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/society_and_democracy.html">
+       Society and Democracy
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+      <label for="toctree-checkbox-20">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/social_scoring.html">
+         AI for social scoring
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/propaganda.html">
+         AI for propaganda
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html">
-   Sustainability
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-  <label for="toctree-checkbox-18">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/greenAI.html">
-     Green AI
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-    <label for="toctree-checkbox-19">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/power_aware.html">
-       Power-aware Computing
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/cloud_computing.html">
-     Cloud Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/edge_computing.html">
-     Edge Computing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/data_centre.html">
-     Data Centre
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/cradle_to_cradle.html">
-     Cradle-to-cradle Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/resource_prediction.html">
-     Resource Prediction
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Societal_and_Environmental_Wellbeing/resource_allocation.html">
-     Resource Allocation
-    </a>
    </li>
   </ul>
  </li>
@@ -608,12 +619,17 @@
    The TAILOR project
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../authors.html">
+   Complete List of Contributors
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../main/AnalyticalIndex.html">
    Index
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-  <label for="toctree-checkbox-20">
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -716,6 +732,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Continuous%20monitoring.html">
      Continuous Performance Monitoring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Counterexemplar.html">
+     Counterexemplars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Counterfactual.html">
+     Counterfactuals
     </a>
    </li>
    <li class="toctree-l2">
@@ -833,6 +859,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Exemplars.html">
+     Exemplars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Explainable%20AI.html">
+     Explainable AI
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Explanation%20by%20Design.html">
      Explanation by Design
     </a>
@@ -898,6 +934,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/intersectionality.html">
+     Intersectionality
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Diversity_Non-Discrimination_and_Fairness/Justice.html">
      Justice
     </a>
@@ -915,6 +956,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Local%20Explanations.html">
      Local Explanations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Lore.html">
+     Local Rule-based Explanation
     </a>
    </li>
    <li class="toctree-l2">
@@ -983,6 +1029,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Prototypes.html">
+     Prototypes
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Accountability/Provenance.html">
      Provenance Tracking
     </a>
@@ -1043,6 +1094,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/Rules.html">
+     Rules List and Rules Set
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../index/Transparency/Saliency%20Maps.html">
      Saliency Maps
     </a>
@@ -1080,6 +1136,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../index/Technical_Robustness_and_Safety/Unintended.html">
      Unintended Behaviour
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../index/Transparency/XAI.html">
+     XAI
     </a>
    </li>
    <li class="toctree-l2">
@@ -1210,28 +1271,82 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="black-box-explanation-vs-explanation-by-design">
 <h1>Black Box Explanation vs Explanation by Design<a class="headerlink" href="#black-box-explanation-vs-explanation-by-design" title="Permalink to this headline">¶</a></h1>
-<p><em>Synonyms</em>: Post-hoc vs Ante-hoc Explanations.</p>
+<p><em>Synonyms</em>: Post-hoc vs Ante-hoc Explanations, Explainable vs Interpretable Artificial Intelligence</p>
 <div class="section" id="in-brief">
 <h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 <p>The difference between <strong>Black Box Explanation</strong> (or <strong>Post-hoc Explanations</strong>) and <strong>Explanation by Design</strong> (or <strong>Ante-hoc Explanations</strong>) regards the ability to know and exploit the behaviour of the AI model. With a black box explanation, we pair the black box model with an interpretation the black box decisions or model, while in the second case, the strategy is to rely, by design, on a transparent model.</p>
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p>When we talk about <strong>Black Box Explanation</strong>, the strategy is to couple an AI with a black box model with an explanation method able to interpret the black box decisions.
-In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency</strong>), the idea is to substitute the obscure model with a transparent model in which the decision process is accessible by design, i.e., explainability is inserted into a model from the very beginning.</p>
+<p>The precise definitions of the core concepts in these fields – such as transparency, interpretability and explainability – remain elusive, in part because these notions tend to be domain-specific <span id="id1">[<a class="reference internal" href="#id15">2</a>]</span>.</p>
+<p>When we talk about <strong>Black Box Explanation</strong>, the strategy is to couple an AI with a black box model with an explanation method able to interpret the black box decisions. Usually, this situation is associated with systems that are <em>proprietary</em> – hence inaccessible – or <em>too complicated</em> to understand <span id="id2">[<a class="reference internal" href="#id35">3</a>]</span>.</p>
+<p>In the case of <strong>Explanation by Design</strong> (aka <strong>Transparency</strong>), the idea is to substitute the obscure model with a transparent model in which the decision process is accessible by design, i.e., explainability is inserted into a model from the very beginning.
+Interpretability presupposes an observer who appraises the intelligibility of the model in question.
+This indicates that <strong>interpretability</strong> is not a binary property, but it is rather determined by the degree to which one can understand the system’s operations, and thus resides on a <em>spectrum of opaqueness</em> <span id="id3">[<a class="reference internal" href="#id16">4</a>]</span>.</p>
+<p>In view of this fluidity, the distinction between <strong>ante-hoc interpretability</strong> and <strong>post-hoc explainability</strong> techniques commonly made in the literature becomes blurred.
+<strong>Post-hoc explainability</strong> offers insights into the behaviour of a predictive system by building an additional <em>explanatory model</em> that interfaces between it and human explainees (i.e., explanation recipients).
+This is the only approach compatible with black-box systems, with which we can interact exclusively by manipulating their inputs and observing their outputs.
+Such an operationalisation is nonetheless unsuitable for high stakes domains since the resulting explanations are not guaranteed to be reliable and truthful with respect to the underlying model <span id="id4">[<a class="reference internal" href="#id35">3</a>]</span>.
+<strong>Ante-hoc explainability</strong>, in contrast, often refers to data-driven systems whose model form adheres (in practice) to application- and domain-specific constraints – a <em>functional</em> definition – which allows their designers to judge their trustworthiness and communicate how they operate to others <span id="id5">[<a class="reference internal" href="#id35">3</a>]</span>.
+While the <strong>post-hoc</strong> moniker is, in general, used consistently across the literature, the same is not true for the <em>ante-hoc</em> label;
+the <em>interpretability</em> and <em>explainability</em> terms are also often mixed and used interchangeably, adding to the confusion.
+<strong>Ante-hoc</strong> sometimes refers to, among other things, transparent models that are self-explanatory, systems that are inherently interpretable, scenarios where the explanation and the prediction come from the same model, and situations where the model itself (or its part) constitutes an explanation, which are vague terms that are often incompatible with the <em>functional</em> definition of ante-hoc interpretability <span id="id6">[<a class="reference internal" href="#id16">4</a>]</span>.
+Nonetheless, all of these notions presuppose an observer to whom the model is interpretable and who understands its functioning, which brings us back to the issue of accounting for an audience and its background.</p>
 <p>Figure <a class="reference internal" href="#post-hoc"><span class="std std-numref">7</span></a> depicts this distinction.</p>
 <div class="figure align-center" id="post-hoc">
 <a class="reference internal image-reference" href="../_images/post.png"><img alt="../_images/post.png" src="../_images/post.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id1">[]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">(Top) Black box explanation pipeline. (Bottom) Explanation by design pipeline. <span id="id7">[<a class="reference internal" href="single_tree.html#id65">1</a>]</span>.</span><a class="headerlink" href="#post-hoc" title="Permalink to this image">¶</a></p>
 </div>
-<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id2">[<a class="reference internal" href="Transparency.html#id19">2</a>]</span> <span id="id3">[]</span> <span id="id4">[]</span>.</p>
-<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id5">[]</span> <span id="id6">[]</span>.
-In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id7">[]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
+<p>Starting from a dataset <em>X</em>, the <strong>black box explanation</strong> idea is to maintain the high performance of the obscure model <em>b</em> used by the AI, which is allowed to be trained normally, and to use an explanation method <em>f</em> to retrieve an explanation <em>e</em> by reasoning over <em>b</em> and <em>X</em>. In such a way, we aim to reach both accuracy and the ability to gain some <a class="reference internal" href="XAI_kinds.html"><span class="doc">Kinds of Explanations</span></a>. This kind of approach is the one more addressed nowadays in the XAI research field <span id="id8">[<a class="reference internal" href="#id30">5</a>]</span> <span id="id9">[<a class="reference internal" href="#id33">6</a>]</span> <span id="id10">[<a class="reference internal" href="#id37">7</a>]</span>.</p>
+<p>On the other hand, the <strong>explanation by design</strong> consists of directly designing a comprehensible model <em>c</em> over the dataset <em>X</em>, which is interpretable by design and returns an explanation <em>e</em> besides the prediction <em>y</em>. Thus, the idea is to use this transparent model directly in the AI system <span id="id11">[<a class="reference internal" href="#id35">3</a>]</span> <span id="id12">[<a class="reference internal" href="#id36">8</a>]</span>.
+In the literature, there are various models recognized to be interpretable. Examples include decision trees, decision rules, and linear models <span id="id13">[<a class="reference internal" href="#id39">9</a>]</span>. These models are considered easily understandable and interpretable for humans. However, nearly all of them sacrifice performance in favor of interpretability. In addition, they cannot be applied effectively on data types such as images or text, but only on tabular, relational data, i.e., tables.</p>
+<p>The <em>functional</em> definition of ante-hoc interpretability concerns the engineering aspects of information modelling and its adherence to domain-specific knowledge and constraints.
+A <em>transparent</em> model may be <em>ante-hoc interpretable</em> to its engineers and domain experts with relevant technical knowledge, yet it may not engender understanding in explainees outside this milieu.
+For example, a decision tree is transparent, but its interpretability presupposes its small size as well as technical understanding of its operation and familiarity with the underlying data domain;
+one way to restore interpretability to a large tree is to process its structure to extract <a class="reference internal" href="rules.html"><span class="doc std std-doc">decision rules</span></a>, <a class="reference internal" href="prototypes.html"><span class="doc std std-doc">exemplars</span></a> and <a class="reference internal" href="counterfactual.html"><span class="doc std std-doc">counterfactuals</span></a>.</p>
+<!--
+:filter: docname in docnames
+:filter: blackbox_transparent in docnames
+:filter: {"blackbox_transparent"} & docnames
+ -->
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id8"></span><blockquote>
-<div><p>This entry was readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi and Riccardo Guidotti.</p>
+<p id="id14"><dl class="citation">
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id7">1</a></span></dt>
+<dd><p>Riccardo Guidotti, Anna Monreale, Dino Pedreschi, and Fosca Giannotti. <em>Principles of Explainable Artificial Intelligence</em>. Springer International Publishing, 2021.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>Kacper Sokol and Peter Flach. Explainability is in the mind of the beholder: establishing the foundations of explainable artificial intelligence. <em>arXiv preprint arXiv:2112.14466</em>, 2021.</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets">3</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>,<a href="#id5">3</a>,<a href="#id11">4</a>)</span></dt>
+<dd><p>Cynthia Rudin. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. <em>Nature Machine Intelligence</em>, 1(5):206–215, 2019.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets">4</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p>Kacper Sokol and Julia E Vogt. (un)reasonable allure of ante-hoc interpretability for high-stakes domains: transparency is necessary but insufficient for comprehensibility. In <em>3rd Workshop on Interpretable Machine Learning in Healthcare (IMLH) at 2023 International Conference on Machine Learning (ICML)</em>. 2023.</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dd><p>Marco Tulio Ribeiro, Sameer Singh, and Carlos Guestrin. Why should i trust you?: explaining the predictions of any classifier. In <em>Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, 1135–1144. ACM, 2016.</p>
+</dd>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id9">6</a></span></dt>
+<dd><p>Mark Craven and Jude W Shavlik. Extracting tree-structured representations of trained networks. In <em>Advances in neural information processing systems</em>, 24–30. 1996.</p>
+</dd>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id10">7</a></span></dt>
+<dd><p>Scott M Lundberg and Su-In Lee. A unified approach to interpreting model predictions. In <em>Advances in neural information processing systems</em>, 4765–4774. 2017.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id12">8</a></span></dt>
+<dd><p>Cynthia Rudin and Joanna Radin. Why are we using black box models in ai when we don’t need to? a lesson from an explainable ai competition. <em>Harvard Data Science Review</em>, 2019.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id13">9</a></span></dt>
+<dd><p>Alex A Freitas. Comprehensible classification models: a position paper. <em>ACM SIGKDD explorations newsletter</em>, 15(1):1–10, 2014.</p>
+</dd>
+<dt class="label" id="id88"><span class="brackets">10</span></dt>
+<dd><p>Tolga Bolukbasi, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. Man is to computer programmer as woman is to homemaker? debiasing word embeddings. In <em>Advances in neural information processing systems</em>, 4349–4357. 2016.</p>
+</dd>
+</dl>
+</p>
+<blockquote>
+<div><p>This entry was partially readapted from <em>Guidotti, Monreale, Pedreschi, Giannotti. Principles of Explainable Artificial Intelligence. Springer International Publishing (2021)</em> by Francesca Pratesi, Riccardo Guidotti, and Kacper Sokol.</p>
 </div></blockquote>
 </div>
 </div>
