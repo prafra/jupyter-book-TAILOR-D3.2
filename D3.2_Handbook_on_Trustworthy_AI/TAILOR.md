@@ -8,7 +8,10 @@ Add an introduction to the first page.
 Add an Executive summary to the first page. This should be stand-alone, so that we can use it in formal reporting, for websites, social media etc.
 -->
 
-This book (to be consolidated in the second phase of the project) represents the first period deliverable of the TAILOR project, providing an encyclopedia of the major terms related to trustworthiness.
+According the {doc}`./main/Ethical_Legal_Framework/HLEG`, **Trustworthy Artificail intelligence (Trustworthy AI)** I has three components, which should be met throughout the system's entire life cycle. Indeed, it should be:
+1. *lawful*, complying with all applicable laws and regulations;
+2. *ethical*, ensuring adherence to ethical principles and values;
+3. *robust*, both from a technical and social perspective since, even with good intentions, AI systems can cause unintentional harm. 
 
 ## Executive Abstract
 

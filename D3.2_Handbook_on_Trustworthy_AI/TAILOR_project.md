@@ -6,10 +6,6 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VW5RsxxLagc?si=i8tLlr2fMGp6f5Wt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-\emph{add video}
-https://youtu.be/VW5RsxxLagc
-\emph{add video}
-
 ## More in detail
 
 The purpose of the EU Project TAILOR is to build the capacity to provide the scientific foundations for Trustworthy AI in Europe by developing a network of research excellence centers leveraging and combining learning, optimization, and reasoning. These systems are meant to provide descriptive, predictive, and prescriptive systems integrating data-driven and knowledge-based approaches.
