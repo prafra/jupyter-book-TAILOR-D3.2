@@ -56,10 +56,10 @@ It is worth noting the scope of the AI Act, defined in <a href="https://artifici
 However, the final text maintains the risk-based approach proposed by the Commission in 2021, with different rules for AI systems depending on the level of risk they pose. The technologies belonging to the high-risk category (i.e., the one that is mainly in the scope of the EU AI Act) are not written in the law itself but are listed in specific annexes to make the general law more durable: indeed, the general principles should be the most durable, while the individual technology can be added to the appropriate annex if needed.
 
 
-```{figure} ./aiact_risk_pyramid.jpeg
+```{figure} ./aiact_risk_pyramid.png
 ---
 name: fig:aiact_risk_pyramid
-width: 600px
+width: 800px
 align: center
 ---
 The pyramid of AI systems based on their risk

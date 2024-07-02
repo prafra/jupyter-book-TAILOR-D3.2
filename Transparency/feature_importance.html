@@ -1342,7 +1342,7 @@ means that it has a stronger influence on the prediction of the black box outcom
 <p>The features importance summarizes the outcome of the black box model, allowing quantifying the changes of the black box decision for each test
 record. This means it is possible to identify the features leading to a specific outcome for a certain instance and how much they contributed to the decision.
 In the following, we provide a couple of examples obtained with two of the most popular methods, namely <span style="font-variant:small-caps;">lime</span> and <span style="font-variant:small-caps;">shap</span>, both <a class="reference internal" href="model_specific.html"><span class="doc std std-doc">model-agnostic</span></a> <a class="reference internal" href="global_local.html"><span class="doc std std-doc">local</span></a> explanation methods.</p>
-<p>The <span style="font-variant:small-caps;">lime</span> explanation method <span id="id1">[<a class="reference internal" href="Transparency.html#id19">2</a>]</span> randomly generates synthetic instances around the analyzed record. Then it returns the features importance as the coefficient of a linear regression model adopted as a local surrogate. The synthetic instances are weighted according to their proximity to the instance of interest.
+<p>The <span style="font-variant:small-caps;">lime</span> explanation method <span id="id1">[<a class="reference internal" href="saliency_maps.html#id76">1</a>]</span> randomly generates synthetic instances around the analyzed record. Then it returns the features importance as the coefficient of a linear regression model adopted as a local surrogate. The synthetic instances are weighted according to their proximity to the instance of interest.
 The <a href="https://en.wikipedia.org/wiki/Lasso_(statistics)" target=_blank>Lasso model</a> is trained to approximate the probability of the decision of the
 black box in the synthetic neighborhood of the instance analyzed. Fig. <a class="reference internal" href="#xai-feature-lime"><span class="std std-numref">13</span></a> shows
 the features importance returned by <span style="font-variant:small-caps;">lime</span> in a scenario where we want to predict if a mushroom is edible or poisonous. Indeed, here the prediction class has only two classes, and we want to understand which features are most relevant to discriminate between the two classes.
@@ -1463,7 +1463,7 @@ https://www.sessions.edu/color-calculator/
     <div class="container">
       <p>
         
-          Di TAILOR WP3 members; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+          Di varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
         
             &copy; Diritto d'autore 2021.<br/>
       </p>
