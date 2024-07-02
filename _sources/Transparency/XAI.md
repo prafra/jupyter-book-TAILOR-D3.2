@@ -28,7 +28,7 @@ A possible taxonomy about solutions to the Open the Black-Box problem {cite}`gui
 On a different dimension, a lot of effort has been put into defining what are the possible techniques (e.g., we can discriminate between {doc}`./model_specific`), what is the explained outcome (i.e., {doc}`./global_local`), and to understand the {doc}`./feature_importance`. Then, it is important to note that a variety of different kinds of explanations can be provided, such as {doc}`./single_tree`, {doc}`./feature_importance`, {doc}`./saliency_maps`, Factual and Counterfactual, Exemplars and Counter-Exemplars, and Rules List and Rules Sets.<!--[Factual and Counterfactual](./counterfactuals.md), exemplars and counter-exemplars, [Rules List and Rules Sets](./rules.md).-->
 
 <!-- TODO: Togliere!!! -->
-On a different dimension, a lot of effort has been put into defining what are the possible techniques (e.g., we can discriminate between {doc}`./model_specific`), the requirements to provide good explanations (see <!-- TODO: add anchor {ref}`guidelines` --> guidelines), how to <!-- TODO: add link [evaluate explanations](./evaluating_explanations.md) --> evaluate explanations, and to understand the {doc}`./feature_importance`. Then, it is important to note that a variety of different kinds of explanations can be provided, such as {doc}`./single_tree`, {doc}`./feature_importance`, {doc}`./saliency_maps`, Factual and Counterfactual, Exemplars and Counter-Exemplars, and Rules List and Rules Sets.<!--[Factual and Counterfactual](./counterfactuals.md), exemplars and counter-exemplars, [Rules List and Rules Sets](./rules.md).-->
+On a different dimension, a lot of effort has been put into defining what are the possible techniques (e.g., we can discriminate between {doc}`./model_specific`), the requirements to provide good explanations (see <!-- TODO: add anchor {ref}`guidelines` --> guidelines), how to <!-- TODO: add link [evaluate explanations](./evaluating_explanations.md) --> evaluate explanations, and to understand the {doc}`./feature_importance`. Then, it is important to note that a variety of different kinds of explanations can be provided, such as {doc}`./single_tree`, {doc}`./feature_importance`, {doc}`./saliency_maps`, [Factual and Counterfactual](./counterfactual.md), [exemplars and counter-exemplars](./prototypes.md), [Rules List and Rules Sets](./rules.md).
 
 <!--
 Transparency
@@ -37,7 +37,7 @@ Transparency
 	        Model-Specific vs Model-Agnostic Explainers
 	        Global vs Local Explanations
 	XAI
-		Kinds of (Post-Hoc) Explanations --> cambiare il link a "Increasing research on XAI"
+		Kinds of (Post-Hoc) Explanations  cambiare il link a "Increasing research on XAI"
 			Feature Importance
 			Saliency Maps
 			Single Tree Approximation

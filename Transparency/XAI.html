@@ -1331,7 +1331,7 @@
 <h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
 <p><strong>Explainable AI</strong> (often shortened to <strong>XAI</strong>) is one of the ethical dimensions that is studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a>.
 The origin of XAI dates back to the entering into force of the General Data Protection Regulation (GDPR).
-The GDPR <span id="id1">[<a class="reference internal" href="../main/Trustworthy_AI.html#id12">3</a>]</span>, in its <a href="https://gdpr-info.eu/recitals/no-71/" target=_blank>Recital 71</a>, also mentions the right to explanation, as a suitable safeguard to ensure fair and transparent processing in respect of data subjects. It is defined as the right “to obtain an explanation of the decision reached after profiling”. <!-- TODO: add link to profiling --></p>
+The GDPR <span id="id1">[<a class="reference internal" href="#id8">1</a>]</span>, in its <a href="https://gdpr-info.eu/recitals/no-71/" target=_blank>Recital 71</a>, also mentions the right to explanation, as a suitable safeguard to ensure fair and transparent processing in respect of data subjects. It is defined as the right “to obtain an explanation of the decision reached after profiling”. <!-- TODO: add link to profiling --></p>
 </div>
 <div class="section" id="more-in-details">
 <h2>More in details<a class="headerlink" href="#more-in-details" title="Permalink to this headline">¶</a></h2>
@@ -1341,11 +1341,11 @@ This aspect is analyzed also in the <a class="reference internal" href="blackbox
 <!-- TODO: prendere solo un pezzo della figura -->
 <div class="figure align-center" id="t3-1taxonomy31">
 <a class="reference internal image-reference" href="../_images/xai_taxonomy.png"><img alt="../_images/xai_taxonomy.png" src="../_images/xai_taxonomy.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">A possible taxonomy about solutions to the Open the Black-Box problem <span id="id2">[<a class="reference internal" href="Transparency.html#id17">4</a>]</span>.</span><a class="headerlink" href="#t3-1taxonomy31" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">A possible taxonomy about solutions to the Open the Black-Box problem <span id="id2">[<a class="reference internal" href="#id57">2</a>]</span>.</span><a class="headerlink" href="#t3-1taxonomy31" title="Permalink to this image">¶</a></p>
 </div>
 <p>On a different dimension, a lot of effort has been put into defining what are the possible techniques (e.g., we can discriminate between <a class="reference internal" href="model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>), what is the explained outcome (i.e., <a class="reference internal" href="global_local.html"><span class="doc">Global vs Local Explanations</span></a>), and to understand the <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>. Then, it is important to note that a variety of different kinds of explanations can be provided, such as <a class="reference internal" href="single_tree.html"><span class="doc">Single Tree Approximation</span></a>, <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>, <a class="reference internal" href="saliency_maps.html"><span class="doc">Saliency Maps</span></a>, Factual and Counterfactual, Exemplars and Counter-Exemplars, and Rules List and Rules Sets.<!--[Factual and Counterfactual](./counterfactuals.md), exemplars and counter-exemplars, [Rules List and Rules Sets](./rules.md).--></p>
 <!-- TODO: Togliere!!! -->
-<p>On a different dimension, a lot of effort has been put into defining what are the possible techniques (e.g., we can discriminate between <a class="reference internal" href="model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>), the requirements to provide good explanations (see <!-- TODO: add anchor {ref}`guidelines` --> guidelines), how to <!-- TODO: add link [evaluate explanations](./evaluating_explanations.md) --> evaluate explanations, and to understand the <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>. Then, it is important to note that a variety of different kinds of explanations can be provided, such as <a class="reference internal" href="single_tree.html"><span class="doc">Single Tree Approximation</span></a>, <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>, <a class="reference internal" href="saliency_maps.html"><span class="doc">Saliency Maps</span></a>, Factual and Counterfactual, Exemplars and Counter-Exemplars, and Rules List and Rules Sets.<!--[Factual and Counterfactual](./counterfactuals.md), exemplars and counter-exemplars, [Rules List and Rules Sets](./rules.md).--></p>
+<p>On a different dimension, a lot of effort has been put into defining what are the possible techniques (e.g., we can discriminate between <a class="reference internal" href="model_specific.html"><span class="doc">Model-Specific vs Model-Agnostic Explainers</span></a>), the requirements to provide good explanations (see <!-- TODO: add anchor {ref}`guidelines` --> guidelines), how to <!-- TODO: add link [evaluate explanations](./evaluating_explanations.md) --> evaluate explanations, and to understand the <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>. Then, it is important to note that a variety of different kinds of explanations can be provided, such as <a class="reference internal" href="single_tree.html"><span class="doc">Single Tree Approximation</span></a>, <a class="reference internal" href="feature_importance.html"><span class="doc">Feature Importance</span></a>, <a class="reference internal" href="saliency_maps.html"><span class="doc">Saliency Maps</span></a>, <a class="reference internal" href="counterfactual.html"><span class="doc std std-doc">Factual and Counterfactual</span></a>, <a class="reference internal" href="prototypes.html"><span class="doc std std-doc">exemplars and counter-exemplars</span></a>, <a class="reference internal" href="rules.html"><span class="doc std std-doc">Rules List and Rules Sets</span></a>.</p>
 <!--
 Transparency
 	Dimensions of Explanations
@@ -1353,13 +1353,11 @@ Transparency
 	        Model-Specific vs Model-Agnostic Explainers
 	        Global vs Local Explanations
 	XAI
-		Kinds of (Post-Hoc) Explanations --> cambiare il link a "Increasing research on XAI"
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>		Feature Importance
-		Saliency Maps
-		Single Tree Approximation
-</pre></div>
-</div>
-<p>–&gt;</p>
+		Kinds of (Post-Hoc) Explanations  cambiare il link a "Increasing research on XAI"
+			Feature Importance
+			Saliency Maps
+			Single Tree Approximation
+-->
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
