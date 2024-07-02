@@ -1335,26 +1335,26 @@ them (fairness metrics), can be distinguished based on the focus on individuals,
 </div>
 <div class="section" id="more-in-detail">
 <h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p>The term fairness is defined as the quality or state of being fair; or a lack of favoritism towards one side. However, like <a class="reference internal" href="bias.html"><span class="doc">Bias</span></a>, fairness can mean different concepts to different peoples, different contexts, and different disciplines. The definition of fairness in various disciplines is detailed in <span id="id1">[<a class="reference internal" href="#id2563">1</a>]</span>. An unfair model produces results that are skewed towards particular individuals or groups. The primary sources of this unfairness are the presence of biases. There are two important categories of biases which play crucial role in fairness; (i) technical bias and (ii) social bias. Technical biases can be traced back to the sources, but social biases are very difficult to fix as these are a matter of politics, perspectives, and shifts in prejudices and preconceptions that can take years to change <span id="id2">[<a class="reference internal" href="#id2627">3</a>]</span>. Most of the state-of-the-art techniques tackle technical errors, but it cannot resolve the root causes of bias~\cite{ruggieri2024}. Based on this observation, Sandra et al. <span id="id3">[<a class="reference internal" href="#id2627">3</a>]</span> proposed three responses concerning algorithmic bias and resulting social inequality. The first is not an active choice as it allows the system to get worse and do nothing to fix biases. Second, incorporate techniques to fix technical errors and maintain a status quo to ensure that the system do not make it worse. Much works in fairness focused on this option, called “bias preserving fairness”, maintains a status quo as a baseline, aligns with the formal equality of EU non-discrimination law. Finally, “bias transforming fairness”, the third response focuses on the substantive equality of EU non-discrimination which can only be achieved by accounting for historical (social) inequalities. As argued in <span id="id4">[<a class="reference internal" href="#id2627">3</a>]</span>, users (developers,deployers etc.) should give preference to “bias transforming” fairness metrics, when a fairness metric is used to make substantive decisions about people in contexts where significant disparity has been previously observed.</p>
-<p>The notions of fairness fall under individuals, groups and sub-groups. Individual fairness ensures that similar individuals should be treated similarly. It accounts for the distance measures to evaluate the similarity of individuals <span id="id5">[<a class="reference internal" href="#id2564">4</a>, <a class="reference internal" href="#id2565">5</a>]</span>. On the other hand,
-group fairness compares quantities at the group level primarily identified by protective features such as gender, ethnicity, etc. <span id="id6">[<a class="reference internal" href="#id2569">6</a>, <a class="reference internal" href="#id2570">7</a>]</span>. Sub-group fairness is more rigid than group fairness as this ensures fairness concerning one or more structured sub-groups defined by sensitive features, interpolates between individual and group fairness notions <span id="id7">[<a class="reference internal" href="intersectionality.html#id2700">3</a>]</span>.
-According to <span id="id8">[<a class="reference internal" href="#id2630">9</a>]</span>, it is impossible to satisfy all of the above notions, leading to conflicts between fairness definitions. Therefore, one suggestion could be to select appropriate fairness criteria and use those based on the application and deployment. Another concern has risen in <span id="id9">[<a class="reference internal" href="#id2571">10</a>]</span>, temporal aspects of fairness notions may harm the sensitive groups over time if not updated.</p>
+<p>The term fairness is defined as the quality or state of being fair; or a lack of favoritism towards one side. However, like <a class="reference internal" href="bias.html"><span class="doc">Bias</span></a>, fairness can mean different concepts to different peoples, different contexts, and different disciplines. The definition of fairness in various disciplines is detailed in <span id="id1">[<a class="reference internal" href="#id2564">1</a>]</span>. An unfair model produces results that are skewed towards particular individuals or groups. The primary sources of this unfairness are the presence of biases. There are two important categories of biases which play crucial role in fairness; (i) technical bias and (ii) social bias. Technical biases can be traced back to the sources, but social biases are very difficult to fix as these are a matter of politics, perspectives, and shifts in prejudices and preconceptions that can take years to change <span id="id2">[<a class="reference internal" href="#id2628">4</a>]</span>. Most of the state-of-the-art techniques tackle technical errors, but it cannot resolve the root causes of bias <span id="id3">[<a class="reference internal" href="#id2697">2</a>]</span>. Based on this observation, Sandra et al. <span id="id4">[<a class="reference internal" href="#id2628">4</a>]</span> proposed three responses concerning algorithmic bias and resulting social inequality. The first is not an active choice as it allows the system to get worse and do nothing to fix biases. Second, incorporate techniques to fix technical errors and maintain a status quo to ensure that the system do not make it worse. Much works in fairness focused on this option, called “bias preserving fairness”, maintains a status quo as a baseline, aligns with the formal equality of EU non-discrimination law. Finally, “bias transforming fairness”, the third response focuses on the substantive equality of EU non-discrimination which can only be achieved by accounting for historical (social) inequalities. As argued in <span id="id5">[<a class="reference internal" href="#id2628">4</a>]</span>, users (developers,deployers etc.) should give preference to “bias transforming” fairness metrics, when a fairness metric is used to make substantive decisions about people in contexts where significant disparity has been previously observed.</p>
+<p>The notions of fairness fall under individuals, groups and sub-groups. Individual fairness ensures that similar individuals should be treated similarly. It accounts for the distance measures to evaluate the similarity of individuals <span id="id6">[<a class="reference internal" href="#id2565">5</a>, <a class="reference internal" href="#id2566">6</a>]</span>. On the other hand,
+group fairness compares quantities at the group level primarily identified by protective features such as gender, ethnicity, etc. <span id="id7">[<a class="reference internal" href="#id2570">7</a>, <a class="reference internal" href="#id2571">8</a>]</span>. Sub-group fairness is more rigid than group fairness as this ensures fairness concerning one or more structured sub-groups defined by sensitive features, interpolates between individual and group fairness notions <span id="id8">[<a class="reference internal" href="#id2727">9</a>]</span>.
+According to <span id="id9">[<a class="reference internal" href="#id2631">10</a>]</span>, it is impossible to satisfy all of the above notions, leading to conflicts between fairness definitions. Therefore, one suggestion could be to select appropriate fairness criteria and use those based on the application and deployment. Another concern has risen in <span id="id10">[<a class="reference internal" href="#id2572">11</a>]</span>, temporal aspects of fairness notions may harm the sensitive groups over time if not updated.</p>
 <p><strong>Some widely used fairness metrics:</strong> In order to recall some widely used fairness metrics we need to introduce some notation.
 Let <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(A\)</span>, and <span class="math notranslate nohighlight">\(X\)</span> be three random variables representing, respectively, the total set of features, the sensitive features, and the remaining features describing an individual such that <span class="math notranslate nohighlight">\(V=(X,A)\)</span> and <span class="math notranslate nohighlight">\(P(V=v_i)\)</span> represents the probability of drawing an individual with a vector of values <span class="math notranslate nohighlight">\(v_i\)</span> from the population.
 For simplicity, we focus on the case where <span class="math notranslate nohighlight">\(A\)</span> is a binary random variable where <span class="math notranslate nohighlight">\(A=0\)</span> designates the protected group, while <span class="math notranslate nohighlight">\(A=1\)</span> designates the non-protected group. Let <span class="math notranslate nohighlight">\(Y\)</span> represent the actual outcome and <span class="math notranslate nohighlight">\(\hat{Y}\)</span> represent the outcome returned by the prediction algorithm. Without loss of generality, assume that <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(\hat{Y}\)</span> are binary random variables where <span class="math notranslate nohighlight">\(Y=1\)</span> designates a positive instance, while <span class="math notranslate nohighlight">\(Y=0\)</span> a negative one. Typically, the predicted outcome <span class="math notranslate nohighlight">\(\hat{Y}\)</span> is derived from a score represented by a random variable <span class="math notranslate nohighlight">\(S\)</span> where <span class="math notranslate nohighlight">\(P[S = s]\)</span> is the probability that the score value is equal to <span class="math notranslate nohighlight">\(s\)</span>.</p>
-<p><strong>Statistical parity</strong> <span id="id10">[<a class="reference internal" href="#id2623">11</a>]</span> is one of the most commonly accepted notions of fairness. It requires the prediction to be statistically independent of the sensitive feature <span class="math notranslate nohighlight">\((\hat{Y}  \perp A)\)</span>.
-In other words, the predicted acceptance rates for both protected and unprotected groups should be equal. Statistical parity implies that<br> <span class="math notranslate nohighlight">\(\displaystyle \frac{TP+FP}{TP+FP+FN+TN}\)</span> <a class="footnote-reference brackets" href="#statistical" id="id11">1</a> <br> is equal for both groups. A classifier Ŷ satisfies statistical parity if:<br>  <span class="math notranslate nohighlight">\(\label{eq:sp} P[\hat{Y} \mid A = 0] = P[\hat{Y} \mid A = 1].\)</span> <br>
+<p><strong>Statistical parity</strong> <span id="id11">[<a class="reference internal" href="#id2624">12</a>]</span> is one of the most commonly accepted notions of fairness. It requires the prediction to be statistically independent of the sensitive feature <span class="math notranslate nohighlight">\((\hat{Y}  \perp A)\)</span>.
+In other words, the predicted acceptance rates for both protected and unprotected groups should be equal. Statistical parity implies that<br> <span class="math notranslate nohighlight">\(\displaystyle \frac{TP+FP}{TP+FP+FN+TN}\)</span> <a class="footnote-reference brackets" href="#statistical" id="id12">1</a> <br> is equal for both groups. A classifier Ŷ satisfies statistical parity if:<br>  <span class="math notranslate nohighlight">\(\label{eq:sp} P[\hat{Y} \mid A = 0] = P[\hat{Y} \mid A = 1].\)</span> <br>
 <br></p>
-<p><strong>Conditional statistical parity</strong> <span id="id12">[<a class="reference internal" href="#id2625">12</a>]</span> is a
+<p><strong>Conditional statistical parity</strong> <span id="id13">[<a class="reference internal" href="#id2626">13</a>]</span> is a
 variant of statistical parity obtained by controlling on a set of
-resolving features<a class="footnote-reference brackets" href="#parity" id="id13">2</a>. The resolving features (we refer to them as <span class="math notranslate nohighlight">\(R\)</span>)
+resolving features<a class="footnote-reference brackets" href="#parity" id="id14">2</a>. The resolving features (we refer to them as <span class="math notranslate nohighlight">\(R\)</span>)
 among <span class="math notranslate nohighlight">\(X\)</span> are correlated with the sensitive feature <span class="math notranslate nohighlight">\(A\)</span> and give some
 factual information about the label at the same time leading to a
 <em>legitimate</em> discrimination. Conditional statistical parity holds if: <br>
 <span class="math notranslate nohighlight">\(\label{eq:csp}
 P[\hat{Y}=1 \mid R=r,A = 0] = P[\hat{Y}=1 \mid R=r,A = 1] \quad \forall r \in range(R).\)</span>
 <br></p>
-<p><strong>Equalized odds</strong> <span id="id14">[<a class="reference internal" href="#id2626">13</a>]</span> considers both the predicted and
+<p><strong>Equalized odds</strong> <span id="id15">[<a class="reference internal" href="#id2627">14</a>]</span> considers both the predicted and
 the actual outcomes. The prediction is conditionally independent from
 the protected feature, given the actual outcome
 <span class="math notranslate nohighlight">\((\hat{Y} \perp A \mid Y)\)</span>. In other words, equalized odds requires that
@@ -1365,7 +1365,7 @@ both sub-populations to have the same true positive rate
 P[\hat{Y} = 1 \mid Y=y,\; A=0] = P[\hat{Y}=1 \mid Y= y,\; A=1]  \quad \forall{ y \in \{0,1\}}.\)</span></p>
 <p>Because equalized odds requirement is rarely satisfied in practice, two
 variants can be obtained by relaxing its equation. The first one is
-called <strong>equal opportunity</strong> <span id="id15">[<a class="reference internal" href="#id2626">13</a>]</span> and is obtained by
+called <strong>equal opportunity</strong> <span id="id16">[<a class="reference internal" href="#id2627">14</a>]</span> and is obtained by
 requiring only TPR equality among groups: <br>
 <span class="math notranslate nohighlight">\(\label{eq:eqOpp}
 P[\hat{Y}=1 \mid Y=1,A = 0] = P[\hat{Y}=1\mid Y=1,A = 1].\)</span> <br>
@@ -1373,14 +1373,14 @@ As <span class="math notranslate nohighlight">\(TPR\)</span>
 does not take into consideration <span class="math notranslate nohighlight">\(FP\)</span>, equal opportunity is completely
 insensitive to the number of false positives.</p>
 <p>The second relaxed variant of equalized odds is called <strong>predictive
-equality</strong> <span id="id16">[<a class="reference internal" href="#id2625">12</a>]</span> which requires only the FPR to be
+equality</strong> <span id="id17">[<a class="reference internal" href="#id2626">13</a>]</span> which requires only the FPR to be
 equal in both groups: <br>
 <span class="math notranslate nohighlight">\(\label{eq:predEq}
 P[\hat{Y}=1 \mid Y=0,A = 0] = P[\hat{Y}=1\mid Y=0,A = 1].\)</span> <br>
 Since <span class="math notranslate nohighlight">\(FPR\)</span> is independent from <span class="math notranslate nohighlight">\(FN\)</span>, predictive equality is completely
 insensitive to false negatives.
 <br></p>
-<p><strong>Conditional use accuracy equality</strong> <span id="id17">[<a class="reference internal" href="#id2628">14</a>]</span> is achieved
+<p><strong>Conditional use accuracy equality</strong> <span id="id18">[<a class="reference internal" href="#id2629">15</a>]</span> is achieved
 when all population groups have equal positive predictive value
 <span class="math notranslate nohighlight">\(PPV=\frac{TP}{TP+FP}\)</span> and negative predictive value
 <span class="math notranslate nohighlight">\(NPV=\frac{TN}{FN+TN}\)</span>. In other words, the probability of subjects with
@@ -1393,14 +1393,14 @@ rather than its recall: <br>
 <span class="math notranslate nohighlight">\(\label{eq:condUseAcc}
 P[Y=y\mid \hat{Y}=y ,A = 0] = P[Y=y\mid \hat{Y}=y,A = 1] \quad \forall{ y \in \{0,1\}}.\)</span>
 <br></p>
-<p><strong>Predictive parity</strong> <span id="id18">[<a class="reference internal" href="#id2629">15</a>]</span> is a relaxation of
+<p><strong>Predictive parity</strong> <span id="id19">[<a class="reference internal" href="#id2630">16</a>]</span> is a relaxation of
 conditional use accuracy equality requiring only equal <span class="math notranslate nohighlight">\(PPV\)</span> among
 groups: $<span class="math notranslate nohighlight">\(\label{eq:predPar}
 P[Y=1 \mid \hat{Y} =1,A = 0] = P[Y=1\mid \hat{Y} =1,A = 1]\)</span>$ Like
 predictive equality, predictive parity is insensitive to false
 negatives.
 <br></p>
-<p><strong>Overall accuracy equality</strong> <span id="id19">[<a class="reference internal" href="#id2628">14</a>]</span> is achieved when
+<p><strong>Overall accuracy equality</strong> <span id="id20">[<a class="reference internal" href="#id2629">15</a>]</span> is achieved when
 overall accuracy for both groups is the same. This implies that</p>
 <div class="math notranslate nohighlight">
 \[\label{eq:accuracy}
@@ -1410,18 +1410,18 @@ overall accuracy for both groups is the same. This implies that</p>
 \[\label{eq:ovAcc}
 P[\hat{Y} = Y | A = 0] = P[\hat{Y} = Y | A = 1]\]</div>
 <br>
-<p><strong>Treatment equality</strong> <span id="id20">[<a class="reference internal" href="#id2628">14</a>]</span> is achieved when the ratio of
+<p><strong>Treatment equality</strong> <span id="id21">[<a class="reference internal" href="#id2629">15</a>]</span> is achieved when the ratio of
 FPs and FNs is the same for both protected and unprotected groups: <br>
 <span class="math notranslate nohighlight">\(\label{eq:treatEq}
 \frac{FN}{FP}\)</span><sub>A=0</sub> <span class="math notranslate nohighlight">\(= \frac {FN}{FP}\)</span><sub>A=1</sub>
 <br></p>
-<p><strong>Total fairness</strong> <span id="id21">[<a class="reference internal" href="#id2628">14</a>]</span> holds when all aforementioned
+<p><strong>Total fairness</strong> <span id="id22">[<a class="reference internal" href="#id2629">15</a>]</span> holds when all aforementioned
 fairness notions are satisfied simultaneously, that is, statistical
 parity, equalized odds, conditional use accuracy equality (hence,
 overall accuracy equality), and treatment equality. Total fairness is a
 very strong notion which is very difficult to hold in practice.
 <br></p>
-<p><strong>Balance</strong> <span id="id22">[<a class="reference internal" href="#id2630">9</a>]</span> uses the score (<span class="math notranslate nohighlight">\(S\)</span>) from which the outcome
+<p><strong>Balance</strong> <span id="id23">[<a class="reference internal" href="#id2631">10</a>]</span> uses the score (<span class="math notranslate nohighlight">\(S\)</span>) from which the outcome
 <span class="math notranslate nohighlight">\(Y\)</span> is typically derived through thresholding. <br>
 <em>Balance for positive
 class</em> focuses on the applicants who constitute positive instances and
@@ -1434,13 +1434,13 @@ class</em> focuses instead on the negative class: <br>
 <span class="math notranslate nohighlight">\(\label{eq:balNegclass}
 E[S \mid Y =0,A = 0] = E[S \mid Y =0,A = 1].\)</span>
 <br></p>
-<p><strong>Calibration</strong> <span id="id23">[<a class="reference internal" href="#id2629">15</a>]</span> holds if, for each predicted
+<p><strong>Calibration</strong> <span id="id24">[<a class="reference internal" href="#id2630">16</a>]</span> holds if, for each predicted
 probability score <span class="math notranslate nohighlight">\(S=s\)</span>, individuals in all groups have the same
 probability to actually belong to the positive class: <br>
 <span class="math notranslate nohighlight">\(\label{eq:calib}
 P[Y =1 \mid S =s,A = 0] = P[Y =1 \mid S =s,A = 1] \quad \forall s \in [0,1].\)</span>
 <br></p>
-<p><strong>Well-calibration</strong> <span id="id24">[<a class="reference internal" href="#id2630">9</a>]</span> is a stronger variant of
+<p><strong>Well-calibration</strong> <span id="id25">[<a class="reference internal" href="#id2631">10</a>]</span> is a stronger variant of
 calibration. It requires that (1) calibration is satisfied, (2) the
 score is interpreted as the probability to truly belong to the positive
 class, and (3) for each score <span class="math notranslate nohighlight">\(S=s\)</span>, the probability to truly belong to
@@ -1448,7 +1448,7 @@ the positive class is equal to that particular score: <br>
 <span class="math notranslate nohighlight">\(\label{eq:wellCalib}
 P[Y =1 \mid S =s,A = 0] = P[Y =1 \mid S =s,A = 1] = s  \quad  \forall \; {s \in [0,1]}.\)</span>
 <br></p>
-<p><strong>Fairness through awareness</strong> <span id="id25">[<a class="reference internal" href="#id2623">11</a>]</span> implies that similar
+<p><strong>Fairness through awareness</strong> <span id="id26">[<a class="reference internal" href="#id2624">12</a>]</span> implies that similar
 individuals should have similar predictions. Let <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> be two
 individuals represented by their attributes values vectors <span class="math notranslate nohighlight">\(v_i\)</span> and
 <span class="math notranslate nohighlight">\(v_j\)</span>. Let <span class="math notranslate nohighlight">\(d(v_i,v_j)\)</span> represent the similarity distance between
@@ -1462,13 +1462,13 @@ for any pair of individuals <span class="math notranslate nohighlight">\(i\)</sp
 <span class="math notranslate nohighlight">\(d_M(M(v_i), M(v_j))  \leq d(v_i, v_j)\)</span> <br>
 In practice, fairness through
 awareness assumes that the similarity metric is known for each pair of
-individuals <span id="id26">[<a class="reference internal" href="#id2631">16</a>]</span>. That is, a challenging aspect of this
+individuals <span id="id27">[<a class="reference internal" href="#id2632">17</a>]</span>. That is, a challenging aspect of this
 approach is the difficulty to determine what is an appropriate metric
 function to measure the similarity between two individuals. Typically,
 this requires careful human intervention from professionals with domain
-expertise <span id="id27">[<a class="reference internal" href="#id2666">17</a>]</span>.
+expertise <span id="id28">[<a class="reference internal" href="#id2667">18</a>]</span>.
 <br></p>
-<p><strong>Process fairness</strong>  <span id="id28">[<a class="reference internal" href="#id2664">18</a>]</span> (or procedural fairness) can
+<p><strong>Process fairness</strong>  <span id="id29">[<a class="reference internal" href="#id2665">19</a>]</span> (or procedural fairness) can
 be described as a set of subjective fairness notions that are centered
 on the process that leads to outcomes. These notions are not focused on
 the fairness of the outcomes, instead they quantify the fraction of
@@ -1480,7 +1480,7 @@ sensitive (protected or salient) features before training classifiers.
 This simple approach connects process fairness to <em>fairness through
 unawareness</em>. However, there is a trade-off to manage since dropping out
 sensitive features may impact negatively classification
-performance <span id="id29">[<a class="reference internal" href="#id2665">19</a>]</span>.
+performance <span id="id30">[<a class="reference internal" href="#id2666">20</a>]</span>.
 <br></p>
 <p><strong>Nonstatistical fairness metrics:</strong> Recently, further metrics have been
 proposed and that differ from the previous in that they do not fully
@@ -1489,13 +1489,13 @@ knowledge, that is not directly observable from data, require expert
 input, or reason about hypothetical situations. As they fall out of the
 scope of this chapter, we will not further dwell into these and simply
 mention a few to the interested reader: <em>total effect</em>
-<span id="id30">[<a class="reference internal" href="#id2667">20</a>]</span> (that is the “causal” version of statistical
+<span id="id31">[<a class="reference internal" href="#id2668">21</a>]</span> (that is the “causal” version of statistical
 parity and measures the effect of changing the value of an attribute,
 taking into account a given causal graph), <em>effect of treatment of the
-treated</em> <span id="id31">[<a class="reference internal" href="#id2667">20</a>]</span> (that relies on counterfactuals with
+treated</em> <span id="id32">[<a class="reference internal" href="#id2668">21</a>]</span> (that relies on counterfactuals with
 respect to sensitive features and measures the difference between the
 probabilities of instances and their counterfactuals), and
-<em>counterfactual fairness</em> <span id="id32">[<a class="reference internal" href="#id2666">17</a>]</span> (which is a
+<em>counterfactual fairness</em> <span id="id33">[<a class="reference internal" href="#id2667">18</a>]</span> (which is a
 fine-grained variant of the previous but with respect to the set all
 features).
 <br></p>
@@ -1504,25 +1504,25 @@ not possible to be fair according to all of these definitions, it is a
 challenge to choose the relevant metric to focus on. While still very
 much an open research area, some suggestions on how one can deal with
 conflicts between fairness metrics can be found in
-<span id="id33">[<a class="reference internal" href="#id2547">2</a>, <a class="reference internal" href="#id2548">21</a>]</span>. Indeed, fairness metrics
+<span id="id34">[<a class="reference internal" href="#id2548">3</a>, <a class="reference internal" href="#id2549">22</a>]</span>. Indeed, fairness metrics
 frequently conflict with other metrics such as accuracy and privacy.
-<span id="id34">[<a class="reference internal" href="#id2549">22</a>]</span> show that in a credit scoring case enforcing
+<span id="id35">[<a class="reference internal" href="#id2550">23</a>]</span> show that in a credit scoring case enforcing
 fairness metrics can lead to significant drops in accuracy and, thus,
 maximum profit. This is unavoidable: improvements on fairness often
 result in lower accuracy, and research on the Pareto frontier for this
-trade-off is now emerging <span id="id35">[<a class="reference internal" href="#id2551">23</a>, <a class="reference internal" href="#id2550">24</a>]</span>.
+trade-off is now emerging <span id="id36">[<a class="reference internal" href="#id2552">24</a>, <a class="reference internal" href="#id2551">25</a>]</span>.
 Similarly, there is a trade-off between fairness and privacy, as
 fairness metrics typically require sensitive information in order to be
 used. As a result, fairness affects privacy (and vice versa), for
-example in facial recognition <span id="id36">[<a class="reference internal" href="#id2552">25</a>]</span> and medical applications
-<span id="id37">[<a class="reference internal" href="#id2553">26</a>]</span>.</p>
+example in facial recognition <span id="id37">[<a class="reference internal" href="#id2553">26</a>]</span> and medical applications
+<span id="id38">[<a class="reference internal" href="#id2554">27</a>]</span>.</p>
 <p>Finally, there is a connection between <a class="reference internal" href="Diversity_Non-Discrimination_and_Fairness.html"><span class="doc std std-doc">fairness</span></a> and <a class="reference internal" href="justice.html"><span class="doc">Justice</span></a>, seen in
-for example Rawls’ work on Justice as Fairness <span id="id38">[<a class="reference internal" href="#id2546">27</a>]</span>. And
+for example Rawls’ work on Justice as Fairness <span id="id39">[<a class="reference internal" href="#id2547">28</a>]</span>. And
 indeed, a range of theories of (distributive) justice describe how
 benefits and burdens should be distributed (cf. the entry on <a class="reference internal" href="justice.html"><span class="doc">Justice</span></a>). As such,
 they can be seen as guiding the outcomes of algorithms even if they
 describe what these distributions should be in society as a whole. Yet,
-as <span id="id39">[<a class="reference internal" href="justice.html#id2541">3</a>]</span> argue at length, there is little overlap
+as <span id="id40">[<a class="reference internal" href="#id2542">29</a>]</span> argue at length, there is little overlap
 between theories of distributive justice and fairness metrics.
 Non-comparative notions of justice are not captured by fairness metrics,
 nor are notions such as Rawls’ difference principle, on which the right
@@ -1532,92 +1532,95 @@ level of benefits. Fairness metrics have focused more on
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="id40"><dl class="citation">
-<dt class="label" id="id2563"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<p id="id41"><dl class="citation">
+<dt class="label" id="id2564"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Deirdre K Mulligan, Joshua A Kroll, Nitin Kohli, and Richmond Y Wong. This thing called fairness: disciplinary confusion realizing a value in technology. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 3(CSCW):1–36, 2019.</p>
 </dd>
-<dt class="label" id="id2547"><span class="brackets"><a class="fn-backref" href="#id33">2</a></span></dt>
+<dt class="label" id="id2697"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Jose M. Alvarez, Alejandra Bringas Colmenarejo, Alaa Elobaid, Simone Fabbrizzi, Miriam Fahimi, Antonio Ferrara, Siamak Ghodsi, Carlos Mougan, Ioanna Papageorgiou, Paula Reyero, Mayra Russo, Kristen M. Scott, Laura State, Xuan Zhao, and Salvatore Ruggieri. Policy advice and best practices on bias and fairness in AI. <em>Ethics Inf. Technol.</em>, 26(2):31, 2024.</p>
+</dd>
+<dt class="label" id="id2548"><span class="brackets"><a class="fn-backref" href="#id34">3</a></span></dt>
 <dd><p>Michele Loi and Markus Christen. Choosing how to discriminate: navigating ethical trade-offs in fair algorithmic design for the insurance sector. <em>Philosophy &amp; Technology</em>, 34(4):967–992, 2021.</p>
 </dd>
-<dt class="label" id="id2627"><span class="brackets">3</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>)</span></dt>
+<dt class="label" id="id2628"><span class="brackets">4</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>,<a href="#id5">3</a>)</span></dt>
 <dd><p>Sandra Wachter, Brent Mittelstadt, and Chris Russell. Bias preservation in machine learning: the legality of fairness metrics under eu non-discrimination law. <em>W. Va. L. Rev.</em>, 123:735, 2020.</p>
 </dd>
-<dt class="label" id="id2564"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dt class="label" id="id2565"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
 <dd><p>Philips George John, Deepak Vijaykeerthy, and Diptikalyan Saha. Verifying individual fairness in machine learning models. In <em>UAI</em>, volume 124 of Proceedings of Machine Learning Research, 749–758. AUAI Press, 2020.</p>
 </dd>
-<dt class="label" id="id2565"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id2566"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p>Asia J. Biega, Krishna P. Gummadi, and Gerhard Weikum. Equity of attention: amortizing individual fairness in rankings. In <em>SIGIR</em>, 405–414. ACM, 2018.</p>
 </dd>
-<dt class="label" id="id2569"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dt class="label" id="id2570"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
 <dd><p>Yu Cheng, Zhihao Jiang, Kamesh Munagala, and Kangning Wang. Group fairness in committee selection. <em>ACM Transactions on Economics and Computation (TEAC)</em>, 8(4):1–18, 2020.</p>
 </dd>
-<dt class="label" id="id2570"><span class="brackets"><a class="fn-backref" href="#id6">7</a></span></dt>
+<dt class="label" id="id2571"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
 <dd><p>Vincent Conitzer, Rupert Freeman, Nisarg Shah, and Jennifer Wortman Vaughan. Group fairness for the allocation of indivisible goods. In <em>AAAI</em>, 1853–1860. AAAI Press, 2019.</p>
 </dd>
-<dt class="label" id="id2726"><span class="brackets"><a class="fn-backref" href="#id7">8</a></span></dt>
+<dt class="label" id="id2727"><span class="brackets"><a class="fn-backref" href="#id8">9</a></span></dt>
 <dd><p>Michael J. Kearns, Seth Neel, Aaron Roth, and Zhiwei Steven Wu. Preventing fairness gerrymandering: auditing and learning for subgroup fairness. In <em>ICML</em>, volume 80 of Proceedings of Machine Learning Research, 2569–2577. PMLR, 2018.</p>
 </dd>
-<dt class="label" id="id2630"><span class="brackets">9</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id22">2</a>,<a href="#id24">3</a>)</span></dt>
+<dt class="label" id="id2631"><span class="brackets">10</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id23">2</a>,<a href="#id25">3</a>)</span></dt>
 <dd><p>Jon M. Kleinberg, Sendhil Mullainathan, and Manish Raghavan. Inherent trade-offs in the fair determination of risk scores. In <em>ITCS</em>, volume 67 of LIPIcs, 43:1–43:23. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2017.</p>
 </dd>
-<dt class="label" id="id2571"><span class="brackets"><a class="fn-backref" href="#id9">10</a></span></dt>
+<dt class="label" id="id2572"><span class="brackets"><a class="fn-backref" href="#id10">11</a></span></dt>
 <dd><p>Lydia T. Liu, Sarah Dean, Esther Rolf, Max Simchowitz, and Moritz Hardt. Delayed impact of fair machine learning. In <em>IJCAI</em>, 6196–6200. ijcai.org, 2019.</p>
 </dd>
-<dt class="label" id="id2623"><span class="brackets">11</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id25">2</a>)</span></dt>
+<dt class="label" id="id2624"><span class="brackets">12</span><span class="fn-backref">(<a href="#id11">1</a>,<a href="#id26">2</a>)</span></dt>
 <dd><p>Cynthia Dwork, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Richard Zemel. Fairness through awareness. In <em>Proceedings of the 3rd innovations in theoretical computer science conference</em>, 214–226. 2012.</p>
 </dd>
-<dt class="label" id="id2625"><span class="brackets">12</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id16">2</a>)</span></dt>
+<dt class="label" id="id2626"><span class="brackets">13</span><span class="fn-backref">(<a href="#id13">1</a>,<a href="#id17">2</a>)</span></dt>
 <dd><p>Sam Corbett-Davies, Emma Pierson, Avi Feller, Sharad Goel, and Aziz Huq. Algorithmic decision making and the cost of fairness. In <em>KDD</em>, 797–806. ACM, 2017.</p>
 </dd>
-<dt class="label" id="id2626"><span class="brackets">13</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id15">2</a>)</span></dt>
+<dt class="label" id="id2627"><span class="brackets">14</span><span class="fn-backref">(<a href="#id15">1</a>,<a href="#id16">2</a>)</span></dt>
 <dd><p>Moritz Hardt, Eric Price, and Nati Srebro. Equality of opportunity in supervised learning. In <em>NIPS</em>, 3315–3323. 2016.</p>
 </dd>
-<dt class="label" id="id2628"><span class="brackets">14</span><span class="fn-backref">(<a href="#id17">1</a>,<a href="#id19">2</a>,<a href="#id20">3</a>,<a href="#id21">4</a>)</span></dt>
+<dt class="label" id="id2629"><span class="brackets">15</span><span class="fn-backref">(<a href="#id18">1</a>,<a href="#id20">2</a>,<a href="#id21">3</a>,<a href="#id22">4</a>)</span></dt>
 <dd><p>Richard Berk, Hoda Heidari, Shahin Jabbari, Michael Kearns, and Aaron Roth. Fairness in criminal justice risk assessments: the state of the art. <em>Sociological Methods &amp; Research</em>, 50:3–44, 2018.</p>
 </dd>
-<dt class="label" id="id2629"><span class="brackets">15</span><span class="fn-backref">(<a href="#id18">1</a>,<a href="#id23">2</a>)</span></dt>
+<dt class="label" id="id2630"><span class="brackets">16</span><span class="fn-backref">(<a href="#id19">1</a>,<a href="#id24">2</a>)</span></dt>
 <dd><p>Alexandra Chouldechova. Fair prediction with disparate impact: a study of bias in recidivism prediction instruments. <em>Big data</em>, 5(2):153–163, 2017.</p>
 </dd>
-<dt class="label" id="id2631"><span class="brackets"><a class="fn-backref" href="#id26">16</a></span></dt>
+<dt class="label" id="id2632"><span class="brackets"><a class="fn-backref" href="#id27">17</a></span></dt>
 <dd><p>Michael P. Kim, Omer Reingold, and Guy N. Rothblum. Fairness through computationally-bounded awareness. In <em>NeurIPS</em>, 4847–4857. 2018.</p>
 </dd>
-<dt class="label" id="id2666"><span class="brackets">17</span><span class="fn-backref">(<a href="#id27">1</a>,<a href="#id32">2</a>)</span></dt>
+<dt class="label" id="id2667"><span class="brackets">18</span><span class="fn-backref">(<a href="#id28">1</a>,<a href="#id33">2</a>)</span></dt>
 <dd><p>Matt J. Kusner, Joshua R. Loftus, Chris Russell, and Ricardo Silva. Counterfactual fairness. In <em>NIPS</em>, 4066–4076. 2017.</p>
 </dd>
-<dt class="label" id="id2664"><span class="brackets"><a class="fn-backref" href="#id28">18</a></span></dt>
+<dt class="label" id="id2665"><span class="brackets"><a class="fn-backref" href="#id29">19</a></span></dt>
 <dd><p>Nina Grgic-Hlaca, Muhammad Bilal Zafar, Krishna P. Gummadi, and Adrian Weller. Beyond distributive fairness in algorithmic decision making: feature selection for procedurally fair learning. In <em>AAAI</em>, 51–60. AAAI Press, 2018.</p>
 </dd>
-<dt class="label" id="id2665"><span class="brackets"><a class="fn-backref" href="#id29">19</a></span></dt>
+<dt class="label" id="id2666"><span class="brackets"><a class="fn-backref" href="#id30">20</a></span></dt>
 <dd><p>Muhammad Bilal Zafar, Isabel Valera, Manuel Gomez-Rodriguez, and Krishna P. Gummadi. Fairness beyond disparate treatment &amp; disparate impact: learning classification without disparate mistreatment. In <em>WWW</em>, 1171–1180. ACM, 2017.</p>
 </dd>
-<dt class="label" id="id2667"><span class="brackets">20</span><span class="fn-backref">(<a href="#id30">1</a>,<a href="#id31">2</a>)</span></dt>
+<dt class="label" id="id2668"><span class="brackets">21</span><span class="fn-backref">(<a href="#id31">1</a>,<a href="#id32">2</a>)</span></dt>
 <dd><p>Judea Pearl. <em>Causality</em>. Cambridge university press, 2009.</p>
 </dd>
-<dt class="label" id="id2548"><span class="brackets"><a class="fn-backref" href="#id33">21</a></span></dt>
+<dt class="label" id="id2549"><span class="brackets"><a class="fn-backref" href="#id34">22</a></span></dt>
 <dd><p>Michelle Seng Ah Lee, Luciano Floridi, and Jatinder Singh. Formalising trade-offs beyond algorithmic fairness: lessons from ethical philosophy and welfare economics. <em>AI Ethics</em>, 1(4):529–544, 2021.</p>
 </dd>
-<dt class="label" id="id2549"><span class="brackets"><a class="fn-backref" href="#id34">22</a></span></dt>
+<dt class="label" id="id2550"><span class="brackets"><a class="fn-backref" href="#id35">23</a></span></dt>
 <dd><p>Nikita Kozodoi, Johannes Jacob, and Stefan Lessmann. Fairness in credit scoring: assessment, implementation and profit implications. <em>European Journal of Operational Research</em>, 297(3):1083–1094, 2022.</p>
 </dd>
-<dt class="label" id="id2551"><span class="brackets"><a class="fn-backref" href="#id35">23</a></span></dt>
+<dt class="label" id="id2552"><span class="brackets"><a class="fn-backref" href="#id36">24</a></span></dt>
 <dd><p>Susan Wei and Marc Niethammer. The fairness-accuracy pareto front. <em>Statistical Analysis and Data Mining: The ASA Data Science Journal</em>, 2020.</p>
 </dd>
-<dt class="label" id="id2550"><span class="brackets"><a class="fn-backref" href="#id35">24</a></span></dt>
+<dt class="label" id="id2551"><span class="brackets"><a class="fn-backref" href="#id36">25</a></span></dt>
 <dd><p>Annie Liang, Jay Lu, and Xiaosheng Mu. Algorithmic design: fairness versus accuracy. <em>arXiv preprint arXiv:2112.09975</em>, 2021. URL: <a class="reference external" href="https://arxiv.org/abs/2112.09975">https://arxiv.org/abs/2112.09975</a>.</p>
 </dd>
-<dt class="label" id="id2552"><span class="brackets"><a class="fn-backref" href="#id36">25</a></span></dt>
+<dt class="label" id="id2553"><span class="brackets"><a class="fn-backref" href="#id37">26</a></span></dt>
 <dd><p>Alice Xiang. Being'seen'vs.'mis-seen': tensions between privacy and fairness in computer vision. <em>Harvard Journal of Law &amp; Technology, Forthcoming</em>, 2022.</p>
 </dd>
-<dt class="label" id="id2553"><span class="brackets"><a class="fn-backref" href="#id37">26</a></span></dt>
+<dt class="label" id="id2554"><span class="brackets"><a class="fn-backref" href="#id38">27</a></span></dt>
 <dd><p>Andrew Chester, Yun Sing Koh, Jörg Wicker, Quan Sun, and Junjae Lee. Balancing utility and fairness against privacy in medical data. In <em>2020 IEEE Symposium Series on Computational Intelligence (SSCI)</em>, 1226–1233. IEEE, 2020.</p>
 </dd>
-<dt class="label" id="id2546"><span class="brackets"><a class="fn-backref" href="#id38">27</a></span></dt>
+<dt class="label" id="id2547"><span class="brackets"><a class="fn-backref" href="#id39">28</a></span></dt>
 <dd><p>John Rawls. <em>Justice as fairness: A restatement</em>. Harvard University Press, 2001.</p>
 </dd>
-<dt class="label" id="id2541"><span class="brackets"><a class="fn-backref" href="#id39">28</a></span></dt>
+<dt class="label" id="id2542"><span class="brackets"><a class="fn-backref" href="#id40">29</a></span></dt>
 <dd><p>Matthias Kuppler, Christoph Kern, Ruben L Bach, and Frauke Kreuter. Distributive justice and fairness metrics in automated decision-making: how much overlap is there? <em>arXiv preprint arXiv:2105.01441</em>, 2021. URL: <a class="reference external" href="https://arxiv.org/abs/2105.01441">https://arxiv.org/abs/2105.01441</a>.</p>
 </dd>
-<dt class="label" id="id2568"><span class="brackets"><a class="fn-backref" href="#id2950">29</a></span></dt>
+<dt class="label" id="id2569"><span class="brackets"><a class="fn-backref" href="#id2951">30</a></span></dt>
 <dd><p>Faisal Kamiran, Indre Zliobaite, and Toon Calders. Quantifying explainable discrimination and removing illegal discrimination in automated decision making. <em>Knowl. Inf. Syst.</em>, 35(3):613–644, 2013.</p>
 </dd>
 </dl>
@@ -1627,11 +1630,11 @@ level of benefits. Fairness metrics have focused more on
 </div></blockquote>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="statistical"><span class="brackets"><a class="fn-backref" href="#id11">1</a></span></dt>
+<dt class="label" id="statistical"><span class="brackets"><a class="fn-backref" href="#id12">1</a></span></dt>
 <dd><p><span class="math notranslate nohighlight">\(TP,FP,FN,\)</span> and <span class="math notranslate nohighlight">\(TN\)</span> stand for: true positives, false positives, false negatives, and true negatives, respectively.</p>
 </dd>
-<dt class="label" id="parity"><span class="brackets"><a class="fn-backref" href="#id13">2</a></span></dt>
-<dd><p>Called explanatory features in <span id="id2950">[<a class="reference internal" href="#id2568">29</a>]</span>.</p>
+<dt class="label" id="parity"><span class="brackets"><a class="fn-backref" href="#id14">2</a></span></dt>
+<dd><p>Called explanatory features in <span id="id2951">[<a class="reference internal" href="#id2569">30</a>]</span>.</p>
 </dd>
 </dl>
 </div>
