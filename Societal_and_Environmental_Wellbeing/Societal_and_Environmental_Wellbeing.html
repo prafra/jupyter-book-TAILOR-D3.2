@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Societal and Environmental Wellbeing &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +103,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TAILOR.html">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../main/Ethical_Legal_Framework/Ethical_Legal_Framework.html">
    The Ethical and Legal Framework
@@ -1218,86 +1234,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FSocietal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FSocietal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Societal_and_Environmental_Wellbeing/Societal_and_Environmental_Wellbeing.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
    In Brief
@@ -1340,48 +1446,106 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Societal and Environmental Wellbeing</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taxonomic-organisation-of-terms">
+   Taxonomic Organisation of Terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-keywords">
+   Main Keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-recommended-reading">
+   Further Recommended Reading
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="societal-and-environmental-wellbeing">
-<h1>Societal and Environmental Wellbeing<a class="headerlink" href="#societal-and-environmental-wellbeing" title="Permalink to this headline">¶</a></h1>
+<h1>Societal and Environmental Wellbeing<a class="headerlink" href="#societal-and-environmental-wellbeing" title="Permalink to this headline">#</a></h1>
 <!-- Sustainability-->
 <div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>Sustainability is an ethical aspect studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a>.
 Sustainability in AI refers to the application of AI technology (from the power consumption of the hardware to the processing and storage of a very large dataset) while considering problems related to sustainable development.
-The sustainability in AI can be divided into two branches that should be addressed: AI for Sustainability and Sustainability of AI <span id="id1">[<a class="reference internal" href="#id2823">1</a>]</span>. The first branch is the most developed branch whose aim is to achieve the United Nations Sustainable Development Goals (SDGs) and where not-for-profit organisation such as <a href="https://ai4good.org/" target=_blank>AI4Good</a> or <a href="https://www.forclimate.ai/" target=_blank>AI for Climate</a> are active to address the scope. In this branch we consider AI applications whose objective is to use the algorithm for environmental purposes such as reducing the energy cost of large data centres or better predicting the weather forecast to maximise renewable energy production. The second branch regards the sustainable development of AI/ML itself, concerning how to measure the sustainability of developing and utilising AI models such as the computational cost of training AI algorithms or the amount of CO2 emission.</p>
+The sustainability in AI can be divided into two branches that should be addressed: AI for Sustainability and Sustainability of AI <span id="id1">[<a class="reference internal" href="#id477">1</a>]</span>. The first branch is the most developed branch whose aim is to achieve the United Nations Sustainable Development Goals (SDGs) and where not-for-profit organisation such as <a href="https://ai4good.org/" target=_blank>AI4Good</a> or <a href="https://www.forclimate.ai/" target=_blank>AI for Climate</a> are active to address the scope. In this branch we consider AI applications whose objective is to use the algorithm for environmental purposes such as reducing the energy cost of large data centres or better predicting the weather forecast to maximise renewable energy production. The second branch regards the sustainable development of AI/ML itself, concerning how to measure the sustainability of developing and utilising AI models such as the computational cost of training AI algorithms or the amount of CO2 emission.</p>
 </div>
 <div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
 <p>In this part we will cover the main elements that define sustainability in AI systems. Some of them are related to the aspects of AI for sustainability and can be common to computer systems in general, others are related to the sustainability of AI. We will focus on sustainability in AI with more attention to new AI-specific issues and challenges because they are less covered in the literature. We include a taxonomic organisation of terms in the area of AI sustainability and their definition.</p>
 </div>
 <div class="section" id="motivation-and-background">
-<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">#</a></h2>
 <p>Given the increasing capabilities and widespread use of artificial intelligence, there is a growing concern about its impact on the environment related to the carbon footprints and the power consumption needed for training, store and developing AI models and algorithms. There is a wide literature regarding the dangers of climate change and the need of modifying the habits of use of the technology by consumers and industries. Plans such as the European Green Deal promulgated by the European Commission has the aim to tackle climate change. AI has the potential to accelerate the efforts of protecting the planet with many applications such as the use of machine learning to optimise the energy consumption efficiency, reducing the CO2 emission, monitoring quality of the air, the water, the biodiversity changes, the vegetation, the forest cover, and preventing natural disasters.</p>
 </div>
 <div class="section" id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">#</a></h2>
 <p>The guidelines include common elements that should be considered in the design and build of a piece of technology while using ML and other emerging technologies.
 In 2015 the United Nations General Assembly set up the Sustainable Development Goals, a list of 17 interlinked global goals that are intended to be achieved by the year 2030. Not-for-profit organisations such as AI4Good also described a list of guidelines like “Guidelines on the Implementation of Eco-friendly Criteria for AI and other Emerging Technologies” and “Guidelines on the environmental efficiency of machine learning processes in supply chain management” (both guidelines can be found <a href="https://www.itu.int/en/ITU-T/focusgroups/ai4ee/Pages/WG3deliverables.aspx" target=_blank>here</a>) with the scope of addressing very important aspects on the use of AI and its development.</p>
 </div>
 <div class="section" id="taxonomic-organisation-of-terms">
-<h2>Taxonomic Organisation of Terms<a class="headerlink" href="#taxonomic-organisation-of-terms" title="Permalink to this headline">¶</a></h2>
+<h2>Taxonomic Organisation of Terms<a class="headerlink" href="#taxonomic-organisation-of-terms" title="Permalink to this headline">#</a></h2>
 <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure that by 2030 all people enjoy peace and prosperity. They were adopted by the United Nations in 2015 as. They are divided into 17 goals -they recognize that action in one area will affect outcomes in others and that development must balance social, economic and environmental sustainability (see <a href="https://www.undp.org/sustainable-development-goals#:~:text=The%20Sustainable%20Development%20Goals%20(SDGs)%2C%20also%20known%20as%20the,people%20enjoy%20peace%20and%20prosperity" target=_blank>here</a> for further details).</p>
 <p>AI is involved in many of these 17 Global Goals, including <a href="https://www.undp.org/sustainable-development-goals#sustainable-cities-and-communities" target=_blank>Sustainable cities and communities</a> and <a href="https://www.undp.org/sustainable-development-goals#responsible-consumption-and-production" target=_blank>Responsible consumption and production</a> with areas like production optimization, smart cities and green computing.</p>
 <div class="figure align-center" id="t3-6taxonomy36">
 <a class="reference internal image-reference" href="../_images/UN_Sustainable_Development_Goals_pillars.jpg"><img alt="../_images/UN_Sustainable_Development_Goals_pillars.jpg" src="../_images/UN_Sustainable_Development_Goals_pillars.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">A possible taxonomy about Sustainability Goals <span id="id2">[<a class="reference internal" href="#id2824">2</a>]</span>.</span><a class="headerlink" href="#t3-6taxonomy36" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">A possible taxonomy about Sustainability Goals <span id="id2">[<a class="reference internal" href="#id478">2</a>]</span>.</span><a class="headerlink" href="#t3-6taxonomy36" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="main-keywords">
-<h2>Main Keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Main Keywords<a class="headerlink" href="#main-keywords" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="sustenaible_AI.html"><span class="doc">Sustainable AI</span></a>: The goal of <em>Sustainable AI</em> is to reduce energy consumption for a more sustainable AI and also find a way in which AI could contribute to solve some of the big sustainability challenges that face humanity today (e.g., climate change).</p></li>
 <li><p><a class="reference internal" href="greenAI.html"><span class="doc">Green AI</span></a>: The goal of Green AI (also known as <em>Green IT</em>, <em>Green Computing</em>, or <em>ICT Sustainability</em>) is to minimise the negative aspects of IT operations on the environment. To do so, computers and IT products can be designed, manufactured and disposed of in an environmentally-friendly manner.</p></li>
@@ -1393,39 +1557,39 @@ In 2015 the United Nations General Assembly set up the Sustainable Development G
 <li><p><a class="reference internal" href="resource_prediction.html"><span class="doc">Resource Prediction</span></a>: Resource prediction (also called <em>Workload Prediction</em> or <em>Workload Forecast</em>) is the estimation of the resources a customer will require in the future to complete his tasks.  This concept has a wide variety of application and it is particularly studied in the context of data centres management. When these forecasts are generated, historical and current data are utilised to predict how many resource units, which tools and operative systems and the number of requests are required to accomplish a task.</p></li>
 <li><p><a class="reference internal" href="resource_allocation.html"><span class="doc">Resource Allocation</span></a>: Cloud computing provides a computing environment where businesses, clients, and projects can lease resources on demand. Both cloud users and providers want to allocate cloud resources efficiently and profitably. These resources are typically scarce, therefore cloud providers must make the best use of them while staying within the confines of the cloud environment and meeting the demands of cloud apps so that they may perform their jobs. The distribution of resources is one of the most important aspects of cloud computing. Its efficiency has a direct impact on the overall performance of the cloud environment. Cost efficiency, reaction time, reallocation, computing performance, and job scheduling are all key difficulties in resource allocation. Cloud computing users want to do task for the least amount of money feasible.</p></li>
 <li><p><a class="reference internal" href="social_impact.html"><span class="doc">Social Impact of AI Systems</span></a>: Artificial intelligence (AI) is quickly changing the way we work and the way we live. Indeed, the <strong>societal impact of AI</strong> is on most people’s minds.</p></li>
-<li><p><a class="reference internal" href="human_interaction.html"><span class="doc">AI human interaction</span></a>: As AI develops to learn and adapt, it is increasingly being perceived as human-like in both its appearance and intelligence. This ability to imitate human behavior and interactions creates anthropomorphic cues which cause users to form emotional bonds <span id="id3">[<a class="reference internal" href="self-identification.html#id2825">1</a>]</span>. As AI becomes more commonplace in our daily lives, being integrated into virtual assistants, recommender systems etc. it is important to assess how the system’s anthropomorphic cues affect our interaction with it. In addition, potential risks resulting from AI-human interaction should be assessed prior to any implementation of AI as previous research has demonstrated the unpredictability of AI.</p></li>
-<li><p><a class="reference internal" href="self-identification.html"><span class="doc">Self-identification of AI</span></a>: AI systems which are presented to be both high in intelligence and have a good quality design tend to cause humans to anthropomorphize the system; i.e. assign human-like traits to it which can lead to emotional bonding with the system <span id="id4">[<a class="reference internal" href="self-identification.html#id2825">1</a>]</span>. This is dangerous, especially for vulnerable groups such as older generations or those less acquainted with the mechanisms behind the AI. In addition to the threat of emotional attachment, AI systems have been found to frequently provide false or partially false information and portrait it as fact, due to a phenomenon referred to as AI hallucinations. As such it is important that users can clearly identify an artificial intelligence as such, in order to understand the system’s limitations and prevent emotional attachment and misinformation. The remaining part of this chapter will first explain which AI systems are required to be clearly identifiable and then elaborate on how these criteria should be met.</p></li>
+<li><p><a class="reference internal" href="human_interaction.html"><span class="doc">AI human interaction</span></a>: As AI develops to learn and adapt, it is increasingly being perceived as human-like in both its appearance and intelligence. This ability to imitate human behavior and interactions creates anthropomorphic cues which cause users to form emotional bonds <span id="id3">[<a class="reference internal" href="self-identification.html#id2903">1</a>]</span>. As AI becomes more commonplace in our daily lives, being integrated into virtual assistants, recommender systems etc. it is important to assess how the system’s anthropomorphic cues affect our interaction with it. In addition, potential risks resulting from AI-human interaction should be assessed prior to any implementation of AI as previous research has demonstrated the unpredictability of AI.</p></li>
+<li><p><a class="reference internal" href="self-identification.html"><span class="doc">Self-identification of AI</span></a>: AI systems which are presented to be both high in intelligence and have a good quality design tend to cause humans to anthropomorphize the system; i.e. assign human-like traits to it which can lead to emotional bonding with the system <span id="id4">[<a class="reference internal" href="self-identification.html#id2903">1</a>]</span>. This is dangerous, especially for vulnerable groups such as older generations or those less acquainted with the mechanisms behind the AI. In addition to the threat of emotional attachment, AI systems have been found to frequently provide false or partially false information and portrait it as fact, due to a phenomenon referred to as AI hallucinations. As such it is important that users can clearly identify an artificial intelligence as such, in order to understand the system’s limitations and prevent emotional attachment and misinformation. The remaining part of this chapter will first explain which AI systems are required to be clearly identifiable and then elaborate on how these criteria should be met.</p></li>
 <li><p><a class="reference internal" href="emotional_impact.html"><span class="doc">Emotional Impact</span></a>: Due to the fast development of AI systems, their behavior, in some aspects, has become akin to humans. Especially with the introduction of large language models like chatGPT, it has become increasingly difficult to differentiate human and AI generated language. When coupled with human-like design, this cognitive ability has been found to lead to emotional attachment by users. While emotional impact cannot be prevented entirely, it is important to assess the extent to which the AI encourages human attachment and ensure clear signaling to the end-user that they are interacting with an AI.</p></li>
 <li><p><a class="reference internal" href="workforce_impact.html"><span class="doc">AI Impact on the Workforce</span></a>: The impact of Artificial Intelligence on the workforce can be considered from several perspectives. The most common consideration is the loss of jobs or possibility of deskilling of the workforce due to the introduction of AI systems. A second consideration is the increased demand for workers with a computer-science skill set in order to operate and maintain implemented AI systems. A final consideration is the effect of AI-triggered changes for stakeholders. Prior to the introduction of an AI system, risks and consequences in these areas should be assessed and steps to counter negative outcomes should be considered.</p></li>
-<li><p><a class="reference internal" href="society_and_democracy.html"><span class="doc">Society and Democracy</span></a>: The rapid increase of technological development is impacting society in new and partially unpredictable ways. With AI being integrated into all facets of life, ranging from recommender systems for movies to automatic passport control and facial recognition in airports, it is important to understand the negative ramifications this technology may have on society and democracy as a whole. Previously, the development of technologies was frequently guided by the interests of tech giants with profit motivating research <span id="id5">[<a class="reference internal" href="society_and_democracy.html#id2827">2</a>]</span>. While this line of development has produced some impressive systems, there is little consideration for the protection of citizens and the regulation of these technologies for the greater societal good. In order to combat this trend, the European Union introduced the AI act, stipulating legislation for new AI systems depending on the level or risk posed by the system. However, with this increase in legislation, fears are rising about Europe falling behind other, non-legislated countries, in the development of new software. It is such that legislators need to find the balance between regulation and development, to protect democracy and society without adversely affecting the development of the European AI research sector.</p></li>
+<li><p><a class="reference internal" href="society_and_democracy.html"><span class="doc">Society and Democracy</span></a>: The rapid increase of technological development is impacting society in new and partially unpredictable ways. With AI being integrated into all facets of life, ranging from recommender systems for movies to automatic passport control and facial recognition in airports, it is important to understand the negative ramifications this technology may have on society and democracy as a whole. Previously, the development of technologies was frequently guided by the interests of tech giants with profit motivating research <span id="id5">[<a class="reference internal" href="society_and_democracy.html#id2905">2</a>]</span>. While this line of development has produced some impressive systems, there is little consideration for the protection of citizens and the regulation of these technologies for the greater societal good. In order to combat this trend, the European Union introduced the AI act, stipulating legislation for new AI systems depending on the level or risk posed by the system. However, with this increase in legislation, fears are rising about Europe falling behind other, non-legislated countries, in the development of new software. It is such that legislators need to find the balance between regulation and development, to protect democracy and society without adversely affecting the development of the European AI research sector.</p></li>
 <li><p><a class="reference internal" href="social_scoring.html"><span class="doc">AI for social scoring</span></a>: Social Scoring is the concept that all daily actions taken by individuals are monitored and scored for their benefit to society as a whole. Based on this scoring system, you are assigned a given value which determines your access to education, healthcare and other public goods. AI lends itself to social scoring as it excels at facial recognition and movement identification. However this poses several technical and ethical problems. The obvious ethical issue is that the goodness of actions is subjective and the ability of individuals to access goods and services necessary for survival should not depend on their perceived ability to contribute to society. Furthermore, the technical issue with social scoring is that the quality of AI evaluation of movement hinges on the quality of its training data, with biased training data leading to biased evaluation by the AI. Social scoring has currently only been proposed by the Chinese government but other countries including the United Kingdom are using automatic facial recognition in surveillance tapes to search for fugitives.</p></li>
-<li><p><a class="reference internal" href="propaganda.html"><span class="doc">AI for propaganda</span></a>: With the onset of large language models, the mass production of text has become considerably cheaper and faster, requiring less human involvement. With the addition of automatic image generators such as Dall-E, the same is now possible for pictures. Previous work has found that GPT-3, the antecedent to ChatGPT is capable of creating text equally persuasive as content from existing covert propaganda <span id="id6">[<a class="reference internal" href="propaganda.html#id2829">1</a>]</span>. This causes a rising concern regarding the ease at which a large number of influential texts can be circulated using online platforms. To combat mass-propaganda, it is important that online and offline platforms have effective controls to identify AI-generated materials in their publications.</p></li>
+<li><p><a class="reference internal" href="propaganda.html"><span class="doc">AI for propaganda</span></a>: With the onset of large language models, the mass production of text has become considerably cheaper and faster, requiring less human involvement. With the addition of automatic image generators such as Dall-E, the same is now possible for pictures. Previous work has found that GPT-3, the antecedent to ChatGPT is capable of creating text equally persuasive as content from existing covert propaganda <span id="id6">[<a class="reference internal" href="propaganda.html#id2907">1</a>]</span>. This causes a rising concern regarding the ease at which a large number of influential texts can be circulated using online platforms. To combat mass-propaganda, it is important that online and offline platforms have effective controls to identify AI-generated materials in their publications.</p></li>
 </ul>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <!-- :style: unsrtalpha -->
 <p id="id7"><dl class="citation">
-<dt class="label" id="id2823"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id477"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Aimee van Wynsberghe. Sustainable AI: AI for sustainability and the sustainability of AI. <em>AI and Ethics</em>, 1(3):213–218, 2021.</p>
 </dd>
-<dt class="label" id="id2824"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id478"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Department of Economic United Nations and Social Affair. Sustainable development. URL: <a class="reference external" href="https://sdgs.un.org/goals">https://sdgs.un.org/goals</a> (visited on 2022-05-02).</p>
 </dd>
-<dt class="label" id="id2830"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dt class="label" id="id2908"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
 <dd><p>Joohee Kim and Il Im. Anthropomorphic response: understanding interactions between humans and artificial intelligence agents. <em>Computers in Human Behavior</em>, 139:107512, 2023.</p>
 </dd>
-<dt class="label" id="id2831"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dt class="label" id="id2909"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
 <dd><p>Paul Nemitz. Constitutional democracy and technology in the age of artificial intelligence. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, 376(2133):20180089, 2018.</p>
 </dd>
-<dt class="label" id="id2832"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dt class="label" id="id2910"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
 <dd><p>Josh A Goldstein, Jason Chao, Shelby Grossman, Alex Stamos, and Michael Tomz. How persuasive is ai-generated propaganda? <em>PNAS nexus</em>, 3(2):pgae034, 2024.</p>
 </dd>
 </dl>
 </p>
 </div>
 <div class="section" id="further-recommended-reading">
-<h2>Further Recommended Reading<a class="headerlink" href="#further-recommended-reading" title="Permalink to this headline">¶</a></h2>
+<h2>Further Recommended Reading<a class="headerlink" href="#further-recommended-reading" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>van Wynsberghe, Aimee. “Sustainable AI: AI for sustainability and the sustainability of AI.” AI and Ethics 1.3 (2021): 213-218.</p></li>
 <li><p>Vinuesa, Ricardo, et al. “The role of artificial intelligence in achieving the Sustainable Development Goals.” Nature communications 11.1 (2020): 1-10.</p></li>
@@ -1468,9 +1632,11 @@ In 2015 the United Nations General Assembly set up the Sustainable Development G
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Privacy_and_Data_Governance/L2.reidentification.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1486,26 +1652,28 @@ In 2015 the United Nations General Assembly set up the Sustainable Development G
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

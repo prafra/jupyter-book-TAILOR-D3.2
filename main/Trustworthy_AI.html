@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trustworthy AI &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/main/Trustworthy_AI.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +103,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TAILOR.html">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Ethical_Legal_Framework/Ethical_Legal_Framework.html">
    The Ethical and Legal Framework
@@ -1218,86 +1234,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/main/Trustworthy_AI.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2Fmain/Trustworthy_AI.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2Fmain/Trustworthy_AI.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/main/Trustworthy_AI.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lawful-ai">
    Lawful AI
@@ -1330,17 +1436,65 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trustworthy AI</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lawful-ai">
+   Lawful AI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ethical-ai">
+   Ethical AI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#robust-ai">
+   Robust AI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-european-legal-framework">
+   The European Legal Framework
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-tailor-handbook-of-trustworthy-ai">
+   The TAILOR Handbook of Trustworthy AI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="trustworthy-ai">
-<h1>Trustworthy AI<a class="headerlink" href="#trustworthy-ai" title="Permalink to this headline">¶</a></h1>
+<h1>Trustworthy AI<a class="headerlink" href="#trustworthy-ai" title="Permalink to this headline">#</a></h1>
 <!-- TODO 
 
 point the link
@@ -1349,7 +1503,7 @@ to the correct section of the entry
 
 
 -->
-<p>In the last years, several definition on what Trustworthy AI is are given by the scientific communities. Each definition can vary on the dimension where they focus more, but there is a general consensus in Europe to use as official definition the one given by the High Level Expert Group on AI in its Ethical Guidelines for Trustworthy AI <span id="id1">[<a class="reference internal" href="../TAILOR.html#id22">1</a>]</span>.</p>
+<p>In the last years, several definition on what Trustworthy AI is are given by the scientific communities. Each definition can vary on the dimension where they focus more, but there is a general consensus in Europe to use as official definition the one given by the High Level Expert Group on AI in its Ethical Guidelines for Trustworthy AI <span id="id1">[<a class="reference internal" href="#id22">1</a>]</span>.</p>
 <p>Indeed, according to this document, Trustworthy AI has three components, which should be met throughout the system’s entire life cycle. Indeed, it should be:</p>
 <ol class="simple">
 <li><p><strong>lawful</strong>, complying with all applicable laws and regulations;</p></li>
@@ -1359,39 +1513,39 @@ to the correct section of the entry
 <p>Each component in itself is necessary but not sufficient for the achievement of Trustworthy AI.  <!--Ideally, all three components work in harmony and overlap in their operation. If, in practice, tensions arise between these components, society should endeavour to align them.--><br>
 We will provide some additional details on what it is intended for each of these three components.</p>
 <div class="section" id="lawful-ai">
-<h2>Lawful AI<a class="headerlink" href="#lawful-ai" title="Permalink to this headline">¶</a></h2>
+<h2>Lawful AI<a class="headerlink" href="#lawful-ai" title="Permalink to this headline">#</a></h2>
 <p>AI systems do not operate in a lawless world. A number of legally binding rules at European, national, and international levels already apply or are relevant to the development, deployment, and use of AI systems today.
-Legal sources include, but are not limited to: EU primary law (the <a href="https://european-union.europa.eu/principles-countries-history/principles-and-values/founding-agreements_en" target=_blank>Treaties of the European Union</a> and its <a href="https://www.europarl.europa.eu/charter/pdf/text_en.pdf" target=_blank>Charter of Fundamental Rights</a>), EU secondary law (such as the <a href="https://gdpr-info.eu/" target=_blank>General Data Protection Regulation (GDPR)</a> <span id="id2">[<a class="reference internal" href="../Transparency/XAI.html#id8">1</a>]</span>, the <a href="https://single-market-economy.ec.europa.eu/single-market/goods/free-movement-sectors/liability-defective-products_en" target=_blank>Product Liability Directive</a>, the <a href="https://digital-strategy.ec.europa.eu/en/policies/non-personal-data" target=_blank>Regulation on the Free Flow of Non-Personal Data</a>, <a href="https://commission.europa.eu/aid-development-cooperation-fundamental-rights/your-rights-eu/know-your-rights/equality/non-discrimination_en" target=_blank>anti-discrimination Directives</a>, consumer law and <a href="https://osha.europa.eu/en/safety-and-health-legislation/european-directives" target=_blank>Safety and Health at Work Directives</a>, the <a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target=_blank>UN Human Rights treaties</a> and the Council of Europe conventions (such as the <a href="https://www.coe.int/en/web/human-rights-convention/the-convention-in-1950" target=_blank>European Convention on Human Rights</a>), and numerous EU Member State laws. Besides horizontally applicable rules, various domain-specific rules exist that apply to particular AI applications (such as, for instance, the Medical Device Regulation in the healthcare sector).</p>
+Legal sources include, but are not limited to: EU primary law (the <a href="https://european-union.europa.eu/principles-countries-history/principles-and-values/founding-agreements_en" target=_blank>Treaties of the European Union</a> and its <a href="https://www.europarl.europa.eu/charter/pdf/text_en.pdf" target=_blank>Charter of Fundamental Rights</a>), EU secondary law (such as the <a href="https://gdpr-info.eu/" target=_blank>General Data Protection Regulation (GDPR)</a> <span id="id2">[<a class="reference internal" href="#id12">3</a>]</span>, the <a href="https://single-market-economy.ec.europa.eu/single-market/goods/free-movement-sectors/liability-defective-products_en" target=_blank>Product Liability Directive</a>, the <a href="https://digital-strategy.ec.europa.eu/en/policies/non-personal-data" target=_blank>Regulation on the Free Flow of Non-Personal Data</a>, <a href="https://commission.europa.eu/aid-development-cooperation-fundamental-rights/your-rights-eu/know-your-rights/equality/non-discrimination_en" target=_blank>anti-discrimination Directives</a>, consumer law and <a href="https://osha.europa.eu/en/safety-and-health-legislation/european-directives" target=_blank>Safety and Health at Work Directives</a>, the <a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target=_blank>UN Human Rights treaties</a> and the Council of Europe conventions (such as the <a href="https://www.coe.int/en/web/human-rights-convention/the-convention-in-1950" target=_blank>European Convention on Human Rights</a>), and numerous EU Member State laws. Besides horizontally applicable rules, various domain-specific rules exist that apply to particular AI applications (such as, for instance, the Medical Device Regulation in the healthcare sector).</p>
 <p>The law provides both positive and negative obligations, which means that it should not only be interpreted with reference to what cannot be done, but also with reference to what should be done and what may be done. The law not only prohibits certain actions but also enables others. In this regard, it can be noted that the EU Charter contains articles on the ‘’freedom to conduct a business’’ and the ‘’freedom of the arts and sciences’’, alongside articles addressing areas that we are more familiar with when looking to ensure AI’s trustworthiness, such as for instance data protection and non-discrimination.</p>
 </div>
 <div class="section" id="ethical-ai">
-<h2>Ethical AI<a class="headerlink" href="#ethical-ai" title="Permalink to this headline">¶</a></h2>
+<h2>Ethical AI<a class="headerlink" href="#ethical-ai" title="Permalink to this headline">#</a></h2>
 <p>Achieving Trustworthy AI requires not only compliance with the law, which is but one of its three components. Laws are not always up to speed with technological developments, can at times be out of step with ethical norms or may simply not be well suited to addressing certain issues. For AI systems to be trustworthy, they should hence also be ethical, ensuring alignment with ethical norms.
 Regarding ethics, some philosophical currents (such as Floridi’s work <span id="id3">[<a class="reference internal" href="#id25">4</a>]</span>) have been discriminating between hard and soft ethics.</p>
 <p><strong>Hard ethics</strong> is what we usually have in mind when discussing values, rights, duties, and responsibilities— or, more broadly, what is morally right or wrong, and what ought or ought not to be done—in the course of formulating new regulations or challenging existing ones. In short, hard ethics is what makes or shapes the law. %Thus, in the best scenario, lobbying in favour of some good legislation or to improve that which already exists can be a case of hard ethics. For example, hard ethics helped to dismantle apartheid in South Africa and supported the approval of legislation in Iceland that requires public and private businesses to prove that they offer equal pay to employees, irrespective of their gender (the gender pay gap continues to be a scandal in most countries).</p>
 <p><strong>Soft ethics</strong> covers the same normative ground as hard ethics, but it does so by considering what ought and ought not to be done over and above the existing regulation, not against it, or despite its scope, or to change it, or to by-pass it (e.g. in terms of self-regulation). In other words, soft ethics is post-compliance ethics: in this case, ‘’ought implies may’’.</p>
 </div>
 <div class="section" id="robust-ai">
-<h2>Robust AI<a class="headerlink" href="#robust-ai" title="Permalink to this headline">¶</a></h2>
+<h2>Robust AI<a class="headerlink" href="#robust-ai" title="Permalink to this headline">#</a></h2>
 <p>Even if an ethical purpose is ensured, individuals and society must also be confident that AI systems will not cause any unintentional harm. Such systems should perform in a safe, secure and reliable manner, and safeguards should be foreseen to prevent any unintended adverse impacts. It is therefore important to ensure that AI systems are robust. This is needed both from a technical perspective (ensuring the system’s technical robustness as appropriate in a given context, such as the application domain or life cycle phase), and from a social perspective (in due consideration of the context and environment in which the system operates).</p>
 <!--https://www.cohubicol.com/blog/robust-ai-and-robust-law-part-i-robust-ai/-->
 </div>
 <div class="section" id="the-european-legal-framework">
-<h2>The European Legal Framework<a class="headerlink" href="#the-european-legal-framework" title="Permalink to this headline">¶</a></h2>
+<h2>The European Legal Framework<a class="headerlink" href="#the-european-legal-framework" title="Permalink to this headline">#</a></h2>
 <p>In these pages, we focus on the European framework only, mostly relying on two main sources, which are described below and in the linked pages.</p>
-<p>The first document, at least chronologically speaking, we refer to is the <span class="xref myst">Ethical Guidelines for Trustworthy AI</span> <span id="id4">[<a class="reference internal" href="../TAILOR.html#id22">1</a>]</span>, which, as the name itself suggests is not a law or a legal obligation. Nevertheless, it is commonly recognized as the most relevant document in the field of Trustworthy AI.
+<p>The first document, at least chronologically speaking, we refer to is the <span class="xref myst">Ethical Guidelines for Trustworthy AI</span> <span id="id4">[<a class="reference internal" href="#id22">1</a>]</span>, which, as the name itself suggests is not a law or a legal obligation. Nevertheless, it is commonly recognized as the most relevant document in the field of Trustworthy AI.
 Here, as we already mentioned, there are listed a definition of Trustworthy AI, the foundation of Trustworthy AI, the seven key requirements that AI systems should implement and meet throughout their entire life cycle, and a concrete assessment list to operationalize the requirements.</p>
-<p>Then, the other fundamental source is the world’s first comprehensive law on Artificial Intelligence (AI): the <span class="xref myst">EU AI Act</span> <span id="id5">[<a class="reference internal" href="Ethical_Legal_Framework/AI_ACT.html#id23">1</a>]</span>. The text provides a classification of AI systems using a <a class="reference internal" href="Ethical_Legal_Framework/AI_ACT.html"><span class="doc std std-doc">risk-based approach</span></a>; four levels of risk were identified, and different obligations are listed for the different categories of AI systems to be compliant with this law.</p>
+<p>Then, the other fundamental source is the world’s first comprehensive law on Artificial Intelligence (AI): the <span class="xref myst">EU AI Act</span> <span id="id5">[<a class="reference internal" href="#id24">2</a>]</span>. The text provides a classification of AI systems using a <a class="reference internal" href="Ethical_Legal_Framework/AI_ACT.html"><span class="doc std std-doc">risk-based approach</span></a>; four levels of risk were identified, and different obligations are listed for the different categories of AI systems to be compliant with this law.</p>
 </div>
 <div class="section" id="the-tailor-handbook-of-trustworthy-ai">
-<h2>The TAILOR Handbook of Trustworthy AI<a class="headerlink" href="#the-tailor-handbook-of-trustworthy-ai" title="Permalink to this headline">¶</a></h2>
-<p>In order to provide a better understanding on Trustworthy AI, within the <a class="reference internal" href="../TAILOR_project.html"><span class="doc std std-doc">TAILOR project</span></a> we have been developing an <a class="reference internal" href="../TAILOR.html"><span class="doc std std-doc">Handbook on Trustworthy AI</span></a>. Here, you can find an overview of all the ethical dimensions highlighted in the <span class="xref myst">Ethical Guidelines for Trustworthy AI</span> <span id="id6">[<a class="reference internal" href="../TAILOR.html#id22">1</a>]</span> and a deeper analysis of concepts that are related to and are going to contribute to each dimension.</p>
+<h2>The TAILOR Handbook of Trustworthy AI<a class="headerlink" href="#the-tailor-handbook-of-trustworthy-ai" title="Permalink to this headline">#</a></h2>
+<p>In order to provide a better understanding on Trustworthy AI, within the <a class="reference internal" href="../TAILOR_project.html"><span class="doc std std-doc">TAILOR project</span></a> we have been developing an <a class="reference internal" href="../TAILOR.html"><span class="doc std std-doc">Handbook on Trustworthy AI</span></a>. Here, you can find an overview of all the ethical dimensions highlighted in the <span class="xref myst">Ethical Guidelines for Trustworthy AI</span> <span id="id6">[<a class="reference internal" href="#id22">1</a>]</span> and a deeper analysis of concepts that are related to and are going to contribute to each dimension.</p>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p id="id7"><dl class="citation">
 <dt class="label" id="id22"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id4">2</a>,<a href="#id6">3</a>)</span></dt>
-<dd><p>High-Level Expert Group on Artificial Intelligence. Ethics guidelines for trustworthy ai. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2024-04-23).</p>
+<dd><p>High-Level Expert Group on Artificial Intelligence. Ethics guidelines for trustworthy AI. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2024-04-23).</p>
 </dd>
 <dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
 <dd><p>Artificial Intelligence Act, European Parliament legislative resolution of 13 March 2024 on the proposal for a regulation of the European Parliament and of the Council on laying down harmonised rules on Artificial Intelligence (Artificial Intelligence Act) and amending certain Union Legislative Acts (COM(2021)0206 – C9-0146/2021 – 2021/0106(COD)), P9_TA(2024)0138. 2024. URL: <a class="reference external" href="https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf">https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf</a> (visited on 2024-04-23).</p>
@@ -1434,9 +1588,11 @@ Here, as we already mentioned, there are listed a definition of Trustworthy AI, 
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Ethical_Legal_Framework/High_Risk_AI.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1452,26 +1608,28 @@ Here, as we already mentioned, there are listed a definition of Trustworthy AI, 
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

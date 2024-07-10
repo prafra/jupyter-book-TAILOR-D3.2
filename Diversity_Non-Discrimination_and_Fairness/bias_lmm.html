@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bias and Fairness in LLMs &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Diversity_Non-Discrimination_and_Fairness/bias_lmm.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +103,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TAILOR.html">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../main/Ethical_Legal_Framework/Ethical_Legal_Framework.html">
    The Ethical and Legal Framework
@@ -1218,86 +1234,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Diversity_Non-Discrimination_and_Fairness/bias_lmm.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/bias_lmm.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FDiversity_Non-Discrimination_and_Fairness/bias_lmm.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Diversity_Non-Discrimination_and_Fairness/bias_lmm.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
    In brief
@@ -1315,98 +1421,131 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Bias and Fairness in LLMs</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="bias-and-fairness-in-llms">
-<h1>Bias and Fairness in LLMs<a class="headerlink" href="#bias-and-fairness-in-llms" title="Permalink to this headline">¶</a></h1>
+<h1>Bias and Fairness in LLMs<a class="headerlink" href="#bias-and-fairness-in-llms" title="Permalink to this headline">#</a></h1>
 <div class="section" id="in-brief">
-<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>Within the Natural Language Processing (NLP) field, bias manifests in several forms, possibly leading to harms and unfairness. We review here intrinsic, lantent bias; extrinsic harms, and data selection bias in Large Language Models (LLMs).</p>
 </div>
 <div class="section" id="more-in-detail">
-<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
+<h2>More in detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
 <p>Large Language Models (LLMs) are ubiquitous in NLP and are often used as a base step for fine-tuning models on downstream tasks.
 The unparalleled ability of LLMs to generalize from vast corpora is affected by an inherent reinforcement of biases (see also the entry <a class="reference internal" href="bias.html"><span class="doc">Bias</span></a>). Since biases are communicated and embedded in language, they manifest in texts, both learnt and produced by LLMs.
 As foundation models, they are often employed in human-centric scenarios where their outputs may have undesired effects on historically marginalized groups of people, including discriminatory consequences.</p>
-<p>In <span id="id1">[<a class="reference internal" href="#id2429">1</a>]</span>, authors introduce the concepts of <strong>intrinsic, latent biases</strong>, i.e., “properties of the foundation model that can lead to harm in downstream systems”, and <strong>extrinsic harms</strong>, i.e., “specific harms from the downstream applications that are created by adapting a foundation model”. Representational bias pertains to the intrinsic harms and manifests itself as misrepresentation, under-representation, and over-representation. From the extrinsic level, harms manifest as the generation of abusive content, and marked performance disparities among different demographic groups.</p>
-<p>These issues warn that LLMs concretely impact society, posing a severe risk and limitation to the well-being of under-represented minorities, ultimately amplifying pre-existing social stereotypes, possible marginalization, and explicit harms <span id="id2">[<a class="reference internal" href="#id2678">2</a>, <a class="reference internal" href="#id2679">3</a>]</span>.
+<p>In <span id="id1">[<a class="reference internal" href="#id2844">1</a>]</span>, authors introduce the concepts of <strong>intrinsic, latent biases</strong>, i.e., “properties of the foundation model that can lead to harm in downstream systems”, and <strong>extrinsic harms</strong>, i.e., “specific harms from the downstream applications that are created by adapting a foundation model”. Representational bias pertains to the intrinsic harms and manifests itself as misrepresentation, under-representation, and over-representation. From the extrinsic level, harms manifest as the generation of abusive content, and marked performance disparities among different demographic groups.</p>
+<p>These issues warn that LLMs concretely impact society, posing a severe risk and limitation to the well-being of under-represented minorities, ultimately amplifying pre-existing social stereotypes, possible marginalization, and explicit harms <span id="id2">[<a class="reference internal" href="#id2876">2</a>, <a class="reference internal" href="#id2877">3</a>]</span>.
 Current research has highlighted cases emblematic of harms arising from LLMs.
-For instance, studies have shown that word embeddings can encode and perpetuate gender bias by echoing and strengthening societal stereotypes <span id="id3">[<a class="reference internal" href="../Transparency/blackbox_transparent.html#id88">10</a>, <a class="reference internal" href="#id2681">5</a>]</span>.
-These biases are not merely encoded within language models’ representations but are also perpetuated to downstream tasks <span id="id4">[<a class="reference internal" href="#id2427">6</a>, <a class="reference internal" href="#id2428">7</a>]</span>, where they can manifest in an uneven treatment of different demographic groups.
-For example, automatic translation systems have been found to reproduce damaging gender and racial biases, especially towards gendered pronoun languages <span id="id5">[<a class="reference internal" href="#id2683">8</a>]</span>.
-Similarly, gender bias can be propagated in coreference resolution if models are trained on biased text <span id="id6">[<a class="reference internal" href="#id2682">9</a>]</span>.
-Moreover, it was found that human annotators have a tendency to label social media posts written in Afro-American English as hateful more often than other messages. This harmful pattern could potentially result in the development of a biased system that reproduces and amplifies these same discriminatory attitudes <span id="id7">[<a class="reference internal" href="#id2684">10</a>]</span>.
-Recent studies have also documented the anti-Muslim sentiment exhibited by GPT-3, which generated toxic and abusive text when interrogated with prompts containing references to Islam and Muslims <span id="id8">[<a class="reference internal" href="#id2685">11</a>]</span>.
-Summarizing, sensitive axes targeted by biases in LLMs are gender, age, sexual orientation, physical appearance, disability, nationality, ethnicity and race, socioeconomic status, religion, culture and intersectional identities. It is crucial to acknowledge how biases directed towards certain groups are yet underexplored and unaddressed by the research community <span id="id9">[<a class="reference internal" href="#id2686">12</a>]</span>.</p>
-<p>Although biases manifest differently in the various NLP tasks, they can be assessed through formal fairness notions measuring through a score the LLM output w.r.t. a social group. Fairness is evaluated using a range of metrics <span id="id10">[<a class="reference internal" href="#id2687">13</a>, <a class="reference internal" href="#id2688">14</a>]</span>, which often present conflicting perspectives <span id="id11">[<a class="reference internal" href="#id2689">15</a>]</span> (see also the entry <a class="reference internal" href="fairness.html"><span class="doc">Fairness notions and metrics</span></a>). Moreover, defining fairness in the NLP context is challenging, and existing works are often inaccurate, inconsistent, and contradictory in formalizing bias <span id="id12">[<a class="reference internal" href="#id2690">16</a>]</span>.
-Nonetheless, starting from carefully auditing models’ output is mandatory to mitigate and avoid stigmatization and discrimination, given the sensitive contexts in which LLMs are deployed <span id="id13">[<a class="reference internal" href="#id2691">17</a>]</span>.</p>
-<p><em>Data selection bias</em> is defined as mistakes originating from texts sampled, selected and preprocessed to train LLMs, or introduced within the subsequent fine-tuning stage. These systematic errors arise from (i) skewed composition and distribution of knowledge domain and textual genre, (ii) range of time of the data gathered, (iii) demographic groups that create (and therefore represent) the data vs the affected application stakeholders, (iv) focusing mainly on high-resources languages (cultures) amplifying the gap w.r.t. low-resource languages (cultures), feeding a vicious feedback loop <span id="id14">[<a class="reference internal" href="#id2686">12</a>]</span>.
-To address this issue, several strategies are suggested, e.g.,~starting from a sound conceptualization step, that should guide the choice of the most appropriate assessment measures and mitigation strategies that, among others, could consist of leveraging smaller, more curated datasets, together with enhancing the diversity of the cultures and languages to which the model has been exposed <span id="id15">[<a class="reference internal" href="#id2686">12</a>]</span>.</p>
-<p>Investigating the other steps of the LLM life-cycle, potential entry points for bias injection are the model itself (e.g., equal treatment of different social groups when computing the loss), the evaluation step (e.g., leveraging on aggregate measures) and the deployment phase (e.g., unintended uses of the model) <span id="id16">[<a class="reference internal" href="#id2692">18</a>]</span>.
-Tracing back the source of these biases is extremely challenging, and attempts to mitigate them are often not successful nor effective. Indeed, in-depth data training investigation and counteracting bias by design are not doable in practice due to the huge data quantities, unfeasible to fully verify and assess, and the resources needed to develop LLMs from scratch. A recommended direction consists of collectively designing new, more accurate, holistic evaluation benchmarks, encompassing and testing different ethical desiderata <span id="id17">[<a class="reference internal" href="#id2686">12</a>]</span>.</p>
+For instance, studies have shown that word embeddings can encode and perpetuate gender bias by echoing and strengthening societal stereotypes <span id="id3">[<a class="reference internal" href="../Transparency/blackbox_transparent.html#id88">10</a>, <a class="reference internal" href="#id2878">5</a>]</span>.
+These biases are not merely encoded within language models’ representations but are also perpetuated to downstream tasks <span id="id4">[<a class="reference internal" href="#id2842">6</a>, <a class="reference internal" href="#id2843">7</a>]</span>, where they can manifest in an uneven treatment of different demographic groups.
+For example, automatic translation systems have been found to reproduce damaging gender and racial biases, especially towards gendered pronoun languages <span id="id5">[<a class="reference internal" href="#id2880">8</a>]</span>.
+Similarly, gender bias can be propagated in coreference resolution if models are trained on biased text <span id="id6">[<a class="reference internal" href="#id2879">9</a>]</span>.
+Moreover, it was found that human annotators have a tendency to label social media posts written in Afro-American English as hateful more often than other messages. This harmful pattern could potentially result in the development of a biased system that reproduces and amplifies these same discriminatory attitudes <span id="id7">[<a class="reference internal" href="#id2881">10</a>]</span>.
+Recent studies have also documented the anti-Muslim sentiment exhibited by GPT-3, which generated toxic and abusive text when interrogated with prompts containing references to Islam and Muslims <span id="id8">[<a class="reference internal" href="#id2882">11</a>]</span>.
+Summarizing, sensitive axes targeted by biases in LLMs are gender, age, sexual orientation, physical appearance, disability, nationality, ethnicity and race, socioeconomic status, religion, culture and intersectional identities. It is crucial to acknowledge how biases directed towards certain groups are yet underexplored and unaddressed by the research community <span id="id9">[<a class="reference internal" href="#id2883">12</a>]</span>.</p>
+<p>Although biases manifest differently in the various NLP tasks, they can be assessed through formal fairness notions measuring through a score the LLM output w.r.t. a social group. Fairness is evaluated using a range of metrics <span id="id10">[<a class="reference internal" href="#id2884">13</a>, <a class="reference internal" href="#id2885">14</a>]</span>, which often present conflicting perspectives <span id="id11">[<a class="reference internal" href="#id2886">15</a>]</span> (see also the entry <a class="reference internal" href="fairness.html"><span class="doc">Fairness notions and metrics</span></a>). Moreover, defining fairness in the NLP context is challenging, and existing works are often inaccurate, inconsistent, and contradictory in formalizing bias <span id="id12">[<a class="reference internal" href="#id2887">16</a>]</span>.
+Nonetheless, starting from carefully auditing models’ output is mandatory to mitigate and avoid stigmatization and discrimination, given the sensitive contexts in which LLMs are deployed <span id="id13">[<a class="reference internal" href="#id2888">17</a>]</span>.</p>
+<p><em>Data selection bias</em> is defined as mistakes originating from texts sampled, selected and preprocessed to train LLMs, or introduced within the subsequent fine-tuning stage. These systematic errors arise from (i) skewed composition and distribution of knowledge domain and textual genre, (ii) range of time of the data gathered, (iii) demographic groups that create (and therefore represent) the data vs the affected application stakeholders, (iv) focusing mainly on high-resources languages (cultures) amplifying the gap w.r.t. low-resource languages (cultures), feeding a vicious feedback loop <span id="id14">[<a class="reference internal" href="#id2883">12</a>]</span>.
+To address this issue, several strategies are suggested, e.g.,~starting from a sound conceptualization step, that should guide the choice of the most appropriate assessment measures and mitigation strategies that, among others, could consist of leveraging smaller, more curated datasets, together with enhancing the diversity of the cultures and languages to which the model has been exposed <span id="id15">[<a class="reference internal" href="#id2883">12</a>]</span>.</p>
+<p>Investigating the other steps of the LLM life-cycle, potential entry points for bias injection are the model itself (e.g., equal treatment of different social groups when computing the loss), the evaluation step (e.g., leveraging on aggregate measures) and the deployment phase (e.g., unintended uses of the model) <span id="id16">[<a class="reference internal" href="#id2889">18</a>]</span>.
+Tracing back the source of these biases is extremely challenging, and attempts to mitigate them are often not successful nor effective. Indeed, in-depth data training investigation and counteracting bias by design are not doable in practice due to the huge data quantities, unfeasible to fully verify and assess, and the resources needed to develop LLMs from scratch. A recommended direction consists of collectively designing new, more accurate, holistic evaluation benchmarks, encompassing and testing different ethical desiderata <span id="id17">[<a class="reference internal" href="#id2883">12</a>]</span>.</p>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p id="id18"><dl class="citation">
-<dt class="label" id="id2429"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id2844"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Rishi Bommasani, Drew A. Hudson, Ehsan Adeli, and et al. On the opportunities and risks of foundation models. <em>CoRR</em>, 2021.</p>
 </dd>
-<dt class="label" id="id2678"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id2876"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Harini Suresh and John V. Guttag. A framework for understanding unintended consequences of machine learning. <em>CoRR</em>, 2019.</p>
 </dd>
-<dt class="label" id="id2679"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dt class="label" id="id2877"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
 <dd><p>Lucas Dixon, John Li, Jeffrey Sorensen, Nithum Thain, and Lucy Vasserman. Measuring and mitigating unintended bias in text classification. In <em>AIES</em>, 67–73. ACM, 2018.</p>
 </dd>
-<dt class="label" id="id2680"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
-<dd><p>Tolga Bolukbasi, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. Man is to computer programmer as woman is to homemaker? debiasing word embeddings. In <em>Advances in neural information processing systems</em>, 4349–4357. 2016.</p>
+<dt class="label" id="id566"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dd><p>Tolga Bolukbasi, Kai-Wei Chang, James Y. Zou, Venkatesh Saligrama, and Adam Tauman Kalai. Man is to computer programmer as woman is to homemaker? debiasing word embeddings. In <em>NIPS</em>, 4349–4357. 2016.</p>
 </dd>
-<dt class="label" id="id2681"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
+<dt class="label" id="id2878"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
 <dd><p>Malvina Nissim, Rik van Noord, and Rob van der Goot. Fair is better than sensational: man is to doctor as woman is to doctor. <em>Comput. Linguistics</em>, 46(2):487–497, 2020.</p>
 </dd>
-<dt class="label" id="id2427"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
+<dt class="label" id="id2842"><span class="brackets"><a class="fn-backref" href="#id4">6</a></span></dt>
 <dd><p>Su Lin Blodgett, Gilsinia Lopez, Alexandra Olteanu, Robert Sim, and Hanna M. Wallach. Stereotyping Norwegian salmon: an inventory of pitfalls in fairness benchmark datasets. In <em>ACL/IJCNLP (1)</em>, 1004–1015. Association for Computational Linguistics, 2021.</p>
 </dd>
-<dt class="label" id="id2428"><span class="brackets"><a class="fn-backref" href="#id4">7</a></span></dt>
+<dt class="label" id="id2843"><span class="brackets"><a class="fn-backref" href="#id4">7</a></span></dt>
 <dd><p>Karolina Stanczak and Isabelle Augenstein. A survey on gender bias in natural language processing. <em>CoRR</em>, 2021. URL: <a class="reference external" href="https://arxiv.org/abs/2112.14168">https://arxiv.org/abs/2112.14168</a>, <a class="reference external" href="https://arxiv.org/abs/2112.14168">arXiv:2112.14168</a>.</p>
 </dd>
-<dt class="label" id="id2683"><span class="brackets"><a class="fn-backref" href="#id5">8</a></span></dt>
+<dt class="label" id="id2880"><span class="brackets"><a class="fn-backref" href="#id5">8</a></span></dt>
 <dd><p>Beatrice Savoldi, Marco Gaido, Luisa Bentivogli, Matteo Negri, and Marco Turchi. Gender bias in machine translation. <em>Trans. Assoc. Comput. Linguistics</em>, 9:845–874, 2021.</p>
 </dd>
-<dt class="label" id="id2682"><span class="brackets"><a class="fn-backref" href="#id6">9</a></span></dt>
+<dt class="label" id="id2879"><span class="brackets"><a class="fn-backref" href="#id6">9</a></span></dt>
 <dd><p>Jieyu Zhao, Tianlu Wang, Mark Yatskar, Vicente Ordonez, and Kai-Wei Chang. Gender bias in coreference resolution: evaluation and debiasing methods. In <em>NAACL-HLT (2)</em>, 15–20. Association for Computational Linguistics, 2018.</p>
 </dd>
-<dt class="label" id="id2684"><span class="brackets"><a class="fn-backref" href="#id7">10</a></span></dt>
+<dt class="label" id="id2881"><span class="brackets"><a class="fn-backref" href="#id7">10</a></span></dt>
 <dd><p>Maarten Sap, Dallas Card, Saadia Gabriel, Yejin Choi, and Noah A. Smith. The risk of racial bias in hate speech detection. In <em>ACL (1)</em>, 1668–1678. Association for Computational Linguistics, 2019.</p>
 </dd>
-<dt class="label" id="id2685"><span class="brackets"><a class="fn-backref" href="#id8">11</a></span></dt>
+<dt class="label" id="id2882"><span class="brackets"><a class="fn-backref" href="#id8">11</a></span></dt>
 <dd><p>Abubakar Abid, Maheen Farooqi, and James Zou. Persistent anti-muslim bias in large language models. In <em>AIES</em>, 298–306. ACM, 2021.</p>
 </dd>
-<dt class="label" id="id2686"><span class="brackets">12</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id14">2</a>,<a href="#id15">3</a>,<a href="#id17">4</a>)</span></dt>
+<dt class="label" id="id2883"><span class="brackets">12</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id14">2</a>,<a href="#id15">3</a>,<a href="#id17">4</a>)</span></dt>
 <dd><p>Roberto Navigli, Simone Conia, and Björn Ross. Biases in large language models: origins, inventory, and discussion. <em>ACM J. Data Inf. Qual.</em>, 15(2):10:1–10:21, 2023. URL: <a class="reference external" href="https://doi.org/10.1145/3597307">https://doi.org/10.1145/3597307</a>, <a class="reference external" href="https://doi.org/10.1145/3597307">doi:10.1145/3597307</a>.</p>
 </dd>
-<dt class="label" id="id2687"><span class="brackets"><a class="fn-backref" href="#id10">13</a></span></dt>
+<dt class="label" id="id2884"><span class="brackets"><a class="fn-backref" href="#id10">13</a></span></dt>
 <dd><p>Moritz Hardt, Eric Price, and Nati Srebro. Equality of opportunity in supervised learning. In <em>NIPS</em>, 3315–3323. 2016.</p>
 </dd>
-<dt class="label" id="id2688"><span class="brackets"><a class="fn-backref" href="#id10">14</a></span></dt>
+<dt class="label" id="id2885"><span class="brackets"><a class="fn-backref" href="#id10">14</a></span></dt>
 <dd><p>Cynthia Dwork, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Richard S. Zemel. Fairness through awareness. In <em>ITCS</em>, 214–226. ACM, 2012.</p>
 </dd>
-<dt class="label" id="id2689"><span class="brackets"><a class="fn-backref" href="#id11">15</a></span></dt>
+<dt class="label" id="id2886"><span class="brackets"><a class="fn-backref" href="#id11">15</a></span></dt>
 <dd><p>Jon M. Kleinberg, Sendhil Mullainathan, and Manish Raghavan. Inherent trade-offs in the fair determination of risk scores. In <em>ITCS</em>, volume 67 of LIPIcs, 43:1–43:23. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2017.</p>
 </dd>
-<dt class="label" id="id2690"><span class="brackets"><a class="fn-backref" href="#id12">16</a></span></dt>
+<dt class="label" id="id2887"><span class="brackets"><a class="fn-backref" href="#id12">16</a></span></dt>
 <dd><p>Su Lin Blodgett, Solon Barocas, Hal Daumé III, and Hanna M. Wallach. Language (technology) is power: A critical survey of “bias&quot; in NLP. In <em>ACL</em>, 5454–5476. Association for Computational Linguistics, 2020.</p>
 </dd>
-<dt class="label" id="id2691"><span class="brackets"><a class="fn-backref" href="#id13">17</a></span></dt>
+<dt class="label" id="id2888"><span class="brackets"><a class="fn-backref" href="#id13">17</a></span></dt>
 <dd><p>Debora Nozza, Federico Bianchi, and Dirk Hovy. Pipelines for social bias testing of large language models. In <em>Workshop on Challenges &amp; Perspectives in Creating Large Language Models</em>. virtual+Dublin, 2022. ACL.</p>
 </dd>
-<dt class="label" id="id2692"><span class="brackets"><a class="fn-backref" href="#id16">18</a></span></dt>
+<dt class="label" id="id2889"><span class="brackets"><a class="fn-backref" href="#id16">18</a></span></dt>
 <dd><p>Isabel O. Gallegos, Ryan A. Rossi, Joe Barrow, Md. Mehrab Tanjim, Sungchul Kim, Franck Dernoncourt, Tong Yu, Ruiyi Zhang, and Nesreen K. Ahmed. Bias and fairness in large language models: A survey. <em>CoRR</em>, 2023. URL: <a class="reference external" href="https://doi.org/10.48550/arXiv.2309.00770">https://doi.org/10.48550/arXiv.2309.00770</a>, <a class="reference external" href="https://arxiv.org/abs/2309.00770">arXiv:2309.00770</a>, <a class="reference external" href="https://doi.org/10.48550/ARXIV.2309.00770">doi:10.48550/ARXIV.2309.00770</a>.</p>
 </dd>
 </dl>
@@ -1439,9 +1578,11 @@ Tracing back the source of these biases is extremely challenging, and attempts t
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="bias_factors.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1457,26 +1598,28 @@ Tracing back the source of these biases is extremely challenging, and attempts t
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

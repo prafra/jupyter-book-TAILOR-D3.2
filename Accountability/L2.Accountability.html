@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accountability &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Accountability/L2.Accountability.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +103,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TAILOR.html">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../main/Ethical_Legal_Framework/Ethical_Legal_Framework.html">
    The Ethical and Legal Framework
@@ -1218,86 +1234,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Accountability/L2.Accountability.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FAccountability/L2.Accountability.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FAccountability/L2.Accountability.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Accountability/L2.Accountability.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
    In Brief
@@ -1335,137 +1441,190 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Accountability</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation-and-background">
+   Motivation and Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guidelines">
+   Guidelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#possible-taxonomy-of-terms">
+   Possible Taxonomy of terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accountability-gaps-and-their-implications">
+   Accountability gaps and their implications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="accountability">
-<h1>Accountability<a class="headerlink" href="#accountability" title="Permalink to this headline">¶</a></h1>
+<h1>Accountability<a class="headerlink" href="#accountability" title="Permalink to this headline">#</a></h1>
 <div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p><strong>Accountability</strong> is an ethical aspect studied in the <a href="https://tailor-network.eu/" target=_blank>TAILOR project</a> to ensure that a given actor or actors can render an account of the actions of an AI system. The accountability concept is strictly related to the concept of responsibility.</p>
 </div>
 <div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
-<p>According to <span id="id1">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span>, the requirement of accountability complements the other ethical dimensions, and is closely linked to the principle of <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html"><span class="doc std std-doc">fairness</span></a>. It necessitates that mechanisms be put in place to ensure responsibility and accountability for AI systems and their outcomes, both before and after their development, deployment and use.</p>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">#</a></h2>
+<p>According to <span id="id1">[<a class="reference internal" href="../Transparency/Transparency.html#id23">1</a>]</span>, the requirement of accountability complements the other ethical dimensions, and is closely linked to the principle of <a class="reference internal" href="../Diversity_Non-Discrimination_and_Fairness/Diversity_Non-Discrimination_and_Fairness.html"><span class="doc std std-doc">fairness</span></a>. It necessitates that mechanisms be put in place to ensure responsibility and accountability for AI systems and their outcomes, both before and after their development, deployment and use.</p>
 </div>
 <div class="section" id="motivation-and-background">
-<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">¶</a></h2>
-<p>Whenever something goes wrong, there is often a call to define who is responsible for this wrongdoing. Responsibility is a broader topic that might have different conceptualizations. However, in this sense, it usually means one’s obligation to render an account of your actions and the consequences of these, i.e. accountability. Accountability can be defined as a form of <em>“passive responsibility”</em> (or backward looking responsibility) in the sense of being held to account for or justify towards others a given action or consequence that happened in the past <span id="id2">[<a class="reference internal" href="#id2794">3</a>]</span>. Although accountability implies having to account for one’s actions, if the account given is considered insufficient, then one might still be considered blameworthy and thus deserving of censure or blame <span id="id3">[<a class="reference internal" href="#id2793">4</a>]</span>.</p>
-<p>AI systems bring particular concerns with respect to accountability, as understanding how the systems work can be challenging, and commercial considerations can conceal broader organisations processes <span id="id4">[<a class="reference internal" href="#id2729">2</a>]</span>. Although one might “understand” the inner workings of the algorithms used, the outcomes might still not be predictable, complicating accountability even further <span id="id5">[<a class="reference internal" href="#id2791">5</a>]</span>.</p>
+<h2>Motivation and Background<a class="headerlink" href="#motivation-and-background" title="Permalink to this headline">#</a></h2>
+<p>Whenever something goes wrong, there is often a call to define who is responsible for this wrongdoing. Responsibility is a broader topic that might have different conceptualizations. However, in this sense, it usually means one’s obligation to render an account of your actions and the consequences of these, i.e. accountability. Accountability can be defined as a form of <em>“passive responsibility”</em> (or backward looking responsibility) in the sense of being held to account for or justify towards others a given action or consequence that happened in the past <span id="id2">[<a class="reference internal" href="#id461">3</a>]</span>. Although accountability implies having to account for one’s actions, if the account given is considered insufficient, then one might still be considered blameworthy and thus deserving of censure or blame <span id="id3">[<a class="reference internal" href="#id460">4</a>]</span>.</p>
+<p>AI systems bring particular concerns with respect to accountability, as understanding how the systems work can be challenging, and commercial considerations can conceal broader organisations processes <span id="id4">[<a class="reference internal" href="#id396">2</a>]</span>. Although one might “understand” the inner workings of the algorithms used, the outcomes might still not be predictable, complicating accountability even further <span id="id5">[<a class="reference internal" href="#id458">5</a>]</span>.</p>
 <p>Two often discussed examples to explain the accountability setting are related to autonomous driving cars and medical decisions.</p>
 <p>Indeed, imagine a self-driving car that hits a pedestrian. Who should account for or justify the system’s actions? The person within the car that might not have been able or willing to supervise the system? The manufacturer, that designed the systems and thus should be the only responsible of the behaviour of its products? The programmer that did not correctly implement all the necessary checks? The manufacture of the sensor that did not detect the pedestrian? The person who conducted the test that did not foresee that particular circumstance?</p>
 <p>Or, again, in the case of a wrong diagnosis following an MRI. Do we expect an account from the doctor that did not see the error or the AI system (at all the same possible levels we saw in the previous example)?</p>
-<p>Given the difficulties, a lot of effort put in the definition of accountability regards the <strong>Auditability</strong> principle: <span id="id6">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span></p>
+<p>Given the difficulties, a lot of effort put in the definition of accountability regards the <strong>Auditability</strong> principle: <span id="id6">[<a class="reference internal" href="../Transparency/Transparency.html#id23">1</a>]</span></p>
 <blockquote>
 <div><p>Auditability entails the enablement of the assessment of algorithms, data and design processes. This does not necessarily imply that information about business models and intellectual property related to the AI system must always be openly available. Evaluation by internal and external auditors, and the availability of such evaluation reports, can contribute to the trustworthiness of the technology. In applications affecting fundamental rights, including safety-critical applications, AI systems should be able to be independently audited.</p>
 </div></blockquote>
-<p>Other aspects took into consideration in the High Level Expert Group report <span id="id7">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span> are:</p>
+<p>Other aspects took into consideration in the High Level Expert Group report <span id="id7">[<a class="reference internal" href="../Transparency/Transparency.html#id23">1</a>]</span> are:</p>
 <ul class="simple">
 <li><p><strong>Minimisation and reporting of negative impacts</strong>, i.e., assessing, documenting and minimising the potential negative impacts of AI systems, even thanks to the use of impact assessments both prior to and during the development, deployment and use of AI systems.</p></li>
-<li><p><strong>Trade-offs</strong> to tackle tensions that may arise between requirements. If conflict arises, trade-offs should be explicitly acknowledged and evaluated in terms of their risk to ethical principles, including fundamental rights.  Any decision about which trade-off to make should be reasoned and properly documented. Whether no ethically acceptable trade-offs can be identified, <span id="id8">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span> clearly states that the development, deployment and use of the AI system should not proceed in that form.</p></li>
-<li><p><strong>Redress</strong> must be ensured when things go wrong, with particular attention to vulnerable persons or groups. The importance of the redress is advocated also by the European Union Agency for Fundamental Rights <span id="id9">[<a class="reference internal" href="#id2795">6</a>]</span>, where particular emphasis is posed to collective redress (i.e., collective redress, a way in which victims can join forces to overcome obstacles), and by the Council of Europe <span id="id10">[<a class="reference internal" href="#id2798">7</a>]</span>, where is specified that a citizen should not necessarily have to pursue legal action straight away and seeking remedies should be available, known, accessible, affordable and capable of providing appropriate redress.</p></li>
+<li><p><strong>Trade-offs</strong> to tackle tensions that may arise between requirements. If conflict arises, trade-offs should be explicitly acknowledged and evaluated in terms of their risk to ethical principles, including fundamental rights.  Any decision about which trade-off to make should be reasoned and properly documented. Whether no ethically acceptable trade-offs can be identified, <span id="id8">[<a class="reference internal" href="../Transparency/Transparency.html#id23">1</a>]</span> clearly states that the development, deployment and use of the AI system should not proceed in that form.</p></li>
+<li><p><strong>Redress</strong> must be ensured when things go wrong, with particular attention to vulnerable persons or groups. The importance of the redress is advocated also by the European Union Agency for Fundamental Rights <span id="id9">[<a class="reference internal" href="#id462">6</a>]</span>, where particular emphasis is posed to collective redress (i.e., collective redress, a way in which victims can join forces to overcome obstacles), and by the Council of Europe <span id="id10">[<a class="reference internal" href="#id465">7</a>]</span>, where is specified that a citizen should not necessarily have to pursue legal action straight away and seeking remedies should be available, known, accessible, affordable and capable of providing appropriate redress.</p></li>
 </ul>
 </div>
 <div class="section" id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">#</a></h2>
 <p>Several guidelines and checklists have been proposed to increase accountability over the actions of AI systems, both from EU authorities and industries, such as:</p>
 <ul class="simple">
-<li><p><strong>The Assessment List for Trustworthy Artificial Intelligence (ALTAI)</strong> <span id="id11">[<a class="reference internal" href="#id2799">8</a>]</span> <br>
-This Assessment List (ALTAI) is firmly grounded in the protection of people’s fundamental rights exposed by the High Level Expert Group report <span id="id12">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span>. It is probably the most complete one so far and the reference point for all other checklists. <br>
+<li><p><strong>The Assessment List for Trustworthy Artificial Intelligence (ALTAI)</strong> <span id="id11">[<a class="reference internal" href="#id466">8</a>]</span> <br>
+This Assessment List (ALTAI) is firmly grounded in the protection of people’s fundamental rights exposed by the High Level Expert Group report <span id="id12">[<a class="reference internal" href="../Transparency/Transparency.html#id23">1</a>]</span>. It is probably the most complete one so far and the reference point for all other checklists. <br>
 The ALTAI checklist helps organisations understand what Trustworthy AI is, in particular what risks an AI system might generate, and how to minimize those risks while maximising the benefit of AI. It is intended to help organisations identify how proposed AI systems might generate risks, and to identify whether and what kind of active measures may need to be taken to avoid and minimise those risks. It aims at raising awareness of the potential impact of AI on society, the environment, consumers, workers and citizens (in particular children and people belonging to marginalised groups) and at encouraging the multidisciplinarity and the involvement of all relevant stakeholders. It helps to gain insight on whether meaningful and appropriate solutions or processes to accomplish adherence to the seven requirements (as outlined above) are already in place or need to be put in place. This could be achieved through internal guidelines, governance processes, etc. <br>
 For each requirement, this Assessment List for Trustworthy AI (ALTAI) provides introductory guidance and relevant definitions in the Glossary. The <a href="https://futurium.ec.europa.eu/en/european-ai-alliance/pages/altai-assessment-list-trustworthy-artificial-intelligence" target=_blank>online version</a> of this assessment list contains additional explanatory notes for many of the questions.</p></li>
-<li><p><strong>Getting the Future Right</strong> <span id="id13">[<a class="reference internal" href="#id2801">9</a>]</span><br>
+<li><p><strong>Getting the Future Right</strong> <span id="id13">[<a class="reference internal" href="#id468">9</a>]</span><br>
 The European Union Agency for Fundamental Rights published a report where a fundamental rights-based analysis of concrete ‘use cases’ is provided. The report illustrates some of the ways that companies and the public sector in the EU are looking to use AI to support their work, and whether – and how – they are taking fundamental rights considerations into account. In this way, it contributes empirical evidence, analysed from a fundamental rights perspective, that can inform EU and national policymaking efforts to regulate the use of AI tools.</p></li>
-<li><p><strong>ICO’s guidance on the use of artificial intelligence</strong> <span id="id14">[<a class="reference internal" href="#id2796">10</a>, <a class="reference internal" href="#id2797">11</a>]</span> <br>
-The UK data protection authority has been very active on all the topics related to accountability, publishing guidance that is constantly updated. In <span id="id15">[<a class="reference internal" href="#id2796">10</a>]</span>, the focus of accountability is on being compliant with data protection law and being capable of minimise risks. It explores some important aspects such as Leadership and oversight (e.g., the structure of the analyzed organization), <a class="reference internal" href="../Transparency/Transparency.html"><span class="doc std std-doc">Transparency</span></a>, <a class="reference internal" href="../Privacy_and_Data_Governance/Privacy_and_Data_Governance.html"><span class="doc std std-doc">Privacy</span></a>, and <a class="reference internal" href="../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html"><span class="doc std std-doc">Security</span></a>; a whole section is dedicated to the Data Protection Impact Assessment.<br>
-In <span id="id16">[<a class="reference internal" href="#id2797">11</a>]</span>, a short checklist is presented, even if in the document itself is highlighted that “Accountability is not a box-ticking exercise”  but rather taking responsibility for what you are doing with personal data, considering this as an opportunity to develop and sustain people’s trust.</p></li>
-<li><p><strong>IBM’s FactSheets</strong> <span id="id17">[<a class="reference internal" href="#id2800">12</a>]</span><br>
-This document starts from Supplier’s Declarations of Conformity (SDoCs), which are documents largely used by many industries even if they are usually not legally required documents, to describe the lineage of a product along with the safety and performance testing it has undergone. SDoCs aims at capturing and quantifying various aspects of the product and its development to make it worthy of consumers’ trust. The chechlist proposed in <span id="id18">[<a class="reference internal" href="#id2800">12</a>]</span> should help increasing trust in AI services. We envision such documents to contain purpose, performance, safety, security, and provenance information to be completed by AI service providers for examination by consumers.<br>
+<li><p><strong>ICO’s guidance on the use of artificial intelligence</strong> <span id="id14">[<a class="reference internal" href="#id463">10</a>, <a class="reference internal" href="#id464">11</a>]</span> <br>
+The UK data protection authority has been very active on all the topics related to accountability, publishing guidance that is constantly updated. In <span id="id15">[<a class="reference internal" href="#id463">10</a>]</span>, the focus of accountability is on being compliant with data protection law and being capable of minimise risks. It explores some important aspects such as Leadership and oversight (e.g., the structure of the analyzed organization), <a class="reference internal" href="../Transparency/Transparency.html"><span class="doc std std-doc">Transparency</span></a>, <a class="reference internal" href="../Privacy_and_Data_Governance/Privacy_and_Data_Governance.html"><span class="doc std std-doc">Privacy</span></a>, and <a class="reference internal" href="../Technical_Robustness_and_Safety/Technical_Robustness_and_Safety.html"><span class="doc std std-doc">Security</span></a>; a whole section is dedicated to the Data Protection Impact Assessment.<br>
+In <span id="id16">[<a class="reference internal" href="#id464">11</a>]</span>, a short checklist is presented, even if in the document itself is highlighted that “Accountability is not a box-ticking exercise”  but rather taking responsibility for what you are doing with personal data, considering this as an opportunity to develop and sustain people’s trust.</p></li>
+<li><p><strong>IBM’s FactSheets</strong> <span id="id17">[<a class="reference internal" href="#id467">12</a>]</span><br>
+This document starts from Supplier’s Declarations of Conformity (SDoCs), which are documents largely used by many industries even if they are usually not legally required documents, to describe the lineage of a product along with the safety and performance testing it has undergone. SDoCs aims at capturing and quantifying various aspects of the product and its development to make it worthy of consumers’ trust. The chechlist proposed in <span id="id18">[<a class="reference internal" href="#id467">12</a>]</span> should help increasing trust in AI services. We envision such documents to contain purpose, performance, safety, security, and provenance information to be completed by AI service providers for examination by consumers.<br>
 A FactSheet will contain sections on all relevant attributes of an AI service, such as intended use, performance (including appropriate accuracy or risk measures along with timing information), safety, explainability, algorithmic fairness, and security and robustness. Moreover, the FactSheet should help in listing how the service was created, trained, and deployed along with what scenarios it was tested on, how it may respond to untested scenarios, guidelines that specify what tasks it should and should not be used for, and any ethical concerns of its use. Hence, FactSheets help prevent overgeneralization and unintended use of AI services by solidly grounding them with metrics and usage scenarios.
 FactSheet is a quite interesting example because in this case a private company highlights the need of ethical procedures, standards, and certifications.</p></li>
-<li><p><strong>Microsoft’s guideline for human-AI interaction</strong> <span id="id19">[<a class="reference internal" href="#id2802">13</a>]</span> <br>
+<li><p><strong>Microsoft’s guideline for human-AI interaction</strong> <span id="id19">[<a class="reference internal" href="#id469">13</a>]</span> <br>
 In this paper, authors identified 18 question, related to different phases of the use of an AI system, and 10 different kinds of application, ranging from e-commerce recommender systems to route planning  systems, from automatic photo organizers to social network feed filtering systems. Then, authors empirically evaluated both the clarity and the relevance of various questions in the various domains, highlighting potential criticality (e.g., reporting a violation to the question ``Make clear why the system did what it did’’ if a recommender system did not non give any explanations of the reason why a certain product was suggested).</p></li>
 </ul>
 </div>
 <div class="section" id="possible-taxonomy-of-terms">
-<h2>Possible Taxonomy of terms<a class="headerlink" href="#possible-taxonomy-of-terms" title="Permalink to this headline">¶</a></h2>
-<p>Boven <span id="id20">[<a class="reference internal" href="#id2792">14</a>]</span> defines accountability as</p>
+<h2>Possible Taxonomy of terms<a class="headerlink" href="#possible-taxonomy-of-terms" title="Permalink to this headline">#</a></h2>
+<p>Boven <span id="id20">[<a class="reference internal" href="#id459">14</a>]</span> defines accountability as</p>
 <blockquote>
 <div><p>a <strong>relationship</strong> between an <strong>actor</strong> and a <strong>forum</strong>, in which the actor has an obligation to <strong>explain and to justify</strong> his or her conduct, the forum can pose questions and pass judgement, and the actor may face <strong>consequences</strong>.</p>
 </div></blockquote>
-<p>Wiering <span id="id21">[<a class="reference internal" href="#id2790">15</a>]</span> presented a thorough systematic literature review on algorithmic accountability structured on the five points identified by Boven in his definition, which we briefly summarize below:</p>
+<p>Wiering <span id="id21">[<a class="reference internal" href="#id457">15</a>]</span> presented a thorough systematic literature review on algorithmic accountability structured on the five points identified by Boven in his definition, which we briefly summarize below:</p>
 <ul class="simple">
 <li><p><strong>Arguments on the actor</strong>: Involves a broader discussion on who is responsible for the harm that the system may inflict
 when it is working correctly, and who is responsible when it is
 working incorrectly. It involves different levels of actors (e.g. individuals, teams, department, organizations) with different roles and possibly also third-parties. Due to these multiple levels and actors, situations known as ``the problem of many hands’’ might occur, in which the
 collective can reasonably be held responsible for an outcome, while none
-of the individuals can be reasonably held responsible for that outcome <span id="id22">[<a class="reference internal" href="#id2794">3</a>]</span>. In these situations, to be “in the loop” is not enough, calling for a more meaningful ability to control the design and operation process, in other words calling for meaningful human control. <!-- TODO: add link {doc}`L3.meaningful_human_control` --></p></li>
-<li><p><strong>The forum</strong>: To whom a given account is directed. The forum might take different shapes such as political, legal, administrative, professional, and towards the civil society. Examples of forum include General Data Protection Regulation (GDPR), the proposed EU AI Act, or even the guidelines for trustworthy AI proposed by the European Commission <span id="id23">[<a class="reference internal" href="../Transparency/Transparency.html#id21">1</a>]</span>, as discussed in the previous section.</p></li>
+of the individuals can be reasonably held responsible for that outcome <span id="id22">[<a class="reference internal" href="#id461">3</a>]</span>. In these situations, to be “in the loop” is not enough, calling for a more meaningful ability to control the design and operation process, in other words calling for meaningful human control. <!-- TODO: add link {doc}`L3.meaningful_human_control` --></p></li>
+<li><p><strong>The forum</strong>: To whom a given account is directed. The forum might take different shapes such as political, legal, administrative, professional, and towards the civil society. Examples of forum include General Data Protection Regulation (GDPR), the proposed EU AI Act, or even the guidelines for trustworthy AI proposed by the European Commission <span id="id23">[<a class="reference internal" href="../Transparency/Transparency.html#id23">1</a>]</span>, as discussed in the previous section.</p></li>
 <li><p><strong>The relationship between the actor and the forum</strong>: This relationship comes in different forms and shapes, according to all other four points. Nevertheless, they are usually mapped in three phases: the information phase, the deliberation and discussion phase, and the final phase, where consequences can be imposed on the actor by the forum.</p></li>
 <li><p><strong>The content and criteria of the account</strong>: Although ex ante analysis, such as impact assessment and simulations, can be helpful, they are limited as they cannot foresee all possible behavior and consequences. The importance of an accountability relationship should depend not only on such ex ante factors, but also on the extent to which a given system impacts society and individuals.</p></li>
 <li><p><strong>The consequences which may result from the account</strong>: In situations where there is a more “vertical” accountability relationship between actor and forum (e.g., accountability through legal standers), consequences are usually made more tangible. In more “horizontal” settings (e.g., self-regulation of organizations), consequences are defined based more on a moral imperative.</p></li>
 </ul>
 </div>
 <div class="section" id="accountability-gaps-and-their-implications">
-<h2>Accountability gaps and their implications<a class="headerlink" href="#accountability-gaps-and-their-implications" title="Permalink to this headline">¶</a></h2>
-<p>As AI systems, especially systems with learning abilities, are deployed “in the wild”, human control and prediction over their behaviour are very difficult if not impossible, leading to so-called <em>“accountability gaps”</em>. Santoni de Sio &amp; Mecacci <span id="id24">[<a class="reference internal" href="#id2789">16</a>]</span> divided such gaps in public accountability gap and moral accountability gaps. <em>Public accountability gaps</em> relate to citizens not being able to get an explanation for decisions taken by public agencies, while <em>moral accountability gap</em> refers to the reduction of human agents’ capacity to make sense of – and explain to each other the behaviour of AI systems.</p>
-<p>Accountability gaps point to the fact that accounting requires knowledge and some ability to control <span id="id25">[<a class="reference internal" href="#id2789">16</a>]</span>. Designers and developers of AI systems can only tackle this challenge by acknowledging that this is not a matter of fortuitous allocation of praise or blame, and that systems should be developed in a manner that allows for stakeholders to be held accountable. Among other things, this relates to the social context where these systems are deployed (and whether a given solution or formulation can be argued), how the questions and criteria for accountability are framed, and the level of understanding and control that a given actor might have. In this encyclopedia, we discuss these three interrelated concepts, respectively, in the entries <a class="reference internal" href="L3.Wicked_problems.html"><span class="doc">Wicked problems</span></a>, <a class="reference internal" href="L3.The_frame_problem.html"><span class="doc">The Frame Problem</span></a>, and <a class="reference internal" href="../Human_Agency_and_Oversight/Meaningful_human_control.html"><span class="doc">Meaningful human control</span></a>.</p>
+<h2>Accountability gaps and their implications<a class="headerlink" href="#accountability-gaps-and-their-implications" title="Permalink to this headline">#</a></h2>
+<p>As AI systems, especially systems with learning abilities, are deployed “in the wild”, human control and prediction over their behaviour are very difficult if not impossible, leading to so-called <em>“accountability gaps”</em>. Santoni de Sio &amp; Mecacci <span id="id24">[<a class="reference internal" href="#id456">16</a>]</span> divided such gaps in public accountability gap and moral accountability gaps. <em>Public accountability gaps</em> relate to citizens not being able to get an explanation for decisions taken by public agencies, while <em>moral accountability gap</em> refers to the reduction of human agents’ capacity to make sense of – and explain to each other the behaviour of AI systems.</p>
+<p>Accountability gaps point to the fact that accounting requires knowledge and some ability to control <span id="id25">[<a class="reference internal" href="#id456">16</a>]</span>. Designers and developers of AI systems can only tackle this challenge by acknowledging that this is not a matter of fortuitous allocation of praise or blame, and that systems should be developed in a manner that allows for stakeholders to be held accountable. Among other things, this relates to the social context where these systems are deployed (and whether a given solution or formulation can be argued), how the questions and criteria for accountability are framed, and the level of understanding and control that a given actor might have. In this encyclopedia, we discuss these three interrelated concepts, respectively, in the entries <a class="reference internal" href="L3.Wicked_problems.html"><span class="doc">Wicked problems</span></a>, <a class="reference internal" href="L3.The_frame_problem.html"><span class="doc">The Frame Problem</span></a>, and <a class="reference internal" href="../Human_Agency_and_Oversight/Meaningful_human_control.html"><span class="doc">Meaningful human control</span></a>.</p>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p id="id26"><dl class="citation">
 <dt class="label" id="id84"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>,<a href="#id7">3</a>,<a href="#id8">4</a>,<a href="#id12">5</a>,<a href="#id23">6</a>)</span></dt>
 <dd><p>High-Level Expert Group on Artificial Intelligence. Ethics Guidelines for Trustworthy AI. 2019. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a> (visited on 2022-02-16).</p>
 </dd>
-<dt class="label" id="id2729"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dt class="label" id="id396"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>Jennifer Cobbe, Michelle Seng Ah Lee, and Jatinder Singh. Reviewable automated decision-making: a framework for accountable algorithmic systems. In <em>Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</em>, 598–609. 2021.</p>
 </dd>
-<dt class="label" id="id2794"><span class="brackets">3</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id22">2</a>)</span></dt>
+<dt class="label" id="id461"><span class="brackets">3</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id22">2</a>)</span></dt>
 <dd><p>Ibo R Van de Poel and Lambèr MM Royakkers. <em>Ethics, technology, and engineering: An introduction</em>. Wiley-Blackwell, 2011.</p>
 </dd>
-<dt class="label" id="id2793"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dt class="label" id="id460"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
 <dd><p>Ibo van de Poel. The relation between forward-looking and backward-looking responsibility. In <em>Moral responsibility</em>, pages 37–52. Springer, 2011.</p>
 </dd>
-<dt class="label" id="id2791"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id458"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Marijn Janssen and George Kuk. The challenges and limits of big data algorithms in technocratic governance. 2016.</p>
 </dd>
-<dt class="label" id="id2795"><span class="brackets"><a class="fn-backref" href="#id9">6</a></span></dt>
+<dt class="label" id="id462"><span class="brackets"><a class="fn-backref" href="#id9">6</a></span></dt>
 <dd><p>European Union Agency for Fundamental Rights. Improving access to remedy in the area of business and human rights at the EU leve. 2016. URL: <a class="reference external" href="https://fra.europa.eu/en/opinion/2017/business-human-rights">https://fra.europa.eu/en/opinion/2017/business-human-rights</a> (visited on 2022-05-10).</p>
 </dd>
-<dt class="label" id="id2798"><span class="brackets"><a class="fn-backref" href="#id10">7</a></span></dt>
+<dt class="label" id="id465"><span class="brackets"><a class="fn-backref" href="#id10">7</a></span></dt>
 <dd><p>Council of Europe. Guide to human rights for internet users: effective remedies and redress. 2014. URL: <a class="reference external" href="http://www.coe.int/en/web/internet-users-rights/guide">http://www.coe.int/en/web/internet-users-rights/guide</a> (visited on 2022-05-10).</p>
 </dd>
-<dt class="label" id="id2799"><span class="brackets"><a class="fn-backref" href="#id11">8</a></span></dt>
+<dt class="label" id="id466"><span class="brackets"><a class="fn-backref" href="#id11">8</a></span></dt>
 <dd><p>High Level Expert Group on AI. The Assessment List for Trustworthy Artificial Intelligence (ALTAI). 2020. URL: <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment">https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment</a> (visited on 2022-05-10).</p>
 </dd>
-<dt class="label" id="id2801"><span class="brackets"><a class="fn-backref" href="#id13">9</a></span></dt>
+<dt class="label" id="id468"><span class="brackets"><a class="fn-backref" href="#id13">9</a></span></dt>
 <dd><p>European Union Agency for Fundamental Rights. Getting the future right - Artificial Intelligence and Fundamental Rights. 2020. URL: <a class="reference external" href="https://fra.europa.eu/en/publication/2020/artificial-intelligence-and-fundamental-rights">https://fra.europa.eu/en/publication/2020/artificial-intelligence-and-fundamental-rights</a> (visited on 2022-05-10).</p>
 </dd>
-<dt class="label" id="id2796"><span class="brackets">10</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id15">2</a>)</span></dt>
+<dt class="label" id="id463"><span class="brackets">10</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id15">2</a>)</span></dt>
 <dd><p>Information Commissioner's Office (ICO). Accountability framework. URL: <a class="reference external" href="https://ico.org.uk/for-organisations/accountability-framework/">https://ico.org.uk/for-organisations/accountability-framework/</a> (visited on 2022-05-25).</p>
 </dd>
-<dt class="label" id="id2797"><span class="brackets">11</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id16">2</a>)</span></dt>
+<dt class="label" id="id464"><span class="brackets">11</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id16">2</a>)</span></dt>
 <dd><p>Information Commissioner's Office (ICO). Accountability and governance. URL: <a class="reference external" href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/accountability-and-governance/">https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/accountability-and-governance/</a> (visited on 2022-05-25).</p>
 </dd>
-<dt class="label" id="id2800"><span class="brackets">12</span><span class="fn-backref">(<a href="#id17">1</a>,<a href="#id18">2</a>)</span></dt>
+<dt class="label" id="id467"><span class="brackets">12</span><span class="fn-backref">(<a href="#id17">1</a>,<a href="#id18">2</a>)</span></dt>
 <dd><p>Matthew Arnold, Rachel K. E. Bellamy, Michael Hind, Stephanie Houde, Sameep Mehta, Aleksandra Mojsilovic, Ravi Nair, Karthikeyan Natesan Ramamurthy, Darrell Reimer, Alexandra Olteanu, David Piorkowski, Jason Tsay, and Kush R. Varshney. FactSheets: Increasing Trust in AI Services through Supplier's Declarations of Conformity. 2019. arXiv:1808.07261v2.</p>
 </dd>
-<dt class="label" id="id2802"><span class="brackets"><a class="fn-backref" href="#id19">13</a></span></dt>
+<dt class="label" id="id469"><span class="brackets"><a class="fn-backref" href="#id19">13</a></span></dt>
 <dd><p>Saleema Amershi, Dan Weld, Mihaela Vorvoreanu, Adam Fourney, Besmira Nushi, Penny Collisson, Jina Suh, Shamsi Iqbal, Paul N. Bennett, Kori Inkpen, Jaime Teevan, Ruth Kikin-Gil, and Eric Horvitz. Guidelines for human-ai interaction. In <em>ACM International Conference of Human-Computer Interaction (CHI)</em>. 2019.</p>
 </dd>
-<dt class="label" id="id2792"><span class="brackets"><a class="fn-backref" href="#id20">14</a></span></dt>
+<dt class="label" id="id459"><span class="brackets"><a class="fn-backref" href="#id20">14</a></span></dt>
 <dd><p>Mark Bovens. Analysing and assessing accountability: a conceptual framework 1. <em>European law journal</em>, 13(4):447–468, 2007.</p>
 </dd>
-<dt class="label" id="id2790"><span class="brackets"><a class="fn-backref" href="#id21">15</a></span></dt>
+<dt class="label" id="id457"><span class="brackets"><a class="fn-backref" href="#id21">15</a></span></dt>
 <dd><p>Maranke Wieringa. What to account for when accounting for algorithms: a systematic literature review on algorithmic accountability. In <em>Proceedings of the 2020 conference on fairness, accountability, and transparency</em>, 1–18. 2020.</p>
 </dd>
-<dt class="label" id="id2789"><span class="brackets">16</span><span class="fn-backref">(<a href="#id24">1</a>,<a href="#id25">2</a>)</span></dt>
+<dt class="label" id="id456"><span class="brackets">16</span><span class="fn-backref">(<a href="#id24">1</a>,<a href="#id25">2</a>)</span></dt>
 <dd><p>Filippo Santoni de Sio and Giulio Mecacci. Four responsibility gaps with artificial intelligence: why they matter and how to address them. <em>Philosophy &amp; Technology</em>, pages 1–28, 2021.</p>
 </dd>
 </dl>
@@ -1500,9 +1659,11 @@ of the individuals can be reasonably held responsible for that outcome <span id=
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Accountability_and_Reproducibility.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1518,26 +1679,28 @@ of the individuals can be reasonably held responsible for that outcome <span id=
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

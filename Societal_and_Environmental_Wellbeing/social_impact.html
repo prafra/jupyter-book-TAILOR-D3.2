@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Social Impact of AI Systems &#8212; The TAILOR Handbook of Trustworthy AI</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +19,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tailor.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="http://tailor.isti.cnr.it/handbookTAI/index.html/Societal_and_Environmental_Wellbeing/social_impact.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,7 +62,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +85,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +103,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TAILOR.html">
-   The TAILOR Handbook of Trustworthy AI
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../TAILOR.html">
+                    The TAILOR Handbook of Trustworthy AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../main/Ethical_Legal_Framework/Ethical_Legal_Framework.html">
    The Ethical and Legal Framework
@@ -1218,86 +1234,176 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
-                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Societal_and_Environmental_Wellbeing/social_impact.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repository di origine"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FSocietal_and_Environmental_Wellbeing/social_impact.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Apri un problema"><i class="fas fa-lightbulb"></i>questione aperta</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
-        title="Modalità schermo intero"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenuti
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/prafra/jupyter-book-TAILOR-D3.2/issues/new?title=Issue%20on%20page%20%2FSocietal_and_Environmental_Wellbeing/social_impact.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Societal_and_Environmental_Wellbeing/social_impact.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-brief">
    In Brief
@@ -1342,49 +1448,109 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Social Impact of AI Systems</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-brief">
+   In Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-in-detail">
+   More in Detail
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spam-filters-and-video-games-minimal-risk-ai">
+     SPAM Filters and Video Games: Minimal Risk AI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generative-models-and-chatbots-limited-risk-ai">
+     Generative Models and ChatBots: Limited Risk AI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#self-driving-cars-and-medicine-high-risk-ai">
+     Self-Driving Cars and Medicine: High Risk AI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#social-scoring-and-exploitation-unacceptable-risk-ai">
+     Social Scoring and Exploitation: Unacceptable Risk AI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#altai-self-assessment-of-ai-risk">
+     ALTAI: Self-Assessment of AI Risk
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="social-impact-of-ai-systems">
-<h1>Social Impact of AI Systems<a class="headerlink" href="#social-impact-of-ai-systems" title="Permalink to this headline">¶</a></h1>
+<h1>Social Impact of AI Systems<a class="headerlink" href="#social-impact-of-ai-systems" title="Permalink to this headline">#</a></h1>
 <div class="section" id="in-brief">
-<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">¶</a></h2>
+<h2>In Brief<a class="headerlink" href="#in-brief" title="Permalink to this headline">#</a></h2>
 <p>Artificial intelligence (AI) is quickly changing the way we work and the way we live. Indeed, the <strong>societal impact of AI</strong> is on most people’s minds.</p>
 </div>
 <div class="section" id="more-in-detail">
-<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">¶</a></h2>
-<p>AI development has increased rapidly in recent years, leading to the onset of what experts now consider the AI revolution. Similar to previous periods of rapid development such as the industrial revolution, the AI revolution is expected to impact society in a myriad of ways, altering the current state of the art in many domains. While some consequences of the AI revolution are considered to be well-understood such as the impact on certain repetitive, easily-automated tasks, others are still unknown. This is especially important as experts consider the AI revolution to still be in infancy and expect it to continue to rapidly develop throughout the next 100 years <span id="id1">[<a class="reference internal" href="#id2105">1</a>]</span>. In order to gauge the potential harm of any new AI system, the European Union has proposed a risk-based system of assessing the safety of new AI models to ensure that potential negative consequences are known and targeted prior to the implementation of the system. This system is designed to protect society from the potential harms of AI and risk levels are designated based on the perceived harm of society. Each level of risk and the associated AI models are discussed in greater detail below. In addition we recommend a self-assessment tool to gauge the level of risk of a given AI system.</p>
+<h2>More in Detail<a class="headerlink" href="#more-in-detail" title="Permalink to this headline">#</a></h2>
+<p>AI development has increased rapidly in recent years, leading to the onset of what experts now consider the AI revolution. Similar to previous periods of rapid development such as the industrial revolution, the AI revolution is expected to impact society in a myriad of ways, altering the current state of the art in many domains. While some consequences of the AI revolution are considered to be well-understood such as the impact on certain repetitive, easily-automated tasks, others are still unknown. This is especially important as experts consider the AI revolution to still be in infancy and expect it to continue to rapidly develop throughout the next 100 years <span id="id1">[<a class="reference internal" href="#id2520">1</a>]</span>. In order to gauge the potential harm of any new AI system, the European Union has proposed a risk-based system of assessing the safety of new AI models to ensure that potential negative consequences are known and targeted prior to the implementation of the system. This system is designed to protect society from the potential harms of AI and risk levels are designated based on the perceived harm of society. Each level of risk and the associated AI models are discussed in greater detail below. In addition we recommend a self-assessment tool to gauge the level of risk of a given AI system.</p>
 <div class="section" id="spam-filters-and-video-games-minimal-risk-ai">
-<h3>SPAM Filters and Video Games: Minimal Risk AI<a class="headerlink" href="#spam-filters-and-video-games-minimal-risk-ai" title="Permalink to this headline">¶</a></h3>
+<h3>SPAM Filters and Video Games: Minimal Risk AI<a class="headerlink" href="#spam-filters-and-video-games-minimal-risk-ai" title="Permalink to this headline">#</a></h3>
 <p>At the lowest risk category, “Minimal Risk”, the European Union targets systems which pose virtually no harm to the privacy, safety or rights of users. These systems are subject to no regulation as they are considered to be harmless to end-users and can therefore operate freely in the European market. This risk category includes SPAM filters such as those commonplace in most email providers and video games, which may use AI for procedural-content generation throughout the game, adjusting ambient conditions depending on user action. However, some expert groups expect harsher regulation in these areas in the future as AI holds the potential to generate highly-realistic harmful content, which may endanger the safety and privacy of citizens.</p>
 </div>
 <div class="section" id="generative-models-and-chatbots-limited-risk-ai">
-<h3>Generative Models and ChatBots: Limited Risk AI<a class="headerlink" href="#generative-models-and-chatbots-limited-risk-ai" title="Permalink to this headline">¶</a></h3>
+<h3>Generative Models and ChatBots: Limited Risk AI<a class="headerlink" href="#generative-models-and-chatbots-limited-risk-ai" title="Permalink to this headline">#</a></h3>
 <p>Legislation becomes relevant at the second lowest risk-tier “Limited Risk”, where AI systems are considered to pose minimal risk to user safety, rights and privacy but nonetheless require user awareness. As such, developers are obligated to ensure that users are aware that they are interacting with an AI in order to prevent misunderstandings as well as potential unhealthy attachments (See also <a class="reference internal" href="human_interaction.html"><span class="doc std std-doc">AI human interaction</span></a>} and <a class="reference internal" href="self-identification.html"><span class="doc std std-doc">Self-identification of AI</span></a>). At this tier of risk, generative models such as DALL-E are found, which utilize AI to generate content. In addition, chat bots including ChatGPT are considered to pose Limited Risk and therefore need to be clearly identifiable as AI by end users.</p>
 </div>
 <div class="section" id="self-driving-cars-and-medicine-high-risk-ai">
-<h3>Self-Driving Cars and Medicine: High Risk AI<a class="headerlink" href="#self-driving-cars-and-medicine-high-risk-ai" title="Permalink to this headline">¶</a></h3>
+<h3>Self-Driving Cars and Medicine: High Risk AI<a class="headerlink" href="#self-driving-cars-and-medicine-high-risk-ai" title="Permalink to this headline">#</a></h3>
 <p>At the highest acceptable tier of Risk, the European Union designates systems, which may under proper legislation be beneficial to end users but pose considerable harm to the privacy, security and rights of society. As such, strict legislation is implemented for these systems, requiring thorough risk assessments of the AI, implemented safeguards to prevent bias and protect privacy and human oversight to prevent misuse. Additionally, the AI needs to be transparent in order to make it auditable and gauge the cause of potentially harmful decisions. At this level, developments such as self-driving cars are found, as malfunction within the AI could cause considerable harm to society and, as such, rigorous testing is necessary before the product can be implemented. In addition, medical AI mechanisms are considered high risk as they could lead to discrimination or oversight if not properly tested and used alongside human supervision.</p>
 </div>
 <div class="section" id="social-scoring-and-exploitation-unacceptable-risk-ai">
-<h3>Social Scoring and Exploitation: Unacceptable Risk AI<a class="headerlink" href="#social-scoring-and-exploitation-unacceptable-risk-ai" title="Permalink to this headline">¶</a></h3>
+<h3>Social Scoring and Exploitation: Unacceptable Risk AI<a class="headerlink" href="#social-scoring-and-exploitation-unacceptable-risk-ai" title="Permalink to this headline">#</a></h3>
 <p>At the highest tier, classed ‘Unacceptable Risk’, AI systems which pose non-justifiable risk to society are found. These AI systems are outlawed by the European Union as they are considered to pose unacceptable risk to the rights, privacy and security of citizens without yielding a corresponding positive outcome. In this category, systems implementing social scoring are found (see also Section \ref{section: AI for social scoring}). In addition, systems which exploit vulnerable groups such as AI generated targeted ads for gambling are considered unacceptable.</p>
 </div>
 <div class="section" id="altai-self-assessment-of-ai-risk">
-<h3>ALTAI: Self-Assessment of AI Risk<a class="headerlink" href="#altai-self-assessment-of-ai-risk" title="Permalink to this headline">¶</a></h3>
+<h3>ALTAI: Self-Assessment of AI Risk<a class="headerlink" href="#altai-self-assessment-of-ai-risk" title="Permalink to this headline">#</a></h3>
 <p>When designing a new AI system, developers must assess the level of risk they are operating at and implement the corresponding safety measures as designated by the European Union. In order to ease this process, a self-assessment questionnaire was designed that allows developers to easily determine the level of risk of their AI. The questionnaire can be found here: <a href="https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment" target=_blank>Assessment List for Trustworthy Artificial Intelligence (ALTAI) for self-assessment</a>.</p>
 </div>
 </div>
 <div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
 <p id="id2"><dl class="citation">
-<dt class="label" id="id2105"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id2520"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Spyros Makridakis. The forthcoming artificial intelligence (ai) revolution: its impact on society and firms. <em>Futures</em>, 90:46–60, 2017.</p>
 </dd>
 </dl>
@@ -1419,9 +1585,11 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="resource_allocation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1437,26 +1605,28 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Di varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
-        
-            &copy; Diritto d'autore 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By varii auctores; see <a href="/handbookTAI/authors.html" target="_blank">here</a> for the complete list of contributors. This research was partially supported by TAILOR, a project funded by EU Horizon 2020 research and innovation programme under GA No 952215<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
